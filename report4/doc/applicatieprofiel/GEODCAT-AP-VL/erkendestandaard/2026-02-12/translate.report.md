@@ -1,8 +1,8 @@
-INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12/translation/geodcatap-vlaanderen_nl.json
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12/translation/GEODCAT-AP-VL_nl.json
 
-OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12/translation/geodcatap-vlaanderen_nl.json
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12/translation/GEODCAT-AP-VL_nl.json
 
-TRANSLATIONFILE: geodcatap-vlaanderen_nl.json
+TRANSLATIONFILE: GEODCAT-AP-VL_nl.json
 
 #||# translate for language nl  
 
@@ -18,5 +18,5 @@ WARNING The entered language values are the same!
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12/translation/geodcatap-vlaanderen_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12/translation/GEODCAT-AP-VL_nl.json  
 

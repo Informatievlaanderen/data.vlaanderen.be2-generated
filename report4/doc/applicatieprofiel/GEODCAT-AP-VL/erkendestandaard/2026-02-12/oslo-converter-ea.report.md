@@ -2,515 +2,347 @@
 
 #||# -------------------------------------
 
-2026-06-05T08:04:02.015Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2026-07-10T14:00:31.571Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource))
 
-2026-06-05T08:04:02.017Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2026-07-10T14:00:31.574Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.017Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2026-07-10T14:00:31.575Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:(Dataset -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.017Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
+2026-07-10T14:00:31.576Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Dataset) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.017Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+2026-07-10T14:00:31.576Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:(Dataset -> Distributie) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.017Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
+2026-07-10T14:00:31.576Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:(Catalogus -> CatalogusRecord) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.017Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
+2026-07-10T14:00:31.576Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord:(CatalogusRecord -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.017Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2026-07-10T14:00:31.576Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:(Distributie -> DataService) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.017Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+2026-07-10T14:00:31.576Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:(Catalogus -> DataService) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.018Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource))
+2026-07-10T14:00:31.577Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:(DataService -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.020Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:(CatalogusRecord -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.577Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:(DataService -> Dataset) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.021Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> CatalogusRecord) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.577Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:(Dataset -> DatasetSerie) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.022Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.577Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:(DatasetSerie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.022Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> Dataset) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.577Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Contactinfo:(Contactinfo -> ContactInfo) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.022Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.577Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.022Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.577Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Agent) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.022Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> DataService) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.577Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:(Dataset -> Agent) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.022Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Agent) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.577Z info: Connector Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:(Distributie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2026-06-05T08:04:02.022Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Dataset) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.578Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2026-06-05T08:04:02.023Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Distributie) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.583Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-Generiek:ContactInfo): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.023Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> DataService) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.583Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-Generiek:Agent): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.023Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Agent) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.583Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-Generiek:Identificator): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.023Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> Agent) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.583Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.023Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> DatasetSerie) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.584Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:TemporalLiteral): class-usage-scope, GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.023Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.584Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie): class-usage-scope, GEODCATAP, property-usage-scope, reuse. These tags will be added.
 
-2026-06-05T08:04:02.024Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:(DatasetSerie -> Agent) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.584Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.024Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Contactinfo:(Contactinfo -> ContactInfo) is not an association with a source role. Ignoring this connector.
+2026-07-10T14:00:31.585Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.025Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-07-10T14:00:31.585Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.025Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
+2026-07-10T14:00:31.585Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.025Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium). Using fallback URI (http://todo.com/) instead.
+2026-07-10T14:00:31.585Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusResource): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.025Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium:External). Using fallback URI (http://todo.com/) instead.
+2026-07-10T14:00:31.585Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Contactinfo): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.025Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium:OSLO-DCATAPVL-2.0). Using fallback URI (http://todo.com/) instead.
+2026-07-10T14:00:31.585Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Standaard): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.029Z warn: [ConnectorConverterHandler]: Connector (CatalogusResource (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-10T14:00:31.585Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:TimeInstant): class-usage-scope, GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.029Z warn: [ConnectorConverterHandler]: Connector (CatalogusResource (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-10T14:00:31.586Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:JuridischeBepaling): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.029Z warn: [ConnectorConverterHandler]: Connector (inserie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-10T14:00:31.586Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Rechtsgrond): class-usage-scope, GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.030Z warn: [ConnectorConverterHandler]: Connector (uitgever) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-10T14:00:31.586Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Resolutie): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.030Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (uitgever) and the fallback URI (http://todo.com/) will be assigned.
+2026-07-10T14:00:31.586Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:HerkomstVerklaring): reuse. These tags will be added.
 
-2026-06-05T08:04:02.032Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus): DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.586Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:LicentieDocument): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.033Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord): DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.586Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:dct:PeriodOfTime): class-usage-scope, GEODCATAP, property-usage-scope, reuse. These tags will be added.
 
-2026-06-05T08:04:02.033Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource): DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.587Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Plaats): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.033Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset): DCAT, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.587Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:VoorbeeldWeergave): DCAT. These tags will be added.
 
-2026-06-05T08:04:02.033Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.587Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:RelatieQualificatie): GEODCATAP, source-definition-nl, source-label-nl, target-definition-nl, target-label-nl, uri-source-attribute, uri-target-attribute, source-package, target-package. These tags will be added.
 
-2026-06-05T08:04:02.034Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie): DCAT, DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.588Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-Generiek:Agent:naam): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.034Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.589Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-Generiek:Identificator:gestructureerdeIdentificator): reuse. These tags will be added.
 
-2026-06-05T08:04:02.034Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService): DCAT, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.589Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-Generiek:Identificator:identificator): DCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.034Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.589Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-Generiek:Identificator:toegekendDoor): reuse. These tags will be added.
 
-2026-06-05T08:04:02.034Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:JuridischeBepaling): reuse, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.589Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-Generiek:Identificator:toegekendDoorString): reuse. These tags will be added.
 
-2026-06-05T08:04:02.034Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats): DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.589Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-Generiek:Identificator:toegekendOp): reuse. These tags will be added.
 
-2026-06-05T08:04:02.035Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:HerkomstVerklaring): reuse. These tags will be added.
+2026-07-10T14:00:31.590Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:alternatieve Identificator): DCATAP. These tags will be added.
 
-2026-06-05T08:04:02.035Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:VoorbeeldWeergave): DCAT. These tags will be added.
+2026-07-10T14:00:31.590Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:beschrijving): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.035Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:TemporalLiteral): class-usage-scope, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.590Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:conform aan protocol): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.035Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:TimeInstant): class-usage-scope, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.590Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:contactinformatie): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.035Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie): property-usage-scope, class-usage-scope, DCAT, DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.590Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:creatiedatum): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.035Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.591Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:endpointbeschrijving): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.036Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:ContactInfo): GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.591Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:endpointURL): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.036Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Contactinfo): DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.591Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:geografischeDekking): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.036Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Standaard): DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.591Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:identificator): DCAT. These tags will be added.
 
-2026-06-05T08:04:02.036Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:LicentieDocument): DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.591Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:landingspagina): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.036Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent): DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.592Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:landingspaginaVoorAuthenticatie): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.036Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator): DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.592Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:landingspaginaVoorGebruiksinformatie): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.037Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Resolutie): reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.592Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:landingspaginaVoorStatusinformatie): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.037Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie): DCAT, DCATAP, uri-source-attribute, uri-target-attribute, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.592Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:levensfase): reuse. These tags will be added.
 
-2026-06-05T08:04:02.037Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.593Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:licentie): GEODCATAP, DCAT. These tags will be added.
 
-2026-06-05T08:04:02.037Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime): class-usage-scope, DCAT, DCATAP, reuse, property-usage-scope, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.593Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:publicatiedatum): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.037Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.593Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:rechten): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.037Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Rechtsgrond): class-usage-scope, DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.593Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:servicecategorie): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.038Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:alternatieveIdentificator): property-usage-scope, reuse, DCATAP, DCAT. These tags will be added.
+2026-07-10T14:00:31.594Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:servicetype): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.038Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:alternatieveIdentificator has already a value for DCAT in language nl, but will be overwritten.
+2026-07-10T14:00:31.594Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:statuut): reuse. These tags will be added.
 
-2026-06-05T08:04:02.038Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:contactinformatie): DCAT, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.594Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:thema): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.039Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:contactinformatie has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.594Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:titel): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.039Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointURL): DCAT, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.594Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:toegankelijkheid): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.039Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointURL has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.595Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:trefwoord): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.039Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointbeschrijving): DCAT, DCATAP, GEODCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.595Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:versie): DCAT, reuse. These tags will be added.
 
-2026-06-05T08:04:02.039Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointbeschrijving has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.595Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DataService:wijzigingsdatum): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.039Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:landingspagina): DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.595Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:alternatieveIdentificator): reuse, DCATAP, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.040Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:landingspaginaVoorAuthenticatie): GEODCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.595Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:belanghebbendewetgeving): GEODCATAP, property-usage-scope, reuse. These tags will be added.
 
-2026-06-05T08:04:02.040Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:identificator): reuse, DCAT. These tags will be added.
+2026-07-10T14:00:31.596Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:beschrijving): GEODCATAP, reuse, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.040Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:titel has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2026-07-10T14:00:31.596Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:contactinformatie): GEODCATAP, reuse, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.040Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:titel): GEODCATAP, reuse, DCATAP. These tags will be added.
+2026-07-10T14:00:31.596Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:geografischedekking): reuse, GEODCATAP, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.041Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:beschrijving): GEODCATAP, reuse, DCATAP. These tags will be added.
+2026-07-10T14:00:31.596Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:identificator): reuse, property-usage-scope, DCATAP. These tags will be added.
 
-2026-06-05T08:04:02.041Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:contactinformatie): GEODCATAP, reuse, DCAT. These tags will be added.
+2026-07-10T14:00:31.596Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:periodiciteit): reuse, GEODCATAP, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.041Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:levensfase): reuse. These tags will be added.
+2026-07-10T14:00:31.597Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Frequency): class-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.041Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:toegankelijkheid): DCAT, DCATAP, GEODCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.597Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:publicatiedatum): property-usage-scope, GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.041Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:toegankelijkheid has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.598Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:temporeledekking): GEODCATAP, property-usage-scope, reuse. These tags will be added.
 
-2026-06-05T08:04:02.042Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:identificator): DCAT, reuse. These tags will be added.
+2026-07-10T14:00:31.598Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:titel): GEODCATAP, reuse, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.042Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:naam): GEODCATAP, DCATAP. These tags will be added.
+2026-07-10T14:00:31.598Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:DatasetSerie:wijzigingsdatum): GEODCATAP, reuse, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.042Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:licentie): GEODCATAP, reuse, DCATAP. These tags will be added.
+2026-07-10T14:00:31.598Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord:aanmaakdatum): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.042Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:alternatieve idenficator): DCAT, DCATAP. These tags will be added.
+2026-07-10T14:00:31.599Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord:alternatieve identificator): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.042Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:alternatieve idenficator has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.599Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord:bron metadata record): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.043Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:versie): DCAT, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.599Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord:bron metadata record landingspagina): reuse. These tags will be added.
 
-2026-06-05T08:04:02.043Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:versie has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.599Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord:conform): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.043Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:landingspaginaVoorStatusinformatie): GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.599Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord:identificator): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.043Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:rechten): reuse, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.600Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord:titel): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.044Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:bron metadata record landingspagina): reuse, parent. These tags will be added.
+2026-07-10T14:00:31.600Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:CatalogusRecord:wijzigingsdatum): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.044Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:bron metadata record landingspagina has an empty value for tag parent.
+2026-07-10T14:00:31.600Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:alternatieve identificator): reuse, DCATAP. These tags will be added.
 
-2026-06-05T08:04:02.044Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:belanghebbendewetgeving): property-usage-scope, reuse, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.600Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:conform): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.044Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:beschrijving): property-usage-scope, DCAT, DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.600Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:downloadURL): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.044Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:beschrijving has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.601Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:formaat): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.045Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:alternatieve identificator): GEODCATAP, reuse, DCAT, DCATAP. These tags will be added.
+2026-07-10T14:00:31.601Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:identificator): reuse, DCAT. These tags will be added.
 
-2026-06-05T08:04:02.045Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:alternatieve identificator has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.601Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:licentie): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.045Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:gestructureerdeIdentificator): reuse. These tags will be added.
+2026-07-10T14:00:31.601Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:rechten): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.045Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:identificator): DCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.602Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:titel): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.045Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:toegekendDoor): reuse. These tags will be added.
+2026-07-10T14:00:31.602Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Distributie:toegangsURL): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.045Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:toegekendDoorString): reuse. These tags will be added.
+2026-07-10T14:00:31.602Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:alternatieve idenficator): DCATAP. These tags will be added.
 
-2026-06-05T08:04:02.046Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:toegekendOp): reuse. These tags will be added.
+2026-07-10T14:00:31.602Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:beschrijving): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.046Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Contactinfo:e-mail): GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.602Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:contactinformatie): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.046Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:alternatieve identificator): DCAT, DCATAP. These tags will be added.
+2026-07-10T14:00:31.602Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:identificator): reuse, DCAT. These tags will be added.
 
-2026-06-05T08:04:02.046Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:alternatieve identificator has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.603Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:licentie): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.046Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:alternatieve Identificator): DCAT, DCATAP. These tags will be added.
+2026-07-10T14:00:31.603Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Catalogus:titel): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.046Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:alternatieve Identificator has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.603Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:alternatieve identificator): DCATAP. These tags will be added.
 
-2026-06-05T08:04:02.046Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:identificator): GEODCATAP, reuse, DCAT. These tags will be added.
+2026-07-10T14:00:31.603Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:beschrijving): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.047Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:aanmaakdatum): GEODCATAP, DCATAP. These tags will be added.
+2026-07-10T14:00:31.603Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:conform): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.047Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:titel): GEODCATAP, DCATAP. These tags will be added.
+2026-07-10T14:00:31.603Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:contactinformatie): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.047Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:beschrijving): GEODCATAP, DCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.604Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:creatiedatum): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.047Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:alternatieve identificator): reuse, DCAT, DCATAP. These tags will be added.
+2026-07-10T14:00:31.604Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:geografischeDekking): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.047Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:alternatieve identificator has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.608Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Resolutie:resolutiemethode): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.048Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:wijzigingsdatum): GEODCATAP, DCATAP. These tags will be added.
+2026-07-10T14:00:31.609Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Resolutie:waarde): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.048Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:toegankelijkheid): DCAT, DCATAP, GEODCATAP, reuse, ap-usage-nl. These tags will be added.
+2026-07-10T14:00:31.609Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:endDate): GEODCATAP, property-usage-scope, reuse. These tags will be added.
 
-2026-06-05T08:04:02.048Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:toegankelijkheid has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.609Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:startDate): reuse, property-usage-scope, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.048Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:toegankelijkheid has already a value for ap-usage-nl in language nl, but will be overwritten.
+2026-07-10T14:00:31.610Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasBeginning): GEODCATAP, property-usage-scope, reuse. These tags will be added.
 
-2026-06-05T08:04:02.048Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:conform): DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.610Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasEnd): GEODCATAP, reuse, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.048Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:versie): DCAT, reuse. These tags will be added.
+2026-07-10T14:00:31.610Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:herkomst): reuse. These tags will be added.
 
-2026-06-05T08:04:02.048Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:identificator): DCAT. These tags will be added.
+2026-07-10T14:00:31.610Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:identificator): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.049Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:beschrijving): DCAT, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.611Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:INSPIREthema): reuse. These tags will be added.
 
-2026-06-05T08:04:02.049Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:beschrijving has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.611Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:landingspagina): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.052Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:conform aan protocol): DCATAP, GEODCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.611Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:publicatiedatum): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.052Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:trefwoord): DCAT, DCATAP, GEODCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.612Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:ruimtelijkeResolutie): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.052Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:trefwoord has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.612Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:ruimtelijkVoorstellingsType): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.052Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:conform): reuse, GEODCATAP, DCATAP. These tags will be added.
+2026-07-10T14:00:31.612Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:statuut): reuse. These tags will be added.
 
-2026-06-05T08:04:02.053Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:contactinformatie): reuse, DCAT, property-usage-scope, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.612Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:thema): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.053Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:contactinformatie has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.613Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:titel): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.053Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:ruimtelijkVoorstellingsType): GEODCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.613Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:toegankelijkheid): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.054Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:voorbeeldweergave): DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.613Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:trefwoord): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.054Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:formaat): DCAT, DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.613Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:versie): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.054Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:formaat has an empty value for tag DCAT.
+2026-07-10T14:00:31.614Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:voorbeeldweergave): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.054Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie:rol): DCAT, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.614Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Dataset:wijzigingdatum): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.054Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie:rol has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.614Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Contactinfo:e-mail): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.054Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:statuut): reuse. These tags will be added.
+2026-07-10T14:00:31.614Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Standaard:beschrijving): DCAT. These tags will be added.
 
-2026-06-05T08:04:02.055Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:statuut): reuse. These tags will be added.
+2026-07-10T14:00:31.615Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Plaats:boundingBox): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.055Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:identificator): property-usage-scope, reuse, DCAT, DCATAP. These tags will be added.
+2026-07-10T14:00:31.615Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Plaats:Centroid): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.055Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:identificator has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.615Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Plaats:geometrie): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.055Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:periodiciteit): DCAT, property-usage-scope, reuse, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.615Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:Plaats:plaatsnaam): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.055Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:periodiciteit has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.616Z info: [ElementConverterHandler]: Unknown tags for element (Model:OSLO_GEODCAT_AP_Vlaanderen:OSLO-metadataVoorServices:RelatieQualificatie:rol): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.055Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Frequency): class-usage-scope. These tags will be added.
+2026-07-10T14:00:31.617Z info: [ElementConverterHandler]: Unknown tags for element (relatie): DCAT, reuse. These tags will be added.
 
-2026-06-05T08:04:02.055Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:publicatiedatum): reuse, DCAT, property-usage-scope, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.617Z info: [ElementConverterHandler]: Unknown tags for element (relatie): DCAT, reuse. These tags will be added.
 
-2026-06-05T08:04:02.055Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:publicatiedatum has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.618Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataset): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.056Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:temporeledekking): DCAT, property-usage-scope, reuse, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.618Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataset): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.056Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:temporeledekking has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.618Z info: [ElementConverterHandler]: Unknown tags for element (distributie): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.056Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:titel): DCAT, property-usage-scope, reuse, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.618Z info: [ElementConverterHandler]: Unknown tags for element (distributie): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.056Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:titel has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.618Z info: [ElementConverterHandler]: Unknown tags for element (record): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.056Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:wijzigingsdatum): property-usage-scope, reuse, DCAT, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.618Z info: [ElementConverterHandler]: Unknown tags for element (record): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.056Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:wijzigingsdatum has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.619Z info: [ElementConverterHandler]: Unknown tags for element (hoofdonderwerp): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.057Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:endDate): reuse, property-usage-scope, DCAT, DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.619Z info: [ElementConverterHandler]: Unknown tags for element (hoofdonderwerp): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.057Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:endDate has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.619Z info: [ElementConverterHandler]: Unknown tags for element (wordtAangebodenDoor): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.057Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:startDate): DCATAP, property-usage-scope, reuse, DCAT, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.619Z info: [ElementConverterHandler]: Unknown tags for element (wordtAangebodenDoor): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.057Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:startDate has already a value for DCAT in language nl, but will be overwritten.
+2026-07-10T14:00:31.619Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataService): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.057Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasBeginning): DCATAP, reuse, DCAT, property-usage-scope, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.619Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataService): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.058Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasBeginning has already a value for DCAT in language nl, but will be overwritten.
+2026-07-10T14:00:31.620Z info: [ElementConverterHandler]: Unknown tags for element (biedtInformatieAanOver): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.058Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasEnd): DCATAP, DCAT, property-usage-scope, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.620Z info: [ElementConverterHandler]: Unknown tags for element (biedtInformatieAanOver): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.058Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasEnd has already a value for DCAT in language nl, but will be overwritten.
+2026-07-10T14:00:31.620Z info: [ElementConverterHandler]: Unknown tags for element (inserie): reuse, property-usage-scope, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.058Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:trefwoord): DCAT, GEODCATAP, DCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.620Z info: [ElementConverterHandler]: Unknown tags for element (inserie): reuse, property-usage-scope, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.058Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:trefwoord has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.620Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): reuse, property-usage-scope, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.059Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:landingspaginaVoorGebruiksinformatie): GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.621Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): reuse, property-usage-scope, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.059Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:thema): DCAT, DCATAP, GEODCATAP, reuse. These tags will be added.
+2026-07-10T14:00:31.621Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.059Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:thema has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.621Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.059Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:landingspagina): DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.621Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.059Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:titel): GEODCATAP, DCATAP. These tags will be added.
+2026-07-10T14:00:31.621Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): GEODCATAP, reuse. These tags will be added.
 
-2026-06-05T08:04:02.060Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:titel): DCATAP, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.621Z info: [ElementConverterHandler]: Unknown tags for element (eigenaar): GEODCATAP, reuse, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.067Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:licentie): DCAT, DCATAP, reuse, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.621Z info: [ElementConverterHandler]: Unknown tags for element (eigenaar): GEODCATAP, reuse, property-usage-scope. These tags will be added.
 
-2026-06-05T08:04:02.067Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:licentie has already a value for DCATAP in language nl, but will be overwritten.
+2026-07-10T14:00:31.621Z info: [ElementConverterHandler]: Unknown tags for element (verdeler): reuse, GEODCATAP. These tags will be added.
 
-2026-06-05T08:04:02.067Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:titel): GEODCATAP, DCAT, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.067Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:titel has an empty value for tag DCAT.
-
-2026-06-05T08:04:02.067Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:identificator): DCAT, GEODCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.068Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:rechten): DCAT, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.068Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:thema): DCAT, DCATAP, GEODCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.068Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:thema has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.068Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:licentie): DCAT, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.068Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:publicatiedatum): DCAT, DCATAP, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.068Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:publicatiedatum has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.068Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:geografischedekking): DCATAP, DCAT, reuse, property-usage-scope, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.068Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:geografischedekking has already a value for DCAT in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.069Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:geometrie): DCAT, DCATAP, reuse, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.069Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:geometrie has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.069Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:boundingBox): DCAT, DCATAP, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.069Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:boundingBox has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.069Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:Centroid): DCAT, DCATAP, reuse, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.069Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:Centroid has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.069Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:plaatsnaam): reuse, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.070Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:ruimtelijkeResolutie): GEODCATAP, DCATAP. These tags will be added.
-
-2026-06-05T08:04:02.070Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Resolutie:waarde): GEODCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.070Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Resolutie:resolutiemethode): GEODCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.070Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:INSPIREthema): reuse. These tags will be added.
-
-2026-06-05T08:04:02.071Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:servicetype): GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.071Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:servicecategorie): GEODCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.071Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:conform): DCAT, DCATAP, reuse, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.071Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:conform has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.071Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Standaard:beschrijving): DCAT. These tags will be added.
-
-2026-06-05T08:04:02.072Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:bron metadata record): reuse, GEODCATAP, DCATAP. These tags will be added.
-
-2026-06-05T08:04:02.072Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:herkomst): reuse. These tags will be added.
-
-2026-06-05T08:04:02.072Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.072Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL): DCAT, DCATAP, reuse, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.072Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.073Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.073Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL): DCAT, DCATAP, GEODCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.073Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.073Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:contactinformatie): DCAT, DCATAP, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.073Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:contactinformatie has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.073Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:wijzigingdatum): DCAT, DCATAP, GEODCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.073Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:wijzigingdatum has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.073Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:creatiedatum): GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.073Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:creatiedatum): GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.074Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:publicatiedatum): DCAT, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.074Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:wijzigingsdatum): DCAT, reuse, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.074Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:geografischeDekking): DCAT, DCATAP, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.074Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:geografischeDekking has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.074Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:geografischeDekking): GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.075Z info: [ElementConverterHandler]: Unknown tags for element (hoofdonderwerp): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.075Z info: [ElementConverterHandler]: Unknown tags for element (hoofdonderwerp): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.086Z info: [ElementConverterHandler]: Unknown tags for element (record): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.087Z info: [ElementConverterHandler]: Unknown tags for element (record): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.087Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): GEODCATAP, DCAT. These tags will be added.
-
-2026-06-05T08:04:02.087Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): GEODCATAP, DCAT. These tags will be added.
-
-2026-06-05T08:04:02.087Z info: [ElementConverterHandler]: Unknown tags for element (biedtInformatieAanOver): GEODCATAP, DCAT, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.087Z warn: [ConverterHandler]: Entity with path biedtInformatieAanOver has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.087Z info: [ElementConverterHandler]: Unknown tags for element (biedtInformatieAanOver): GEODCATAP, DCAT, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.087Z warn: [ConverterHandler]: Entity with path biedtInformatieAanOver has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.088Z info: [ElementConverterHandler]: Unknown tags for element (wordtAangebodenDoor): GEODCATAP, DCAT, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.088Z warn: [ConverterHandler]: Entity with path wordtAangebodenDoor has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.088Z info: [ElementConverterHandler]: Unknown tags for element (wordtAangebodenDoor): GEODCATAP, DCAT, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.088Z warn: [ConverterHandler]: Entity with path wordtAangebodenDoor has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.088Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.088Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.088Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataset): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.088Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataset): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.088Z info: [ElementConverterHandler]: Unknown tags for element (distributie): GEODCATAP, DCAT, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.088Z warn: [ConverterHandler]: Entity with path distributie has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.088Z info: [ElementConverterHandler]: Unknown tags for element (distributie): GEODCATAP, DCAT, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.088Z warn: [ConverterHandler]: Entity with path distributie has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.089Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataService): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.089Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataService): GEODCATAP, DCATAP, reuse. These tags will be added.
-
-2026-06-05T08:04:02.089Z warn: [ConverterHandler]: Entity with path eigenaar has an empty value for tag definition-nl.
-
-2026-06-05T08:04:02.089Z warn: [ConverterHandler]: Entity with path eigenaar has already a value for label-ap-nl in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.089Z info: [ElementConverterHandler]: Unknown tags for element (eigenaar): label-ap-nl, GEODCATAP, reuse, property-usage-scope. These tags will be added.
-
-2026-06-05T08:04:02.089Z info: [ElementConverterHandler]: Unknown tags for element (eigenaar): label-ap-nl, GEODCATAP, reuse, property-usage-scope. These tags will be added.
-
-2026-06-05T08:04:02.089Z warn: [ConverterHandler]: Entity with path verdeler has already a value for label-ap-nl in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.089Z info: [ElementConverterHandler]: Unknown tags for element (verdeler): label-ap-nl, reuse, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.089Z info: [ElementConverterHandler]: Unknown tags for element (verdeler): label-ap-nl, reuse, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.090Z info: [ElementConverterHandler]: Unknown tags for element (inserie): DCAT, DCATAP, reuse, property-usage-scope, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.090Z warn: [ConverterHandler]: Entity with path inserie has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.090Z info: [ElementConverterHandler]: Unknown tags for element (inserie): DCAT, DCATAP, reuse, property-usage-scope, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.090Z warn: [ConverterHandler]: Entity with path inserie has already a value for DCATAP in language nl, but will be overwritten.
-
-2026-06-05T08:04:02.090Z info: [ElementConverterHandler]: Unknown tags for element (relatie): DCAT, reuse. These tags will be added.
-
-2026-06-05T08:04:02.090Z info: [ElementConverterHandler]: Unknown tags for element (relatie): DCAT, reuse. These tags will be added.
-
-2026-06-05T08:04:02.090Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): reuse, property-usage-scope, GEODCATAP. These tags will be added.
-
-2026-06-05T08:04:02.090Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): reuse, property-usage-scope, GEODCATAP. These tags will be added.
+2026-07-10T14:00:31.622Z info: [ElementConverterHandler]: Unknown tags for element (verdeler): reuse, GEODCATAP. These tags will be added.
 
 #||# -------------------------------------
 
