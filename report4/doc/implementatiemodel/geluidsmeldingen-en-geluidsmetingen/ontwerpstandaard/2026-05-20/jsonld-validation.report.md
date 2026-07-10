@@ -2,21 +2,21 @@
 
 #||# -------------------------------------  
 
-2026-07-10T09:05:22.875Z info: Loaded 54 URI prefixes into whitelist
+2026-07-10T09:42:57.512Z info: Loaded 54 URI prefixes into whitelist
 
-2026-07-10T09:05:23.090Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:c715fdc0035a07528a7680b733044b135c489d231c1512dec3448448ee4fd041](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6047) in Application Profile
+2026-07-10T09:42:57.773Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:c715fdc0035a07528a7680b733044b135c489d231c1512dec3448448ee4fd041](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6047) in Application Profile
 
-2026-07-10T09:05:23.090Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:ac2a7514fa491161f968e1ce94a32dd6ab75f9ac7fe589c7611a4d34d2f152eb](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6348) in Application Profile
+2026-07-10T09:42:57.774Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:ac2a7514fa491161f968e1ce94a32dd6ab75f9ac7fe589c7611a4d34d2f152eb](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6348) in Application Profile
 
-2026-07-10T09:05:23.091Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:98084eff144341aeacb329df55816db67279b59dffda2990073e66266819aaab](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6359) in Application Profile
+2026-07-10T09:42:57.774Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:98084eff144341aeacb329df55816db67279b59dffda2990073e66266819aaab](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6359) in Application Profile
 
-2026-07-10T09:05:23.092Z info: Validation successful! All assigned URIs are whitelisted.
+2026-07-10T09:42:57.775Z info: Validation successful! All assigned URIs are whitelisted.
 
-2026-07-10T09:05:23.092Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2026-07-10T09:42:57.775Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2026-07-10T09:05:23.092Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-07-10T09:42:57.775Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2026-07-10T09:05:23.092Z info: Validation successful! All base URIs seem to be valid.
+2026-07-10T09:42:57.775Z info: Validation successful! All base URIs seem to be valid.
 
-2026-07-10T09:05:23.092Z info: Validation found 3 missing referenced classes or attributes.
+2026-07-10T09:42:57.775Z info: Validation found 3 missing referenced classes or attributes.
 

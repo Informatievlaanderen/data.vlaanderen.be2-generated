@@ -2,71 +2,71 @@
 
 #||# -------------------------------------
 
-2026-07-10T09:04:26.583Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Omgevingsvergunning:Inhoud:(Inhoud -> JuridischWerk))
+2026-07-10T09:42:10.166Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Omgevingsvergunning:Inhoud:(Inhoud -> JuridischWerk))
 
-2026-07-10T09:04:26.585Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
+2026-07-10T09:42:10.167Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
 
-2026-07-10T09:04:26.585Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Dossier:Zaak:(Zaak -> Agent))
+2026-07-10T09:42:10.167Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Dossier:Zaak:(Zaak -> Agent))
 
-2026-07-10T09:04:26.585Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Omgevingsvergunning:Bekendmaking:(Bekendmaking -> Zaakhandeling))
+2026-07-10T09:42:10.168Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Omgevingsvergunning:Bekendmaking:(Bekendmaking -> Zaakhandeling))
 
-2026-07-10T09:04:26.585Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> JuridischWerk))
+2026-07-10T09:42:10.168Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_NDNN:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> JuridischWerk))
 
-2026-07-10T09:04:26.585Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2026-07-10T09:42:10.168Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2026-07-10T09:04:26.585Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2026-07-10T09:42:10.168Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2026-07-10T09:04:26.587Z info: Connector Model:applicatieprofiel_NDNN:SF:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.170Z info: Connector Model:applicatieprofiel_NDNN:SF:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.588Z info: Connector Model:applicatieprofiel_NDNN:DCTerms:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.171Z info: Connector Model:applicatieprofiel_NDNN:DCTerms:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.588Z info: Connector Model:applicatieprofiel_NDNN:INSPIRE:GeografischeNaam:(GeografischeNaam -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.171Z info: Connector Model:applicatieprofiel_NDNN:INSPIRE:GeografischeNaam:(GeografischeNaam -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.588Z info: Connector Model:applicatieprofiel_NDNN:LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.171Z info: Connector Model:applicatieprofiel_NDNN:LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.588Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Adres:Adres:(Adres -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.171Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Adres:Adres:(Adres -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.588Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Dossier:Activiteit:(Activiteit -> Zaak) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.171Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Dossier:Activiteit:(Activiteit -> Zaak) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:LOCN:Geometrie:(Geometrie -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.172Z info: Connector Model:applicatieprofiel_NDNN:LOCN:Geometrie:(Geometrie -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Dossier:Zaak:(Zaak -> Resource) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.172Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Dossier:Zaak:(Zaak -> Resource) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:W3C Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.172Z info: Connector Model:applicatieprofiel_NDNN:W3C Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:W3C Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.172Z info: Connector Model:applicatieprofiel_NDNN:W3C Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:SSN/SOSA:Observatie:(Observatie -> Kenmerktype) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.172Z info: Connector Model:applicatieprofiel_NDNN:SSN/SOSA:Observatie:(Observatie -> Kenmerktype) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatie) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.172Z info: Connector Model:applicatieprofiel_NDNN:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatie) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Melding:Melding:(Melding -> Object) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.172Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Melding:Melding:(Melding -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Melding:Melding:(Melding -> Object) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.172Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Melding:Melding:(Melding -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:DCMI:Verzameling:(Verzameling -> Object) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:DCMI:Verzameling:(Verzameling -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.589Z info: Connector Model:applicatieprofiel_NDNN:DCMI:Verzameling:(Verzameling -> Object) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:DCMI:Verzameling:(Verzameling -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.590Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Omgevingsvergunning:Vergunning:(Vergunning -> Object) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Omgevingsvergunning:Vergunning:(Vergunning -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.590Z info: Connector Model:applicatieprofiel_NDNN:Schema.org:Gebeurtenis:(Gebeurtenis -> Object) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:Schema.org:Gebeurtenis:(Gebeurtenis -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.590Z info: Connector Model:applicatieprofiel_NDNN:PROV:Activiteit:(Activiteit -> Object) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:PROV:Activiteit:(Activiteit -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.590Z info: Connector Model:applicatieprofiel_NDNN:PROV:Activiteit:(Activiteit -> Gebeurtenis) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:PROV:Activiteit:(Activiteit -> Gebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.590Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Dossier:Activiteit:(Activiteit -> Agent) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Dossier:Activiteit:(Activiteit -> Agent) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.590Z info: Connector Model:applicatieprofiel_NDNN:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Verzameling) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Verzameling) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.590Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Waterkwaliteit:Meetpunt:(Meetpunt -> Object) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Waterkwaliteit:Meetpunt:(Meetpunt -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.590Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Waterkwaliteit:Meetpunt:(Meetpunt -> Object) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:OSLO-Waterkwaliteit:Meetpunt:(Meetpunt -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.590Z info: Connector Model:applicatieprofiel_NDNN:LOCN:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
+2026-07-10T09:42:10.173Z info: Connector Model:applicatieprofiel_NDNN:LOCN:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
 
-2026-07-10T09:04:26.591Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-07-10T09:42:10.174Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 
