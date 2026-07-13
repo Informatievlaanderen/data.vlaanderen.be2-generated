@@ -2,21 +2,19 @@
 
 #||# -------------------------------------  
 
-2026-07-10T09:42:57.512Z info: Loaded 54 URI prefixes into whitelist
+2026-07-13T10:04:45.419Z info: Loaded 54 URI prefixes into whitelist
 
-2026-07-10T09:42:57.773Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:c715fdc0035a07528a7680b733044b135c489d231c1512dec3448448ee4fd041](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6047) in Application Profile
+2026-07-13T10:04:45.714Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/ssn#ligging for subject: [urn:oslo-toolchain:1efdfdd12e710dc2b637a0d9db09bf5595be61ff36a0339a6da61a30b4a482e4](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L3135)
 
-2026-07-10T09:42:57.774Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:ac2a7514fa491161f968e1ce94a32dd6ab75f9ac7fe589c7611a4d34d2f152eb](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6348) in Application Profile
+2026-07-13T10:04:45.723Z error: Found missing class or attribute (Rol): [urn:oslo-toolchain:0698c577b61f3d1ef61269859d073b873b4de89c0773dca38f4e369baad654c2](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L941) in Application Profile
 
-2026-07-10T09:42:57.774Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:98084eff144341aeacb329df55816db67279b59dffda2990073e66266819aaab](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6359) in Application Profile
+2026-07-13T10:04:45.734Z info: Validation found 1 non-whitelisted assigned URIs
 
-2026-07-10T09:42:57.775Z info: Validation successful! All assigned URIs are whitelisted.
+2026-07-13T10:04:45.734Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2026-07-10T09:42:57.775Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2026-07-13T10:04:45.734Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2026-07-10T09:42:57.775Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-07-13T10:04:45.735Z info: Validation successful! All base URIs seem to be valid.
 
-2026-07-10T09:42:57.775Z info: Validation successful! All base URIs seem to be valid.
-
-2026-07-10T09:42:57.775Z info: Validation found 3 missing referenced classes or attributes.
+2026-07-13T10:04:45.735Z info: Validation found 1 missing referenced classes or attributes.
 
