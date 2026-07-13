@@ -105,10 +105,10 @@
           "@id"
         ]
       },
-      "Rol": {
-        "title": "Rol",
+      "Roltype": {
+        "title": "Roltype",
         "type": "object",
-        "description": "Enumeratie van Rol",
+        "description": "Enumeratie van Roltype",
         "properties": {
           "@id": {
             "type": "string",
@@ -892,10 +892,10 @@
             "pattern": "^AgentInRol$"
           },
           "rol": {
-            "$ref": "#/components/schemas/Rol"
+            "$ref": "#/components/schemas/Roltype"
           },
           "zaak": {
-            "$ref": "#/components/schemas/Activiteit"
+            "$ref": "#/components/schemas/Activiteit(Dossier)"
           }
         },
         "required": [
@@ -904,8 +904,8 @@
           "zaak"
         ]
       },
-      "Activiteit": {
-        "title": "Activiteit",
+      "Activiteit(Dossier)": {
+        "title": "Activiteit(Dossier)",
         "type": "object",
         "description": "Handeling van bepaalde duur op of met entiteiten.",
         "properties": {
@@ -915,121 +915,75 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse Activiteit)",
-            "pattern": "^Activiteit$"
+            "description": "Object type (klasse Activiteit(Dossier))",
+            "pattern": "^Activiteit(Dossier)$"
           },
-          "uitvoerder": {
-            "$ref": "#/components/schemas/Agent"
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
-          },
-          "beschrijving": {
+          "einddatum": {
             "type": "object",
-            "description": "Beschrijving van de gebeurtenis.",
+            "description": "De einddatum van de activiteit.",
             "properties": {
               "@value": {
-                "type": "string"
-              },
-              "@language": {
                 "type": "string",
-                "pattern": "^nl$"
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
               }
             },
             "required": [
               "@value",
-              "@language"
+              "@type"
             ]
           },
           "naam": {
             "type": "object",
-            "description": "Naam van de gebeurtenis.",
+            "description": "De naam van de activiteit.",
             "properties": {
               "@value": {
                 "type": "string"
-              },
-              "@language": {
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "startdatum": {
+            "type": "object",
+            "description": "De startdatum van de activiteit.",
+            "properties": {
+              "@value": {
                 "type": "string",
-                "pattern": "^nl$"
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
               }
             },
             "required": [
               "@value",
-              "@language"
+              "@type"
             ]
           },
-          "tijd": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/TemporeleEntiteit"
-              },
-              {
-                "$ref": "#/components/schemas/Moment"
-              },
-              {
-                "$ref": "#/components/schemas/Periode"
-              }
-            ],
-            "discriminator": {
-              "propertyName": "@type",
-              "mapping": {
-                "TemporeleEntiteit": "#/components/schemas/TemporeleEntiteit",
-                "Moment": "#/components/schemas/Moment",
-                "Periode": "#/components/schemas/Periode"
-              }
-            }
+          "dossierType": {
+            "$ref": "#/components/schemas/Activiteittype"
           },
-          "plaats": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Locatie"
-              },
-              {
-                "$ref": "#/components/schemas/Plaats"
-              },
-              {
-                "$ref": "#/components/schemas/BelgischAdres"
-              },
-              {
-                "$ref": "#/components/schemas/GeografischeNaam"
-              },
-              {
-                "$ref": "#/components/schemas/Adresvoorstelling"
-              },
-              {
-                "$ref": "#/components/schemas/Geometrie"
-              }
-            ],
-            "discriminator": {
-              "propertyName": "@type",
-              "mapping": {
-                "Locatie": "#/components/schemas/Locatie",
-                "Plaats": "#/components/schemas/Plaats",
-                "BelgischAdres": "#/components/schemas/BelgischAdres",
-                "GeografischeNaam": "#/components/schemas/GeografischeNaam",
-                "Adresvoorstelling": "#/components/schemas/Adresvoorstelling",
-                "Geometrie": "#/components/schemas/Geometrie"
-              }
-            }
-          },
-          "gebeurtenisType": {
-            "$ref": "#/components/schemas/GebeurtenisType"
+          "vindtPlaatsTijdens": {
+            "type": "array",
+            "description": "Lijst van Zaak items.",
+            "items": {
+              "$ref": "#/components/schemas/Zaak"
+            },
+            "minItems": 1
           }
         },
         "required": [
           "@type",
-          "uitvoerder",
-          "tijd",
-          "plaats",
-          "gebeurtenisType"
+          "einddatum",
+          "naam",
+          "startdatum",
+          "dossierType"
         ]
       },
       "Resource": {
@@ -1245,6 +1199,134 @@
         },
         "required": [
           "@type"
+        ]
+      },
+      "Activiteit": {
+        "title": "Activiteit",
+        "type": "object",
+        "description": "Handeling van bepaalde duur op of met entiteiten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Activiteit)",
+            "pattern": "^Activiteit$"
+          },
+          "uitvoerder": {
+            "$ref": "#/components/schemas/Agent"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Domeinobjecttype"
+          },
+          "waardeverschaffer": {
+            "type": "array",
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "$ref": "#/components/schemas/Observatie"
+            },
+            "minItems": 1
+          },
+          "beschrijving": {
+            "type": "object",
+            "description": "Beschrijving van de gebeurtenis.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "naam": {
+            "type": "object",
+            "description": "Naam van de gebeurtenis.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "tijd": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/TemporeleEntiteit"
+              },
+              {
+                "$ref": "#/components/schemas/Moment"
+              },
+              {
+                "$ref": "#/components/schemas/Periode"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "TemporeleEntiteit": "#/components/schemas/TemporeleEntiteit",
+                "Moment": "#/components/schemas/Moment",
+                "Periode": "#/components/schemas/Periode"
+              }
+            }
+          },
+          "plaats": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Locatie"
+              },
+              {
+                "$ref": "#/components/schemas/Plaats"
+              },
+              {
+                "$ref": "#/components/schemas/BelgischAdres"
+              },
+              {
+                "$ref": "#/components/schemas/GeografischeNaam"
+              },
+              {
+                "$ref": "#/components/schemas/Adresvoorstelling"
+              },
+              {
+                "$ref": "#/components/schemas/Geometrie"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Locatie": "#/components/schemas/Locatie",
+                "Plaats": "#/components/schemas/Plaats",
+                "BelgischAdres": "#/components/schemas/BelgischAdres",
+                "GeografischeNaam": "#/components/schemas/GeografischeNaam",
+                "Adresvoorstelling": "#/components/schemas/Adresvoorstelling",
+                "Geometrie": "#/components/schemas/Geometrie"
+              }
+            }
+          },
+          "gebeurtenisType": {
+            "$ref": "#/components/schemas/GebeurtenisType"
+          }
+        },
+        "required": [
+          "@type",
+          "uitvoerder",
+          "tijd",
+          "plaats",
+          "gebeurtenisType"
         ]
       },
       "Gebeurtenis": {
@@ -2442,14 +2524,14 @@
         "parameters": {
           "id": "$response.body#/AgentInRol.rol/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Rol` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Roltype` op te halen."
       },
       "AgentInRol.zaak": {
         "operationId": "AgentInRolGET",
         "parameters": {
           "id": "$response.body#/AgentInRol.zaak/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Activiteit` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Activiteit(Dossier)` op te halen."
       },
       "AgentInRol.agent": {
         "operationId": "AgentInRolGET",
@@ -2458,24 +2540,24 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
-      "Activiteit.dossierType": {
-        "operationId": "ActiviteitGET",
+      "Activiteit(Dossier).dossierType": {
+        "operationId": "Activiteit(Dossier)GET",
         "parameters": {
-          "id": "$response.body#/Activiteit.dossierType/@id"
+          "id": "$response.body#/Activiteit(Dossier).dossierType/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Activiteittype` op te halen."
       },
-      "Activiteit.vindtPlaatsTijdens": {
-        "operationId": "ActiviteitGET",
+      "Activiteit(Dossier).vindtPlaatsTijdens": {
+        "operationId": "Activiteit(Dossier)GET",
         "parameters": {
-          "id": "$response.body#/Activiteit.vindtPlaatsTijdens/@id"
+          "id": "$response.body#/Activiteit(Dossier).vindtPlaatsTijdens/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen."
       },
-      "Activiteit.wasGeassocieerdMet": {
-        "operationId": "ActiviteitGET",
+      "Activiteit(Dossier).wasGeassocieerdMet": {
+        "operationId": "Activiteit(Dossier)GET",
         "parameters": {
-          "id": "$response.body#/Activiteit.wasGeassocieerdMet/@id"
+          "id": "$response.body#/Activiteit(Dossier).wasGeassocieerdMet/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
