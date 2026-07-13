@@ -1,0 +1,72 @@
+{
+  "title": "Verzameling",
+  "type": "object",
+  "description": "Een verzameling van resources.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verzameling)",
+      "pattern": "^Verzameling$"
+    },
+    "heeftLid": {
+      "type": "array",
+      "description": "Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Object"
+          },
+          {
+            "$ref": "#/components/schemas/Verzameling"
+          },
+          {
+            "$ref": "#/components/schemas/Melding"
+          },
+          {
+            "$ref": "#/components/schemas/Vergunning"
+          },
+          {
+            "$ref": "#/components/schemas/Activiteit"
+          },
+          {
+            "$ref": "#/components/schemas/Gebeurtenis"
+          },
+          {
+            "$ref": "#/components/schemas/Meetpunt"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Object": "#/components/schemas/Object",
+            "Verzameling": "#/components/schemas/Verzameling",
+            "Melding": "#/components/schemas/Melding",
+            "Vergunning": "#/components/schemas/Vergunning",
+            "Activiteit": "#/components/schemas/Activiteit",
+            "Gebeurtenis": "#/components/schemas/Gebeurtenis",
+            "Meetpunt": "#/components/schemas/Meetpunt"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Domeinobjecttype"
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
