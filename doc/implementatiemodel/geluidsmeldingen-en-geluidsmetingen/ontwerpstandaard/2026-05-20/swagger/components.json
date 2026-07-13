@@ -105,6 +105,20 @@
           "@id"
         ]
       },
+      "Rol": {
+        "title": "Rol",
+        "type": "object",
+        "description": "Enumeratie van Rol",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
       "Activiteittype": {
         "title": "Activiteittype",
         "type": "object",
@@ -877,12 +891,16 @@
             "description": "Object type (klasse AgentInRol)",
             "pattern": "^AgentInRol$"
           },
+          "rol": {
+            "$ref": "#/components/schemas/Rol"
+          },
           "zaak": {
             "$ref": "#/components/schemas/Activiteit"
           }
         },
         "required": [
           "@type",
+          "rol",
           "zaak"
         ]
       },
@@ -2418,6 +2436,13 @@
           "id": "$response.body#/Zaak.behandelt/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Resource` op te halen."
+      },
+      "AgentInRol.rol": {
+        "operationId": "AgentInRolGET",
+        "parameters": {
+          "id": "$response.body#/AgentInRol.rol/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Rol` op te halen."
       },
       "AgentInRol.zaak": {
         "operationId": "AgentInRolGET",
