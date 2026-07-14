@@ -14,7 +14,7 @@ error: missing '/tmp/generated/doc/implementatiemodel/geluidsmeldingen-en-geluid
 
 index.html check
 error: missing '/tmp/generated/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/kandidaatstandaard/2026-06-12/index.html'
-error: missing '/tmp/generated/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen//index.html'
+error: missing '/tmp/generated/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/index.html'
 
 #||#    + checking /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
 #||# 
