@@ -1,0 +1,61 @@
+{
+  "title": "MeldingBody",
+  "type": "object",
+  "description": "De body van de Melding,deze omvat relevante informatie voor de verdere afhandeling van een melding.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MeldingBody)",
+      "pattern": "^MeldingBody$"
+    },
+    "beschrijving": {
+      "type": "object",
+      "description": "Een tekstuele beschrijving van de melding. Deze eigenschap kan gebruikt worden om extra beschrijvende tekst mee te geven over het Meldingsobject.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "bijlage": {
+      "type": "object",
+      "description": "Identificeert een resource die aan de MeldingsBody verbonden is en mogelijks speciale verwerking vraagt. Via deze eigenschap is het mogelijk om Bijvoorbeeld. Foto's of PDF documenten te koppelen aan de Melding.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Punt": "#/components/schemas/Punt"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
