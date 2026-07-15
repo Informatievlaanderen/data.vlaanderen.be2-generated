@@ -650,13 +650,6 @@
                 },
                 "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Organization` op te halen."
               },
-              "Maintenance.date": {
-                "operationId": "MaintenanceGET",
-                "parameters": {
-                  "id": "$response.body#/Maintenance.date/@id"
-                },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
-              },
               "Maintenance.description": {
                 "operationId": "MaintenanceGET",
                 "parameters": {
@@ -887,13 +880,6 @@
                 },
                 "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LangString` op te halen."
               },
-              "Usage.date": {
-                "operationId": "UsageGET",
-                "parameters": {
-                  "id": "$response.body#/Usage.date/@id"
-                },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
-              },
               "Usage.location": {
                 "operationId": "UsageGET",
                 "parameters": {
@@ -1103,13 +1089,6 @@
               }
             },
             "links": {
-              "Inspection.date": {
-                "operationId": "InspectionGET",
-                "parameters": {
-                  "id": "$response.body#/Inspection.date/@id"
-                },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
-              },
               "Inspection.description": {
                 "operationId": "InspectionGET",
                 "parameters": {
@@ -4314,11 +4293,26 @@
             "description": "Object type (klasse Maintenance)",
             "pattern": "^Maintenance$"
           },
+          "date": {
+            "type": "object",
+            "description": "The date and time of the maintenance.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
           "requestedBy": {
             "$ref": "#/components/schemas/Organization"
-          },
-          "date": {
-            "$ref": "#/components/schemas/DateTime"
           },
           "description": {
             "type": "array",
@@ -4350,6 +4344,24 @@
             "description": "Object type (klasse Usage)",
             "pattern": "^Usage$"
           },
+          "date": {
+            "type": "object",
+            "description": "The time and date on which a Fire Hydrant was used during an emergency intervention.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
           "performedBy": {
             "$ref": "#/components/schemas/Organization"
           },
@@ -4360,9 +4372,6 @@
               "$ref": "#/components/schemas/LangString"
             },
             "minItems": 1
-          },
-          "date": {
-            "$ref": "#/components/schemas/DateTime"
           },
           "location": {
             "$ref": "#/components/schemas/Geometry"
@@ -4387,7 +4396,22 @@
             "pattern": "^Inspection$"
           },
           "date": {
-            "$ref": "#/components/schemas/DateTime"
+            "type": "object",
+            "description": "The date and time of the inspection.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
           },
           "description": {
             "type": "array",
@@ -4777,7 +4801,7 @@
             "description": "Object type (klasse Outlet)",
             "pattern": "^Outlet$"
           },
-          "type": {
+          "typeOutlet": {
             "type": "array",
             "description": "Lijst van String items.",
             "items": {
@@ -4886,6 +4910,55 @@
           "unitQuantityValue"
         ]
       },
+      "AddressRepresentation": {
+        "title": "AddressRepresentation",
+        "type": "object",
+        "description": "More readable representation with only the basic data of the address, intended to use an address as an attribute of another object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AddressRepresentation)",
+            "pattern": "^AddressRepresentation$"
+          },
+          "houseNumber": {
+            "type": "object",
+            "description": "Alphanumeric code officially assigned to building units, berths, pitches or parcels.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "postalcode": {
+            "type": "object",
+            "description": "Code designating the geographical area that groups addresses for postal purposes.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "streetname": {
+            "$ref": "#/components/schemas/GeographicalName"
+          },
+          "municipalityName": {
+            "$ref": "#/components/schemas/GeographicalName"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
       "Identifier": {
         "title": "Identifier",
         "type": "object",
@@ -4900,6 +4973,24 @@
             "description": "Object type (klasse Identifier)",
             "pattern": "^Identifier$"
           },
+          "dateOfIssue": {
+            "type": "object",
+            "description": "The date on which the Identifier was assigned.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
           "issuingAuthorityName": {
             "type": "object",
             "description": "The name of the agency responsible for issuing the Identifier.",
@@ -4912,21 +5003,6 @@
               "@value"
             ]
           },
-          "schemeName": {
-            "type": "object",
-            "description": "Name of the scheme used to construct the identifier.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
-          },
-          "dateOfIssue": {
-            "$ref": "#/components/schemas/DateTime"
-          },
           "issuingAuthorityURI": {
             "type": "object",
             "description": "The URI of the issuing authority.",
@@ -4938,6 +5014,18 @@
             },
             "required": [
               "@id"
+            ]
+          },
+          "schemeName": {
+            "type": "object",
+            "description": "Name of the scheme used to construct the identifier.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
             ]
           },
           "schemeURI": {
@@ -5028,37 +5116,6 @@
           },
           "nativeness": {
             "$ref": "#/components/schemas/NativenessValue"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
-      "AddressRepresentation": {
-        "title": "AddressRepresentation",
-        "type": "object",
-        "description": "More readable representation with only the basic data of the address, intended to use an address as an attribute of another object.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse AddressRepresentation)",
-            "pattern": "^AddressRepresentation$"
-          },
-          "houseNumber": {
-            "$ref": "#/components/schemas/String"
-          },
-          "streetname": {
-            "$ref": "#/components/schemas/GeographicalName"
-          },
-          "postalcode": {
-            "$ref": "#/components/schemas/String"
-          },
-          "municipalityName": {
-            "$ref": "#/components/schemas/GeographicalName"
           }
         },
         "required": [
