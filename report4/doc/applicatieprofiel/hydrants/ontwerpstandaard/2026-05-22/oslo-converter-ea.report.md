@@ -2,33 +2,29 @@
 
 #||# -------------------------------------
 
-2026-07-15T13:43:42.869Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:Valve:(Valve -> FireHydrant) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.334Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:Valve:(Valve -> FireHydrant) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.872Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Maintenance) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.337Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Maintenance) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.872Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Usage) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.337Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Usage) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.872Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Inspection) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.337Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Inspection) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.872Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> FireHydrant) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.338Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> FireHydrant) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.872Z info: Connector ICEG-Hydrants-AP:QUDT:Unit:(Unit -> Concept) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.338Z info: Connector ICEG-Hydrants-AP:QUDT:Unit:(Unit -> Concept) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.872Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:Pipe:(Pipe -> Pipe) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.338Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:Pipe:(Pipe -> Pipe) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.873Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Pipe) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.338Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Pipe) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.873Z info: Connector Model:ICEG-Hydrants-AP:org:Organization:(Organization -> ContactPoint) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.338Z info: Connector Model:ICEG-Hydrants-AP:org:Organization:(Organization -> ContactPoint) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.873Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:Pipe:(Pipe -> Organization) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.338Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:Pipe:(Pipe -> Organization) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.873Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Organization) is not an association with a source role. Ignoring this connector.
+2026-07-15T13:47:41.338Z info: Connector Model:ICEG-Hydrants-AP:saref4watr:FireHydrant:(FireHydrant -> Organization) is not an association with a source role. Ignoring this connector.
 
-2026-07-15T13:43:42.874Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
-
-2026-07-15T13:43:42.886Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:ICEG-Hydrants-AP:ICEG Building:AddressRepresentation:streetname).
-
-2026-07-15T13:43:42.886Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:ICEG-Hydrants-AP:ICEG Building:AddressRepresentation:municipalityName).
+2026-07-15T13:47:41.339Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 
