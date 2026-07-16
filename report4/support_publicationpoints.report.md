@@ -278,6 +278,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/waterdelen",
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
+  "/tmp/generated/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20",
   "/tmp/generated/doc/implementatiemodel/magda",
   "/tmp/generated/doc/implementatiemodel/magda/persoon/v0.0.2",
   "/tmp/generated/doc/implementatiemodel/magda/persoon/v0.0.3",

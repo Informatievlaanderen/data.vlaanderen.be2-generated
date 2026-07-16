@@ -1,0 +1,59 @@
+{
+  "title": "Meldingstatus",
+  "type": "object",
+  "description": "De Status van de Melding in het verwerkingsproces op een bepaald tijdstip.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Meldingstatus)",
+      "pattern": "^Meldingstatus$"
+    },
+    "beschrijving": {
+      "type": "object",
+      "description": "Een beschrijving van de Status.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "statusdatum": {
+      "type": "object",
+      "description": "De datum van een Status.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "statusType": {
+      "$ref": "#/components/schemas/Concept"
+    },
+    "statuswijzigingDoor": {
+      "$ref": "#/components/schemas/Agent"
+    }
+  },
+  "required": [
+    "@type",
+    "beschrijving",
+    "statusdatum",
+    "statusType",
+    "statuswijzigingDoor"
+  ]
+}
