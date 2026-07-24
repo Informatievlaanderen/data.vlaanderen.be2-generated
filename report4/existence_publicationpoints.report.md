@@ -247,6 +247,16 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/landbouwgebruiksperceel.publication.json
+#||# 
+Directory check
+error: missing '/tmp/generated/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24'
+error: missing '/tmp/generated/doc/implementatiemodel/landbouwgebruiksperceel'
+
+index.html check
+error: missing '/tmp/generated/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/index.html'
+error: missing '/tmp/generated/doc/implementatiemodel/landbouwgebruiksperceel/index.html'
+
 #||#    + checking /home/circleci/project/config/test/ldes.publication.json
 #||# 
 Directory check

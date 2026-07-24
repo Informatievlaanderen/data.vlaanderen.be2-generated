@@ -78,6 +78,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/kwaliteit-wegen-en-markeringen.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/landbouwgebruiksperceel.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/ldes.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/leercredential.publication.json
