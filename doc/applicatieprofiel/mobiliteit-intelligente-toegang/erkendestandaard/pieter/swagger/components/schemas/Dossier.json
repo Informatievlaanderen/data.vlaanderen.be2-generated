@@ -1,0 +1,41 @@
+{
+  "title": "Dossier",
+  "type": "object",
+  "description": "Samenhangend geheel van stukken die betrekking hebben op een bepaalde zaak.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dossier)",
+      "pattern": "^Dossier$"
+    },
+    "bestaatUit": {
+      "type": "array",
+      "description": "Lijst van Stuk items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Stuk"
+          },
+          {
+            "$ref": "#/components/schemas/Bewijs"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Stuk": "#/components/schemas/Stuk",
+            "Bewijs": "#/components/schemas/Bewijs"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

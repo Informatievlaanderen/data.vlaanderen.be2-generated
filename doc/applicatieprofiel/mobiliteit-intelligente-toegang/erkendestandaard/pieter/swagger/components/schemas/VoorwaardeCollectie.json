@@ -1,0 +1,97 @@
+{
+  "title": "VoorwaardeCollectie",
+  "type": "object",
+  "description": "Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VoorwaardeCollectie)",
+      "pattern": "^VoorwaardeCollectie$"
+    },
+    "operatie": {
+      "$ref": "#/components/schemas/LogischeOperatie"
+    },
+    "heeftVoorwaarde": {
+      "type": "array",
+      "description": "Lijst van Voorwaarde items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Voorwaarde"
+          },
+          {
+            "$ref": "#/components/schemas/VoorwaardeCollectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Voorwaarde": "#/components/schemas/Voorwaarde",
+            "VoorwaardeCollectie": "#/components/schemas/VoorwaardeCollectie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "beschrijving": {
+      "type": "object",
+      "description": "Korte uitleg over de aard, kenmerken, toepassingen of andere aanvullende informatie die helpt bij het verduidelijken van de Voorwaarde.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "type": {
+      "$ref": "#/components/schemas/Voorwaardetype"
+    },
+    "uitgever": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "heeftConcept": {
+      "$ref": "#/components/schemas/Informatieconcept"
+    },
+    "heeftOndersteunendBewijs": {
+      "type": "array",
+      "description": "Lijst van Bewijs items.",
+      "items": {
+        "$ref": "#/components/schemas/Bewijs"
+      },
+      "minItems": 1
+    },
+    "heeftBewijstypelijst": {
+      "type": "array",
+      "description": "Lijst van Bewijstypelijst items.",
+      "items": {
+        "$ref": "#/components/schemas/Bewijstypelijst"
+      },
+      "minItems": 1
+    },
+    "isVoorwaardeVan": {
+      "type": "array",
+      "description": "Lijst van VoorwaardeCollectie items.",
+      "items": {
+        "$ref": "#/components/schemas/VoorwaardeCollectie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "operatie",
+    "beschrijving",
+    "type"
+  ]
+}

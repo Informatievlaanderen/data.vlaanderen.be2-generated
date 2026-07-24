@@ -1,0 +1,1522 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Voertuigtype": {
+        "title": "Voertuigtype",
+        "type": "object",
+        "description": "Enumeratie van Voertuigtype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Voorwaardetype": {
+        "title": "Voorwaardetype",
+        "type": "object",
+        "description": "Enumeratie van Voorwaardetype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Bewijstype": {
+        "title": "Bewijstype",
+        "type": "object",
+        "description": "Informatie over de kenmerken van een bewijs.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bewijstype)",
+            "pattern": "^Bewijstype$"
+          },
+          "classificatie": {
+            "$ref": "#/components/schemas/Bewijstypeclassificatietype"
+          }
+        },
+        "required": [
+          "@type",
+          "classificatie"
+        ]
+      },
+      "Status": {
+        "title": "Status",
+        "type": "object",
+        "description": "Enumeratie van Status",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Toegangstype": {
+        "title": "Toegangstype",
+        "type": "object",
+        "description": "Enumeratie van Toegangstype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Aanvraagtype": {
+        "title": "Aanvraagtype",
+        "type": "object",
+        "description": "Enumeratie van Aanvraagtype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Activiteitstype": {
+        "title": "Activiteitstype",
+        "type": "object",
+        "description": "Enumeratie van Activiteitstype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "LogischeOperatie": {
+        "title": "LogischeOperatie",
+        "type": "object",
+        "description": "Enumeratie van LogischeOperatie",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Bewijstypeclassificatietype": {
+        "title": "Bewijstypeclassificatietype",
+        "type": "object",
+        "description": "Enumeratie van Bewijstypeclassificatietype",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Vergunning": {
+        "title": "Vergunning",
+        "type": "object",
+        "description": "Rechtshandeling, zijnde een beslissing, die toelating inhoudt voor een Activiteit.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Vergunning)",
+            "pattern": "^Vergunning$"
+          },
+          "ingangsdatum": {
+            "type": "object",
+            "description": "Datum vanaf dewelke de Vergunning rechtskracht krijgt.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "verantwoordelijke": {
+            "$ref": "#/components/schemas/PubliekeOrganisatie"
+          },
+          "document": {
+            "$ref": "#/components/schemas/Document"
+          },
+          "vergunningshouder": {
+            "$ref": "#/components/schemas/Rechtssubject"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "inhoud": {
+            "$ref": "#/components/schemas/Toegang"
+          },
+          "zaak": {
+            "$ref": "#/components/schemas/Zaak"
+          },
+          "gebruiktAls": {
+            "type": "array",
+            "description": "Lijst van Bewijs items.",
+            "items": {
+              "$ref": "#/components/schemas/Bewijs"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "ingangsdatum",
+          "verantwoordelijke",
+          "document",
+          "vergunningshouder",
+          "identificator"
+        ]
+      },
+      "Aanvraag": {
+        "title": "Aanvraag",
+        "type": "object",
+        "description": "Aanspraak op de uitoefening van een bevoegdheid; formeel verzoek van een rechtssubject aan een bevoegde instantie om informatie te verstrekken of een beslissing te nemen, in het bijzonder een beslissing om ergens toelating voor te verlenen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Aanvraag)",
+            "pattern": "^Aanvraag$"
+          },
+          "aanvrager": {
+            "$ref": "#/components/schemas/Rechtssubject"
+          },
+          "ingangsdatum": {
+            "$ref": "#/components/schemas/Date"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "vergunningshouder": {
+            "$ref": "#/components/schemas/Rechtssubject"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Aanvraagtype"
+          },
+          "inhoud": {
+            "$ref": "#/components/schemas/Toegang"
+          },
+          "zaak": {
+            "$ref": "#/components/schemas/Zaak"
+          }
+        },
+        "required": [
+          "@type",
+          "aanvrager",
+          "ingangsdatum",
+          "identificator",
+          "vergunningshouder",
+          "type"
+        ]
+      },
+      "Activiteit": {
+        "title": "Activiteit",
+        "type": "object",
+        "description": "Geheel van handelingen die een of meerdere Rechtssubjecten binnen een welbepaald tijdsbestek en op een welbepaalde locatie ten uitvoer (willen) (laten) brengen en die gezien hun aard te kwalificeren zijn en dus geregeld zijn onder één of meer welbepaalde Juridische Categorieën.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Activiteit)",
+            "pattern": "^Activiteit$"
+          },
+          "type": {
+            "type": "array",
+            "description": "Lijst van Activiteitstype items.",
+            "items": {
+              "$ref": "#/components/schemas/Activiteitstype"
+            },
+            "minItems": 1
+          },
+          "periode": {
+            "$ref": "#/components/schemas/Periode"
+          },
+          "locatie": {
+            "$ref": "#/components/schemas/Zone"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Toegang": {
+        "title": "Toegang",
+        "type": "object",
+        "description": "Recht om een bepaalde zone binnen te mogen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Toegang)",
+            "pattern": "^Toegang$"
+          },
+          "periode": {
+            "$ref": "#/components/schemas/Periode"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Toegangstype"
+          },
+          "voorwerp": {
+            "type": "array",
+            "description": "Lijst van Activiteit items.",
+            "items": {
+              "$ref": "#/components/schemas/Activiteit"
+            },
+            "minItems": 1
+          },
+          "voertuig": {
+            "$ref": "#/components/schemas/Voertuig"
+          }
+        },
+        "required": [
+          "@type",
+          "periode",
+          "type"
+        ]
+      },
+      "Voertuig": {
+        "title": "Voertuig",
+        "type": "object",
+        "description": "Apparaat dat is ontworpen of wordt gebruikt om mensen of vracht te vervoeren over land, water, lucht of door de ruimte.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Voertuig)",
+            "pattern": "^Voertuig$"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Voertuigtype"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "toegang": {
+            "type": "array",
+            "description": "Lijst van Toegang items.",
+            "items": {
+              "$ref": "#/components/schemas/Toegang"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "type",
+          "identificator"
+        ]
+      },
+      "Weigering": {
+        "title": "Weigering",
+        "type": "object",
+        "description": "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Weigering)",
+            "pattern": "^Weigering$"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "ingangsdatum": {
+            "$ref": "#/components/schemas/Date"
+          },
+          "zaak": {
+            "$ref": "#/components/schemas/Zaak"
+          },
+          "inhoud": {
+            "$ref": "#/components/schemas/Toegang"
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "ingangsdatum"
+        ]
+      },
+      "Zone": {
+        "title": "Zone",
+        "type": "object",
+        "description": "Een geografische gebied waar een beperking is op de toegang.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Zone)",
+            "pattern": "^Zone$"
+          },
+          "naam": {
+            "type": "object",
+            "description": "Naam van de Zone.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Geometrie"
+          }
+        },
+        "required": [
+          "@type",
+          "naam",
+          "geometrie"
+        ]
+      },
+      "Procedure": {
+        "title": "Procedure",
+        "type": "object",
+        "description": "Reeks stappen die de officiële of geaccepteerde manier is om iets te doen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Procedure)",
+            "pattern": "^Procedure$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Voorwaarde": {
+        "title": "Voorwaarde",
+        "type": "object",
+        "description": "Iets dat nodig is of waarvan vereist is dat het gebeurt voordat iets anders gebeurt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Voorwaarde)",
+            "pattern": "^Voorwaarde$"
+          },
+          "beschrijving": {
+            "type": "object",
+            "description": "Korte uitleg over de aard, kenmerken, toepassingen of andere aanvullende informatie die helpt bij het verduidelijken van de Voorwaarde.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/Voorwaardetype"
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
+          },
+          "heeftConcept": {
+            "$ref": "#/components/schemas/Informatieconcept"
+          },
+          "heeftOndersteunendBewijs": {
+            "type": "array",
+            "description": "Lijst van Bewijs items.",
+            "items": {
+              "$ref": "#/components/schemas/Bewijs"
+            },
+            "minItems": 1
+          },
+          "heeftBewijstypelijst": {
+            "type": "array",
+            "description": "Lijst van Bewijstypelijst items.",
+            "items": {
+              "$ref": "#/components/schemas/Bewijstypelijst"
+            },
+            "minItems": 1
+          },
+          "isVoorwaardeVan": {
+            "type": "array",
+            "description": "Lijst van VoorwaardeCollectie items.",
+            "items": {
+              "$ref": "#/components/schemas/VoorwaardeCollectie"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "beschrijving",
+          "type"
+        ]
+      },
+      "Dossier": {
+        "title": "Dossier",
+        "type": "object",
+        "description": "Samenhangend geheel van stukken die betrekking hebben op een bepaalde zaak.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Dossier)",
+            "pattern": "^Dossier$"
+          },
+          "bestaatUit": {
+            "type": "array",
+            "description": "Lijst van Stuk items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Stuk"
+                },
+                {
+                  "$ref": "#/components/schemas/Bewijs"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Stuk": "#/components/schemas/Stuk",
+                  "Bewijs": "#/components/schemas/Bewijs"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Zaak": {
+        "title": "Zaak",
+        "type": "object",
+        "description": "Een zaak is het geheel aan werk gedaan om tot een bestuurlijke of zakelijke beslissing te komen. Een zaak slaat doorgaans neer in een verzameling documenten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Zaak)",
+            "pattern": "^Zaak$"
+          },
+          "procedure": {
+            "$ref": "#/components/schemas/Procedure"
+          },
+          "dossier": {
+            "$ref": "#/components/schemas/Dossier"
+          },
+          "isDeelVan": {
+            "type": "array",
+            "description": "Lijst van Project items.",
+            "items": {
+              "$ref": "#/components/schemas/Project"
+            },
+            "minItems": 1
+          },
+          "zaakhandeling": {
+            "$ref": "#/components/schemas/Vergunning"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Stuk": {
+        "title": "Stuk",
+        "type": "object",
+        "description": "Eenheid van bewijs ter ondersteuning van een feit.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Stuk)",
+            "pattern": "^Stuk$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "VoorwaardeCollectie": {
+        "title": "VoorwaardeCollectie",
+        "type": "object",
+        "description": "Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse VoorwaardeCollectie)",
+            "pattern": "^VoorwaardeCollectie$"
+          },
+          "operatie": {
+            "$ref": "#/components/schemas/LogischeOperatie"
+          },
+          "heeftVoorwaarde": {
+            "type": "array",
+            "description": "Lijst van Voorwaarde items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Voorwaarde"
+                },
+                {
+                  "$ref": "#/components/schemas/VoorwaardeCollectie"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Voorwaarde": "#/components/schemas/Voorwaarde",
+                  "VoorwaardeCollectie": "#/components/schemas/VoorwaardeCollectie"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "beschrijving": {
+            "type": "object",
+            "description": "Korte uitleg over de aard, kenmerken, toepassingen of andere aanvullende informatie die helpt bij het verduidelijken van de Voorwaarde.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/Voorwaardetype"
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
+          },
+          "heeftConcept": {
+            "$ref": "#/components/schemas/Informatieconcept"
+          },
+          "heeftOndersteunendBewijs": {
+            "type": "array",
+            "description": "Lijst van Bewijs items.",
+            "items": {
+              "$ref": "#/components/schemas/Bewijs"
+            },
+            "minItems": 1
+          },
+          "heeftBewijstypelijst": {
+            "type": "array",
+            "description": "Lijst van Bewijstypelijst items.",
+            "items": {
+              "$ref": "#/components/schemas/Bewijstypelijst"
+            },
+            "minItems": 1
+          },
+          "isVoorwaardeVan": {
+            "type": "array",
+            "description": "Lijst van VoorwaardeCollectie items.",
+            "items": {
+              "$ref": "#/components/schemas/VoorwaardeCollectie"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "operatie",
+          "beschrijving",
+          "type"
+        ]
+      },
+      "Project": {
+        "title": "Project",
+        "type": "object",
+        "description": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Project)",
+            "pattern": "^Project$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Informatieconcept": {
+        "title": "Informatieconcept",
+        "type": "object",
+        "description": "De gegevens die gebruikt worden om de nodige informatie te beschrijven in Bewijs dat geleverd moet worden om aan de Voorwaarde te voldoen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Informatieconcept)",
+            "pattern": "^Informatieconcept$"
+          },
+          "uitdrukkingVerwachteWaarde": {
+            "type": "array",
+            "description": "Lijst van Literal items.",
+            "items": {
+              "type": "object",
+              "description": "Formulering in een formele taal van de verwachte waarde(n) voor het Informatieconcept die is afgestemd op de concepten uit de gedefinieerde Voorwaarden en moet worden gerespecteerd door de aangeleverde Ondersteunde Waarden.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "PubliekeDienstverlening": {
+        "title": "PubliekeDienstverlening",
+        "type": "object",
+        "description": "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PubliekeDienstverlening)",
+            "pattern": "^PubliekeDienstverlening$"
+          },
+          "heeftCompetenteAutoriteit": {
+            "$ref": "#/components/schemas/PubliekeOrganisatie"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "heeftOutputtype": {
+            "type": "array",
+            "description": "Lijst van Bewijstypeclassificatietype items.",
+            "items": {
+              "$ref": "#/components/schemas/Bewijstypeclassificatietype"
+            },
+            "minItems": 1
+          },
+          "volgt": {
+            "type": "array",
+            "description": "Lijst van Procedure items.",
+            "items": {
+              "$ref": "#/components/schemas/Procedure"
+            },
+            "minItems": 1
+          },
+          "heeftVoorwaarde": {
+            "type": "array",
+            "description": "Lijst van Voorwaarde items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Voorwaarde"
+                },
+                {
+                  "$ref": "#/components/schemas/VoorwaardeCollectie"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Voorwaarde": "#/components/schemas/Voorwaarde",
+                  "VoorwaardeCollectie": "#/components/schemas/VoorwaardeCollectie"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "produceert": {
+            "type": "array",
+            "description": "Lijst van Vergunning items.",
+            "items": {
+              "$ref": "#/components/schemas/Vergunning"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "heeftCompetenteAutoriteit",
+          "status"
+        ]
+      },
+      "Bewijstypelijst": {
+        "title": "Bewijstypelijst",
+        "type": "object",
+        "description": "Groep van Bewijstypes om aan een Voorwaarde te voldoen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bewijstypelijst)",
+            "pattern": "^Bewijstypelijst$"
+          },
+          "specificieertBewijstype": {
+            "type": "array",
+            "description": "Lijst van Bewijstype items.",
+            "items": {
+              "$ref": "#/components/schemas/Bewijstype"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "specificieertBewijstype"
+        ]
+      },
+      "Bewijs": {
+        "title": "Bewijs",
+        "type": "object",
+        "description": "Elk stuk waarmee kan worden aangetoond dat men aan een Voorwaarde voldoet.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bewijs)",
+            "pattern": "^Bewijs$"
+          },
+          "beschrijving": {
+            "type": "object",
+            "description": "Beschrijving van het Bewijs.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "naam": {
+            "type": "object",
+            "description": "Officiële naam van het Bewijs.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Bewijstype"
+          },
+          "vervult": {
+            "type": "array",
+            "description": "Lijst van Voorwaarde items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Voorwaarde"
+                },
+                {
+                  "$ref": "#/components/schemas/VoorwaardeCollectie"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Voorwaarde": "#/components/schemas/Voorwaarde",
+                  "VoorwaardeCollectie": "#/components/schemas/VoorwaardeCollectie"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "beschrijving",
+          "naam",
+          "identificator",
+          "type"
+        ]
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Informatie gebruikt om een object uniek te identificeren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "identificator": {
+            "type": "object",
+            "description": "String gebruikt om het object uniek te identificeren. Type van de string slaat op het identificatiesysteem (inclusief de versie ervan), de string zelf op de eigenlijke identificator.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendDoor": {
+            "type": "object",
+            "description": "Naam van de agent die de identificator heeft toegekend.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "uitgegeven": {
+            "type": "object",
+            "description": "Tijdstip waarop de identificator werd uitgegeven.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "maker": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Moment": {
+        "title": "Moment",
+        "type": "object",
+        "description": "Moment met omvang en duur nul.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Moment)",
+            "pattern": "^Moment$"
+          },
+          "inXsdDateTime": {
+            "type": "object",
+            "description": "Positie in de tijd uitgedrukt door middel van xsd:dateTime.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "inXsdDateTime"
+        ]
+      },
+      "Periode": {
+        "title": "Periode",
+        "type": "object",
+        "description": "TemporeleEntiteit waarvan de omvang en duurtijd verschilt van nul,het is te zeggen waarvoor de begin- en eindwaarde verschillend zijn.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Periode)",
+            "pattern": "^Periode$"
+          },
+          "tot": {
+            "$ref": "#/components/schemas/Moment"
+          },
+          "van": {
+            "$ref": "#/components/schemas/Moment"
+          }
+        },
+        "required": [
+          "@type",
+          "tot",
+          "van"
+        ]
+      },
+      "TemporeleEntiteit": {
+        "title": "TemporeleEntiteit",
+        "type": "object",
+        "description": "Abstracte klasse voor temporele objecten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse TemporeleEntiteit)",
+            "pattern": "^TemporeleEntiteit$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    },
+    "links": {
+      "Vergunning.verantwoordelijke": {
+        "operationId": "VergunningGET",
+        "parameters": {
+          "id": "$response.body#/Vergunning.verantwoordelijke/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PubliekeOrganisatie` op te halen."
+      },
+      "Vergunning.document": {
+        "operationId": "VergunningGET",
+        "parameters": {
+          "id": "$response.body#/Vergunning.document/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "Vergunning.vergunningshouder": {
+        "operationId": "VergunningGET",
+        "parameters": {
+          "id": "$response.body#/Vergunning.vergunningshouder/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Rechtssubject` op te halen."
+      },
+      "Vergunning.identificator": {
+        "operationId": "VergunningGET",
+        "parameters": {
+          "id": "$response.body#/Vergunning.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Vergunning.inhoud": {
+        "operationId": "VergunningGET",
+        "parameters": {
+          "id": "$response.body#/Vergunning.inhoud/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Toegang` op te halen."
+      },
+      "Vergunning.zaak": {
+        "operationId": "VergunningGET",
+        "parameters": {
+          "id": "$response.body#/Vergunning.zaak/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen."
+      },
+      "Vergunning.gebruiktAls": {
+        "operationId": "VergunningGET",
+        "parameters": {
+          "id": "$response.body#/Vergunning.gebruiktAls/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bewijs` op te halen."
+      },
+      "Aanvraag.aanvrager": {
+        "operationId": "AanvraagGET",
+        "parameters": {
+          "id": "$response.body#/Aanvraag.aanvrager/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Rechtssubject` op te halen."
+      },
+      "Aanvraag.ingangsdatum": {
+        "operationId": "AanvraagGET",
+        "parameters": {
+          "id": "$response.body#/Aanvraag.ingangsdatum/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Date` op te halen."
+      },
+      "Aanvraag.identificator": {
+        "operationId": "AanvraagGET",
+        "parameters": {
+          "id": "$response.body#/Aanvraag.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Aanvraag.vergunningshouder": {
+        "operationId": "AanvraagGET",
+        "parameters": {
+          "id": "$response.body#/Aanvraag.vergunningshouder/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Rechtssubject` op te halen."
+      },
+      "Aanvraag.type": {
+        "operationId": "AanvraagGET",
+        "parameters": {
+          "id": "$response.body#/Aanvraag.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Aanvraagtype` op te halen."
+      },
+      "Aanvraag.inhoud": {
+        "operationId": "AanvraagGET",
+        "parameters": {
+          "id": "$response.body#/Aanvraag.inhoud/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Toegang` op te halen."
+      },
+      "Aanvraag.zaak": {
+        "operationId": "AanvraagGET",
+        "parameters": {
+          "id": "$response.body#/Aanvraag.zaak/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen."
+      },
+      "Activiteit.type": {
+        "operationId": "ActiviteitGET",
+        "parameters": {
+          "id": "$response.body#/Activiteit.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Activiteitstype` op te halen."
+      },
+      "Activiteit.periode": {
+        "operationId": "ActiviteitGET",
+        "parameters": {
+          "id": "$response.body#/Activiteit.periode/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Periode` op te halen."
+      },
+      "Activiteit.locatie": {
+        "operationId": "ActiviteitGET",
+        "parameters": {
+          "id": "$response.body#/Activiteit.locatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zone` op te halen."
+      },
+      "Toegang.periode": {
+        "operationId": "ToegangGET",
+        "parameters": {
+          "id": "$response.body#/Toegang.periode/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Periode` op te halen."
+      },
+      "Toegang.type": {
+        "operationId": "ToegangGET",
+        "parameters": {
+          "id": "$response.body#/Toegang.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Toegangstype` op te halen."
+      },
+      "Toegang.voorwerp": {
+        "operationId": "ToegangGET",
+        "parameters": {
+          "id": "$response.body#/Toegang.voorwerp/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Activiteit` op te halen."
+      },
+      "Toegang.voertuig": {
+        "operationId": "ToegangGET",
+        "parameters": {
+          "id": "$response.body#/Toegang.voertuig/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuig` op te halen."
+      },
+      "Voertuig.type": {
+        "operationId": "VoertuigGET",
+        "parameters": {
+          "id": "$response.body#/Voertuig.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigtype` op te halen."
+      },
+      "Voertuig.identificator": {
+        "operationId": "VoertuigGET",
+        "parameters": {
+          "id": "$response.body#/Voertuig.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Voertuig.toegang": {
+        "operationId": "VoertuigGET",
+        "parameters": {
+          "id": "$response.body#/Voertuig.toegang/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Toegang` op te halen."
+      },
+      "Weigering.identificator": {
+        "operationId": "WeigeringGET",
+        "parameters": {
+          "id": "$response.body#/Weigering.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Weigering.ingangsdatum": {
+        "operationId": "WeigeringGET",
+        "parameters": {
+          "id": "$response.body#/Weigering.ingangsdatum/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Date` op te halen."
+      },
+      "Weigering.zaak": {
+        "operationId": "WeigeringGET",
+        "parameters": {
+          "id": "$response.body#/Weigering.zaak/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen."
+      },
+      "Weigering.inhoud": {
+        "operationId": "WeigeringGET",
+        "parameters": {
+          "id": "$response.body#/Weigering.inhoud/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Toegang` op te halen."
+      },
+      "Zone.geometrie": {
+        "operationId": "ZoneGET",
+        "parameters": {
+          "id": "$response.body#/Zone.geometrie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
+      },
+      "Voorwaarde.type": {
+        "operationId": "VoorwaardeGET",
+        "parameters": {
+          "id": "$response.body#/Voorwaarde.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voorwaardetype` op te halen."
+      },
+      "Voorwaarde.uitgever": {
+        "operationId": "VoorwaardeGET",
+        "parameters": {
+          "id": "$response.body#/Voorwaarde.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Voorwaarde.heeftConcept": {
+        "operationId": "VoorwaardeGET",
+        "parameters": {
+          "id": "$response.body#/Voorwaarde.heeftConcept/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Informatieconcept` op te halen."
+      },
+      "Voorwaarde.heeftOndersteunendBewijs": {
+        "operationId": "VoorwaardeGET",
+        "parameters": {
+          "id": "$response.body#/Voorwaarde.heeftOndersteunendBewijs/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bewijs` op te halen."
+      },
+      "Voorwaarde.heeftBewijstypelijst": {
+        "operationId": "VoorwaardeGET",
+        "parameters": {
+          "id": "$response.body#/Voorwaarde.heeftBewijstypelijst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bewijstypelijst` op te halen."
+      },
+      "Voorwaarde.isVoorwaardeVan": {
+        "operationId": "VoorwaardeGET",
+        "parameters": {
+          "id": "$response.body#/Voorwaarde.isVoorwaardeVan/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `VoorwaardeCollectie` op te halen."
+      },
+      "Dossier.bestaatUit": {
+        "operationId": "DossierGET",
+        "parameters": {
+          "id": "$response.body#/Dossier.bestaatUit/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Stuk` op te halen."
+      },
+      "Zaak.procedure": {
+        "operationId": "ZaakGET",
+        "parameters": {
+          "id": "$response.body#/Zaak.procedure/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Procedure` op te halen."
+      },
+      "Zaak.dossier": {
+        "operationId": "ZaakGET",
+        "parameters": {
+          "id": "$response.body#/Zaak.dossier/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dossier` op te halen."
+      },
+      "Zaak.isDeelVan": {
+        "operationId": "ZaakGET",
+        "parameters": {
+          "id": "$response.body#/Zaak.isDeelVan/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Project` op te halen."
+      },
+      "Zaak.zaakhandeling": {
+        "operationId": "ZaakGET",
+        "parameters": {
+          "id": "$response.body#/Zaak.zaakhandeling/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Vergunning` op te halen."
+      },
+      "VoorwaardeCollectie.operatie": {
+        "operationId": "VoorwaardeCollectieGET",
+        "parameters": {
+          "id": "$response.body#/VoorwaardeCollectie.operatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LogischeOperatie` op te halen."
+      },
+      "VoorwaardeCollectie.heeftVoorwaarde": {
+        "operationId": "VoorwaardeCollectieGET",
+        "parameters": {
+          "id": "$response.body#/VoorwaardeCollectie.heeftVoorwaarde/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voorwaarde` op te halen."
+      },
+      "VoorwaardeCollectie.type": {
+        "operationId": "VoorwaardeCollectieGET",
+        "parameters": {
+          "id": "$response.body#/VoorwaardeCollectie.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voorwaardetype` op te halen."
+      },
+      "VoorwaardeCollectie.uitgever": {
+        "operationId": "VoorwaardeCollectieGET",
+        "parameters": {
+          "id": "$response.body#/VoorwaardeCollectie.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "VoorwaardeCollectie.heeftConcept": {
+        "operationId": "VoorwaardeCollectieGET",
+        "parameters": {
+          "id": "$response.body#/VoorwaardeCollectie.heeftConcept/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Informatieconcept` op te halen."
+      },
+      "VoorwaardeCollectie.heeftOndersteunendBewijs": {
+        "operationId": "VoorwaardeCollectieGET",
+        "parameters": {
+          "id": "$response.body#/VoorwaardeCollectie.heeftOndersteunendBewijs/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bewijs` op te halen."
+      },
+      "VoorwaardeCollectie.heeftBewijstypelijst": {
+        "operationId": "VoorwaardeCollectieGET",
+        "parameters": {
+          "id": "$response.body#/VoorwaardeCollectie.heeftBewijstypelijst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bewijstypelijst` op te halen."
+      },
+      "VoorwaardeCollectie.isVoorwaardeVan": {
+        "operationId": "VoorwaardeCollectieGET",
+        "parameters": {
+          "id": "$response.body#/VoorwaardeCollectie.isVoorwaardeVan/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `VoorwaardeCollectie` op te halen."
+      },
+      "PubliekeDienstverlening.heeftCompetenteAutoriteit": {
+        "operationId": "PubliekeDienstverleningGET",
+        "parameters": {
+          "id": "$response.body#/PubliekeDienstverlening.heeftCompetenteAutoriteit/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PubliekeOrganisatie` op te halen."
+      },
+      "PubliekeDienstverlening.status": {
+        "operationId": "PubliekeDienstverleningGET",
+        "parameters": {
+          "id": "$response.body#/PubliekeDienstverlening.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
+      "PubliekeDienstverlening.heeftOutputtype": {
+        "operationId": "PubliekeDienstverleningGET",
+        "parameters": {
+          "id": "$response.body#/PubliekeDienstverlening.heeftOutputtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bewijstypeclassificatietype` op te halen."
+      },
+      "PubliekeDienstverlening.volgt": {
+        "operationId": "PubliekeDienstverleningGET",
+        "parameters": {
+          "id": "$response.body#/PubliekeDienstverlening.volgt/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Procedure` op te halen."
+      },
+      "PubliekeDienstverlening.heeftVoorwaarde": {
+        "operationId": "PubliekeDienstverleningGET",
+        "parameters": {
+          "id": "$response.body#/PubliekeDienstverlening.heeftVoorwaarde/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voorwaarde` op te halen."
+      },
+      "PubliekeDienstverlening.produceert": {
+        "operationId": "PubliekeDienstverleningGET",
+        "parameters": {
+          "id": "$response.body#/PubliekeDienstverlening.produceert/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Vergunning` op te halen."
+      },
+      "Bewijstypelijst.specificieertBewijstype": {
+        "operationId": "BewijstypelijstGET",
+        "parameters": {
+          "id": "$response.body#/Bewijstypelijst.specificieertBewijstype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bewijstype` op te halen."
+      },
+      "Bewijstype.classificatie": {
+        "operationId": "BewijstypeGET",
+        "parameters": {
+          "id": "$response.body#/Bewijstype.classificatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bewijstypeclassificatietype` op te halen."
+      },
+      "Bewijs.identificator": {
+        "operationId": "BewijsGET",
+        "parameters": {
+          "id": "$response.body#/Bewijs.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Bewijs.type": {
+        "operationId": "BewijsGET",
+        "parameters": {
+          "id": "$response.body#/Bewijs.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bewijstype` op te halen."
+      },
+      "Bewijs.vervult": {
+        "operationId": "BewijsGET",
+        "parameters": {
+          "id": "$response.body#/Bewijs.vervult/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voorwaarde` op te halen."
+      }
+    }
+  }
+}

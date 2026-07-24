@@ -1,0 +1,68 @@
+{
+  "title": "Vergunning",
+  "type": "object",
+  "description": "Rechtshandeling, zijnde een beslissing, die toelating inhoudt voor een Activiteit.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Vergunning)",
+      "pattern": "^Vergunning$"
+    },
+    "ingangsdatum": {
+      "type": "object",
+      "description": "Datum vanaf dewelke de Vergunning rechtskracht krijgt.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "verantwoordelijke": {
+      "$ref": "#/components/schemas/PubliekeOrganisatie"
+    },
+    "document": {
+      "$ref": "#/components/schemas/Document"
+    },
+    "vergunningshouder": {
+      "$ref": "#/components/schemas/Rechtssubject"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "inhoud": {
+      "$ref": "#/components/schemas/Toegang"
+    },
+    "zaak": {
+      "$ref": "#/components/schemas/Zaak"
+    },
+    "gebruiktAls": {
+      "type": "array",
+      "description": "Lijst van Bewijs items.",
+      "items": {
+        "$ref": "#/components/schemas/Bewijs"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "ingangsdatum",
+    "verantwoordelijke",
+    "document",
+    "vergunningshouder",
+    "identificator"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "title": "PubliekeDienstverlening",
+  "type": "object",
+  "description": "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PubliekeDienstverlening)",
+      "pattern": "^PubliekeDienstverlening$"
+    },
+    "heeftCompetenteAutoriteit": {
+      "$ref": "#/components/schemas/PubliekeOrganisatie"
+    },
+    "status": {
+      "$ref": "#/components/schemas/Status"
+    },
+    "heeftOutputtype": {
+      "type": "array",
+      "description": "Lijst van Bewijstypeclassificatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Bewijstypeclassificatietype"
+      },
+      "minItems": 1
+    },
+    "volgt": {
+      "type": "array",
+      "description": "Lijst van Procedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Procedure"
+      },
+      "minItems": 1
+    },
+    "heeftVoorwaarde": {
+      "type": "array",
+      "description": "Lijst van Voorwaarde items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Voorwaarde"
+          },
+          {
+            "$ref": "#/components/schemas/VoorwaardeCollectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Voorwaarde": "#/components/schemas/Voorwaarde",
+            "VoorwaardeCollectie": "#/components/schemas/VoorwaardeCollectie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "produceert": {
+      "type": "array",
+      "description": "Lijst van Vergunning items.",
+      "items": {
+        "$ref": "#/components/schemas/Vergunning"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "heeftCompetenteAutoriteit",
+    "status"
+  ]
+}

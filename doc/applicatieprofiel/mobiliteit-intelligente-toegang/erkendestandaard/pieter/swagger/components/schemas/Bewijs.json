@@ -1,0 +1,85 @@
+{
+  "title": "Bewijs",
+  "type": "object",
+  "description": "Elk stuk waarmee kan worden aangetoond dat men aan een Voorwaarde voldoet.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bewijs)",
+      "pattern": "^Bewijs$"
+    },
+    "beschrijving": {
+      "type": "object",
+      "description": "Beschrijving van het Bewijs.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "Officiële naam van het Bewijs.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bewijstype"
+    },
+    "vervult": {
+      "type": "array",
+      "description": "Lijst van Voorwaarde items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Voorwaarde"
+          },
+          {
+            "$ref": "#/components/schemas/VoorwaardeCollectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Voorwaarde": "#/components/schemas/Voorwaarde",
+            "VoorwaardeCollectie": "#/components/schemas/VoorwaardeCollectie"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "beschrijving",
+    "naam",
+    "identificator",
+    "type"
+  ]
+}

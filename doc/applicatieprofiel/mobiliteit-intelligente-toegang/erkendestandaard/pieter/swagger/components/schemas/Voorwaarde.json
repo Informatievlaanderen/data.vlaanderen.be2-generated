@@ -1,0 +1,71 @@
+{
+  "title": "Voorwaarde",
+  "type": "object",
+  "description": "Iets dat nodig is of waarvan vereist is dat het gebeurt voordat iets anders gebeurt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Voorwaarde)",
+      "pattern": "^Voorwaarde$"
+    },
+    "beschrijving": {
+      "type": "object",
+      "description": "Korte uitleg over de aard, kenmerken, toepassingen of andere aanvullende informatie die helpt bij het verduidelijken van de Voorwaarde.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "type": {
+      "$ref": "#/components/schemas/Voorwaardetype"
+    },
+    "uitgever": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "heeftConcept": {
+      "$ref": "#/components/schemas/Informatieconcept"
+    },
+    "heeftOndersteunendBewijs": {
+      "type": "array",
+      "description": "Lijst van Bewijs items.",
+      "items": {
+        "$ref": "#/components/schemas/Bewijs"
+      },
+      "minItems": 1
+    },
+    "heeftBewijstypelijst": {
+      "type": "array",
+      "description": "Lijst van Bewijstypelijst items.",
+      "items": {
+        "$ref": "#/components/schemas/Bewijstypelijst"
+      },
+      "minItems": 1
+    },
+    "isVoorwaardeVan": {
+      "type": "array",
+      "description": "Lijst van VoorwaardeCollectie items.",
+      "items": {
+        "$ref": "#/components/schemas/VoorwaardeCollectie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "beschrijving",
+    "type"
+  ]
+}
