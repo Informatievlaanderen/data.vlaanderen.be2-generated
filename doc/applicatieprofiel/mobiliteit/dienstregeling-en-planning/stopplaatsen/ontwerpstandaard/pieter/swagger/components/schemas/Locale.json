@@ -1,0 +1,108 @@
+{
+  "title": "Locale",
+  "type": "object",
+  "description": "Parameters en eigenschappen die moeten worden gebruikt bij het verwerken en presenteren van gegevens in een land of regio (tijdzone, taal, etc.).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Locale)",
+      "pattern": "^Locale$"
+    },
+    "tijdzone": {
+      "type": "object",
+      "description": "Naam van de tijdzone die is gekoppeld aan de locale.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "tijdzoneOffset": {
+      "type": "object",
+      "description": "Tijdzone van de locale als offset in uren van GMT. Kan plus of min zijn. Kan decimaal zijn voor fractionele verschillen.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Decimal$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "zomertijdzoneOffset": {
+      "type": "object",
+      "description": "Tijdzone als offset in uren of deeluren van GMT. Kan plus of min zijn.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Decimal$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "standaardTaal": {
+      "type": "object",
+      "description": "Standaardtaal van de locale, b.v. en, fr, de, etc.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(-[A-Z]{2})?"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Language$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "taal": {
+      "type": "array",
+      "description": "Lijst van Taal items.",
+      "items": {
+        "type": "object",
+        "description": "Andere talen ondersteund in de locale.",
+        "properties": {
+          "@value": {
+            "type": "string",
+            "pattern": "^[a-z]{2,3}(-[A-Z]{2})?"
+          },
+          "@type": {
+            "type": "string",
+            "pattern": "^Language$"
+          }
+        },
+        "required": [
+          "@value",
+          "@type"
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "title": "TopografischePlaats",
+  "type": "object",
+  "description": "Een geografische nederzetting die topografische context biedt bij het zoeken of presenteren van reisinformatie, bijvoorbeeld als de oorsprong of de bestemming van een reis.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TopografischePlaats)",
+      "pattern": "^TopografischePlaats$"
+    },
+    "isoCode": {
+      "type": "object",
+      "description": "ISO-code voor de topografische plaats.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "postcode": {
+      "type": "object",
+      "description": "Postcode of gedeeltelijke postcode geassocieerd met de topografische plaats.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de topografische plaats.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "topografischePlaatsType": {
+      "$ref": "#/components/schemas/TopografischePlaatsType"
+    },
+    "land": {
+      "$ref": "#/components/schemas/Land"
+    },
+    "anderLand": {
+      "type": "array",
+      "description": "Lijst van Land items.",
+      "items": {
+        "$ref": "#/components/schemas/Land"
+      },
+      "minItems": 1
+    },
+    "lid": {
+      "type": "array",
+      "description": "Lijst van Punt(Klasse) items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Punt(Klasse)"
+          },
+          {
+            "$ref": "#/components/schemas/GeplandStoppunt"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Punt(Klasse)": "#/components/schemas/Punt(Klasse)",
+            "GeplandStoppunt": "#/components/schemas/GeplandStoppunt"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "centroïDe": {
+      "$ref": "#/components/schemas/PuntDatatype"
+    },
+    "polygoon": {
+      "$ref": "#/components/schemas/Polygoon"
+    },
+    "bediendDoor": {
+      "type": "array",
+      "description": "Lijst van Stopplaats items.",
+      "items": {
+        "$ref": "#/components/schemas/Stopplaats"
+      },
+      "minItems": 1
+    },
+    "hoofdterminus": {
+      "type": "array",
+      "description": "Lijst van Stopplaats items.",
+      "items": {
+        "$ref": "#/components/schemas/Stopplaats"
+      },
+      "minItems": 1
+    },
+    "omvattend": {
+      "type": "array",
+      "description": "Lijst van Stopplaats items.",
+      "items": {
+        "$ref": "#/components/schemas/Stopplaats"
+      },
+      "minItems": 1
+    },
+    "parentTopografischePlaats": {
+      "$ref": "#/components/schemas/TopografischePlaats"
+    },
+    "omvattendIn": {
+      "type": "array",
+      "description": "Lijst van TopografischePlaats items.",
+      "items": {
+        "$ref": "#/components/schemas/TopografischePlaats"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "centroïDe"
+  ]
+}

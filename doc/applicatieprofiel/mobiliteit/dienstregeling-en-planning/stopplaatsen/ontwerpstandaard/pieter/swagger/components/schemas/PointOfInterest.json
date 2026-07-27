@@ -1,0 +1,149 @@
+{
+  "title": "PointOfInterest",
+  "type": "object",
+  "description": "Een soort plaats waarnaar of waardoor passagiers misschien willen navigeren als onderdeel van hun rit en die in detail wordt gemodelleerd door reisplanners.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PointOfInterest)",
+      "pattern": "^PointOfInterest$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van het Point of Interest..",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "korteNaam": {
+      "type": "object",
+      "description": "Korte naam van het Point of Interest.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "omschrijving": {
+      "type": "object",
+      "description": "Beschrijving van het point of Interest.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "privéCode": {
+      "type": "object",
+      "description": "Privécode van het Point of Interest.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "classificatie": {
+      "type": "array",
+      "description": "Lijst van Code items.",
+      "items": {
+        "$ref": "#/components/schemas/Code"
+      },
+      "minItems": 1
+    },
+    "nabijeTopografischePlaats": {
+      "type": "array",
+      "description": "Lijst van TopografischePlaats items.",
+      "items": {
+        "$ref": "#/components/schemas/TopografischePlaats"
+      },
+      "minItems": 1
+    },
+    "locale": {
+      "$ref": "#/components/schemas/Locale"
+    },
+    "organisatie": {
+      "$ref": "#/components/schemas/Operator"
+    },
+    "verdieping": {
+      "type": "array",
+      "description": "Lijst van Verdieping items.",
+      "items": {
+        "$ref": "#/components/schemas/Verdieping"
+      },
+      "minItems": 1
+    },
+    "ingang": {
+      "type": "array",
+      "description": "Lijst van Toegang items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Toegang"
+          },
+          {
+            "$ref": "#/components/schemas/Stopplaatstoegang"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Toegang": "#/components/schemas/Toegang",
+            "Stopplaatstoegang": "#/components/schemas/Stopplaatstoegang"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "centroïDe": {
+      "$ref": "#/components/schemas/PuntDatatype"
+    },
+    "polygoon": {
+      "$ref": "#/components/schemas/Polygoon"
+    },
+    "bediendDoor": {
+      "type": "array",
+      "description": "Lijst van Stopplaats items.",
+      "items": {
+        "$ref": "#/components/schemas/Stopplaats"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "centroïDe"
+  ]
+}
