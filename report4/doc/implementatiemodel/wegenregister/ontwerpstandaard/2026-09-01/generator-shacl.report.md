@@ -2,8 +2,6 @@
 
 #||# -------------------------------------  
 
-2026-07-28T12:52:14.261Z warn: Unable to find the description for subject "[urn:oslo-toolchain:942e89e6ad47907dc543fb25fccbcadbb01c1259442f27fce1715cf8c88c2bd1](all-wegenregister.jsonld#L4586)".
-
 Error: Child (urn:oslo-toolchain:11dac7aa51940a4fd805fd1c18047484e29c3316b826494cd74c83addbfa36ec) or parent (urn:oslo-toolchain:c38b5dce635713deb4137eefff07f011627b6323eff59720059f476a25365275) domain is missing!
 
     at ShaclTemplateGenerationService.handleRedefinedProperties (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:165:23)
