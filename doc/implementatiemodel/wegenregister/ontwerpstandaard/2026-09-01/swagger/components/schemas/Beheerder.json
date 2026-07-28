@@ -13,7 +13,21 @@
       "pattern": "^Beheerder$"
     },
     "autoriteit": {
-      "$ref": "#/components/schemas/Agent"
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Persoon"
+        },
+        {
+          "$ref": "#/components/schemas/Organisatie"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Persoon": "#/components/schemas/Persoon",
+          "Organisatie": "#/components/schemas/Organisatie"
+        }
+      }
     },
     "voertuigtype": {
       "type": "array",

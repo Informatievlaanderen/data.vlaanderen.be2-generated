@@ -181,7 +181,21 @@
             "pattern": "^Beheerder$"
           },
           "autoriteit": {
-            "$ref": "#/components/schemas/Agent"
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Persoon"
+              },
+              {
+                "$ref": "#/components/schemas/Organisatie"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Persoon": "#/components/schemas/Persoon",
+                "Organisatie": "#/components/schemas/Organisatie"
+              }
+            }
           },
           "voertuigtype": {
             "type": "array",
@@ -552,14 +566,6 @@
           "identificator": {
             "$ref": "#/components/schemas/Identificator"
           },
-          "link": {
-            "type": "array",
-            "description": "Lijst van GeneriekeLink items.",
-            "items": {
-              "$ref": "#/components/schemas/GeneriekeLink"
-            },
-            "minItems": 1
-          },
           "referentie": {
             "type": "array",
             "description": "Lijst van Netwerkreferentie items.",
@@ -595,7 +601,6 @@
           "@type",
           "lokaleCode",
           "nationaleCode",
-          "link",
           "inNetwerk"
         ]
       },
@@ -645,14 +650,6 @@
           "identificator": {
             "$ref": "#/components/schemas/Identificator"
           },
-          "link": {
-            "type": "array",
-            "description": "Lijst van GeneriekeLink items.",
-            "items": {
-              "$ref": "#/components/schemas/GeneriekeLink"
-            },
-            "minItems": 1
-          },
           "referentie": {
             "type": "array",
             "description": "Lijst van Netwerkreferentie items.",
@@ -687,7 +684,6 @@
         "required": [
           "@type",
           "europeesWegnummer",
-          "link",
           "inNetwerk"
         ]
       },
@@ -1134,21 +1130,7 @@
             ]
           },
           "toegekendDoor": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Persoon"
-              },
-              {
-                "$ref": "#/components/schemas/Organisatie"
-              }
-            ],
-            "discriminator": {
-              "propertyName": "@type",
-              "mapping": {
-                "Persoon": "#/components/schemas/Persoon",
-                "Organisatie": "#/components/schemas/Organisatie"
-              }
-            }
+            "$ref": "#/components/schemas/Agent"
           }
         },
         "required": [
@@ -1503,7 +1485,7 @@
             "pattern": "^GerichteLink$"
           },
           "richting": {
-            "$ref": "#/components/schemas/Sign"
+            "$ref": "#/components/schemas/Teken"
           },
           "link": {
             "$ref": "#/components/schemas/Link"
