@@ -1,0 +1,2049 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "BelgischAdres": {
+        "title": "BelgischAdres",
+        "type": "object",
+        "description": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid, een ligplaats, een standplaats of een perceel op basis van een gemeentenaam, een straatnaam, een huisnummer en eventueel een busnummer en een postcode.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BelgischAdres)",
+            "pattern": "^BelgischAdres$"
+          },
+          "heeftStraatnaam": {
+            "$ref": "#/components/schemas/Straatnaam"
+          }
+        },
+        "required": [
+          "@type",
+          "heeftStraatnaam"
+        ]
+      },
+      "Straatnaam": {
+        "title": "Straatnaam",
+        "type": "object",
+        "description": "Adrescomponent met de naam die officieel werd toegekend aan een straat (baan, doorgang, plein) of aan een gehucht en waaraan adressen kunnen zijn gekoppeld.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Straatnaam)",
+            "pattern": "^Straatnaam$"
+          },
+          "straatnaam": {
+            "type": "array",
+            "description": "Lijst van LangString items.",
+            "items": {
+              "type": "object",
+              "description": "Naam vd straat.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1
+          },
+          "isToegekendDoor": {
+            "$ref": "#/components/schemas/Gemeente"
+          },
+          "voertuigtype": {
+            "type": "array",
+            "description": "Lijst van Voertuigtype items.",
+            "items": {
+              "$ref": "#/components/schemas/Voertuigtype"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "straatnaam",
+          "isToegekendDoor"
+        ]
+      },
+      "Eenheid": {
+        "title": "Eenheid",
+        "type": "object",
+        "description": "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Eenheid)",
+            "pattern": "^Eenheid$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Toegang": {
+        "title": "Toegang",
+        "type": "object",
+        "description": "Beperking op de toegankelijkheid van het Transportobject.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Toegang)",
+            "pattern": "^Toegang$"
+          },
+          "restrictie": {
+            "$ref": "#/components/schemas/Toegangsbeperkingtype"
+          },
+          "voertuigtype": {
+            "type": "array",
+            "description": "Lijst van Voertuigtype items.",
+            "items": {
+              "$ref": "#/components/schemas/Voertuigtype"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "restrictie"
+        ]
+      },
+      "OngelijkgrondseKruising": {
+        "title": "OngelijkgrondseKruising",
+        "type": "object",
+        "description": "Geeft aan welke van twee of meer Netwerkelementen hoger of lager is gelegen dan de andere.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse OngelijkgrondseKruising)",
+            "pattern": "^OngelijkgrondseKruising$"
+          },
+          "inNetwerk": {
+            "type": "array",
+            "description": "Lijst van Transportnetwerk items.",
+            "items": {
+              "$ref": "#/components/schemas/Transportnetwerk"
+            },
+            "minItems": 1
+          },
+          "kruisingVan": {
+            "type": "array",
+            "description": "Lijst van Wegsegment items.",
+            "items": {
+              "$ref": "#/components/schemas/Wegsegment"
+            },
+            "minItems": 2
+          }
+        },
+        "required": [
+          "@type",
+          "inNetwerk"
+        ]
+      },
+      "Beheerder": {
+        "title": "Beheerder",
+        "type": "object",
+        "description": "Agent verantwoordelijk voor het beheer van het Transportobject.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Beheerder)",
+            "pattern": "^Beheerder$"
+          },
+          "autoriteit": {
+            "$ref": "#/components/schemas/Agent"
+          },
+          "voertuigtype": {
+            "type": "array",
+            "description": "Lijst van Voertuigtype items.",
+            "items": {
+              "$ref": "#/components/schemas/Voertuigtype"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "autoriteit"
+        ]
+      },
+      "RichtingVerkeer": {
+        "title": "RichtingVerkeer",
+        "type": "object",
+        "description": "Geeft de richting aan van de verkeerstroom.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse RichtingVerkeer)",
+            "pattern": "^RichtingVerkeer$"
+          },
+          "richting": {
+            "$ref": "#/components/schemas/Linkrichtingtype"
+          },
+          "voertuigtype": {
+            "type": "array",
+            "description": "Lijst van Voertuigtype items.",
+            "items": {
+              "$ref": "#/components/schemas/Voertuigtype"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "richting"
+        ]
+      },
+      "Toestand": {
+        "title": "Toestand",
+        "type": "object",
+        "description": "Staat van het Transportobject qua mate van voltooing of voor gebruik.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Toestand)",
+            "pattern": "^Toestand$"
+          },
+          "huidigeToestand": {
+            "$ref": "#/components/schemas/Toestandtype"
+          },
+          "voertuigtype": {
+            "type": "array",
+            "description": "Lijst van Voertuigtype items.",
+            "items": {
+              "$ref": "#/components/schemas/Voertuigtype"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "huidigeToestand"
+        ]
+      },
+      "Transportnetwerk": {
+        "title": "Transportnetwerk",
+        "type": "object",
+        "description": "Verzameling van Netwerkelementen die eenzelfde vervoerswijze vertegenwoordigen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Transportnetwerk)",
+            "pattern": "^Transportnetwerk$"
+          },
+          "geografischeNaam": {
+            "type": "object",
+            "description": "Naam van het Transportobject.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/TransportType"
+          }
+        },
+        "required": [
+          "@type",
+          "type"
+        ]
+      },
+      "Persoon": {
+        "title": "Persoon",
+        "type": "object",
+        "description": "Natuurlijk persoon.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Persoon)",
+            "pattern": "^Persoon$"
+          },
+          "achternaam": {
+            "type": "object",
+            "description": "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie. Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "voornaam": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "volledigeNaam": {
+            "type": "object",
+            "description": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam. Gebruik dit attribuut wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "contactinfo": {
+            "$ref": "#/components/schemas/Contactinfo"
+          }
+        },
+        "required": [
+          "@type",
+          "achternaam"
+        ]
+      },
+      "Netwerk": {
+        "title": "Netwerk",
+        "type": "object",
+        "description": "Verzameling van Netwerkelementen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Netwerk)",
+            "pattern": "^Netwerk$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GgelijkgrondseKruising": {
+        "title": "GgelijkgrondseKruising",
+        "type": "object",
+        "description": "Geeft de gelijkgrondse kruising van twee Wegsegmenten weer.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GgelijkgrondseKruising)",
+            "pattern": "^GgelijkgrondseKruising$"
+          },
+          "inNetwerk": {
+            "type": "array",
+            "description": "Lijst van Transportnetwerk items.",
+            "items": {
+              "$ref": "#/components/schemas/Transportnetwerk"
+            },
+            "minItems": 1
+          },
+          "kruisingVan": {
+            "type": "array",
+            "description": "Lijst van Wegsegment items.",
+            "items": {
+              "$ref": "#/components/schemas/Wegsegment"
+            },
+            "minItems": 2
+          }
+        },
+        "required": [
+          "@type",
+          "inNetwerk"
+        ]
+      },
+      "Weg": {
+        "title": "Weg",
+        "type": "object",
+        "description": "Een verzameling Wegsegmenten of  Weglinksequenties die passen binnen hetzelfde thema e/of dezelfde eigenschappen hebben.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Weg)",
+            "pattern": "^Weg$"
+          },
+          "lokaleCode": {
+            "type": "object",
+            "description": "Code toegekend aan de weg door een lokale autoriteit.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "nationaleCode": {
+            "type": "object",
+            "description": "Code toegekend aan de weg door een nationale autoriteit.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "geografischeNaam": {
+            "type": "object",
+            "description": "Naam van het Transportobject.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "link": {
+            "type": "array",
+            "description": "Lijst van GeneriekeLink items.",
+            "items": {
+              "$ref": "#/components/schemas/GeneriekeLink"
+            },
+            "minItems": 1
+          },
+          "referentie": {
+            "type": "array",
+            "description": "Lijst van Netwerkreferentie items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Netwerkreferentie"
+                },
+                {
+                  "$ref": "#/components/schemas/Linkreferentie"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+                  "Linkreferentie": "#/components/schemas/Linkreferentie"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "inNetwerk": {
+            "type": "array",
+            "description": "Lijst van Transportnetwerk items.",
+            "items": {
+              "$ref": "#/components/schemas/Transportnetwerk"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "lokaleCode",
+          "nationaleCode",
+          "link",
+          "inNetwerk"
+        ]
+      },
+      "EuropeseWeg": {
+        "title": "EuropeseWeg",
+        "type": "object",
+        "description": "Een verzameling Wegsegmenten of  Weglinksequenties die een route vertegenwoordigt die deel uitmaakt van het internationale E-wegennetwerk, gekenmerkt door het Europese wegummer.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse EuropeseWeg)",
+            "pattern": "^EuropeseWeg$"
+          },
+          "europeesWegnummer": {
+            "type": "object",
+            "description": "Code die de route in het internationale E-wegennetwerk identificeert. De code begint altijd met een\nletter 'E', gevolgd door een één-, twee- of driecijferig\nnummer.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "geografischeNaam": {
+            "type": "object",
+            "description": "Naam van het Transportobject.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "link": {
+            "type": "array",
+            "description": "Lijst van GeneriekeLink items.",
+            "items": {
+              "$ref": "#/components/schemas/GeneriekeLink"
+            },
+            "minItems": 1
+          },
+          "referentie": {
+            "type": "array",
+            "description": "Lijst van Netwerkreferentie items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Netwerkreferentie"
+                },
+                {
+                  "$ref": "#/components/schemas/Linkreferentie"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+                  "Linkreferentie": "#/components/schemas/Linkreferentie"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "inNetwerk": {
+            "type": "array",
+            "description": "Lijst van Transportnetwerk items.",
+            "items": {
+              "$ref": "#/components/schemas/Transportnetwerk"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "europeesWegnummer",
+          "link",
+          "inNetwerk"
+        ]
+      },
+      "Wegsegment": {
+        "title": "Wegsegment",
+        "type": "object",
+        "description": "Lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een wegennetwerk.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Wegsegment)",
+            "pattern": "^Wegsegment$"
+          },
+          "geografischeNaam": {
+            "type": "object",
+            "description": "Naam van het Transportobject.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "geometriemiddenlijn": {
+            "$ref": "#/components/schemas/Curve"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "referentie": {
+            "type": "array",
+            "description": "Lijst van Netwerkreferentie items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Netwerkreferentie"
+                },
+                {
+                  "$ref": "#/components/schemas/Linkreferentie"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+                  "Linkreferentie": "#/components/schemas/Linkreferentie"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "inNetwerk": {
+            "type": "array",
+            "description": "Lijst van Transportnetwerk items.",
+            "items": {
+              "$ref": "#/components/schemas/Transportnetwerk"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "geometriemiddenlijn",
+          "inNetwerk"
+        ]
+      },
+      "Wegknoop": {
+        "title": "Wegknoop",
+        "type": "object",
+        "description": "Significante positie in het wegennet die het begin of einde van een Wegsegment markeert.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Wegknoop)",
+            "pattern": "^Wegknoop$"
+          },
+          "geografischeNaam": {
+            "type": "object",
+            "description": "Naam van het Transportobject.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/Wegknooptype"
+          },
+          "identificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "referentie": {
+            "type": "array",
+            "description": "Lijst van Netwerkreferentie items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Netwerkreferentie"
+                },
+                {
+                  "$ref": "#/components/schemas/Linkreferentie"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+                  "Linkreferentie": "#/components/schemas/Linkreferentie"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "inNetwerk": {
+            "type": "array",
+            "description": "Lijst van Transportnetwerk items.",
+            "items": {
+              "$ref": "#/components/schemas/Transportnetwerk"
+            },
+            "minItems": 1
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Punt"
+          }
+        },
+        "required": [
+          "@type",
+          "type",
+          "inNetwerk",
+          "geometrie"
+        ]
+      },
+      "Wegcategorie": {
+        "title": "Wegcategorie",
+        "type": "object",
+        "description": "Een classificatie gebaseerd op het belang van de\nrol die de weg vervult in het wegennetwerk.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Wegcategorie)",
+            "pattern": "^Wegcategorie$"
+          },
+          "categorie": {
+            "$ref": "#/components/schemas/Wegcategorietype"
+          },
+          "voertuigtype": {
+            "type": "array",
+            "description": "Lijst van Voertuigtype items.",
+            "items": {
+              "$ref": "#/components/schemas/Voertuigtype"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "categorie"
+        ]
+      },
+      "MorfologischeWegklasse": {
+        "title": "MorfologischeWegklasse",
+        "type": "object",
+        "description": "Een classificatie gebaseerd op de fysieke eigenschappen van de weg.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse MorfologischeWegklasse)",
+            "pattern": "^MorfologischeWegklasse$"
+          },
+          "klasse": {
+            "$ref": "#/components/schemas/Morfologietype"
+          },
+          "voertuigtype": {
+            "type": "array",
+            "description": "Lijst van Voertuigtype items.",
+            "items": {
+              "$ref": "#/components/schemas/Voertuigtype"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "klasse"
+        ]
+      },
+      "Wegverharding": {
+        "title": "Wegverharding",
+        "type": "object",
+        "description": "Aard van het oppervlak van de weg.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Wegverharding)",
+            "pattern": "^Wegverharding$"
+          },
+          "wegverharding": {
+            "$ref": "#/components/schemas/WegverhardingType"
+          },
+          "voertuigtype": {
+            "type": "array",
+            "description": "Lijst van Voertuigtype items.",
+            "items": {
+              "$ref": "#/components/schemas/Voertuigtype"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "wegverharding"
+        ]
+      },
+      "Gemeente": {
+        "title": "Gemeente",
+        "type": "object",
+        "description": "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Gemeente)",
+            "pattern": "^Gemeente$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Organisatie": {
+        "title": "Organisatie",
+        "type": "object",
+        "description": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Organisatie)",
+            "pattern": "^Organisatie$"
+          },
+          "voorkeursnaam": {
+            "type": "object",
+            "description": "Naam waarmee de organisatie bij voorkeur wordt aangeduid.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "contactinfo": {
+            "type": "array",
+            "description": "Lijst van Contactinfo items.",
+            "items": {
+              "$ref": "#/components/schemas/Contactinfo"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Geometrie": {
+        "title": "Geometrie",
+        "type": "object",
+        "description": "Vorm- en positiekenmerken van een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Geometrie)",
+            "pattern": "^Geometrie$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "KwantitatieveWaarde": {
+        "title": "KwantitatieveWaarde",
+        "type": "object",
+        "description": "Aanduiding van de kwantiteit van een bepaald kenmerk van een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse KwantitatieveWaarde)",
+            "pattern": "^KwantitatieveWaarde$"
+          },
+          "waarde": {
+            "type": "object",
+            "description": "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "eenheid": {
+            "$ref": "#/components/schemas/Eenheid"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde"
+        ]
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Informatie gebruikt om een object uniek te identificeren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "toegekendOp": {
+            "type": "object",
+            "description": "Tijdstip waarop de identificator werd uitgegeven.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "identificator": {
+            "type": "object",
+            "description": "String gebruikt om het object uniek te identificeren. Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendDoor(String)": {
+            "type": "object",
+            "description": "Naam vd agent die de identificator heeft toegekend.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendDoor": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Persoon"
+              },
+              {
+                "$ref": "#/components/schemas/Organisatie"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Persoon": "#/components/schemas/Persoon",
+                "Organisatie": "#/components/schemas/Organisatie"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Contactinfo": {
+        "title": "Contactinfo",
+        "type": "object",
+        "description": "Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Contactinfo)",
+            "pattern": "^Contactinfo$"
+          },
+          "aanschrijfvorm": {
+            "type": "object",
+            "description": "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen. Bvb De heer/Mevrouw, Excellentie, Dokter...",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "contactnaam": {
+            "type": "object",
+            "description": "Naam van bvb de persoon die men kan contacteren.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "email": {
+            "type": "object",
+            "description": "Email-adres waarnaar men kan mailen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "telefoon": {
+            "type": "object",
+            "description": "Telefoonnummer waarop men kan bellen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "website": {
+            "type": "object",
+            "description": "Website waarnaar men kan surfen.",
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "@id"
+            ]
+          },
+          "adres": {
+            "$ref": "#/components/schemas/Adresvoorstelling"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Adresvoorstelling": {
+        "title": "Adresvoorstelling",
+        "type": "object",
+        "description": "Meer leesbare voorstelling met enkel de basisgegevens van het adres, bedoeld voor het gebruik van een adres als attribuut van een ander object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Adresvoorstelling)",
+            "pattern": "^Adresvoorstelling$"
+          },
+          "administratieveEenheidNiveau1": {
+            "type": "object",
+            "description": "Hoogste Administratieve eenheid vh adres, doorgaans een land.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "administratieveEenheidNiveau2": {
+            "type": "object",
+            "description": "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "adresgebied": {
+            "type": "object",
+            "description": "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is Bvb de naam vh gehucht waarin het adres ligt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "busnummer": {
+            "type": "object",
+            "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben. Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gemeentenaam": {
+            "type": "object",
+            "description": "Gemeentenaam vh adres.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "huisnummer": {
+            "type": "object",
+            "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen. Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "land": {
+            "type": "object",
+            "description": "Land waarin het adres gelegen is.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "locatieaanduiding": {
+            "type": "array",
+            "description": "Lijst van String items.",
+            "items": {
+              "type": "object",
+              "description": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "locatienaam": {
+            "type": "array",
+            "description": "Lijst van LangString items.",
+            "items": {
+              "type": "object",
+              "description": "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1
+          },
+          "postbus": {
+            "type": "object",
+            "description": "Postbusnummer in een postkantoor.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "postcode": {
+            "type": "object",
+            "description": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "postnaam": {
+            "type": "object",
+            "description": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "straatnaam": {
+            "type": "object",
+            "description": "Straatnaam vh adres.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "volledigAdres": {
+            "type": "object",
+            "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde vd verschillende onderdelen weer.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "verwijstNaar": {
+            "$ref": "#/components/schemas/BelgischAdres"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GerichteLink": {
+        "title": "GerichteLink",
+        "type": "object",
+        "description": "Link in hetzij zijn positieve, hetzij zijn negatieve richting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GerichteLink)",
+            "pattern": "^GerichteLink$"
+          },
+          "richting": {
+            "$ref": "#/components/schemas/Sign"
+          },
+          "link": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "required": [
+          "@type",
+          "richting",
+          "link"
+        ]
+      },
+      "Netwerkreferentie": {
+        "title": "Netwerkreferentie",
+        "type": "object",
+        "description": "Verwijzing naar een Netwerkelement.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Netwerkreferentie)",
+            "pattern": "^Netwerkreferentie$"
+          },
+          "eigenschap": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Netwerkeigenschap"
+              },
+              {
+                "$ref": "#/components/schemas/Transporteigenschap"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Netwerkeigenschap": "#/components/schemas/Netwerkeigenschap",
+                "Transporteigenschap": "#/components/schemas/Transporteigenschap"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "eigenschap"
+        ]
+      },
+      "Linkreferentie": {
+        "title": "Linkreferentie",
+        "type": "object",
+        "description": "Netwerkreferentie die verwijst naar een lineair netwerkelement.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Linkreferentie)",
+            "pattern": "^Linkreferentie$"
+          },
+          "toepassingsrichting": {
+            "$ref": "#/components/schemas/Linkrichtingtype"
+          },
+          "eigenschap": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Netwerkeigenschap"
+              },
+              {
+                "$ref": "#/components/schemas/Transporteigenschap"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Netwerkeigenschap": "#/components/schemas/Netwerkeigenschap",
+                "Transporteigenschap": "#/components/schemas/Transporteigenschap"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "eigenschap"
+        ]
+      },
+      "Puntreferentie": {
+        "title": "Puntreferentie",
+        "type": "object",
+        "description": "Linkreferentie die verwijst naar een punt op het lineair netwerkelement.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Puntreferentie)",
+            "pattern": "^Puntreferentie$"
+          },
+          "opPositie": {
+            "$ref": "#/components/schemas/KwantitatieveWaarde"
+          },
+          "toepassingsrichting": {
+            "$ref": "#/components/schemas/Linkrichtingtype"
+          },
+          "eigenschap": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Netwerkeigenschap"
+              },
+              {
+                "$ref": "#/components/schemas/Transporteigenschap"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Netwerkeigenschap": "#/components/schemas/Netwerkeigenschap",
+                "Transporteigenschap": "#/components/schemas/Transporteigenschap"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "opPositie",
+          "eigenschap"
+        ]
+      },
+      "LineaireReferentie": {
+        "title": "LineaireReferentie",
+        "type": "object",
+        "description": "Linkreferentie die verwijst naar een deel van het lineair netwerkelement.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LineaireReferentie)",
+            "pattern": "^LineaireReferentie$"
+          },
+          "vanPositie": {
+            "$ref": "#/components/schemas/KwantitatieveWaarde"
+          },
+          "totPositie": {
+            "$ref": "#/components/schemas/KwantitatieveWaarde"
+          },
+          "toepassingsrichting": {
+            "$ref": "#/components/schemas/Linkrichtingtype"
+          },
+          "eigenschap": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Netwerkeigenschap"
+              },
+              {
+                "$ref": "#/components/schemas/Transporteigenschap"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Netwerkeigenschap": "#/components/schemas/Netwerkeigenschap",
+                "Transporteigenschap": "#/components/schemas/Transporteigenschap"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "vanPositie",
+          "totPositie",
+          "eigenschap"
+        ]
+      },
+      "Curve": {
+        "title": "Curve",
+        "type": "object",
+        "description": "Een 1-dimensionele geometrische primitieve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Curve)",
+            "pattern": "^Curve$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Punt": {
+        "title": "Punt",
+        "type": "object",
+        "description": "Een 0-dimensioneel geometrisch object dat een bepaalde locatie in een coördinaatruimte voorstelt. Heeft een x-coördinaat en een y-coördinaat. Kan ook een z-coördinaat (hoogte) en een m-coördinaat (afstand langs een curve) hebben.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Punt)",
+            "pattern": "^Punt$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Vlak": {
+        "title": "Vlak",
+        "type": "object",
+        "description": "Een 2-dimensionele geometrische primitieve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Vlak)",
+            "pattern": "^Vlak$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    },
+    "links": {
+      "BelgischAdres.heeftStraatnaam": {
+        "operationId": "BelgischAdresGET",
+        "parameters": {
+          "id": "$response.body#/BelgischAdres.heeftStraatnaam/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Straatnaam` op te halen."
+      },
+      "Straatnaam.isToegekendDoor": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.isToegekendDoor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen."
+      },
+      "Straatnaam.voertuigtype": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.voertuigtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigtype` op te halen."
+      },
+      "Toegang.restrictie": {
+        "operationId": "ToegangGET",
+        "parameters": {
+          "id": "$response.body#/Toegang.restrictie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Toegangsbeperkingtype` op te halen."
+      },
+      "Toegang.voertuigtype": {
+        "operationId": "ToegangGET",
+        "parameters": {
+          "id": "$response.body#/Toegang.voertuigtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigtype` op te halen."
+      },
+      "OngelijkgrondseKruising.inNetwerk": {
+        "operationId": "OngelijkgrondseKruisingGET",
+        "parameters": {
+          "id": "$response.body#/OngelijkgrondseKruising.inNetwerk/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Transportnetwerk` op te halen."
+      },
+      "OngelijkgrondseKruising.kruisingVan": {
+        "operationId": "OngelijkgrondseKruisingGET",
+        "parameters": {
+          "id": "$response.body#/OngelijkgrondseKruising.kruisingVan/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Wegsegment` op te halen."
+      },
+      "Beheerder.autoriteit": {
+        "operationId": "BeheerderGET",
+        "parameters": {
+          "id": "$response.body#/Beheerder.autoriteit/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Beheerder.voertuigtype": {
+        "operationId": "BeheerderGET",
+        "parameters": {
+          "id": "$response.body#/Beheerder.voertuigtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigtype` op te halen."
+      },
+      "RichtingVerkeer.richting": {
+        "operationId": "RichtingVerkeerGET",
+        "parameters": {
+          "id": "$response.body#/RichtingVerkeer.richting/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Linkrichtingtype` op te halen."
+      },
+      "RichtingVerkeer.voertuigtype": {
+        "operationId": "RichtingVerkeerGET",
+        "parameters": {
+          "id": "$response.body#/RichtingVerkeer.voertuigtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigtype` op te halen."
+      },
+      "Toestand.huidigeToestand": {
+        "operationId": "ToestandGET",
+        "parameters": {
+          "id": "$response.body#/Toestand.huidigeToestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Toestandtype` op te halen."
+      },
+      "Toestand.voertuigtype": {
+        "operationId": "ToestandGET",
+        "parameters": {
+          "id": "$response.body#/Toestand.voertuigtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigtype` op te halen."
+      },
+      "Transportnetwerk.type": {
+        "operationId": "TransportnetwerkGET",
+        "parameters": {
+          "id": "$response.body#/Transportnetwerk.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TransportType` op te halen."
+      },
+      "Persoon.contactinfo": {
+        "operationId": "PersoonGET",
+        "parameters": {
+          "id": "$response.body#/Persoon.contactinfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactinfo` op te halen."
+      },
+      "GgelijkgrondseKruising.inNetwerk": {
+        "operationId": "GgelijkgrondseKruisingGET",
+        "parameters": {
+          "id": "$response.body#/GgelijkgrondseKruising.inNetwerk/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Transportnetwerk` op te halen."
+      },
+      "GgelijkgrondseKruising.kruisingVan": {
+        "operationId": "GgelijkgrondseKruisingGET",
+        "parameters": {
+          "id": "$response.body#/GgelijkgrondseKruising.kruisingVan/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Wegsegment` op te halen."
+      },
+      "Weg.identificator": {
+        "operationId": "WegGET",
+        "parameters": {
+          "id": "$response.body#/Weg.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Weg.link": {
+        "operationId": "WegGET",
+        "parameters": {
+          "id": "$response.body#/Weg.link/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeneriekeLink` op te halen."
+      },
+      "Weg.referentie": {
+        "operationId": "WegGET",
+        "parameters": {
+          "id": "$response.body#/Weg.referentie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Netwerkreferentie` op te halen."
+      },
+      "Weg.inNetwerk": {
+        "operationId": "WegGET",
+        "parameters": {
+          "id": "$response.body#/Weg.inNetwerk/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Transportnetwerk` op te halen."
+      },
+      "EuropeseWeg.identificator": {
+        "operationId": "EuropeseWegGET",
+        "parameters": {
+          "id": "$response.body#/EuropeseWeg.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "EuropeseWeg.link": {
+        "operationId": "EuropeseWegGET",
+        "parameters": {
+          "id": "$response.body#/EuropeseWeg.link/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeneriekeLink` op te halen."
+      },
+      "EuropeseWeg.referentie": {
+        "operationId": "EuropeseWegGET",
+        "parameters": {
+          "id": "$response.body#/EuropeseWeg.referentie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Netwerkreferentie` op te halen."
+      },
+      "EuropeseWeg.inNetwerk": {
+        "operationId": "EuropeseWegGET",
+        "parameters": {
+          "id": "$response.body#/EuropeseWeg.inNetwerk/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Transportnetwerk` op te halen."
+      },
+      "Wegsegment.geometriemiddenlijn": {
+        "operationId": "WegsegmentGET",
+        "parameters": {
+          "id": "$response.body#/Wegsegment.geometriemiddenlijn/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Curve` op te halen."
+      },
+      "Wegsegment.identificator": {
+        "operationId": "WegsegmentGET",
+        "parameters": {
+          "id": "$response.body#/Wegsegment.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Wegsegment.referentie": {
+        "operationId": "WegsegmentGET",
+        "parameters": {
+          "id": "$response.body#/Wegsegment.referentie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Netwerkreferentie` op te halen."
+      },
+      "Wegsegment.inNetwerk": {
+        "operationId": "WegsegmentGET",
+        "parameters": {
+          "id": "$response.body#/Wegsegment.inNetwerk/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Transportnetwerk` op te halen."
+      },
+      "Wegsegment.beginknoop": {
+        "operationId": "WegsegmentGET",
+        "parameters": {
+          "id": "$response.body#/Wegsegment.beginknoop/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Wegknoop` op te halen."
+      },
+      "Wegsegment.eindknoop": {
+        "operationId": "WegsegmentGET",
+        "parameters": {
+          "id": "$response.body#/Wegsegment.eindknoop/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Wegknoop` op te halen."
+      },
+      "Wegknoop.type": {
+        "operationId": "WegknoopGET",
+        "parameters": {
+          "id": "$response.body#/Wegknoop.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Wegknooptype` op te halen."
+      },
+      "Wegknoop.identificator": {
+        "operationId": "WegknoopGET",
+        "parameters": {
+          "id": "$response.body#/Wegknoop.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Wegknoop.referentie": {
+        "operationId": "WegknoopGET",
+        "parameters": {
+          "id": "$response.body#/Wegknoop.referentie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Netwerkreferentie` op te halen."
+      },
+      "Wegknoop.inNetwerk": {
+        "operationId": "WegknoopGET",
+        "parameters": {
+          "id": "$response.body#/Wegknoop.inNetwerk/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Transportnetwerk` op te halen."
+      },
+      "Wegknoop.geometrie": {
+        "operationId": "WegknoopGET",
+        "parameters": {
+          "id": "$response.body#/Wegknoop.geometrie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Punt` op te halen."
+      },
+      "Wegcategorie.categorie": {
+        "operationId": "WegcategorieGET",
+        "parameters": {
+          "id": "$response.body#/Wegcategorie.categorie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Wegcategorietype` op te halen."
+      },
+      "Wegcategorie.voertuigtype": {
+        "operationId": "WegcategorieGET",
+        "parameters": {
+          "id": "$response.body#/Wegcategorie.voertuigtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigtype` op te halen."
+      },
+      "MorfologischeWegklasse.klasse": {
+        "operationId": "MorfologischeWegklasseGET",
+        "parameters": {
+          "id": "$response.body#/MorfologischeWegklasse.klasse/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Morfologietype` op te halen."
+      },
+      "MorfologischeWegklasse.voertuigtype": {
+        "operationId": "MorfologischeWegklasseGET",
+        "parameters": {
+          "id": "$response.body#/MorfologischeWegklasse.voertuigtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigtype` op te halen."
+      },
+      "Wegverharding.wegverharding": {
+        "operationId": "WegverhardingGET",
+        "parameters": {
+          "id": "$response.body#/Wegverharding.wegverharding/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `WegverhardingType` op te halen."
+      },
+      "Wegverharding.voertuigtype": {
+        "operationId": "WegverhardingGET",
+        "parameters": {
+          "id": "$response.body#/Wegverharding.voertuigtype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigtype` op te halen."
+      },
+      "Organisatie.contactinfo": {
+        "operationId": "OrganisatieGET",
+        "parameters": {
+          "id": "$response.body#/Organisatie.contactinfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactinfo` op te halen."
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "title": "Weg",
+  "type": "object",
+  "description": "Een verzameling Wegsegmenten of  Weglinksequenties die passen binnen hetzelfde thema e/of dezelfde eigenschappen hebben.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Weg)",
+      "pattern": "^Weg$"
+    },
+    "lokaleCode": {
+      "type": "object",
+      "description": "Code toegekend aan de weg door een lokale autoriteit.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "nationaleCode": {
+      "type": "object",
+      "description": "Code toegekend aan de weg door een nationale autoriteit.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "geografischeNaam": {
+      "type": "object",
+      "description": "Naam van het Transportobject.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "link": {
+      "type": "array",
+      "description": "Lijst van GeneriekeLink items.",
+      "items": {
+        "$ref": "#/components/schemas/GeneriekeLink"
+      },
+      "minItems": 1
+    },
+    "referentie": {
+      "type": "array",
+      "description": "Lijst van Netwerkreferentie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Netwerkreferentie"
+          },
+          {
+            "$ref": "#/components/schemas/Linkreferentie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+            "Linkreferentie": "#/components/schemas/Linkreferentie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "inNetwerk": {
+      "type": "array",
+      "description": "Lijst van Transportnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Transportnetwerk"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "lokaleCode",
+    "nationaleCode",
+    "link",
+    "inNetwerk"
+  ]
+}

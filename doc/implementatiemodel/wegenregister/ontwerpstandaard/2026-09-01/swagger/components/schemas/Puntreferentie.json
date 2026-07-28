@@ -1,0 +1,44 @@
+{
+  "title": "Puntreferentie",
+  "type": "object",
+  "description": "Linkreferentie die verwijst naar een punt op het lineair netwerkelement.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Puntreferentie)",
+      "pattern": "^Puntreferentie$"
+    },
+    "opPositie": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "toepassingsrichting": {
+      "$ref": "#/components/schemas/Linkrichtingtype"
+    },
+    "eigenschap": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Netwerkeigenschap"
+        },
+        {
+          "$ref": "#/components/schemas/Transporteigenschap"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Netwerkeigenschap": "#/components/schemas/Netwerkeigenschap",
+          "Transporteigenschap": "#/components/schemas/Transporteigenschap"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "opPositie",
+    "eigenschap"
+  ]
+}

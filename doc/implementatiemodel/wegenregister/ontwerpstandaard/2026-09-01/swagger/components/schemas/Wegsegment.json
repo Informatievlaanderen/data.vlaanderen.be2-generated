@@ -1,0 +1,74 @@
+{
+  "title": "Wegsegment",
+  "type": "object",
+  "description": "Lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een wegennetwerk.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Wegsegment)",
+      "pattern": "^Wegsegment$"
+    },
+    "geografischeNaam": {
+      "type": "object",
+      "description": "Naam van het Transportobject.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "geometriemiddenlijn": {
+      "$ref": "#/components/schemas/Curve"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "referentie": {
+      "type": "array",
+      "description": "Lijst van Netwerkreferentie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Netwerkreferentie"
+          },
+          {
+            "$ref": "#/components/schemas/Linkreferentie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+            "Linkreferentie": "#/components/schemas/Linkreferentie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "inNetwerk": {
+      "type": "array",
+      "description": "Lijst van Transportnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Transportnetwerk"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geometriemiddenlijn",
+    "inNetwerk"
+  ]
+}

@@ -557,10 +557,8 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/weg2.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01'
 
 index.html check
-error: missing '/tmp/generated/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/index.html'
 
 #||#    + checking /home/circleci/project/config/test/wetgeving.publication.json
 #||# 

@@ -1,0 +1,78 @@
+{
+  "title": "Wegknoop",
+  "type": "object",
+  "description": "Significante positie in het wegennet die het begin of einde van een Wegsegment markeert.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Wegknoop)",
+      "pattern": "^Wegknoop$"
+    },
+    "geografischeNaam": {
+      "type": "object",
+      "description": "Naam van het Transportobject.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "type": {
+      "$ref": "#/components/schemas/Wegknooptype"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "referentie": {
+      "type": "array",
+      "description": "Lijst van Netwerkreferentie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Netwerkreferentie"
+          },
+          {
+            "$ref": "#/components/schemas/Linkreferentie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+            "Linkreferentie": "#/components/schemas/Linkreferentie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "inNetwerk": {
+      "type": "array",
+      "description": "Lijst van Transportnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Transportnetwerk"
+      },
+      "minItems": 1
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Punt"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "inNetwerk",
+    "geometrie"
+  ]
+}
