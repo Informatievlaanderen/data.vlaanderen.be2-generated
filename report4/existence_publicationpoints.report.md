@@ -484,6 +484,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/voertuigregistraties.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/voorwaarden-dienstverlening.publication.json
 #||# 
 Directory check

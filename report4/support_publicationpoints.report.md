@@ -156,6 +156,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/vlaamsecodex.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/voertuigregistraties.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/voorwaarden-dienstverlening.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/vrachtwagenparkeren.publication.json
