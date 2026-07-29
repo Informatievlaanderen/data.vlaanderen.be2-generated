@@ -1,0 +1,77 @@
+{
+  "title": "OperationeleDag",
+  "type": "object",
+  "description": "Een dag van openbaar vervoer waarvan de kenmerken worden gedefinieerd in een specifieke dienstkalender.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse OperationeleDag)",
+      "pattern": "^OperationeleDag$"
+    },
+    "kalenderdatum": {
+      "type": "object",
+      "description": "Kalenderdatum van de operationele dag.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de operationele dag.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "vroegsteTijd": {
+      "type": "object",
+      "description": "Starttijd van de operationele dag.",
+      "properties": {
+        "$ref": "#/components/schemas/Time"
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "daglengte": {
+      "type": "object",
+      "description": "Lengte van de operationele dag.",
+      "properties": {
+        "$ref": "#/components/schemas/Duration"
+      },
+      "required": [
+        "$ref"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "kalenderdatum",
+    "vroegsteTijd",
+    "daglengte"
+  ]
+}

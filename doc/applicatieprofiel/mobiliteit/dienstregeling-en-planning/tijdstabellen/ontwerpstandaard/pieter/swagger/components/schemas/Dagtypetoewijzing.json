@@ -1,0 +1,84 @@
+{
+  "title": "Dagtypetoewijzing",
+  "type": "object",
+  "description": "De toewijzing van operationele kenmerken, uitgedrukt a.d.h.v. dagtypen, met bepaalde werkdagen binnen een dienstkalender.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dagtypetoewijzing)",
+      "pattern": "^Dagtypetoewijzing$"
+    },
+    "datum": {
+      "type": "object",
+      "description": "Datum van de dagtype-toewijzing.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de dagtype-toewijzing.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "beschikbaar": {
+      "type": "object",
+      "description": "Beschikbaar op de toegewezen dag.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "operationelePeriode": {
+      "$ref": "#/components/schemas/UicOperationelePeriode"
+    },
+    "dayTypeAssignment.DayType": {
+      "$ref": "#/components/schemas/Dagtype"
+    },
+    "dayTypeAssignment.ServiceCalendar": {
+      "$ref": "#/components/schemas/Dienstkalender"
+    }
+  },
+  "required": [
+    "@type",
+    "beschikbaar",
+    "operationelePeriode",
+    "dayTypeAssignment.DayType",
+    "dayTypeAssignment.ServiceCalendar"
+  ]
+}

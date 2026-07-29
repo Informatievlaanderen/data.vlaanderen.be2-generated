@@ -1,0 +1,78 @@
+{
+  "title": "Doorkomsttijd",
+  "type": "object",
+  "description": "De Doorkomsttijden die het resultaat zijn van een planningsproces en gepubliceerd zullen worden in een dienstregeling worden Geplande Doorkomsttijden genoemd. \n\nDe Geplande Doorkomsttijden zijn normaliter een lange tijd voordat ze ingaan gepubliceerd en zijn geldig over een langere tijdspanne (bijvoorbeeld. zomer-, winterrooster).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Doorkomsttijd)",
+      "pattern": "^Doorkomsttijd$"
+    },
+    "aankomsttijd": {
+      "type": "object",
+      "description": "Aankomsttijd op punt in patroon.",
+      "properties": {
+        "$ref": "#/components/schemas/Time"
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "vertrektijd": {
+      "type": "object",
+      "description": "Vertrektijd op punt in patroon.",
+      "properties": {
+        "$ref": "#/components/schemas/Time"
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "aankomstdagOffset": {
+      "type": "object",
+      "description": "Aantal dagen na de starttijd van de reis, indien niet dezelfde kalenderdag. Standaard is 0 voor dezelfde dag.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "vertrekdagOffset": {
+      "type": "object",
+      "description": "Aantal dagen na de starttijd van de reis, indien niet dezelfde kalenderdag. Standaard is 0 voor dezelfde dag.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "volgtijd": {
+      "$ref": "#/components/schemas/Volgtijdinterval"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

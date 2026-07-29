@@ -1,0 +1,230 @@
+{
+  "title": "Lijn",
+  "type": "object",
+  "description": "Een groepering van Routes welke algemeen bekend zijn bij het brede publiek onder een gelijkaardige naam of nummer.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Lijn)",
+      "pattern": "^Lijn$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de lijn.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "publiekeCode": {
+      "type": "object",
+      "description": "Publieke identifier van de lijn.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "korteNaam": {
+      "type": "object",
+      "description": "Korte naam van de lijn.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "omschrijving": {
+      "type": "object",
+      "description": "Beschrijving van de lijn.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "url": {
+      "type": "object",
+      "description": "Een URL geassocieerd met de lijn.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "privéCode": {
+      "type": "object",
+      "description": "Alternatieve identificatie van de lijn.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "gemonitord": {
+      "type": "object",
+      "description": "Geeft aan of real-time gegevens normaal beschikbaar zijn voor de lijn.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "documentlink": {
+      "type": "array",
+      "description": "Lijst van URI items.",
+      "items": {
+        "type": "object",
+        "description": "Tijdschema documenten in verband met de lijn, Bijvoorbeeld PDF-bestanden.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "minItems": 1
+    },
+    "transportmodus": {
+      "$ref": "#/components/schemas/Transportmodus"
+    },
+    "transportorganisatie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Operator"
+        },
+        {
+          "$ref": "#/components/schemas/Autoriteit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Operator": "#/components/schemas/Operator",
+          "Autoriteit": "#/components/schemas/Autoriteit"
+        }
+      }
+    },
+    "toegankelijkheidsbeoordeling": {
+      "$ref": "#/components/schemas/Toegankelijkheidsbeoordeling"
+    },
+    "transportsubmodus": {
+      "$ref": "#/components/schemas/Transportmodus"
+    },
+    "extraOperator": {
+      "type": "array",
+      "description": "Lijst van AutoriteitOfOperator items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Operator"
+          },
+          {
+            "$ref": "#/components/schemas/Autoriteit"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Operator": "#/components/schemas/Operator",
+            "Autoriteit": "#/components/schemas/Autoriteit"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "andereTransportmodus": {
+      "type": "array",
+      "description": "Lijst van Transportmodus items.",
+      "items": {
+        "$ref": "#/components/schemas/Transportmodus"
+      },
+      "minItems": 1
+    },
+    "typeLijn": {
+      "$ref": "#/components/schemas/TypeLijn"
+    },
+    "presentatie": {
+      "$ref": "#/components/schemas/Presentatie"
+    },
+    "toegestaneRichting": {
+      "type": "array",
+      "description": "Lijst van Richting items.",
+      "items": {
+        "$ref": "#/components/schemas/Richting"
+      },
+      "minItems": 1
+    },
+    "opmerking": {
+      "type": "array",
+      "description": "Lijst van Opmerking items.",
+      "items": {
+        "$ref": "#/components/schemas/Opmerking"
+      },
+      "minItems": 1
+    },
+    "bestaandeUit": {
+      "type": "array",
+      "description": "Lijst van Route items.",
+      "items": {
+        "$ref": "#/components/schemas/Route"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "bestaandeUit"
+  ]
+}

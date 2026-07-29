@@ -1,0 +1,69 @@
+{
+  "title": "Netwerk",
+  "type": "object",
+  "description": "Een benoemde groep van Lijnen waaronder een Transportnetwerk gekend is.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Netwerk)",
+      "pattern": "^Netwerk$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de groep van lijnen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "transportorganisatie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Operator"
+        },
+        {
+          "$ref": "#/components/schemas/Autoriteit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Operator": "#/components/schemas/Operator",
+          "Autoriteit": "#/components/schemas/Autoriteit"
+        }
+      }
+    },
+    "bestaandeUit": {
+      "type": "array",
+      "description": "Lijst van Lijn items.",
+      "items": {
+        "$ref": "#/components/schemas/Lijn"
+      },
+      "minItems": 1
+    },
+    "transportmodus": {
+      "$ref": "#/components/schemas/Transportmodus"
+    },
+    "hoofdlijn": {
+      "$ref": "#/components/schemas/Lijn"
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "bestaandeUit"
+  ]
+}

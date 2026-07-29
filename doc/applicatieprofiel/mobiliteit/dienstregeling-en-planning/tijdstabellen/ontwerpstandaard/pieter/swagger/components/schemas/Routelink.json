@@ -1,0 +1,51 @@
+{
+  "title": "Routelink",
+  "type": "object",
+  "description": "Een Routelink is een georiënteerde link tussen twee Routepunten, welke toelaat om een uniek pad doorheen het netwerk te definiëren. Dezelfde Routelink kan worden gebruikt in verschillende Routes.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Routelink)",
+      "pattern": "^Routelink$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de routelink.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "afstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "lijnstring": {
+      "$ref": "#/components/schemas/Lijnstring"
+    },
+    "van": {
+      "$ref": "#/components/schemas/Routepunt"
+    },
+    "tot": {
+      "$ref": "#/components/schemas/Routepunt"
+    }
+  },
+  "required": [
+    "@type",
+    "afstand",
+    "van",
+    "tot"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "title": "EigenschapVanDag",
+  "type": "object",
+  "description": "Een eigenschap die een dag kan bezitten, zoals schoolvakantie, weekdag, zomer, winter etc.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse EigenschapVanDag)",
+      "pattern": "^EigenschapVanDag$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "De naam van de eigenschap van de dag.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "omschrijving": {
+      "type": "object",
+      "description": "Beschrijving van de eigenschap van de dag.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "maandVanHetJaar": {
+      "$ref": "#/components/schemas/Month"
+    },
+    "dagVanDeMaand": {
+      "$ref": "#/components/schemas/Day"
+    },
+    "dagVanHetJaar": {
+      "$ref": "#/components/schemas/MonthDay"
+    },
+    "land": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Land van vakantietype.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "dagVanDeWeek": {
+      "type": "array",
+      "description": "Lijst van DagVanDeWeek items.",
+      "items": {
+        "$ref": "#/components/schemas/DagVanDeWeek"
+      },
+      "minItems": 1,
+      "maxItems": 7
+    },
+    "vakantietype": {
+      "type": "array",
+      "description": "Lijst van Vakantietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Vakantietype"
+      },
+      "minItems": 1,
+      "maxItems": 5
+    },
+    "seizoen": {
+      "type": "array",
+      "description": "Lijst van Seizoen items.",
+      "items": {
+        "$ref": "#/components/schemas/Seizoen"
+      },
+      "minItems": 1,
+      "maxItems": 4
+    },
+    "weekVanDeMaand": {
+      "type": "array",
+      "description": "Lijst van WeekVanDeMaand items.",
+      "items": {
+        "$ref": "#/components/schemas/WeekVanDeMaand"
+      },
+      "minItems": 1,
+      "maxItems": 5
+    },
+    "drukte": {
+      "$ref": "#/components/schemas/Drukte"
+    },
+    "beschrijft": {
+      "type": "array",
+      "description": "Lijst van Dagtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Dagtype"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "omschrijving"
+  ]
+}

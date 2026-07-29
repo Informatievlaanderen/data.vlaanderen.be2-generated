@@ -1,0 +1,102 @@
+{
+  "title": "PuntInRitpatroon",
+  "type": "object",
+  "description": "Elk Punt in Ritpatroon specifieert het bezoek van een Dienst aan een specifiek Punt met een bepaalde volgorde binnen het patroon.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PuntInRitpatroon)",
+      "pattern": "^PuntInRitpatroon$"
+    },
+    "volgorde": {
+      "type": "object",
+      "description": "Volgorde van het punt in ritpatroon binnen het ritpatroon.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "veranderingVanBestemmingsdisplay": {
+      "type": "object",
+      "description": "Geeft aan of de bestemmingsdisplay verandert op dit punt.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "omschrijving": {
+      "type": "object",
+      "description": "Beschrijving van het punt in het ritpatroon.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "bestemmingsdisplay": {
+      "$ref": "#/components/schemas/Bestemmingsdisplay"
+    },
+    "bij": {
+      "type": "array",
+      "description": "Lijst van Doorkomsttijd items.",
+      "items": {
+        "$ref": "#/components/schemas/Doorkomsttijd"
+      },
+      "minItems": 1
+    },
+    "eenViewVan": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/GeplandStoppunt"
+        },
+        {
+          "$ref": "#/components/schemas/Routepunt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "GeplandStoppunt": "#/components/schemas/GeplandStoppunt",
+          "Routepunt": "#/components/schemas/Routepunt"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "volgorde",
+    "veranderingVanBestemmingsdisplay",
+    "eenViewVan"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "title": "Dienstritverbinding",
+  "type": "object",
+  "description": "De verbinding tussen twee opeenvolgende GeplandeStopplaatsen in een Dienstrit. Aangezien een Rit steeds geldt voor een bepaald tijdstip (op een bepaald Dagtype) heeft elke Dienstritverbinding een specifieke vertrek- en aankomsttijd. Dienstritverbindingen laten Routeplanners toe om makkelijker kortste Routes te berekenen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dienstritverbinding)",
+      "pattern": "^Dienstritverbinding$"
+    },
+    "aankomsttijd": {
+      "type": "object",
+      "description": "Tijd wanneer de Link aankomt.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "vertrektijd": {
+      "type": "object",
+      "description": "Tijd wanneer de Link vertrekt.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "omAfTeStappen": {
+      "type": "object",
+      "description": "Geeft aan of de Link is om af te stappen.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "omOpTeStappen": {
+      "type": "object",
+      "description": "Geeft aan of de Link is om op te stappen.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "aankomstStopplaats": {
+      "$ref": "#/components/schemas/GeplandStoppunt"
+    },
+    "vertrekStopplaats": {
+      "$ref": "#/components/schemas/GeplandStoppunt"
+    },
+    "lijn": {
+      "$ref": "#/components/schemas/Lijn"
+    }
+  },
+  "required": [
+    "@type",
+    "aankomsttijd",
+    "vertrektijd",
+    "omAfTeStappen",
+    "omOpTeStappen",
+    "aankomstStopplaats",
+    "vertrekStopplaats",
+    "lijn"
+  ]
+}

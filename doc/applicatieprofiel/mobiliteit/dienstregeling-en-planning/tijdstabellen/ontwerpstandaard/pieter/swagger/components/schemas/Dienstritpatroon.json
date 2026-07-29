@@ -1,0 +1,57 @@
+{
+  "title": "Dienstritpatroon",
+  "type": "object",
+  "description": "Het Ritpatroon voor een beladen rit (d.w.z. een rit met passagiers).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dienstritpatroon)",
+      "pattern": "^Dienstritpatroon$"
+    },
+    "bestaandeUit": {
+      "type": "array",
+      "description": "Lijst van PuntInRitpatroon items.",
+      "items": {
+        "$ref": "#/components/schemas/PuntInRitpatroon"
+      },
+      "minItems": 1
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van het ritpatroon.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "bestemmingsdisplay": {
+      "$ref": "#/components/schemas/Bestemmingsdisplay"
+    },
+    "afstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "richting": {
+      "$ref": "#/components/schemas/Richting"
+    },
+    "route": {
+      "$ref": "#/components/schemas/Route"
+    }
+  },
+  "required": [
+    "@type",
+    "bestaandeUit"
+  ]
+}

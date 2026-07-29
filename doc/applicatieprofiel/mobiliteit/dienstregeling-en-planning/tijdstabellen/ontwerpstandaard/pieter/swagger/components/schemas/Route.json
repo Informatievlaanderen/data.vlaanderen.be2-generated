@@ -1,0 +1,67 @@
+{
+  "title": "Route",
+  "type": "object",
+  "description": "Een geordende lijst van gelokaliseerde Punten, welke een enkel pad doorheen een wegen- (of spoorwegen-) netwerk definiëren. Een Route kan meerdere keren doorheen hetzelfde Punt passeren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Route)",
+      "pattern": "^Route$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de route.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "richtingtype": {
+      "$ref": "#/components/schemas/RichtingType"
+    },
+    "richting": {
+      "$ref": "#/components/schemas/Richting"
+    },
+    "afstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "lijn": {
+      "$ref": "#/components/schemas/Lijn"
+    },
+    "gedektDoor": {
+      "type": "array",
+      "description": "Lijst van Ritpatroon items.",
+      "items": {
+        "$ref": "#/components/schemas/Dienstritpatroon"
+      },
+      "minItems": 1
+    },
+    "door": {
+      "type": "array",
+      "description": "Lijst van PuntOpRoute items.",
+      "items": {
+        "$ref": "#/components/schemas/PuntOpRoute"
+      },
+      "minItems": 2
+    },
+    "omgekeerdeRoute": {
+      "$ref": "#/components/schemas/Route"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

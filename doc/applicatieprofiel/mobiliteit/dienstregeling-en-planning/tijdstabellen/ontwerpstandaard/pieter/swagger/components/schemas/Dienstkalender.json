@@ -1,0 +1,96 @@
+{
+  "title": "Dienstkalender",
+  "type": "object",
+  "description": "Verzameling van dagtype-toewijzingen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dienstkalender)",
+      "pattern": "^Dienstkalender$"
+    },
+    "vanDatum": {
+      "type": "object",
+      "description": "Inclusieve startdatum voor geldigheid van de operationele kalender.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "totDatum": {
+      "type": "object",
+      "description": "Inclusieve einddatum voor geldigheid van de operationele kalender.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de operationele kalender.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "gespecificeerdDoor": {
+      "type": "array",
+      "description": "Lijst van Dagtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Dagtype"
+      },
+      "minItems": 1
+    },
+    "binnen": {
+      "type": "array",
+      "description": "Lijst van OperationelePeriode items.",
+      "items": {
+        "$ref": "#/components/schemas/UicOperationelePeriode"
+      },
+      "minItems": 1
+    },
+    "operationeleDag": {
+      "type": "array",
+      "description": "Lijst van OperationeleDag items.",
+      "items": {
+        "$ref": "#/components/schemas/OperationeleDag"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

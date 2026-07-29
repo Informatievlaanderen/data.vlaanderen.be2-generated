@@ -1,0 +1,59 @@
+{
+  "title": "Tijdsband",
+  "type": "object",
+  "description": "Een periode op een dag, belangrijk voor een aspect van het openbaar vervoer, Bijvoorbeeld vergelijkbare verkeersvoorwaarden of fare categorie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Tijdsband)",
+      "pattern": "^Tijdsband$"
+    },
+    "starttijd": {
+      "type": "object",
+      "description": "Inclusieve eindtijd van de tijdband.",
+      "properties": {
+        "$ref": "#/components/schemas/Time"
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "eindtijd": {
+      "type": "object",
+      "description": "Inclusieve eindtijd van de tijdband.",
+      "properties": {
+        "$ref": "#/components/schemas/Time"
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "dagOffset": {
+      "type": "object",
+      "description": "Dagoffset van eindtijd vanaf de starttijd. Indien dezelfde dag, nul.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    }
+  },
+  "required": [
+    "@type",
+    "starttijd",
+    "eindtijd"
+  ]
+}

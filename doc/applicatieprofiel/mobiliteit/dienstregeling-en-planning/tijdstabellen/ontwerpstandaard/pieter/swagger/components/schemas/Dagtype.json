@@ -1,0 +1,114 @@
+{
+  "title": "Dagtype",
+  "type": "object",
+  "description": "Een type dag gekenmerkt door een of meer eigenschappen die van invloed zijn op het openbaar vervoer.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dagtype)",
+      "pattern": "^Dagtype$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van het dagtype.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "korteNaam": {
+      "type": "object",
+      "description": "Korte naam van het dagtype.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "vroegsteTijd": {
+      "type": "object",
+      "description": "Vroegste starttijd van het dagtype.",
+      "properties": {
+        "$ref": "#/components/schemas/Time"
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "daglengte": {
+      "type": "object",
+      "description": "Lengte van het dagtype.",
+      "properties": {
+        "$ref": "#/components/schemas/Duration"
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "omschrijving": {
+      "type": "object",
+      "description": "Beschrijving van het dagtype.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "gedefinieerdDoor": {
+      "type": "array",
+      "description": "Lijst van Dienstkalender items.",
+      "items": {
+        "$ref": "#/components/schemas/Dienstkalender"
+      },
+      "minItems": 1
+    },
+    "beschrevenDoor": {
+      "type": "array",
+      "description": "Lijst van EigenschapVanDag items.",
+      "items": {
+        "$ref": "#/components/schemas/EigenschapVanDag"
+      },
+      "minItems": 1
+    },
+    "tijdsband": {
+      "type": "array",
+      "description": "Lijst van Tijdsband items.",
+      "items": {
+        "$ref": "#/components/schemas/Tijdsband"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

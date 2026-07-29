@@ -1,0 +1,50 @@
+{
+  "title": "Dienstverbinding",
+  "type": "object",
+  "description": "Een Verbinding tussen twee opeenvolgende Geplande Stopplaatsen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dienstverbinding)",
+      "pattern": "^Dienstverbinding$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de dienstverbinding.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "lijnstring": {
+      "$ref": "#/components/schemas/Lijnstring"
+    },
+    "afstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "van": {
+      "$ref": "#/components/schemas/GeplandStoppunt"
+    },
+    "tot": {
+      "$ref": "#/components/schemas/GeplandStoppunt"
+    }
+  },
+  "required": [
+    "@type",
+    "van",
+    "tot"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "title": "Dienstrit",
+  "type": "object",
+  "description": "Een Dienstrit is een Rit waarop het passagiers toegelaten is om aan Stopplaatsen op of af te stappen van voertuigen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dienstrit)",
+      "pattern": "^Dienstrit$"
+    },
+    "vertrektijd": {
+      "type": "object",
+      "description": "Vertrektijd.",
+      "properties": {
+        "$ref": "#/components/schemas/Time"
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "vertrekdagOffset": {
+      "type": "object",
+      "description": "Dag offset als de dag van vertrektijd van de dienstrit verschilt van de huidige operationele dag.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "ritduur": {
+      "type": "object",
+      "description": "Totale lengte van de dienstrit. Kan worden berekend uit individuele tijden. Toevoegen aan vertrektijd om de aankomsttijd van de service te verkrijgen.",
+      "properties": {
+        "$ref": "#/components/schemas/Duration"
+      },
+      "required": [
+        "$ref"
+      ]
+    },
+    "operator": {
+      "$ref": "#/components/schemas/Operator"
+    },
+    "dagtype": {
+      "type": "array",
+      "description": "Lijst van Dagtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Dagtype"
+      },
+      "minItems": 1
+    },
+    "voertuigtype": {
+      "$ref": "#/components/schemas/Voertuigtype"
+    },
+    "treinnummer": {
+      "type": "array",
+      "description": "Lijst van Treinnummer items.",
+      "items": {
+        "$ref": "#/components/schemas/Treinnummer"
+      },
+      "minItems": 1
+    },
+    "faciliteit": {
+      "type": "array",
+      "description": "Lijst van DienstFaciliteitenset items.",
+      "items": {
+        "$ref": "#/components/schemas/DienstFaciliteitenset"
+      },
+      "minItems": 1
+    },
+    "treingrootte": {
+      "$ref": "#/components/schemas/Treingrootte"
+    },
+    "gemaaktMet": {
+      "$ref": "#/components/schemas/Dienstritpatroon"
+    },
+    "uitgevoerdOp": {
+      "type": "array",
+      "description": "Lijst van Dagtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Dagtype"
+      },
+      "minItems": 1
+    },
+    "transportsubmodus": {
+      "$ref": "#/components/schemas/Transportmodus"
+    },
+    "transportmodus": {
+      "$ref": "#/components/schemas/Transportmodus"
+    },
+    "opmerking": {
+      "type": "array",
+      "description": "Lijst van Opmerking items.",
+      "items": {
+        "$ref": "#/components/schemas/Opmerking"
+      },
+      "minItems": 1
+    },
+    "passeerdeOp": {
+      "type": "array",
+      "description": "Lijst van Doorkomsttijd items.",
+      "items": {
+        "$ref": "#/components/schemas/Doorkomsttijd"
+      },
+      "minItems": 1
+    },
+    "deel": {
+      "type": "array",
+      "description": "Lijst van Ritdeel items.",
+      "items": {
+        "$ref": "#/components/schemas/Ritdeel"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "gemaaktMet",
+    "uitgevoerdOp"
+  ]
+}

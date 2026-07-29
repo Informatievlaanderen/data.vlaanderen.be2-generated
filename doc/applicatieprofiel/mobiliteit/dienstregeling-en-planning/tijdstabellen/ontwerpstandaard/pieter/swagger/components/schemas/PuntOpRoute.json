@@ -1,0 +1,59 @@
+{
+  "title": "PuntOpRoute",
+  "type": "object",
+  "description": "Een Punt op Route geeft de volgorde van een Routepunt binnen een Route weer. Dit tussenliggende object is nodig om toe te laten dat een Route verschillende keren door eenzelfde Routepunt gaat.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PuntOpRoute)",
+      "pattern": "^PuntOpRoute$"
+    },
+    "volgorde": {
+      "type": "object",
+      "description": "Volgorde van punt op route binnen route.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "omschrijving": {
+      "type": "object",
+      "description": "Beschrijving van het punt op de route.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "eenViewVan": {
+      "$ref": "#/components/schemas/Routepunt"
+    }
+  },
+  "required": [
+    "@type",
+    "volgorde",
+    "eenViewVan"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "title": "StopplaatsInRitpatroon",
+  "type": "object",
+  "description": "Een Stopplaats in Ritpatroon beschrijft het bezoek van een dienst aan een Geplande Stopplaats volgens de volgorde in een Dienstritpatroon.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse StopplaatsInRitpatroon)",
+      "pattern": "^StopplaatsInRitpatroon$"
+    },
+    "volgorde": {
+      "type": "object",
+      "description": "Volgorde van stopplaats in ritpatroon binnen ritpatroon.",
+      "properties": {
+        "@value": {
+          "type": "number",
+          "format": "int64"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Integer$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "omInTeStappen": {
+      "type": "object",
+      "description": "Geeft aan of de stopplaats kan worden gebruikt voor het instappen.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "omUitTeStappen": {
+      "type": "object",
+      "description": "Geeft aan of de stopplaats kan worden gebruikt voor het afstappen.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "veranderingVanBestemmingsdisplay": {
+      "type": "object",
+      "description": "Geeft aan of de bestemmingsdisplay op dit punt weergeeft.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "stopaanvraag": {
+      "type": "object",
+      "description": "Geeft aan of de stop een verzoek om te stoppen is in deze rit. Standaard false.",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "volgendeDienstverbinding": {
+      "$ref": "#/components/schemas/Dienstverbinding"
+    },
+    "bestemmingsdisplay": {
+      "$ref": "#/components/schemas/Bestemmingsdisplay"
+    },
+    "aanvraagmethode": {
+      "$ref": "#/components/schemas/Aanvraagmethode"
+    },
+    "opmerking": {
+      "type": "array",
+      "description": "Lijst van Opmerking items.",
+      "items": {
+        "$ref": "#/components/schemas/Opmerking"
+      },
+      "minItems": 1
+    },
+    "stopgebruik": {
+      "$ref": "#/components/schemas/Stopgebruik"
+    },
+    "boekingsarrangementen": {
+      "$ref": "#/components/schemas/Boekingsarrangementen"
+    },
+    "eenViewVan": {
+      "$ref": "#/components/schemas/GeplandStoppunt"
+    }
+  },
+  "required": [
+    "@type",
+    "volgorde",
+    "eenViewVan"
+  ]
+}

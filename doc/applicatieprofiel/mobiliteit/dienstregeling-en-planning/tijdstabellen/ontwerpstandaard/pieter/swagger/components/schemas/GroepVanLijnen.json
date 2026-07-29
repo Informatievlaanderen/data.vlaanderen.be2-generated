@@ -1,0 +1,51 @@
+{
+  "title": "GroepVanLijnen",
+  "type": "object",
+  "description": "Groepen van Lijnen kunnen worden gebruikt om verschillende soorten OV netwerken en sub-netwerken te definiëren: Wat meestal een ‘openbaar vervoer netwerk’ wordt genoemd is in feite een specifieke Groep van Lijnen en een Lijn kan tot verschillende van hen behoren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GroepVanLijnen)",
+      "pattern": "^GroepVanLijnen$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de groep van lijnen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "transportmodus": {
+      "$ref": "#/components/schemas/Transportmodus"
+    },
+    "bestaandeUit": {
+      "type": "array",
+      "description": "Lijst van Lijn items.",
+      "items": {
+        "$ref": "#/components/schemas/Lijn"
+      },
+      "minItems": 1
+    },
+    "hoofdlijn": {
+      "$ref": "#/components/schemas/Lijn"
+    }
+  },
+  "required": [
+    "@type",
+    "bestaandeUit"
+  ]
+}

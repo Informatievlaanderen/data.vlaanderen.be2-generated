@@ -1,0 +1,94 @@
+{
+  "title": "Routepunt",
+  "type": "object",
+  "description": "Een Routepunt is een Punt dat wordt gebruikt om de vorm van een Route door een netwerk te definiëren. Hetzelfde PUNT kan worden gebruikt in verschillende Routes gebruik makend van een PuntOpRoute.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Routepunt)",
+      "pattern": "^Routepunt$"
+    },
+    "grensovergang": {
+      "type": "object",
+      "description": "Geeft aan of het routepunt een grensovergang is (gedefinieerd voor landsgrenzen).",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "gezienAls": {
+      "type": "array",
+      "description": "Lijst van PuntInRitpatroon items.",
+      "items": {
+        "$ref": "#/components/schemas/PuntInRitpatroon"
+      },
+      "minItems": 1
+    },
+    "startVan": {
+      "type": "array",
+      "description": "Lijst van Routelink items.",
+      "items": {
+        "$ref": "#/components/schemas/Routelink"
+      },
+      "minItems": 1
+    },
+    "eindeVan": {
+      "type": "array",
+      "description": "Lijst van Routelink items.",
+      "items": {
+        "$ref": "#/components/schemas/Routelink"
+      },
+      "minItems": 1
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van het punt.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "puntnummer": {
+      "type": "object",
+      "description": "Arbitraire alternatieve identifier voor het punt.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "locatie": {
+      "$ref": "#/components/schemas/PuntDatatype"
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "locatie"
+  ]
+}
