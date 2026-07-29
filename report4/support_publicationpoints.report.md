@@ -372,6 +372,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/thermografische-gebouwanalyse/ontwerpstandaard/2025-05-22",
   "/tmp/generated/doc/vocabularium/toestemming",
   "/tmp/generated/doc/vocabularium/toestemming/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/vocabularium/voertuigregistratie/v0.1.0",
   "/tmp/generated/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/toolchain4",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/SIF",
@@ -388,5 +389,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/openbare-nutsvoorzieningkasten",
   "/tmp/generated/ns/rooilijnplannen",
   "/tmp/generated/ns/sensoren-en-bemonstering",
-  "/tmp/generated/ns/thermografische-gebouwanalyse"
+  "/tmp/generated/ns/thermografische-gebouwanalyse",
+  "/tmp/generated/ns/voertuigregistratie/v0.1.0"
 ]
