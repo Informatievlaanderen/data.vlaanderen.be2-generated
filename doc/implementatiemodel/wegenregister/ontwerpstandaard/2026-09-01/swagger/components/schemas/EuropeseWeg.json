@@ -12,6 +12,42 @@
       "description": "Object type (klasse EuropeseWeg)",
       "pattern": "^EuropeseWeg$"
     },
+    "creatiedatum": {
+      "type": "object",
+      "description": "Datum waarop de gegevens zijn ingevoerd.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "modificatiedatum": {
+      "type": "object",
+      "description": "Datum waarop de gegevens werden bijgewerkt.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
     "europeesWegnummer": {
       "type": "object",
       "description": "Code die de route in het internationale E-wegennetwerk identificeert. De code begint altijd met een\nletter 'E', gevolgd door een één-, twee- of driecijferig\nnummer.",
@@ -44,6 +80,14 @@
     "identificator": {
       "$ref": "#/components/schemas/Identificator"
     },
+    "link": {
+      "type": "array",
+      "description": "Lijst van GeneriekeLink items.",
+      "items": {
+        "$ref": "#/components/schemas/Wegsegment"
+      },
+      "minItems": 1
+    },
     "referentie": {
       "type": "array",
       "description": "Lijst van Netwerkreferentie items.",
@@ -73,11 +117,18 @@
         "$ref": "#/components/schemas/Transportnetwerk"
       },
       "minItems": 1
+    },
+    "@context": {
+      "type": "string",
+      "description": "URI of the JSON-LD versioned context file for this response.",
+      "pattern": "^https:\\/\\/data.test-vlaanderen.be\\/doc\\/implementatiemodel\\/wegenregister\\/ontwerpstandaard\\/2026-09-01\\/context\\/wegenregister.jsonld$"
     }
   },
   "required": [
     "@type",
+    "creatiedatum",
     "europeesWegnummer",
+    "link",
     "inNetwerk"
   ]
 }

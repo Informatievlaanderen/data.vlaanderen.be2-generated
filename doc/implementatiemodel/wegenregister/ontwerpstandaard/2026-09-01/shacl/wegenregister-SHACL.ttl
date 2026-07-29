@@ -44,6 +44,7 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GemeenteShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#OrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GeometrieShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#DateShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GeografischeNaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#KwantitatieveWaardeShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#StringShape>,
@@ -347,6 +348,11 @@
   shacl:closed false;
   shacl:targetClass <http://www.opengis.net/ont/sf#Curve> .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#DateShape> a shacl:NodeShape;
+  rdfs:label "Date";
+  shacl:closed false;
+  shacl:targetClass xsd:date .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#DateTimeShape> a shacl:NodeShape;
   rdfs:label "DateTime";
   shacl:closed false;
@@ -364,6 +370,27 @@
   rdfs:comment "Een verzameling Wegsegmenten of  Weglinksequenties die een route vertegenwoordigt die deel uitmaakt van het internationale E-wegennetwerk, gekenmerkt door het Europese wegummer."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "creatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens zijn ingevoerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#EuropeseWeg.Creatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens zijn ingevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "creatiedatum"@nl;
+    shacl:path dc:created
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "modificatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens werden bijgewerkt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#EuropeseWeg.Modificatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens werden bijgewerkt."@nl;
+    shacl:maxCount 1;
+    shacl:name "modificatiedatum"@nl;
+    shacl:path dc:modified
+  ], [
     a shacl:PropertyShape;
     rdfs:label "europeesWegnummer"@nl;
     <http://purl.org/vocab/vann/usageNote> """De code begint altijd met een
@@ -402,10 +429,10 @@ nummer."""@nl;
     rdfs:label "link"@nl;
     rdfs:comment "Link die deel uitmaakt van de Linkset."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#EuropeseWeg.Link>;
-    shacl:class <https://data.vlaanderen.be/ns/netwerk#GeneriekeLink>;
     shacl:description "Link die deel uitmaakt van de Linkset."@nl;
     shacl:minCount 1;
     shacl:name "link"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/netwerk#GeneriekeLink>] [shacl:class <https://data.vlaanderen.be/ns/weg#Wegsegment>]);
     shacl:path <https://data.vlaanderen.be/ns/netwerk#link>
   ], [
     a shacl:PropertyShape;
@@ -439,7 +466,8 @@ nummer."""@nl;
   rdfs:label "GeneriekeLink"@nl;
   rdfs:comment "Lineair Netwerkelement."@nl;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#GeneriekeLink> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#GeneriekeLink>,
+    <https://data.vlaanderen.be/ns/weg#Wegsegment> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GeografischeNaamShape> a shacl:NodeShape;
   rdfs:label "GeografischeNaam"@nl;
@@ -524,6 +552,27 @@ nummer."""@nl;
   rdfs:comment "Geeft de gelijkgrondse kruising van twee Wegsegmenten weer."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "creatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens zijn ingevoerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruising.Creatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens zijn ingevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "creatiedatum"@nl;
+    shacl:path dc:created
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "modificatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens werden bijgewerkt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruising.Modificatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens werden bijgewerkt."@nl;
+    shacl:maxCount 1;
+    shacl:name "modificatiedatum"@nl;
+    shacl:path dc:modified
+  ], [
     a shacl:PropertyShape;
     rdfs:label "inNetwerk"@nl;
     rdfs:comment "Netwerk waartoe het Netwerkelement behoort."@nl;
@@ -758,6 +807,27 @@ nummer."""@nl;
   rdfs:comment "Geeft aan welke van twee of meer Netwerkelementen hoger of lager is gelegen dan de andere."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "creatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens zijn ingevoerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#OngelijkgrondseKruising.Creatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens zijn ingevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "creatiedatum"@nl;
+    shacl:path dc:created
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "modificatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens werden bijgewerkt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#OngelijkgrondseKruising.Modificatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens werden bijgewerkt."@nl;
+    shacl:maxCount 1;
+    shacl:name "modificatiedatum"@nl;
+    shacl:path dc:modified
+  ], [
     a shacl:PropertyShape;
     rdfs:label "type"@nl;
     rdfs:comment "Soort GelijkgrondseKruising."@nl;
@@ -1077,6 +1147,27 @@ nummer."""@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
+    rdfs:label "creatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens zijn ingevoerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Weg.Creatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens zijn ingevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "creatiedatum"@nl;
+    shacl:path dc:created
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "modificatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens werden bijgewerkt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Weg.Modificatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens werden bijgewerkt."@nl;
+    shacl:maxCount 1;
+    shacl:name "modificatiedatum"@nl;
+    shacl:path dc:modified
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "lokaleCode"@nl;
     rdfs:comment "Code toegekend aan de weg door een lokale autoriteit."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Weg.LokaleCode>;
@@ -1122,10 +1213,10 @@ nummer."""@nl;
     rdfs:label "link"@nl;
     rdfs:comment "Link die deel uitmaakt van de Linkset."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Weg.Link>;
-    shacl:class <https://data.vlaanderen.be/ns/netwerk#GeneriekeLink>;
     shacl:description "Link die deel uitmaakt van de Linkset."@nl;
     shacl:minCount 1;
     shacl:name "link"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/netwerk#GeneriekeLink>] [shacl:class <https://data.vlaanderen.be/ns/weg#Wegsegment>]);
     shacl:path <https://data.vlaanderen.be/ns/netwerk#link>
   ], [
     a shacl:PropertyShape;
@@ -1174,6 +1265,27 @@ rol die de weg vervult in het wegennetwerk."""@nl;
   rdfs:comment "Significante positie in het wegennet die het begin of einde van een Wegsegment markeert."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "creatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens zijn ingevoerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegknoop.Creatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens zijn ingevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "creatiedatum"@nl;
+    shacl:path dc:created
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "modificatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens werden bijgewerkt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegknoop.Modificatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens werden bijgewerkt."@nl;
+    shacl:maxCount 1;
+    shacl:name "modificatiedatum"@nl;
+    shacl:path dc:modified
+  ], [
     a shacl:PropertyShape;
     rdfs:label "geografischeNaam"@nl;
     rdfs:comment "Naam van het Transportobject."@nl;
@@ -1244,6 +1356,27 @@ rol die de weg vervult in het wegennetwerk."""@nl;
   rdfs:comment "Lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een wegennetwerk."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "creatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens zijn ingevoerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegsegment.Creatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens zijn ingevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "creatiedatum"@nl;
+    shacl:path dc:created
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "modificatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens werden bijgewerkt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegsegment.Modificatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens werden bijgewerkt."@nl;
+    shacl:maxCount 1;
+    shacl:name "modificatiedatum"@nl;
+    shacl:path dc:modified
+  ], [
     a shacl:PropertyShape;
     rdfs:label "geografischeNaam"@nl;
     rdfs:comment "Naam van het Transportobject."@nl;

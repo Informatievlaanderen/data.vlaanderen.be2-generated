@@ -144,6 +144,42 @@
             "description": "Object type (klasse OngelijkgrondseKruising)",
             "pattern": "^OngelijkgrondseKruising$"
           },
+          "creatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens zijn ingevoerd.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "modificatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens werden bijgewerkt.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
           "type": {
             "$ref": "#/components/schemas/OngelijkgrondseKruisingtype"
           },
@@ -171,6 +207,7 @@
         },
         "required": [
           "@type",
+          "creatiedatum",
           "type",
           "inNetwerk"
         ]
@@ -476,6 +513,42 @@
             "description": "Object type (klasse GgelijkgrondseKruising)",
             "pattern": "^GgelijkgrondseKruising$"
           },
+          "creatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens zijn ingevoerd.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "modificatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens werden bijgewerkt.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
           "inNetwerk": {
             "type": "array",
             "description": "Lijst van Transportnetwerk items.",
@@ -500,6 +573,7 @@
         },
         "required": [
           "@type",
+          "creatiedatum",
           "inNetwerk"
         ]
       },
@@ -535,6 +609,42 @@
             "type": "string",
             "description": "Object type (klasse Weg)",
             "pattern": "^Weg$"
+          },
+          "creatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens zijn ingevoerd.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "modificatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens werden bijgewerkt.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
           },
           "lokaleCode": {
             "type": "object",
@@ -580,6 +690,14 @@
           "identificator": {
             "$ref": "#/components/schemas/Identificator"
           },
+          "link": {
+            "type": "array",
+            "description": "Lijst van GeneriekeLink items.",
+            "items": {
+              "$ref": "#/components/schemas/Wegsegment"
+            },
+            "minItems": 1
+          },
           "referentie": {
             "type": "array",
             "description": "Lijst van Netwerkreferentie items.",
@@ -609,12 +727,19 @@
               "$ref": "#/components/schemas/Transportnetwerk"
             },
             "minItems": 1
+          },
+          "@context": {
+            "type": "string",
+            "description": "URI of the JSON-LD versioned context file for this response.",
+            "pattern": "^https:\\/\\/data.test-vlaanderen.be\\/doc\\/implementatiemodel\\/wegenregister\\/ontwerpstandaard\\/2026-09-01\\/context\\/wegenregister.jsonld$"
           }
         },
         "required": [
           "@type",
+          "creatiedatum",
           "lokaleCode",
           "nationaleCode",
+          "link",
           "inNetwerk"
         ]
       },
@@ -631,6 +756,42 @@
             "type": "string",
             "description": "Object type (klasse EuropeseWeg)",
             "pattern": "^EuropeseWeg$"
+          },
+          "creatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens zijn ingevoerd.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "modificatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens werden bijgewerkt.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
           },
           "europeesWegnummer": {
             "type": "object",
@@ -664,6 +825,14 @@
           "identificator": {
             "$ref": "#/components/schemas/Identificator"
           },
+          "link": {
+            "type": "array",
+            "description": "Lijst van GeneriekeLink items.",
+            "items": {
+              "$ref": "#/components/schemas/Wegsegment"
+            },
+            "minItems": 1
+          },
           "referentie": {
             "type": "array",
             "description": "Lijst van Netwerkreferentie items.",
@@ -693,11 +862,18 @@
               "$ref": "#/components/schemas/Transportnetwerk"
             },
             "minItems": 1
+          },
+          "@context": {
+            "type": "string",
+            "description": "URI of the JSON-LD versioned context file for this response.",
+            "pattern": "^https:\\/\\/data.test-vlaanderen.be\\/doc\\/implementatiemodel\\/wegenregister\\/ontwerpstandaard\\/2026-09-01\\/context\\/wegenregister.jsonld$"
           }
         },
         "required": [
           "@type",
+          "creatiedatum",
           "europeesWegnummer",
+          "link",
           "inNetwerk"
         ]
       },
@@ -714,6 +890,42 @@
             "type": "string",
             "description": "Object type (klasse Wegsegment)",
             "pattern": "^Wegsegment$"
+          },
+          "creatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens zijn ingevoerd.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "modificatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens werden bijgewerkt.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
           },
           "geografischeNaam": {
             "type": "object",
@@ -776,6 +988,7 @@
         },
         "required": [
           "@type",
+          "creatiedatum",
           "geometriemiddenlijn",
           "inNetwerk"
         ]
@@ -793,6 +1006,42 @@
             "type": "string",
             "description": "Object type (klasse Wegknoop)",
             "pattern": "^Wegknoop$"
+          },
+          "creatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens zijn ingevoerd.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "modificatiedatum": {
+            "type": "object",
+            "description": "Datum waarop de gegevens werden bijgewerkt.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
           },
           "geografischeNaam": {
             "type": "object",
@@ -858,6 +1107,7 @@
         },
         "required": [
           "@type",
+          "creatiedatum",
           "type",
           "inNetwerk",
           "geometrie"
