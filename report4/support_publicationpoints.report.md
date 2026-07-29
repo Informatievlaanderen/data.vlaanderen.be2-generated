@@ -172,6 +172,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/vlaamsecodex.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/voertuigregistratie.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/voorwaarden-dienstverlening.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/waterkwaliteit.publication.json

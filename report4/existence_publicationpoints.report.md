@@ -533,6 +533,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/voertuigregistratie.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/test/voorwaarden-dienstverlening.publication.json
 #||# 
 Directory check
