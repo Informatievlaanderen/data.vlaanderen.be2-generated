@@ -52,6 +52,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/gebouw.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/gebruiksperceel.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/hulp-dienst-verlening-gedetineerden.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/incentiveringsplatform.publication.json
