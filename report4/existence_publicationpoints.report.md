@@ -187,6 +187,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/gebruiksperceel.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/test/hulp-dienst-verlening-gedetineerden.publication.json
 #||# 
 Directory check

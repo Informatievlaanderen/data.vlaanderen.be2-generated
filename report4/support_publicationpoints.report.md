@@ -60,6 +60,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/gebouw.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/gebruiksperceel.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/hulp-dienst-verlening-gedetineerden.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/hydrants.publication.json
