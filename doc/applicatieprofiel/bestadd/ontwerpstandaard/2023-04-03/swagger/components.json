@@ -158,6 +158,9 @@
             "minItems": 1,
             "maxItems": 3
           },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
           "isPartOf": {
             "type": "array",
             "description": "Lijst van Deelgemeente items.",
@@ -170,7 +173,8 @@
         "required": [
           "@type",
           "code",
-          "naam"
+          "naam",
+          "status"
         ]
       },
       "Adres": {
@@ -282,6 +286,9 @@
           "positie": {
             "$ref": "#/components/schemas/GeografischePositie"
           },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
           "hasMunicipality": {
             "$ref": "#/components/schemas/Gemeente"
           }
@@ -294,6 +301,7 @@
           "eindeVanDeLevenscyclusVanDezeVersie",
           "code",
           "positie",
+          "status",
           "hasMunicipality"
         ]
       },
@@ -377,6 +385,9 @@
             "minItems": 1,
             "maxItems": 3
           },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
           "isPartOf": {
             "$ref": "#/components/schemas/Gemeente"
           }
@@ -385,6 +396,7 @@
           "@type",
           "code",
           "naam",
+          "status",
           "isPartOf"
         ]
       },
@@ -464,6 +476,9 @@
           },
           "type": {
             "$ref": "#/components/schemas/StraatnaamType"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
           }
         },
         "required": [
@@ -473,7 +488,8 @@
           "eindeVanDeLevenscyclusVanDezeVersie",
           "code",
           "name",
-          "type"
+          "type",
+          "status"
         ]
       },
       "PostInformatie": {
@@ -501,11 +517,15 @@
             },
             "minItems": 1,
             "maxItems": 3
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
           }
         },
         "required": [
           "@type",
-          "code"
+          "code",
+          "status"
         ]
       },
       "Pos": {
@@ -563,6 +583,66 @@
           "@type",
           "x",
           "y"
+        ]
+      },
+      "Status": {
+        "title": "Status",
+        "type": "object",
+        "description": "De status bevat de status waarde en de geldigheidsperiode (datum van en datum tot)",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Status)",
+            "pattern": "^Status$"
+          },
+          "geldigVanaf": {
+            "type": "object",
+            "description": "de startdatum vanaf wanneer de entiteit geldig is.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "geldigTot": {
+            "type": "object",
+            "description": "de einddatum tot wanneer de entiteit geldig is",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "status": {
+            "$ref": "#/components/schemas/Statuswaarde"
+          }
+        },
+        "required": [
+          "@type",
+          "geldigVanaf",
+          "status"
         ]
       },
       "Identifier": {
@@ -640,66 +720,6 @@
         },
         "required": [
           "@type"
-        ]
-      },
-      "Status": {
-        "title": "Status",
-        "type": "object",
-        "description": "De status bevat de status waarde en de geldigheidsperiode (datum van en datum tot).",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Status)",
-            "pattern": "^Status$"
-          },
-          "geldigVanaf": {
-            "type": "object",
-            "description": "De startdatum vanaf wanneer de entiteit geldig is.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
-          },
-          "geldigTot": {
-            "type": "object",
-            "description": "De einddatum tot wanneer de entiteit geldig is.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
-          },
-          "status": {
-            "$ref": "#/components/schemas/Statuswaarde"
-          }
-        },
-        "required": [
-          "@type",
-          "geldigVanaf",
-          "status"
         ]
       },
       "GeographicalName": {
@@ -787,6 +807,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
       },
+      "Gemeente.status": {
+        "operationId": "GemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Gemeente.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
       "Gemeente.isPartOf": {
         "operationId": "GemeenteGET",
         "parameters": {
@@ -807,6 +834,13 @@
           "id": "$response.body#/Adres.positie/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeografischePositie` op te halen."
+      },
+      "Adres.status": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
       },
       "Adres.hasMunicipality": {
         "operationId": "AdresGET",
@@ -857,6 +891,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
       },
+      "Deelgemeente.status": {
+        "operationId": "DeelgemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Deelgemeente.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
       "Deelgemeente.isPartOf": {
         "operationId": "DeelgemeenteGET",
         "parameters": {
@@ -885,6 +926,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `StraatnaamType` op te halen."
       },
+      "Straatnaam.status": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
       "PostInformatie.code": {
         "operationId": "PostInformatieGET",
         "parameters": {
@@ -898,6 +946,20 @@
           "id": "$response.body#/PostInformatie.naam/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
+      },
+      "PostInformatie.status": {
+        "operationId": "PostInformatieGET",
+        "parameters": {
+          "id": "$response.body#/PostInformatie.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
+      "Status.status": {
+        "operationId": "StatusGET",
+        "parameters": {
+          "id": "$response.body#/Status.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Statuswaarde` op te halen."
       }
     }
   }
