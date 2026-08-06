@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find a label for subject "[urn:oslo-toolchain:9bb1d8efb086a4713f73783304221ae6898f512f39d83f2f665310d2e968cc3b](all-bestadd.jsonld#L3276)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:9bb1d8efb086a4713f73783304221ae6898f512f39d83f2f665310d2e968cc3b](all-bestadd.jsonld#L3286)".
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:106:23)
 
