@@ -1,0 +1,100 @@
+{
+  "title": "InfrastructureReservation",
+  "type": "object",
+  "description": "Activity in which a certain service, space, or object is reserved in advance for future use.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse InfrastructureReservation)",
+      "pattern": "^InfrastructureReservation$"
+    },
+    "reservedBy": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Organization"
+        },
+        {
+          "$ref": "#/components/schemas/Person"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Organization": "#/components/schemas/Organization",
+          "Person": "#/components/schemas/Person"
+        }
+      }
+    },
+    "reservedFor": {
+      "type": "array",
+      "description": "The Activity for which the Infrastructure is reserved. Lijst van Activity items.",
+      "items": {
+        "$ref": "#/components/schemas/Activity"
+      },
+      "minItems": 1
+    },
+    "periodOfProject": {
+      "type": "array",
+      "description": "The amount of time for which the Reservation is valid. Lijst van PeriodOfProject items.",
+      "items": {
+        "$ref": "#/components/schemas/PeriodOfProject"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "array",
+      "description": "Current state, position, or situation of a person, place, object, system, or process at a particular time. Lijst van InfrastructureReservationStatus items.",
+      "items": {
+        "$ref": "#/components/schemas/InfrastructureReservationStatus"
+      },
+      "minItems": 1
+    },
+    "buffer": {
+      "type": "array",
+      "description": "Period that creates time or space for a process or action. In connection with room reservation, a \"buffer\" is used to prevent two events or meetings from being scheduled immediately after each other in the same room. It is a fixed time span that cannot be reserved after a room reservation. For example, if a room is booked between 10 am and 5 pm and it can only be booked once a day, the buffer is 8 am to 10 am and 5 pm to 6 pm (opening hours of the room). Lijst van PeriodOfProject items.",
+      "items": {
+        "$ref": "#/components/schemas/PeriodOfProject"
+      },
+      "minItems": 1
+    },
+    "locationDescription": {
+      "type": "array",
+      "description": "Detailed and systematic recording of the characteristics, condition, and specific details of a location or space. Lijst van LocationDescription items.",
+      "items": {
+        "$ref": "#/components/schemas/LocationDescription"
+      },
+      "minItems": 1
+    },
+    "infrastructure": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Infrastructure"
+        },
+        {
+          "$ref": "#/components/schemas/InteriorSpace"
+        },
+        {
+          "$ref": "#/components/schemas/OutdoorSpace"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Infrastructure": "#/components/schemas/Infrastructure",
+          "InteriorSpace": "#/components/schemas/InteriorSpace",
+          "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "reservedBy",
+    "status",
+    "infrastructure"
+  ]
+}

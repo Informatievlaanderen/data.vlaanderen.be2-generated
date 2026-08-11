@@ -1,0 +1,251 @@
+{
+  "title": "Buitenruimte",
+  "type": "object",
+  "description": "Een ruimte in de openlucht.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Buitenruimte)",
+      "pattern": "^Buitenruimte$"
+    },
+    "type": {
+      "type": "array",
+      "description": "De soort infrastructuur. Lijst van Infrastructuurtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Infrastructuurtype"
+      },
+      "minItems": 1
+    },
+    "verbondenAan": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Infrastructuur"
+        },
+        {
+          "$ref": "#/components/schemas/Binnenruimte"
+        },
+        {
+          "$ref": "#/components/schemas/Buitenruimte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Infrastructuur": "#/components/schemas/Infrastructuur",
+          "Binnenruimte": "#/components/schemas/Binnenruimte",
+          "Buitenruimte": "#/components/schemas/Buitenruimte"
+        }
+      }
+    },
+    "annuleringsvoorwaarden": {
+      "$ref": "#/components/schemas/Buitenruimte.annuleringsvoorwaarden"
+    },
+    "naam": {
+      "type": "array",
+      "description": "De benaming verbonden aan een Infrastructuur. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Buitenruimte.naam"
+      },
+      "minItems": 1
+    },
+    "bereikbaarheid": {
+      "$ref": "#/components/schemas/Bereikbaarheid"
+    },
+    "beschikbaarheid": {
+      "$ref": "#/components/schemas/Beschikbaarheid"
+    },
+    "beschrijving": {
+      "type": "array",
+      "description": "De tekstuele omschrijving van de Infrastructuur. Lijst van Document items.",
+      "items": {
+        "$ref": "#/components/schemas/Document"
+      },
+      "minItems": 1
+    },
+    "capaciteit": {
+      "type": "array",
+      "description": "Het bevattingsvermogen of de bezetting van een Infrastructuur. Lijst van Capaciteit items.",
+      "items": {
+        "$ref": "#/components/schemas/Capaciteit"
+      },
+      "minItems": 1
+    },
+    "contactpersoon": {
+      "type": "array",
+      "description": "De te raadplegen Agent verbonden aan een Infrastructuur. Lijst van Agent items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Organisatie"
+          },
+          {
+            "$ref": "#/components/schemas/Persoon"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Organisatie": "#/components/schemas/Organisatie",
+            "Persoon": "#/components/schemas/Persoon"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "dimensie": {
+      "type": "array",
+      "description": "De afmetingen in iedere richting van een Infrastructuur. Lijst van Dimensie items.",
+      "items": {
+        "$ref": "#/components/schemas/Dimensie"
+      },
+      "minItems": 1
+    },
+    "faciliteit": {
+      "type": "array",
+      "description": "De voorziening van een Infrastructuur. Lijst van Faciliteit items.",
+      "items": {
+        "$ref": "#/components/schemas/Faciliteit"
+      },
+      "minItems": 1
+    },
+    "gebruik": {
+      "type": "array",
+      "description": "Het benutten van een Infrastructuur. Lijst van Gebruik items.",
+      "items": {
+        "$ref": "#/components/schemas/Gebruik"
+      },
+      "minItems": 1
+    },
+    "locatie": {
+      "type": "array",
+      "description": "De ligging van een Infrastructuur. Lijst van Locatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Locatie"
+          },
+          {
+            "$ref": "#/components/schemas/Plaats"
+          },
+          {
+            "$ref": "#/components/schemas/Adresvoorstelling"
+          },
+          {
+            "$ref": "#/components/schemas/GeografischeNaam"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Locatie": "#/components/schemas/Locatie",
+            "Plaats": "#/components/schemas/Plaats",
+            "Adresvoorstelling": "#/components/schemas/Adresvoorstelling",
+            "GeografischeNaam": "#/components/schemas/GeografischeNaam"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "openstelling": {
+      "$ref": "#/components/schemas/Openstellingtype"
+    },
+    "toegankelijkheid": {
+      "$ref": "#/components/schemas/Toegankelijkheid"
+    },
+    "eigenaar": {
+      "$ref": "#/components/schemas/Eigenaarschap"
+    },
+    "openingsuren": {
+      "$ref": "#/components/schemas/Openingsurenspecificatie"
+    },
+    "toegang": {
+      "type": "array",
+      "description": "Het recht of de mogelijkheid om een gereserveerde ruimte te betreden en te gebruiken. Lijst van Document items.",
+      "items": {
+        "$ref": "#/components/schemas/Document"
+      },
+      "minItems": 1
+    },
+    "veiligheidsvereisten": {
+      "type": "array",
+      "description": "Expliciete voorwaarden en normen die zijn vastgesteld om ervoor te zorgen dat een product, systeem, dienst, of operatie geen risico's of schade oplevert voor mensen, eigendommen, de omgeving, of de integriteit van gegevens en processen. Lijst van Document items.",
+      "items": {
+        "$ref": "#/components/schemas/Document"
+      },
+      "minItems": 1
+    },
+    "reservatiedienst": {
+      "type": "array",
+      "description": "De publieke dienstverlening die het reserveren van een infrastructuur aanbiedt. Lijst van Infrastructuurreservatiedienst items.",
+      "items": {
+        "$ref": "#/components/schemas/Infrastructuurreservatiedienst"
+      },
+      "minItems": 1
+    },
+    "superinfrastructuur": {
+      "type": "array",
+      "description": "De infrastructuur die het groter geheel van infrastructuur vormt. Lijst van Infrastructuur items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Infrastructuur"
+          },
+          {
+            "$ref": "#/components/schemas/Binnenruimte"
+          },
+          {
+            "$ref": "#/components/schemas/Buitenruimte"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Infrastructuur": "#/components/schemas/Infrastructuur",
+            "Binnenruimte": "#/components/schemas/Binnenruimte",
+            "Buitenruimte": "#/components/schemas/Buitenruimte"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "subinfrastructuur": {
+      "type": "array",
+      "description": "De infrastructuur die onderdeel is van een groter geheel van infrastructuur. Lijst van Infrastructuur items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Infrastructuur"
+          },
+          {
+            "$ref": "#/components/schemas/Binnenruimte"
+          },
+          {
+            "$ref": "#/components/schemas/Buitenruimte"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Infrastructuur": "#/components/schemas/Infrastructuur",
+            "Binnenruimte": "#/components/schemas/Binnenruimte",
+            "Buitenruimte": "#/components/schemas/Buitenruimte"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "reservatie": {
+      "$ref": "#/components/schemas/Infrastructuurreservatie"
+    }
+  },
+  "required": [
+    "@type",
+    "locatie",
+    "openingsuren",
+    "reservatie"
+  ]
+}

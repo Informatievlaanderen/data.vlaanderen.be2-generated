@@ -2,31 +2,17 @@
 
 #||# -------------------------------------  
 
-2026-01-08T13:04:12.726Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-zaalreservatie.jsonld#L7955)".
-
-2026-01-08T13:04:12.728Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-zaalreservatie.jsonld#L7977)".
-
-2026-01-08T13:04:12.728Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-zaalreservatie.jsonld#L7988)".
-
-2026-01-08T13:04:12.729Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-zaalreservatie.jsonld#L7999)".
-
-2026-01-08T13:04:12.729Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-zaalreservatie.jsonld#L8010)".
-
-2026-01-08T13:04:12.730Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
-
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2026-01-08T13:04:13.779Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-zaalreservatie.jsonld#L7955)".
+Error: [ShaclTemplateGenerationService]: Unable to find the domain for subject "[urn:oslo-toolchain:aee9cfc0b4365901200e2dd99a8c558aa1f3781a11ea7fffc7591cf4494cb33f](all-zaalreservatie.jsonld#L156)" which should act as a property.
 
-2026-01-08T13:04:13.781Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-zaalreservatie.jsonld#L7977)".
+    at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:152:31)
 
-2026-01-08T13:04:13.782Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-zaalreservatie.jsonld#L7988)".
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:48:42)
 
-2026-01-08T13:04:13.782Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-zaalreservatie.jsonld#L7999)".
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
 
-2026-01-08T13:04:13.783Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-zaalreservatie.jsonld#L8010)".
-
-2026-01-08T13:04:13.783Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 

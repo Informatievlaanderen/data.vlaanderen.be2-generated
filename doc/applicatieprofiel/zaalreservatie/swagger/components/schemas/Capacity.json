@@ -1,0 +1,45 @@
+{
+  "title": "Capacity",
+  "type": "object",
+  "description": "The comprehension or occupancy of an infrastructure.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Capacity)",
+      "pattern": "^Capacity$"
+    },
+    "description": {
+      "$ref": "#/components/schemas/Capacity.description"
+    },
+    "value": {
+      "$ref": "#/components/schemas/Capacity.value"
+    },
+    "unity": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Concept"
+        },
+        {
+          "$ref": "#/components/schemas/Unity"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Concept": "#/components/schemas/Concept",
+          "Unity": "#/components/schemas/Unity"
+        }
+      }
+    },
+    "type": {
+      "$ref": "#/components/schemas/CapacityType"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
