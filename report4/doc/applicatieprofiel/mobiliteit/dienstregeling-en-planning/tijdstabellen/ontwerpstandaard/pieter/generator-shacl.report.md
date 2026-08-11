@@ -16,7 +16,7 @@ Error: Unable to find a label for subject "[urn:oslo-toolchain:3cda4a722cc19f160
 
 #||# -------------------------------------  
 
-Error: [ShaclTemplateGenerationService]: Unable to find the domain for subject "[[urn:oslo-toolchain:c227d527c99682a8310c5dc05b277e4bdb48c5491da04a923fb7962b9c1c0a8f](all-tijdstabellen-ap.jsonld#L18773)](all-tijdstabellen-ap.jsonld#L299)" which should act as a property.
+Error: [ShaclTemplateGenerationService]: Unable to find the domain for subject "[[urn:oslo-toolchain:c227d527c99682a8310c5dc05b277e4bdb48c5491da04a923fb7962b9c1c0a8f](all-tijdstabellen-ap.jsonld#L18781)](all-tijdstabellen-ap.jsonld#L299)" which should act as a property.
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:152:31)
 

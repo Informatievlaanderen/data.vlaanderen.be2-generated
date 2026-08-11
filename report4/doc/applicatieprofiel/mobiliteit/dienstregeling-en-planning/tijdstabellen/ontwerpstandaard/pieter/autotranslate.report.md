@@ -2,6 +2,22 @@
 
 #||# -------------------------------------  
 
+#||#  update the translation file from the memory
+
+#||# 
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# create new translation file with existing translations included  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/translation_input/tijdstabellen-ap_en.json  
+
 #||# 
 
 #||#  autotranslate the translation file for language en
@@ -14,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 4  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/tijdstabellen-ap_en.json  
 
@@ -24,17 +40,11 @@
 
 #||# 
 
-start reading file TimetablesAndPlanning-en-voc.j2
+#||# 
 
-#||#  start converting filename in extend blocks
+#||#  autotranslate the J2 templates for language en
 
-#||# purl-voc2_en
-
-#||#  filename contains goal language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/TimetablesAndPlanning-en-voc_en.j2
+#||# 
 
 #||# 
 
@@ -42,17 +52,11 @@ start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/diens
 
 #||# 
 
-start reading file TimetablesAndPlanning-nl-voc.j2
+#||# 
 
-#||#  start converting filename in extend blocks
+#||#  autotranslate the J2 templates for language en
 
-#||# voc2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/TimetablesAndPlanning-nl-voc_en.j2
+#||# 
 
 #||# 
 
@@ -60,17 +64,11 @@ start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/diens
 
 #||# 
 
-start reading file stopplaatsen-ap.j2
+#||# 
 
-#||#  start converting filename in extend blocks
+#||#  autotranslate the J2 templates for language en
 
-#||# ap2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/stopplaatsen-ap_en.j2
+#||# 
 
 #||# 
 
@@ -78,17 +76,11 @@ start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/diens
 
 #||# 
 
-start reading file stopplaces-ap_en.j2
+#||# 
 
-#||#  start converting filename in extend blocks
+#||#  autotranslate the J2 templates for language en
 
-#||# purl-ap2_en
-
-#||#  filename contains goal language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/stopplaces-ap_en_en.j2
+#||# 
 
 #||# 
 
@@ -96,123 +88,15 @@ start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/diens
 
 #||# 
 
-start reading file stopplaces-ap_nl.j2
-
-#||#  start converting filename in extend blocks
-
-#||# purl-ap2_nl
-
-#||#  filename contains prime language reference purl-ap2
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/stopplaces-ap_nl_en.j2
-
 #||# 
 
 #||#  autotranslate the J2 templates for language en
 
 #||# 
 
-start reading file tijdstabellen-ap.j2
-
-#||#  start converting filename in extend blocks
-
-#||# ap2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/tijdstabellen-ap_en.j2
-
 #||# 
 
 #||#  autotranslate the J2 templates for language en
 
 #||# 
-
-start reading file timetables-ap_en.j2
-
-#||#  start converting filename in extend blocks
-
-#||# purl-ap2_en
-
-#||#  filename contains goal language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/timetables-ap_en_en.j2
-
-#||# 
-
-#||#  autotranslate the J2 templates for language en
-
-#||# 
-
-start reading file timetables-ap_nl.j2
-
-#||#  start converting filename in extend blocks
-
-#||# purl-ap2_nl
-
-#||#  filename contains prime language reference purl-ap2
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/timetables-ap_nl_en.j2
-
-#||# 
-
-#||#  autotranslate the J2 templates for language en
-
-#||# 
-
-start reading file vehiclescheduling-ap_en.j2
-
-#||#  start converting filename in extend blocks
-
-#||# purl-ap2_en
-
-#||#  filename contains goal language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/vehiclescheduling-ap_en_en.j2
-
-#||# 
-
-#||#  autotranslate the J2 templates for language en
-
-#||# 
-
-start reading file vehiclescheduling-ap_nl.j2
-
-#||#  start converting filename in extend blocks
-
-#||# purl-ap2_nl
-
-#||#  filename contains prime language reference purl-ap2
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/vehiclescheduling-ap_nl_en.j2
-
-#||# 
-
-#||#  autotranslate the J2 templates for language en
-
-#||# 
-
-start reading file voertuigplanning-ap.j2
-
-#||#  start converting filename in extend blocks
-
-#||# ap2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/voertuigplanning-ap_en.j2
 
