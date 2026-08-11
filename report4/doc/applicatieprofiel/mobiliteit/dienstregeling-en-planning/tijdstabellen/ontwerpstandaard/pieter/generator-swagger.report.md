@@ -2,11 +2,11 @@
 
 #||#  -------------------------------------  
 
-2026-08-11T15:20:23.287Z warn: [SwaggerGenerationService]: Schema already exists for the label (Lijn) and will be overwritten.
+2026-08-11T15:23:04.023Z warn: [SwaggerGenerationService]: Schema already exists for the label (Lijn) and will be overwritten.
 
-2026-08-11T15:20:23.308Z error: Unknown class label for [urn:oslo-toolchain:3cda4a722cc19f1609dc4eed5c24dff091cbc9faf3bd05a72cf3a98425cfc1ec](all-tijdstabellen-ap.jsonld#L18482)
+2026-08-11T15:23:04.039Z error: Unknown class label for [urn:oslo-toolchain:3cda4a722cc19f1609dc4eed5c24dff091cbc9faf3bd05a72cf3a98425cfc1ec](all-tijdstabellen-ap.jsonld#L18482)
 
-2026-08-11T15:20:23.312Z error: Unknown datatype for attribute [urn:oslo-toolchain:e2e678bb702063d9d513d6b53669eb5f188f1934e6451decb20f01d2dba2601a](all-tijdstabellen-ap.jsonld#L12072)
+2026-08-11T15:23:04.043Z error: Unknown datatype for attribute [urn:oslo-toolchain:e2e678bb702063d9d513d6b53669eb5f188f1934e6451decb20f01d2dba2601a](all-tijdstabellen-ap.jsonld#L12072)
 
 #||#  oslo-generator-swagger for language en  
 
