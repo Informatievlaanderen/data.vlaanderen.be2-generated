@@ -234,11 +234,8 @@ error: missing '/tmp/generated/doc/applicatieprofiel/dienstverlening-aan-persone
 #||#    + checking /home/circleci/project/config/dev/kvs.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/codelijsten'
 
 index.html check
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/index.html'
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/codelijsten/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/kwaliteit-wegen-en-markeringen.publication.json
 #||# 

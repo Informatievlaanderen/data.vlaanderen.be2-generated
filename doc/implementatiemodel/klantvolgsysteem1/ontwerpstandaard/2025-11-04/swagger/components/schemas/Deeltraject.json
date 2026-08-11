@@ -1,0 +1,87 @@
+{
+  "title": "Deeltraject",
+  "type": "object",
+  "description": "Een Deeltraject is een onderdeel van een Traject dat een specfiek onderdeel uitwerkt van een Traject.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Deeltraject)",
+      "pattern": "^Deeltraject$"
+    },
+    "einddatum": {
+      "type": "object",
+      "description": "De datum waarop het Traject eindigt.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "De naam van een Traject.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "startdatum": {
+      "type": "object",
+      "description": "De datum waarop het Traject start.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "status": {
+      "$ref": "#/components/schemas/Trajectstatustype"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Deeltrajecttype"
+    },
+    "heeftParticipatie": {
+      "type": "array",
+      "description": "Lijst van Participatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Participatie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam"
+  ]
+}

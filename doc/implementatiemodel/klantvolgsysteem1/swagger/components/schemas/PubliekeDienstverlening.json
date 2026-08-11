@@ -1,0 +1,76 @@
+{
+  "title": "PubliekeDienstverlening",
+  "type": "object",
+  "description": "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PubliekeDienstverlening)",
+      "pattern": "^PubliekeDienstverlening$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "De naam van de Publieke Dienstverlening.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "heeftVerantwoordelijke": {
+      "$ref": "#/components/schemas/PubliekeOrganisatie"
+    },
+    "finaliteit": {
+      "$ref": "#/components/schemas/FinaliteitType"
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van PubliekeDienstverleningtype items.",
+      "items": {
+        "$ref": "#/components/schemas/PubliekeDienstverleningtype"
+      },
+      "minItems": 1
+    },
+    "gebruikt": {
+      "type": "array",
+      "description": "Lijst van Werkvoorkeuren items.",
+      "items": {
+        "$ref": "#/components/schemas/Werkvoorkeuren"
+      },
+      "minItems": 1
+    },
+    "heeftParticipatie": {
+      "type": "array",
+      "description": "Lijst van Participatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Participatie"
+      },
+      "minItems": 1
+    },
+    "produceert": {
+      "type": "array",
+      "description": "Lijst van Activeringstraject items.",
+      "items": {
+        "$ref": "#/components/schemas/Activeringstraject"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "heeftVerantwoordelijke"
+  ]
+}

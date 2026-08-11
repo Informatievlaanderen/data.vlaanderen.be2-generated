@@ -1,0 +1,80 @@
+{
+  "title": "GeregistreerdPersoon",
+  "type": "object",
+  "description": "Persoon waarvan de gegevens zijn ingeschreven in een register.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GeregistreerdPersoon)",
+      "pattern": "^GeregistreerdPersoon$"
+    },
+    "achternaam": {
+      "type": "object",
+      "description": "Gedeelte van de volledige naam van de Persoon ontvangen van de vorige generatie. Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "voornaam": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Naam die een Persoon bij geboorte wordt gegeven. Onderscheidt de Persoon van de andere personen in de familie.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "registratie": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "contactinfo": {
+      "$ref": "#/components/schemas/Contactpunt"
+    },
+    "heeftGeboorte": {
+      "$ref": "#/components/schemas/Geboorte"
+    },
+    "inwonerschap": {
+      "type": "array",
+      "description": "Lijst van Inwonerschap items.",
+      "items": {
+        "$ref": "#/components/schemas/Inwonerschap"
+      },
+      "minItems": 1
+    },
+    "werkvoorkeuren": {
+      "type": "array",
+      "description": "Lijst van Werkvoorkeuren items.",
+      "items": {
+        "$ref": "#/components/schemas/Werkvoorkeuren"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "registratie",
+    "contactinfo"
+  ]
+}

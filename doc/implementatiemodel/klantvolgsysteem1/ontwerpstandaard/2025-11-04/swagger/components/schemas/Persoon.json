@@ -1,0 +1,63 @@
+{
+  "title": "Persoon",
+  "type": "object",
+  "description": "Natuurlijk persoon.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Persoon)",
+      "pattern": "^Persoon$"
+    },
+    "achternaam": {
+      "type": "object",
+      "description": "Gedeelte van de volledige naam van de Persoon ontvangen van de vorige generatie. Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "voornaam": {
+      "type": "array",
+      "description": "Lijst van String items.",
+      "items": {
+        "type": "object",
+        "description": "Naam die een Persoon bij geboorte wordt gegeven. Onderscheidt de Persoon van de andere personen in de familie.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    },
+    "heeftGeboorte": {
+      "$ref": "#/components/schemas/Geboorte"
+    },
+    "inwonerschap": {
+      "type": "array",
+      "description": "Lijst van Inwonerschap items.",
+      "items": {
+        "$ref": "#/components/schemas/Inwonerschap"
+      },
+      "minItems": 1
+    },
+    "contactinfo": {
+      "$ref": "#/components/schemas/Contactpunt"
+    }
+  },
+  "required": [
+    "@type",
+    "contactinfo"
+  ]
+}

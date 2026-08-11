@@ -1,0 +1,57 @@
+{
+  "title": "Participatie",
+  "type": "object",
+  "description": "De rol waarin een Agent deelneemt aan de Publieke Dienstverlening.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Participatie)",
+      "pattern": "^Participatie$"
+    },
+    "rol": {
+      "type": "array",
+      "description": "Lijst van Participatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Participatietype"
+      },
+      "minItems": 1
+    },
+    "heeftParticipant": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/GeregistreerdPersoon"
+          },
+          {
+            "$ref": "#/components/schemas/Persoon"
+          },
+          {
+            "$ref": "#/components/schemas/GeregistreerdeOrganisatie"
+          },
+          {
+            "$ref": "#/components/schemas/PubliekeOrganisatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "GeregistreerdPersoon": "#/components/schemas/GeregistreerdPersoon",
+            "Persoon": "#/components/schemas/Persoon",
+            "GeregistreerdeOrganisatie": "#/components/schemas/GeregistreerdeOrganisatie",
+            "PubliekeOrganisatie": "#/components/schemas/PubliekeOrganisatie"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
