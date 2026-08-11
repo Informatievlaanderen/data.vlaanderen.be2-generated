@@ -13,60 +13,45 @@
       "pattern": "^Dienstrit$"
     },
     "vertrektijd": {
-      "type": "object",
-      "description": "Vertrektijd.",
-      "properties": {
-        "$ref": "#/components/schemas/Time"
-      },
-      "required": [
-        "$ref"
-      ]
+      "$ref": "#/components/schemas/Dienstrit.vertrektijd"
     },
     "vertrekdagOffset": {
-      "type": "object",
-      "description": "Dag offset als de dag van vertrektijd van de dienstrit verschilt van de huidige operationele dag.",
-      "properties": {
-        "@value": {
-          "type": "number",
-          "format": "int64"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Integer$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+      "$ref": "#/components/schemas/Dienstrit.vertrekdagOffset"
     },
     "ritduur": {
-      "type": "object",
-      "description": "Totale lengte van de dienstrit. Kan worden berekend uit individuele tijden. Toevoegen aan vertrektijd om de aankomsttijd van de service te verkrijgen.",
-      "properties": {
-        "$ref": "#/components/schemas/Duration"
-      },
-      "required": [
-        "$ref"
-      ]
+      "$ref": "#/components/schemas/Dienstrit.ritduur"
     },
     "operator": {
       "$ref": "#/components/schemas/Operator"
     },
     "dagtype": {
       "type": "array",
-      "description": "Lijst van Dagtype items.",
+      "description": "Dagtype voor de Diensrit. Lijst van Dagtype items.",
       "items": {
         "$ref": "#/components/schemas/Dagtype"
       },
       "minItems": 1
     },
     "voertuigtype": {
-      "$ref": "#/components/schemas/Voertuigtype"
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Voertuigtype"
+        },
+        {
+          "$ref": "#/components/schemas/Trein"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Voertuigtype": "#/components/schemas/Voertuigtype",
+          "Trein": "#/components/schemas/Trein"
+        }
+      }
     },
     "treinnummer": {
       "type": "array",
-      "description": "Lijst van Treinnummer items.",
+      "description": "Treinnummers - afgeleid door middel van ritdelen van een rit - alleen voor een multi-part-ritten. Lijst van Treinnummer items.",
       "items": {
         "$ref": "#/components/schemas/Treinnummer"
       },
@@ -74,7 +59,7 @@
     },
     "faciliteit": {
       "type": "array",
-      "description": "Lijst van DienstFaciliteitenset items.",
+      "description": "Faciliteit op de dienstrit. Lijst van DienstFaciliteitenset items.",
       "items": {
         "$ref": "#/components/schemas/DienstFaciliteitenset"
       },
@@ -88,7 +73,7 @@
     },
     "uitgevoerdOp": {
       "type": "array",
-      "description": "Lijst van Dagtype items.",
+      "description": "Dagtype waarop de rit wordt gewerkt. Lijst van Dagtype items.",
       "items": {
         "$ref": "#/components/schemas/Dagtype"
       },
@@ -102,7 +87,7 @@
     },
     "opmerking": {
       "type": "array",
-      "description": "Lijst van Opmerking items.",
+      "description": "Kennisgeving relevant voor de hele rit. Lijst van Opmerking items.",
       "items": {
         "$ref": "#/components/schemas/Opmerking"
       },
@@ -110,7 +95,7 @@
     },
     "passeerdeOp": {
       "type": "array",
-      "description": "Lijst van Doorkomsttijd items.",
+      "description": "Doorkomsstijd waarop de rit passeert. Lijst van Doorkomsttijd items.",
       "items": {
         "$ref": "#/components/schemas/Doorkomsttijd"
       },
@@ -118,7 +103,7 @@
     },
     "deel": {
       "type": "array",
-      "description": "Lijst van Ritdeel items.",
+      "description": "Deel van de rit. Lijst van Ritdeel items.",
       "items": {
         "$ref": "#/components/schemas/Ritdeel"
       },

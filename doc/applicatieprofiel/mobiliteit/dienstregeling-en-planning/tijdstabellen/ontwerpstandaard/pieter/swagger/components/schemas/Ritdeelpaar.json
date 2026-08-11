@@ -1,0 +1,59 @@
+{
+  "title": "Ritdeelpaar",
+  "type": "object",
+  "description": "Een set van twee of meer Ritdelen van verschillende voertuigritten, gelijktijdig bediend door dezelfde trein door individuele voertuigen te koppelen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Ritdeelpaar)",
+      "pattern": "^Ritdeelpaar$"
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/Ritdeelpaar.beschrijving"
+    },
+    "startTijd": {
+      "$ref": "#/components/schemas/Ritdeelpaar.startTijd"
+    },
+    "startTijdDagOffset": {
+      "$ref": "#/components/schemas/Ritdeelpaar.startTijdDagOffset"
+    },
+    "eindTijd": {
+      "$ref": "#/components/schemas/Ritdeelpaar.eindTijd"
+    },
+    "eindTijdDagOffset": {
+      "$ref": "#/components/schemas/Ritdeelpaar.eindTijdDagOffset"
+    },
+    "vanStopPoint": {
+      "$ref": "#/components/schemas/GeplandStoppunt"
+    },
+    "naarStopPunt": {
+      "$ref": "#/components/schemas/GeplandStoppunt"
+    },
+    "hoofdDeel": {
+      "$ref": "#/components/schemas/Ritdeelpaar"
+    },
+    "treinNummer": {
+      "$ref": "#/components/schemas/Treinnummer"
+    },
+    "ritdeel": {
+      "type": "array",
+      "description": "Verwijzingen naar een Ritdeel van de Rit waar het Ritdeel aan aansluit. Lijst van Ritdeel items.",
+      "items": {
+        "$ref": "#/components/schemas/Ritdeel"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "startTijd",
+    "eindTijd",
+    "vanStopPoint",
+    "naarStopPunt",
+    "hoofdDeel"
+  ]
+}
