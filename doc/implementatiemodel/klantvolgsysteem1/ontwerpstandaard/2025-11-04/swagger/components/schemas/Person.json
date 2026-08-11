@@ -1,0 +1,45 @@
+{
+  "title": "Person",
+  "type": "object",
+  "description": "Natural person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Person)",
+      "pattern": "^Person$"
+    },
+    "lastName": {
+      "$ref": "#/components/schemas/Person.lastName"
+    },
+    "firstName": {
+      "type": "array",
+      "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Person.firstName"
+      },
+      "minItems": 1
+    },
+    "hasBirth": {
+      "$ref": "#/components/schemas/Birth"
+    },
+    "residency": {
+      "type": "array",
+      "description": "Jurisdiction within which the Residency of the Person is defined. Lijst van Residency items.",
+      "items": {
+        "$ref": "#/components/schemas/Residency"
+      },
+      "minItems": 1
+    },
+    "contactInfo": {
+      "$ref": "#/components/schemas/PointOfContact"
+    }
+  },
+  "required": [
+    "@type",
+    "contactInfo"
+  ]
+}

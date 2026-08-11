@@ -1,13 +1,301 @@
 {
   "@context": {
+    "ActivationProcess": "https://data.vlaanderen.be/ns/klantvolgsysteem1/Activeringstraject",
+    "ActivationProcess.endDate": {
+      "@id": "https://schema.org/endDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "ActivationProcess.hasParticipation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasParticipation",
+      "@type": "@id"
+    },
+    "ActivationProcess.name": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "ActivationProcess.partialTrajectory": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/hasPart",
+      "@type": "@id"
+    },
+    "ActivationProcess.startDate": {
+      "@id": "https://schema.org/startDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "ActivationProcess.status": {
+      "@id": "http://www.w3.org/ns/adms#status",
+      "@type": "@id"
+    },
+    "AddressPresentation": "http://www.w3.org/ns/locn#Address",
+    "AddressPresentation.boxNumber": {
+      "@id": "https://data.vlaanderen.be/ns/adres#busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AddressPresentation.country": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.houseNumber": {
+      "@id": "https://data.vlaanderen.be/ns/adres#huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AddressPresentation.municipalityName": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.postName": {
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.postalCode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AddressPresentation.streetName": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Agent": "http://xmlns.com/foaf/0.1/Agent",
+    "Birth": "http://purl.org/vocab/bio/0.1/Birth",
+    "Birth.date": {
+      "@id": "http://purl.org/vocab/bio/0.1/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Birth.location": {
+      "@id": "http://purl.org/vocab/bio/0.1/place",
+      "@type": "@id"
+    },
     "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "EnterYourTranslationHere.enterYourTranslationHere": {
+    "Domicile": "https://data.vlaanderen.be/ns/persoon#Domicilie",
+    "GeographicName": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Identifier": "http://www.w3.org/ns/adms#Identifier",
+    "Identifier.awardedBy": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "@id"
+    },
+    "Identifier.grantedBy(String)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Identifier.grantedOn": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Identifier.identifier": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "LangString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Location": "http://purl.org/dc/terms/Location",
+    "Location.placeName": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "OccupationalStatus": "https://data.vlaanderen.be/ns/klantvolgsysteem1/Beroepstoestand",
+    "OccupationalStatus.name": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "OccupationalStatus.preference": {
+      "@id": "https://data.vlaanderen.be/ns/klantvolgsysteem1/voorkeur",
+      "@type": "@id"
+    },
+    "PartialTrajectory": "https://data.vlaanderen.be/ns/klantvolgsysteem1/Deeltraject",
+    "PartialTrajectory.endDate": {
+      "@id": "https://schema.org/endDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "PartialTrajectory.hasParticipation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasParticipation",
+      "@type": "@id"
+    },
+    "PartialTrajectory.name": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PartialTrajectory.startDate": {
+      "@id": "https://schema.org/startDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "PartialTrajectory.status": {
+      "@id": "http://www.w3.org/ns/adms#status",
+      "@type": "@id"
+    },
+    "PartialTrajectory.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Participation": "http://data.europa.eu/m8g/Participation",
+    "Participation.hasParticipant": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasParticipant",
+      "@type": "@id"
+    },
+    "Participation.role": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/role",
+      "@type": "@id"
+    },
+    "Person": "http://www.w3.org/ns/person#Person",
+    "Person.contactInfo": {
+      "@id": "https://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "Person.firstName": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Person.hasBirth": {
+      "@id": "http://purl.org/vocab/bio/0.1/birth",
+      "@type": "@id"
+    },
+    "Person.lastName": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Person.residency": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/person#residency",
+      "@type": "@id"
+    },
+    "PointOfContact": "https://schema.org/ContactPoint",
+    "PointOfContact.address": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "PointOfContact.email": {
+      "@id": "https://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PointOfContact.phone": {
+      "@id": "https://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PublicOrganization": "http://data.europa.eu/m8g/PublicOrganisation",
+    "PublicOrganization.contactInfo": {
+      "@container": "@set",
+      "@id": "https://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "PublicOrganization.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "PublicOrganization.preferredName": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PublicOrganization.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "PublicServices": "http://purl.org/vocab/cpsv#PublicService",
+    "PublicServices.finality": {
+      "@id": "https://data.vlaanderen.be/ns/klantvolgsysteem1/finaliteit",
+      "@type": "@id"
+    },
+    "PublicServices.hasParticipation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasParticipation",
+      "@type": "@id"
+    },
+    "PublicServices.name": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PublicServices.produces": {
       "@container": "@set",
       "@id": "http://purl.org/vocab/cpsv#produces",
       "@type": "@id"
     },
-    "LangString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "String": "http://www.w3.org/2001/XMLSchema#string"
+    "PublicServices.responsible": {
+      "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+      "@type": "@id"
+    },
+    "PublicServices.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "PublicServices.uses": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#hasInput",
+      "@type": "@id"
+    },
+    "RegisteredOrganization": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+    "RegisteredOrganization.contactInfo": {
+      "@container": "@set",
+      "@id": "https://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "RegisteredOrganization.preferredName": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "RegisteredOrganization.registration": {
+      "@id": "http://www.w3.org/ns/regorg#registration",
+      "@type": "@id"
+    },
+    "RegisteredOrganization.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "RegisteredPerson": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+    "RegisteredPerson.contactInfo": {
+      "@id": "https://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "RegisteredPerson.firstName": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "RegisteredPerson.hasBirth": {
+      "@id": "http://purl.org/vocab/bio/0.1/birth",
+      "@type": "@id"
+    },
+    "RegisteredPerson.lastName": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "RegisteredPerson.registration": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#registratie",
+      "@type": "@id"
+    },
+    "RegisteredPerson.residency": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/person#residency",
+      "@type": "@id"
+    },
+    "RegisteredPerson.workPreferences": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/klantvolgsysteem1/werkvoorkeuren",
+      "@type": "@id"
+    },
+    "Residence": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats",
+    "Residence.residenceAddress": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#verblijfsadres",
+      "@type": "@id"
+    },
+    "Residency": "https://data.vlaanderen.be/ns/persoon#Inwonerschap",
+    "Residency.hasPlaceOfResidence": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftVerblijfplaats",
+      "@type": "@id"
+    },
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "WorkPreferences": "https://data.vlaanderen.be/ns/klantvolgsysteem1/Werkvoorkeuren",
+    "WorkPreferences.profession": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/klantvolgsysteem1/beroep",
+      "@type": "@id"
+    }
   }
 }

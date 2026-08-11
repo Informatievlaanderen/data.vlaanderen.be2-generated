@@ -1,0 +1,62 @@
+{
+  "title": "PublicServices",
+  "type": "object",
+  "description": "A public service is a set of mandatory or optionally performed or implementable actions by or in the name of a public organisation. The service is for the benefit of an individual, a company, another public organization or groups.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PublicServices)",
+      "pattern": "^PublicServices$"
+    },
+    "name": {
+      "$ref": "#/components/schemas/PublicServices.name"
+    },
+    "responsible": {
+      "$ref": "#/components/schemas/PublicOrganization"
+    },
+    "finality": {
+      "$ref": "#/components/schemas/FinaliteitType"
+    },
+    "type": {
+      "type": "array",
+      "description": "The type of Public Service. For example: Orientation, Guidance, etc. Lijst van PubliekeDienstverleningtype items.",
+      "items": {
+        "$ref": "#/components/schemas/PubliekeDienstverleningtype"
+      },
+      "minItems": 1
+    },
+    "uses": {
+      "type": "array",
+      "description": "References to all Inputs used by the Public Service to produce one or more Outputs. Lijst van WorkPreferences items.",
+      "items": {
+        "$ref": "#/components/schemas/WorkPreferences"
+      },
+      "minItems": 1
+    },
+    "hasParticipation": {
+      "type": "array",
+      "description": "The Agents who participate in the Public Service. Lijst van Participation items.",
+      "items": {
+        "$ref": "#/components/schemas/Participation"
+      },
+      "minItems": 1
+    },
+    "produces": {
+      "type": "array",
+      "description": "The references to all the resources produced by the Public Services. Lijst van ActivationProcess items.",
+      "items": {
+        "$ref": "#/components/schemas/ActivationProcess"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "name",
+    "responsible"
+  ]
+}

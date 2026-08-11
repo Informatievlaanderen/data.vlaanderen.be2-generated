@@ -7,131 +7,66 @@
   },
   "components": {
     "schemas": {
-      "Participatie": {
-        "title": "Participatie",
+      "ActivationProcess.name": {
+        "title": "ActivationProcess.name",
         "type": "object",
-        "description": "De rol waarin een Agent deelneemt aan de Publieke Dienstverlening.",
+        "description": "The name of a Trajectory.",
         "properties": {
-          "@id": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
             "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Participatie)",
-            "pattern": "^Participatie$"
-          },
-          "rol": {
-            "type": "array",
-            "description": "Lijst van Participatietype items.",
-            "items": {
-              "$ref": "#/components/schemas/Participatietype"
-            },
-            "minItems": 1
-          },
-          "heeftParticipant": {
-            "type": "array",
-            "description": "Lijst van Agent items.",
-            "items": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/GeregistreerdPersoon"
-                },
-                {
-                  "$ref": "#/components/schemas/Persoon"
-                },
-                {
-                  "$ref": "#/components/schemas/GeregistreerdeOrganisatie"
-                },
-                {
-                  "$ref": "#/components/schemas/PubliekeOrganisatie"
-                }
-              ],
-              "discriminator": {
-                "propertyName": "@type",
-                "mapping": {
-                  "GeregistreerdPersoon": "#/components/schemas/GeregistreerdPersoon",
-                  "Persoon": "#/components/schemas/Persoon",
-                  "GeregistreerdeOrganisatie": "#/components/schemas/GeregistreerdeOrganisatie",
-                  "PubliekeOrganisatie": "#/components/schemas/PubliekeOrganisatie"
-                }
-              }
-            },
-            "minItems": 1
+            "pattern": "^nl$"
           }
         },
         "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "ActivationProcess.startDate": {
+        "title": "ActivationProcess.startDate",
+        "type": "object",
+        "description": "The date on which the Trajectory starts.",
+        "properties": {
+          "@value": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "@type": {
+            "type": "string",
+            "pattern": "^DateTime$"
+          }
+        },
+        "required": [
+          "@value",
           "@type"
         ]
       },
-      "Verblijfplaats": {
-        "title": "Verblijfplaats",
+      "ActivationProcess.endDate": {
+        "title": "ActivationProcess.endDate",
         "type": "object",
-        "description": "Plaats waar een Persoon al dan niet tijdelijk woont of logeert.",
+        "description": "The date on which the Trajectory ends.",
         "properties": {
-          "@id": {
+          "@value": {
             "type": "string",
-            "format": "uri"
+            "format": "date-time"
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse Verblijfplaats)",
-            "pattern": "^Verblijfplaats$"
-          },
-          "verblijfsadres": {
-            "$ref": "#/components/schemas/Adresvoorstelling"
+            "pattern": "^DateTime$"
           }
         },
         "required": [
-          "@type",
-          "verblijfsadres"
-        ]
-      },
-      "Inwonerschap": {
-        "title": "Inwonerschap",
-        "type": "object",
-        "description": "Het feit dat een Persoon verblijf houdt in een plaats of land.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Inwonerschap)",
-            "pattern": "^Inwonerschap$"
-          },
-          "heeftVerblijfplaats": {
-            "type": "array",
-            "description": "Lijst van Verblijfplaats items.",
-            "items": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/Verblijfplaats"
-                },
-                {
-                  "$ref": "#/components/schemas/Domicilie"
-                }
-              ],
-              "discriminator": {
-                "propertyName": "@type",
-                "mapping": {
-                  "Verblijfplaats": "#/components/schemas/Verblijfplaats",
-                  "Domicilie": "#/components/schemas/Domicilie"
-                }
-              }
-            },
-            "minItems": 1
-          }
-        },
-        "required": [
+          "@value",
           "@type"
         ]
       },
-      "GeregistreerdPersoon": {
-        "title": "GeregistreerdPersoon",
+      "ActivationProcess": {
+        "title": "ActivationProcess",
         "type": "object",
-        "description": "Persoon waarvan de gegevens zijn ingeschreven in een register.",
+        "description": "An Activation Pathway is a more specific variant of a Pathway that should encourage the Job Seeker to activate to work.",
         "properties": {
           "@id": {
             "type": "string",
@@ -139,321 +74,65 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse GeregistreerdPersoon)",
-            "pattern": "^GeregistreerdPersoon$"
+            "description": "Object type (klasse ActivationProcess)",
+            "pattern": "^ActivationProcess$"
           },
-          "achternaam": {
-            "type": "object",
-            "description": "Gedeelte van de volledige naam van de Persoon ontvangen van de vorige generatie. Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+          "name": {
+            "$ref": "#/components/schemas/ActivationProcess.name"
           },
-          "voornaam": {
-            "type": "array",
-            "description": "Lijst van String items.",
-            "items": {
-              "type": "object",
-              "description": "Naam die een Persoon bij geboorte wordt gegeven. Onderscheidt de Persoon van de andere personen in de familie.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
-            },
-            "minItems": 1
+          "startDate": {
+            "$ref": "#/components/schemas/ActivationProcess.startDate"
           },
-          "registratie": {
-            "type": "array",
-            "description": "Lijst van Identificator items.",
-            "items": {
-              "$ref": "#/components/schemas/Identificator"
-            },
-            "minItems": 1
-          },
-          "contactinfo": {
-            "$ref": "#/components/schemas/Contactpunt"
-          },
-          "heeftGeboorte": {
-            "$ref": "#/components/schemas/Geboorte"
-          },
-          "inwonerschap": {
-            "type": "array",
-            "description": "Lijst van Inwonerschap items.",
-            "items": {
-              "$ref": "#/components/schemas/Inwonerschap"
-            },
-            "minItems": 1
-          },
-          "werkvoorkeuren": {
-            "type": "array",
-            "description": "Lijst van Werkvoorkeuren items.",
-            "items": {
-              "$ref": "#/components/schemas/Werkvoorkeuren"
-            },
-            "minItems": 1
-          }
-        },
-        "required": [
-          "@type",
-          "registratie",
-          "contactinfo"
-        ]
-      },
-      "Domicilie": {
-        "title": "Domicilie",
-        "type": "object",
-        "description": "Hoofdverblijfplaats van een Persoon.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Domicilie)",
-            "pattern": "^Domicilie$"
-          },
-          "verblijfsadres": {
-            "$ref": "#/components/schemas/Adresvoorstelling"
-          }
-        },
-        "required": [
-          "@type",
-          "verblijfsadres"
-        ]
-      },
-      "Persoon": {
-        "title": "Persoon",
-        "type": "object",
-        "description": "Natuurlijk persoon.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Persoon)",
-            "pattern": "^Persoon$"
-          },
-          "achternaam": {
-            "type": "object",
-            "description": "Gedeelte van de volledige naam van de Persoon ontvangen van de vorige generatie. Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
-          },
-          "voornaam": {
-            "type": "array",
-            "description": "Lijst van String items.",
-            "items": {
-              "type": "object",
-              "description": "Naam die een Persoon bij geboorte wordt gegeven. Onderscheidt de Persoon van de andere personen in de familie.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
-            },
-            "minItems": 1
-          },
-          "heeftGeboorte": {
-            "$ref": "#/components/schemas/Geboorte"
-          },
-          "inwonerschap": {
-            "type": "array",
-            "description": "Lijst van Inwonerschap items.",
-            "items": {
-              "$ref": "#/components/schemas/Inwonerschap"
-            },
-            "minItems": 1
-          },
-          "contactinfo": {
-            "$ref": "#/components/schemas/Contactpunt"
-          }
-        },
-        "required": [
-          "@type",
-          "contactinfo"
-        ]
-      },
-      "Werkvoorkeuren": {
-        "title": "Werkvoorkeuren",
-        "type": "object",
-        "description": "De voorkeuren van de Werkzoekende bij het zoeken naar werk.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Werkvoorkeuren)",
-            "pattern": "^Werkvoorkeuren$"
-          },
-          "beroep": {
-            "type": "array",
-            "description": "Lijst van Beroepstoestand items.",
-            "items": {
-              "$ref": "#/components/schemas/Beroepstoestand"
-            },
-            "minItems": 1
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
-      "Plaats": {
-        "title": "Plaats",
-        "type": "object",
-        "description": "Een ruimtelijk gebied of benoemde plaats.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Plaats)",
-            "pattern": "^Plaats$"
-          },
-          "plaatsnaam": {
-            "type": "object",
-            "description": "Naam van de plaats of van het gebied.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
-          }
-        },
-        "required": [
-          "@type",
-          "plaatsnaam"
-        ]
-      },
-      "Activeringstraject": {
-        "title": "Activeringstraject",
-        "type": "object",
-        "description": "Een Activeringstraject is een specifiekere variant van een Traject dat moet aansporen om de Werkzoekende te activeren naar werk.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Activeringstraject)",
-            "pattern": "^Activeringstraject$"
-          },
-          "naam": {
-            "type": "object",
-            "description": "De naam van een Traject.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
-          },
-          "startdatum": {
-            "type": "object",
-            "description": "De datum waarop het Traject start.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
-          },
-          "einddatum": {
-            "type": "object",
-            "description": "De datum waarop het Traject eindigt.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+          "endDate": {
+            "$ref": "#/components/schemas/ActivationProcess.endDate"
           },
           "status": {
             "$ref": "#/components/schemas/Trajectstatustype"
           },
-          "deeltraject": {
+          "partialTrajectory": {
             "type": "array",
-            "description": "Lijst van Deeltraject items.",
+            "description": "The Sub-Trajectories linked to this Trajectory. Lijst van PartialTrajectory items.",
             "items": {
-              "$ref": "#/components/schemas/Deeltraject"
+              "$ref": "#/components/schemas/PartialTrajectory"
             },
             "minItems": 1
           },
-          "heeftParticipatie": {
+          "hasParticipation": {
             "type": "array",
-            "description": "Lijst van Participatie items.",
+            "description": "The Agents participating in the Activation Pathway. Lijst van Participation items.",
             "items": {
-              "$ref": "#/components/schemas/Participatie"
+              "$ref": "#/components/schemas/Participation"
             },
             "minItems": 1
           }
         },
         "required": [
           "@type",
-          "naam"
+          "name"
         ]
       },
-      "Deeltraject": {
-        "title": "Deeltraject",
+      "PublicServices.name": {
+        "title": "PublicServices.name",
         "type": "object",
-        "description": "Een Deeltraject is een onderdeel van een Traject dat een specfiek onderdeel uitwerkt van een Traject.",
+        "description": "The name of the Public Service.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "PublicServices": {
+        "title": "PublicServices",
+        "type": "object",
+        "description": "A public service is a set of mandatory or optionally performed or implementable actions by or in the name of a public organisation. The service is for the benefit of an individual, a company, another public organization or groups.",
         "properties": {
           "@id": {
             "type": "string",
@@ -461,61 +140,269 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse Deeltraject)",
-            "pattern": "^Deeltraject$"
+            "description": "Object type (klasse PublicServices)",
+            "pattern": "^PublicServices$"
           },
-          "einddatum": {
-            "type": "object",
-            "description": "De datum waarop het Traject eindigt.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+          "name": {
+            "$ref": "#/components/schemas/PublicServices.name"
           },
-          "naam": {
-            "type": "object",
-            "description": "De naam van een Traject.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+          "responsible": {
+            "$ref": "#/components/schemas/PublicOrganization"
           },
-          "startdatum": {
-            "type": "object",
-            "description": "De datum waarop het Traject start.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
+          "finality": {
+            "$ref": "#/components/schemas/FinaliteitType"
+          },
+          "type": {
+            "type": "array",
+            "description": "The type of Public Service. For example: Orientation, Guidance, etc. Lijst van PubliekeDienstverleningtype items.",
+            "items": {
+              "$ref": "#/components/schemas/PubliekeDienstverleningtype"
             },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "minItems": 1
+          },
+          "uses": {
+            "type": "array",
+            "description": "References to all Inputs used by the Public Service to produce one or more Outputs. Lijst van WorkPreferences items.",
+            "items": {
+              "$ref": "#/components/schemas/WorkPreferences"
+            },
+            "minItems": 1
+          },
+          "hasParticipation": {
+            "type": "array",
+            "description": "The Agents who participate in the Public Service. Lijst van Participation items.",
+            "items": {
+              "$ref": "#/components/schemas/Participation"
+            },
+            "minItems": 1
+          },
+          "produces": {
+            "type": "array",
+            "description": "The references to all the resources produced by the Public Services. Lijst van ActivationProcess items.",
+            "items": {
+              "$ref": "#/components/schemas/ActivationProcess"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "name",
+          "responsible"
+        ]
+      },
+      "RegisteredPerson.lastName": {
+        "title": "RegisteredPerson.lastName",
+        "type": "object",
+        "description": "Portion of the Person's full name received from the previous generation. Also called a family name because the surname indicates a family relationship.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "RegisteredPerson.firstName": {
+        "title": "RegisteredPerson.firstName",
+        "type": "object",
+        "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "RegisteredPerson": {
+        "title": "RegisteredPerson",
+        "type": "object",
+        "description": "Person whose data is registered in a register.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse RegisteredPerson)",
+            "pattern": "^RegisteredPerson$"
+          },
+          "lastName": {
+            "$ref": "#/components/schemas/RegisteredPerson.lastName"
+          },
+          "firstName": {
+            "type": "array",
+            "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/RegisteredPerson.firstName"
+            },
+            "minItems": 1
+          },
+          "registration": {
+            "type": "array",
+            "description": "Identification code of the person in the register. Lijst van Identifier items.",
+            "items": {
+              "$ref": "#/components/schemas/Identifier"
+            },
+            "minItems": 1
+          },
+          "contactInfo": {
+            "$ref": "#/components/schemas/PointOfContact"
+          },
+          "hasBirth": {
+            "$ref": "#/components/schemas/Birth"
+          },
+          "residency": {
+            "type": "array",
+            "description": "Jurisdiction within which the Residency of the Person is defined. Lijst van Residency items.",
+            "items": {
+              "$ref": "#/components/schemas/Residency"
+            },
+            "minItems": 1
+          },
+          "workPreferences": {
+            "type": "array",
+            "description": "An Individual's employment preferences. Lijst van WorkPreferences items.",
+            "items": {
+              "$ref": "#/components/schemas/WorkPreferences"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "registration",
+          "contactInfo"
+        ]
+      },
+      "Birth.date": {
+        "title": "Birth.date",
+        "type": "object",
+        "description": "Date the event occurred.",
+        "properties": {
+          "@value": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "@type": {
+            "type": "string",
+            "pattern": "^DateTime$"
+          }
+        },
+        "required": [
+          "@value",
+          "@type"
+        ]
+      },
+      "Birth": {
+        "title": "Birth",
+        "type": "object",
+        "description": "The coming into the world of a Person.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Birth)",
+            "pattern": "^Birth$"
+          },
+          "date": {
+            "$ref": "#/components/schemas/Birth.date"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          }
+        },
+        "required": [
+          "@type",
+          "date",
+          "location"
+        ]
+      },
+      "PartialTrajectory.endDate": {
+        "title": "PartialTrajectory.endDate",
+        "type": "object",
+        "description": "The date on which the Trajectory ends.",
+        "properties": {
+          "@value": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "@type": {
+            "type": "string",
+            "pattern": "^DateTime$"
+          }
+        },
+        "required": [
+          "@value",
+          "@type"
+        ]
+      },
+      "PartialTrajectory.name": {
+        "title": "PartialTrajectory.name",
+        "type": "object",
+        "description": "The name of a Trajectory.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "PartialTrajectory.startDate": {
+        "title": "PartialTrajectory.startDate",
+        "type": "object",
+        "description": "The date on which the Trajectory starts.",
+        "properties": {
+          "@value": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "@type": {
+            "type": "string",
+            "pattern": "^DateTime$"
+          }
+        },
+        "required": [
+          "@value",
+          "@type"
+        ]
+      },
+      "PartialTrajectory": {
+        "title": "PartialTrajectory",
+        "type": "object",
+        "description": "A Partial Trajectory is a part of a Trajectory that elaborates a specific part of a Trajectory.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PartialTrajectory)",
+            "pattern": "^PartialTrajectory$"
+          },
+          "endDate": {
+            "$ref": "#/components/schemas/PartialTrajectory.endDate"
+          },
+          "name": {
+            "$ref": "#/components/schemas/PartialTrajectory.name"
+          },
+          "startDate": {
+            "$ref": "#/components/schemas/PartialTrajectory.startDate"
           },
           "status": {
             "$ref": "#/components/schemas/Trajectstatustype"
@@ -523,24 +410,50 @@
           "type": {
             "$ref": "#/components/schemas/Deeltrajecttype"
           },
-          "heeftParticipatie": {
+          "hasParticipation": {
             "type": "array",
-            "description": "Lijst van Participatie items.",
+            "description": "The Agents participating in the Sharing Pathway. Lijst van Participation items.",
             "items": {
-              "$ref": "#/components/schemas/Participatie"
+              "$ref": "#/components/schemas/Participation"
             },
             "minItems": 1
           }
         },
         "required": [
           "@type",
-          "naam"
+          "name"
         ]
       },
-      "GeregistreerdeOrganisatie": {
-        "title": "GeregistreerdeOrganisatie",
+      "Person.lastName": {
+        "title": "Person.lastName",
         "type": "object",
-        "description": "Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met een FormeleOrganisatie waarbij dit statuut ook op een andere manier verkregen kan zijn.",
+        "description": "Portion of the Person's full name received from the previous generation. Also called a family name because the surname indicates a family relationship.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "Person.firstName": {
+        "title": "Person.firstName",
+        "type": "object",
+        "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "Person": {
+        "title": "Person",
+        "type": "object",
+        "description": "Natural person.",
         "properties": {
           "@id": {
             "type": "string",
@@ -548,40 +461,89 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse GeregistreerdeOrganisatie)",
-            "pattern": "^GeregistreerdeOrganisatie$"
+            "description": "Object type (klasse Person)",
+            "pattern": "^Person$"
           },
-          "voorkeursnaam": {
-            "type": "object",
-            "description": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+          "lastName": {
+            "$ref": "#/components/schemas/Person.lastName"
           },
-          "contactinfo": {
+          "firstName": {
             "type": "array",
-            "description": "Lijst van Contactpunt items.",
+            "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family. Lijst van String items.",
             "items": {
-              "$ref": "#/components/schemas/Contactpunt"
+              "$ref": "#/components/schemas/Person.firstName"
             },
             "minItems": 1
           },
-          "registratie": {
-            "$ref": "#/components/schemas/Identificator"
+          "hasBirth": {
+            "$ref": "#/components/schemas/Birth"
+          },
+          "residency": {
+            "type": "array",
+            "description": "Jurisdiction within which the Residency of the Person is defined. Lijst van Residency items.",
+            "items": {
+              "$ref": "#/components/schemas/Residency"
+            },
+            "minItems": 1
+          },
+          "contactInfo": {
+            "$ref": "#/components/schemas/PointOfContact"
+          }
+        },
+        "required": [
+          "@type",
+          "contactInfo"
+        ]
+      },
+      "RegisteredOrganization.preferredName": {
+        "title": "RegisteredOrganization.preferredName",
+        "type": "object",
+        "description": "Name by which the Organization is preferably designated.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "RegisteredOrganization": {
+        "title": "RegisteredOrganization",
+        "type": "object",
+        "description": "Organization with a legal status established by registration. Compare with a Formal Organization where this status can also be obtained in another way.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse RegisteredOrganization)",
+            "pattern": "^RegisteredOrganization$"
+          },
+          "preferredName": {
+            "$ref": "#/components/schemas/RegisteredOrganization.preferredName"
+          },
+          "contactInfo": {
+            "type": "array",
+            "description": "Information such as email, telephone... that allows the Organisation to be contacted. Lijst van PointOfContact items.",
+            "items": {
+              "$ref": "#/components/schemas/PointOfContact"
+            },
+            "minItems": 1
+          },
+          "registration": {
+            "$ref": "#/components/schemas/Identifier"
           },
           "type": {
             "type": "array",
-            "description": "Lijst van OrganisatieType items.",
+            "description": "The kind of Organization. Lijst van OrganisatieType items.",
             "items": {
               "$ref": "#/components/schemas/OrganisatieType"
             },
@@ -590,14 +552,32 @@
         },
         "required": [
           "@type",
-          "voorkeursnaam",
-          "registratie"
+          "preferredName",
+          "registration"
         ]
       },
-      "PubliekeOrganisatie": {
-        "title": "PubliekeOrganisatie",
+      "Location.placeName": {
+        "title": "Location.placeName",
         "type": "object",
-        "description": "Een Organisatie die volgens een wettelijk kader behoort tot de publieke sector, ongeacht het bestuursniveau waarop dat kader van kracht is.",
+        "description": "Name of the place or area.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "Location": {
+        "title": "Location",
+        "type": "object",
+        "description": "A spatial area or named place.",
         "properties": {
           "@id": {
             "type": "string",
@@ -605,56 +585,83 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse PubliekeOrganisatie)",
-            "pattern": "^PubliekeOrganisatie$"
+            "description": "Object type (klasse Location)",
+            "pattern": "^Location$"
           },
-          "voorkeursnaam": {
-            "type": "object",
-            "description": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+          "placeName": {
+            "$ref": "#/components/schemas/Location.placeName"
+          }
+        },
+        "required": [
+          "@type",
+          "placeName"
+        ]
+      },
+      "PublicOrganization.preferredName": {
+        "title": "PublicOrganization.preferredName",
+        "type": "object",
+        "description": "Name by which the Organization is preferably designated.",
+        "properties": {
+          "@value": {
+            "type": "string"
           },
-          "contactinfo": {
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "PublicOrganization": {
+        "title": "PublicOrganization",
+        "type": "object",
+        "description": "An Organisation that belongs to the public sector according to a legal framework, regardless of the level of government at which that framework is in force.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PublicOrganization)",
+            "pattern": "^PublicOrganization$"
+          },
+          "preferredName": {
+            "$ref": "#/components/schemas/PublicOrganization.preferredName"
+          },
+          "contactInfo": {
             "type": "array",
-            "description": "Lijst van Contactpunt items.",
+            "description": "Information such as email, telephone... that allows the Organisation to be contacted. Lijst van PointOfContact items.",
             "items": {
-              "$ref": "#/components/schemas/Contactpunt"
+              "$ref": "#/components/schemas/PointOfContact"
             },
             "minItems": 1
           },
           "type": {
             "type": "array",
-            "description": "Lijst van OrganisatieType items.",
+            "description": "The kind of Organization. Lijst van OrganisatieType items.",
             "items": {
               "$ref": "#/components/schemas/OrganisatieType"
             },
             "minItems": 1
           },
-          "identificator": {
-            "$ref": "#/components/schemas/Identificator"
+          "identifier": {
+            "$ref": "#/components/schemas/Identifier"
           }
         },
         "required": [
           "@type",
-          "voorkeursnaam",
-          "identificator"
+          "preferredName",
+          "identifier"
         ]
       },
-      "PubliekeDienstverlening": {
-        "title": "PubliekeDienstverlening",
+      "Residence": {
+        "title": "Residence",
         "type": "object",
-        "description": "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen.",
+        "description": "Place where a Person lives or stays, temporarily or otherwise.",
         "properties": {
           "@id": {
             "type": "string",
@@ -662,75 +669,22 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse PubliekeDienstverlening)",
-            "pattern": "^PubliekeDienstverlening$"
+            "description": "Object type (klasse Residence)",
+            "pattern": "^Residence$"
           },
-          "naam": {
-            "type": "object",
-            "description": "De naam van de Publieke Dienstverlening.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
-          },
-          "heeftVerantwoordelijke": {
-            "$ref": "#/components/schemas/PubliekeOrganisatie"
-          },
-          "finaliteit": {
-            "$ref": "#/components/schemas/FinaliteitType"
-          },
-          "type": {
-            "type": "array",
-            "description": "Lijst van PubliekeDienstverleningtype items.",
-            "items": {
-              "$ref": "#/components/schemas/PubliekeDienstverleningtype"
-            },
-            "minItems": 1
-          },
-          "gebruikt": {
-            "type": "array",
-            "description": "Lijst van Werkvoorkeuren items.",
-            "items": {
-              "$ref": "#/components/schemas/Werkvoorkeuren"
-            },
-            "minItems": 1
-          },
-          "heeftParticipatie": {
-            "type": "array",
-            "description": "Lijst van Participatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Participatie"
-            },
-            "minItems": 1
-          },
-          "produceert": {
-            "type": "array",
-            "description": "Lijst van Activeringstraject items.",
-            "items": {
-              "$ref": "#/components/schemas/Activeringstraject"
-            },
-            "minItems": 1
+          "residenceAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
           }
         },
         "required": [
           "@type",
-          "naam",
-          "heeftVerantwoordelijke"
+          "residenceAddress"
         ]
       },
-      "Geboorte": {
-        "title": "Geboorte",
+      "Participation": {
+        "title": "Participation",
         "type": "object",
-        "description": "Het ter wereld komen van een Persoon.",
+        "description": "The role in which an Agent participates in the Public Service.",
         "properties": {
           "@id": {
             "type": "string",
@@ -738,41 +692,56 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse Geboorte)",
-            "pattern": "^Geboorte$"
+            "description": "Object type (klasse Participation)",
+            "pattern": "^Participation$"
           },
-          "datum": {
-            "type": "object",
-            "description": "Datum waarop de gebeurtenis plaatsvond.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
+          "role": {
+            "type": "array",
+            "description": "The Agent's role in participating. Lijst van Participatietype items.",
+            "items": {
+              "$ref": "#/components/schemas/Participatietype"
+            },
+            "minItems": 1
+          },
+          "hasParticipant": {
+            "type": "array",
+            "description": "The Agents who participate. Lijst van Agent items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/RegisteredPerson"
+                },
+                {
+                  "$ref": "#/components/schemas/Person"
+                },
+                {
+                  "$ref": "#/components/schemas/RegisteredOrganization"
+                },
+                {
+                  "$ref": "#/components/schemas/PublicOrganization"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "RegisteredPerson": "#/components/schemas/RegisteredPerson",
+                  "Person": "#/components/schemas/Person",
+                  "RegisteredOrganization": "#/components/schemas/RegisteredOrganization",
+                  "PublicOrganization": "#/components/schemas/PublicOrganization"
+                }
               }
             },
-            "required": [
-              "@value",
-              "@type"
-            ]
-          },
-          "plaats": {
-            "$ref": "#/components/schemas/Plaats"
+            "minItems": 1
           }
         },
         "required": [
-          "@type",
-          "datum",
-          "plaats"
+          "@type"
         ]
       },
-      "Identificator": {
-        "title": "Identificator",
+      "WorkPreferences": {
+        "title": "WorkPreferences",
         "type": "object",
-        "description": "Informatie gebruikt om een object uniek te identificeren.",
+        "description": "The Job Seeker's preferences when looking for work.",
         "properties": {
           "@id": {
             "type": "string",
@@ -780,56 +749,159 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse Identificator)",
-            "pattern": "^Identificator$"
+            "description": "Object type (klasse WorkPreferences)",
+            "pattern": "^WorkPreferences$"
           },
-          "identificator": {
-            "type": "object",
-            "description": "String gebruikt om het object uniek te identificeren. Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@type": {
-                "type": "string"
+          "profession": {
+            "type": "array",
+            "description": "Preferences for certain professions. Lijst van OccupationalStatus items.",
+            "items": {
+              "$ref": "#/components/schemas/OccupationalStatus"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Residency": {
+        "title": "Residency",
+        "type": "object",
+        "description": "The fact that a Person resides in a place or country.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Residency)",
+            "pattern": "^Residency$"
+          },
+          "hasPlaceOfResidence": {
+            "type": "array",
+            "description": "Place where a person resides. Lijst van Residence items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Residence"
+                },
+                {
+                  "$ref": "#/components/schemas/Domicile"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Residence": "#/components/schemas/Residence",
+                  "Domicile": "#/components/schemas/Domicile"
+                }
               }
             },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Domicile": {
+        "title": "Domicile",
+        "type": "object",
+        "description": "Person's primary residence.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
           },
-          "toegekendDoor(String)": {
-            "type": "object",
-            "description": "Naam vd agent die de identificator heeft toegekend.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Domicile)",
+            "pattern": "^Domicile$"
           },
-          "toegekendOp": {
-            "type": "object",
-            "description": "Tijdstip waarop de identificator werd uitgegeven.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+          "residenceAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          }
+        },
+        "required": [
+          "@type",
+          "residenceAddress"
+        ]
+      },
+      "Identifier.identifier": {
+        "title": "Identifier.identifier",
+        "type": "object",
+        "description": "String used to uniquely identify the object. Type vd string refers to the identification system (including its version), the string itself to the actual identifier.",
+        "properties": {
+          "@value": {
+            "type": "string"
           },
-          "toegekendDoor": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value",
+          "@type"
+        ]
+      },
+      "Identifier.grantedBy(String)": {
+        "title": "Identifier.grantedBy(String)",
+        "type": "object",
+        "description": "Name of the agent who assigned the identifier.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "Identifier.grantedOn": {
+        "title": "Identifier.grantedOn",
+        "type": "object",
+        "description": "Time when the identifier was issued.",
+        "properties": {
+          "@value": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "@type": {
+            "type": "string",
+            "pattern": "^DateTime$"
+          }
+        },
+        "required": [
+          "@value",
+          "@type"
+        ]
+      },
+      "Identifier": {
+        "title": "Identifier",
+        "type": "object",
+        "description": "Information used to uniquely identify an object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identifier)",
+            "pattern": "^Identifier$"
+          },
+          "identifier": {
+            "$ref": "#/components/schemas/Identifier.identifier"
+          },
+          "grantedBy(String)": {
+            "$ref": "#/components/schemas/Identifier.grantedBy(String)"
+          },
+          "grantedOn": {
+            "$ref": "#/components/schemas/Identifier.grantedOn"
+          },
+          "awardedBy": {
             "$ref": "#/components/schemas/Agent"
           }
         },
@@ -837,10 +909,36 @@
           "@type"
         ]
       },
-      "Contactpunt": {
-        "title": "Contactpunt",
+      "PointOfContact.email": {
+        "title": "PointOfContact.email",
         "type": "object",
-        "description": "Informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren.",
+        "description": "Email address to which one can send an e-mail.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "PointOfContact.phone": {
+        "title": "PointOfContact.phone",
+        "type": "object",
+        "description": "Phone number where one can call.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "PointOfContact": {
+        "title": "PointOfContact",
+        "type": "object",
+        "description": "Information such as email, telephone, address that allows to contact someone or something.",
         "properties": {
           "@id": {
             "type": "string",
@@ -848,45 +946,138 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse Contactpunt)",
-            "pattern": "^Contactpunt$"
+            "description": "Object type (klasse PointOfContact)",
+            "pattern": "^PointOfContact$"
           },
           "email": {
-            "type": "object",
-            "description": "Email-adres waarnaar men kan mailen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/PointOfContact.email"
           },
-          "telefoon": {
-            "type": "object",
-            "description": "Telefoonnummer waarop men kan bellen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+          "phone": {
+            "$ref": "#/components/schemas/PointOfContact.phone"
           },
-          "adres": {
-            "$ref": "#/components/schemas/Adresvoorstelling"
+          "address": {
+            "$ref": "#/components/schemas/AddressPresentation"
           }
         },
         "required": [
           "@type"
         ]
       },
-      "Adresvoorstelling": {
-        "title": "Adresvoorstelling",
+      "AddressPresentation.boxNumber": {
+        "title": "AddressPresentation.boxNumber",
         "type": "object",
-        "description": "Meer leesbare voorstelling met enkel de basisgegevens van het adres, bedoeld voor het gebruik van een adres als attribuut van een ander object.",
+        "description": "Officially assigned alphanumeric code that is added to the house number to distinguish several building units, pitches, berths or plots that have the same house number. Specialization of Address Presentation: location indication for Belgian addresses.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "AddressPresentation.municipalityName": {
+        "title": "AddressPresentation.municipalityName",
+        "type": "object",
+        "description": "Municipality name of the address.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "AddressPresentation.houseNumber": {
+        "title": "AddressPresentation.houseNumber",
+        "type": "object",
+        "description": "Alphanumeric code officially assigned to building units, berths, stands or plots. Specialization of Address Presentation: location indication for Belgian addresses.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "AddressPresentation.country": {
+        "title": "AddressPresentation.country",
+        "type": "object",
+        "description": "Country in which the address is located.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "AddressPresentation.postalCode": {
+        "title": "AddressPresentation.postalCode",
+        "type": "object",
+        "description": "Code that identifies the geographical area that groups addresses for postal purposes.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "AddressPresentation.postName": {
+        "title": "AddressPresentation.postName",
+        "type": "object",
+        "description": "Name indicating the geographical area that groups addresses for postal purposes.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "AddressPresentation.streetName": {
+        "title": "AddressPresentation.streetName",
+        "type": "object",
+        "description": "Street name of the address.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "AddressPresentation": {
+        "title": "AddressPresentation",
+        "type": "object",
+        "description": "More readable presentation with only the basic data of the address, intended for the use of an address as an attribute of another object.",
         "properties": {
           "@id": {
             "type": "string",
@@ -894,122 +1085,57 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse Adresvoorstelling)",
-            "pattern": "^Adresvoorstelling$"
+            "description": "Object type (klasse AddressPresentation)",
+            "pattern": "^AddressPresentation$"
           },
-          "busnummer": {
-            "type": "object",
-            "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben. Specialisatie van Adresvoorstelling:locatieaanduiding ten behoeve van Belgische adressen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+          "boxNumber": {
+            "$ref": "#/components/schemas/AddressPresentation.boxNumber"
           },
-          "gemeentenaam": {
-            "type": "object",
-            "description": "Gemeentenaam van het adres.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+          "municipalityName": {
+            "$ref": "#/components/schemas/AddressPresentation.municipalityName"
           },
-          "huisnummer": {
-            "type": "object",
-            "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen. Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+          "houseNumber": {
+            "$ref": "#/components/schemas/AddressPresentation.houseNumber"
           },
-          "land": {
-            "type": "object",
-            "description": "Land waarin het adres gelegen is.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+          "country": {
+            "$ref": "#/components/schemas/AddressPresentation.country"
           },
-          "postcode": {
-            "type": "object",
-            "description": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+          "postalCode": {
+            "$ref": "#/components/schemas/AddressPresentation.postalCode"
           },
-          "postnaam": {
-            "type": "object",
-            "description": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+          "postName": {
+            "$ref": "#/components/schemas/AddressPresentation.postName"
           },
-          "straatnaam": {
-            "type": "object",
-            "description": "Straatnaam van het adres.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+          "streetName": {
+            "$ref": "#/components/schemas/AddressPresentation.streetName"
           }
         },
         "required": [
           "@type"
         ]
       },
-      "Beroepstoestand": {
-        "title": "Beroepstoestand",
+      "OccupationalStatus.name": {
+        "title": "OccupationalStatus.name",
         "type": "object",
-        "description": "Voorkeur voor een bepaald beroep.",
+        "description": "Name of the profession. For example: Plumber, Roofer, etc.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "OccupationalStatus": {
+        "title": "OccupationalStatus",
+        "type": "object",
+        "description": "Preference for a particular profession.",
         "properties": {
           "@id": {
             "type": "string",
@@ -1017,27 +1143,13 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse Beroepstoestand)",
-            "pattern": "^Beroepstoestand$"
+            "description": "Object type (klasse OccupationalStatus)",
+            "pattern": "^OccupationalStatus$"
           },
-          "naam": {
-            "type": "object",
-            "description": "Naam van het beroep. Bijvoorbeeld: Loodgieter, Dakwerker, etc.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+          "name": {
+            "$ref": "#/components/schemas/OccupationalStatus.name"
           },
-          "voorkeur": {
+          "preference": {
             "$ref": "#/components/schemas/Voorkeurtype"
           }
         },
@@ -1047,236 +1159,236 @@
       }
     },
     "links": {
-      "Participatie.rol": {
-        "operationId": "ParticipatieGET",
+      "ActivationProcess.status": {
+        "operationId": "ActivationProcessGET",
         "parameters": {
-          "id": "$response.body#/Participatie.rol/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Participatietype` op te halen."
-      },
-      "Participatie.heeftParticipant": {
-        "operationId": "ParticipatieGET",
-        "parameters": {
-          "id": "$response.body#/Participatie.heeftParticipant/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
-      },
-      "Verblijfplaats.verblijfsadres": {
-        "operationId": "VerblijfplaatsGET",
-        "parameters": {
-          "id": "$response.body#/Verblijfplaats.verblijfsadres/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Adresvoorstelling` op te halen."
-      },
-      "Inwonerschap.heeftVerblijfplaats": {
-        "operationId": "InwonerschapGET",
-        "parameters": {
-          "id": "$response.body#/Inwonerschap.heeftVerblijfplaats/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Verblijfplaats` op te halen."
-      },
-      "GeregistreerdPersoon.registratie": {
-        "operationId": "GeregistreerdPersoonGET",
-        "parameters": {
-          "id": "$response.body#/GeregistreerdPersoon.registratie/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
-      },
-      "GeregistreerdPersoon.contactinfo": {
-        "operationId": "GeregistreerdPersoonGET",
-        "parameters": {
-          "id": "$response.body#/GeregistreerdPersoon.contactinfo/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen."
-      },
-      "GeregistreerdPersoon.heeftGeboorte": {
-        "operationId": "GeregistreerdPersoonGET",
-        "parameters": {
-          "id": "$response.body#/GeregistreerdPersoon.heeftGeboorte/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geboorte` op te halen."
-      },
-      "GeregistreerdPersoon.inwonerschap": {
-        "operationId": "GeregistreerdPersoonGET",
-        "parameters": {
-          "id": "$response.body#/GeregistreerdPersoon.inwonerschap/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Inwonerschap` op te halen."
-      },
-      "GeregistreerdPersoon.werkvoorkeuren": {
-        "operationId": "GeregistreerdPersoonGET",
-        "parameters": {
-          "id": "$response.body#/GeregistreerdPersoon.werkvoorkeuren/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Werkvoorkeuren` op te halen."
-      },
-      "Domicilie.verblijfsadres": {
-        "operationId": "DomicilieGET",
-        "parameters": {
-          "id": "$response.body#/Domicilie.verblijfsadres/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Adresvoorstelling` op te halen."
-      },
-      "Persoon.heeftGeboorte": {
-        "operationId": "PersoonGET",
-        "parameters": {
-          "id": "$response.body#/Persoon.heeftGeboorte/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geboorte` op te halen."
-      },
-      "Persoon.inwonerschap": {
-        "operationId": "PersoonGET",
-        "parameters": {
-          "id": "$response.body#/Persoon.inwonerschap/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Inwonerschap` op te halen."
-      },
-      "Persoon.contactinfo": {
-        "operationId": "PersoonGET",
-        "parameters": {
-          "id": "$response.body#/Persoon.contactinfo/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen."
-      },
-      "Werkvoorkeuren.beroep": {
-        "operationId": "WerkvoorkeurenGET",
-        "parameters": {
-          "id": "$response.body#/Werkvoorkeuren.beroep/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Beroepstoestand` op te halen."
-      },
-      "Activeringstraject.status": {
-        "operationId": "ActiveringstrajectGET",
-        "parameters": {
-          "id": "$response.body#/Activeringstraject.status/@id"
+          "id": "$response.body#/ActivationProcess.status/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Trajectstatustype` op te halen."
       },
-      "Activeringstraject.deeltraject": {
-        "operationId": "ActiveringstrajectGET",
+      "ActivationProcess.partialTrajectory": {
+        "operationId": "ActivationProcessGET",
         "parameters": {
-          "id": "$response.body#/Activeringstraject.deeltraject/@id"
+          "id": "$response.body#/ActivationProcess.partialTrajectory/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Deeltraject` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PartialTrajectory` op te halen."
       },
-      "Activeringstraject.heeftParticipatie": {
-        "operationId": "ActiveringstrajectGET",
+      "ActivationProcess.hasParticipation": {
+        "operationId": "ActivationProcessGET",
         "parameters": {
-          "id": "$response.body#/Activeringstraject.heeftParticipatie/@id"
+          "id": "$response.body#/ActivationProcess.hasParticipation/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Participatie` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Participation` op te halen."
       },
-      "Deeltraject.status": {
-        "operationId": "DeeltrajectGET",
+      "PublicServices.responsible": {
+        "operationId": "PublicServicesGET",
         "parameters": {
-          "id": "$response.body#/Deeltraject.status/@id"
+          "id": "$response.body#/PublicServices.responsible/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Trajectstatustype` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
       },
-      "Deeltraject.type": {
-        "operationId": "DeeltrajectGET",
+      "PublicServices.finality": {
+        "operationId": "PublicServicesGET",
         "parameters": {
-          "id": "$response.body#/Deeltraject.type/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Deeltrajecttype` op te halen."
-      },
-      "Deeltraject.heeftParticipatie": {
-        "operationId": "DeeltrajectGET",
-        "parameters": {
-          "id": "$response.body#/Deeltraject.heeftParticipatie/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Participatie` op te halen."
-      },
-      "GeregistreerdeOrganisatie.contactinfo": {
-        "operationId": "GeregistreerdeOrganisatieGET",
-        "parameters": {
-          "id": "$response.body#/GeregistreerdeOrganisatie.contactinfo/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen."
-      },
-      "GeregistreerdeOrganisatie.registratie": {
-        "operationId": "GeregistreerdeOrganisatieGET",
-        "parameters": {
-          "id": "$response.body#/GeregistreerdeOrganisatie.registratie/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
-      },
-      "GeregistreerdeOrganisatie.type": {
-        "operationId": "GeregistreerdeOrganisatieGET",
-        "parameters": {
-          "id": "$response.body#/GeregistreerdeOrganisatie.type/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OrganisatieType` op te halen."
-      },
-      "PubliekeOrganisatie.contactinfo": {
-        "operationId": "PubliekeOrganisatieGET",
-        "parameters": {
-          "id": "$response.body#/PubliekeOrganisatie.contactinfo/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen."
-      },
-      "PubliekeOrganisatie.type": {
-        "operationId": "PubliekeOrganisatieGET",
-        "parameters": {
-          "id": "$response.body#/PubliekeOrganisatie.type/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OrganisatieType` op te halen."
-      },
-      "PubliekeOrganisatie.identificator": {
-        "operationId": "PubliekeOrganisatieGET",
-        "parameters": {
-          "id": "$response.body#/PubliekeOrganisatie.identificator/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
-      },
-      "PubliekeDienstverlening.heeftVerantwoordelijke": {
-        "operationId": "PubliekeDienstverleningGET",
-        "parameters": {
-          "id": "$response.body#/PubliekeDienstverlening.heeftVerantwoordelijke/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PubliekeOrganisatie` op te halen."
-      },
-      "PubliekeDienstverlening.finaliteit": {
-        "operationId": "PubliekeDienstverleningGET",
-        "parameters": {
-          "id": "$response.body#/PubliekeDienstverlening.finaliteit/@id"
+          "id": "$response.body#/PublicServices.finality/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `FinaliteitType` op te halen."
       },
-      "PubliekeDienstverlening.type": {
-        "operationId": "PubliekeDienstverleningGET",
+      "PublicServices.type": {
+        "operationId": "PublicServicesGET",
         "parameters": {
-          "id": "$response.body#/PubliekeDienstverlening.type/@id"
+          "id": "$response.body#/PublicServices.type/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PubliekeDienstverleningtype` op te halen."
       },
-      "PubliekeDienstverlening.gebruikt": {
-        "operationId": "PubliekeDienstverleningGET",
+      "PublicServices.uses": {
+        "operationId": "PublicServicesGET",
         "parameters": {
-          "id": "$response.body#/PubliekeDienstverlening.gebruikt/@id"
+          "id": "$response.body#/PublicServices.uses/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Werkvoorkeuren` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `WorkPreferences` op te halen."
       },
-      "PubliekeDienstverlening.heeftParticipatie": {
-        "operationId": "PubliekeDienstverleningGET",
+      "PublicServices.hasParticipation": {
+        "operationId": "PublicServicesGET",
         "parameters": {
-          "id": "$response.body#/PubliekeDienstverlening.heeftParticipatie/@id"
+          "id": "$response.body#/PublicServices.hasParticipation/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Participatie` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Participation` op te halen."
       },
-      "PubliekeDienstverlening.produceert": {
-        "operationId": "PubliekeDienstverleningGET",
+      "PublicServices.produces": {
+        "operationId": "PublicServicesGET",
         "parameters": {
-          "id": "$response.body#/PubliekeDienstverlening.produceert/@id"
+          "id": "$response.body#/PublicServices.produces/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Activeringstraject` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ActivationProcess` op te halen."
       },
-      "Geboorte.plaats": {
-        "operationId": "GeboorteGET",
+      "RegisteredPerson.registration": {
+        "operationId": "RegisteredPersonGET",
         "parameters": {
-          "id": "$response.body#/Geboorte.plaats/@id"
+          "id": "$response.body#/RegisteredPerson.registration/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "RegisteredPerson.contactInfo": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.contactInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PointOfContact` op te halen."
+      },
+      "RegisteredPerson.hasBirth": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.hasBirth/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Birth` op te halen."
+      },
+      "RegisteredPerson.residency": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.residency/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Residency` op te halen."
+      },
+      "RegisteredPerson.workPreferences": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.workPreferences/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `WorkPreferences` op te halen."
+      },
+      "Birth.location": {
+        "operationId": "BirthGET",
+        "parameters": {
+          "id": "$response.body#/Birth.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "PartialTrajectory.status": {
+        "operationId": "PartialTrajectoryGET",
+        "parameters": {
+          "id": "$response.body#/PartialTrajectory.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Trajectstatustype` op te halen."
+      },
+      "PartialTrajectory.type": {
+        "operationId": "PartialTrajectoryGET",
+        "parameters": {
+          "id": "$response.body#/PartialTrajectory.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Deeltrajecttype` op te halen."
+      },
+      "PartialTrajectory.hasParticipation": {
+        "operationId": "PartialTrajectoryGET",
+        "parameters": {
+          "id": "$response.body#/PartialTrajectory.hasParticipation/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Participation` op te halen."
+      },
+      "Person.hasBirth": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.hasBirth/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Birth` op te halen."
+      },
+      "Person.residency": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.residency/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Residency` op te halen."
+      },
+      "Person.contactInfo": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.contactInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PointOfContact` op te halen."
+      },
+      "RegisteredOrganization.contactInfo": {
+        "operationId": "RegisteredOrganizationGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredOrganization.contactInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PointOfContact` op te halen."
+      },
+      "RegisteredOrganization.registration": {
+        "operationId": "RegisteredOrganizationGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredOrganization.registration/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "RegisteredOrganization.type": {
+        "operationId": "RegisteredOrganizationGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredOrganization.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OrganisatieType` op te halen."
+      },
+      "PublicOrganization.contactInfo": {
+        "operationId": "PublicOrganizationGET",
+        "parameters": {
+          "id": "$response.body#/PublicOrganization.contactInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PointOfContact` op te halen."
+      },
+      "PublicOrganization.type": {
+        "operationId": "PublicOrganizationGET",
+        "parameters": {
+          "id": "$response.body#/PublicOrganization.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OrganisatieType` op te halen."
+      },
+      "PublicOrganization.identifier": {
+        "operationId": "PublicOrganizationGET",
+        "parameters": {
+          "id": "$response.body#/PublicOrganization.identifier/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Residence.residenceAddress": {
+        "operationId": "ResidenceGET",
+        "parameters": {
+          "id": "$response.body#/Residence.residenceAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      },
+      "Participation.role": {
+        "operationId": "ParticipationGET",
+        "parameters": {
+          "id": "$response.body#/Participation.role/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Participatietype` op te halen."
+      },
+      "Participation.hasParticipant": {
+        "operationId": "ParticipationGET",
+        "parameters": {
+          "id": "$response.body#/Participation.hasParticipant/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "WorkPreferences.profession": {
+        "operationId": "WorkPreferencesGET",
+        "parameters": {
+          "id": "$response.body#/WorkPreferences.profession/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OccupationalStatus` op te halen."
+      },
+      "Residency.hasPlaceOfResidence": {
+        "operationId": "ResidencyGET",
+        "parameters": {
+          "id": "$response.body#/Residency.hasPlaceOfResidence/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Residence` op te halen."
+      },
+      "Domicile.residenceAddress": {
+        "operationId": "DomicileGET",
+        "parameters": {
+          "id": "$response.body#/Domicile.residenceAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
       }
     }
   }
