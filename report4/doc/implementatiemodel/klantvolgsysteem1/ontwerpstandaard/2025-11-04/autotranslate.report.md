@@ -2,6 +2,22 @@
 
 #||# -------------------------------------  
 
+#||#  update the translation file from the memory
+
+#||# 
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# create new translation file with existing translations included  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/translation_input/KVS-R1_en.json  
+
 #||# 
 
 #||#  autotranslate the translation file for language en
@@ -14,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 38  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/autotranslation/KVS-R1_en.json  
 
@@ -24,33 +40,9 @@
 
 #||# 
 
-start reading file KVS-impl.j2
-
-#||#  start converting filename in extend blocks
-
-#||# impl
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/autotranslation/KVS-impl_en.j2
-
 #||# 
 
 #||#  autotranslate the J2 templates for language en
 
 #||# 
-
-start reading file KVS-voc.j2
-
-#||#  start converting filename in extend blocks
-
-#||# voc2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/autotranslation/KVS-voc_en.j2
 
