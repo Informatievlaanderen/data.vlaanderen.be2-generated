@@ -30,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 4  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/pieter/autotranslation/tijdstabellen-ap_en.json  
 
