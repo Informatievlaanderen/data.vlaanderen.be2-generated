@@ -30,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 0  
+#||# Number of calls: 45  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/autotranslation/zaalreservatie_en.json  
 
