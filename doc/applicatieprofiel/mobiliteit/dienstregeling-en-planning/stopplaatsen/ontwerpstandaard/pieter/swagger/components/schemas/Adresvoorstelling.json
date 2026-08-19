@@ -1,7 +1,7 @@
 {
   "title": "Adresvoorstelling",
   "type": "object",
-  "description": "Beter leesbare weergave van een gestructureerd adres met alleen de basis- of gecombineerde gegevens, bedoeld voor het gebruik van een adres als attribuut van een ander object of als label.",
+  "description": "More readable presentation with only the basic data of the address, intended for the use of an address as an attribute of another object.",
   "properties": {
     "@id": {
       "type": "string",
@@ -12,8 +12,11 @@
       "description": "Object type (klasse Adresvoorstelling)",
       "pattern": "^Adresvoorstelling$"
     },
-    "administratieveEenheidNaam": {
-      "$ref": "#/components/schemas/Adresvoorstelling.administratieveEenheidNaam"
+    "administratieveEenheidNiveau2": {
+      "$ref": "#/components/schemas/Adresvoorstelling.administratieveEenheidNiveau2"
+    },
+    "adresgebied": {
+      "$ref": "#/components/schemas/Adresvoorstelling.adresgebied"
     },
     "busnummer": {
       "$ref": "#/components/schemas/Adresvoorstelling.busnummer"
@@ -29,9 +32,17 @@
     },
     "locatieaanduiding": {
       "type": "array",
-      "description": "Een nummer of een reeks tekens die de locatie op unieke wijze identificeert binnen de relevante scope. De volledige identificatie van de locator kan een of meer locator-aanduidingen bevatten. De scope is bijvoorbeeld de straat voor een huisnummer of het huisnummer voor een busnummer. Lijst van String items.",
+      "description": "Alphanumeric code that uniquely identifies the address locator within the street, administrative unit etc. Lijst van String items.",
       "items": {
         "$ref": "#/components/schemas/Adresvoorstelling.locatieaanduiding"
+      },
+      "minItems": 1
+    },
+    "locatienaam": {
+      "type": "array",
+      "description": "Name or description of the geographical object that the address locator denotes. Lijst van LanguageString items.",
+      "items": {
+        "$ref": "#/components/schemas/Adresvoorstelling.locatienaam"
       },
       "minItems": 1
     },
@@ -50,12 +61,11 @@
     "volledigAdres": {
       "$ref": "#/components/schemas/Adresvoorstelling.volledigAdres"
     },
-    "verwijstNaar": {
-      "$ref": "#/components/schemas/Adres"
+    "administratieveEenheidNiveau1": {
+      "$ref": "#/components/schemas/Adresvoorstelling.administratieveEenheidNiveau1"
     }
   },
   "required": [
-    "@type",
-    "administratieveEenheidNaam"
+    "@type"
   ]
 }

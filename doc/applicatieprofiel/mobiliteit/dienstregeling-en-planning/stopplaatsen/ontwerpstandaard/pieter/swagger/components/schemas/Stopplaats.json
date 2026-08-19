@@ -125,6 +125,27 @@
     "postadres": {
       "$ref": "#/components/schemas/Adresvoorstelling"
     },
+    "parentSite": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Site"
+        },
+        {
+          "$ref": "#/components/schemas/Stopplaats"
+        },
+        {
+          "$ref": "#/components/schemas/PointOfInterest"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Site": "#/components/schemas/Site",
+          "Stopplaats": "#/components/schemas/Stopplaats",
+          "PointOfInterest": "#/components/schemas/PointOfInterest"
+        }
+      }
+    },
     "gelegenIn": {
       "$ref": "#/components/schemas/Land"
     },
