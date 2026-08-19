@@ -1,0 +1,214 @@
+{
+  "title": "StopPlace",
+  "type": "object",
+  "description": "A Stop Place represents a station, stop, port, airport or any physical point of access to the transport network.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse StopPlace)",
+      "pattern": "^StopPlace$"
+    },
+    "publicCode": {
+      "$ref": "#/components/schemas/StopPlace.publicCode"
+    },
+    "borderCrossing": {
+      "$ref": "#/components/schemas/StopPlace.borderCrossing"
+    },
+    "alternativeName": {
+      "type": "array",
+      "description": "Alternative name for the Stop Place. Used for Stops that have multiple aliases. Lijst van LanguageString items.",
+      "items": {
+        "$ref": "#/components/schemas/StopPlace.alternativeName"
+      },
+      "minItems": 1
+    },
+    "crossRoad": {
+      "$ref": "#/components/schemas/StopPlace.crossRoad"
+    },
+    "landmark": {
+      "$ref": "#/components/schemas/StopPlace.landmark"
+    },
+    "url": {
+      "$ref": "#/components/schemas/StopPlace.url"
+    },
+    "image": {
+      "$ref": "#/components/schemas/StopPlace.image"
+    },
+    "name": {
+      "$ref": "#/components/schemas/StopPlace.name"
+    },
+    "shortName": {
+      "$ref": "#/components/schemas/StopPlace.shortName"
+    },
+    "description": {
+      "$ref": "#/components/schemas/StopPlace.description"
+    },
+    "privateCode": {
+      "$ref": "#/components/schemas/StopPlace.privateCode"
+    },
+    "transportMode": {
+      "$ref": "#/components/schemas/Transportmode"
+    },
+    "stopPlaceType": {
+      "$ref": "#/components/schemas/StopPlaceType"
+    },
+    "accessibilityAssessment": {
+      "$ref": "#/components/schemas/AccessibilityAssessment"
+    },
+    "accessMode": {
+      "type": "array",
+      "description": "Access modes by which the Stop Place may be accessed. Lijst van AccessMode items.",
+      "items": {
+        "$ref": "#/components/schemas/AccessMode"
+      },
+      "minItems": 1
+    },
+    "roadAddress": {
+      "$ref": "#/components/schemas/AddressRepresentation"
+    },
+    "centroid": {
+      "$ref": "#/components/schemas/PointDatatype"
+    },
+    "locale": {
+      "$ref": "#/components/schemas/Locale"
+    },
+    "placeType": {
+      "$ref": "#/components/schemas/PlaceType"
+    },
+    "polygon": {
+      "$ref": "#/components/schemas/Polygon"
+    },
+    "submode": {
+      "$ref": "#/components/schemas/Transportmode"
+    },
+    "otherTransportmode": {
+      "$ref": "#/components/schemas/Transportmode"
+    },
+    "tariffZone": {
+      "type": "array",
+      "description": "Tariff zone associated with the Stop Place. Lijst van TariffZone items.",
+      "items": {
+        "$ref": "#/components/schemas/TariffZone"
+      },
+      "minItems": 1
+    },
+    "weighting": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "stopPlaceWeight": {
+      "$ref": "#/components/schemas/StopPlaceWeightType"
+    },
+    "organisation": {
+      "$ref": "#/components/schemas/Operator"
+    },
+    "level": {
+      "type": "array",
+      "description": "Floor of the Stop Place. Lijst van Level items.",
+      "items": {
+        "$ref": "#/components/schemas/Level"
+      },
+      "minItems": 1
+    },
+    "covered": {
+      "$ref": "#/components/schemas/CoveredType"
+    },
+    "gated": {
+      "$ref": "#/components/schemas/GatedType"
+    },
+    "lighting": {
+      "$ref": "#/components/schemas/LightingType"
+    },
+    "postalAddress": {
+      "$ref": "#/components/schemas/AddressRepresentation"
+    },
+    "parentSite": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Site"
+        },
+        {
+          "$ref": "#/components/schemas/StopPlace"
+        },
+        {
+          "$ref": "#/components/schemas/PointOfInterest"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Site": "#/components/schemas/Site",
+          "StopPlace": "#/components/schemas/StopPlace",
+          "PointOfInterest": "#/components/schemas/PointOfInterest"
+        }
+      }
+    },
+    "locatedIn": {
+      "$ref": "#/components/schemas/Country"
+    },
+    "scheduledStopPoint": {
+      "type": "array",
+      "description": "Scheduled Stop Point associated with the Stop Place. Lijst van ScheduledStopPoint items.",
+      "items": {
+        "$ref": "#/components/schemas/ScheduledStopPoint"
+      },
+      "minItems": 1
+    },
+    "containing": {
+      "type": "array",
+      "description": "The platforms in the stopping area, that is, platforms, jetties, bays, taxi ranks and other points of physical vehicle access. Lijst van Quay items.",
+      "items": {
+        "$ref": "#/components/schemas/Quay"
+      },
+      "minItems": 1
+    },
+    "enteredThrough": {
+      "type": "array",
+      "description": "Entrance from the Stop Place. Lijst van StopPlaceEntrance items.",
+      "items": {
+        "$ref": "#/components/schemas/StopPlaceEntrance"
+      },
+      "minItems": 1
+    },
+    "servesTopographicPlace": {
+      "type": "array",
+      "description": "Topographic Place served by the Stop Place. Lijst van TopographicPlace items.",
+      "items": {
+        "$ref": "#/components/schemas/TopographicPlace"
+      },
+      "minItems": 1
+    },
+    "for": {
+      "type": "array",
+      "description": "Topographic Place for which the Stop Place is the main terminus. Lijst van TopographicPlace items.",
+      "items": {
+        "$ref": "#/components/schemas/TopographicPlace"
+      },
+      "minItems": 1
+    },
+    "in": {
+      "type": "array",
+      "description": "Topographic Place in which the Stop Place is located. Lijst van TopographicPlace items.",
+      "items": {
+        "$ref": "#/components/schemas/TopographicPlace"
+      },
+      "minItems": 1
+    },
+    "servesPointOfInterest": {
+      "type": "array",
+      "description": "Point of Interest served by the Stop Place. Lijst van PointOfInterest items.",
+      "items": {
+        "$ref": "#/components/schemas/PointOfInterest"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "stopPlaceType",
+    "locatedIn"
+  ]
+}

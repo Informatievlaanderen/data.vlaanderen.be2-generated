@@ -11,6 +11,51 @@
       "type": "string",
       "description": "Object type (klasse Tariefzone)",
       "pattern": "^Tariefzone$"
+    },
+    "presentatie": {
+      "$ref": "#/components/schemas/Presentatie"
+    },
+    "lid": {
+      "type": "array",
+      "description": "Lijst met punten binnen de puntengroep. Lijst van Punt(Klasse) items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Punt(Klasse)"
+          },
+          {
+            "$ref": "#/components/schemas/GeplandStoppunt"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Punt(Klasse)": "#/components/schemas/Punt(Klasse)",
+            "GeplandStoppunt": "#/components/schemas/GeplandStoppunt"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "middelpunt": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Punt(Klasse)"
+        },
+        {
+          "$ref": "#/components/schemas/GeplandStoppunt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Punt(Klasse)": "#/components/schemas/Punt(Klasse)",
+          "GeplandStoppunt": "#/components/schemas/GeplandStoppunt"
+        }
+      }
+    },
+    "veelhoek": {
+      "$ref": "#/components/schemas/Polygoon"
     }
   },
   "required": [

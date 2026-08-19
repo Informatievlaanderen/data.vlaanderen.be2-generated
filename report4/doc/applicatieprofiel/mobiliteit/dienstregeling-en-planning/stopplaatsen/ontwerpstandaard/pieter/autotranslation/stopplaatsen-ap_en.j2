@@ -1,0 +1,14 @@
+{% extends "ap2_en.j2" %}
+
+{% block summary %}
+<p>The OSLO Mobility – Timetable and Planning: Stops application profile describes how to use the terms from the corresponding vocabulary to describe physical stops and their link to the logical stops in a public transport network.</p>
+<p>The standard is based on the EPIP profile on <a href="https://netex-cen.eu/">NETEX.</a></p>
+<p>Use case here is to describe stop infrastructure, stop plans and route planning based on stations, POIs or topographical places.</p>
+<p>The Scheduled Stopping Point class (discussed in more detail in OSLO – Timetable and Planning: Time Tables) describes the points where Lines stop when performing a Service Trip. They are the logical stops of a Network, the points where you can get off but also from which other stops in the Network can be reached or from where you can change to stops of an overlapping Network.</p>
+<p>Physically, these stops are realized as a Stop, so this class represents the physical stops. This can range from stop posts or shelters to entire multi-storey stations for different modes of transport.</p>
+<p>Both classes are interconnected, typical case is the multimodal situation where each Network has its own Planned Stopping Points even if they coincide spatially (e.g. a Stopping Point where both buses and trams stop). Via the relationship Stoppplaats-PlannedStoppunt, you can check which public transport services you can consume in the physical stop.</p>
+<p>It is assumed that all Planned Stopping Points (logical stops) within a Stopping Point (physical stop) are within walking distance of each other, i.e. that implicit transfers are possible between the logical stops of a Stop. The model does not yet allow for an explicit description of these connections.</p>
+<p>Another advantage of Stopping is that the physical side of the stop infrastructure can be described, and this is therefore separate from the description of the topology of the Network. Among other things, classes such as Platform and Stopplaats Access are provided. It is also possible to link Planned Stop Points directly to Platforms.</p>
+<p>A StopSite is a Site and thanks to the class StopPoint.parentSite a hierarchy of Stops can be developed. EPIP allows 3 levels: a General (multimodal), Monomodal and Platform. GroupofStops also allows to group similar Stops, e.g. according to their location (e.g. all metro stations of Brussels).</p>
+<p>Finally, we mention supporting classes such as PointOfInterest and TopografischePlaats (which allow you to plan a trip without knowing stop names).</p>
+{% endblock %}

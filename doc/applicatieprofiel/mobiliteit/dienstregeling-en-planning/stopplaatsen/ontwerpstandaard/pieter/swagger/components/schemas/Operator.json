@@ -1,7 +1,7 @@
 {
   "title": "Operator",
   "type": "object",
-  "description": "Een bedrijf dat openbaarvervoersdiensten aanbiedt.",
+  "description": "A company providing public transport services.",
   "properties": {
     "@id": {
       "type": "string",
@@ -12,91 +12,40 @@
       "description": "Object type (klasse Operator)",
       "pattern": "^Operator$"
     },
-    "land": {
-      "type": "object",
-      "description": "Verwijzing naar het land.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+    "country": {
+      "$ref": "#/components/schemas/Operator.country"
     },
-    "adres": {
-      "$ref": "#/components/schemas/Adresvoorstelling"
+    "address": {
+      "$ref": "#/components/schemas/AddressRepresentation"
     },
-    "primaireModus": {
-      "$ref": "#/components/schemas/Transportmodus"
+    "primaryMode": {
+      "$ref": "#/components/schemas/Transportmode"
     },
-    "alternatieveNaam": {
+    "alternativeName": {
       "type": "array",
-      "description": "Lijst van Taalstring items.",
+      "description": "Other name by which the organization is known. For example commercial name, informal name…. Lijst van LanguageString items.",
       "items": {
-        "type": "object",
-        "description": "Andere naam waaronder de organisatie bekend is. Bijvoorbeeld commerciële naam, informele naam….",
-        "properties": {
-          "@value": {
-            "type": "string"
-          },
-          "@language": {
-            "type": "string",
-            "pattern": "^nl$"
-          }
-        },
-        "required": [
-          "@value",
-          "@language"
-        ]
+        "$ref": "#/components/schemas/Operator.alternativeName"
       },
       "minItems": 1
     },
-    "beschrijving": {
-      "type": "object",
-      "description": "Beschrijving van de organisatie.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        },
-        "@language": {
-          "type": "string",
-          "pattern": "^nl$"
-        }
-      },
-      "required": [
-        "@value",
-        "@language"
-      ]
+    "description": {
+      "$ref": "#/components/schemas/Operator.description"
     },
-    "voorkeursnaam": {
-      "type": "object",
-      "description": "Naam waarmee de organisatie bij voorkeur wordt aangeduid.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        },
-        "@language": {
-          "type": "string",
-          "pattern": "^nl$"
-        }
-      },
-      "required": [
-        "@value",
-        "@language"
-      ]
+    "preferredName": {
+      "$ref": "#/components/schemas/Operator.preferredName"
     },
-    "contactinfo": {
+    "contactInfo": {
       "type": "array",
-      "description": "Lijst van Contactinfo items.",
+      "description": "Information such as email, telephone... that allows the Organisation to be contacted. Lijst van ContactInfo items.",
       "items": {
-        "$ref": "#/components/schemas/Contactinfo"
+        "$ref": "#/components/schemas/ContactInfo"
       },
       "minItems": 1
     },
     "type": {
       "type": "array",
-      "description": "Lijst van OrganizationType items.",
+      "description": "Type of organization. Specialization of classification (besides activity & status). Lijst van OrganizationType items.",
       "items": {
         "$ref": "#/components/schemas/OrganizationType"
       },
@@ -105,6 +54,6 @@
   },
   "required": [
     "@type",
-    "voorkeursnaam"
+    "preferredName"
   ]
 }

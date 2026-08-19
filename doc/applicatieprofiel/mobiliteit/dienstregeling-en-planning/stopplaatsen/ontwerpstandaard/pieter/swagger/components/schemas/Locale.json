@@ -1,7 +1,7 @@
 {
   "title": "Locale",
   "type": "object",
-  "description": "Parameters en eigenschappen die moeten worden gebruikt bij het verwerken en presenteren van gegevens in een land of regio (tijdzone, taal, etc.).",
+  "description": "Parameters and properties to be used when processing and presenting data in a country or region (time zone, language, etc.).",
   "properties": {
     "@id": {
       "type": "string",
@@ -12,92 +12,23 @@
       "description": "Object type (klasse Locale)",
       "pattern": "^Locale$"
     },
-    "tijdzone": {
-      "type": "object",
-      "description": "Naam van de tijdzone die is gekoppeld aan de locale.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
+    "timeZone": {
+      "$ref": "#/components/schemas/Locale.timeZone"
     },
-    "tijdzoneOffset": {
-      "type": "object",
-      "description": "Tijdzone van de locale als offset in uren van GMT. Kan plus of min zijn. Kan decimaal zijn voor fractionele verschillen.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Decimal$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+    "timeZoneOffset": {
+      "$ref": "#/components/schemas/Locale.timeZoneOffset"
     },
-    "zomertijdzoneOffset": {
-      "type": "object",
-      "description": "Tijdzone als offset in uren of deeluren van GMT. Kan plus of min zijn.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "pattern": "(+|-)?([0-9]+(.[0-9]*)?|.[0-9]+)"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Decimal$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+    "summerTimeZoneOffset": {
+      "$ref": "#/components/schemas/Locale.summerTimeZoneOffset"
     },
-    "standaardTaal": {
-      "type": "object",
-      "description": "Standaardtaal van de locale, Bijvoorbeeld en, fr, de, etc.",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "pattern": "^[a-z]{2,3}(-[A-Z]{2})?"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^Language$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
+    "defaultLanguage": {
+      "$ref": "#/components/schemas/Locale.defaultLanguage"
     },
-    "taal": {
+    "language": {
       "type": "array",
-      "description": "Lijst van Taal items.",
+      "description": "Other languages supported in the Locale. Lijst van Language items.",
       "items": {
-        "type": "object",
-        "description": "Andere talen ondersteund in de locale.",
-        "properties": {
-          "@value": {
-            "type": "string",
-            "pattern": "^[a-z]{2,3}(-[A-Z]{2})?"
-          },
-          "@type": {
-            "type": "string",
-            "pattern": "^Language$"
-          }
-        },
-        "required": [
-          "@value",
-          "@type"
-        ]
+        "$ref": "#/components/schemas/Locale.language"
       },
       "minItems": 1
     }
