@@ -20,3 +20,23 @@ WARNING The entered language values are the same!
 
 #||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/mobiliteit/dienstregeling-en-planning/ontwerpstandaard/pieter/translation/dienstregeling-en-planning_nl.json  
 
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/mobiliteit/dienstregeling-en-planning/ontwerpstandaard/pieter/translation/dienstregeling-en-planning_en.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/mobiliteit/dienstregeling-en-planning/ontwerpstandaard/pieter/translation/dienstregeling-en-planning_en.json
+
+TRANSLATIONFILE: dienstregeling-en-planning_en.json
+
+#||# translate for language en  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/mobiliteit/dienstregeling-en-planning/ontwerpstandaard/pieter/translation/dienstregeling-en-planning_en.json  
+
