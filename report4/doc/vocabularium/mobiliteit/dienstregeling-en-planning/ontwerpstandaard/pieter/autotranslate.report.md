@@ -30,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 4  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/mobiliteit/dienstregeling-en-planning/ontwerpstandaard/pieter/autotranslation/dienstregeling-en-planning_en.json  
 
