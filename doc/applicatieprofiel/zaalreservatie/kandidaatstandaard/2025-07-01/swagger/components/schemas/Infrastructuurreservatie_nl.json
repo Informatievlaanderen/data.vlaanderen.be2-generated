@@ -1,0 +1,100 @@
+{
+  "title": "Infrastructuurreservatie",
+  "type": "object",
+  "description": "Activiteit waarbij een bepaalde dienst, ruimte, of object vooraf wordt gereserveerd voor toekomstig gebruik.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Infrastructuurreservatie)",
+      "pattern": "^Infrastructuurreservatie$"
+    },
+    "gereserveerdDoor": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Organisatie"
+        },
+        {
+          "$ref": "#/components/schemas/Persoon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Organisatie": "#/components/schemas/Organisatie",
+          "Persoon": "#/components/schemas/Persoon"
+        }
+      }
+    },
+    "gereserveerdVoor": {
+      "type": "array",
+      "description": "De Activiteit waarvoor de Infrastructuur is voorbehouden. Lijst van Activiteit items.",
+      "items": {
+        "$ref": "#/components/schemas/Activiteit"
+      },
+      "minItems": 1
+    },
+    "periode": {
+      "type": "array",
+      "description": "De hoeveelheid tijd waarvoor de Reservatie geldt. Lijst van Periode items.",
+      "items": {
+        "$ref": "#/components/schemas/Periode"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "array",
+      "description": "Huidige toestand, positie, of situatie van een persoon, plaats, object, systeem, of proces op een bepaald moment. Lijst van Infrastructuurreservatiestatus items.",
+      "items": {
+        "$ref": "#/components/schemas/Infrastructuurreservatiestatus"
+      },
+      "minItems": 1
+    },
+    "buffer": {
+      "type": "array",
+      "description": "Periode die tijd of ruimte creëert voor een proces of handeling. In verband met zaalreservatie wordt een \"buffer\" gebruikt om te voorkomen dat twee evenementen of vergaderingen direct na elkaar gepland worden in dezelfde ruimte. Het is een vaste tijdspanne die na een zaalreservering niet gereserveerd kan worden. Bijvoorbeeld, als een zaal gereserveerd is tussen 10u en 17u en ze kan slechts eenmaal gereserveerd worden per dag, dan is de buffer 8u-10u en 17h-18h (openingsuren van de zaal). Lijst van Periode items.",
+      "items": {
+        "$ref": "#/components/schemas/Periode"
+      },
+      "minItems": 1
+    },
+    "plaatsbeschrijving": {
+      "type": "array",
+      "description": "Gedetailleerd en systematisch vastleggen van de kenmerken, toestand, en specifieke details van een locatie of ruimte. Lijst van Plaatsbeschrijving items.",
+      "items": {
+        "$ref": "#/components/schemas/Plaatsbeschrijving"
+      },
+      "minItems": 1
+    },
+    "infrastructuur": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Infrastructuur"
+        },
+        {
+          "$ref": "#/components/schemas/Binnenruimte"
+        },
+        {
+          "$ref": "#/components/schemas/Buitenruimte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Infrastructuur": "#/components/schemas/Infrastructuur",
+          "Binnenruimte": "#/components/schemas/Binnenruimte",
+          "Buitenruimte": "#/components/schemas/Buitenruimte"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "gereserveerdDoor",
+    "status",
+    "infrastructuur"
+  ]
+}

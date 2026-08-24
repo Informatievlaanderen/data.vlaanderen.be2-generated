@@ -1,0 +1,45 @@
+{
+  "title": "Capaciteit",
+  "type": "object",
+  "description": "Het bevattingsvermogen of de bezetting van een infrastructuur.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Capaciteit)",
+      "pattern": "^Capaciteit$"
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/Capaciteit.beschrijving"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/Capaciteit.waarde"
+    },
+    "eenheid": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Concept"
+        },
+        {
+          "$ref": "#/components/schemas/Eenheid"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Concept": "#/components/schemas/Concept",
+          "Eenheid": "#/components/schemas/Eenheid"
+        }
+      }
+    },
+    "type": {
+      "$ref": "#/components/schemas/Capaciteittype"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

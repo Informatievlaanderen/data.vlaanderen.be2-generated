@@ -1,0 +1,115 @@
+{
+  "title": "InfrastructureReservationService",
+  "type": "object",
+  "description": "Service that allows you to reserve infrastructure for a specific period of time.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse InfrastructureReservationService)",
+      "pattern": "^InfrastructureReservationService$"
+    },
+    "title": {
+      "$ref": "#/components/schemas/InfrastructureReservationService.title"
+    },
+    "alternativeLabel": {
+      "type": "array",
+      "description": "Another name by which the service is known. For example: commercial name, informal name, etc. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/InfrastructureReservationService.alternativeLabel"
+      },
+      "minItems": 1
+    },
+    "description": {
+      "$ref": "#/components/schemas/InfrastructureReservationService.description"
+    },
+    "keyword": {
+      "type": "array",
+      "description": "Keyword, term, concept that describes the public service. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/InfrastructureReservationService.keyword"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Type of public service. E.g. protection, health, recreation, culture and religion, economic affairs. Lijst van TypeOfService items.",
+      "items": {
+        "$ref": "#/components/schemas/TypeOfService"
+      },
+      "minItems": 1
+    },
+    "language": {
+      "type": "array",
+      "description": "Language in which a public service is offered. Lijst van LanguageCode items.",
+      "items": {
+        "$ref": "#/components/schemas/LanguageCode"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "$ref": "#/components/schemas/StatusType"
+    },
+    "spatialCoverage": {
+      "type": "array",
+      "description": "Area in which public services are available. Typically the area of operation of the responsible public organization. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "hasContactPoint": {
+      "$ref": "#/components/schemas/PointOfContact"
+    },
+    "infrastructure": {
+      "type": "array",
+      "description": "Immovable or movable facilities. Lijst van Infrastructure items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Infrastructure"
+          },
+          {
+            "$ref": "#/components/schemas/InteriorSpace"
+          },
+          {
+            "$ref": "#/components/schemas/OutdoorSpace"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Infrastructure": "#/components/schemas/Infrastructure",
+            "InteriorSpace": "#/components/schemas/InteriorSpace",
+            "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "hasAResponsiblePerson": {
+      "type": "array",
+      "description": "The responsible Organisation that operates the reservation service. Lijst van PublicOrganization items.",
+      "items": {
+        "$ref": "#/components/schemas/PublicOrganization"
+      },
+      "minItems": 1
+    },
+    "produces": {
+      "type": "array",
+      "description": "The actual result of the performance of the public service. For example: a recognition, financial benefit, code, physical object, etc. Lijst van InfrastructureReservation items.",
+      "items": {
+        "$ref": "#/components/schemas/InfrastructureReservation"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "title",
+    "description"
+  ]
+}

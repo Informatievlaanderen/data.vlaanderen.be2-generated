@@ -1,0 +1,44 @@
+{
+  "title": "Ownership",
+  "type": "object",
+  "description": "The one to whom the Infrastructure belongs in a way.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Ownership)",
+      "pattern": "^Ownership$"
+    },
+    "owner": {
+      "type": "array",
+      "description": "The Agent to whom the Infrastructure belongs. Lijst van Agent items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Organization"
+          },
+          {
+            "$ref": "#/components/schemas/Person"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Organization": "#/components/schemas/Organization",
+            "Person": "#/components/schemas/Person"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/OwnershipType"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

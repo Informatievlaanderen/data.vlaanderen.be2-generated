@@ -1,0 +1,50 @@
+{
+  "title": "Dimensie",
+  "type": "object",
+  "description": "Kwantificeerbare eigenschap van een Entiteit.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dimensie)",
+      "pattern": "^Dimensie$"
+    },
+    "beschrijving": {
+      "type": "array",
+      "description": "Beschrijving van de Dimensie. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Dimensie.beschrijving"
+      },
+      "minItems": 1
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/Dimensie.waarde"
+    },
+    "eenheid": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Concept"
+        },
+        {
+          "$ref": "#/components/schemas/Eenheid"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Concept": "#/components/schemas/Concept",
+          "Eenheid": "#/components/schemas/Eenheid"
+        }
+      }
+    },
+    "type": {
+      "$ref": "#/components/schemas/Dimensietype"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
