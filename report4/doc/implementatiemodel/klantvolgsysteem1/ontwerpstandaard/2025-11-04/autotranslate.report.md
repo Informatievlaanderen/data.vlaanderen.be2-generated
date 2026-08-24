@@ -30,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 38  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/autotranslation/KVS-R1_en.json  
 
