@@ -14,31 +14,27 @@
 
 #||# create new translation file with existing translations included  
 
-http://schema.org/opens
+https://purl.eu/ns/mobility/timetables-and-planning#TimingpointStatus
 
 new term introduced, no translation found
 
-http://schema.org/closes
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
-http://schema.org/dayOfWeek
+http://www.w3.org/2000/01/rdf-schema#Literal
 
 new term introduced, no translation found
 
-http://schema.org/validFrom
+https://www.w3.org/2001/XMLSchema#gmonth
 
 new term introduced, no translation found
 
-http://schema.org/validThrough
+https://www.w3.org/2001/XMLSchema#gday
 
 new term introduced, no translation found
 
-http://www.w3.org/1999/02/22-rdf-syntax-ns#langString
-
-new term introduced, no translation found
-
-http://schema.org/OpeningHoursSpecification
+https://www.w3.org/2001/XMLSchema#gmonthday
 
 new term introduced, no translation found
 
@@ -58,7 +54,7 @@ new term introduced, no translation found
 
 #||# start translating json  
 
-#||# Number of calls: 0  
+#||# Number of calls: 6  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning/ontwerpstandaard/pieter/autotranslation/voertuigplanning-ap_en.json  
 
