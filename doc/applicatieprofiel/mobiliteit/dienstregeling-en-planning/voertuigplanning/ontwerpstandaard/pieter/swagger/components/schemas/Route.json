@@ -1,0 +1,67 @@
+{
+  "title": "Route",
+  "type": "object",
+  "description": "Een geordende lijst van gelokaliseerde Punten, welke een enkel pad doorheen een wegen- (of spoorwegen-) netwerk definiëren. Een Route kan meerdere keren doorheen hetzelfde Punt passeren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Route)",
+      "pattern": "^Route$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Route.naam"
+    },
+    "richtingtype": {
+      "$ref": "#/components/schemas/RichtingType"
+    },
+    "door": {
+      "type": "array",
+      "description": "Punten waardoor de Route gaat. Lijst van PuntOpRoute items.",
+      "items": {
+        "$ref": "#/components/schemas/PuntOpRoute"
+      },
+      "minItems": 2
+    },
+    "richting": {
+      "$ref": "#/components/schemas/Richting"
+    },
+    "afstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "lijn": {
+      "$ref": "#/components/schemas/Lijn"
+    },
+    "gedektDoor": {
+      "type": "array",
+      "description": "Ritpatroon dat de route bedekt. Lijst van Ritpatroon items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/DienstRitpatroon"
+          },
+          {
+            "$ref": "#/components/schemas/OnbeladenRitpatroon"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "DienstRitpatroon": "#/components/schemas/DienstRitpatroon",
+            "OnbeladenRitpatroon": "#/components/schemas/OnbeladenRitpatroon"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "omgekeerdeRoute": {
+      "$ref": "#/components/schemas/Route"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

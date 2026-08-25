@@ -1,0 +1,58 @@
+{
+  "title": "GeregistreerdeOrganisatie",
+  "type": "object",
+  "description": "Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met een formele organisatie waarbij dit statuut ook op een andere manier verkregen kan zijn.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GeregistreerdeOrganisatie)",
+      "pattern": "^GeregistreerdeOrganisatie$"
+    },
+    "wettelijkeNaam": {
+      "$ref": "#/components/schemas/GeregistreerdeOrganisatie.wettelijkeNaam"
+    },
+    "registratie": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "voorkeursnaam": {
+      "$ref": "#/components/schemas/GeregistreerdeOrganisatie.voorkeursnaam"
+    },
+    "alternatieveNaam": {
+      "type": "array",
+      "description": "Andere naam waaronder de organisatie bekend is. Bijvoorbeeld commerciële naam, informele naam…. Lijst van Taalstring items.",
+      "items": {
+        "$ref": "#/components/schemas/GeregistreerdeOrganisatie.alternatieveNaam"
+      },
+      "minItems": 1
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/GeregistreerdeOrganisatie.beschrijving"
+    },
+    "contactinfo": {
+      "type": "array",
+      "description": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren. Lijst van Contactinfo items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactinfo"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Soort organisatie. Specialisatie van classificatie (naast activiteit & status). Lijst van OrganizationType items.",
+      "items": {
+        "$ref": "#/components/schemas/OrganizationType"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "wettelijkeNaam",
+    "registratie",
+    "voorkeursnaam"
+  ]
+}

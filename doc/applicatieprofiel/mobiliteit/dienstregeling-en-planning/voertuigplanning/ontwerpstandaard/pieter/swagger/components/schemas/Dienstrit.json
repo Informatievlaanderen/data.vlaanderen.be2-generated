@@ -1,0 +1,135 @@
+{
+  "title": "Dienstrit",
+  "type": "object",
+  "description": "Een Dienstrit is een Rit waarop het passagiers toegelaten is om aan Stopplaatsen op of af te stappen van voertuigen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dienstrit)",
+      "pattern": "^Dienstrit$"
+    },
+    "operator": {
+      "$ref": "#/components/schemas/Operator"
+    },
+    "treinnummer": {
+      "type": "array",
+      "description": "Treinnummers - afgeleid door middel van ritdelen van een rit - alleen voor een multi-part-ritten. Lijst van Treinnummer items.",
+      "items": {
+        "$ref": "#/components/schemas/Treinnummer"
+      },
+      "minItems": 1
+    },
+    "faciliteit": {
+      "type": "array",
+      "description": "Faciliteit op de dienstrit. Lijst van DienstFaciliteitenset items.",
+      "items": {
+        "$ref": "#/components/schemas/DienstFaciliteitenset"
+      },
+      "minItems": 1
+    },
+    "treingrootte": {
+      "$ref": "#/components/schemas/Treingrootte"
+    },
+    "vertrektijd": {
+      "$ref": "#/components/schemas/Dienstrit.vertrektijd"
+    },
+    "ritduur": {
+      "$ref": "#/components/schemas/Dienstrit.ritduur"
+    },
+    "vertrekdagOffset": {
+      "$ref": "#/components/schemas/Dienstrit.vertrekdagOffset"
+    },
+    "opmerking": {
+      "type": "array",
+      "description": "Kennisgeving relevant voor de hele rit. Lijst van Opmerking items.",
+      "items": {
+        "$ref": "#/components/schemas/Opmerking"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdOp": {
+      "type": "array",
+      "description": "Dagtype waarop de rit wordt gewerkt. Lijst van Dagtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Dagtype"
+      },
+      "minItems": 1
+    },
+    "transportmodus": {
+      "$ref": "#/components/schemas/Transportmodus"
+    },
+    "transportsubmodus": {
+      "$ref": "#/components/schemas/Transportmodus"
+    },
+    "voertuigtype": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Voertuigtype"
+        },
+        {
+          "$ref": "#/components/schemas/Trein"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Voertuigtype": "#/components/schemas/Voertuigtype",
+          "Trein": "#/components/schemas/Trein"
+        }
+      }
+    },
+    "passeerdeOp": {
+      "type": "array",
+      "description": "Tijd waarop de voertuigreis passeert. Lijst van GeplandeDoorkomsttijd items.",
+      "items": {
+        "$ref": "#/components/schemas/GeplandeDoorkomsttijd"
+      },
+      "minItems": 1
+    },
+    "ritdeel": {
+      "type": "array",
+      "description": "Reis een deel van een reis. Alleen voor een multi-part-reis. Lijst van Ritdeel items.",
+      "items": {
+        "$ref": "#/components/schemas/Ritdeel"
+      },
+      "minItems": 1
+    },
+    "gemaaktMet": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/DienstRitpatroon"
+        },
+        {
+          "$ref": "#/components/schemas/OnbeladenRitpatroon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "DienstRitpatroon": "#/components/schemas/DienstRitpatroon",
+          "OnbeladenRitpatroon": "#/components/schemas/OnbeladenRitpatroon"
+        }
+      }
+    },
+    "in": {
+      "$ref": "#/components/schemas/Blok"
+    },
+    "deel": {
+      "type": "array",
+      "description": "TE DOEN. Lijst van Ritdeel items.",
+      "items": {
+        "$ref": "#/components/schemas/Ritdeel"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "uitgevoerdOp",
+    "gemaaktMet"
+  ]
+}

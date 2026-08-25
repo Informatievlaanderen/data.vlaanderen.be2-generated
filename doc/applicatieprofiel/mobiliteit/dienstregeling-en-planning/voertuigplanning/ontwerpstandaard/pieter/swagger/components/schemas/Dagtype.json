@@ -1,0 +1,58 @@
+{
+  "title": "Dagtype",
+  "type": "object",
+  "description": "Een type dag gekenmerkt door een of meer eigenschappen die van invloed zijn op het openbaar vervoer.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dagtype)",
+      "pattern": "^Dagtype$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Dagtype.naam"
+    },
+    "korteNaam": {
+      "$ref": "#/components/schemas/Dagtype.korteNaam"
+    },
+    "vroegsteTijd": {
+      "$ref": "#/components/schemas/Dagtype.vroegsteTijd"
+    },
+    "daglengte": {
+      "$ref": "#/components/schemas/Dagtype.daglengte"
+    },
+    "omschrijving": {
+      "$ref": "#/components/schemas/Dagtype.omschrijving"
+    },
+    "gedefinieerdDoor": {
+      "type": "array",
+      "description": "Dienstkalender die de dagtype definieert. Lijst van Dienstkalender items.",
+      "items": {
+        "$ref": "#/components/schemas/Dienstkalender"
+      },
+      "minItems": 1
+    },
+    "beschrevenDoor": {
+      "type": "array",
+      "description": "Eigenschap van de dag die wordt gebruikt om het dagtype te beschrijven. Lijst van EigenschapVanDag items.",
+      "items": {
+        "$ref": "#/components/schemas/EigenschapVanDag"
+      },
+      "minItems": 1
+    },
+    "timeband": {
+      "type": "array",
+      "description": "Tijdband geassocieerd met het dagtype. Lijst van Tijdsband items.",
+      "items": {
+        "$ref": "#/components/schemas/Tijdsband"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

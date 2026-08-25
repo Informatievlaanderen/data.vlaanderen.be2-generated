@@ -1,0 +1,50 @@
+{
+  "title": "FormeleOrganisatie",
+  "type": "object",
+  "description": "Een erkende organisatie, erkend in brede zin of meer specifiek in juridische zin met bijbehorende rechten en plichten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse FormeleOrganisatie)",
+      "pattern": "^FormeleOrganisatie$"
+    },
+    "voorkeursnaam": {
+      "$ref": "#/components/schemas/FormeleOrganisatie.voorkeursnaam"
+    },
+    "alternatieveNaam": {
+      "type": "array",
+      "description": "Andere naam waaronder de organisatie bekend is. Bijvoorbeeld commerciële naam, informele naam…. Lijst van Taalstring items.",
+      "items": {
+        "$ref": "#/components/schemas/FormeleOrganisatie.alternatieveNaam"
+      },
+      "minItems": 1
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/FormeleOrganisatie.beschrijving"
+    },
+    "contactinfo": {
+      "type": "array",
+      "description": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren. Lijst van Contactinfo items.",
+      "items": {
+        "$ref": "#/components/schemas/Contactinfo"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Soort organisatie. Specialisatie van classificatie (naast activiteit & status). Lijst van OrganizationType items.",
+      "items": {
+        "$ref": "#/components/schemas/OrganizationType"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "voorkeursnaam"
+  ]
+}

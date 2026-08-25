@@ -1,0 +1,123 @@
+{
+  "title": "Blok",
+  "type": "object",
+  "description": "Het werk van een voertuig vanaf het moment dat het een parkeerplaats verlaat totdat het de volgende keer op een parkeerplaats parkeert.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Blok)",
+      "pattern": "^Blok$"
+    },
+    "starttijd": {
+      "$ref": "#/components/schemas/Blok.starttijd"
+    },
+    "eindtijd": {
+      "$ref": "#/components/schemas/Blok.eindtijd"
+    },
+    "starttijdDagOffset": {
+      "$ref": "#/components/schemas/Blok.starttijdDagOffset"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Blok.naam"
+    },
+    "omschrijving": {
+      "$ref": "#/components/schemas/Blok.omschrijving"
+    },
+    "voorbereidingsduratie": {
+      "$ref": "#/components/schemas/Blok.voorbereidingsduratie"
+    },
+    "afhandelingsduratie": {
+      "$ref": "#/components/schemas/Blok.afhandelingsduratie"
+    },
+    "eindtijdDagOffset": {
+      "$ref": "#/components/schemas/Blok.eindtijdDagOffset"
+    },
+    "uitgevoerdOp": {
+      "$ref": "#/components/schemas/Dagtype"
+    },
+    "bevat": {
+      "type": "array",
+      "description": "Ritten opgenomen in het blok. Lijst van Rit items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Dienstrit"
+          },
+          {
+            "$ref": "#/components/schemas/OnbeladenRit"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Dienstrit": "#/components/schemas/Dienstrit",
+            "OnbeladenRit": "#/components/schemas/OnbeladenRit"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "eindigtBij": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Parkeerplaats"
+        },
+        {
+          "$ref": "#/components/schemas/Garagepunt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Parkeerplaats": "#/components/schemas/Parkeerplaats",
+          "Garagepunt": "#/components/schemas/Garagepunt"
+        }
+      }
+    },
+    "startBij": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Parkeerplaats"
+        },
+        {
+          "$ref": "#/components/schemas/Garagepunt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Parkeerplaats": "#/components/schemas/Parkeerplaats",
+          "Garagepunt": "#/components/schemas/Garagepunt"
+        }
+      }
+    },
+    "gebruikmakendVan": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Voertuigtype"
+        },
+        {
+          "$ref": "#/components/schemas/Trein"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Voertuigtype": "#/components/schemas/Voertuigtype",
+          "Trein": "#/components/schemas/Trein"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "uitgevoerdOp",
+    "eindigtBij",
+    "startBij",
+    "gebruikmakendVan"
+  ]
+}
