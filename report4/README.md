@@ -1,41 +1,64 @@
 | Execution | Existence | Support |
 | --- | --- | --- |
-| [commit eaf58c07f11f61c4d9bd47ac762aaa7a3abae318](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/eaf58c07f11f61c4d9bd47ac762aaa7a3abae318) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
+| [commit a0103b5e0b41d0471bc9940999f7365e075d026f](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/a0103b5e0b41d0471bc9940999f7365e075d026f) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
  
-### Legende
+# Calculate statistics
 
-<details>
+This repository holds a number of scripts to calculate the statistics of a generated repository.
 
-| Term | Betekenis |
-| --- | --- |
-| mrg | Merge translations to create for each language a single source of truth |
-| aut | Autotranslate the translation files, if active |
-| uml | Extraction of the data out of the UML |
-| rdf | RDF file generation |
-| issu | Open Issues |
-| trns | Translation files generation, based on existing translation files |
-| shcl | SHACL file generation |
-| web | Extract all data model for html rendering  |
-| rspc | Render html using specific RESPEC integration  |
-| stak | Validate and convert the stakeholders |
-| tag | Branchtag check |
-| val | Validate the jsonld |
-| ctx | JSON-LD Context file generation |
-| bundle | Resource bundling |
-| met | Extract metadata for html rendering |
-| html | Render html using generic nunjuncks |
-| swag | Swagger file generation |
+There are 2 Dockers defined in this:
 
-</details>
+1. A testing docker to evaluate the scripts locally
+2. A CircleCI docker that can be used to evaluate a repository
 
 
-| Specification | tag | uml | val | stak | trns | aut | mrg | web | met | html | rspc | ctx | rdf | shcl | swag | bundle | issu |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [vocabularium/voertuigregistratie/ ontwerpstandaard/2026-08-25](https://data.test-vlaanderen.be/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25) <br/> [&#9883;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25) [&#9884;](https://data.test-vlaanderen.be/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25) | [&#9736;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/branchtag.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/merge.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/generator-respec.report.md) |  | [&#9736;](/report4/doc/vocabularium/voertuigregistratie/ontwerpstandaard/2026-08-25/generator-rdf.report.md) |  |  |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-trajectcontrole/issues) |
-| [applicatieprofiel/bestadd/ ontwerpstandaard/2023-04-03](https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03) <br/> [&#9883;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03) [&#9884;](https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03) | [&#9736;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/branchtag.report.md) | [&#9729;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/jsonld-validation.report.md) | [&#9728;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/translate.report.md) |  | [&#9728;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/merge.report.md) | [&#9728;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/metadata.report.md) | [&#9728;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/generator-html.report.md) | [&#9728;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/generator-respec.report.md) | [&#9736;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/generator-jsonld-context.report.md) |  | [&#9736;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/generator-shacl.report.md) | [&#9736;](/report4/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/generator-swagger.report.md) |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-test//issues) |
-| [vocabularium/gebruiksperceel/ 2026-08-04](https://data.test-vlaanderen.be/doc/vocabularium/gebruiksperceel/2026-08-04) <br/> [&#9883;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04) [&#9884;](https://data.test-vlaanderen.be/doc/vocabularium/gebruiksperceel/2026-08-04) | [&#9736;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/branchtag.report.md) | [&#9728;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/merge.report.md) | [&#9728;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/generator-respec.report.md) |  | [&#9736;](/report4/doc/vocabularium/gebruiksperceel/2026-08-04/generator-rdf.report.md) |  |  |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-landbouwgebruiksperceel//issues) |
-| [vocabularium/voertuigregistratie/ 2026-07-31](https://data.test-vlaanderen.be/doc/vocabularium/voertuigregistratie/2026-07-31) <br/> [&#9883;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31) [&#9884;](https://data.test-vlaanderen.be/doc/vocabularium/voertuigregistratie/2026-07-31) |  | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/oslo-converter-ea.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/merge.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/generator-respec.report.md) |  | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-31/generator-rdf.report.md) |  |  |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-trajectcontrole//issues) |
-| [implementatiemodel/wegenregister/ ontwerpstandaard/2026-09-01](https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01) <br/> [&#9883;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01) [&#9884;](https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01) | [&#9736;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/branchtag.report.md) | [&#9729;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/jsonld-validation.report.md) | [&#9728;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/translate.report.md) |  | [&#9728;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/merge.report.md) | [&#9728;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/metadata.report.md) | [&#9728;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/generator-html.report.md) | [&#9728;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/generator-respec.report.md) | [&#9729;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/generator-jsonld-context.report.md) |  | [&#9728;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/generator-shacl.report.md) | [&#9736;](/report4/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01/generator-swagger.report.md) |  | [ 5 ](https://github.com/Informatievlaanderen/OSLOthema-weg/issues) |
-| [vocabularium/voertuigregistratie/ 2026-07-24](https://data.test-vlaanderen.be/doc/vocabularium/voertuigregistratie/2026-07-24) <br/> [&#9883;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24) [&#9884;](https://data.test-vlaanderen.be/doc/vocabularium/voertuigregistratie/2026-07-24) | [&#9736;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/branchtag.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/oslo-converter-ea.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/merge.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/generator-respec.report.md) |  | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/2026-07-24/generator-rdf.report.md) |  |  |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-trajectcontrole//issues) |
-| [vocabularium/voertuigregistratie/ v0.1.0](https://data.test-vlaanderen.be/doc/vocabularium/voertuigregistratie/v0.1.0) <br/> [&#9883;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0) [&#9884;](https://data.test-vlaanderen.be/doc/vocabularium/voertuigregistratie/v0.1.0) | [&#9736;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/branchtag.report.md) | [&#9729;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/merge.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/generator-respec.report.md) |  | [&#9728;](/report4/doc/vocabularium/voertuigregistratie/v0.1.0/generator-rdf.report.md) |  |  |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-trajectcontrole//issues) |
-| [implementatiemodel/landbouwgebruiksperceel/ kandidaatstandaard/2026-07-24](https://data.test-vlaanderen.be/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24) <br/> [&#9883;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24) [&#9884;](https://data.test-vlaanderen.be/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24) | [&#9736;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/branchtag.report.md) | [&#9729;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/jsonld-validation.report.md) | [&#9728;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/translate.report.md) |  | [&#9728;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/merge.report.md) | [&#9728;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/metadata.report.md) | [&#9728;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/generator-html.report.md) | [&#9728;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/generator-respec.report.md) | [&#9729;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/generator-jsonld-context.report.md) |  | [&#9729;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/generator-shacl.report.md) | [&#9736;](/report4/doc/implementatiemodel/landbouwgebruiksperceel/kandidaatstandaard/2026-07-24/generator-swagger.report.md) |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-landbouwgebruiksperceel/issues) |
+# Deployment of CircleCI solution
+
+Let GENERATED be the source generated repository.
+For that repository a new repository STATISTICS has to be created.
+The objective is that the CircleCI that will be deployed in the GENERATED repository will store the resulting statistics on the STATISTICS repository.
+
+It also may be an option to use for STATISTICS a branch on the GENERATED.
+
+
+# the supported statistics
+
+
+Let NAMESPACE be the namespace on which the terms of GENERATED are published.
+
+
+1. the number of classes published in NAMESPACE 
+2. the number of properties publised in NAMESPACE 
+3. the number of classes using a different namespace as NAMESPACE (external terms)
+4. the number of properties using a different namespace as NAMESPACE (external terms)
+5. the total number of terms (sum of the above)
+6. the number of authors
+7. the number of editors
+8. the number of contributors
+9. the total number of participants (less of equal to the sum of the above)
+10. the organisations and their number of participants (grouped by their name)
+11. the total number of organisations contributing
+12. the number of specifications per status and per year / month (only for the aggregation)
+
+
+## considerations
+
+The statistics are calculated per specifications and as an aggregated statistic.
+The aggregated statistic is not equal to the mathematical sum of the numbers of each specification specific statistic.
+This is because there is an high overlap between the values between the specifications.
+The aggregated statistics are therefore substantially lower than the mathematical sum.
+
+The aggregated statistics also contain an overview per specification status.
+Each status provides the number of specifications in a year and then per month.
+This allows to picture a evolutionary figure.
+
+If there is interest this aggregation could be augemented with the references to the specifications.
+
+## limitations
+These scripts are designed to run upon a GENERATED repository. 
+For specifications that are listed in the standardsregisters outside this repository are not included in the overview.
+
+
+
+
+
