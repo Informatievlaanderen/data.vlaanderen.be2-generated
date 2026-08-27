@@ -4,5 +4,5 @@
 
 INFO: resources copied to /tmp/workspace/target/doc/implementatiemodel/magda/persoon/v0.0.3/resources
 
-warning: failed to fetch external source http://purl.org/vocab/bio/0.1/
+WARN: failed to fetch external source http://purl.org/vocab/bio/0.1/
 
