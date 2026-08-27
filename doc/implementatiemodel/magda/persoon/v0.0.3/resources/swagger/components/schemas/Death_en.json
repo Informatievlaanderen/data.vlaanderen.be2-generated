@@ -1,0 +1,39 @@
+{
+  "title": "Death",
+  "type": "object",
+  "description": "The death of a Person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Death)",
+      "pattern": "^Death$"
+    },
+    "date": {
+      "$ref": "#/components/schemas/Death.date"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/AdministrativeUnit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Location": "#/components/schemas/Location",
+          "AdministrativeUnit": "#/components/schemas/AdministrativeUnit"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

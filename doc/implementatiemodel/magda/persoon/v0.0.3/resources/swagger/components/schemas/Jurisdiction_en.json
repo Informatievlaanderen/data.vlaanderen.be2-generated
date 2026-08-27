@@ -1,0 +1,36 @@
+{
+  "title": "Jurisdiction",
+  "type": "object",
+  "description": "The area over which the jurisdiction of a government extends.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Jurisdiction)",
+      "pattern": "^Jurisdiction$"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/AdministrativeUnit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Location": "#/components/schemas/Location",
+          "AdministrativeUnit": "#/components/schemas/AdministrativeUnit"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Marriage",
+  "type": "object",
+  "description": "A form of cohabitation of two people regulated by civil or religious law.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Marriage)",
+      "pattern": "^Marriage$"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/AdministrativeUnit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Location": "#/components/schemas/Location",
+          "AdministrativeUnit": "#/components/schemas/AdministrativeUnit"
+        }
+      }
+    },
+    "ofPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "withPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "ofPerson",
+    "withPerson"
+  ]
+}

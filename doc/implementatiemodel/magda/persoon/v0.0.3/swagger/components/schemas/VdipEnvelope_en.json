@@ -1,0 +1,36 @@
+{
+  "title": "VdipEnvelope",
+  "type": "object",
+  "description": "Flemish Data Integration Platform (VDIP) data envelope according to the REST guidelines.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VdipEnvelope)",
+      "pattern": "^VdipEnvelope$"
+    },
+    "errors": {
+      "type": "array",
+      "description": "Error messages that occurred when delivering the data. Error messages can also occur with HTTP 200 that include validation errors such as MAGDA Exceptions. Lijst van ProblemDetail items.",
+      "items": {
+        "$ref": "#/components/schemas/ProblemDetail"
+      },
+      "minItems": 1
+    },
+    "payload": {
+      "$ref": "#/components/schemas/RegisteredPerson"
+    },
+    "@context": {
+      "type": "string",
+      "description": "URI of the JSON-LD versioned context file for this response.",
+      "pattern": "^https:\\/\\/data.dev-vlaanderen.be\\/doc\\/implementatiemodel\\/magda\\/persoon\\/v0.0.3\\/context\\/persoon.jsonld$"
+    }
+  },
+  "required": [
+    "@type",
+    "payload"
+  ]
+}

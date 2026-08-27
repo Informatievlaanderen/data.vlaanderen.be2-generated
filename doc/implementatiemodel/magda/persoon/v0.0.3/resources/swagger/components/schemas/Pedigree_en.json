@@ -1,0 +1,61 @@
+{
+  "title": "Pedigree",
+  "type": "object",
+  "description": "Descent is the descending line of consanguinity between different generations.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Pedigree)",
+      "pattern": "^Pedigree$"
+    },
+    "dateFromLineage": {
+      "$ref": "#/components/schemas/Pedigree.dateFromLineage"
+    },
+    "lineageType": {
+      "$ref": "#/components/schemas/LineageType"
+    },
+    "ofPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "withPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "ofPerson",
+    "withPerson"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Location",
+  "type": "object",
+  "description": "A location can be an identifiable geographic location (ISO 19112), but it can also be a non-geographic location, such as a directory, row, or column. As such, there are numerous ways in which location can be expressed.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Location)",
+      "pattern": "^Location$"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/AdministrativeUnit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Location": "#/components/schemas/Location",
+          "AdministrativeUnit": "#/components/schemas/AdministrativeUnit"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

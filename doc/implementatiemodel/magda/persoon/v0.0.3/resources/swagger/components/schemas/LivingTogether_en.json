@@ -1,0 +1,72 @@
+{
+  "title": "LivingTogether",
+  "type": "object",
+  "description": "Arrangement whereby two people who are not married live together.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse LivingTogether)",
+      "pattern": "^LivingTogether$"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/AdministrativeUnit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Location": "#/components/schemas/Location",
+          "AdministrativeUnit": "#/components/schemas/AdministrativeUnit"
+        }
+      }
+    },
+    "ofPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "withPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "ofPerson",
+    "withPerson"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Plaats",
+  "type": "object",
+  "description": "Een ruimtelijk gebied of benoemde plaats.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Plaats)",
+      "pattern": "^Plaats$"
+    },
+    "plaatsnaam": {
+      "$ref": "#/components/schemas/Plaats.plaatsnaam"
+    },
+    "plaats": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Plaats"
+        },
+        {
+          "$ref": "#/components/schemas/AdministratieveEenheid"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Plaats": "#/components/schemas/Plaats",
+          "AdministratieveEenheid": "#/components/schemas/AdministratieveEenheid"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

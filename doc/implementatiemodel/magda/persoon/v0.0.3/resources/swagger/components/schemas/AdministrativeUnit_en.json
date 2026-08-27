@@ -1,0 +1,48 @@
+{
+  "title": "AdministrativeUnit",
+  "type": "object",
+  "description": "Administrative unit where a Member State has and/or exercises legal capacity,within the framework of local,regional or national administration.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AdministrativeUnit)",
+      "pattern": "^AdministrativeUnit$"
+    },
+    "country": {
+      "$ref": "#/components/schemas/AdministrativeUnit.country"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "level": {
+      "$ref": "#/components/schemas/AdministrativeUnitLevel"
+    },
+    "placeName": {
+      "$ref": "#/components/schemas/AdministrativeUnit.placeName"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/AdministrativeUnit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Location": "#/components/schemas/Location",
+          "AdministrativeUnit": "#/components/schemas/AdministrativeUnit"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

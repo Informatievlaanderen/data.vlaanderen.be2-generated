@@ -1,0 +1,39 @@
+{
+  "title": "PersonEvent",
+  "type": "object",
+  "description": "Important event in the life of the person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PersonEvent)",
+      "pattern": "^PersonEvent$"
+    },
+    "date": {
+      "$ref": "#/components/schemas/PersonEvent.date"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/AdministrativeUnit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Location": "#/components/schemas/Location",
+          "AdministrativeUnit": "#/components/schemas/AdministrativeUnit"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

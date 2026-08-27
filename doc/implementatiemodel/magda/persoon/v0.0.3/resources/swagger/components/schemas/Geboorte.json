@@ -1,0 +1,39 @@
+{
+  "title": "Geboorte",
+  "type": "object",
+  "description": "Het ter wereld komen van een Persoon.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Geboorte)",
+      "pattern": "^Geboorte$"
+    },
+    "datum": {
+      "$ref": "#/components/schemas/Geboorte.datum"
+    },
+    "plaats": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Plaats"
+        },
+        {
+          "$ref": "#/components/schemas/AdministratieveEenheid"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Plaats": "#/components/schemas/Plaats",
+          "AdministratieveEenheid": "#/components/schemas/AdministratieveEenheid"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

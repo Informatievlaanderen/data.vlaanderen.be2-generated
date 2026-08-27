@@ -1,0 +1,108 @@
+{
+  "title": "Person",
+  "type": "object",
+  "description": "Natural person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Person)",
+      "pattern": "^Person$"
+    },
+    "firstName": {
+      "type": "array",
+      "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Person.firstName"
+      },
+      "minItems": 1
+    },
+    "lastName": {
+      "type": "array",
+      "description": "Portion of the Person's full name received from the previous generation. Also called a family name because the surname indicates a family relationship. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Person.lastName"
+      },
+      "minItems": 1
+    },
+    "contactInfo": {
+      "$ref": "#/components/schemas/ContactInfo"
+    },
+    "gender": {
+      "$ref": "#/components/schemas/Gender"
+    },
+    "isHeadOf": {
+      "$ref": "#/components/schemas/Family"
+    },
+    "hasCivilState": {
+      "$ref": "#/components/schemas/CivilState"
+    },
+    "hasBirth": {
+      "$ref": "#/components/schemas/Birth"
+    },
+    "hasDeath": {
+      "$ref": "#/components/schemas/Death"
+    },
+    "hasResidency": {
+      "type": "array",
+      "description": "Residence of the person. Lijst van Residency items.",
+      "items": {
+        "$ref": "#/components/schemas/Residency"
+      },
+      "minItems": 1
+    },
+    "hasPersonalRelationship": {
+      "type": "array",
+      "description": "Personal relationship of the person. Lijst van PersonalRelationship items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Pedigree"
+          },
+          {
+            "$ref": "#/components/schemas/FamilyRelationship"
+          },
+          {
+            "$ref": "#/components/schemas/Marriage"
+          },
+          {
+            "$ref": "#/components/schemas/LivingTogether"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Pedigree": "#/components/schemas/Pedigree",
+            "FamilyRelationship": "#/components/schemas/FamilyRelationship",
+            "Marriage": "#/components/schemas/Marriage",
+            "LivingTogether": "#/components/schemas/LivingTogether"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "isMemberOf": {
+      "type": "array",
+      "description": "Person who belongs to a Family. Lijst van Family items.",
+      "items": {
+        "$ref": "#/components/schemas/Family"
+      },
+      "minItems": 1
+    },
+    "creationDate": {
+      "$ref": "#/components/schemas/Person.creationDate"
+    },
+    "modificationDate": {
+      "$ref": "#/components/schemas/Person.modificationDate"
+    },
+    "source": {
+      "$ref": "#/components/schemas/Organization"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

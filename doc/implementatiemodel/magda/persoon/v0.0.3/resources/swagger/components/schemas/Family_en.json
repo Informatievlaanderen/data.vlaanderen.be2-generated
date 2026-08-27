@@ -1,0 +1,64 @@
+{
+  "title": "Family",
+  "type": "object",
+  "description": "Form of cooperation that forms a recognizable social unit (e.g. as a result of a marriage), with related or unrelated persons who have lasting ties and provide support and care to each other.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Family)",
+      "pattern": "^Family$"
+    },
+    "familyAddress": {
+      "$ref": "#/components/schemas/AddressPresentation"
+    },
+    "housing": {
+      "$ref": "#/components/schemas/HousingType"
+    },
+    "headOfHousehold": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "familyMember": {
+      "type": "array",
+      "description": "Persons who make up the Family. Lijst van Person items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Person"
+          },
+          {
+            "$ref": "#/components/schemas/RegisteredPerson"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Person": "#/components/schemas/Person",
+            "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

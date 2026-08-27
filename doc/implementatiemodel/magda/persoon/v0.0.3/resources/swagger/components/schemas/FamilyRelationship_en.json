@@ -1,0 +1,58 @@
+{
+  "title": "FamilyRelationship",
+  "type": "object",
+  "description": "Relationship between members of the same family.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse FamilyRelationship)",
+      "pattern": "^FamilyRelationship$"
+    },
+    "familyRelationshipType": {
+      "$ref": "#/components/schemas/FamilyRelationshipType"
+    },
+    "ofPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "withPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "ofPerson",
+    "withPerson"
+  ]
+}
