@@ -1,0 +1,71 @@
+{
+  "title": "Residency",
+  "type": "object",
+  "description": "The fact that a Person resides in a place or country.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Residency)",
+      "pattern": "^Residency$"
+    },
+    "person": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "jurisdiction": {
+      "$ref": "#/components/schemas/Jurisdiction"
+    },
+    "hasPlaceOfResidence": {
+      "type": "array",
+      "description": "Place where a person resides. Lijst van Residence items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Domicile"
+          },
+          {
+            "$ref": "#/components/schemas/PostalAddress"
+          },
+          {
+            "$ref": "#/components/schemas/ResidenceAbroad"
+          },
+          {
+            "$ref": "#/components/schemas/LegalResidence"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Domicile": "#/components/schemas/Domicile",
+            "PostalAddress": "#/components/schemas/PostalAddress",
+            "ResidenceAbroad": "#/components/schemas/ResidenceAbroad",
+            "LegalResidence": "#/components/schemas/LegalResidence"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "person",
+    "jurisdiction"
+  ]
+}

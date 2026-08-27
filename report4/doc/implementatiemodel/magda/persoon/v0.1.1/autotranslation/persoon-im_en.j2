@@ -1,0 +1,41 @@
+{% extends "impl_en.j2" %}
+
+{% block metainfo %}
+<div class="head" role="metainfo" id="metainfo">
+     <dl>
+        <dt>Source data</dt>
+        <dd>
+           <a href="https://github.com/Informatievlaanderen/OSLOthema-persoon/releases/tag/{{ data.metadata.branchtag }}">https://github.com/Informatievlaanderen/OSLOthema-persoon/releases/tag/{{ data.metadata.branchtag }}</a>
+        </dd>
+        <dt>Changelog</dt>
+        <dd>
+           <a href="{{ data.metadata.documentroot }}/resources/CHANGELOG.md">{{ data.metadata.documentroot }}/resources/CHANGELOG.md</a>
+        </dd>
+        <dt>Comments and feedback</dt>
+        <dd>
+           <a href="https://vlaamseoverheid.atlassian.net/servicedesk/customer/portal/2038">MAGDA Service Desk</a>
+        </dd>
+        <dd>
+           <a href="{{ data.metadata.standaardregisterurl }}">{{ data.metadata.defaultregisterurl }}</a>
+        </dd>{% if data.metadata.dependencies %}           <dt>Dependencies</dt>
+           <dd>{% for dep in metadata.dependencies %}
+                 <a href="{{ dep.packageurl }}">{{ dep.packagelabel }}</a>
+              {%endfor %}           </dd>{%endif %}     </dl>
+</div>
+
+{% endblock %}
+
+
+{% block summary %}
+<p>The MAGDA-Person Implementation Model is based on the <a href="" https://data.vlaanderen.be/doc/applicatieprofiel/persoon-basis/="">OSLO Person Application Profile</a> to encompass <a href="https://vlaamseoverheid.atlassian.net/wiki/spaces/MG/pages/1093927442/Persoon.GeefPersoon-02.02">the MAGDA person services</a> according to this OSLO data standard.</p>
+<p>The personal services allow the customer to retrieve the current data of a person, based on the INSZ number of this person. Once the customer has launched the request, the request is forwarded to the National Register or the Crossroads Bank for Social Security (CBSS). This depends on the permissions of the customer and the choice of source in the question.</p>
+{% endblock %}
+
+{% block swagger %}
+<p>A set of reusable Swagger OpenAPI components for this deployment model can be found at:
+<a href="{{ data.metadata.documentroot }}/resources/swagger/components.json" target="_blank">{{ data.metadata.documentroot }}/resources/swagger/components.json</a>
+</p>
+<p>These components are used in the MAGDA OpenAPI description of the Person REST service, which can be found here:
+<a href="{{ data.metadata.documentroot }}/resources/swagger/MAGDA-Persoon-REST-Swagger.json" target="_blank">{{ data.metadata.documentroot }}/resources/swagger/MAGDA-Persoon-REST-Swagger.json</a>
+</p>
+{% endblock %}

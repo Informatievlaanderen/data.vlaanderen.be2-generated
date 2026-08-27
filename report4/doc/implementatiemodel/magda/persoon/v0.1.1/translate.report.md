@@ -20,3 +20,23 @@ WARNING The entered language values are the same!
 
 #||# the file was saved to: /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.1.1/translation/persoon_nl.json  
 
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/implementatiemodel/magda/persoon/v0.1.1/translation/persoon_en.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.1.1/translation/persoon_en.json
+
+TRANSLATIONFILE: persoon_en.json
+
+#||# translate for language en  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.1.1/translation/persoon_en.json  
+

@@ -1,0 +1,1988 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Organization.preferredName": {
+        "title": "Organization.preferredName",
+        "description": "Name by which the Organization is preferably designated.",
+        "type": "string"
+      },
+      "Organization": {
+        "title": "Organization",
+        "type": "object",
+        "description": "A number of people organized into a community or other social, commercial, or political structure. The group has a common goal or raison d'être that transcends its individual members and can act as an agent. An Organization often has a hierarchical structure.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Organization)",
+            "pattern": "^Organization$"
+          },
+          "preferredName": {
+            "$ref": "#/components/schemas/Organization.preferredName"
+          },
+          "identifier": {
+            "$ref": "#/components/schemas/Identifier"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Version.creationDate": {
+        "title": "Version.creationDate",
+        "description": "Date the data was entered.",
+        "type": "string",
+        "format": "date"
+      },
+      "Version.modificationDate": {
+        "title": "Version.modificationDate",
+        "description": "Date on which the data were updated.",
+        "type": "string",
+        "format": "date"
+      },
+      "Version": {
+        "title": "Version",
+        "type": "object",
+        "description": "Entity in the database for a certain period of time.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Version)",
+            "pattern": "^Version$"
+          },
+          "creationDate": {
+            "$ref": "#/components/schemas/Version.creationDate"
+          },
+          "modificationDate": {
+            "$ref": "#/components/schemas/Version.modificationDate"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Organization"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Pedigree.dateFromLineage": {
+        "title": "Pedigree.dateFromLineage",
+        "description": "The date on which parentage is established.",
+        "type": "string",
+        "format": "date"
+      },
+      "Pedigree": {
+        "title": "Pedigree",
+        "type": "object",
+        "description": "Descent is the descending line of consanguinity between different generations.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Pedigree)",
+            "pattern": "^Pedigree$"
+          },
+          "dateFromLineage": {
+            "$ref": "#/components/schemas/Pedigree.dateFromLineage"
+          },
+          "lineageType": {
+            "$ref": "#/components/schemas/LineageType"
+          },
+          "ofPerson": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          },
+          "withPerson": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "ofPerson",
+          "withPerson"
+        ]
+      },
+      "Person.firstName": {
+        "title": "Person.firstName",
+        "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family.",
+        "type": "string"
+      },
+      "Person.lastName": {
+        "title": "Person.lastName",
+        "description": "Portion of the Person's full name received from the previous generation. Also called a family name because the surname indicates a family relationship.",
+        "type": "string"
+      },
+      "Person.creationDate": {
+        "title": "Person.creationDate",
+        "description": "Date the data was entered.",
+        "type": "string",
+        "format": "date"
+      },
+      "Person.modificationDate": {
+        "title": "Person.modificationDate",
+        "description": "Date on which the data were updated.",
+        "type": "string",
+        "format": "date"
+      },
+      "Person": {
+        "title": "Person",
+        "type": "object",
+        "description": "Natural person.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Person)",
+            "pattern": "^Person$"
+          },
+          "firstName": {
+            "type": "array",
+            "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Person.firstName"
+            },
+            "minItems": 1
+          },
+          "lastName": {
+            "type": "array",
+            "description": "Portion of the Person's full name received from the previous generation. Also called a family name because the surname indicates a family relationship. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/Person.lastName"
+            },
+            "minItems": 1
+          },
+          "contactInfo": {
+            "$ref": "#/components/schemas/ContactInfo"
+          },
+          "gender": {
+            "$ref": "#/components/schemas/Gender"
+          },
+          "isHeadOf": {
+            "$ref": "#/components/schemas/Family"
+          },
+          "hasCivilState": {
+            "$ref": "#/components/schemas/CivilState"
+          },
+          "hasBirth": {
+            "$ref": "#/components/schemas/Birth"
+          },
+          "hasDeath": {
+            "$ref": "#/components/schemas/Death"
+          },
+          "hasResidency": {
+            "type": "array",
+            "description": "Residence of the person. Lijst van Residency items.",
+            "items": {
+              "$ref": "#/components/schemas/Residency"
+            },
+            "minItems": 1
+          },
+          "hasPersonalRelationship": {
+            "type": "array",
+            "description": "Personal relationship of the person. Lijst van PersonalRelationship items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Pedigree"
+                },
+                {
+                  "$ref": "#/components/schemas/FamilyRelationship"
+                },
+                {
+                  "$ref": "#/components/schemas/Marriage"
+                },
+                {
+                  "$ref": "#/components/schemas/LivingTogether"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Pedigree": "#/components/schemas/Pedigree",
+                  "FamilyRelationship": "#/components/schemas/FamilyRelationship",
+                  "Marriage": "#/components/schemas/Marriage",
+                  "LivingTogether": "#/components/schemas/LivingTogether"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "isMemberOf": {
+            "type": "array",
+            "description": "Person who belongs to a Family. Lijst van Family items.",
+            "items": {
+              "$ref": "#/components/schemas/Family"
+            },
+            "minItems": 1
+          },
+          "creationDate": {
+            "$ref": "#/components/schemas/Person.creationDate"
+          },
+          "modificationDate": {
+            "$ref": "#/components/schemas/Person.modificationDate"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Organization"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Location.placeName": {
+        "title": "Location.placeName",
+        "description": "Name of the place or area.",
+        "type": "string"
+      },
+      "Location.country": {
+        "title": "Location.country",
+        "description": "Country to which the administrative unit belongs.",
+        "type": "string"
+      },
+      "Location": {
+        "title": "Location",
+        "type": "object",
+        "description": "A location can be an identifiable geographic location (ISO 19112), but it can also be a non-geographic location, such as a directory, row, or column. As such, there are numerous ways in which location can be expressed.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Location)",
+            "pattern": "^Location$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "PersonEvent.date": {
+        "title": "PersonEvent.date",
+        "description": "Date the event occurred.",
+        "type": "string",
+        "format": "date"
+      },
+      "PersonEvent": {
+        "title": "PersonEvent",
+        "type": "object",
+        "description": "Important event in the life of a Person.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PersonEvent)",
+            "pattern": "^PersonEvent$"
+          },
+          "date": {
+            "$ref": "#/components/schemas/PersonEvent.date"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "ProblemDetail.type": {
+        "title": "ProblemDetail.type",
+        "description": "Nature of the error.",
+        "type": "string",
+        "format": "uri"
+      },
+      "ProblemDetail.title": {
+        "title": "ProblemDetail.title",
+        "description": "Short human-readable description of the error.",
+        "type": "string"
+      },
+      "ProblemDetail.status": {
+        "title": "ProblemDetail.status",
+        "description": "HTTP error code. As described in <a href=\"https://www.rfc-editor.org/rfc/rfc7231\">RFC7231</a>. For example: 404 for \"Not Found\".",
+        "type": "number",
+        "format": "int64"
+      },
+      "ProblemDetail.detail": {
+        "title": "ProblemDetail.detail",
+        "description": "Human-readable description of the error.",
+        "type": "string"
+      },
+      "ProblemDetail.authority": {
+        "title": "ProblemDetail.authority",
+        "description": "Reference to the instance of the object to which the error relates. For example: the reference to the request.",
+        "type": "string",
+        "format": "uri"
+      },
+      "ProblemDetail": {
+        "title": "ProblemDetail",
+        "type": "object",
+        "description": "More detailed description of the error in an HTTP response.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ProblemDetail)",
+            "pattern": "^ProblemDetail$"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ProblemDetail.type"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ProblemDetail.title"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ProblemDetail.status"
+          },
+          "detail": {
+            "$ref": "#/components/schemas/ProblemDetail.detail"
+          },
+          "authority": {
+            "$ref": "#/components/schemas/ProblemDetail.authority"
+          }
+        },
+        "required": [
+          "@type",
+          "type",
+          "title"
+        ]
+      },
+      "Domicile": {
+        "title": "Domicile",
+        "type": "object",
+        "description": "Person's primary residence.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Domicile)",
+            "pattern": "^Domicile$"
+          },
+          "residenceAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DomicileStatus"
+          },
+          "non-Communicable": {
+            "$ref": "#/components/schemas/Non-Communicable"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BelgianAddress": {
+        "title": "BelgianAddress",
+        "type": "object",
+        "description": "Information that allows a structured and unique way to refer to a building unit, a berth, a stand or a plot based on a municipality name, a street name, a house number and possibly a bus number and a postal code.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BelgianAddress)",
+            "pattern": "^BelgianAddress$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "VdipEnvelop": {
+        "title": "VdipEnvelop",
+        "type": "object",
+        "description": "Flemish Data Integration Platform (VDIP) data envelope according to the REST guidelines.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse VdipEnvelop)",
+            "pattern": "^VdipEnvelop$"
+          },
+          "warning": {
+            "type": "array",
+            "description": "Error messages that occurred when delivering the data. Error messages can also occur with HTTP 200 that include validation errors such as MAGDA Exceptions. Lijst van ProblemDetail items.",
+            "items": {
+              "$ref": "#/components/schemas/ProblemDetail"
+            },
+            "minItems": 1
+          },
+          "dates": {
+            "$ref": "#/components/schemas/RegisteredPerson"
+          },
+          "@context": {
+            "type": "string",
+            "description": "URI of the JSON-LD versioned context file for this response.",
+            "pattern": "^https:\\/\\/data.dev-vlaanderen.be\\/doc\\/implementatiemodel\\/magda\\/persoon\\/v0.1.1\\/context\\/persoon.jsonld$"
+          }
+        },
+        "required": [
+          "@type",
+          "dates"
+        ]
+      },
+      "RegisteredPerson.firstName": {
+        "title": "RegisteredPerson.firstName",
+        "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family.",
+        "type": "string"
+      },
+      "RegisteredPerson.lastName": {
+        "title": "RegisteredPerson.lastName",
+        "description": "Portion of the Person's full name received from the previous generation. Also called a family name because the surname indicates a family relationship.",
+        "type": "string"
+      },
+      "RegisteredPerson.creationDate": {
+        "title": "RegisteredPerson.creationDate",
+        "description": "Date the data was entered.",
+        "type": "string",
+        "format": "date"
+      },
+      "RegisteredPerson.modificationDate": {
+        "title": "RegisteredPerson.modificationDate",
+        "description": "Date on which the data were updated.",
+        "type": "string",
+        "format": "date"
+      },
+      "RegisteredPerson": {
+        "title": "RegisteredPerson",
+        "type": "object",
+        "description": "Person whose data is registered in a register.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse RegisteredPerson)",
+            "pattern": "^RegisteredPerson$"
+          },
+          "registration": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "fileStatus": {
+            "$ref": "#/components/schemas/DossierStatus"
+          },
+          "previousRegistration": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "reasonAbsence": {
+            "$ref": "#/components/schemas/ReasonAbsence"
+          },
+          "admin": {
+            "type": "array",
+            "description": "Reference to the Administrator of the person's file. Normally there is only 1 administrator present with a person, but in exceptional cases there may be several administrators. For example: the person has an address abroad, is moving between municipalities, etc. Lijst van AdministrativeAdministrator items.",
+            "items": {
+              "$ref": "#/components/schemas/AdministrativeAdministrator"
+            },
+            "minItems": 1
+          },
+          "firstName": {
+            "type": "array",
+            "description": "Name given to a Person at birth. Distinguishes the Person from the other persons in the family. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/RegisteredPerson.firstName"
+            },
+            "minItems": 1
+          },
+          "lastName": {
+            "type": "array",
+            "description": "Portion of the Person's full name received from the previous generation. Also called a family name because the surname indicates a family relationship. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/RegisteredPerson.lastName"
+            },
+            "minItems": 1
+          },
+          "contactInfo": {
+            "$ref": "#/components/schemas/ContactInfo"
+          },
+          "gender": {
+            "$ref": "#/components/schemas/Gender"
+          },
+          "isHeadOf": {
+            "$ref": "#/components/schemas/Family"
+          },
+          "hasCivilState": {
+            "$ref": "#/components/schemas/CivilState"
+          },
+          "hasBirth": {
+            "$ref": "#/components/schemas/Birth"
+          },
+          "hasDeath": {
+            "$ref": "#/components/schemas/Death"
+          },
+          "hasResidency": {
+            "type": "array",
+            "description": "Residence of the person. Lijst van Residency items.",
+            "items": {
+              "$ref": "#/components/schemas/Residency"
+            },
+            "minItems": 1
+          },
+          "hasPersonalRelationship": {
+            "type": "array",
+            "description": "Personal relationship of the person. Lijst van PersonalRelationship items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Pedigree"
+                },
+                {
+                  "$ref": "#/components/schemas/FamilyRelationship"
+                },
+                {
+                  "$ref": "#/components/schemas/Marriage"
+                },
+                {
+                  "$ref": "#/components/schemas/LivingTogether"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Pedigree": "#/components/schemas/Pedigree",
+                  "FamilyRelationship": "#/components/schemas/FamilyRelationship",
+                  "Marriage": "#/components/schemas/Marriage",
+                  "LivingTogether": "#/components/schemas/LivingTogether"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "isMemberOf": {
+            "type": "array",
+            "description": "Person who belongs to a Family. Lijst van Family items.",
+            "items": {
+              "$ref": "#/components/schemas/Family"
+            },
+            "minItems": 1
+          },
+          "creationDate": {
+            "$ref": "#/components/schemas/RegisteredPerson.creationDate"
+          },
+          "modificationDate": {
+            "$ref": "#/components/schemas/RegisteredPerson.modificationDate"
+          },
+          "source": {
+            "$ref": "#/components/schemas/Organization"
+          }
+        },
+        "required": [
+          "@type",
+          "registration"
+        ]
+      },
+      "PlaceOfResidenceAbroadDomicile": {
+        "title": "PlaceOfResidenceAbroadDomicile",
+        "type": "object",
+        "description": "Main residence abroad.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PlaceOfResidenceAbroadDomicile)",
+            "pattern": "^PlaceOfResidenceAbroadDomicile$"
+          },
+          "residenceAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DomicileStatus"
+          },
+          "non-Communicable": {
+            "$ref": "#/components/schemas/Non-Communicable"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "FamilyRelationship": {
+        "title": "FamilyRelationship",
+        "type": "object",
+        "description": "Relationship between members of the same family.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse FamilyRelationship)",
+            "pattern": "^FamilyRelationship$"
+          },
+          "familyRelationshipType": {
+            "$ref": "#/components/schemas/FamilyRelationshipType"
+          },
+          "ofPerson": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          },
+          "withPerson": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "ofPerson",
+          "withPerson"
+        ]
+      },
+      "Jurisdiction": {
+        "title": "Jurisdiction",
+        "type": "object",
+        "description": "The area over which the jurisdiction of a government extends.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Jurisdiction)",
+            "pattern": "^Jurisdiction$"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Family": {
+        "title": "Family",
+        "type": "object",
+        "description": "Form of cooperation that forms a recognizable social unit (e.g. as a result of a marriage), with related or unrelated persons who have lasting ties and provide support and care to each other.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Family)",
+            "pattern": "^Family$"
+          },
+          "familyAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          },
+          "housing": {
+            "$ref": "#/components/schemas/HousingType"
+          },
+          "headOfHousehold": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          },
+          "familyMember": {
+            "type": "array",
+            "description": "Persons who make up the family. Lijst van Person items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Person"
+                },
+                {
+                  "$ref": "#/components/schemas/RegisteredPerson"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Person": "#/components/schemas/Person",
+                  "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "CivilState": {
+        "title": "CivilState",
+        "type": "object",
+        "description": "Civil Status of a Person.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse CivilState)",
+            "pattern": "^CivilState$"
+          },
+          "type": {
+            "$ref": "#/components/schemas/MaritalStateType"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AdministrativeAdministrator.preferredName": {
+        "title": "AdministrativeAdministrator.preferredName",
+        "description": "Name by which the Organization is preferably designated.",
+        "type": "string"
+      },
+      "AdministrativeAdministrator": {
+        "title": "AdministrativeAdministrator",
+        "type": "object",
+        "description": "Organisation that manages the person's file in the register.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AdministrativeAdministrator)",
+            "pattern": "^AdministrativeAdministrator$"
+          },
+          "type": {
+            "$ref": "#/components/schemas/AdministrativeAdministratorType"
+          },
+          "preferredName": {
+            "$ref": "#/components/schemas/AdministrativeAdministrator.preferredName"
+          },
+          "identifier": {
+            "$ref": "#/components/schemas/Identifier"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Marriage": {
+        "title": "Marriage",
+        "type": "object",
+        "description": "A form of cohabitation of two people regulated by civil or religious law.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Marriage)",
+            "pattern": "^Marriage$"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "ofPerson": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          },
+          "withPerson": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "ofPerson",
+          "withPerson"
+        ]
+      },
+      "LivingTogether": {
+        "title": "LivingTogether",
+        "type": "object",
+        "description": "Arrangement whereby two people who are not married live together.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LivingTogether)",
+            "pattern": "^LivingTogether$"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "ofPerson": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          },
+          "withPerson": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "ofPerson",
+          "withPerson"
+        ]
+      },
+      "Birth.date": {
+        "title": "Birth.date",
+        "description": "Date the event occurred.",
+        "type": "string",
+        "format": "date"
+      },
+      "Birth": {
+        "title": "Birth",
+        "type": "object",
+        "description": "The coming into the world of a Person.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Birth)",
+            "pattern": "^Birth$"
+          },
+          "date": {
+            "$ref": "#/components/schemas/Birth.date"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Death.date": {
+        "title": "Death.date",
+        "description": "Date the event occurred.",
+        "type": "string",
+        "format": "date"
+      },
+      "Death": {
+        "title": "Death",
+        "type": "object",
+        "description": "The death of a Person.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Death)",
+            "pattern": "^Death$"
+          },
+          "date": {
+            "$ref": "#/components/schemas/Death.date"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Residency": {
+        "title": "Residency",
+        "type": "object",
+        "description": "The fact that a Person resides in a place or country.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Residency)",
+            "pattern": "^Residency$"
+          },
+          "person": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Person"
+              },
+              {
+                "$ref": "#/components/schemas/RegisteredPerson"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Person": "#/components/schemas/Person",
+                "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+              }
+            }
+          },
+          "jurisdiction": {
+            "$ref": "#/components/schemas/Jurisdiction"
+          },
+          "hasPlaceOfResidence": {
+            "type": "array",
+            "description": "Place where a person resides. Lijst van Residence items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Domicile"
+                },
+                {
+                  "$ref": "#/components/schemas/PostalAddress"
+                },
+                {
+                  "$ref": "#/components/schemas/ResidenceAbroad"
+                },
+                {
+                  "$ref": "#/components/schemas/LegalResidence"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Domicile": "#/components/schemas/Domicile",
+                  "PostalAddress": "#/components/schemas/PostalAddress",
+                  "ResidenceAbroad": "#/components/schemas/ResidenceAbroad",
+                  "LegalResidence": "#/components/schemas/LegalResidence"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "person",
+          "jurisdiction"
+        ]
+      },
+      "FormalOrganisation": {
+        "title": "FormalOrganisation",
+        "type": "object",
+        "description": "A recognised Organisation, recognised in a broad sense or more specifically in a legal sense with associated rights and obligations.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse FormalOrganisation)",
+            "pattern": "^FormalOrganisation$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "IndicatedAddress": {
+        "title": "IndicatedAddress",
+        "type": "object",
+        "description": "Address given by a person as the main place of residence.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse IndicatedAddress)",
+            "pattern": "^IndicatedAddress$"
+          },
+          "residenceAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DomicileStatus"
+          },
+          "non-Communicable": {
+            "$ref": "#/components/schemas/Non-Communicable"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "PostalAddress": {
+        "title": "PostalAddress",
+        "type": "object",
+        "description": "Postal address of a person's place of residence.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PostalAddress)",
+            "pattern": "^PostalAddress$"
+          },
+          "residenceAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "ReferenceAddress": {
+        "title": "ReferenceAddress",
+        "type": "object",
+        "description": "Address of another person or legal entity for persons without a fixed residence.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ReferenceAddress)",
+            "pattern": "^ReferenceAddress$"
+          },
+          "residenceAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DomicileStatus"
+          },
+          "non-Communicable": {
+            "$ref": "#/components/schemas/Non-Communicable"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "ResidenceAbroad": {
+        "title": "ResidenceAbroad",
+        "type": "object",
+        "description": "Residence abroad.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ResidenceAbroad)",
+            "pattern": "^ResidenceAbroad$"
+          },
+          "residenceAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "LegalResidence": {
+        "title": "LegalResidence",
+        "type": "object",
+        "description": "Legally established place of residence.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LegalResidence)",
+            "pattern": "^LegalResidence$"
+          },
+          "residenceAddress": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AddressPresentation.administrativeUnitLevel1": {
+        "title": "AddressPresentation.administrativeUnitLevel1",
+        "description": "Highest Administrative Unit of the address, usually a country.",
+        "type": "string"
+      },
+      "AddressPresentation.administrativeUnitLevel2": {
+        "title": "AddressPresentation.administrativeUnitLevel2",
+        "description": "The region of the address, usually a province or state or similar area that typically includes several places.",
+        "type": "string"
+      },
+      "AddressPresentation.addressArea": {
+        "title": "AddressPresentation.addressArea",
+        "description": "Name of a geographical area or place that groups a number of addressable objects to address them without the area or place being an administrative unit. For example: the name of the hamlet in which the address is located.",
+        "type": "string"
+      },
+      "AddressPresentation.boxNumber": {
+        "title": "AddressPresentation.boxNumber",
+        "description": "Officially assigned alphanumeric code that is added to the house number to distinguish several building units, pitches, berths or plots that have the same house number. Specialization of Address Presentation: location indication for Belgian addresses.",
+        "type": "string"
+      },
+      "AddressPresentation.municipalityName": {
+        "title": "AddressPresentation.municipalityName",
+        "description": "Municipality name of the address.",
+        "type": "string"
+      },
+      "AddressPresentation.houseNumber": {
+        "title": "AddressPresentation.houseNumber",
+        "description": "Alphanumeric code officially assigned to building units, berths, stands or plots. Specialization of Address Presentation: location indication for Belgian addresses.",
+        "type": "string"
+      },
+      "AddressPresentation.country": {
+        "title": "AddressPresentation.country",
+        "description": "Country in which the address is located.",
+        "type": "string"
+      },
+      "AddressPresentation.locationIndicator": {
+        "title": "AddressPresentation.locationIndicator",
+        "description": "Alphanumeric code that uniquely identifies the address locator within the street, administrative unit etc.",
+        "type": "string"
+      },
+      "AddressPresentation.locationName": {
+        "title": "AddressPresentation.locationName",
+        "description": "Name or description of the geographical object that the address locator denotes.",
+        "type": "string"
+      },
+      "AddressPresentation.p.O.Box": {
+        "title": "AddressPresentation.p.O.Box",
+        "description": "PO Box number in a post office.",
+        "type": "string"
+      },
+      "AddressPresentation.postalCode": {
+        "title": "AddressPresentation.postalCode",
+        "description": "Code that identifies the geographical area that groups addresses for postal purposes.",
+        "type": "string"
+      },
+      "AddressPresentation.postName": {
+        "title": "AddressPresentation.postName",
+        "description": "Name indicating the geographical area that groups addresses for postal purposes.",
+        "type": "string"
+      },
+      "AddressPresentation.streetName": {
+        "title": "AddressPresentation.streetName",
+        "description": "Street name of the address.",
+        "type": "string"
+      },
+      "AddressPresentation.completeAddress": {
+        "title": "AddressPresentation.completeAddress",
+        "description": "The complete address in one string, formatted or not. Avoids errors due to splitting an address into its parts. Displays the prescribed order of the different parts.",
+        "type": "string"
+      },
+      "AddressPresentation": {
+        "title": "AddressPresentation",
+        "type": "object",
+        "description": "More readable presentation with only the basic data of the address, intended for the use of an address as an attribute of another object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AddressPresentation)",
+            "pattern": "^AddressPresentation$"
+          },
+          "administrativeUnitLevel1": {
+            "$ref": "#/components/schemas/AddressPresentation.administrativeUnitLevel1"
+          },
+          "administrativeUnitLevel2": {
+            "$ref": "#/components/schemas/AddressPresentation.administrativeUnitLevel2"
+          },
+          "addressArea": {
+            "$ref": "#/components/schemas/AddressPresentation.addressArea"
+          },
+          "boxNumber": {
+            "$ref": "#/components/schemas/AddressPresentation.boxNumber"
+          },
+          "municipalityName": {
+            "$ref": "#/components/schemas/AddressPresentation.municipalityName"
+          },
+          "houseNumber": {
+            "$ref": "#/components/schemas/AddressPresentation.houseNumber"
+          },
+          "country": {
+            "$ref": "#/components/schemas/AddressPresentation.country"
+          },
+          "locationIndicator": {
+            "type": "array",
+            "description": "Alphanumeric code that uniquely identifies the address locator within the street, administrative unit etc. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/AddressPresentation.locationIndicator"
+            },
+            "minItems": 1
+          },
+          "locationName": {
+            "type": "array",
+            "description": "Name or description of the geographical object that the address locator denotes. Lijst van LangString items.",
+            "items": {
+              "$ref": "#/components/schemas/AddressPresentation.locationName"
+            },
+            "minItems": 1
+          },
+          "p.O.Box": {
+            "$ref": "#/components/schemas/AddressPresentation.p.O.Box"
+          },
+          "postalCode": {
+            "$ref": "#/components/schemas/AddressPresentation.postalCode"
+          },
+          "postName": {
+            "$ref": "#/components/schemas/AddressPresentation.postName"
+          },
+          "streetName": {
+            "$ref": "#/components/schemas/AddressPresentation.streetName"
+          },
+          "completeAddress": {
+            "$ref": "#/components/schemas/AddressPresentation.completeAddress"
+          },
+          "redirectsTo": {
+            "$ref": "#/components/schemas/BelgianAddress"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Identifier.identifier": {
+        "title": "Identifier.identifier",
+        "description": "String used to uniquely identify the object. Type of the string refers to the identification system (including its version), the string itself to the actual identifier.",
+        "type": "string"
+      },
+      "Identifier": {
+        "title": "Identifier",
+        "type": "object",
+        "description": "Information used to uniquely identify an object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identifier)",
+            "pattern": "^Identifier$"
+          },
+          "identifier": {
+            "$ref": "#/components/schemas/Identifier.identifier"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "ContactInfo.formOfAddress": {
+        "title": "ContactInfo.formOfAddress",
+        "description": "Title that is used to write to someone or address someone or to refer to someone. For example: Mr./Madam, Excellency, Doctor, ...",
+        "type": "string"
+      },
+      "ContactInfo.name": {
+        "title": "ContactInfo.name",
+        "description": "Name of the person you can contact, for example.",
+        "type": "string"
+      },
+      "ContactInfo.email": {
+        "title": "ContactInfo.email",
+        "description": "Email address to which one can send an e-mail.",
+        "type": "string"
+      },
+      "ContactInfo.faxNumber": {
+        "title": "ContactInfo.faxNumber",
+        "description": "Fax number to which one can fax.",
+        "type": "string"
+      },
+      "ContactInfo.phone": {
+        "title": "ContactInfo.phone",
+        "description": "Phone number where one can call.",
+        "type": "string"
+      },
+      "ContactInfo.website": {
+        "title": "ContactInfo.website",
+        "description": "Website that can be surfed.",
+        "type": "string",
+        "format": "uri"
+      },
+      "ContactInfo": {
+        "title": "ContactInfo",
+        "type": "object",
+        "description": "Information such as email, telephone, address that allows to contact someone or something.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ContactInfo)",
+            "pattern": "^ContactInfo$"
+          },
+          "formOfAddress": {
+            "$ref": "#/components/schemas/ContactInfo.formOfAddress"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ContactInfo.name"
+          },
+          "email": {
+            "$ref": "#/components/schemas/ContactInfo.email"
+          },
+          "faxNumber": {
+            "$ref": "#/components/schemas/ContactInfo.faxNumber"
+          },
+          "phone": {
+            "$ref": "#/components/schemas/ContactInfo.phone"
+          },
+          "website": {
+            "$ref": "#/components/schemas/ContactInfo.website"
+          },
+          "address": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    },
+    "links": {
+      "Organization.identifier": {
+        "operationId": "OrganizationGET",
+        "parameters": {
+          "id": "$response.body#/Organization.identifier/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Version.source": {
+        "operationId": "VersionGET",
+        "parameters": {
+          "id": "$response.body#/Version.source/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Organization` op te halen."
+      },
+      "Pedigree.lineageType": {
+        "operationId": "PedigreeGET",
+        "parameters": {
+          "id": "$response.body#/Pedigree.lineageType/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LineageType` op te halen."
+      },
+      "Pedigree.ofPerson": {
+        "operationId": "PedigreeGET",
+        "parameters": {
+          "id": "$response.body#/Pedigree.ofPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "Pedigree.withPerson": {
+        "operationId": "PedigreeGET",
+        "parameters": {
+          "id": "$response.body#/Pedigree.withPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "Person.contactInfo": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.contactInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ContactInfo` op te halen."
+      },
+      "Person.gender": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.gender/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gender` op te halen."
+      },
+      "Person.isHeadOf": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.isHeadOf/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Family` op te halen."
+      },
+      "Person.hasCivilState": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.hasCivilState/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CivilState` op te halen."
+      },
+      "Person.hasBirth": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.hasBirth/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Birth` op te halen."
+      },
+      "Person.hasDeath": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.hasDeath/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Death` op te halen."
+      },
+      "Person.hasResidency": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.hasResidency/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Residency` op te halen."
+      },
+      "Person.hasPersonalRelationship": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.hasPersonalRelationship/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PersonalRelationship` op te halen."
+      },
+      "Person.isMemberOf": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.isMemberOf/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Family` op te halen."
+      },
+      "Person.source": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.source/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Organization` op te halen."
+      },
+      "PersonEvent.location": {
+        "operationId": "PersonEventGET",
+        "parameters": {
+          "id": "$response.body#/PersonEvent.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "Domicile.residenceAddress": {
+        "operationId": "DomicileGET",
+        "parameters": {
+          "id": "$response.body#/Domicile.residenceAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      },
+      "Domicile.status": {
+        "operationId": "DomicileGET",
+        "parameters": {
+          "id": "$response.body#/Domicile.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DomicileStatus` op te halen."
+      },
+      "Domicile.non-Communicable": {
+        "operationId": "DomicileGET",
+        "parameters": {
+          "id": "$response.body#/Domicile.non-Communicable/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Non-Communicable` op te halen."
+      },
+      "VdipEnvelop.warning": {
+        "operationId": "VdipEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/VdipEnvelop.warning/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ProblemDetail` op te halen."
+      },
+      "VdipEnvelop.dates": {
+        "operationId": "VdipEnvelopGET",
+        "parameters": {
+          "id": "$response.body#/VdipEnvelop.dates/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `RegisteredPerson` op te halen."
+      },
+      "RegisteredPerson.registration": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.registration/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "RegisteredPerson.fileStatus": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.fileStatus/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DossierStatus` op te halen."
+      },
+      "RegisteredPerson.previousRegistration": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.previousRegistration/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "RegisteredPerson.reasonAbsence": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.reasonAbsence/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ReasonAbsence` op te halen."
+      },
+      "RegisteredPerson.admin": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.admin/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AdministrativeAdministrator` op te halen."
+      },
+      "RegisteredPerson.contactInfo": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.contactInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ContactInfo` op te halen."
+      },
+      "RegisteredPerson.gender": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.gender/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gender` op te halen."
+      },
+      "RegisteredPerson.isHeadOf": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.isHeadOf/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Family` op te halen."
+      },
+      "RegisteredPerson.hasCivilState": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.hasCivilState/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CivilState` op te halen."
+      },
+      "RegisteredPerson.hasBirth": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.hasBirth/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Birth` op te halen."
+      },
+      "RegisteredPerson.hasDeath": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.hasDeath/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Death` op te halen."
+      },
+      "RegisteredPerson.hasResidency": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.hasResidency/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Residency` op te halen."
+      },
+      "RegisteredPerson.hasPersonalRelationship": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.hasPersonalRelationship/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PersonalRelationship` op te halen."
+      },
+      "RegisteredPerson.isMemberOf": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.isMemberOf/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Family` op te halen."
+      },
+      "RegisteredPerson.source": {
+        "operationId": "RegisteredPersonGET",
+        "parameters": {
+          "id": "$response.body#/RegisteredPerson.source/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Organization` op te halen."
+      },
+      "PlaceOfResidenceAbroadDomicile.residenceAddress": {
+        "operationId": "PlaceOfResidenceAbroadDomicileGET",
+        "parameters": {
+          "id": "$response.body#/PlaceOfResidenceAbroadDomicile.residenceAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      },
+      "PlaceOfResidenceAbroadDomicile.status": {
+        "operationId": "PlaceOfResidenceAbroadDomicileGET",
+        "parameters": {
+          "id": "$response.body#/PlaceOfResidenceAbroadDomicile.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DomicileStatus` op te halen."
+      },
+      "PlaceOfResidenceAbroadDomicile.non-Communicable": {
+        "operationId": "PlaceOfResidenceAbroadDomicileGET",
+        "parameters": {
+          "id": "$response.body#/PlaceOfResidenceAbroadDomicile.non-Communicable/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Non-Communicable` op te halen."
+      },
+      "FamilyRelationship.familyRelationshipType": {
+        "operationId": "FamilyRelationshipGET",
+        "parameters": {
+          "id": "$response.body#/FamilyRelationship.familyRelationshipType/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `FamilyRelationshipType` op te halen."
+      },
+      "FamilyRelationship.ofPerson": {
+        "operationId": "FamilyRelationshipGET",
+        "parameters": {
+          "id": "$response.body#/FamilyRelationship.ofPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "FamilyRelationship.withPerson": {
+        "operationId": "FamilyRelationshipGET",
+        "parameters": {
+          "id": "$response.body#/FamilyRelationship.withPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "Jurisdiction.location": {
+        "operationId": "JurisdictionGET",
+        "parameters": {
+          "id": "$response.body#/Jurisdiction.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "Family.familyAddress": {
+        "operationId": "FamilyGET",
+        "parameters": {
+          "id": "$response.body#/Family.familyAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      },
+      "Family.housing": {
+        "operationId": "FamilyGET",
+        "parameters": {
+          "id": "$response.body#/Family.housing/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `HousingType` op te halen."
+      },
+      "Family.headOfHousehold": {
+        "operationId": "FamilyGET",
+        "parameters": {
+          "id": "$response.body#/Family.headOfHousehold/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "Family.familyMember": {
+        "operationId": "FamilyGET",
+        "parameters": {
+          "id": "$response.body#/Family.familyMember/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "CivilState.type": {
+        "operationId": "CivilStateGET",
+        "parameters": {
+          "id": "$response.body#/CivilState.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `MaritalStateType` op te halen."
+      },
+      "AdministrativeAdministrator.type": {
+        "operationId": "AdministrativeAdministratorGET",
+        "parameters": {
+          "id": "$response.body#/AdministrativeAdministrator.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AdministrativeAdministratorType` op te halen."
+      },
+      "AdministrativeAdministrator.identifier": {
+        "operationId": "AdministrativeAdministratorGET",
+        "parameters": {
+          "id": "$response.body#/AdministrativeAdministrator.identifier/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Marriage.location": {
+        "operationId": "MarriageGET",
+        "parameters": {
+          "id": "$response.body#/Marriage.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "Marriage.ofPerson": {
+        "operationId": "MarriageGET",
+        "parameters": {
+          "id": "$response.body#/Marriage.ofPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "Marriage.withPerson": {
+        "operationId": "MarriageGET",
+        "parameters": {
+          "id": "$response.body#/Marriage.withPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "LivingTogether.location": {
+        "operationId": "LivingTogetherGET",
+        "parameters": {
+          "id": "$response.body#/LivingTogether.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "LivingTogether.ofPerson": {
+        "operationId": "LivingTogetherGET",
+        "parameters": {
+          "id": "$response.body#/LivingTogether.ofPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "LivingTogether.withPerson": {
+        "operationId": "LivingTogetherGET",
+        "parameters": {
+          "id": "$response.body#/LivingTogether.withPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "Birth.location": {
+        "operationId": "BirthGET",
+        "parameters": {
+          "id": "$response.body#/Birth.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "Death.location": {
+        "operationId": "DeathGET",
+        "parameters": {
+          "id": "$response.body#/Death.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "Residency.person": {
+        "operationId": "ResidencyGET",
+        "parameters": {
+          "id": "$response.body#/Residency.person/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Person` op te halen."
+      },
+      "Residency.jurisdiction": {
+        "operationId": "ResidencyGET",
+        "parameters": {
+          "id": "$response.body#/Residency.jurisdiction/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Jurisdiction` op te halen."
+      },
+      "Residency.hasPlaceOfResidence": {
+        "operationId": "ResidencyGET",
+        "parameters": {
+          "id": "$response.body#/Residency.hasPlaceOfResidence/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Residence` op te halen."
+      },
+      "IndicatedAddress.residenceAddress": {
+        "operationId": "IndicatedAddressGET",
+        "parameters": {
+          "id": "$response.body#/IndicatedAddress.residenceAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      },
+      "IndicatedAddress.status": {
+        "operationId": "IndicatedAddressGET",
+        "parameters": {
+          "id": "$response.body#/IndicatedAddress.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DomicileStatus` op te halen."
+      },
+      "IndicatedAddress.non-Communicable": {
+        "operationId": "IndicatedAddressGET",
+        "parameters": {
+          "id": "$response.body#/IndicatedAddress.non-Communicable/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Non-Communicable` op te halen."
+      },
+      "PostalAddress.residenceAddress": {
+        "operationId": "PostalAddressGET",
+        "parameters": {
+          "id": "$response.body#/PostalAddress.residenceAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      },
+      "ReferenceAddress.residenceAddress": {
+        "operationId": "ReferenceAddressGET",
+        "parameters": {
+          "id": "$response.body#/ReferenceAddress.residenceAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      },
+      "ReferenceAddress.status": {
+        "operationId": "ReferenceAddressGET",
+        "parameters": {
+          "id": "$response.body#/ReferenceAddress.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DomicileStatus` op te halen."
+      },
+      "ReferenceAddress.non-Communicable": {
+        "operationId": "ReferenceAddressGET",
+        "parameters": {
+          "id": "$response.body#/ReferenceAddress.non-Communicable/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Non-Communicable` op te halen."
+      },
+      "ResidenceAbroad.residenceAddress": {
+        "operationId": "ResidenceAbroadGET",
+        "parameters": {
+          "id": "$response.body#/ResidenceAbroad.residenceAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      },
+      "LegalResidence.residenceAddress": {
+        "operationId": "LegalResidenceGET",
+        "parameters": {
+          "id": "$response.body#/LegalResidence.residenceAddress/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      }
+    }
+  }
+}
