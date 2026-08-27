@@ -2,6 +2,22 @@
 
 #||# -------------------------------------  
 
+#||#  update the translation file from the memory
+
+#||# 
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# create new translation file with existing translations included  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.0.3/translation_input/persoon_en.json  
+
 #||# 
 
 #||#  autotranslate the translation file for language en
@@ -14,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 89  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.0.3/autotranslation/persoon_en.json  
 
@@ -24,17 +40,11 @@
 
 #||# 
 
-start reading file persoon-basis-ap.j2
+#||# 
 
-#||#  start converting filename in extend blocks
+#||#  autotranslate the J2 templates for language en
 
-#||# ap2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.0.3/autotranslation/persoon-basis-ap_en.j2
+#||# 
 
 #||# 
 
@@ -42,17 +52,11 @@ start writing file /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v
 
 #||# 
 
-start reading file persoon-basis-en-ap.j2
+#||# 
 
-#||#  start converting filename in extend blocks
+#||#  autotranslate the J2 templates for language en
 
-#||# ap2_en
-
-#||#  filename contains goal language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.0.3/autotranslation/persoon-basis-en-ap_en.j2
+#||# 
 
 #||# 
 
@@ -60,69 +64,9 @@ start writing file /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v
 
 #||# 
 
-start reading file persoon-im-voc.j2
-
-#||#  start converting filename in extend blocks
-
-#||# voc2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.0.3/autotranslation/persoon-im-voc_en.j2
-
 #||# 
 
 #||#  autotranslate the J2 templates for language en
 
 #||# 
-
-start reading file persoon-voc-en.j2
-
-#||#  start converting filename in extend blocks
-
-#||# voc2_en
-
-#||#  filename contains goal language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.0.3/autotranslation/persoon-voc-en_en.j2
-
-#||# 
-
-#||#  autotranslate the J2 templates for language en
-
-#||# 
-
-start reading file persoon-voc.j2
-
-#||#  start converting filename in extend blocks
-
-#||# voc2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.0.3/autotranslation/persoon-voc_en.j2
-
-#||# 
-
-#||#  autotranslate the J2 templates for language en
-
-#||# 
-
-start reading file persoon-im.j2
-
-#||#  start converting filename in extend blocks
-
-#||# impl
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/implementatiemodel/magda/persoon/v0.0.3/autotranslation/persoon-im_en.j2
 
