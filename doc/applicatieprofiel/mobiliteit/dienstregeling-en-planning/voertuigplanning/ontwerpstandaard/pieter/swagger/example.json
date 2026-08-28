@@ -3700,7 +3700,7 @@
                 "parameters": {
                   "id": "$response.body#/Blok.bevat/@id"
                 },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Rit` op te halen."
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voertuigrit` op te halen."
               },
               "Blok.eindigtBij": {
                 "operationId": "BlokGET",
@@ -17234,7 +17234,7 @@
           },
           "bevat": {
             "type": "array",
-            "description": "Ritten opgenomen in het blok. Lijst van Rit items.",
+            "description": "Ritten opgenomen in het blok. Lijst van Voertuigrit items.",
             "items": {
               "oneOf": [
                 {
@@ -19517,6 +19517,68 @@
           "administratieveEenheidNaam"
         ]
       },
+      "Openingsurenspecificatie.open": {
+        "title": "Openingsurenspecificatie.open",
+        "description": "Openingsuur van de plaats of dienst op de opgegeven dag van de week.",
+        "$ref": "#/components/schemas/Time"
+      },
+      "Openingsurenspecificatie.gesloten": {
+        "title": "Openingsurenspecificatie.gesloten",
+        "description": "Sluitingsuur van de plaats of dienst op de opgegeven dag van de week.",
+        "$ref": "#/components/schemas/Time"
+      },
+      "Openingsurenspecificatie.dagVanDeWeek": {
+        "title": "Openingsurenspecificatie.dagVanDeWeek",
+        "description": "Dag van de week waarvoor de openingsuren geldig zijn. Zie https://schema.org/DayOfWeek voor lijst van mogelijke waarden.",
+        "type": "string",
+        "format": "uri"
+      },
+      "Openingsurenspecificatie.geldigVan": {
+        "title": "Openingsurenspecificatie.geldigVan",
+        "description": "Datum vanaf wanneer de opgegeven openingsuren gelden.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Openingsurenspecificatie.geldigTot": {
+        "title": "Openingsurenspecificatie.geldigTot",
+        "description": "Datum tot wanneer de opgegeven openingsuren gelden.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Openingsurenspecificatie": {
+        "title": "Openingsurenspecificatie",
+        "type": "object",
+        "description": "Informatie over de openingsuren van een plaats of dienst.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Openingsurenspecificatie)",
+            "pattern": "^Openingsurenspecificatie$"
+          },
+          "open": {
+            "$ref": "#/components/schemas/Openingsurenspecificatie.open"
+          },
+          "gesloten": {
+            "$ref": "#/components/schemas/Openingsurenspecificatie.gesloten"
+          },
+          "dagVanDeWeek": {
+            "$ref": "#/components/schemas/Openingsurenspecificatie.dagVanDeWeek"
+          },
+          "geldigVan": {
+            "$ref": "#/components/schemas/Openingsurenspecificatie.geldigVan"
+          },
+          "geldigTot": {
+            "$ref": "#/components/schemas/Openingsurenspecificatie.geldigTot"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
       "Contactinfo.aanschrijfvorm": {
         "title": "Contactinfo.aanschrijfvorm",
         "description": "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen. Bijvoorbeeld De heer/Mevrouw, Excellentie, Dokter...",
@@ -19579,6 +19641,9 @@
           },
           "website": {
             "$ref": "#/components/schemas/Contactinfo.website"
+          },
+          "beschikbaarheid": {
+            "$ref": "#/components/schemas/Openingsurenspecificatie"
           }
         },
         "required": [
