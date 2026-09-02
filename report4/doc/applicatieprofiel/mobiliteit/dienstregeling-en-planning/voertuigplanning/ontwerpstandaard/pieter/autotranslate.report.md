@@ -14,6 +14,14 @@
 
 #||# create new translation file with existing translations included  
 
+http://www.w3.org/ns/locn#address
+
+new term introduced, no translation found
+
+http://www.w3.org/ns/locn#address
+
+new term introduced, no translation found
+
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning/ontwerpstandaard/pieter/translation_input/voertuigplanning-ap_en.json  
@@ -30,7 +38,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 7  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning/ontwerpstandaard/pieter/autotranslation/voertuigplanning-ap_en.json  
 
