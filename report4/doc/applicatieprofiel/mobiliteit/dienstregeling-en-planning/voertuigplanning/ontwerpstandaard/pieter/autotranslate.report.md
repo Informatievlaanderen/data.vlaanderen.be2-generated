@@ -30,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 7  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning/ontwerpstandaard/pieter/autotranslation/voertuigplanning-ap_en.json  
 
