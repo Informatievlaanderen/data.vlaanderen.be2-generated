@@ -1985,6 +1985,16 @@
         "description": "Beschrijving van de eigenschap van de dag.",
         "type": "string"
       },
+      "EigenschapVanDag.maandVanHetJaar": {
+        "title": "EigenschapVanDag.maandVanHetJaar",
+        "description": "Voor die dagsoorten die elk jaar op dezelfde maand voorkomen; een maand als een nummer.",
+        "$ref": "#/components/schemas/Maand"
+      },
+      "EigenschapVanDag.dagVanHetJaar": {
+        "title": "EigenschapVanDag.dagVanHetJaar",
+        "description": "Voor die dagtypes die elk jaar op dezelfde dag plaatsvinden, maand en dag.",
+        "$ref": "#/components/schemas/MaandDag"
+      },
       "EigenschapVanDag.land": {
         "title": "EigenschapVanDag.land",
         "description": "Land van vakantietype.",
@@ -2013,13 +2023,13 @@
             "$ref": "#/components/schemas/EigenschapVanDag.omschrijving"
           },
           "maandVanHetJaar": {
-            "$ref": "#/components/schemas/Maand"
+            "$ref": "#/components/schemas/EigenschapVanDag.maandVanHetJaar"
           },
           "dagVanDeMaand": {
             "$ref": "#/components/schemas/Dag"
           },
           "dagVanHetJaar": {
-            "$ref": "#/components/schemas/MaandDag"
+            "$ref": "#/components/schemas/EigenschapVanDag.dagVanHetJaar"
           },
           "land": {
             "type": "array",
@@ -3337,24 +3347,6 @@
           "@type"
         ]
       },
-      "Maand": {
-        "title": "Maand",
-        "type": "object",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Maand)",
-            "pattern": "^Maand$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
       "Dag": {
         "title": "Dag",
         "type": "object",
@@ -3367,24 +3359,6 @@
             "type": "string",
             "description": "Object type (klasse Dag)",
             "pattern": "^Dag$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
-      "MaandDag": {
-        "title": "MaandDag",
-        "type": "object",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse MaandDag)",
-            "pattern": "^MaandDag$"
           }
         },
         "required": [
@@ -4660,26 +4634,12 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dienstkalender` op te halen."
       },
-      "EigenschapVanDag.maandVanHetJaar": {
-        "operationId": "EigenschapVanDagGET",
-        "parameters": {
-          "id": "$response.body#/EigenschapVanDag.maandVanHetJaar/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Maand` op te halen."
-      },
       "EigenschapVanDag.dagVanDeMaand": {
         "operationId": "EigenschapVanDagGET",
         "parameters": {
           "id": "$response.body#/EigenschapVanDag.dagVanDeMaand/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dag` op te halen."
-      },
-      "EigenschapVanDag.dagVanHetJaar": {
-        "operationId": "EigenschapVanDagGET",
-        "parameters": {
-          "id": "$response.body#/EigenschapVanDag.dagVanHetJaar/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `MaandDag` op te halen."
       },
       "EigenschapVanDag.dagVanDeWeek": {
         "operationId": "EigenschapVanDagGET",
