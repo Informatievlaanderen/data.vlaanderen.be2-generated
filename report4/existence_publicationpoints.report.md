@@ -193,6 +193,14 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/grb.publication.json
+#||# 
+Directory check
+error: missing '/tmp/generated/doc/implementatiemodel/grb/kristof'
+
+index.html check
+error: missing '/tmp/generated/doc/implementatiemodel/grb/kristof/index.html'
+
 #||#    + checking /home/circleci/project/config/test/hulp-dienst-verlening-gedetineerden.publication.json
 #||# 
 Directory check
