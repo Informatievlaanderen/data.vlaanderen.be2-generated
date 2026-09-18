@@ -1,0 +1,106 @@
+{
+  "title": "TopographicPlace",
+  "type": "object",
+  "description": "A geographical settlement which provides topographical context when searching for or presenting travel information, for example as the origin or destination of a trip.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TopographicPlace)",
+      "pattern": "^TopographicPlace$"
+    },
+    "isoCode": {
+      "$ref": "#/components/schemas/TopographicPlace.isoCode"
+    },
+    "postcode": {
+      "$ref": "#/components/schemas/TopographicPlace.postcode"
+    },
+    "name": {
+      "$ref": "#/components/schemas/TopographicPlace.name"
+    },
+    "topographicPlaceType": {
+      "$ref": "#/components/schemas/TopographicPlaceType"
+    },
+    "country": {
+      "$ref": "#/components/schemas/Country"
+    },
+    "otherCountry": {
+      "type": "array",
+      "description": "For Topographic Places that span borders, references to additional Country or Countries that Place lies in. Lijst van Country items.",
+      "items": {
+        "$ref": "#/components/schemas/Country"
+      },
+      "minItems": 1
+    },
+    "member": {
+      "type": "array",
+      "description": "List of Points within the Topographic Place. Lijst van Point(Class) items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Point(Class)"
+          },
+          {
+            "$ref": "#/components/schemas/ScheduledStopPoint"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Point(Class)": "#/components/schemas/Point(Class)",
+            "ScheduledStopPoint": "#/components/schemas/ScheduledStopPoint"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "centroid": {
+      "$ref": "#/components/schemas/PointDatatype"
+    },
+    "polygon": {
+      "$ref": "#/components/schemas/Polygon"
+    },
+    "servedBy": {
+      "type": "array",
+      "description": "Stop Place serving the Topographic Place. Lijst van StopPlace items.",
+      "items": {
+        "$ref": "#/components/schemas/StopPlace"
+      },
+      "minItems": 1
+    },
+    "mainTerminus": {
+      "type": "array",
+      "description": "Stop Place which is the main terminus of the Topographic Place. Lijst van StopPlace items.",
+      "items": {
+        "$ref": "#/components/schemas/StopPlace"
+      },
+      "minItems": 1
+    },
+    "contained": {
+      "type": "array",
+      "description": "Stop Place located in the Topographic Place. Lijst van StopPlace items.",
+      "items": {
+        "$ref": "#/components/schemas/StopPlace"
+      },
+      "minItems": 1
+    },
+    "parentTopographicPlace": {
+      "$ref": "#/components/schemas/TopographicPlace"
+    },
+    "containedIn": {
+      "type": "array",
+      "description": "Reference to other Topographic Places within which the Topographic Place is contained. Lijst van TopographicPlace items.",
+      "items": {
+        "$ref": "#/components/schemas/TopographicPlace"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "centroid"
+  ]
+}

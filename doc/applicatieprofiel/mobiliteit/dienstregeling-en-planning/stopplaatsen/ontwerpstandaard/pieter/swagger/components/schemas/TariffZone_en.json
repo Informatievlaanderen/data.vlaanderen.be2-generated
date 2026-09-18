@@ -1,0 +1,64 @@
+{
+  "title": "TariffZone",
+  "type": "object",
+  "description": "A Zone used to define a zonal fare structure.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TariffZone)",
+      "pattern": "^TariffZone$"
+    },
+    "presentation": {
+      "$ref": "#/components/schemas/Presentation"
+    },
+    "member": {
+      "type": "array",
+      "description": "List of Points within the Group of Points. Lijst van Point(Class) items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Point(Class)"
+          },
+          {
+            "$ref": "#/components/schemas/ScheduledStopPoint"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Point(Class)": "#/components/schemas/Point(Class)",
+            "ScheduledStopPoint": "#/components/schemas/ScheduledStopPoint"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "centroid": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Point(Class)"
+        },
+        {
+          "$ref": "#/components/schemas/ScheduledStopPoint"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Point(Class)": "#/components/schemas/Point(Class)",
+          "ScheduledStopPoint": "#/components/schemas/ScheduledStopPoint"
+        }
+      }
+    },
+    "polygon": {
+      "$ref": "#/components/schemas/Polygon"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

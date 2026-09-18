@@ -30,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 3  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/stopplaatsen/ontwerpstandaard/pieter/autotranslation/stopplaatsen-ap_en.json  
 
