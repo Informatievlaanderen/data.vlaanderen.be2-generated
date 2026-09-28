@@ -1,0 +1,59 @@
+{
+  "title": "Routeknoop",
+  "type": "object",
+  "description": "Significante positie in de Route die steeds samenvalt met het begin of het einde van een Routesegment.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Routeknoop)",
+      "pattern": "^Routeknoop$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Transportknooptype"
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Punt"
+    },
+    "gerealiseerdOp": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Transportgebied"
+        },
+        {
+          "$ref": "#/components/schemas/Transportknoop"
+        },
+        {
+          "$ref": "#/components/schemas/Transportconnectie"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Transportgebied": "#/components/schemas/Transportgebied",
+          "Transportknoop": "#/components/schemas/Transportknoop",
+          "Transportconnectie": "#/components/schemas/Transportconnectie"
+        }
+      }
+    },
+    "overstap": {
+      "$ref": "#/components/schemas/Routeknoop"
+    },
+    "gerealiseerdMet": {
+      "$ref": "#/components/schemas/Resource"
+    },
+    "gerealiseerdDoor": {
+      "$ref": "#/components/schemas/Mobiliteitsdienst"
+    },
+    "vervoersbewijs": {
+      "$ref": "#/components/schemas/Vervoersbewijs"
+    }
+  },
+  "required": [
+    "@type",
+    "geometrie"
+  ]
+}

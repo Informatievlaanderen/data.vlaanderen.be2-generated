@@ -1,0 +1,151 @@
+{
+  "title": "MobilityService",
+  "type": "object",
+  "description": "Service that enables movement of Persons between Locations.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MobilityService)",
+      "pattern": "^MobilityService$"
+    },
+    "name": {
+      "$ref": "#/components/schemas/MobilityService.name"
+    },
+    "type": {
+      "type": "array",
+      "description": "Nature of the mobility service. For example, public transport, parking, etc. Combinations are possible, for example collective transport & public transport (e.g. NMBS), individual transport & private transport (taxis)... Lijst van TypeOfService items.",
+      "items": {
+        "$ref": "#/components/schemas/TypeOfService"
+      },
+      "minItems": 1
+    },
+    "spatialCoverage": {
+      "type": "array",
+      "description": "Area or Place within which the Mobility Service is offered. For example, Brussels Region, Antwerp... Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "availability": {
+      "type": "array",
+      "description": "Availability of the Mobility Service. For example, timetable or opening hours. Lijst van Availability items.",
+      "items": {
+        "$ref": "#/components/schemas/Availability"
+      },
+      "minItems": 1
+    },
+    "accessibility": {
+      "type": "array",
+      "description": "Accessibility of the Mobility Service. For example, whether the Mobility Service is accessible to people with disabilities. Lijst van Accessibility items.",
+      "items": {
+        "$ref": "#/components/schemas/Accessibility"
+      },
+      "minItems": 1
+    },
+    "meansOfTransport": {
+      "type": "array",
+      "description": "Means of transport with or for which the Mobility Service is usually organised. For example, metro, tram, bus for STIB. For example, car, bicycle for Coovi car park. Lijst van MeansOfTransport items.",
+      "items": {
+        "$ref": "#/components/schemas/MeansOfTransport"
+      },
+      "minItems": 1
+    },
+    "drive": {
+      "type": "array",
+      "description": "Drive of the means of transport with or for which the Mobility Service is usually organised. Lijst van Aandrijftype items.",
+      "items": {
+        "$ref": "#/components/schemas/Aandrijftype"
+      },
+      "minItems": 1
+    },
+    "provider": {
+      "$ref": "#/components/schemas/Provider"
+    },
+    "pricingPlan": {
+      "type": "array",
+      "description": "Price plan of the Mobility Service. Lijst van PricingPlan items.",
+      "items": {
+        "$ref": "#/components/schemas/PricingPlan"
+      },
+      "minItems": 1
+    },
+    "carriedOutBy": {
+      "type": "array",
+      "description": "Operator of the Mobility Service. May differ from the Provider. Lijst van Performer items.",
+      "items": {
+        "$ref": "#/components/schemas/Performer"
+      },
+      "minItems": 1
+    },
+    "resource": {
+      "type": "array",
+      "description": "Resource available to the Mobility Service. We limit ourselves here to Resources that a Passenger can reserve for the performance of his Trip, for example the seat on a train but not the train with which the Mobility Service is realized. Lijst van Resource items.",
+      "items": {
+        "$ref": "#/components/schemas/Resource"
+      },
+      "minItems": 1
+    },
+    "includes": {
+      "type": "array",
+      "description": "More specific Mobility Services of which the Mobility Service is composed. For example, public transport in Brussels offered by STIB consists of a number of metro lines, for example line 5 Erasmus-Herman-Debroux.Or a MAAS provider integrates several services, for example public transport and shared transport. Lijst van MobilityService items.",
+      "items": {
+        "$ref": "#/components/schemas/MobilityService"
+      },
+      "minItems": 1
+    },
+    "availableOn": {
+      "type": "array",
+      "description": "Transport object on which the Mobility Service is offered. For example, P+R is offered at the station car park, shared bike+train offered at combi point. Lijst van TransportObject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportConnection"
+          },
+          {
+            "$ref": "#/components/schemas/TransportArea"
+          },
+          {
+            "$ref": "#/components/schemas/TransportKnot"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportConnection": "#/components/schemas/TransportConnection",
+            "TransportArea": "#/components/schemas/TransportArea",
+            "TransportKnot": "#/components/schemas/TransportKnot"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "offeredInside": {
+      "type": "array",
+      "description": "Formal Framework within which the Mobility Service is offered. For example, Decree in which the criteria for licensing a Mobility Service are listed. Lijst van FormalFrame items.",
+      "items": {
+        "$ref": "#/components/schemas/FormalFrame"
+      },
+      "minItems": 1
+    },
+    "license": {
+      "type": "array",
+      "description": "License under which the Mobility Service is offered. Lijst van License items.",
+      "items": {
+        "$ref": "#/components/schemas/License"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "name",
+    "type",
+    "provider",
+    "carriedOutBy"
+  ]
+}

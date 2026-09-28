@@ -1,0 +1,55 @@
+{
+  "title": "Vervoersbewijs",
+  "type": "object",
+  "description": "Bewijs van bepaald recht op vervoer of diensten daarmee geassocieerd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Vervoersbewijs)",
+      "pattern": "^Vervoersbewijs$"
+    },
+    "aantal": {
+      "$ref": "#/components/schemas/Vervoersbewijs.aantal"
+    },
+    "duur": {
+      "$ref": "#/components/schemas/Vervoersbewijs.duur"
+    },
+    "bedrag": {
+      "$ref": "#/components/schemas/Geldbedrag"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Vervoerbewijstype"
+    },
+    "prijs": {
+      "$ref": "#/components/schemas/Geldbedrag"
+    },
+    "periode": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "reisweg": {
+      "type": "array",
+      "description": "Opeenvolging van Locaties waarvoor het Vervoersbewijs geldig is. Typisch de twee opeenvolgende Locaties waartussen men mag reizen met het Vervoersbewijs, bijvoorbeeld een treinabonnement tussen Brussel en Gent (waarbij het type Vervoersbewijs dan doorgaans \"retourticket\" is, maw ook een Reis van Gent naar Brussel is mogelijk). Maar kan ook gewoon het Gebied of de Plaats zijn waarvoor het Vervoersbewijs geldt, bijvoorbeeld Antwerpen. Lijst van Locatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Locatie"
+      },
+      "minItems": 1
+    },
+    "afstand": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "dienst": {
+      "$ref": "#/components/schemas/Mobiliteitsdienst"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "periode",
+    "reisweg",
+    "dienst"
+  ]
+}

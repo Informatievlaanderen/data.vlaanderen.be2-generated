@@ -1,0 +1,55 @@
+{
+  "title": "Ticket",
+  "type": "object",
+  "description": "Proof of certain right to transport or services associated with it.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Ticket)",
+      "pattern": "^Ticket$"
+    },
+    "quantity": {
+      "$ref": "#/components/schemas/Ticket.quantity"
+    },
+    "duration": {
+      "$ref": "#/components/schemas/Ticket.duration"
+    },
+    "amount": {
+      "$ref": "#/components/schemas/AmountOfMoney"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TicketType"
+    },
+    "price": {
+      "$ref": "#/components/schemas/AmountOfMoney"
+    },
+    "periodOfProject": {
+      "$ref": "#/components/schemas/PeriodOfProject"
+    },
+    "itinerary": {
+      "type": "array",
+      "description": "Sequence of Locations for which the Ticket is valid. Typically the two consecutive Locations between which one can travel with the Ticket, for example a train season ticket between Brussels and Ghent (where the type of Ticket is usually \"return ticket\", i.e. a Trip from Ghent to Brussels is also possible). But it can also simply be the Area or Place to which the Ticket applies, for example Antwerp. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "distance": {
+      "$ref": "#/components/schemas/QuantitativeValue"
+    },
+    "service": {
+      "$ref": "#/components/schemas/MobilityService"
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "periodOfProject",
+    "itinerary",
+    "service"
+  ]
+}

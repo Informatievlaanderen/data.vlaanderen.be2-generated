@@ -1,0 +1,61 @@
+{
+  "title": "Transportconnectie",
+  "type": "object",
+  "description": "Logische verbinding tussen twee of meer Transportobjecten in verschillende Transportnetwerken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Transportconnectie)",
+      "pattern": "^Transportconnectie$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Connectietype"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "verbindt": {
+      "type": "array",
+      "description": "Transportobjecten die door deTransportconnectie verbonden zijn. Lijst van Transportobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Transportgebied"
+          },
+          {
+            "$ref": "#/components/schemas/Transportknoop"
+          },
+          {
+            "$ref": "#/components/schemas/Transportconnectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Transportgebied": "#/components/schemas/Transportgebied",
+            "Transportknoop": "#/components/schemas/Transportknoop",
+            "Transportconnectie": "#/components/schemas/Transportconnectie"
+          }
+        }
+      },
+      "minItems": 2
+    },
+    "geografischeNaam": {
+      "$ref": "#/components/schemas/Transportconnectie.geografischeNaam"
+    },
+    "beschikbaarheid": {
+      "$ref": "#/components/schemas/Beschikbaarheid"
+    },
+    "toegankelijkheid": {
+      "$ref": "#/components/schemas/Toegankelijkheid"
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}

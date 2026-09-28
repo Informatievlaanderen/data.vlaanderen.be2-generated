@@ -1,0 +1,58 @@
+{
+  "title": "Route",
+  "type": "object",
+  "description": "Possible, chosen or traveled route between two Locations (the starting point and the arrival point respectively).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Route)",
+      "pattern": "^Route$"
+    },
+    "departureTime": {
+      "$ref": "#/components/schemas/Route.departureTime"
+    },
+    "arrivalTime": {
+      "$ref": "#/components/schemas/Route.arrivalTime"
+    },
+    "duration": {
+      "$ref": "#/components/schemas/Route.duration"
+    },
+    "directions": {
+      "$ref": "#/components/schemas/Directions"
+    },
+    "cost": {
+      "$ref": "#/components/schemas/AmountOfMoney"
+    },
+    "type": {
+      "$ref": "#/components/schemas/RouteType"
+    },
+    "departurePoint": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "arrivalPoint": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "distance": {
+      "$ref": "#/components/schemas/QuantitativeValue"
+    },
+    "consistsOf": {
+      "type": "array",
+      "description": "Sequence of Route segments that make up the Route. Lijst van RouteSegment items.",
+      "items": {
+        "$ref": "#/components/schemas/RouteSegment"
+      },
+      "minItems": 1
+    },
+    "calculatedWith": {
+      "$ref": "#/components/schemas/RoutePlanner"
+    }
+  },
+  "required": [
+    "@type",
+    "consistsOf"
+  ]
+}

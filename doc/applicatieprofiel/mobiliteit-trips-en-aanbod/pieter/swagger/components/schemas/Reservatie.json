@@ -1,0 +1,39 @@
+{
+  "title": "Reservatie",
+  "type": "object",
+  "description": "Kenmerken van de Reservatie van een Resource bij een Boeking.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Reservatie)",
+      "pattern": "^Reservatie$"
+    },
+    "periode": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "reisweg": {
+      "type": "array",
+      "description": "Reisweg waarvoor iets gereserveerd wordt. Bijvoorbeeld zitplaats van Brussel naar Parijs. Lijst van Locatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Locatie"
+      },
+      "minItems": 1
+    },
+    "reservatie.Boeking": {
+      "$ref": "#/components/schemas/Boeking"
+    },
+    "reservatie.Resource": {
+      "$ref": "#/components/schemas/Resource"
+    }
+  },
+  "required": [
+    "@type",
+    "periode",
+    "reservatie.Boeking",
+    "reservatie.Resource"
+  ]
+}

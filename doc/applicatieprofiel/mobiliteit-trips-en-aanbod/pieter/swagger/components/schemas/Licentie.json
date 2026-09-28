@@ -1,0 +1,44 @@
+{
+  "title": "Licentie",
+  "type": "object",
+  "description": "Formele toestemming om een Mobiliteitsdienst aan te bieden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Licentie)",
+      "pattern": "^Licentie$"
+    },
+    "periode": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "toepassingsgebied": {
+      "type": "array",
+      "description": "Gebied of Plaats waarbinnen de Licentie geldt. Lijst van Plaats items.",
+      "items": {
+        "$ref": "#/components/schemas/Plaats"
+      },
+      "minItems": 1
+    },
+    "vervoersautoriteit": {
+      "$ref": "#/components/schemas/PubliekeOrganisatie"
+    },
+    "verkregenBinnen": {
+      "type": "array",
+      "description": "Formeel Kader waarbinnen de Licentie is verkregen. Bijvoorbeeld de set van criteria waaraan een Mobiliteitsdienst moet voldoen. Lijst van FormeelKader items.",
+      "items": {
+        "$ref": "#/components/schemas/FormeelKader"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "periode",
+    "toepassingsgebied",
+    "vervoersautoriteit"
+  ]
+}

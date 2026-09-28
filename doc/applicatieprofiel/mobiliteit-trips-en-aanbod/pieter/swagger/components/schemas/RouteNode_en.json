@@ -1,0 +1,59 @@
+{
+  "title": "RouteNode",
+  "type": "object",
+  "description": "Significant position in the Route that always coincides with the beginning or end of a Route Segment.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RouteNode)",
+      "pattern": "^RouteNode$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TransportNodeType"
+    },
+    "geometry": {
+      "$ref": "#/components/schemas/Point"
+    },
+    "realizedOn": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TransportConnection"
+        },
+        {
+          "$ref": "#/components/schemas/TransportArea"
+        },
+        {
+          "$ref": "#/components/schemas/TransportKnot"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TransportConnection": "#/components/schemas/TransportConnection",
+          "TransportArea": "#/components/schemas/TransportArea",
+          "TransportKnot": "#/components/schemas/TransportKnot"
+        }
+      }
+    },
+    "switch": {
+      "$ref": "#/components/schemas/RouteNode"
+    },
+    "achievedWith": {
+      "$ref": "#/components/schemas/Resource"
+    },
+    "realizedBy": {
+      "$ref": "#/components/schemas/MobilityService"
+    },
+    "ticket": {
+      "$ref": "#/components/schemas/Ticket"
+    }
+  },
+  "required": [
+    "@type",
+    "geometry"
+  ]
+}

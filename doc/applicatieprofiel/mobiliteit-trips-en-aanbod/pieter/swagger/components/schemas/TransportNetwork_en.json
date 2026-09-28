@@ -1,0 +1,49 @@
+{
+  "title": "TransportNetwork",
+  "type": "object",
+  "description": "Collection of Network Elements representing the same mode of transport.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TransportNetwork)",
+      "pattern": "^TransportNetwork$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TransportType"
+    },
+    "consistsOf": {
+      "type": "array",
+      "description": "Transport objects that make up the Transport Network. Lijst van TransportObject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportConnection"
+          },
+          {
+            "$ref": "#/components/schemas/TransportArea"
+          },
+          {
+            "$ref": "#/components/schemas/TransportKnot"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportConnection": "#/components/schemas/TransportConnection",
+            "TransportArea": "#/components/schemas/TransportArea",
+            "TransportKnot": "#/components/schemas/TransportKnot"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}

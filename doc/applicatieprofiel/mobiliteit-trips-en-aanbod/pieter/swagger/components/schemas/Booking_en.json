@@ -1,0 +1,49 @@
+{
+  "title": "Booking",
+  "type": "object",
+  "description": "Recording a Trip by purchasing a Transport Ticket and/or reserving a Resource.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Booking)",
+      "pattern": "^Booking$"
+    },
+    "date": {
+      "$ref": "#/components/schemas/Booking.date"
+    },
+    "price": {
+      "$ref": "#/components/schemas/AmountOfMoney"
+    },
+    "status": {
+      "$ref": "#/components/schemas/Boekingstatus"
+    },
+    "journey": {
+      "$ref": "#/components/schemas/Journey"
+    },
+    "ticket": {
+      "type": "array",
+      "description": "Ticket for the booked Trip. Lijst van Ticket items.",
+      "items": {
+        "$ref": "#/components/schemas/Ticket"
+      },
+      "minItems": 1
+    },
+    "resource": {
+      "type": "array",
+      "description": "Resource that is reserved. Lijst van Resource items.",
+      "items": {
+        "$ref": "#/components/schemas/Resource"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "date",
+    "journey"
+  ]
+}

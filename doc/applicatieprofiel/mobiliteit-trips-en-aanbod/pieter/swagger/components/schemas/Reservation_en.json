@@ -1,0 +1,39 @@
+{
+  "title": "Reservation",
+  "type": "object",
+  "description": "Characteristics of the Resource Reservation with a Booking.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Reservation)",
+      "pattern": "^Reservation$"
+    },
+    "periodOfProject": {
+      "$ref": "#/components/schemas/PeriodOfProject"
+    },
+    "itinerary": {
+      "type": "array",
+      "description": "Itinerary for which something is reserved. For example, seat from Brussels to Paris. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "reservatie.Boeking": {
+      "$ref": "#/components/schemas/Booking"
+    },
+    "reservatie.Resource": {
+      "$ref": "#/components/schemas/Resource"
+    }
+  },
+  "required": [
+    "@type",
+    "periodOfProject",
+    "reservatie.Boeking",
+    "reservatie.Resource"
+  ]
+}

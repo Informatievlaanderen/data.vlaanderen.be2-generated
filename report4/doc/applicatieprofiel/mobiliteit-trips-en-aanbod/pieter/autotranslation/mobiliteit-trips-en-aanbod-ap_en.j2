@@ -1,0 +1,26 @@
+{% extends "ap2_en.j2" %}
+ 
+{% block summary %}
+<p>The OSLO-Mobility: Trips and Offers application profile shows how to use terms from the corresponding <a href="https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod">vocabulary</a> to exchange data on 1) journeys made by people and 2) the mobility services they have available for this purpose.</p>
+ 
+<p>With this data, mobility supply and demand can be better matched, e.g. through aggregation and analysis of trip and supply data. The ultimate goal is to achieve increased basic accessibility, including through intermodal transport.</p>
+ 
+<p>The model consists of a part that describes the journey and the related route, and a part that models the mobility service and the associated concepts, including the transport network that is used to realise the services and ultimately the journey.</p>
+ 
+<p>The Traveller entity describes (anonymously) the person undertaking the Trip. Personal and situational characteristics and preferences are taken into account. A Traveller may be accompanied by fellow travellers. A Journey can be part of a larger Journey, which is composed of a return journey, for example.</p>
+ 
+<p>Routes are linked to a Journey. For example, there are the possible routes that are suggested by a route planner, for example, and the route that is ultimately chosen from them. There may be several chosen Routes if the Traveller changes his Route when the Journey has already started. Finally, there is the actually implemented Route.</p>
+ 
+<p>A Route is a sequence of Route segments where a segment represents the part of the Route that is traveled by the same means of transport. For example, a Journey can consist of a segment realized by car, a second segment by train, and a final segment on foot. A Connection between two of the same means of transport (e.g. from one train to another) will also create two Route Segments. The Route Node class describes the start and end points of the Route segment. The Layover class can be used to describe Journeys more simply. For example, the distance travelled from platform 2 to platform 8 can be described as a fully-fledged Route segment or more concisely modelled as a Transfer.</p>
+ 
+<p>A Journey is recorded by one or more Bookings whereby the Traveller obtains the necessary Tickets for the Mobility Services he uses. A Booking may include a Reservation of a particular Resource, e.g. a parking space, a seat on a train, etc. However, a Passenger can also have the necessary Tickets in advance, such as in the case of a season ticket or a ten-journey ticket.</p>
+ 
+<p>The Mobility Service takes a central role in the model and describes what the Provider has to enable the movement of people between locations. These can be scheduled services or shared scooters, but also parking spaces or bicycle pumps. A Mobility Service may include other Mobility Services, e.g. in the case of a MaaS Provider that integrates several services into one service, but also in the case of a Provider that describes its services at different levels of granularity (e.g. at a high level, the "shared mobility in Flanders" service and at a lower level, the services "shared cars in Antwerp" and "shared bicycles in Ghent").</p>
+ 
+<p>A Mobility Service is carried out by an Operator (often but not always the same as the Provider), and has a certain Accessibility and Availability. A Mobility Service is usually provided within a certain Formal Framework such as a law, and has obtained the necessary permission through a License to operate in a certain area. A Mobility Service has a number of Resources (e.g. parking spaces at a carpool car park, seats on a train, cars in the case of car sharing, etc.).</p>
+ 
+<p>Finally, the Transport Network consists of several Transport Objects. In particular, we describe Transport connections, Transport nodes (such as stops, stations, etc.) and Transport areas (such as mobihubs, drop zones, etc.). We used the vocabulary <a href="https://data.vlaanderen.be/ns/transportnetwerk">OSLO Transport Network</a>.</p>
+
+<p>Enumerations are in principle described outside the application profile, so the enumeration values shown in the diagram are illustrative.</p>
+ 
+{% endblock %}

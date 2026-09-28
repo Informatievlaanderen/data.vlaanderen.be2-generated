@@ -1,0 +1,63 @@
+{
+  "title": "Reiziger",
+  "type": "object",
+  "description": "Persoon die een Reis onderneemt of wil ondernemen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Reiziger)",
+      "pattern": "^Reiziger$"
+    },
+    "pseudoniem": {
+      "$ref": "#/components/schemas/Pseudoniem"
+    },
+    "kenmerk": {
+      "type": "array",
+      "description": "Kenmerk van de Reiziger. Lijst van Kenmerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Kenmerk"
+      },
+      "minItems": 1
+    },
+    "onderneemt": {
+      "type": "array",
+      "description": "Reis die een Reiziger onderneemt of wil ondernemen. Lijst van Reis items.",
+      "items": {
+        "$ref": "#/components/schemas/Reis"
+      },
+      "minItems": 1
+    },
+    "vervoersbewijs": {
+      "type": "array",
+      "description": "Vervoersbewijs van de Reiziger. Kan los staan van een Reis, het is te zeggen men kan beschikken over een Vervoersbewijs waarbij de Reis nog niet vastligt of nog niet is uitgevoerd, bijvoorbeeld een abonnement of een dagkaart. Lijst van Vervoersbewijs items.",
+      "items": {
+        "$ref": "#/components/schemas/Vervoersbewijs"
+      },
+      "minItems": 1
+    },
+    "voorkeur": {
+      "type": "array",
+      "description": "Voorkeuren van de Reiziger. Lijst van Voorkeur items.",
+      "items": {
+        "$ref": "#/components/schemas/Voorkeur"
+      },
+      "minItems": 1
+    },
+    "isMedereizigerVan": {
+      "type": "array",
+      "description": "Reiziger die de Reiziger vergezelt tijdens de Reis. Bijvoorbeeld de kinderen van een gezin dat samenreist. Van belang bij bijvoorbeeld bij het bepalen van de prijs van een Vervoersbewijs wanneer jonge kinderen gratis meereizen. Lijst van Reiziger items.",
+      "items": {
+        "$ref": "#/components/schemas/Reiziger"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "pseudoniem"
+  ]
+}

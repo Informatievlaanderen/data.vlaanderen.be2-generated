@@ -1,0 +1,42 @@
+{
+  "title": "FormeelKader",
+  "type": "object",
+  "description": "Geheel van formele documenten dat regels, rechten, plichten ten aanzien van burgers, overheden, bedrijven etc beschrijft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse FormeelKader)",
+      "pattern": "^FormeelKader$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/FormeelKader.naam"
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/FormeelKader.beschrijving"
+    },
+    "toepassingsgebied": {
+      "type": "array",
+      "description": "Het geografisch bereik van het formeel kader. Maw of bijvoorbeeld Europees, nationaal, lokaal is. Lijst van Plaats items.",
+      "items": {
+        "$ref": "#/components/schemas/Plaats"
+      },
+      "minItems": 1
+    },
+    "isGerelateerdAan": {
+      "type": "array",
+      "description": "Ander formeel kader dat met het formeel kader verband houdt. Lijst van FormeelKader items.",
+      "items": {
+        "$ref": "#/components/schemas/FormeelKader"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam"
+  ]
+}

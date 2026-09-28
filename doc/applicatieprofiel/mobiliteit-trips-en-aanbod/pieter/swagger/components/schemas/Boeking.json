@@ -1,0 +1,49 @@
+{
+  "title": "Boeking",
+  "type": "object",
+  "description": "Het vastleggen van een Reis door aankoop van een Vervoersbewijs en/of het reserveren van een Resource.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Boeking)",
+      "pattern": "^Boeking$"
+    },
+    "datum": {
+      "$ref": "#/components/schemas/Boeking.datum"
+    },
+    "prijs": {
+      "$ref": "#/components/schemas/Geldbedrag"
+    },
+    "status": {
+      "$ref": "#/components/schemas/Boekingstatus"
+    },
+    "reis": {
+      "$ref": "#/components/schemas/Reis"
+    },
+    "vervoersbewijs": {
+      "type": "array",
+      "description": "Vervoersbewijs voor de geboekte Reis. Lijst van Vervoersbewijs items.",
+      "items": {
+        "$ref": "#/components/schemas/Vervoersbewijs"
+      },
+      "minItems": 1
+    },
+    "resource": {
+      "type": "array",
+      "description": "Resource die is gereserveerd. Lijst van Resource items.",
+      "items": {
+        "$ref": "#/components/schemas/Resource"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "datum",
+    "reis"
+  ]
+}

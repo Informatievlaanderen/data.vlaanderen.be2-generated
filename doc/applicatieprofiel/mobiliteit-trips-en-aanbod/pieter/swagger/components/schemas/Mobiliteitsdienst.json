@@ -1,0 +1,151 @@
+{
+  "title": "Mobiliteitsdienst",
+  "type": "object",
+  "description": "Dienstverlening die verplaatsingen van Personen tussen Locaties mogelijk maakt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Mobiliteitsdienst)",
+      "pattern": "^Mobiliteitsdienst$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Mobiliteitsdienst.naam"
+    },
+    "type": {
+      "type": "array",
+      "description": "Aard van de mobiliteitsdienst. Bijvoorbeeld openbaar vervoer, parking etc. Combinaties zijn mogelijk, bijvoorbeeld collectief vervoer & openbaar vervoer (bijvoorbeeld NMBS), individueel vervoer & privé vervoer (taxi's)... Lijst van Dienstverleningtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Dienstverleningtype"
+      },
+      "minItems": 1
+    },
+    "ruimtelijkeDekking": {
+      "type": "array",
+      "description": "Gebied of Plaats waarbinnen de Mobiliteitsdienst wordt aangeboden. Bijvoorbeeld Brussels Gewest, Antwerpen... Lijst van Plaats items.",
+      "items": {
+        "$ref": "#/components/schemas/Plaats"
+      },
+      "minItems": 1
+    },
+    "beschikbaarheid": {
+      "type": "array",
+      "description": "Beschikbaarheid van de Mobiliteitsdienst. Bijvoorbeeld dienstregeling of openingsuren. Lijst van Beschikbaarheid items.",
+      "items": {
+        "$ref": "#/components/schemas/Beschikbaarheid"
+      },
+      "minItems": 1
+    },
+    "toegankelijkheid": {
+      "type": "array",
+      "description": "Toegankelijkheid van de Mobiliteitsdienst. Bijvoorbeeld of de Mobiliteitsdienst toegankelijk is voor personen met een beperking. Lijst van Toegankelijkheid items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegankelijkheid"
+      },
+      "minItems": 1
+    },
+    "vervoermiddel": {
+      "type": "array",
+      "description": "Vervoermiddel waarmee of waarvoor de Mobiliteitsdienst doorgaans wordt georganiseerd. Bijvoorbeeld metro, tram, bus voor de MIVB. Bijvoorbeeld auto, fiets voor parking Coovi. Lijst van Vervoermiddel items.",
+      "items": {
+        "$ref": "#/components/schemas/Vervoermiddel"
+      },
+      "minItems": 1
+    },
+    "aandrijving": {
+      "type": "array",
+      "description": "Aandrijving van het vervoermiddel waarmee of waarvoor de Mobiliteitsdienst doorgaans wordt georganiseerd. Lijst van Aandrijftype items.",
+      "items": {
+        "$ref": "#/components/schemas/Aandrijftype"
+      },
+      "minItems": 1
+    },
+    "aanbieder": {
+      "$ref": "#/components/schemas/Aanbieder"
+    },
+    "prijsplan": {
+      "type": "array",
+      "description": "Prijsplan van de Mobiliteitsdienst. Lijst van Prijsplan items.",
+      "items": {
+        "$ref": "#/components/schemas/Prijsplan"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Uitvoerder van de Mobiliteitsdienst. Kan verschillen van de Aanbieder. Lijst van Uitvoerder items.",
+      "items": {
+        "$ref": "#/components/schemas/Uitvoerder"
+      },
+      "minItems": 1
+    },
+    "resource": {
+      "type": "array",
+      "description": "Resource waarover de Mobiliteitsdienst beschikt. We beperken ons hier tot Resources die een Reiziger kan reserveren voor het uitvoeren van zijn Reis, bijvoorbeeld wel de zitplaats op een trein maar niet de trein waarmee de Mobiliteitsdienst wordt gerealiseerd. Lijst van Resource items.",
+      "items": {
+        "$ref": "#/components/schemas/Resource"
+      },
+      "minItems": 1
+    },
+    "omvat": {
+      "type": "array",
+      "description": "Meer specifieke Mobiliteitsdiensten waaruit de Mobiliteitsdienst is samengesteld. Bijvoorbeeld openbaar vervoer in Brussel aangeboden door de MIVB bestaat uit een aantal metrolijnen bijvoorbeeld lijn 5 Erasmus-Herman-Debroux.Of een MAAS-aanbieder integreert meerdere diensten, bijvoorbeeld openbaar vervoer en deelvervoer. Lijst van Mobiliteitsdienst items.",
+      "items": {
+        "$ref": "#/components/schemas/Mobiliteitsdienst"
+      },
+      "minItems": 1
+    },
+    "beschikbaarOp": {
+      "type": "array",
+      "description": "Transportobject waarop de Mobiliteitsdienst wordt aangeboden. Bijvoorbeeld P+R wordt aangeboden op parking van station, deelfiets+trein aangeboden in combipunt. Lijst van Transportobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Transportgebied"
+          },
+          {
+            "$ref": "#/components/schemas/Transportknoop"
+          },
+          {
+            "$ref": "#/components/schemas/Transportconnectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Transportgebied": "#/components/schemas/Transportgebied",
+            "Transportknoop": "#/components/schemas/Transportknoop",
+            "Transportconnectie": "#/components/schemas/Transportconnectie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "aangebodenBinnen": {
+      "type": "array",
+      "description": "Formeel Kader waarbinnen de Mobiliteitsdienst wordt aangeboden. Bijvoorbeeld Besluit waarin de criteria voor het vergunnen van een Mobiliteitsdienst zijn opgesomd. Lijst van FormeelKader items.",
+      "items": {
+        "$ref": "#/components/schemas/FormeelKader"
+      },
+      "minItems": 1
+    },
+    "licentie": {
+      "type": "array",
+      "description": "Licentie waaronder de Mobiliteitsdienst wordt aangeboden. Lijst van Licentie items.",
+      "items": {
+        "$ref": "#/components/schemas/Licentie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "type",
+    "aanbieder",
+    "uitgevoerdDoor"
+  ]
+}

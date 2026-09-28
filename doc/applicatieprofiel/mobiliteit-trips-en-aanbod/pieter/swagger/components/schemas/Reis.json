@@ -1,0 +1,118 @@
+{
+  "title": "Reis",
+  "type": "object",
+  "description": "Vrijwillige verplaatsing van een Persoon van de ene Locatie naar een andere Locatie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Reis)",
+      "pattern": "^Reis$"
+    },
+    "vertrektijdstip": {
+      "$ref": "#/components/schemas/Reis.vertrektijdstip"
+    },
+    "aankomsttijdstip": {
+      "$ref": "#/components/schemas/Reis.aankomsttijdstip"
+    },
+    "reisweg": {
+      "type": "array",
+      "description": "Opeenvolging van Locaties die men tijdens de Reis wil aandoen. Inclusief de Locatie waar de Reis aanvangt en eindigt. Lijst van Locatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Locatie"
+      },
+      "minItems": 2
+    },
+    "isDeelVan": {
+      "type": "array",
+      "description": "Deel van een volledige Reis dat op zichzelf ook beschouwd kan worden als een Reis. Lijst van Reis items.",
+      "items": {
+        "$ref": "#/components/schemas/Reis"
+      },
+      "minItems": 1
+    },
+    "mogelijkeRoute": {
+      "type": "array",
+      "description": "Routes die gevolgd kunnen worden om de Reis uit te voeren. Lijst van Route items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Route"
+          },
+          {
+            "$ref": "#/components/schemas/Routesegment"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Route": "#/components/schemas/Route",
+            "Routesegment": "#/components/schemas/Routesegment"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "boeking": {
+      "type": "array",
+      "description": "Boeking van de Reis. Lijst van Boeking items.",
+      "items": {
+        "$ref": "#/components/schemas/Boeking"
+      },
+      "minItems": 1
+    },
+    "gekozenRoute": {
+      "type": "array",
+      "description": "Route die de Reiziger kiest uit de mogelijke Routes. Eventueel meer dan 1 gekozen Route als de reiziger onderweg van Route verandert. Lijst van Route items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Route"
+          },
+          {
+            "$ref": "#/components/schemas/Routesegment"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Route": "#/components/schemas/Route",
+            "Routesegment": "#/components/schemas/Routesegment"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "uitgevoerdeRoute": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Route"
+        },
+        {
+          "$ref": "#/components/schemas/Routesegment"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Route": "#/components/schemas/Route",
+          "Routesegment": "#/components/schemas/Routesegment"
+        }
+      }
+    },
+    "vervoersbewijs": {
+      "type": "array",
+      "description": "Vervoersbewijs voor de Reis. Dit is het Vervoersbewijs waarmee men de Reis wil uitvoeren of men de Reis heeft uitgevoerd. Bijvoorbeeld het gekochte ticket of het abonnement waarover men beschikt. Lijst van Vervoersbewijs items.",
+      "items": {
+        "$ref": "#/components/schemas/Vervoersbewijs"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

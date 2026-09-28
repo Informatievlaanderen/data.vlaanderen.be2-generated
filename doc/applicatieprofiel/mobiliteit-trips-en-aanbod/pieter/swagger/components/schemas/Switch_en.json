@@ -1,0 +1,57 @@
+{
+  "title": "Switch",
+  "type": "object",
+  "description": "Logical connection between two Route Nodes.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Switch)",
+      "pattern": "^Switch$"
+    },
+    "switchingTime": {
+      "$ref": "#/components/schemas/Switch.switchingTime"
+    },
+    "meansOfTransport": {
+      "$ref": "#/components/schemas/MeansOfTransport"
+    },
+    "drive": {
+      "$ref": "#/components/schemas/Aandrijftype"
+    },
+    "routeknoop(Source)": {
+      "$ref": "#/components/schemas/RouteNode"
+    },
+    "routeknoop(Target)": {
+      "$ref": "#/components/schemas/RouteNode"
+    },
+    "realizedOn": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TransportConnection"
+        },
+        {
+          "$ref": "#/components/schemas/TransportArea"
+        },
+        {
+          "$ref": "#/components/schemas/TransportKnot"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TransportConnection": "#/components/schemas/TransportConnection",
+          "TransportArea": "#/components/schemas/TransportArea",
+          "TransportKnot": "#/components/schemas/TransportKnot"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "routeknoop(Source)",
+    "routeknoop(Target)"
+  ]
+}

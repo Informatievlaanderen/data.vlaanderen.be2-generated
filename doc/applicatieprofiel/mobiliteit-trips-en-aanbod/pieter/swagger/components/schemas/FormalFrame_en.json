@@ -1,0 +1,42 @@
+{
+  "title": "FormalFrame",
+  "type": "object",
+  "description": "Set of formal documents that describe rules, rights, obligations towards citizens, governments, companies, etc.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse FormalFrame)",
+      "pattern": "^FormalFrame$"
+    },
+    "name": {
+      "$ref": "#/components/schemas/FormalFrame.name"
+    },
+    "description": {
+      "$ref": "#/components/schemas/FormalFrame.description"
+    },
+    "applicationArea": {
+      "type": "array",
+      "description": "The geographical scope of the formal framework. In other words, whether it is European, national, local, for example. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "isRelatedTo": {
+      "type": "array",
+      "description": "Other formal framework related to the formal framework. Lijst van FormalFrame items.",
+      "items": {
+        "$ref": "#/components/schemas/FormalFrame"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "name"
+  ]
+}

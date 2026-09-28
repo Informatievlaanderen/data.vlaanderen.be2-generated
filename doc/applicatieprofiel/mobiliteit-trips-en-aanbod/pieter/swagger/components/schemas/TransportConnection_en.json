@@ -1,0 +1,61 @@
+{
+  "title": "TransportConnection",
+  "type": "object",
+  "description": "Logical connection between two or more Transport objects in different Transport networks.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TransportConnection)",
+      "pattern": "^TransportConnection$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/ConnectionType"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "connects": {
+      "type": "array",
+      "description": "Transport objects that are connected by the Transport connection. Lijst van TransportObject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportConnection"
+          },
+          {
+            "$ref": "#/components/schemas/TransportArea"
+          },
+          {
+            "$ref": "#/components/schemas/TransportKnot"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportConnection": "#/components/schemas/TransportConnection",
+            "TransportArea": "#/components/schemas/TransportArea",
+            "TransportKnot": "#/components/schemas/TransportKnot"
+          }
+        }
+      },
+      "minItems": 2
+    },
+    "geographicName": {
+      "$ref": "#/components/schemas/TransportConnection.geographicName"
+    },
+    "availability": {
+      "$ref": "#/components/schemas/Availability"
+    },
+    "accessibility": {
+      "$ref": "#/components/schemas/Accessibility"
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}
