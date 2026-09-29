@@ -37,6 +37,8 @@
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#TaalstringShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#DateTimeShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#DurationShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#BeschikbaarheidShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#GeometrieShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#GeografischeNaamShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#KwantitatieveWaardeShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#StringShape>,
@@ -45,7 +47,6 @@
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#RoutebeschrijvingShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#GeldbedragShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#LocatieShape>,
-    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#BeschikbaarheidShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#DienstregelingShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#GerichteLinkShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#LijnstringShape>,
@@ -59,7 +60,6 @@
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#PolygoonShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#OpeningsurenspecificatieShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#ContactinfoShape>,
-    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#GeometrieShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#ResourcetypeShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#RoutetypeShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#VervoermiddelShape>,
@@ -128,6 +128,17 @@
   rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Beschikbaarheid>;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "openingsurenString"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Syntax volgens schema.org voor openingsuren. Bijvoorbeeld als contact kan worden opgenomen tussen 8 en 20u maandag tot zaterdag en tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00."@nl;
+    rdfs:comment "Uren waarop iets beschikbaar is."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Beschikbaarheid.OpeningsurenString>;
+    shacl:description "Uren waarop iets beschikbaar is."@nl;
+    shacl:maxCount 1;
+    shacl:name "openingsurenString"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path schemas:openingHours
+  ], [
     a shacl:PropertyShape;
     rdfs:label "dienstregeling"@nl;
     rdfs:comment "Schema met tijdstippen waarop iets wordt aangeboden."@nl;
@@ -339,10 +350,33 @@
   rdfs:comment "Vorm- en positiekenmerken van een object."@nl;
   rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Geometrie>;
   shacl:closed false;
-  shacl:targetClass <http://www.opengis.net/ont/sf#LineString>,
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "wkt"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in wkt-formaat."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Geometrie.Wkt>;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount 1;
+    shacl:name "wkt"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gml"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in gml-formaat."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Geometrie.Gml>;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount 1;
+    shacl:name "gml"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry>,
+    <http://www.opengis.net/ont/sf#LineString>,
     <http://www.opengis.net/ont/sf#Point>,
-    <http://www.opengis.net/ont/sf#Polygon>,
-    <http://www.w3.org/ns/locn#Geometry> .
+    <http://www.opengis.net/ont/sf#Polygon> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#GerichteLinkShape> a shacl:NodeShape;
   rdfs:label "GerichteLink"@nl;
@@ -825,6 +859,27 @@
   rdfs:comment "Een ruimtelijk gebied of benoemde plaats."@nl;
   rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Plaats>;
   shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "plaatsnaam"@nl;
+    rdfs:comment "Naam van de plaats of van het gebied."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Plaats.Plaatsnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de plaats of van het gebied."@nl;
+    shacl:maxCount 1;
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geometrie"@nl;
+    rdfs:comment "Geometrie van de plaats of het gebied."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Plaats.Geometrie>;
+    shacl:description "Geometrie van de plaats of het gebied."@nl;
+    shacl:maxCount 1;
+    shacl:name "geometrie"@nl;
+    shacl:or ([shacl:class <http://www.w3.org/ns/locn#Geometry>] [shacl:class <http://www.opengis.net/ont/sf#LineString>] [shacl:class <http://www.opengis.net/ont/sf#Point>] [shacl:class <http://www.opengis.net/ont/sf#Polygon>]);
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ];
   shacl:targetClass dc:Location .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#PolygoonShape> a shacl:NodeShape;
@@ -889,6 +944,15 @@
     shacl:minCount 1;
     shacl:name "voorkeursnaam"@nl;
     shacl:path skos:prefLabel
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "werkingsgebied"@nl;
+    rdfs:comment "Administratief gebied dat de Publieke Organisatie dekt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#PubliekeOrganisatie.Werkingsgebied>;
+    shacl:class dc:Location;
+    shacl:description "Administratief gebied dat de Publieke Organisatie dekt."@nl;
+    shacl:name "werkingsgebied"@nl;
+    shacl:path dc:spatial
   ], [
     a shacl:PropertyShape;
     rdfs:label "contactinfo"@nl;
@@ -1324,7 +1388,7 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Route>,
     <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment>;
   shacl:xone ([
-      shacl:not _:df_2_142;
+      shacl:not _:df_2_148;
       shacl:property [
         a shacl:PropertyShape;
         rdfs:label "aankomsttijdstip"@nl;
@@ -1337,9 +1401,9 @@
         shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Route.aankomsttijdstip>
       ]
     ] [shacl:property _:df_2_1,
-        _:df_2_142]),
+        _:df_2_148]),
     ([
-      shacl:not _:df_2_147;
+      shacl:not _:df_2_153;
       shacl:property [
         a shacl:PropertyShape;
         rdfs:label "vertrektijdstip"@nl;
@@ -1351,8 +1415,8 @@
         shacl:name "vertrektijdstip"@nl;
         shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Route.vertrektijdstip>
       ]
-    ] [shacl:property _:df_2_9,
-        _:df_2_147]) .
+    ] [shacl:property _:df_2_12,
+        _:df_2_153]) .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#RoutebeschrijvingShape> a shacl:NodeShape;
   rdfs:label "Routebeschrijving"@nl;
@@ -1480,7 +1544,7 @@
   rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Routesegment>;
   shacl:closed false;
   shacl:property _:df_2_1,
-    _:df_2_9, [
+    _:df_2_12, [
     a shacl:PropertyShape;
     rdfs:label "vervoermiddel"@nl;
     rdfs:comment "Type vervoermiddel waarmee het Routesegment is afgelegd."@nl;
@@ -1992,13 +2056,7 @@ _:df_2_1 a shacl:PropertyShape;
   shacl:name "aankomsttijdstip"@nl;
   shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment.aankomsttijdstip> .
 
-_:df_2_142 a shacl:PropertyShape;
-  shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment> .
-
-_:df_2_147 a shacl:PropertyShape;
-  shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment> .
-
-_:df_2_9 a shacl:PropertyShape;
+_:df_2_12 a shacl:PropertyShape;
   rdfs:label "vertrektijdstip"@nl;
   rdfs:comment "Tijdstip waarop het Routesegment begint."@nl;
   rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter#Routesegment.Vertrektijdstip>;
@@ -2008,3 +2066,9 @@ _:df_2_9 a shacl:PropertyShape;
   shacl:minCount 1;
   shacl:name "vertrektijdstip"@nl;
   shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment.vertrektijdstip> .
+
+_:df_2_148 a shacl:PropertyShape;
+  shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment> .
+
+_:df_2_153 a shacl:PropertyShape;
+  shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment> .

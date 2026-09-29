@@ -797,6 +797,30 @@
           "service"
         ]
       },
+      "Location.placeName": {
+        "title": "Location.placeName",
+        "description": "Name of the place or area.",
+        "type": "string"
+      },
+      "Location": {
+        "title": "Location",
+        "type": "object",
+        "description": "Indication of a geographical position,by means of coordinates,a toponym,an address label,a reference to a place/region or reference to an address.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Location)",
+            "pattern": "^Location$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
       "Switch.switchingTime": {
         "title": "Switch.switchingTime",
         "description": "Time in which the switch happens.",
@@ -1166,6 +1190,14 @@
           "preferredName": {
             "$ref": "#/components/schemas/PublicOrganization.preferredName"
           },
+          "scope": {
+            "type": "array",
+            "description": "Administrative area covering the Public Organisation. Lijst van Location items.",
+            "items": {
+              "$ref": "#/components/schemas/Location"
+            },
+            "minItems": 1
+          },
           "contactInfo": {
             "$ref": "#/components/schemas/ContactInfo"
           },
@@ -1420,25 +1452,6 @@
           "value"
         ]
       },
-      "Location": {
-        "title": "Location",
-        "type": "object",
-        "description": "Indication of a geographical position,by means of coordinates,a toponym,an address label,a reference to a place/region or reference to an address.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Location)",
-            "pattern": "^Location$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
       "Characteristic": {
         "title": "Characteristic",
         "type": "object",
@@ -1680,6 +1693,80 @@
           "@type"
         ]
       },
+      "Availability.openingHoursString": {
+        "title": "Availability.openingHoursString",
+        "description": "Hours when something is available. Syntax according to schema.org for opening hours. For example, if contact can be made between 8 a.m. and 8 p.m. Monday to Saturday and between 8 a.m. and 6 p.m. on Sunday, this will be coded as Mon-Sat 08:00-20:00, Sun 08:00-18:00.",
+        "type": "string"
+      },
+      "Availability": {
+        "title": "Availability",
+        "type": "object",
+        "description": "Extent to which something is available for use.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Availability)",
+            "pattern": "^Availability$"
+          },
+          "openingHoursString": {
+            "$ref": "#/components/schemas/Availability.openingHoursString"
+          },
+          "timetable": {
+            "$ref": "#/components/schemas/Timetable"
+          },
+          "openingHours": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification"
+          },
+          "user": {
+            "$ref": "#/components/schemas/UserType"
+          },
+          "periodOfProject": {
+            "$ref": "#/components/schemas/PeriodOfProject"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Geometry.wKT": {
+        "title": "Geometry.wKT",
+        "description": "Geometry expressed in CHP format. Use http://www.opengis.net/ont/geosparql#wktLiteral as a data type.",
+        "type": "string"
+      },
+      "Geometry.gml": {
+        "title": "Geometry.gml",
+        "description": "Geometry expressed in gml format. Use http://www.opengis.net/ont/geosparql#gmlLiteral as a data type.",
+        "type": "string"
+      },
+      "Geometry": {
+        "title": "Geometry",
+        "type": "object",
+        "description": "Shape and position characteristics of an object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Geometry)",
+            "pattern": "^Geometry$"
+          },
+          "wKT": {
+            "$ref": "#/components/schemas/Geometry.wKT"
+          },
+          "gml": {
+            "$ref": "#/components/schemas/Geometry.gml"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
       "QuantitativeValue.unity": {
         "title": "QuantitativeValue.unity",
         "description": "The unit in which the value is expressed. To be used when no standard unit is known.",
@@ -1790,37 +1877,6 @@
           "@type"
         ]
       },
-      "Availability": {
-        "title": "Availability",
-        "type": "object",
-        "description": "Extent to which something is available for use.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Availability)",
-            "pattern": "^Availability$"
-          },
-          "timetable": {
-            "$ref": "#/components/schemas/Timetable"
-          },
-          "openingHours": {
-            "$ref": "#/components/schemas/OpeningHoursSpecification"
-          },
-          "user": {
-            "$ref": "#/components/schemas/UserType"
-          },
-          "periodOfProject": {
-            "$ref": "#/components/schemas/PeriodOfProject"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
       "Timetable": {
         "title": "Timetable",
         "type": "object",
@@ -1863,6 +1919,16 @@
           "direction"
         ]
       },
+      "LineString.wKT": {
+        "title": "LineString.wKT",
+        "description": "Geometry expressed in CHP format. Use http://www.opengis.net/ont/geosparql#wktLiteral as a data type.",
+        "type": "string"
+      },
+      "LineString.gml": {
+        "title": "LineString.gml",
+        "description": "Geometry expressed in gml format. Use http://www.opengis.net/ont/geosparql#gmlLiteral as a data type.",
+        "type": "string"
+      },
       "LineString": {
         "title": "LineString",
         "type": "object",
@@ -1876,6 +1942,12 @@
             "type": "string",
             "description": "Object type (klasse LineString)",
             "pattern": "^LineString$"
+          },
+          "wKT": {
+            "$ref": "#/components/schemas/LineString.wKT"
+          },
+          "gml": {
+            "$ref": "#/components/schemas/LineString.gml"
           }
         },
         "required": [
@@ -1939,6 +2011,16 @@
           "@type"
         ]
       },
+      "Point.wKT": {
+        "title": "Point.wKT",
+        "description": "Geometry expressed in CHP format. Use http://www.opengis.net/ont/geosparql#wktLiteral as a data type.",
+        "type": "string"
+      },
+      "Point.gml": {
+        "title": "Point.gml",
+        "description": "Geometry expressed in gml format. Use http://www.opengis.net/ont/geosparql#gmlLiteral as a data type.",
+        "type": "string"
+      },
       "Point": {
         "title": "Point",
         "type": "object",
@@ -1952,6 +2034,12 @@
             "type": "string",
             "description": "Object type (klasse Point)",
             "pattern": "^Point$"
+          },
+          "wKT": {
+            "$ref": "#/components/schemas/Point.wKT"
+          },
+          "gml": {
+            "$ref": "#/components/schemas/Point.gml"
           }
         },
         "required": [
@@ -2026,6 +2114,16 @@
           "@type"
         ]
       },
+      "Polygon.wKT": {
+        "title": "Polygon.wKT",
+        "description": "Geometry expressed in CHP format. Use http://www.opengis.net/ont/geosparql#wktLiteral as a data type.",
+        "type": "string"
+      },
+      "Polygon.gml": {
+        "title": "Polygon.gml",
+        "description": "Geometry expressed in gml format. Use http://www.opengis.net/ont/geosparql#gmlLiteral as a data type.",
+        "type": "string"
+      },
       "Polygon": {
         "title": "Polygon",
         "type": "object",
@@ -2039,6 +2137,12 @@
             "type": "string",
             "description": "Object type (klasse Polygon)",
             "pattern": "^Polygon$"
+          },
+          "wKT": {
+            "$ref": "#/components/schemas/Polygon.wKT"
+          },
+          "gml": {
+            "$ref": "#/components/schemas/Polygon.gml"
           }
         },
         "required": [
@@ -2077,25 +2181,6 @@
             "type": "string",
             "description": "Object type (klasse ContactInfo)",
             "pattern": "^ContactInfo$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
-      "Geometry": {
-        "title": "Geometry",
-        "type": "object",
-        "description": "Shape and position characteristics of an object.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Geometry)",
-            "pattern": "^Geometry$"
           }
         },
         "required": [
@@ -2468,6 +2553,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `MobilityService` op te halen."
       },
+      "Location.geometry": {
+        "operationId": "LocationGET",
+        "parameters": {
+          "id": "$response.body#/Location.geometry/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometry` op te halen."
+      },
       "Switch.meansOfTransport": {
         "operationId": "SwitchGET",
         "parameters": {
@@ -2621,6 +2713,13 @@
           "id": "$response.body#/RoutePlanner.integratesInfoOver/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TransportNetwork` op te halen."
+      },
+      "PublicOrganization.scope": {
+        "operationId": "PublicOrganizationGET",
+        "parameters": {
+          "id": "$response.body#/PublicOrganization.scope/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
       },
       "PublicOrganization.contactInfo": {
         "operationId": "PublicOrganizationGET",

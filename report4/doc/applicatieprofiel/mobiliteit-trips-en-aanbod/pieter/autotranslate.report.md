@@ -2,6 +2,46 @@
 
 #||# -------------------------------------  
 
+#||#  update the translation file from the memory
+
+#||# 
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# create new translation file with existing translations included  
+
+https://schema.org/openingHours
+
+new term introduced, no translation found
+
+http://www.opengis.net/ont/geosparql#asWKT
+
+new term introduced, no translation found
+
+http://www.opengis.net/ont/geosparql#asGML
+
+new term introduced, no translation found
+
+http://www.w3.org/2000/01/rdf-schema#label
+
+new term introduced, no translation found
+
+http://www.w3.org/ns/locn#geometry
+
+new term introduced, no translation found
+
+http://purl.org/dc/terms/spatial
+
+new term introduced, no translation found
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter/translation_input/mobiliteit-trips-en-aanbod_en.json  
+
 #||# 
 
 #||#  autotranslate the translation file for language en
@@ -14,7 +54,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 97  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter/autotranslation/mobiliteit-trips-en-aanbod_en.json  
 
@@ -24,17 +64,11 @@
 
 #||# 
 
-start reading file mobiliteit-trips-en-aanbod-ap.j2
+#||# 
 
-#||#  start converting filename in extend blocks
+#||#  autotranslate the J2 templates for language en
 
-#||# ap2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter/autotranslation/mobiliteit-trips-en-aanbod-ap_en.j2
+#||# 
 
 #||# 
 
@@ -42,51 +76,9 @@ start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit-trips
 
 #||# 
 
-start reading file mobiliteit-trips-en-aanbod-voc.j2
-
-#||#  start converting filename in extend blocks
-
-#||# voc2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter/autotranslation/mobiliteit-trips-en-aanbod-voc_en.j2
-
 #||# 
 
 #||#  autotranslate the J2 templates for language en
 
 #||# 
-
-start reading file netwerk-voc.j2
-
-#||#  start converting filename in extend blocks
-
-#||# voc2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter/autotranslation/netwerk-voc_en.j2
-
-#||# 
-
-#||#  autotranslate the J2 templates for language en
-
-#||# 
-
-start reading file transportnetwerk-voc.j2
-
-#||#  start converting filename in extend blocks
-
-#||# voc2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/pieter/autotranslation/transportnetwerk-voc_en.j2
 

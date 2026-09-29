@@ -1370,6 +1370,11 @@
           "waarde"
         ]
       },
+      "Plaats.plaatsnaam": {
+        "title": "Plaats.plaatsnaam",
+        "description": "Naam van de plaats of van het gebied.",
+        "type": "string"
+      },
       "Plaats": {
         "title": "Plaats",
         "type": "object",
@@ -1383,6 +1388,34 @@
             "type": "string",
             "description": "Object type (klasse Plaats)",
             "pattern": "^Plaats$"
+          },
+          "plaatsnaam": {
+            "$ref": "#/components/schemas/Plaats.plaatsnaam"
+          },
+          "geometrie": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Geometrie"
+              },
+              {
+                "$ref": "#/components/schemas/Lijnstring"
+              },
+              {
+                "$ref": "#/components/schemas/Punt"
+              },
+              {
+                "$ref": "#/components/schemas/Polygoon"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Geometrie": "#/components/schemas/Geometrie",
+                "Lijnstring": "#/components/schemas/Lijnstring",
+                "Punt": "#/components/schemas/Punt",
+                "Polygoon": "#/components/schemas/Polygoon"
+              }
+            }
           }
         },
         "required": [
@@ -1666,6 +1699,14 @@
           "voorkeursnaam": {
             "$ref": "#/components/schemas/PubliekeOrganisatie.voorkeursnaam"
           },
+          "werkingsgebied": {
+            "type": "array",
+            "description": "Administratief gebied dat de Publieke Organisatie dekt. Lijst van Plaats items.",
+            "items": {
+              "$ref": "#/components/schemas/Plaats"
+            },
+            "minItems": 1
+          },
           "contactinfo": {
             "$ref": "#/components/schemas/Contactinfo"
           },
@@ -1678,6 +1719,80 @@
           "voorkeursnaam",
           "contactinfo",
           "identificator"
+        ]
+      },
+      "Beschikbaarheid.openingsurenString": {
+        "title": "Beschikbaarheid.openingsurenString",
+        "description": "Uren waarop iets beschikbaar is. Syntax volgens schema.org voor openingsuren. Bijvoorbeeld als contact kan worden opgenomen tussen 8 en 20u maandag tot zaterdag en tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00.",
+        "type": "string"
+      },
+      "Beschikbaarheid": {
+        "title": "Beschikbaarheid",
+        "type": "object",
+        "description": "Mate waarin iets voorhanden is voor gebruik.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Beschikbaarheid)",
+            "pattern": "^Beschikbaarheid$"
+          },
+          "openingsurenString": {
+            "$ref": "#/components/schemas/Beschikbaarheid.openingsurenString"
+          },
+          "dienstregeling": {
+            "$ref": "#/components/schemas/Dienstregeling"
+          },
+          "openingsuren": {
+            "$ref": "#/components/schemas/Openingsurenspecificatie"
+          },
+          "gebruiker": {
+            "$ref": "#/components/schemas/Gebruikerstype"
+          },
+          "periode": {
+            "$ref": "#/components/schemas/Periode"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Geometrie.wkt": {
+        "title": "Geometrie.wkt",
+        "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
+        "type": "string"
+      },
+      "Geometrie.gml": {
+        "title": "Geometrie.gml",
+        "description": "Geometrie uitgedrukt in gml-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
+        "type": "string"
+      },
+      "Geometrie": {
+        "title": "Geometrie",
+        "type": "object",
+        "description": "Vorm- en positiekenmerken van een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Geometrie)",
+            "pattern": "^Geometrie$"
+          },
+          "wkt": {
+            "$ref": "#/components/schemas/Geometrie.wkt"
+          },
+          "gml": {
+            "$ref": "#/components/schemas/Geometrie.gml"
+          }
+        },
+        "required": [
+          "@type"
         ]
       },
       "KwantitatieveWaarde.eenheid": {
@@ -1809,37 +1924,6 @@
           "@type"
         ]
       },
-      "Beschikbaarheid": {
-        "title": "Beschikbaarheid",
-        "type": "object",
-        "description": "Mate waarin iets voorhanden is voor gebruik.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Beschikbaarheid)",
-            "pattern": "^Beschikbaarheid$"
-          },
-          "dienstregeling": {
-            "$ref": "#/components/schemas/Dienstregeling"
-          },
-          "openingsuren": {
-            "$ref": "#/components/schemas/Openingsurenspecificatie"
-          },
-          "gebruiker": {
-            "$ref": "#/components/schemas/Gebruikerstype"
-          },
-          "periode": {
-            "$ref": "#/components/schemas/Periode"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
       "Dienstregeling": {
         "title": "Dienstregeling",
         "type": "object",
@@ -1882,6 +1966,16 @@
           "richting"
         ]
       },
+      "Lijnstring.wkt": {
+        "title": "Lijnstring.wkt",
+        "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
+        "type": "string"
+      },
+      "Lijnstring.gml": {
+        "title": "Lijnstring.gml",
+        "description": "Geometrie uitgedrukt in gml-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
+        "type": "string"
+      },
       "Lijnstring": {
         "title": "Lijnstring",
         "type": "object",
@@ -1895,6 +1989,12 @@
             "type": "string",
             "description": "Object type (klasse Lijnstring)",
             "pattern": "^Lijnstring$"
+          },
+          "wkt": {
+            "$ref": "#/components/schemas/Lijnstring.wkt"
+          },
+          "gml": {
+            "$ref": "#/components/schemas/Lijnstring.gml"
           }
         },
         "required": [
@@ -1958,6 +2058,16 @@
           "@type"
         ]
       },
+      "Punt.wkt": {
+        "title": "Punt.wkt",
+        "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
+        "type": "string"
+      },
+      "Punt.gml": {
+        "title": "Punt.gml",
+        "description": "Geometrie uitgedrukt in gml-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
+        "type": "string"
+      },
       "Punt": {
         "title": "Punt",
         "type": "object",
@@ -1971,6 +2081,12 @@
             "type": "string",
             "description": "Object type (klasse Punt)",
             "pattern": "^Punt$"
+          },
+          "wkt": {
+            "$ref": "#/components/schemas/Punt.wkt"
+          },
+          "gml": {
+            "$ref": "#/components/schemas/Punt.gml"
           }
         },
         "required": [
@@ -2045,6 +2161,16 @@
           "@type"
         ]
       },
+      "Polygoon.wkt": {
+        "title": "Polygoon.wkt",
+        "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
+        "type": "string"
+      },
+      "Polygoon.gml": {
+        "title": "Polygoon.gml",
+        "description": "Geometrie uitgedrukt in gml-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
+        "type": "string"
+      },
       "Polygoon": {
         "title": "Polygoon",
         "type": "object",
@@ -2058,6 +2184,12 @@
             "type": "string",
             "description": "Object type (klasse Polygoon)",
             "pattern": "^Polygoon$"
+          },
+          "wkt": {
+            "$ref": "#/components/schemas/Polygoon.wkt"
+          },
+          "gml": {
+            "$ref": "#/components/schemas/Polygoon.gml"
           }
         },
         "required": [
@@ -2096,25 +2228,6 @@
             "type": "string",
             "description": "Object type (klasse Contactinfo)",
             "pattern": "^Contactinfo$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
-      "Geometrie": {
-        "title": "Geometrie",
-        "type": "object",
-        "description": "Vorm- en positiekenmerken van een object.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Geometrie)",
-            "pattern": "^Geometrie$"
           }
         },
         "required": [
@@ -2795,6 +2908,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Waarde` op te halen."
       },
+      "Plaats.geometrie": {
+        "operationId": "PlaatsGET",
+        "parameters": {
+          "id": "$response.body#/Plaats.geometrie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
+      },
       "Kenmerk.type": {
         "operationId": "KenmerkGET",
         "parameters": {
@@ -2934,6 +3054,13 @@
           "id": "$response.body#/Transportconnectie.toegankelijkheid/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Toegankelijkheid` op te halen."
+      },
+      "PubliekeOrganisatie.werkingsgebied": {
+        "operationId": "PubliekeOrganisatieGET",
+        "parameters": {
+          "id": "$response.body#/PubliekeOrganisatie.werkingsgebied/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen."
       },
       "PubliekeOrganisatie.contactinfo": {
         "operationId": "PubliekeOrganisatieGET",

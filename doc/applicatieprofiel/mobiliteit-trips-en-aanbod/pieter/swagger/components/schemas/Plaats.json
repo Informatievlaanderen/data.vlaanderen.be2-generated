@@ -11,6 +11,34 @@
       "type": "string",
       "description": "Object type (klasse Plaats)",
       "pattern": "^Plaats$"
+    },
+    "plaatsnaam": {
+      "$ref": "#/components/schemas/Plaats.plaatsnaam"
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Lijnstring"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/Polygoon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Lijnstring": "#/components/schemas/Lijnstring",
+          "Punt": "#/components/schemas/Punt",
+          "Polygoon": "#/components/schemas/Polygoon"
+        }
+      }
     }
   },
   "required": [
