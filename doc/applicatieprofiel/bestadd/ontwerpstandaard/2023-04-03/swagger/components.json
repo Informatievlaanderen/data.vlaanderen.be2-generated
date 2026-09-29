@@ -77,6 +77,12 @@
           "@id"
         ]
       },
+      "Event.gebeurtenisDatum": {
+        "title": "Event.gebeurtenisDatum",
+        "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie aanmaakte.",
+        "type": "string",
+        "format": "date"
+      },
       "Event": {
         "title": "Event",
         "type": "object",
@@ -91,26 +97,11 @@
             "pattern": "^Event$"
           },
           "gebeurtenisDatum": {
-            "type": "object",
-            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie aanmaakte.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Event.gebeurtenisDatum"
           },
           "voorganger": {
             "type": "array",
-            "description": "Lijst van Identifier items.",
+            "description": "De BeSt identifier van de entiteit die de voorganger is. Lijst van Identifier items.",
             "items": {
               "$ref": "#/components/schemas/Identifier"
             },
@@ -118,7 +109,7 @@
           },
           "opvolger": {
             "type": "array",
-            "description": "Lijst van Identifier items.",
+            "description": "De Best identificator van de entiteit die de opvolger is. Lijst van Identifier items.",
             "items": {
               "$ref": "#/components/schemas/Identifier"
             },
@@ -151,7 +142,7 @@
           },
           "naam": {
             "type": "array",
-            "description": "Lijst van GeographicalName items.",
+            "description": "Gemeentenaam. Lijst van GeographicalName items.",
             "items": {
               "$ref": "#/components/schemas/GeographicalName"
             },
@@ -163,7 +154,7 @@
           },
           "isPartOf": {
             "type": "array",
-            "description": "Lijst van Deelgemeente items.",
+            "description": "undefined Lijst van Deelgemeente items.",
             "items": {
               "$ref": "#/components/schemas/Deelgemeente"
             },
@@ -176,6 +167,38 @@
           "naam",
           "status"
         ]
+      },
+      "Adres.busnummer": {
+        "title": "Adres.busnummer",
+        "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde huisnummer hebben.",
+        "type": "string"
+      },
+      "Adres.huisnummer": {
+        "title": "Adres.huisnummer",
+        "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
+        "type": "string"
+      },
+      "Adres.officieelToegekend": {
+        "title": "Adres.officieelToegekend",
+        "description": "Geeft aan of het adres is toegekend door een officiële instantie (gewoonlijk de gemeente) (True). Als een afwijking wordt vastgesteld, kan de gemeente ambtenaar dit aanpassen naar \"False\".",
+        "type": "boolean"
+      },
+      "Adres.adresSorteerveld": {
+        "title": "Adres.adresSorteerveld",
+        "description": "Transformatie van het huisnummer en busnummer (toevoeging van leading 0's) zodat deze waarde kan gesorteerd worden.",
+        "type": "string"
+      },
+      "Adres.beginVanDeLevenscyclusVanDezeVersie": {
+        "title": "Adres.beginVanDeLevenscyclusVanDezeVersie",
+        "description": "Geeft aan wanneer het record is aangemaakt in de database van de authentieke bron  Deze lifespan informatie heeft twee doelstellingen: 1. informatie verstrekken over de inhoud van de databank op een bepaald tijdstip. 2. Informatie verstrekken over de veranderingen.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Adres.eindeVanDeLevenscyclusVanDezeVersie": {
+        "title": "Adres.eindeVanDeLevenscyclusVanDezeVersie",
+        "description": "Geeft aan wanneer het record werd gearchiveerd in de databank van de authentieke bron.",
+        "type": "string",
+        "format": "date-time"
       },
       "Adres": {
         "title": "Adres",
@@ -192,93 +215,22 @@
             "pattern": "^Adres$"
           },
           "busnummer": {
-            "type": "object",
-            "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde huisnummer hebben.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adres.busnummer"
           },
           "huisnummer": {
-            "type": "object",
-            "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adres.huisnummer"
           },
           "officieelToegekend": {
-            "type": "object",
-            "description": "Geeft aan of het adres is toegekend door een officiële instantie (gewoonlijk de gemeente) (True). Als een afwijking wordt vastgesteld, kan de gemeente ambtenaar dit aanpassen naar \"False\".",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Adres.officieelToegekend"
           },
           "adresSorteerveld": {
-            "type": "object",
-            "description": "Transformatie van het huisnummer en busnummer (toevoeging van leading 0's) zodat deze waarde kan gesorteerd worden.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adres.adresSorteerveld"
           },
           "beginVanDeLevenscyclusVanDezeVersie": {
-            "type": "object",
-            "description": "Geeft aan wanneer het record is aangemaakt in de database van de authentieke bron  Deze lifespan informatie heeft twee doelstellingen: 1. informatie verstrekken over de inhoud van de databank op een bepaald tijdstip. 2. Informatie verstrekken over de veranderingen.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Adres.beginVanDeLevenscyclusVanDezeVersie"
           },
           "eindeVanDeLevenscyclusVanDezeVersie": {
-            "type": "object",
-            "description": "Geeft aan wanneer het record werd gearchiveerd in de databank van de authentieke bron.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Adres.eindeVanDeLevenscyclusVanDezeVersie"
           },
           "code": {
             "$ref": "#/components/schemas/Identifier"
@@ -378,7 +330,7 @@
           },
           "naam": {
             "type": "array",
-            "description": "Lijst van GeographicalName items.",
+            "description": "Naam van de deelgemeente. Lijst van GeographicalName items.",
             "items": {
               "$ref": "#/components/schemas/GeographicalName"
             },
@@ -400,6 +352,23 @@
           "isPartOf"
         ]
       },
+      "Straatnaam.homoniemtoevoeging": {
+        "title": "Straatnaam.homoniemtoevoeging",
+        "description": "Toevoeging aan de straatnaam om een onderscheid te maken tussen 2 straten die dezelfde naam hebben binnen dezelfde gemeente.",
+        "type": "string"
+      },
+      "Straatnaam.beginVanDeLevenscyclusVanDezeVersie": {
+        "title": "Straatnaam.beginVanDeLevenscyclusVanDezeVersie",
+        "description": "Geeft aan wanneer het record is aangemaakt in de database van de authentieke bron.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Straatnaam.eindeVanDeLevenscyclusVanDezeVersie": {
+        "title": "Straatnaam.eindeVanDeLevenscyclusVanDezeVersie",
+        "description": "Geeft aan wanneer het record werd gearchiveerd in de databank van de authentieke bron.",
+        "type": "string",
+        "format": "date-time"
+      },
       "Straatnaam": {
         "title": "Straatnaam",
         "type": "object",
@@ -415,59 +384,20 @@
             "pattern": "^Straatnaam$"
           },
           "homoniemtoevoeging": {
-            "type": "object",
-            "description": "Toevoeging aan de straatnaam om een onderscheid te maken tussen 2 straten die dezelfde naam hebben binnen dezelfde gemeente.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Straatnaam.homoniemtoevoeging"
           },
           "beginVanDeLevenscyclusVanDezeVersie": {
-            "type": "object",
-            "description": "Geeft aan wanneer het record is aangemaakt in de database van de authentieke bron.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Straatnaam.beginVanDeLevenscyclusVanDezeVersie"
           },
           "eindeVanDeLevenscyclusVanDezeVersie": {
-            "type": "object",
-            "description": "Geeft aan wanneer het record werd gearchiveerd in de databank van de authentieke bron.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Straatnaam.eindeVanDeLevenscyclusVanDezeVersie"
           },
           "code": {
             "$ref": "#/components/schemas/Identifier"
           },
           "name": {
             "type": "array",
-            "description": "Lijst van GeographicalName items.",
+            "description": "undefined Lijst van GeographicalName items.",
             "items": {
               "$ref": "#/components/schemas/GeographicalName"
             },
@@ -511,7 +441,7 @@
           },
           "naam": {
             "type": "array",
-            "description": "Lijst van GeographicalName items.",
+            "description": "Geografische zone die overeenkomt met de postcode (valt niet noodzakelijkerwijs samen met de gemeente). Lijst van GeographicalName items.",
             "items": {
               "$ref": "#/components/schemas/GeographicalName"
             },
@@ -528,6 +458,18 @@
           "status"
         ]
       },
+      "Pos.x": {
+        "title": "Pos.x",
+        "description": "undefined",
+        "type": "number",
+        "format": "double"
+      },
+      "Pos.y": {
+        "title": "Pos.y",
+        "description": "undefined",
+        "type": "number",
+        "format": "double"
+      },
       "Pos": {
         "title": "Pos",
         "type": "object",
@@ -543,40 +485,10 @@
             "pattern": "^Pos$"
           },
           "x": {
-            "type": "object",
-            "description": "undefined",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "double"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Double$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Pos.x"
           },
           "y": {
-            "type": "object",
-            "description": "undefined",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "double"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Double$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Pos.y"
           }
         },
         "required": [
@@ -584,6 +496,18 @@
           "x",
           "y"
         ]
+      },
+      "Status.geldigVanaf": {
+        "title": "Status.geldigVanaf",
+        "description": "De startdatum vanaf wanneer de entiteit geldig is.",
+        "type": "string",
+        "format": "date"
+      },
+      "Status.geldigTot": {
+        "title": "Status.geldigTot",
+        "description": "De einddatum tot wanneer de entiteit geldig is.",
+        "type": "string",
+        "format": "date"
       },
       "Status": {
         "title": "Status",
@@ -600,40 +524,10 @@
             "pattern": "^Status$"
           },
           "geldigVanaf": {
-            "type": "object",
-            "description": "De startdatum vanaf wanneer de entiteit geldig is.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Status.geldigVanaf"
           },
           "geldigTot": {
-            "type": "object",
-            "description": "De einddatum tot wanneer de entiteit geldig is.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Date$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Status.geldigTot"
           },
           "status": {
             "$ref": "#/components/schemas/Statuswaarde"
@@ -644,6 +538,21 @@
           "geldigVanaf",
           "status"
         ]
+      },
+      "Identifier.namespace": {
+        "title": "Identifier.namespace",
+        "description": "De naamruimte die de regio's gebruiken om de regio en het elementtype te identificeren.",
+        "type": "string"
+      },
+      "Identifier.identificatorVanEenObject": {
+        "title": "Identifier.identificatorVanEenObject",
+        "description": "Een integer die het middelste deel van de BeSt identifier voorstelt. Een nummer dat het object binnen de naamruimte eenduidig identificeert.",
+        "type": "string"
+      },
+      "Identifier.identificatorVanEenVersie": {
+        "title": "Identifier.identificatorVanEenVersie",
+        "description": "Versie van de BeSt identifier; laatste deel van de BeSt identifier. Een versionIdentifier kan een datum/tijdstempel zijn (zoals in Vlaanderen) of een nummer (zoals in Wallonië en Brussel).",
+        "type": "string"
       },
       "Identifier": {
         "title": "Identifier",
@@ -660,40 +569,13 @@
             "pattern": "^Identifier$"
           },
           "namespace": {
-            "type": "object",
-            "description": "De naamruimte die de regio's gebruiken om de regio en het elementtype te identificeren.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identifier.namespace"
           },
           "identificatorVanEenObject": {
-            "type": "object",
-            "description": "Een integer die het middelste deel van de BeSt identifier voorstelt. Een nummer dat het object binnen de naamruimte eenduidig identificeert.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identifier.identificatorVanEenObject"
           },
           "identificatorVanEenVersie": {
-            "type": "object",
-            "description": "Versie van de BeSt identifier; laatste deel van de BeSt identifier. Een versionIdentifier kan een datum/tijdstempel zijn (zoals in Vlaanderen) of een nummer (zoals in Wallonië en Brussel).",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identifier.identificatorVanEenVersie"
           }
         },
         "required": [
@@ -702,6 +584,18 @@
           "identificatorVanEenObject",
           "identificatorVanEenVersie"
         ]
+      },
+      "CoöRdinaten.latitude": {
+        "title": "CoöRdinaten.latitude",
+        "description": "Een geografische coördinaat die de noord-zuidpositie van een punt op aarde weergeeft.",
+        "type": "number",
+        "format": "double"
+      },
+      "CoöRdinaten.longitude": {
+        "title": "CoöRdinaten.longitude",
+        "description": "Een geografische coördinaat die de hoekafstand van een locatie ten oosten of ten westen van de nulmeridiaan (de meridiaan van Greenwich) aangeeft.",
+        "type": "number",
+        "format": "double"
       },
       "CoöRdinaten": {
         "title": "CoöRdinaten",
@@ -718,40 +612,10 @@
             "pattern": "^CoöRdinaten$"
           },
           "latitude": {
-            "type": "object",
-            "description": "Een geografische coördinaat die de noord-zuidpositie van een punt op aarde weergeeft.",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "double"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Double$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/CoöRdinaten.latitude"
           },
           "longitude": {
-            "type": "object",
-            "description": "Een geografische coördinaat die de hoekafstand van een locatie ten oosten of ten westen van de nulmeridiaan (de meridiaan van Greenwich) aangeeft.",
-            "properties": {
-              "@value": {
-                "type": "number",
-                "format": "double"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Double$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/CoöRdinaten.longitude"
           }
         },
         "required": [
@@ -800,9 +664,9 @@
             "description": "Object type (klasse Point)",
             "pattern": "^Point$"
           },
-          "geografischePositie(Lam72OfLam08)": {
+          "geografischePositieLam72OfLam08": {
             "type": "array",
-            "description": "Lijst van Pos items.",
+            "description": "De positie uitgedrukt in Lambert72 en de Lambert08-notatie.\nIn Lambert-notatie is een locatie gedefinieerd met een X- en Y-coördinaat (dubbels) die de afstand aangeven van een gekozen referentiepunt. Lijst van Pos items.",
             "items": {
               "$ref": "#/components/schemas/Pos"
             },
@@ -812,7 +676,7 @@
         },
         "required": [
           "@type",
-          "geografischePositie(Lam72OfLam08)"
+          "geografischePositieLam72OfLam08"
         ]
       }
     },
