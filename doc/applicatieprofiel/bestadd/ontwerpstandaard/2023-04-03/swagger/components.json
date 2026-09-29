@@ -142,9 +142,9 @@
           },
           "naam": {
             "type": "array",
-            "description": "Gemeentenaam. Lijst van GeographicalName items.",
+            "description": "Gemeentenaam. Lijst van GeografischeNaam items.",
             "items": {
-              "$ref": "#/components/schemas/GeographicalName"
+              "$ref": "#/components/schemas/GeografischeNaam"
             },
             "minItems": 1,
             "maxItems": 3
@@ -236,8 +236,17 @@
           "isOnderdeelVanDeelgemeente": {
             "$ref": "#/components/schemas/Deelgemeente"
           },
-          "hasMunicipality": {
+          "heeftGemeente": {
             "$ref": "#/components/schemas/Gemeente"
+          },
+          "heeftPostInformatie": {
+            "$ref": "#/components/schemas/PostInformatie"
+          },
+          "isToegewezenAanAdresseerbaarObject": {
+            "$ref": "#/components/schemas/AdresseerbaarObject"
+          },
+          "heeftStraatnaam": {
+            "$ref": "#/components/schemas/Straatnaam"
           }
         },
         "required": [
@@ -249,7 +258,9 @@
           "code",
           "positie",
           "status",
-          "hasMunicipality"
+          "heeftGemeente",
+          "heeftPostInformatie",
+          "heeftStraatnaam"
         ]
       },
       "AdresseerbaarObject": {
@@ -290,7 +301,7 @@
             "pattern": "^GeografischePositie$"
           },
           "geometrischPunt": {
-            "$ref": "#/components/schemas/Point"
+            "$ref": "#/components/schemas/Punt"
           },
           "positiegeometriemethode": {
             "$ref": "#/components/schemas/PositieGeometrieMethodeWaarde"
@@ -325,9 +336,9 @@
           },
           "naam": {
             "type": "array",
-            "description": "Naam van de deelgemeente. Lijst van GeographicalName items.",
+            "description": "Naam van de deelgemeente. Lijst van GeografischeNaam items.",
             "items": {
-              "$ref": "#/components/schemas/GeographicalName"
+              "$ref": "#/components/schemas/GeografischeNaam"
             },
             "minItems": 1,
             "maxItems": 3
@@ -335,7 +346,7 @@
           "status": {
             "$ref": "#/components/schemas/Status"
           },
-          "isPartOf": {
+          "isDeelVan": {
             "$ref": "#/components/schemas/Gemeente"
           }
         },
@@ -344,7 +355,7 @@
           "code",
           "naam",
           "status",
-          "isPartOf"
+          "isDeelVan"
         ]
       },
       "Straatnaam.homoniemtoevoeging": {
@@ -392,9 +403,9 @@
           },
           "name": {
             "type": "array",
-            "description": "undefined Lijst van GeographicalName items.",
+            "description": "undefined Lijst van GeografischeNaam items.",
             "items": {
-              "$ref": "#/components/schemas/GeographicalName"
+              "$ref": "#/components/schemas/GeografischeNaam"
             },
             "minItems": 1,
             "maxItems": 3
@@ -404,6 +415,9 @@
           },
           "status": {
             "$ref": "#/components/schemas/Status"
+          },
+          "isToegewezenDoorGemeente": {
+            "$ref": "#/components/schemas/Gemeente"
           }
         },
         "required": [
@@ -414,7 +428,8 @@
           "code",
           "name",
           "type",
-          "status"
+          "status",
+          "isToegewezenDoorGemeente"
         ]
       },
       "PostInformatie": {
@@ -436,9 +451,9 @@
           },
           "naam": {
             "type": "array",
-            "description": "Geografische zone die overeenkomt met de postcode (valt niet noodzakelijkerwijs samen met de gemeente). Lijst van GeographicalName items.",
+            "description": "Geografische zone die overeenkomt met de postcode (valt niet noodzakelijkerwijs samen met de gemeente). Lijst van GeografischeNaam items.",
             "items": {
-              "$ref": "#/components/schemas/GeographicalName"
+              "$ref": "#/components/schemas/GeografischeNaam"
             },
             "minItems": 1,
             "maxItems": 3
@@ -619,8 +634,8 @@
           "longitude"
         ]
       },
-      "GeographicalName": {
-        "title": "GeographicalName",
+      "GeografischeNaam": {
+        "title": "GeografischeNaam",
         "type": "object",
         "description": "Namen zoals gemeentenamen zijn meertalig in België. Er wordt een speciale klasse gebruikt om deze meertalige situatie uit te drukken.\r\nDe GeographicalName bestaat uit de volgende subelementen: spelling en talen.",
         "properties": {
@@ -630,8 +645,8 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse GeographicalName)",
-            "pattern": "^GeographicalName$"
+            "description": "Object type (klasse GeografischeNaam)",
+            "pattern": "^GeografischeNaam$"
           },
           "naam": {
             "$ref": "#/components/schemas/Taalcodewaarde"
@@ -646,8 +661,8 @@
           "geografischeNaam"
         ]
       },
-      "Point": {
-        "title": "Point",
+      "Punt": {
+        "title": "Punt",
         "type": "object",
         "properties": {
           "@id": {
@@ -656,8 +671,8 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse Point)",
-            "pattern": "^Point$"
+            "description": "Object type (klasse Punt)",
+            "pattern": "^Punt$"
           },
           "geografischePositieLam72OfLam08": {
             "type": "array",
@@ -667,11 +682,15 @@
             },
             "minItems": 1,
             "maxItems": 2
+          },
+          "coöRdinatenWGS84": {
+            "$ref": "#/components/schemas/CoöRdinaten"
           }
         },
         "required": [
           "@type",
-          "geografischePositieLam72OfLam08"
+          "geografischePositieLam72OfLam08",
+          "coöRdinatenWGS84"
         ]
       }
     },
@@ -702,7 +721,7 @@
         "parameters": {
           "id": "$response.body#/Gemeente.naam/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeografischeNaam` op te halen."
       },
       "Gemeente.status": {
         "operationId": "GemeenteGET",
@@ -739,12 +758,33 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Deelgemeente` op te halen."
       },
-      "Adres.hasMunicipality": {
+      "Adres.heeftGemeente": {
         "operationId": "AdresGET",
         "parameters": {
-          "id": "$response.body#/Adres.hasMunicipality/@id"
+          "id": "$response.body#/Adres.heeftGemeente/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen."
+      },
+      "Adres.heeftPostInformatie": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.heeftPostInformatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PostInformatie` op te halen."
+      },
+      "Adres.isToegewezenAanAdresseerbaarObject": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.isToegewezenAanAdresseerbaarObject/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AdresseerbaarObject` op te halen."
+      },
+      "Adres.heeftStraatnaam": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.heeftStraatnaam/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Straatnaam` op te halen."
       },
       "AdresseerbaarObject.code": {
         "operationId": "AdresseerbaarObjectGET",
@@ -758,7 +798,7 @@
         "parameters": {
           "id": "$response.body#/GeografischePositie.geometrischPunt/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Point` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Punt` op te halen."
       },
       "GeografischePositie.positiegeometriemethode": {
         "operationId": "GeografischePositieGET",
@@ -786,7 +826,7 @@
         "parameters": {
           "id": "$response.body#/Deelgemeente.naam/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeografischeNaam` op te halen."
       },
       "Deelgemeente.status": {
         "operationId": "DeelgemeenteGET",
@@ -795,10 +835,10 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
       },
-      "Deelgemeente.isPartOf": {
+      "Deelgemeente.isDeelVan": {
         "operationId": "DeelgemeenteGET",
         "parameters": {
-          "id": "$response.body#/Deelgemeente.isPartOf/@id"
+          "id": "$response.body#/Deelgemeente.isDeelVan/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen."
       },
@@ -814,7 +854,7 @@
         "parameters": {
           "id": "$response.body#/Straatnaam.name/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeografischeNaam` op te halen."
       },
       "Straatnaam.type": {
         "operationId": "StraatnaamGET",
@@ -830,6 +870,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
       },
+      "Straatnaam.isToegewezenDoorGemeente": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.isToegewezenDoorGemeente/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen."
+      },
       "PostInformatie.code": {
         "operationId": "PostInformatieGET",
         "parameters": {
@@ -842,7 +889,7 @@
         "parameters": {
           "id": "$response.body#/PostInformatie.naam/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeografischeNaam` op te halen."
       },
       "PostInformatie.status": {
         "operationId": "PostInformatieGET",

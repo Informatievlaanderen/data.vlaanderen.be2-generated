@@ -2,21 +2,21 @@
 
 #||# -------------------------------------
 
-2026-09-29T09:15:52.334Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> PartOfMunicipality) is not an association with a source role. Ignoring this connector.
+2026-09-29T09:43:34.913Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> PartOfMunicipality) is not an association with a source role. Ignoring this connector.
 
-2026-09-29T09:15:52.337Z info: Connector Model 2025:BeSt_Domain_Model:PartOfMunicipality:(PartOfMunicipality -> Municipality) is not an association with a source role. Ignoring this connector.
+2026-09-29T09:43:34.916Z info: Connector Model 2025:BeSt_Domain_Model:PartOfMunicipality:(PartOfMunicipality -> Municipality) is not an association with a source role. Ignoring this connector.
 
-2026-09-29T09:15:52.337Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> Municipality) is not an association with a source role. Ignoring this connector.
+2026-09-29T09:43:34.917Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> Municipality) is not an association with a source role. Ignoring this connector.
 
-2026-09-29T09:15:52.337Z info: Connector Model 2025:BeSt_Domain_Model:StreetName:(StreetName -> Municipality) is not an association with a source role. Ignoring this connector.
+2026-09-29T09:43:34.917Z info: Connector Model 2025:BeSt_Domain_Model:StreetName:(StreetName -> Municipality) is not an association with a source role. Ignoring this connector.
 
-2026-09-29T09:15:52.337Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> PostalInfo) is not an association with a source role. Ignoring this connector.
+2026-09-29T09:43:34.917Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> PostalInfo) is not an association with a source role. Ignoring this connector.
 
-2026-09-29T09:15:52.337Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> AddressableObject) is not an association with a source role. Ignoring this connector.
+2026-09-29T09:43:34.918Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> AddressableObject) is not an association with a source role. Ignoring this connector.
 
-2026-09-29T09:15:52.338Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> StreetName) is not an association with a source role. Ignoring this connector.
+2026-09-29T09:43:34.918Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> StreetName) is not an association with a source role. Ignoring this connector.
 
-2026-09-29T09:15:52.338Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model 2025). Using fallback URI (http://todo.com/) instead.
+2026-09-29T09:43:34.919Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model 2025). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 
