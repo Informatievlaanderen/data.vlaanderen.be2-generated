@@ -1,7 +1,7 @@
 {
   "title": "Adresuitbreiding",
   "type": "object",
-  "description": "Bijkomende gegevens mbt het adres.",
+  "description": "Bijkomende gegevens met betrekking tot het adres.",
   "properties": {
     "@id": {
       "type": "string",
@@ -14,29 +14,15 @@
     },
     "volledigAdres": {
       "type": "array",
-      "description": "Lijst van LangString items.",
+      "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten ten gevolge van het opsplitsen van een adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer. Lijst van LangString items.",
       "items": {
-        "type": "object",
-        "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten ten gevolge van het opsplitsen van een adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          },
-          "@language": {
-            "type": "string",
-            "pattern": "^nl$"
-          }
-        },
-        "required": [
-          "@value",
-          "@language"
-        ]
+        "$ref": "#/components/schemas/Adresuitbreiding.volledigAdres"
       },
       "minItems": 1
     },
     "adreslocator": {
       "type": "array",
-      "description": "Lijst van Adreslocator items.",
+      "description": "Bijkomende adreslocator. Lijst van Adreslocator items.",
       "items": {
         "$ref": "#/components/schemas/Adreslocator"
       },
@@ -44,7 +30,7 @@
     },
     "isGelegenIn": {
       "type": "array",
-      "description": "Lijst van Plaats items.",
+      "description": "Plaats of gebied waarbinnen het Adres gelegen is. Lijst van Plaats items.",
       "items": {
         "$ref": "#/components/schemas/Plaats"
       },

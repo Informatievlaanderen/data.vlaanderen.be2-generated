@@ -10,115 +10,85 @@
       "Locatienaamtype": {
         "title": "Locatienaamtype",
         "type": "object",
-        "description": "Aard van de locatienaam.",
+        "description": "Enumeratie van Locatienaamtype",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Locatienaamtype)",
-            "pattern": "^Locatienaamtype$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "Locatieaanduidingtype": {
         "title": "Locatieaanduidingtype",
         "type": "object",
-        "description": "Aard van de locatieaanduiding.",
+        "description": "Enumeratie van Locatieaanduidingtype",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Locatieaanduidingtype)",
-            "pattern": "^Locatieaanduidingtype$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "Locatorniveauwaarde": {
         "title": "Locatorniveauwaarde",
         "type": "object",
-        "description": "Niveau van de adreslocator.",
+        "description": "Enumeratie van Locatorniveauwaarde",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Locatorniveauwaarde)",
-            "pattern": "^Locatorniveauwaarde$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "Statuswaarde": {
         "title": "Statuswaarde",
         "type": "object",
-        "description": "Mate waarin het adres of de adrescomponent geldig is.",
+        "description": "Enumeratie van Statuswaarde",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Statuswaarde)",
-            "pattern": "^Statuswaarde$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "GeometrieMethodeWaarde": {
         "title": "GeometrieMethodeWaarde",
         "type": "object",
-        "description": "De manier waarop het punt werd bepaald.",
+        "description": "Enumeratie van GeometrieMethodeWaarde",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse GeometrieMethodeWaarde)",
-            "pattern": "^GeometrieMethodeWaarde$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "GeometriSpecificatieWaarde": {
         "title": "GeometriSpecificatieWaarde",
         "type": "object",
-        "description": "Het type object op basis waarvan het punt werd bepaald.",
+        "description": "Enumeratie van GeometriSpecificatieWaarde",
         "properties": {
           "@id": {
             "type": "string",
             "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse GeometriSpecificatieWaarde)",
-            "pattern": "^GeometriSpecificatieWaarde$"
           }
         },
         "required": [
-          "@type"
+          "@id"
         ]
       },
       "Ligplaats": {
@@ -137,7 +107,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -148,6 +118,16 @@
           "@type",
           "identificator"
         ]
+      },
+      "Postinfo.postcode": {
+        "title": "Postinfo.postcode",
+        "description": "Code waarmee het geografisch gebied dat de adressen voor postale doeleinden groepeert aanduidt.",
+        "type": "string"
+      },
+      "Postinfo.postnaam": {
+        "title": "Postinfo.postnaam",
+        "description": "Naam waarmee het geografisch gebied dat de adressen voor postale doeleinden groepeert kan worden aangeduid. Typisch de namen van vroegere gemeenten waarmee het gebied samenvalt.",
+        "type": "string"
       },
       "Postinfo": {
         "title": "Postinfo",
@@ -164,42 +144,19 @@
             "pattern": "^Postinfo$"
           },
           "postcode": {
-            "type": "object",
-            "description": "Code waarmee het geografisch gebied dat de adressen voor postale doeleinden groepeert aanduidt.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Postinfo.postcode"
           },
           "postnaam": {
             "type": "array",
-            "description": "Lijst van GeografischeNaam items.",
+            "description": "Naam waarmee het geografisch gebied dat de adressen voor postale doeleinden groepeert kan worden aangeduid. Typisch de namen van vroegere gemeenten waarmee het gebied samenvalt. Lijst van GeografischeNaam items.",
             "items": {
-              "type": "object",
-              "description": "Naam waarmee het geografisch gebied dat de adressen voor postale doeleinden groepeert kan worden aangeduid. Typisch de namen van vroegere gemeenten waarmee het gebied samenvalt.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                },
-                "@language": {
-                  "type": "string",
-                  "pattern": "^nl$"
-                }
-              },
-              "required": [
-                "@value",
-                "@language"
-              ]
+              "$ref": "#/components/schemas/Postinfo.postnaam"
             },
             "minItems": 1
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -211,6 +168,21 @@
           "postcode",
           "identificator"
         ]
+      },
+      "BelgischAdres.busnummer": {
+        "title": "BelgischAdres.busnummer",
+        "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben.",
+        "type": "string"
+      },
+      "BelgischAdres.huisnummer": {
+        "title": "BelgischAdres.huisnummer",
+        "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
+        "type": "string"
+      },
+      "BelgischAdres.officieelToegekend": {
+        "title": "BelgischAdres.officieelToegekend",
+        "description": "Geeft aan of het adres officieel door de adresbeheerder is toegekend. Een adres is niet-officieel wanneer het bestaan ervan niet gekend was vanuit de administratieve procedures, maar pas nadat nadat het feitelijk is vastgesteld op het terrein.",
+        "type": "boolean"
       },
       "BelgischAdres": {
         "title": "BelgischAdres",
@@ -227,45 +199,13 @@
             "pattern": "^BelgischAdres$"
           },
           "busnummer": {
-            "type": "object",
-            "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/BelgischAdres.busnummer"
           },
           "huisnummer": {
-            "type": "object",
-            "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/BelgischAdres.huisnummer"
           },
           "officieelToegekend": {
-            "type": "object",
-            "description": "Geeft aan of het adres officieel door de adresbeheerder is toegekend. Een adres is niet-officieel wanneer het bestaan ervan niet gekend was vanuit de administratieve procedures, maar pas nadat nadat het feitelijk is vastgesteld op het terrein.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/BelgischAdres.officieelToegekend"
           },
           "positie": {
             "$ref": "#/components/schemas/GeografischePositie"
@@ -290,7 +230,7 @@
           },
           "isToegekendAan": {
             "type": "array",
-            "description": "Lijst van AdresseerbaarObject items.",
+            "description": "Adresseerbaar object waaraan het adres is toegekend. Lijst van AdresseerbaarObject items.",
             "items": {
               "oneOf": [
                 {
@@ -320,7 +260,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -340,6 +280,16 @@
           "identificator"
         ]
       },
+      "Straatnaam.homoniemToevoeging": {
+        "title": "Straatnaam.homoniemToevoeging",
+        "description": "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden.",
+        "type": "string"
+      },
+      "Straatnaam.straatnaam": {
+        "title": "Straatnaam.straatnaam",
+        "description": "Naam van de straat.",
+        "type": "string"
+      },
       "Straatnaam": {
         "title": "Straatnaam",
         "type": "object",
@@ -355,36 +305,13 @@
             "pattern": "^Straatnaam$"
           },
           "homoniemToevoeging": {
-            "type": "object",
-            "description": "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Straatnaam.homoniemToevoeging"
           },
           "straatnaam": {
             "type": "array",
-            "description": "Lijst van GeografischeNaam items.",
+            "description": "Naam van de straat. Lijst van GeografischeNaam items.",
             "items": {
-              "type": "object",
-              "description": "Naam van de straat.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                },
-                "@language": {
-                  "type": "string",
-                  "pattern": "^nl$"
-                }
-              },
-              "required": [
-                "@value",
-                "@language"
-              ]
+              "$ref": "#/components/schemas/Straatnaam.straatnaam"
             },
             "minItems": 1
           },
@@ -396,7 +323,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -410,6 +337,11 @@
           "isToegekendDoor",
           "identificator"
         ]
+      },
+      "Gemeentenaam.gemeentenaam": {
+        "title": "Gemeentenaam.gemeentenaam",
+        "description": "Naam van de gemeente.",
+        "type": "string"
       },
       "Gemeentenaam": {
         "title": "Gemeentenaam",
@@ -427,23 +359,9 @@
           },
           "gemeentenaam": {
             "type": "array",
-            "description": "Lijst van GeografischeNaam items.",
+            "description": "Naam van de gemeente. Lijst van GeografischeNaam items.",
             "items": {
-              "type": "object",
-              "description": "Naam van de gemeente.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                },
-                "@language": {
-                  "type": "string",
-                  "pattern": "^nl$"
-                }
-              },
-              "required": [
-                "@value",
-                "@language"
-              ]
+              "$ref": "#/components/schemas/Gemeentenaam.gemeentenaam"
             },
             "minItems": 1
           },
@@ -452,7 +370,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -482,7 +400,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -494,10 +412,15 @@
           "identificator"
         ]
       },
+      "Adresuitbreiding.volledigAdres": {
+        "title": "Adresuitbreiding.volledigAdres",
+        "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten ten gevolge van het opsplitsen van een adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer.",
+        "type": "string"
+      },
       "Adresuitbreiding": {
         "title": "Adresuitbreiding",
         "type": "object",
-        "description": "Bijkomende gegevens mbt het adres.",
+        "description": "Bijkomende gegevens met betrekking tot het adres.",
         "properties": {
           "@id": {
             "type": "string",
@@ -510,29 +433,15 @@
           },
           "volledigAdres": {
             "type": "array",
-            "description": "Lijst van LangString items.",
+            "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten ten gevolge van het opsplitsen van een adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer. Lijst van LangString items.",
             "items": {
-              "type": "object",
-              "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten ten gevolge van het opsplitsen van een adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                },
-                "@language": {
-                  "type": "string",
-                  "pattern": "^nl$"
-                }
-              },
-              "required": [
-                "@value",
-                "@language"
-              ]
+              "$ref": "#/components/schemas/Adresuitbreiding.volledigAdres"
             },
             "minItems": 1
           },
           "adreslocator": {
             "type": "array",
-            "description": "Lijst van Adreslocator items.",
+            "description": "Bijkomende adreslocator. Lijst van Adreslocator items.",
             "items": {
               "$ref": "#/components/schemas/Adreslocator"
             },
@@ -540,7 +449,7 @@
           },
           "isGelegenIn": {
             "type": "array",
-            "description": "Lijst van Plaats items.",
+            "description": "Plaats of gebied waarbinnen het Adres gelegen is. Lijst van Plaats items.",
             "items": {
               "$ref": "#/components/schemas/Plaats"
             },
@@ -567,7 +476,7 @@
           },
           "bestaatUit": {
             "type": "array",
-            "description": "Lijst van Gebouweenheid items.",
+            "description": "Gebouweenheid die deel uitmaakt van het gebouw. Lijst van Gebouweenheid items.",
             "items": {
               "$ref": "#/components/schemas/Gebouweenheid"
             },
@@ -575,7 +484,7 @@
           },
           "ligtOp": {
             "type": "array",
-            "description": "Lijst van Perceel items.",
+            "description": "Perceel waarop het gebouw gelegen is. Lijst van Perceel items.",
             "items": {
               "$ref": "#/components/schemas/Perceel"
             },
@@ -583,7 +492,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -611,7 +520,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -622,6 +531,11 @@
           "@type",
           "identificator"
         ]
+      },
+      "Plaats.plaatsnaam": {
+        "title": "Plaats.plaatsnaam",
+        "description": "Naam van de plaats of van het gebied.",
+        "type": "string"
       },
       "Plaats": {
         "title": "Plaats",
@@ -639,23 +553,9 @@
           },
           "plaatsnaam": {
             "type": "array",
-            "description": "Lijst van GeografischeNaam items.",
+            "description": "Naam van de plaats of van het gebied. Lijst van GeografischeNaam items.",
             "items": {
-              "type": "object",
-              "description": "Naam van de plaats of van het gebied.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                },
-                "@language": {
-                  "type": "string",
-                  "pattern": "^nl$"
-                }
-              },
-              "required": [
-                "@value",
-                "@language"
-              ]
+              "$ref": "#/components/schemas/Plaats.plaatsnaam"
             },
             "minItems": 1
           },
@@ -698,7 +598,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -726,7 +626,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Lijst van Identificator items.",
+            "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -737,6 +637,11 @@
           "@type",
           "identificator"
         ]
+      },
+      "Locatieaanduiding.aanduiding": {
+        "title": "Locatieaanduiding.aanduiding",
+        "description": "Alfanumerieke code waarmee het identificerend deel van een adreslocator wordt aangeduid.",
+        "type": "string"
       },
       "Locatieaanduiding": {
         "title": "Locatieaanduiding",
@@ -753,16 +658,7 @@
             "pattern": "^Locatieaanduiding$"
           },
           "aanduiding": {
-            "type": "object",
-            "description": "Alfanumerieke code waarmee het identificerend deel van een adreslocator wordt aangeduid.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Locatieaanduiding.aanduiding"
           },
           "type": {
             "$ref": "#/components/schemas/Locatieaanduidingtype"
@@ -773,6 +669,11 @@
           "aanduiding",
           "type"
         ]
+      },
+      "Locatienaam.naam": {
+        "title": "Locatienaam.naam",
+        "description": "Naam van het geografisch object.",
+        "type": "string"
       },
       "Locatienaam": {
         "title": "Locatienaam",
@@ -790,23 +691,9 @@
           },
           "naam": {
             "type": "array",
-            "description": "Lijst van GeografischeNaam items.",
+            "description": "Naam van het geografisch object. Lijst van GeografischeNaam items.",
             "items": {
-              "type": "object",
-              "description": "Naam van het geografisch object.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                },
-                "@language": {
-                  "type": "string",
-                  "pattern": "^nl$"
-                }
-              },
-              "required": [
-                "@value",
-                "@language"
-              ]
+              "$ref": "#/components/schemas/Locatienaam.naam"
             },
             "minItems": 1
           },
@@ -819,6 +706,76 @@
           "naam",
           "type"
         ]
+      },
+      "Adresvoorstelling.administratieveEenheidNiveau1": {
+        "title": "Adresvoorstelling.administratieveEenheidNiveau1",
+        "description": "Hoogste Administratieve eenheid van het adres, doorgaans een land.",
+        "type": "string"
+      },
+      "Adresvoorstelling.administratieveEenheidNiveau2": {
+        "title": "Adresvoorstelling.administratieveEenheidNiveau2",
+        "description": "De regio van het adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat.",
+        "type": "string"
+      },
+      "Adresvoorstelling.adresgebied": {
+        "title": "Adresvoorstelling.adresgebied",
+        "description": "Naam van een geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is. Bijvoorbeel de naam van het gehucht waarin het adres ligt.",
+        "type": "string"
+      },
+      "Adresvoorstelling.busnummer": {
+        "title": "Adresvoorstelling.busnummer",
+        "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben. Specialisatie van Adresvoorstelling:locatieaanduiding ten behoeve van Belgische adressen.",
+        "type": "string"
+      },
+      "Adresvoorstelling.gemeentenaam": {
+        "title": "Adresvoorstelling.gemeentenaam",
+        "description": "Gemeentenaam van het adres.",
+        "type": "string"
+      },
+      "Adresvoorstelling.huisnummer": {
+        "title": "Adresvoorstelling.huisnummer",
+        "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen. Specialisatie van Adresvoorstelling:locatieaanduiding ten behoeve van Belgische adressen.",
+        "type": "string"
+      },
+      "Adresvoorstelling.land": {
+        "title": "Adresvoorstelling.land",
+        "description": "Land waarin het adres gelegen is.",
+        "type": "string"
+      },
+      "Adresvoorstelling.locatieaanduiding": {
+        "title": "Adresvoorstelling.locatieaanduiding",
+        "description": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc.",
+        "type": "string"
+      },
+      "Adresvoorstelling.locatienaam": {
+        "title": "Adresvoorstelling.locatienaam",
+        "description": "Naam of omschrijving van het geografisch object dat de adreslocator aanduidt.",
+        "type": "string"
+      },
+      "Adresvoorstelling.postbus": {
+        "title": "Adresvoorstelling.postbus",
+        "description": "Postbusnummer in een postkantoor.",
+        "type": "string"
+      },
+      "Adresvoorstelling.postcode": {
+        "title": "Adresvoorstelling.postcode",
+        "description": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
+        "type": "string"
+      },
+      "Adresvoorstelling.postnaam": {
+        "title": "Adresvoorstelling.postnaam",
+        "description": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
+        "type": "string"
+      },
+      "Adresvoorstelling.straatnaam": {
+        "title": "Adresvoorstelling.straatnaam",
+        "description": "Straatnaam van het adres.",
+        "type": "string"
+      },
+      "Adresvoorstelling.volledigAdres": {
+        "title": "Adresvoorstelling.volledigAdres",
+        "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten ten gevolge van het opsplitsen van een adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer.",
+        "type": "string"
       },
       "Adresvoorstelling": {
         "title": "Adresvoorstelling",
@@ -835,227 +792,56 @@
             "pattern": "^Adresvoorstelling$"
           },
           "administratieveEenheidNiveau1": {
-            "type": "object",
-            "description": "Hoogste Administratieve eenheid van het adres, doorgaans een land.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.administratieveEenheidNiveau1"
           },
           "administratieveEenheidNiveau2": {
-            "type": "object",
-            "description": "De regio van het adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.administratieveEenheidNiveau2"
           },
           "adresgebied": {
-            "type": "object",
-            "description": "Naam van een geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is. Bijvoorbeel de naam van het gehucht waarin het adres ligt.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.adresgebied"
           },
           "busnummer": {
-            "type": "object",
-            "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben. Specialisatie van Adresvoorstelling:locatieaanduiding ten behoeve van Belgische adressen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.busnummer"
           },
           "gemeentenaam": {
-            "type": "object",
-            "description": "Gemeentenaam van het adres.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.gemeentenaam"
           },
           "huisnummer": {
-            "type": "object",
-            "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen. Specialisatie van Adresvoorstelling:locatieaanduiding ten behoeve van Belgische adressen.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.huisnummer"
           },
           "land": {
-            "type": "object",
-            "description": "Land waarin het adres gelegen is.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.land"
           },
           "locatieaanduiding": {
             "type": "array",
-            "description": "Lijst van String items.",
+            "description": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc. Lijst van String items.",
             "items": {
-              "type": "object",
-              "description": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value"
-              ]
+              "$ref": "#/components/schemas/Adresvoorstelling.locatieaanduiding"
             },
             "minItems": 1
           },
           "locatienaam": {
             "type": "array",
-            "description": "Lijst van LangString items.",
+            "description": "Naam of omschrijving van het geografisch object dat de adreslocator aanduidt. Lijst van LangString items.",
             "items": {
-              "type": "object",
-              "description": "Naam of omschrijving van het geografisch object dat de adreslocator aanduidt.",
-              "properties": {
-                "@value": {
-                  "type": "string"
-                },
-                "@language": {
-                  "type": "string",
-                  "pattern": "^nl$"
-                }
-              },
-              "required": [
-                "@value",
-                "@language"
-              ]
+              "$ref": "#/components/schemas/Adresvoorstelling.locatienaam"
             },
             "minItems": 1
           },
           "postbus": {
-            "type": "object",
-            "description": "Postbusnummer in een postkantoor.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.postbus"
           },
           "postcode": {
-            "type": "object",
-            "description": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.postcode"
           },
           "postnaam": {
-            "type": "object",
-            "description": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.postnaam"
           },
           "straatnaam": {
-            "type": "object",
-            "description": "Straatnaam van het adres.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.straatnaam"
           },
           "volledigAdres": {
-            "type": "object",
-            "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten ten gevolge van het opsplitsen van een adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              },
-              "@language": {
-                "type": "string",
-                "pattern": "^nl$"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ]
+            "$ref": "#/components/schemas/Adresvoorstelling.volledigAdres"
           },
           "verwijstNaar": {
             "$ref": "#/components/schemas/BelgischAdres"
@@ -1064,6 +850,22 @@
         "required": [
           "@type"
         ]
+      },
+      "Identificator.identificator": {
+        "title": "Identificator.identificator",
+        "description": "String gebruikt om het object uniek te identificeren. Type van de string slaat op het identificatiesysteem (inclusief de versie ervan), de string zelf op de eigenlijke identificator.",
+        "type": "string"
+      },
+      "Identificator.toegekendDoor": {
+        "title": "Identificator.toegekendDoor",
+        "description": "Naam van de agent die de identificator heeft toegekend.",
+        "type": "string"
+      },
+      "Identificator.toegekendOp": {
+        "title": "Identificator.toegekendOp",
+        "description": "Tijdstip waarop de identificator werd uitgegeven.",
+        "type": "string",
+        "format": "date-time"
       },
       "Identificator": {
         "title": "Identificator",
@@ -1080,37 +882,13 @@
             "pattern": "^Identificator$"
           },
           "identificator": {
-            "type": "object",
-            "description": "String gebruikt om het object uniek te identificeren. Type van de string slaat op het identificatiesysteem (inclusief de versie ervan), de string zelf op de eigenlijke identificator.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Identificator.identificator"
           },
           "toegekendDoor": {
-            "$ref": "#/components/schemas/Agent"
+            "$ref": "#/components/schemas/Identificator.toegekendDoor"
           },
           "toegekendOp": {
-            "type": "object",
-            "description": "Tijdstip waarop de identificator werd uitgegeven.",
-            "properties": {
-              "@value": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^DateTime$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/Identificator.toegekendOp"
           },
           "gestructureerdeIdentificator": {
             "$ref": "#/components/schemas/GestructureerdeIdentificator"
@@ -1119,6 +897,21 @@
         "required": [
           "@type"
         ]
+      },
+      "GestructureerdeIdentificator.lokaleIdentificator": {
+        "title": "GestructureerdeIdentificator.lokaleIdentificator",
+        "description": "String gebruikt om het object uniek te identificeren binnen de naamruimte.",
+        "type": "string"
+      },
+      "GestructureerdeIdentificator.naamruimte": {
+        "title": "GestructureerdeIdentificator.naamruimte",
+        "description": "String die toegvoegd wordt aan de lokaleidentificator om deze globaal uniek te maken. Laat toe om objecten met dezelfde identificator maar van verschillend type en/of afkomstig uit verschillende domeinen uiteen te houden. In praktijk bijvoorbeeld een uri samengesteld uit betekenisvolle elementen zoals een domeinnaam, type en concept (bijvoorbeeld https://data.vlaanderen.be/id/adres/).",
+        "type": "string"
+      },
+      "GestructureerdeIdentificator.versieIdentificator": {
+        "title": "GestructureerdeIdentificator.versieIdentificator",
+        "description": "Identificator van de specifieke versie van een object.",
+        "type": "string"
       },
       "GestructureerdeIdentificator": {
         "title": "GestructureerdeIdentificator",
@@ -1135,40 +928,13 @@
             "pattern": "^GestructureerdeIdentificator$"
           },
           "lokaleIdentificator": {
-            "type": "object",
-            "description": "String gebruikt om het object uniek te identificeren binnen de naamruimte.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/GestructureerdeIdentificator.lokaleIdentificator"
           },
           "naamruimte": {
-            "type": "object",
-            "description": "String die toegvoegd wordt aan de lokaleidentificator om deze globaal uniek te maken. Laat toe om objecten met dezelfde identificator maar van verschillend type en/of afkomstig uit verschillende domeinen uiteen te houden. In praktijk bijvoorbeeld een uri samengesteld uit betekenisvolle elementen zoals een domeinnaam, type en concept (bijvoorbeeld https://data.vlaanderen.be/id/adres/).",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/GestructureerdeIdentificator.naamruimte"
           },
           "versieIdentificator": {
-            "type": "object",
-            "description": "Identificator van de specifieke versie van een object.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/GestructureerdeIdentificator.versieIdentificator"
           }
         },
         "required": [
@@ -1176,6 +942,11 @@
           "lokaleIdentificator",
           "naamruimte"
         ]
+      },
+      "GeografischePositie.default": {
+        "title": "GeografischePositie.default",
+        "description": "Geeft aan of de positie een default positie is. Hieronder wordt de positie verstaan die per default moet worden gebruikt als het object meerdere posities heeft.",
+        "type": "boolean"
       },
       "GeografischePositie": {
         "title": "GeografischePositie",
@@ -1192,21 +963,7 @@
             "pattern": "^GeografischePositie$"
           },
           "default": {
-            "type": "object",
-            "description": "Geeft aan of de positie een default positie is. Hieronder wordt de positie verstaan die per default moet worden gebruikt als het object meerdere posities heeft.",
-            "properties": {
-              "@value": {
-                "type": "boolean"
-              },
-              "@type": {
-                "type": "string",
-                "pattern": "^Boolean$"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ]
+            "$ref": "#/components/schemas/GeografischePositie.default"
           },
           "geometrie": {
             "$ref": "#/components/schemas/Punt"
@@ -1224,6 +981,16 @@
           "geometrie"
         ]
       },
+      "Geometrie.gml": {
+        "title": "Geometrie.gml",
+        "description": "Geometrie uitgedrukt in GML-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
+        "type": "string"
+      },
+      "Geometrie.wkt": {
+        "title": "Geometrie.wkt",
+        "description": "Geometrie uitgedrukt in WKT-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
+        "type": "string"
+      },
       "Geometrie": {
         "title": "Geometrie",
         "type": "object",
@@ -1239,28 +1006,10 @@
             "pattern": "^Geometrie$"
           },
           "gml": {
-            "type": "object",
-            "description": "Geometrie uitgedrukt in GML-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Geometrie.gml"
           },
           "wkt": {
-            "type": "object",
-            "description": "Geometrie uitgedrukt in WKT-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Geometrie.wkt"
           }
         },
         "required": [
@@ -1283,7 +1032,7 @@
           },
           "aanduiding": {
             "type": "array",
-            "description": "Lijst van Locatieaanduiding items.",
+            "description": "Alfanumerieke code die de locator uniek identificeert binnen de straat, administratieve eenheid etc. Lijst van Locatieaanduiding items.",
             "items": {
               "$ref": "#/components/schemas/Locatieaanduiding"
             },
@@ -1291,7 +1040,7 @@
           },
           "naam": {
             "type": "array",
-            "description": "Lijst van Locatienaam items.",
+            "description": "Naam of omschrijving van het geografisch object dat de locator aanduidt. Lijst van Locatienaam items.",
             "items": {
               "$ref": "#/components/schemas/Locatienaam"
             },
@@ -1305,6 +1054,16 @@
           "@type",
           "niveau"
         ]
+      },
+      "Punt.gml": {
+        "title": "Punt.gml",
+        "description": "Geometrie uitgedrukt in GML-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
+        "type": "string"
+      },
+      "Punt.wkt": {
+        "title": "Punt.wkt",
+        "description": "Geometrie uitgedrukt in WKT-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
+        "type": "string"
       },
       "Punt": {
         "title": "Punt",
@@ -1321,28 +1080,10 @@
             "pattern": "^Punt$"
           },
           "gml": {
-            "type": "object",
-            "description": "Geometrie uitgedrukt in GML-formaat. Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Punt.gml"
           },
           "wkt": {
-            "type": "object",
-            "description": "Geometrie uitgedrukt in WKT-formaat. Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
+            "$ref": "#/components/schemas/Punt.wkt"
           }
         },
         "required": [
