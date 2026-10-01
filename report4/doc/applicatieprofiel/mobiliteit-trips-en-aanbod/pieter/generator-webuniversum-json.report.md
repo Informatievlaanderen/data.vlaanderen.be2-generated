@@ -2,11 +2,11 @@
 
 #||# -------------------------------------  
 
-2026-09-30T16:01:43.943Z info: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/mobiliteit/mobiliteit-trips-en-aanbod#Route.aankomsttijdstip which acts as a parent. Using original URI as fallback.
+2026-10-01T06:49:36.998Z info: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/mobiliteit/mobiliteit-trips-en-aanbod#Route.aankomsttijdstip which acts as a parent. Using original URI as fallback.
 
 #||# oslo-webuniversum-json-generator for language en  
 
 #||# -------------------------------------  
 
-2026-09-30T16:01:45.551Z info: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/mobiliteit/mobiliteit-trips-en-aanbod#Route.aankomsttijdstip which acts as a parent. Using original URI as fallback.
+2026-10-01T06:49:38.536Z info: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/mobiliteit/mobiliteit-trips-en-aanbod#Route.aankomsttijdstip which acts as a parent. Using original URI as fallback.
 
