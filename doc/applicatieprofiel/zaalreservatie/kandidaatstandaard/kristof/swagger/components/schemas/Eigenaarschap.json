@@ -1,0 +1,44 @@
+{
+  "title": "Eigenaarschap",
+  "type": "object",
+  "description": "Diegene aan wie de Infrastructuur op een manier toebehoort.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Eigenaarschap)",
+      "pattern": "^Eigenaarschap$"
+    },
+    "eigenaar": {
+      "type": "array",
+      "description": "De Agent aan wie de Infrastructuur toebehoort. Lijst van Agent items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Organisatie"
+          },
+          {
+            "$ref": "#/components/schemas/Persoon"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Organisatie": "#/components/schemas/Organisatie",
+            "Persoon": "#/components/schemas/Persoon"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Eigenaarschapstype"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

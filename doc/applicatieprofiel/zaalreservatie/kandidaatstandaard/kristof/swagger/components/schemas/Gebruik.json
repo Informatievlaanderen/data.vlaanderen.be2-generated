@@ -1,0 +1,55 @@
+{
+  "title": "Gebruik",
+  "type": "object",
+  "description": "De manier waarop de Infrastructuur wordt benut.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Gebruik)",
+      "pattern": "^Gebruik$"
+    },
+    "exclusiviteit": {
+      "$ref": "#/components/schemas/Exclusiviteitstype"
+    },
+    "gebruiker": {
+      "type": "array",
+      "description": "De Agent die gebruik maakt van de Infrastructuur. Lijst van Agent items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Organisatie"
+          },
+          {
+            "$ref": "#/components/schemas/Persoon"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Organisatie": "#/components/schemas/Organisatie",
+            "Persoon": "#/components/schemas/Persoon"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "periode": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "voorwaarde": {
+      "type": "array",
+      "description": "Het criterium verbonden aan het gebruik van de infrastructuur. Lijst van Criterium items.",
+      "items": {
+        "$ref": "#/components/schemas/Criterium"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

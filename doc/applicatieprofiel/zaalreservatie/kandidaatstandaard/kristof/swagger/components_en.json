@@ -1,0 +1,2819 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "PublicOrganization.preferredName": {
+        "title": "PublicOrganization.preferredName",
+        "description": "Name with which the organization is preferably indicated.",
+        "type": "string"
+      },
+      "PublicOrganization": {
+        "title": "PublicOrganization",
+        "type": "object",
+        "description": "An Organisation that belongs to the public sector according to a legal framework, regardless of the level of government at which that framework is in force.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PublicOrganization)",
+            "pattern": "^PublicOrganization$"
+          },
+          "preferredName": {
+            "$ref": "#/components/schemas/PublicOrganization.preferredName"
+          },
+          "contactInfo": {
+            "$ref": "#/components/schemas/PointOfContact"
+          },
+          "scope": {
+            "type": "array",
+            "description": "Administrative area covering the Public Organisation. Lijst van Location items.",
+            "items": {
+              "$ref": "#/components/schemas/Location"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "preferredName"
+        ]
+      },
+      "Infrastructure.cancellationPolicy": {
+        "title": "Infrastructure.cancellationPolicy",
+        "description": "The condition(s) that is (are) necessary to cancel a particular reservation. In the context of room reservation, it is a cancellation of a room according to various conditions (such as time).",
+        "type": "string"
+      },
+      "Infrastructure.name": {
+        "title": "Infrastructure.name",
+        "description": "The name associated with an Infrastructure.",
+        "type": "string"
+      },
+      "Infrastructure": {
+        "title": "Infrastructure",
+        "type": "object",
+        "description": "Immovable or movable facilities.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Infrastructure)",
+            "pattern": "^Infrastructure$"
+          },
+          "cancellationPolicy": {
+            "$ref": "#/components/schemas/Infrastructure.cancellationPolicy"
+          },
+          "name": {
+            "type": "array",
+            "description": "The name associated with an Infrastructure. Lijst van LangString items.",
+            "items": {
+              "$ref": "#/components/schemas/Infrastructure.name"
+            },
+            "minItems": 1
+          },
+          "accessibility": {
+            "$ref": "#/components/schemas/Accessibility"
+          },
+          "availability": {
+            "$ref": "#/components/schemas/Availability"
+          },
+          "description": {
+            "type": "array",
+            "description": "The textual description of the Infrastructure. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "capacity": {
+            "type": "array",
+            "description": "The comprehension or occupancy of an Infrastructure. Lijst van Capacity items.",
+            "items": {
+              "$ref": "#/components/schemas/Capacity"
+            },
+            "minItems": 1
+          },
+          "contactPerson": {
+            "type": "array",
+            "description": "The Agent to be consulted connected to an Infrastructure. Lijst van Agent items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Organization"
+                },
+                {
+                  "$ref": "#/components/schemas/Person"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Organization": "#/components/schemas/Organization",
+                  "Person": "#/components/schemas/Person"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "dimension": {
+            "type": "array",
+            "description": "The dimensions in each direction of an Infrastructure. Lijst van Dimension items.",
+            "items": {
+              "$ref": "#/components/schemas/Dimension"
+            },
+            "minItems": 1
+          },
+          "facility": {
+            "type": "array",
+            "description": "The provision of an Infrastructure. Lijst van Facility items.",
+            "items": {
+              "$ref": "#/components/schemas/Facility"
+            },
+            "minItems": 1
+          },
+          "usage": {
+            "type": "array",
+            "description": "The use of an Infrastructure. Lijst van Usage items.",
+            "items": {
+              "$ref": "#/components/schemas/Usage"
+            },
+            "minItems": 1
+          },
+          "location": {
+            "type": "array",
+            "description": "The location of an Infrastructure. Lijst van Location items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Location"
+                },
+                {
+                  "$ref": "#/components/schemas/AddressPresentation"
+                },
+                {
+                  "$ref": "#/components/schemas/Location"
+                },
+                {
+                  "$ref": "#/components/schemas/GeographicalName"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Location": "#/components/schemas/Location",
+                  "AddressPresentation": "#/components/schemas/AddressPresentation",
+                  "GeographicalName": "#/components/schemas/GeographicalName"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "openingUp": {
+            "$ref": "#/components/schemas/OpeningType"
+          },
+          "type": {
+            "type": "array",
+            "description": "The type of infrastructure. Lijst van InfrastructureType items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureType"
+            },
+            "minItems": 1
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Ownership"
+          },
+          "openingHours": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification"
+          },
+          "access": {
+            "type": "array",
+            "description": "The right or ability to enter and use a reserved space. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "safetyRequirements": {
+            "type": "array",
+            "description": "Explicit terms and standards established to ensure that a product, system, service, or operation does not pose risks or harm to people, property, the environment, or the integrity of data and processes. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "reservationService": {
+            "type": "array",
+            "description": "The public service that offers the reservation of an infrastructure. Lijst van InfrastructureReservationService items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureReservationService"
+            },
+            "minItems": 1
+          },
+          "superInfrastructure": {
+            "type": "array",
+            "description": "The infrastructure that makes up the larger whole of infrastructure. Lijst van Infrastructure items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Infrastructure"
+                },
+                {
+                  "$ref": "#/components/schemas/InteriorSpace"
+                },
+                {
+                  "$ref": "#/components/schemas/OutdoorSpace"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Infrastructure": "#/components/schemas/Infrastructure",
+                  "InteriorSpace": "#/components/schemas/InteriorSpace",
+                  "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "subinfrastructure": {
+            "type": "array",
+            "description": "The infrastructure that is part of a larger whole of infrastructure. Lijst van Infrastructure items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Infrastructure"
+                },
+                {
+                  "$ref": "#/components/schemas/InteriorSpace"
+                },
+                {
+                  "$ref": "#/components/schemas/OutdoorSpace"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Infrastructure": "#/components/schemas/Infrastructure",
+                  "InteriorSpace": "#/components/schemas/InteriorSpace",
+                  "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "reservation": {
+            "$ref": "#/components/schemas/InfrastructureReservation"
+          }
+        },
+        "required": [
+          "@type",
+          "location",
+          "openingHours",
+          "reservation"
+        ]
+      },
+      "LocationDescription.description": {
+        "title": "LocationDescription.description",
+        "description": "Details of the inventory.",
+        "type": "string"
+      },
+      "LocationDescription.time": {
+        "title": "LocationDescription.time",
+        "description": "Time at which the inventory took place.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "LocationDescription": {
+        "title": "LocationDescription",
+        "type": "object",
+        "description": "Detailed document describing the condition of a property at a given time.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LocationDescription)",
+            "pattern": "^LocationDescription$"
+          },
+          "description": {
+            "$ref": "#/components/schemas/LocationDescription.description"
+          },
+          "time": {
+            "$ref": "#/components/schemas/LocationDescription.time"
+          },
+          "document": {
+            "type": "array",
+            "description": "Reference to the inventory of fixtures and fittings document. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "description",
+          "time"
+        ]
+      },
+      "InfrastructureReservationService.title": {
+        "title": "InfrastructureReservationService.title",
+        "description": "Official name of the public service.",
+        "type": "string"
+      },
+      "InfrastructureReservationService.alternativeLabel": {
+        "title": "InfrastructureReservationService.alternativeLabel",
+        "description": "Another name by which the service is known. For example: commercial name, informal name, etc.",
+        "type": "string"
+      },
+      "InfrastructureReservationService.description": {
+        "title": "InfrastructureReservationService.description",
+        "description": "Description of the public service. Description as visible to the users of the service catalogue. Preference is given to detailed descriptions.",
+        "type": "string"
+      },
+      "InfrastructureReservationService.keyword": {
+        "title": "InfrastructureReservationService.keyword",
+        "description": "Keyword, term, concept that describes the public service.",
+        "type": "string"
+      },
+      "InfrastructureReservationService": {
+        "title": "InfrastructureReservationService",
+        "type": "object",
+        "description": "Service that allows you to reserve infrastructure for a specific period of time.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse InfrastructureReservationService)",
+            "pattern": "^InfrastructureReservationService$"
+          },
+          "title": {
+            "$ref": "#/components/schemas/InfrastructureReservationService.title"
+          },
+          "alternativeLabel": {
+            "type": "array",
+            "description": "Another name by which the service is known. For example: commercial name, informal name, etc. Lijst van LangString items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureReservationService.alternativeLabel"
+            },
+            "minItems": 1
+          },
+          "description": {
+            "$ref": "#/components/schemas/InfrastructureReservationService.description"
+          },
+          "keyword": {
+            "type": "array",
+            "description": "Keyword, term, concept that describes the public service. Lijst van LangString items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureReservationService.keyword"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "type": "array",
+            "description": "Type of public service. E.g. protection, health, recreation, culture and religion, economic affairs. Lijst van TypeOfService items.",
+            "items": {
+              "$ref": "#/components/schemas/TypeOfService"
+            },
+            "minItems": 1
+          },
+          "language": {
+            "type": "array",
+            "description": "Language in which a public service is offered. Lijst van LanguageCode items.",
+            "items": {
+              "$ref": "#/components/schemas/LanguageCode"
+            },
+            "minItems": 1
+          },
+          "status": {
+            "$ref": "#/components/schemas/StatusType"
+          },
+          "spatialCoverage": {
+            "type": "array",
+            "description": "Area in which public services are available. Typically the area of operation of the responsible public organization. Lijst van Location items.",
+            "items": {
+              "$ref": "#/components/schemas/Location"
+            },
+            "minItems": 1
+          },
+          "hasContactPoint": {
+            "$ref": "#/components/schemas/PointOfContact"
+          },
+          "infrastructure": {
+            "type": "array",
+            "description": "Immovable or movable facilities. Lijst van Infrastructure items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Infrastructure"
+                },
+                {
+                  "$ref": "#/components/schemas/InteriorSpace"
+                },
+                {
+                  "$ref": "#/components/schemas/OutdoorSpace"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Infrastructure": "#/components/schemas/Infrastructure",
+                  "InteriorSpace": "#/components/schemas/InteriorSpace",
+                  "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "hasAResponsiblePerson": {
+            "type": "array",
+            "description": "The responsible Organisation that operates the reservation service. Lijst van PublicOrganization items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicOrganization"
+            },
+            "minItems": 1
+          },
+          "produces": {
+            "type": "array",
+            "description": "The actual result of the performance of the public service. For example: a recognition, financial benefit, code, physical object, etc. Lijst van InfrastructureReservation items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureReservation"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "title",
+          "description"
+        ]
+      },
+      "Facility.description": {
+        "title": "Facility.description",
+        "description": "The description of the Facility.",
+        "type": "string"
+      },
+      "Facility": {
+        "title": "Facility",
+        "type": "object",
+        "description": "Means that can be used for something, a facility, present in the Infrastructure or can be used for this.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Facility)",
+            "pattern": "^Facility$"
+          },
+          "description": {
+            "type": "array",
+            "description": "The description of the Facility. Lijst van LangString items.",
+            "items": {
+              "$ref": "#/components/schemas/Facility.description"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/FacilityType"
+          },
+          "document": {
+            "type": "array",
+            "description": "The writing describing the Facility. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "user": {
+            "type": "array",
+            "description": "The type of user and the reason for using the Facility. Lijst van TypeOfUse items.",
+            "items": {
+              "$ref": "#/components/schemas/TypeOfUse"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Location.placeName": {
+        "title": "Location.placeName",
+        "description": "Name of the place or area.",
+        "type": "string"
+      },
+      "Location.description": {
+        "title": "Location.description",
+        "description": "Written representation of characteristics of something or someone.",
+        "type": "string"
+      },
+      "Location": {
+        "title": "Location",
+        "type": "object",
+        "description": "A location can be an identifiable geographic location (ISO 19112), but it can also be a non-geographic location, such as a directory, row, or column. As such, there are numerous ways in which location can be expressed.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Location)",
+            "pattern": "^Location$"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Location.description"
+          },
+          "address": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          }
+        },
+        "required": [
+          "@type",
+          "description",
+          "address"
+        ]
+      },
+      "InfrastructureReservation": {
+        "title": "InfrastructureReservation",
+        "type": "object",
+        "description": "Activity in which a certain service, space, or object is reserved in advance for future use.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse InfrastructureReservation)",
+            "pattern": "^InfrastructureReservation$"
+          },
+          "reservedBy": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Organization"
+              },
+              {
+                "$ref": "#/components/schemas/Person"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Organization": "#/components/schemas/Organization",
+                "Person": "#/components/schemas/Person"
+              }
+            }
+          },
+          "reservedFor": {
+            "type": "array",
+            "description": "The Activity for which the Infrastructure is reserved. Lijst van Activity items.",
+            "items": {
+              "$ref": "#/components/schemas/Activity"
+            },
+            "minItems": 1
+          },
+          "periodOfProject": {
+            "type": "array",
+            "description": "The amount of time for which the Reservation is valid. Lijst van PeriodOfProject items.",
+            "items": {
+              "$ref": "#/components/schemas/PeriodOfProject"
+            },
+            "minItems": 1
+          },
+          "status": {
+            "type": "array",
+            "description": "Current state, position, or situation of a person, place, object, system, or process at a particular time. Lijst van InfrastructureReservationStatus items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureReservationStatus"
+            },
+            "minItems": 1
+          },
+          "buffer": {
+            "type": "array",
+            "description": "Period that creates time or space for a process or action. In connection with room reservation, a \"buffer\" is used to prevent two events or meetings from being scheduled immediately after each other in the same room. It is a fixed time span that cannot be reserved after a room reservation. For example, if a room is booked between 10 am and 5 pm and it can only be booked once a day, the buffer is 8 am to 10 am and 5 pm to 6 pm (opening hours of the room). Lijst van PeriodOfProject items.",
+            "items": {
+              "$ref": "#/components/schemas/PeriodOfProject"
+            },
+            "minItems": 1
+          },
+          "locationDescription": {
+            "type": "array",
+            "description": "Detailed and systematic recording of the characteristics, condition, and specific details of a location or space. Lijst van LocationDescription items.",
+            "items": {
+              "$ref": "#/components/schemas/LocationDescription"
+            },
+            "minItems": 1
+          },
+          "infrastructure": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Infrastructure"
+              },
+              {
+                "$ref": "#/components/schemas/InteriorSpace"
+              },
+              {
+                "$ref": "#/components/schemas/OutdoorSpace"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Infrastructure": "#/components/schemas/Infrastructure",
+                "InteriorSpace": "#/components/schemas/InteriorSpace",
+                "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "reservedBy",
+          "status",
+          "infrastructure"
+        ]
+      },
+      "Organization": {
+        "title": "Organization",
+        "type": "object",
+        "description": "A number of people organized into a community or other social, commercial, or political structure. The group has a common purpose or raison d'être that transcends its individual members and can act as an Agent. An organization often has a hierarchical structure.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Organization)",
+            "pattern": "^Organization$"
+          },
+          "contactInfo": {
+            "$ref": "#/components/schemas/PointOfContact"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Activity": {
+        "title": "Activity",
+        "type": "object",
+        "description": "Action deliberately carried out by an Agent with the intention of producing a cultural, social or material impact.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Activity)",
+            "pattern": "^Activity$"
+          },
+          "type": {
+            "type": "array",
+            "description": "The type of activity. Lijst van ActivityType items.",
+            "items": {
+              "$ref": "#/components/schemas/ActivityType"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Concept": {
+        "title": "Concept",
+        "type": "object",
+        "description": "Idea or understanding.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Concept)",
+            "pattern": "^Concept$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Document": {
+        "title": "Document",
+        "type": "object",
+        "description": "An original work in the broad sense (a report, a recording, a book...).",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Document)",
+            "pattern": "^Document$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Usage": {
+        "title": "Usage",
+        "type": "object",
+        "description": "The way in which the Infrastructure is used.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Usage)",
+            "pattern": "^Usage$"
+          },
+          "exclusivity": {
+            "$ref": "#/components/schemas/ExclusivityType"
+          },
+          "user": {
+            "type": "array",
+            "description": "The Agent using the Infrastructure. Lijst van Agent items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Organization"
+                },
+                {
+                  "$ref": "#/components/schemas/Person"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Organization": "#/components/schemas/Organization",
+                  "Person": "#/components/schemas/Person"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "periodOfProject": {
+            "$ref": "#/components/schemas/PeriodOfProject"
+          },
+          "condition": {
+            "type": "array",
+            "description": "The criterion related to the use of the infrastructure. Lijst van Criterion items.",
+            "items": {
+              "$ref": "#/components/schemas/Criterion"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "InteriorSpace.cancellationPolicy": {
+        "title": "InteriorSpace.cancellationPolicy",
+        "description": "The condition(s) that is (are) necessary to cancel a particular reservation. In the context of room reservation, it is a cancellation of a room according to various conditions (such as time).",
+        "type": "string"
+      },
+      "InteriorSpace.name": {
+        "title": "InteriorSpace.name",
+        "description": "The name associated with an Infrastructure.",
+        "type": "string"
+      },
+      "InteriorSpace": {
+        "title": "InteriorSpace",
+        "type": "object",
+        "description": "A space within the Infrastructure that is completely or partially closed off from the open air.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse InteriorSpace)",
+            "pattern": "^InteriorSpace$"
+          },
+          "associatedWith": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Infrastructure"
+              },
+              {
+                "$ref": "#/components/schemas/InteriorSpace"
+              },
+              {
+                "$ref": "#/components/schemas/OutdoorSpace"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Infrastructure": "#/components/schemas/Infrastructure",
+                "InteriorSpace": "#/components/schemas/InteriorSpace",
+                "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+              }
+            }
+          },
+          "type": {
+            "type": "array",
+            "description": "The type of infrastructure. Lijst van InfrastructureType items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureType"
+            },
+            "minItems": 1
+          },
+          "cancellationPolicy": {
+            "$ref": "#/components/schemas/InteriorSpace.cancellationPolicy"
+          },
+          "name": {
+            "type": "array",
+            "description": "The name associated with an Infrastructure. Lijst van LangString items.",
+            "items": {
+              "$ref": "#/components/schemas/InteriorSpace.name"
+            },
+            "minItems": 1
+          },
+          "accessibility": {
+            "$ref": "#/components/schemas/Accessibility"
+          },
+          "availability": {
+            "$ref": "#/components/schemas/Availability"
+          },
+          "description": {
+            "type": "array",
+            "description": "The textual description of the Infrastructure. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "capacity": {
+            "type": "array",
+            "description": "The comprehension or occupancy of an Infrastructure. Lijst van Capacity items.",
+            "items": {
+              "$ref": "#/components/schemas/Capacity"
+            },
+            "minItems": 1
+          },
+          "contactPerson": {
+            "type": "array",
+            "description": "The Agent to be consulted connected to an Infrastructure. Lijst van Agent items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Organization"
+                },
+                {
+                  "$ref": "#/components/schemas/Person"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Organization": "#/components/schemas/Organization",
+                  "Person": "#/components/schemas/Person"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "dimension": {
+            "type": "array",
+            "description": "The dimensions in each direction of an Infrastructure. Lijst van Dimension items.",
+            "items": {
+              "$ref": "#/components/schemas/Dimension"
+            },
+            "minItems": 1
+          },
+          "facility": {
+            "type": "array",
+            "description": "The provision of an Infrastructure. Lijst van Facility items.",
+            "items": {
+              "$ref": "#/components/schemas/Facility"
+            },
+            "minItems": 1
+          },
+          "usage": {
+            "type": "array",
+            "description": "The use of an Infrastructure. Lijst van Usage items.",
+            "items": {
+              "$ref": "#/components/schemas/Usage"
+            },
+            "minItems": 1
+          },
+          "location": {
+            "type": "array",
+            "description": "The location of an Infrastructure. Lijst van Location items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Location"
+                },
+                {
+                  "$ref": "#/components/schemas/AddressPresentation"
+                },
+                {
+                  "$ref": "#/components/schemas/Location"
+                },
+                {
+                  "$ref": "#/components/schemas/GeographicalName"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Location": "#/components/schemas/Location",
+                  "AddressPresentation": "#/components/schemas/AddressPresentation",
+                  "GeographicalName": "#/components/schemas/GeographicalName"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "openingUp": {
+            "$ref": "#/components/schemas/OpeningType"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Ownership"
+          },
+          "openingHours": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification"
+          },
+          "access": {
+            "type": "array",
+            "description": "The right or ability to enter and use a reserved space. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "safetyRequirements": {
+            "type": "array",
+            "description": "Explicit terms and standards established to ensure that a product, system, service, or operation does not pose risks or harm to people, property, the environment, or the integrity of data and processes. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "reservationService": {
+            "type": "array",
+            "description": "The public service that offers the reservation of an infrastructure. Lijst van InfrastructureReservationService items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureReservationService"
+            },
+            "minItems": 1
+          },
+          "superInfrastructure": {
+            "type": "array",
+            "description": "The infrastructure that makes up the larger whole of infrastructure. Lijst van Infrastructure items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Infrastructure"
+                },
+                {
+                  "$ref": "#/components/schemas/InteriorSpace"
+                },
+                {
+                  "$ref": "#/components/schemas/OutdoorSpace"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Infrastructure": "#/components/schemas/Infrastructure",
+                  "InteriorSpace": "#/components/schemas/InteriorSpace",
+                  "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "subinfrastructure": {
+            "type": "array",
+            "description": "The infrastructure that is part of a larger whole of infrastructure. Lijst van Infrastructure items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Infrastructure"
+                },
+                {
+                  "$ref": "#/components/schemas/InteriorSpace"
+                },
+                {
+                  "$ref": "#/components/schemas/OutdoorSpace"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Infrastructure": "#/components/schemas/Infrastructure",
+                  "InteriorSpace": "#/components/schemas/InteriorSpace",
+                  "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "reservation": {
+            "$ref": "#/components/schemas/InfrastructureReservation"
+          }
+        },
+        "required": [
+          "@type",
+          "location",
+          "openingHours",
+          "reservation"
+        ]
+      },
+      "Criterion": {
+        "title": "Criterion",
+        "type": "object",
+        "description": "Condition for evaluation or assessment.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Criterion)",
+            "pattern": "^Criterion$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Ownership": {
+        "title": "Ownership",
+        "type": "object",
+        "description": "The one to whom the Infrastructure belongs in a way.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Ownership)",
+            "pattern": "^Ownership$"
+          },
+          "owner": {
+            "type": "array",
+            "description": "The Agent to whom the Infrastructure belongs. Lijst van Agent items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Organization"
+                },
+                {
+                  "$ref": "#/components/schemas/Person"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Organization": "#/components/schemas/Organization",
+                  "Person": "#/components/schemas/Person"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/OwnershipType"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "OutdoorSpace.cancellationPolicy": {
+        "title": "OutdoorSpace.cancellationPolicy",
+        "description": "The condition(s) that is (are) necessary to cancel a particular reservation. In the context of room reservation, it is a cancellation of a room according to various conditions (such as time).",
+        "type": "string"
+      },
+      "OutdoorSpace.name": {
+        "title": "OutdoorSpace.name",
+        "description": "The name associated with an Infrastructure.",
+        "type": "string"
+      },
+      "OutdoorSpace": {
+        "title": "OutdoorSpace",
+        "type": "object",
+        "description": "An open-air space.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse OutdoorSpace)",
+            "pattern": "^OutdoorSpace$"
+          },
+          "type": {
+            "type": "array",
+            "description": "The type of infrastructure. Lijst van InfrastructureType items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureType"
+            },
+            "minItems": 1
+          },
+          "associatedWith": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Infrastructure"
+              },
+              {
+                "$ref": "#/components/schemas/InteriorSpace"
+              },
+              {
+                "$ref": "#/components/schemas/OutdoorSpace"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Infrastructure": "#/components/schemas/Infrastructure",
+                "InteriorSpace": "#/components/schemas/InteriorSpace",
+                "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+              }
+            }
+          },
+          "cancellationPolicy": {
+            "$ref": "#/components/schemas/OutdoorSpace.cancellationPolicy"
+          },
+          "name": {
+            "type": "array",
+            "description": "The name associated with an Infrastructure. Lijst van LangString items.",
+            "items": {
+              "$ref": "#/components/schemas/OutdoorSpace.name"
+            },
+            "minItems": 1
+          },
+          "accessibility": {
+            "$ref": "#/components/schemas/Accessibility"
+          },
+          "availability": {
+            "$ref": "#/components/schemas/Availability"
+          },
+          "description": {
+            "type": "array",
+            "description": "The textual description of the Infrastructure. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "capacity": {
+            "type": "array",
+            "description": "The comprehension or occupancy of an Infrastructure. Lijst van Capacity items.",
+            "items": {
+              "$ref": "#/components/schemas/Capacity"
+            },
+            "minItems": 1
+          },
+          "contactPerson": {
+            "type": "array",
+            "description": "The Agent to be consulted connected to an Infrastructure. Lijst van Agent items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Organization"
+                },
+                {
+                  "$ref": "#/components/schemas/Person"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Organization": "#/components/schemas/Organization",
+                  "Person": "#/components/schemas/Person"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "dimension": {
+            "type": "array",
+            "description": "The dimensions in each direction of an Infrastructure. Lijst van Dimension items.",
+            "items": {
+              "$ref": "#/components/schemas/Dimension"
+            },
+            "minItems": 1
+          },
+          "facility": {
+            "type": "array",
+            "description": "The provision of an Infrastructure. Lijst van Facility items.",
+            "items": {
+              "$ref": "#/components/schemas/Facility"
+            },
+            "minItems": 1
+          },
+          "usage": {
+            "type": "array",
+            "description": "The use of an Infrastructure. Lijst van Usage items.",
+            "items": {
+              "$ref": "#/components/schemas/Usage"
+            },
+            "minItems": 1
+          },
+          "location": {
+            "type": "array",
+            "description": "The location of an Infrastructure. Lijst van Location items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Location"
+                },
+                {
+                  "$ref": "#/components/schemas/AddressPresentation"
+                },
+                {
+                  "$ref": "#/components/schemas/Location"
+                },
+                {
+                  "$ref": "#/components/schemas/GeographicalName"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Location": "#/components/schemas/Location",
+                  "AddressPresentation": "#/components/schemas/AddressPresentation",
+                  "GeographicalName": "#/components/schemas/GeographicalName"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "openingUp": {
+            "$ref": "#/components/schemas/OpeningType"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/Ownership"
+          },
+          "openingHours": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification"
+          },
+          "access": {
+            "type": "array",
+            "description": "The right or ability to enter and use a reserved space. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "safetyRequirements": {
+            "type": "array",
+            "description": "Explicit terms and standards established to ensure that a product, system, service, or operation does not pose risks or harm to people, property, the environment, or the integrity of data and processes. Lijst van Document items.",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "minItems": 1
+          },
+          "reservationService": {
+            "type": "array",
+            "description": "The public service that offers the reservation of an infrastructure. Lijst van InfrastructureReservationService items.",
+            "items": {
+              "$ref": "#/components/schemas/InfrastructureReservationService"
+            },
+            "minItems": 1
+          },
+          "superInfrastructure": {
+            "type": "array",
+            "description": "The infrastructure that makes up the larger whole of infrastructure. Lijst van Infrastructure items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Infrastructure"
+                },
+                {
+                  "$ref": "#/components/schemas/InteriorSpace"
+                },
+                {
+                  "$ref": "#/components/schemas/OutdoorSpace"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Infrastructure": "#/components/schemas/Infrastructure",
+                  "InteriorSpace": "#/components/schemas/InteriorSpace",
+                  "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "subinfrastructure": {
+            "type": "array",
+            "description": "The infrastructure that is part of a larger whole of infrastructure. Lijst van Infrastructure items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Infrastructure"
+                },
+                {
+                  "$ref": "#/components/schemas/InteriorSpace"
+                },
+                {
+                  "$ref": "#/components/schemas/OutdoorSpace"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Infrastructure": "#/components/schemas/Infrastructure",
+                  "InteriorSpace": "#/components/schemas/InteriorSpace",
+                  "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "reservation": {
+            "$ref": "#/components/schemas/InfrastructureReservation"
+          }
+        },
+        "required": [
+          "@type",
+          "location",
+          "openingHours",
+          "reservation"
+        ]
+      },
+      "Person": {
+        "title": "Person",
+        "type": "object",
+        "description": "Natural person.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Person)",
+            "pattern": "^Person$"
+          },
+          "contactInfo": {
+            "$ref": "#/components/schemas/PointOfContact"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Reservation": {
+        "title": "Reservation",
+        "type": "object",
+        "description": "Activity in which a certain service, space, or object is reserved in advance for future use.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Reservation)",
+            "pattern": "^Reservation$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "PublicServices": {
+        "title": "PublicServices",
+        "type": "object",
+        "description": "A public service is a set of mandatory or optionally performed or implementable actions by or in the name of a public organisation. The service is for the benefit of an individual, a company, another public organization or groups thereof.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PublicServices)",
+            "pattern": "^PublicServices$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Unity": {
+        "title": "Unity",
+        "type": "object",
+        "description": "Measure in which a quantity of a certain quantity is expressed.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Unity)",
+            "pattern": "^Unity$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Moment.inXSDDateTime": {
+        "title": "Moment.inXSDDateTime",
+        "description": "Position ve Moment, expressed by xsd:dateTime.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Moment.inEDTF": {
+        "title": "Moment.inEDTF",
+        "description": "Position of a Moment, expressed in EDTF. Use <a href=\"http://id.loc.gov/datatypes/edtf/EDTF\">http://id.loc.gov/datatypes/edtf/EDTF</a> as the data type of the Literal and a String in EDTF format as the value. EDTF is a comprehensive set of formats for capturing dates, times, and time intervals, including uncertain or approximate dates, repeating dates, and open time intervals. Examples: 1980/1984 (period 1980-1984), 1984? (year uncertain), 1984~ (year approximate), 19XX (20th century), /1980 (period with unknown beginning), 1984 (sometime in 1984). See <a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a> for more info.",
+        "type": "string"
+      },
+      "Moment": {
+        "title": "Moment",
+        "type": "object",
+        "description": "TemporalEntity with size and duration zero.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Moment)",
+            "pattern": "^Moment$"
+          },
+          "inXSDDateTime": {
+            "$ref": "#/components/schemas/Moment.inXSDDateTime"
+          },
+          "inEDTF": {
+            "$ref": "#/components/schemas/Moment.inEDTF"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "PeriodOfProject.inEDTF": {
+        "title": "PeriodOfProject.inEDTF",
+        "description": "Period expressed in EDTF. Use <a href=\"http://id.loc.gov/datatypes/edtf/EDTF\">http://id.loc.gov/datatypes/edtf/EDTF</a> as the data type of the Literal and a String in EDTF format as the value. EDTF is a comprehensive set of formats for capturing dates, times, and time intervals, including uncertain or approximate dates, repeating dates, and open time intervals. Examples: 1980/1984 (period 1980-1984), 1984? (year uncertain), 1984~ (year approximate), 19XX (20th century), /1980 (period with unknown beginning), 1984 (sometime in 1984). See <a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a> for more info.",
+        "type": "string"
+      },
+      "PeriodOfProject": {
+        "title": "PeriodOfProject",
+        "type": "object",
+        "description": "Temporal Entity whose magnitude and duration are different from zero, i.e. whose initial and final values are different.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PeriodOfProject)",
+            "pattern": "^PeriodOfProject$"
+          },
+          "inEDTF": {
+            "$ref": "#/components/schemas/PeriodOfProject.inEDTF"
+          },
+          "to": {
+            "$ref": "#/components/schemas/Moment"
+          },
+          "from": {
+            "$ref": "#/components/schemas/Moment"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "QuantitativeValue.value": {
+        "title": "QuantitativeValue.value",
+        "description": "Number that can be used to express the quantity of the characteristic.",
+        "type": "string"
+      },
+      "QuantitativeValue": {
+        "title": "QuantitativeValue",
+        "type": "object",
+        "description": "Indication of the quantity of a certain characteristic of an object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse QuantitativeValue)",
+            "pattern": "^QuantitativeValue$"
+          },
+          "value": {
+            "$ref": "#/components/schemas/QuantitativeValue.value"
+          },
+          "unity": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Concept"
+              },
+              {
+                "$ref": "#/components/schemas/Unity"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Concept": "#/components/schemas/Concept",
+                "Unity": "#/components/schemas/Unity"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "value"
+        ]
+      },
+      "Geometry.asGML": {
+        "title": "Geometry.asGML",
+        "description": "Geometry expressed in gml format. Use http://www.opengis.net/ont/geosparql#gmlLiteral as a data type.",
+        "type": "string"
+      },
+      "Geometry.asWKT": {
+        "title": "Geometry.asWKT",
+        "description": "Geometry expressed in CHP format. Use http://www.opengis.net/ont/geosparql#wktLiteral as a data type.",
+        "type": "string"
+      },
+      "Geometry": {
+        "title": "Geometry",
+        "type": "object",
+        "description": "Shape and position characteristics of an object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Geometry)",
+            "pattern": "^Geometry$"
+          },
+          "asGML": {
+            "$ref": "#/components/schemas/Geometry.asGML"
+          },
+          "asWKT": {
+            "$ref": "#/components/schemas/Geometry.asWKT"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "ParkingCapacity.totalCapacity": {
+        "title": "ParkingCapacity.totalCapacity",
+        "description": "Indicates the capacity of a resource. For example: parking facility, car, bicycle, etc.",
+        "type": "number",
+        "format": "int64"
+      },
+      "ParkingCapacity": {
+        "title": "ParkingCapacity",
+        "type": "object",
+        "description": "Capacity of a civilian structure.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ParkingCapacity)",
+            "pattern": "^ParkingCapacity$"
+          },
+          "totalCapacity": {
+            "$ref": "#/components/schemas/ParkingCapacity.totalCapacity"
+          },
+          "validForVehicle": {
+            "$ref": "#/components/schemas/Vehicle"
+          }
+        },
+        "required": [
+          "@type",
+          "totalCapacity",
+          "validForVehicle"
+        ]
+      },
+      "Accessibility.latestPublicTransport": {
+        "title": "Accessibility.latestPublicTransport",
+        "description": "The time at which public transport can be used at the destination at the latest.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Accessibility.mobiscore": {
+        "title": "Accessibility.mobiscore",
+        "description": "An index that indicates how well a location scores in terms of mobility.",
+        "type": "number",
+        "format": "int64"
+      },
+      "Accessibility": {
+        "title": "Accessibility",
+        "type": "object",
+        "description": "The extent to which an infrastructure is open or accessible.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Accessibility)",
+            "pattern": "^Accessibility$"
+          },
+          "level": {
+            "$ref": "#/components/schemas/AccessibilityLevel"
+          },
+          "part": {
+            "type": "array",
+            "description": "Part of the service or infrastructure to which the Accessibility relates. Lijst van AccessibilityComponent items.",
+            "items": {
+              "$ref": "#/components/schemas/AccessibilityComponent"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Availability.openingHours": {
+        "title": "Availability.openingHours",
+        "description": "The time when the infrastructure is available. Syntax according to schema.org for opening hours. E.g. if contact can be made between 8 am and 8 pm Monday to Saturday and between 8 am and 6 pm on Sunday, this will be coded as Mon-Sat 08:00-20:00, Sun 08:00-18:00.",
+        "type": "string"
+      },
+      "Availability": {
+        "title": "Availability",
+        "type": "object",
+        "description": "The extent to which the infrastructure can be used.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Availability)",
+            "pattern": "^Availability$"
+          },
+          "openingHours": {
+            "$ref": "#/components/schemas/Availability.openingHours"
+          },
+          "user": {
+            "$ref": "#/components/schemas/TypeOfUse"
+          },
+          "periodOfProject": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Capacity.description": {
+        "title": "Capacity.description",
+        "description": "The description of the capacity of an infrastructure.",
+        "type": "string"
+      },
+      "Capacity.value": {
+        "title": "Capacity.value",
+        "description": "The numerical quantity to which the capacity relates.",
+        "type": "string"
+      },
+      "Capacity": {
+        "title": "Capacity",
+        "type": "object",
+        "description": "The comprehension or occupancy of an infrastructure.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Capacity)",
+            "pattern": "^Capacity$"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Capacity.description"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Capacity.value"
+          },
+          "unity": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Concept"
+              },
+              {
+                "$ref": "#/components/schemas/Unity"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Concept": "#/components/schemas/Concept",
+                "Unity": "#/components/schemas/Unity"
+              }
+            }
+          },
+          "type": {
+            "$ref": "#/components/schemas/CapacityType"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Dimension.description": {
+        "title": "Dimension.description",
+        "description": "Description of the Dimension.",
+        "type": "string"
+      },
+      "Dimension.value": {
+        "title": "Dimension.value",
+        "description": "The numerical quantity to which the capacity relates.",
+        "type": "string"
+      },
+      "Dimension": {
+        "title": "Dimension",
+        "type": "object",
+        "description": "Quantifiable property of an Entity.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Dimension)",
+            "pattern": "^Dimension$"
+          },
+          "description": {
+            "type": "array",
+            "description": "Description of the Dimension. Lijst van LangString items.",
+            "items": {
+              "$ref": "#/components/schemas/Dimension.description"
+            },
+            "minItems": 1
+          },
+          "value": {
+            "$ref": "#/components/schemas/Dimension.value"
+          },
+          "unity": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Concept"
+              },
+              {
+                "$ref": "#/components/schemas/Unity"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Concept": "#/components/schemas/Concept",
+                "Unity": "#/components/schemas/Unity"
+              }
+            }
+          },
+          "type": {
+            "$ref": "#/components/schemas/DimensionType"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AddressPresentation.administrativeUnitLevel1": {
+        "title": "AddressPresentation.administrativeUnitLevel1",
+        "description": "Highest Administrative Unit of the address, usually a country.",
+        "type": "string"
+      },
+      "AddressPresentation.administrativeUnitLevel2": {
+        "title": "AddressPresentation.administrativeUnitLevel2",
+        "description": "The region of the address, usually a province or state or similar area that typically includes several places.",
+        "type": "string"
+      },
+      "AddressPresentation.addressArea": {
+        "title": "AddressPresentation.addressArea",
+        "description": "Name of a geographical area or place that groups a number of addressable objects to address them without the area or place being an administrative unit. For example, the name of the hamlet in which the address is located.",
+        "type": "string"
+      },
+      "AddressPresentation.boxNumber": {
+        "title": "AddressPresentation.boxNumber",
+        "description": "Officially assigned alphanumeric code that is added to the house number to distinguish several building units, pitches, berths or plots that have the same house number. Specialization of Address Presentation: location indication for Belgian addresses.",
+        "type": "string"
+      },
+      "AddressPresentation.municipalityName": {
+        "title": "AddressPresentation.municipalityName",
+        "description": "Municipality name of the address.",
+        "type": "string"
+      },
+      "AddressPresentation.houseNumber": {
+        "title": "AddressPresentation.houseNumber",
+        "description": "Alphanumeric code officially assigned to building units, berths, stands or plots. Specialization of Address Presentation: location indication for Belgian addresses.",
+        "type": "string"
+      },
+      "AddressPresentation.country": {
+        "title": "AddressPresentation.country",
+        "description": "Country in which the address is located.",
+        "type": "string"
+      },
+      "AddressPresentation.locationIndicator": {
+        "title": "AddressPresentation.locationIndicator",
+        "description": "Alphanumeric code that uniquely identifies the address locator within the street, administrative unit etc.",
+        "type": "string"
+      },
+      "AddressPresentation.locationName": {
+        "title": "AddressPresentation.locationName",
+        "description": "Name or description of the geographical object that the address locator denotes.",
+        "type": "string"
+      },
+      "AddressPresentation.p.O.Box": {
+        "title": "AddressPresentation.p.O.Box",
+        "description": "PO Box number in a post office.",
+        "type": "string"
+      },
+      "AddressPresentation.postalCode": {
+        "title": "AddressPresentation.postalCode",
+        "description": "Code that identifies the geographical area that groups addresses for postal purposes.",
+        "type": "string"
+      },
+      "AddressPresentation.postName": {
+        "title": "AddressPresentation.postName",
+        "description": "Name indicating the geographical area that groups addresses for postal purposes.",
+        "type": "string"
+      },
+      "AddressPresentation.streetName": {
+        "title": "AddressPresentation.streetName",
+        "description": "Street name of the address.",
+        "type": "string"
+      },
+      "AddressPresentation.fullAddress": {
+        "title": "AddressPresentation.fullAddress",
+        "description": "The complete address in one string, formatted or not. Avoid errors due to the splitting of the address into its parts. Displays the prescribed order of the different parts.",
+        "type": "string"
+      },
+      "AddressPresentation.description": {
+        "title": "AddressPresentation.description",
+        "description": "Written representation of characteristics of something or someone.",
+        "type": "string"
+      },
+      "AddressPresentation": {
+        "title": "AddressPresentation",
+        "type": "object",
+        "description": "More readable presentation with only the basic data of the address, intended for the use of an address as an attribute of another object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AddressPresentation)",
+            "pattern": "^AddressPresentation$"
+          },
+          "administrativeUnitLevel1": {
+            "$ref": "#/components/schemas/AddressPresentation.administrativeUnitLevel1"
+          },
+          "administrativeUnitLevel2": {
+            "$ref": "#/components/schemas/AddressPresentation.administrativeUnitLevel2"
+          },
+          "addressArea": {
+            "$ref": "#/components/schemas/AddressPresentation.addressArea"
+          },
+          "boxNumber": {
+            "$ref": "#/components/schemas/AddressPresentation.boxNumber"
+          },
+          "municipalityName": {
+            "$ref": "#/components/schemas/AddressPresentation.municipalityName"
+          },
+          "houseNumber": {
+            "$ref": "#/components/schemas/AddressPresentation.houseNumber"
+          },
+          "country": {
+            "$ref": "#/components/schemas/AddressPresentation.country"
+          },
+          "locationIndicator": {
+            "type": "array",
+            "description": "Alphanumeric code that uniquely identifies the address locator within the street, administrative unit etc. Lijst van String items.",
+            "items": {
+              "$ref": "#/components/schemas/AddressPresentation.locationIndicator"
+            },
+            "minItems": 1
+          },
+          "locationName": {
+            "type": "array",
+            "description": "Name or description of the geographical object that the address locator denotes. Lijst van LangString items.",
+            "items": {
+              "$ref": "#/components/schemas/AddressPresentation.locationName"
+            },
+            "minItems": 1
+          },
+          "p.O.Box": {
+            "$ref": "#/components/schemas/AddressPresentation.p.O.Box"
+          },
+          "postalCode": {
+            "$ref": "#/components/schemas/AddressPresentation.postalCode"
+          },
+          "postName": {
+            "$ref": "#/components/schemas/AddressPresentation.postName"
+          },
+          "streetName": {
+            "$ref": "#/components/schemas/AddressPresentation.streetName"
+          },
+          "fullAddress": {
+            "$ref": "#/components/schemas/AddressPresentation.fullAddress"
+          },
+          "description": {
+            "$ref": "#/components/schemas/AddressPresentation.description"
+          },
+          "address": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          }
+        },
+        "required": [
+          "@type",
+          "description",
+          "address"
+        ]
+      },
+      "OpeningHoursSpecification.dayOfWeek": {
+        "title": "OpeningHoursSpecification.dayOfWeek",
+        "description": "Day of the week for which the opening hours are valid. See https://schema.org/DayOfWeek for a list of possible values.",
+        "type": "string",
+        "format": "uri"
+      },
+      "OpeningHoursSpecification.validUntil": {
+        "title": "OpeningHoursSpecification.validUntil",
+        "description": "Date until which the specified opening hours apply.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "OpeningHoursSpecification.validFrom": {
+        "title": "OpeningHoursSpecification.validFrom",
+        "description": "Date from which the specified opening hours apply.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "OpeningHoursSpecification.closed": {
+        "title": "OpeningHoursSpecification.closed",
+        "description": "Closing time of the place or service on the specified day of the week.",
+        "$ref": "#/components/schemas/Time"
+      },
+      "OpeningHoursSpecification.open": {
+        "title": "OpeningHoursSpecification.open",
+        "description": "Opening time of the place or service on the specified day of the week.",
+        "$ref": "#/components/schemas/Time"
+      },
+      "OpeningHoursSpecification": {
+        "title": "OpeningHoursSpecification",
+        "type": "object",
+        "description": "Information about the opening hours of the place or service.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse OpeningHoursSpecification)",
+            "pattern": "^OpeningHoursSpecification$"
+          },
+          "dayOfWeek": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification.dayOfWeek"
+          },
+          "validUntil": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification.validUntil"
+          },
+          "validFrom": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification.validFrom"
+          },
+          "closed": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification.closed"
+          },
+          "open": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification.open"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "InfrastructureReservationStatus.time": {
+        "title": "InfrastructureReservationStatus.time",
+        "description": "Time of the infrastructure reservation status.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "InfrastructureReservationStatus": {
+        "title": "InfrastructureReservationStatus",
+        "type": "object",
+        "description": "Indicates the status of the infrastructure reservation.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse InfrastructureReservationStatus)",
+            "pattern": "^InfrastructureReservationStatus$"
+          },
+          "time": {
+            "$ref": "#/components/schemas/InfrastructureReservationStatus.time"
+          },
+          "infrastructureReservationStatusType": {
+            "$ref": "#/components/schemas/InfrastructureReservationStatusType"
+          }
+        },
+        "required": [
+          "@type",
+          "time",
+          "infrastructureReservationStatusType"
+        ]
+      },
+      "PointOfContact.writePrefix": {
+        "title": "PointOfContact.writePrefix",
+        "description": "Title that is used to write to someone or address someone or to refer to someone. E.g. Mr./Madam, Excellency, Doctor...",
+        "type": "string"
+      },
+      "PointOfContact.name": {
+        "title": "PointOfContact.name",
+        "description": "Name of e.g. the person one can contact.",
+        "type": "string"
+      },
+      "PointOfContact.email": {
+        "title": "PointOfContact.email",
+        "description": "Email address to which one can send an e-mail.",
+        "type": "string"
+      },
+      "PointOfContact.faxNumber": {
+        "title": "PointOfContact.faxNumber",
+        "description": "Fax number to which one can fax.",
+        "type": "string"
+      },
+      "PointOfContact.openingHours": {
+        "title": "PointOfContact.openingHours",
+        "description": "Hours within which contact can be made. Syntax according to schema.org for opening hours. E.g. if contact can be made between 8 am and 8 pm Monday to Saturday and between 8 am and 6 pm on Sunday, this will be coded as Mon-Sat 08:00-20:00, Sun 08:00-18:00.",
+        "type": "string"
+      },
+      "PointOfContact.phone": {
+        "title": "PointOfContact.phone",
+        "description": "Phone number where one can call.",
+        "type": "string"
+      },
+      "PointOfContact.page": {
+        "title": "PointOfContact.page",
+        "description": "Website that can be surfed.",
+        "type": "string",
+        "format": "uri"
+      },
+      "PointOfContact": {
+        "title": "PointOfContact",
+        "type": "object",
+        "description": "Information such as email, telephone, address that allows to contact someone or something.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PointOfContact)",
+            "pattern": "^PointOfContact$"
+          },
+          "writePrefix": {
+            "$ref": "#/components/schemas/PointOfContact.writePrefix"
+          },
+          "name": {
+            "$ref": "#/components/schemas/PointOfContact.name"
+          },
+          "email": {
+            "$ref": "#/components/schemas/PointOfContact.email"
+          },
+          "faxNumber": {
+            "$ref": "#/components/schemas/PointOfContact.faxNumber"
+          },
+          "openingHours": {
+            "$ref": "#/components/schemas/PointOfContact.openingHours"
+          },
+          "phone": {
+            "$ref": "#/components/schemas/PointOfContact.phone"
+          },
+          "page": {
+            "$ref": "#/components/schemas/PointOfContact.page"
+          },
+          "address": {
+            "$ref": "#/components/schemas/AddressPresentation"
+          },
+          "hoursOfAvailability": {
+            "$ref": "#/components/schemas/OpeningHoursSpecification"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Vehicle": {
+        "title": "Vehicle",
+        "type": "object",
+        "description": "A vehicle is a device designed or used to transport people or cargo by land, water, air, or space.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Vehicle)",
+            "pattern": "^Vehicle$"
+          },
+          "vehicleType": {
+            "$ref": "#/components/schemas/VehicleType"
+          }
+        },
+        "required": [
+          "@type",
+          "vehicleType"
+        ]
+      }
+    },
+    "links": {
+      "PublicOrganization.contactInfo": {
+        "operationId": "PublicOrganizationGET",
+        "parameters": {
+          "id": "$response.body#/PublicOrganization.contactInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PointOfContact` op te halen."
+      },
+      "PublicOrganization.scope": {
+        "operationId": "PublicOrganizationGET",
+        "parameters": {
+          "id": "$response.body#/PublicOrganization.scope/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "Infrastructure.accessibility": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.accessibility/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Accessibility` op te halen."
+      },
+      "Infrastructure.availability": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.availability/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Availability` op te halen."
+      },
+      "Infrastructure.description": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.description/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "Infrastructure.capacity": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.capacity/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Capacity` op te halen."
+      },
+      "Infrastructure.contactPerson": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.contactPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Infrastructure.dimension": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.dimension/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dimension` op te halen."
+      },
+      "Infrastructure.facility": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.facility/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Facility` op te halen."
+      },
+      "Infrastructure.usage": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.usage/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Usage` op te halen."
+      },
+      "Infrastructure.location": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "Infrastructure.openingUp": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.openingUp/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OpeningType` op te halen."
+      },
+      "Infrastructure.type": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureType` op te halen."
+      },
+      "Infrastructure.owner": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.owner/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Ownership` op te halen."
+      },
+      "Infrastructure.openingHours": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.openingHours/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OpeningHoursSpecification` op te halen."
+      },
+      "Infrastructure.access": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.access/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "Infrastructure.safetyRequirements": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.safetyRequirements/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "Infrastructure.reservationService": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.reservationService/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureReservationService` op te halen."
+      },
+      "Infrastructure.superInfrastructure": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.superInfrastructure/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "Infrastructure.subinfrastructure": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.subinfrastructure/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "Infrastructure.reservation": {
+        "operationId": "InfrastructureGET",
+        "parameters": {
+          "id": "$response.body#/Infrastructure.reservation/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureReservation` op te halen."
+      },
+      "LocationDescription.document": {
+        "operationId": "LocationDescriptionGET",
+        "parameters": {
+          "id": "$response.body#/LocationDescription.document/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "InfrastructureReservationService.type": {
+        "operationId": "InfrastructureReservationServiceGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservationService.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeOfService` op te halen."
+      },
+      "InfrastructureReservationService.language": {
+        "operationId": "InfrastructureReservationServiceGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservationService.language/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LanguageCode` op te halen."
+      },
+      "InfrastructureReservationService.status": {
+        "operationId": "InfrastructureReservationServiceGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservationService.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `StatusType` op te halen."
+      },
+      "InfrastructureReservationService.spatialCoverage": {
+        "operationId": "InfrastructureReservationServiceGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservationService.spatialCoverage/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "InfrastructureReservationService.hasContactPoint": {
+        "operationId": "InfrastructureReservationServiceGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservationService.hasContactPoint/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PointOfContact` op te halen."
+      },
+      "InfrastructureReservationService.infrastructure": {
+        "operationId": "InfrastructureReservationServiceGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservationService.infrastructure/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "InfrastructureReservationService.hasAResponsiblePerson": {
+        "operationId": "InfrastructureReservationServiceGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservationService.hasAResponsiblePerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "InfrastructureReservationService.produces": {
+        "operationId": "InfrastructureReservationServiceGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservationService.produces/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureReservation` op te halen."
+      },
+      "Facility.type": {
+        "operationId": "FacilityGET",
+        "parameters": {
+          "id": "$response.body#/Facility.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `FacilityType` op te halen."
+      },
+      "Facility.document": {
+        "operationId": "FacilityGET",
+        "parameters": {
+          "id": "$response.body#/Facility.document/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "Facility.user": {
+        "operationId": "FacilityGET",
+        "parameters": {
+          "id": "$response.body#/Facility.user/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TypeOfUse` op te halen."
+      },
+      "Location.geometry": {
+        "operationId": "LocationGET",
+        "parameters": {
+          "id": "$response.body#/Location.geometry/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometry` op te halen."
+      },
+      "Location.address": {
+        "operationId": "LocationGET",
+        "parameters": {
+          "id": "$response.body#/Location.address/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressPresentation` op te halen."
+      },
+      "InfrastructureReservation.reservedBy": {
+        "operationId": "InfrastructureReservationGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservation.reservedBy/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "InfrastructureReservation.reservedFor": {
+        "operationId": "InfrastructureReservationGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservation.reservedFor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Activity` op te halen."
+      },
+      "InfrastructureReservation.periodOfProject": {
+        "operationId": "InfrastructureReservationGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservation.periodOfProject/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PeriodOfProject` op te halen."
+      },
+      "InfrastructureReservation.status": {
+        "operationId": "InfrastructureReservationGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservation.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureReservationStatus` op te halen."
+      },
+      "InfrastructureReservation.buffer": {
+        "operationId": "InfrastructureReservationGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservation.buffer/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PeriodOfProject` op te halen."
+      },
+      "InfrastructureReservation.locationDescription": {
+        "operationId": "InfrastructureReservationGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservation.locationDescription/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LocationDescription` op te halen."
+      },
+      "InfrastructureReservation.infrastructure": {
+        "operationId": "InfrastructureReservationGET",
+        "parameters": {
+          "id": "$response.body#/InfrastructureReservation.infrastructure/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "Organization.contactInfo": {
+        "operationId": "OrganizationGET",
+        "parameters": {
+          "id": "$response.body#/Organization.contactInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PointOfContact` op te halen."
+      },
+      "Activity.type": {
+        "operationId": "ActivityGET",
+        "parameters": {
+          "id": "$response.body#/Activity.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ActivityType` op te halen."
+      },
+      "Usage.exclusivity": {
+        "operationId": "UsageGET",
+        "parameters": {
+          "id": "$response.body#/Usage.exclusivity/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ExclusivityType` op te halen."
+      },
+      "Usage.user": {
+        "operationId": "UsageGET",
+        "parameters": {
+          "id": "$response.body#/Usage.user/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Usage.periodOfProject": {
+        "operationId": "UsageGET",
+        "parameters": {
+          "id": "$response.body#/Usage.periodOfProject/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PeriodOfProject` op te halen."
+      },
+      "Usage.condition": {
+        "operationId": "UsageGET",
+        "parameters": {
+          "id": "$response.body#/Usage.condition/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Criterion` op te halen."
+      },
+      "InteriorSpace.associatedWith": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.associatedWith/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "InteriorSpace.type": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureType` op te halen."
+      },
+      "InteriorSpace.accessibility": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.accessibility/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Accessibility` op te halen."
+      },
+      "InteriorSpace.availability": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.availability/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Availability` op te halen."
+      },
+      "InteriorSpace.description": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.description/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "InteriorSpace.capacity": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.capacity/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Capacity` op te halen."
+      },
+      "InteriorSpace.contactPerson": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.contactPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "InteriorSpace.dimension": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.dimension/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dimension` op te halen."
+      },
+      "InteriorSpace.facility": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.facility/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Facility` op te halen."
+      },
+      "InteriorSpace.usage": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.usage/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Usage` op te halen."
+      },
+      "InteriorSpace.location": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "InteriorSpace.openingUp": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.openingUp/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OpeningType` op te halen."
+      },
+      "InteriorSpace.owner": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.owner/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Ownership` op te halen."
+      },
+      "InteriorSpace.openingHours": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.openingHours/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OpeningHoursSpecification` op te halen."
+      },
+      "InteriorSpace.access": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.access/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "InteriorSpace.safetyRequirements": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.safetyRequirements/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "InteriorSpace.reservationService": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.reservationService/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureReservationService` op te halen."
+      },
+      "InteriorSpace.superInfrastructure": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.superInfrastructure/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "InteriorSpace.subinfrastructure": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.subinfrastructure/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "InteriorSpace.reservation": {
+        "operationId": "InteriorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/InteriorSpace.reservation/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureReservation` op te halen."
+      },
+      "Ownership.owner": {
+        "operationId": "OwnershipGET",
+        "parameters": {
+          "id": "$response.body#/Ownership.owner/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Ownership.type": {
+        "operationId": "OwnershipGET",
+        "parameters": {
+          "id": "$response.body#/Ownership.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OwnershipType` op te halen."
+      },
+      "OutdoorSpace.type": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureType` op te halen."
+      },
+      "OutdoorSpace.associatedWith": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.associatedWith/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "OutdoorSpace.accessibility": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.accessibility/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Accessibility` op te halen."
+      },
+      "OutdoorSpace.availability": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.availability/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Availability` op te halen."
+      },
+      "OutdoorSpace.description": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.description/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "OutdoorSpace.capacity": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.capacity/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Capacity` op te halen."
+      },
+      "OutdoorSpace.contactPerson": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.contactPerson/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "OutdoorSpace.dimension": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.dimension/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dimension` op te halen."
+      },
+      "OutdoorSpace.facility": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.facility/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Facility` op te halen."
+      },
+      "OutdoorSpace.usage": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.usage/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Usage` op te halen."
+      },
+      "OutdoorSpace.location": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.location/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Location` op te halen."
+      },
+      "OutdoorSpace.openingUp": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.openingUp/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OpeningType` op te halen."
+      },
+      "OutdoorSpace.owner": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.owner/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Ownership` op te halen."
+      },
+      "OutdoorSpace.openingHours": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.openingHours/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `OpeningHoursSpecification` op te halen."
+      },
+      "OutdoorSpace.access": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.access/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "OutdoorSpace.safetyRequirements": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.safetyRequirements/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
+      },
+      "OutdoorSpace.reservationService": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.reservationService/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureReservationService` op te halen."
+      },
+      "OutdoorSpace.superInfrastructure": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.superInfrastructure/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "OutdoorSpace.subinfrastructure": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.subinfrastructure/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Infrastructure` op te halen."
+      },
+      "OutdoorSpace.reservation": {
+        "operationId": "OutdoorSpaceGET",
+        "parameters": {
+          "id": "$response.body#/OutdoorSpace.reservation/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InfrastructureReservation` op te halen."
+      },
+      "Person.contactInfo": {
+        "operationId": "PersonGET",
+        "parameters": {
+          "id": "$response.body#/Person.contactInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PointOfContact` op te halen."
+      }
+    }
+  }
+}
