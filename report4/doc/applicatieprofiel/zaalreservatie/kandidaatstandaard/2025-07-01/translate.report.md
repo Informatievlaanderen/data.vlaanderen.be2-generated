@@ -8,6 +8,8 @@ TRANSLATIONFILE: zaalreservatie_nl.json
 
 #||# -------------------------------------  
 
+#||# command: node /app/translation-json-generator.js -i /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/all-zaalreservatie.jsonld -m nl -g nl -o /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/translation/zaalreservatie_nl.json -p '#||# '  
+
 #||# start reading  
 
 #||# done  
@@ -30,6 +32,8 @@ TRANSLATIONFILE: zaalreservatie_en.json
 
 #||# -------------------------------------  
 
+#||# command: node /app/translation-json-generator.js -i /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/all-zaalreservatie.jsonld -m nl -g en -o /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/translation/zaalreservatie_en.json -p '#||# '  
+
 #||# start reading  
 
 #||# done  
@@ -39,4 +43,6 @@ TRANSLATIONFILE: zaalreservatie_en.json
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/translation/zaalreservatie_en.json  
+
+#||# command: node /app/report_lines_links.js -i /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/all-zaalreservatie.jsonld -o /tmp/reportlines  
 
