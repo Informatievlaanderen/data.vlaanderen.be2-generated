@@ -1,0 +1,226 @@
+{
+  "title": "Infrastructure",
+  "type": "object",
+  "description": "Immovable or movable facilities.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Infrastructure)",
+      "pattern": "^Infrastructure$"
+    },
+    "cancellationPolicy": {
+      "$ref": "#/components/schemas/Infrastructure.cancellationPolicy"
+    },
+    "name": {
+      "type": "array",
+      "description": "The name associated with an Infrastructure. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Infrastructure.name"
+      },
+      "minItems": 1
+    },
+    "accessibility": {
+      "$ref": "#/components/schemas/Accessibility"
+    },
+    "availability": {
+      "$ref": "#/components/schemas/Availability"
+    },
+    "description": {
+      "type": "array",
+      "description": "The textual description of the Infrastructure. Lijst van Document items.",
+      "items": {
+        "$ref": "#/components/schemas/Document"
+      },
+      "minItems": 1
+    },
+    "capacity": {
+      "type": "array",
+      "description": "The comprehension or occupancy of an Infrastructure. Lijst van Capacity items.",
+      "items": {
+        "$ref": "#/components/schemas/Capacity"
+      },
+      "minItems": 1
+    },
+    "contactPerson": {
+      "type": "array",
+      "description": "The Agent to be consulted connected to an Infrastructure. Lijst van Agent items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Organization"
+          },
+          {
+            "$ref": "#/components/schemas/Person"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Organization": "#/components/schemas/Organization",
+            "Person": "#/components/schemas/Person"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "dimension": {
+      "type": "array",
+      "description": "The dimensions in each direction of an Infrastructure. Lijst van Dimension items.",
+      "items": {
+        "$ref": "#/components/schemas/Dimension"
+      },
+      "minItems": 1
+    },
+    "facility": {
+      "type": "array",
+      "description": "The provision of an Infrastructure. Lijst van Facility items.",
+      "items": {
+        "$ref": "#/components/schemas/Facility"
+      },
+      "minItems": 1
+    },
+    "usage": {
+      "type": "array",
+      "description": "The use of an Infrastructure. Lijst van Usage items.",
+      "items": {
+        "$ref": "#/components/schemas/Usage"
+      },
+      "minItems": 1
+    },
+    "location": {
+      "type": "array",
+      "description": "The location of an Infrastructure. Lijst van Location items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Location"
+          },
+          {
+            "$ref": "#/components/schemas/AddressPresentation"
+          },
+          {
+            "$ref": "#/components/schemas/Location"
+          },
+          {
+            "$ref": "#/components/schemas/GeographicalName"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Location": "#/components/schemas/Location",
+            "AddressPresentation": "#/components/schemas/AddressPresentation",
+            "GeographicalName": "#/components/schemas/GeographicalName"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "openingUp": {
+      "$ref": "#/components/schemas/OpeningType"
+    },
+    "type": {
+      "type": "array",
+      "description": "The type of infrastructure. Lijst van InfrastructureType items.",
+      "items": {
+        "$ref": "#/components/schemas/InfrastructureType"
+      },
+      "minItems": 1
+    },
+    "owner": {
+      "$ref": "#/components/schemas/Ownership"
+    },
+    "openingHours": {
+      "$ref": "#/components/schemas/OpeningHoursSpecification"
+    },
+    "access": {
+      "type": "array",
+      "description": "The right or ability to enter and use a reserved space. Lijst van Document items.",
+      "items": {
+        "$ref": "#/components/schemas/Document"
+      },
+      "minItems": 1
+    },
+    "safetyRequirements": {
+      "type": "array",
+      "description": "Explicit terms and standards established to ensure that a product, system, service, or operation does not pose risks or harm to people, property, the environment, or the integrity of data and processes. Lijst van Document items.",
+      "items": {
+        "$ref": "#/components/schemas/Document"
+      },
+      "minItems": 1
+    },
+    "reservationService": {
+      "type": "array",
+      "description": "The public service that offers the reservation of an infrastructure. Lijst van InfrastructureReservationService items.",
+      "items": {
+        "$ref": "#/components/schemas/InfrastructureReservationService"
+      },
+      "minItems": 1
+    },
+    "superInfrastructure": {
+      "type": "array",
+      "description": "The infrastructure that makes up the larger whole of infrastructure. Lijst van Infrastructure items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Infrastructure"
+          },
+          {
+            "$ref": "#/components/schemas/InteriorSpace"
+          },
+          {
+            "$ref": "#/components/schemas/OutdoorSpace"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Infrastructure": "#/components/schemas/Infrastructure",
+            "InteriorSpace": "#/components/schemas/InteriorSpace",
+            "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "subinfrastructure": {
+      "type": "array",
+      "description": "The infrastructure that is part of a larger whole of infrastructure. Lijst van Infrastructure items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Infrastructure"
+          },
+          {
+            "$ref": "#/components/schemas/InteriorSpace"
+          },
+          {
+            "$ref": "#/components/schemas/OutdoorSpace"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Infrastructure": "#/components/schemas/Infrastructure",
+            "InteriorSpace": "#/components/schemas/InteriorSpace",
+            "OutdoorSpace": "#/components/schemas/OutdoorSpace"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "reservation": {
+      "$ref": "#/components/schemas/InfrastructureReservation"
+    }
+  },
+  "required": [
+    "@type",
+    "location",
+    "openingHours",
+    "reservation"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Usage",
+  "type": "object",
+  "description": "The way in which the Infrastructure is used.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Usage)",
+      "pattern": "^Usage$"
+    },
+    "exclusivity": {
+      "$ref": "#/components/schemas/ExclusivityType"
+    },
+    "user": {
+      "type": "array",
+      "description": "The Agent using the Infrastructure. Lijst van Agent items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Organization"
+          },
+          {
+            "$ref": "#/components/schemas/Person"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Organization": "#/components/schemas/Organization",
+            "Person": "#/components/schemas/Person"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "periodOfProject": {
+      "$ref": "#/components/schemas/PeriodOfProject"
+    },
+    "condition": {
+      "type": "array",
+      "description": "The criterion related to the use of the infrastructure. Lijst van Criterion items.",
+      "items": {
+        "$ref": "#/components/schemas/Criterion"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
