@@ -278,6 +278,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/waterdelen",
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
+  "/tmp/generated/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-tc4.2",
   "/tmp/generated/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof",
   "/tmp/generated/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20",
   "/tmp/generated/doc/implementatiemodel/magda",

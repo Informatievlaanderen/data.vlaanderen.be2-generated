@@ -1,0 +1,115 @@
+{
+  "title": "Infrastructuurreservatiedienst",
+  "type": "object",
+  "description": "Dienst die het mogelijk maakt om infrastructuur te reserveren voor een bepaalde periode.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Infrastructuurreservatiedienst)",
+      "pattern": "^Infrastructuurreservatiedienst$"
+    },
+    "titel": {
+      "$ref": "#/components/schemas/Infrastructuurreservatiedienst.titel"
+    },
+    "alternatieveLabel": {
+      "type": "array",
+      "description": "Andere naam waaronder de dienstverlening bekend is. Bijvoorbeeld: commerciële naam, informele naam, etc. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Infrastructuurreservatiedienst.alternatieveLabel"
+      },
+      "minItems": 1
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/Infrastructuurreservatiedienst.beschrijving"
+    },
+    "trefwoord": {
+      "type": "array",
+      "description": "Sleutelwoord, term, begrip dat de publieke dienst beschrijft. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Infrastructuurreservatiedienst.trefwoord"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Soort publieke dienstverlening. Bvb bescherming, gezondheid, recreatie, cultuur en religie, economische zaken. Lijst van Diensttype items.",
+      "items": {
+        "$ref": "#/components/schemas/Diensttype"
+      },
+      "minItems": 1
+    },
+    "taal": {
+      "type": "array",
+      "description": "Taal waarin een publieke dienstverlening wordt aangeboden. Lijst van Taalcode items.",
+      "items": {
+        "$ref": "#/components/schemas/Taalcode"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "$ref": "#/components/schemas/StatusType"
+    },
+    "ruimtelijkeDekking": {
+      "type": "array",
+      "description": "Gebied waarin de publieke dienstverlening beschikbaar is. Typisch het werkingsgebied van de verantwoordelijke publieke organisatie. Lijst van Plaats items.",
+      "items": {
+        "$ref": "#/components/schemas/Plaats"
+      },
+      "minItems": 1
+    },
+    "heeftContactpunt": {
+      "$ref": "#/components/schemas/Contactpunt"
+    },
+    "infrastructuur": {
+      "type": "array",
+      "description": "Onroerende of roerende voorziening. Lijst van Infrastructuur items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Infrastructuur"
+          },
+          {
+            "$ref": "#/components/schemas/Binnenruimte"
+          },
+          {
+            "$ref": "#/components/schemas/Buitenruimte"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Infrastructuur": "#/components/schemas/Infrastructuur",
+            "Binnenruimte": "#/components/schemas/Binnenruimte",
+            "Buitenruimte": "#/components/schemas/Buitenruimte"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "heeftVerantwoordelijke": {
+      "type": "array",
+      "description": "De verantwoordelijke Organisatie die de reservatiedienst uitbaat. Lijst van PubliekeOrganisatie items.",
+      "items": {
+        "$ref": "#/components/schemas/PubliekeOrganisatie"
+      },
+      "minItems": 1
+    },
+    "produceert": {
+      "type": "array",
+      "description": "Het werkelijke resultaat van de uitvoering van de publieke dienstverlening. Bijvoorbeeld: een erkenning, financieel voordeel, code, fysiek object, etc. Lijst van Infrastructuurreservatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Infrastructuurreservatie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "titel",
+    "beschrijving"
+  ]
+}
