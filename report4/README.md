@@ -1,34 +1,6 @@
 | Execution | Existence | Support |
 | --- | --- | --- |
-| [commit 1ae0a15e49eec5294a78e08615d050eea295076a](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/1ae0a15e49eec5294a78e08615d050eea295076a) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 48065f495e5029e330e01e175e6cbee4108df7bf](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/48065f495e5029e330e01e175e6cbee4108df7bf) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 8a642ceb665a4366d4956206550457dac6e737b8](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/8a642ceb665a4366d4956206550457dac6e737b8) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit c227253902905f4d476f0b4a5e7b504d5dbe526d](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/c227253902905f4d476f0b4a5e7b504d5dbe526d) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 5bba5f0f4d8c178e99149155b3b5221874b018a7](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/5bba5f0f4d8c178e99149155b3b5221874b018a7) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit f80b290bc8a0f8f86185d56793e69f84e0ed4c31](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/f80b290bc8a0f8f86185d56793e69f84e0ed4c31) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 9a22e4c954ed090ea0f28e1930c8202ac1516a03](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/9a22e4c954ed090ea0f28e1930c8202ac1516a03) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 7398ebaac8cfe05d89dd97b2d188c3d2536dc8c8](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/7398ebaac8cfe05d89dd97b2d188c3d2536dc8c8) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
+| [commit 4a1c324fbd5642a9e0b56c29170644e7236cddea](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/4a1c324fbd5642a9e0b56c29170644e7236cddea) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
  
 ### Legende
 
@@ -59,4 +31,5 @@
 
 | Specification | tag | uml | val | stak | trns | aut | mrg | web | met | html | rspc | ctx | rdf | shcl | swag | bundle | issu |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [applicatieprofiel/zaalreservatie/ kandidaatstandaard/kristof-t](https://data.dev-vlaanderen.be/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t) <br/> [&#9883;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t) [&#9884;](https://data.dev-vlaanderen.be/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t) |  | [&#9729;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/oslo-converter-ea.report.md) | [&#9729;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/jsonld-validation.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/translate.report.md) |  | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/merge.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/metadata.report.md) | [&#9736;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/generator-html.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/generator-respec.report.md) | [&#9736;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/generator-jsonld-context.report.md) |  | [&#9736;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/generator-shacl.report.md) | [&#9729;](/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/generator-swagger.report.md) |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-zaalreservatie/issues) |
 | [vocabularium/netwerk/ pieter](https://data.dev-vlaanderen.be/doc/vocabularium/netwerk/pieter) <br/> [&#9883;](/report4/doc/vocabularium/netwerk/pieter) [&#9884;](https://data.dev-vlaanderen.be/doc/vocabularium/netwerk/pieter) | [&#9736;](/report4/doc/vocabularium/netwerk/pieter/branchtag.report.md) | [&#9736;](/report4/doc/vocabularium/netwerk/pieter/oslo-converter-ea.report.md) | [&#9729;](/report4/doc/vocabularium/netwerk/pieter/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/merge.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/metadata.report.md) | [&#9736;](/report4/doc/vocabularium/netwerk/pieter/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/generator-respec.report.md) |  | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/generator-rdf.report.md) |  |  |  | [ 26 ](https://github.com/Informatievlaanderen/OSLOthema-mobiliteit-trips-en-aanbod/issues) |
