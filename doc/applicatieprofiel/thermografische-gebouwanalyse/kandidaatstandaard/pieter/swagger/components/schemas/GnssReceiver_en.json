@@ -1,0 +1,136 @@
+{
+  "title": "GnssReceiver",
+  "type": "object",
+  "description": "An electronic device that receives signals from satellites to determine and display the geographical location (position) of an object or person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GnssReceiver)",
+      "pattern": "^GnssReceiver$"
+    },
+    "implements": {
+      "$ref": "#/components/schemas/ObservationProcedure"
+    },
+    "observationCarriedOut": {
+      "type": "array",
+      "description": "Observation performed with the Sensor. Lijst van Observation items.",
+      "items": {
+        "$ref": "#/components/schemas/Observation"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/PlatformType"
+    },
+    "capacity": {
+      "type": "array",
+      "description": "Capacity of the System. Lijst van SystemPower items.",
+      "items": {
+        "$ref": "#/components/schemas/SystemPower"
+      },
+      "minItems": 1
+    },
+    "operatingRange": {
+      "type": "array",
+      "description": "Operation of the System. Lijst van OperatingRange items.",
+      "items": {
+        "$ref": "#/components/schemas/OperatingRange"
+      },
+      "minItems": 1
+    },
+    "survivalRange": {
+      "type": "array",
+      "description": "Lifetime of the System. Lijst van Survivability items.",
+      "items": {
+        "$ref": "#/components/schemas/Survivability"
+      },
+      "minItems": 1
+    },
+    "hostedBy": {
+      "type": "array",
+      "description": "Platform on which the System is hosted. Lijst van Platform items.",
+      "items": {
+        "$ref": "#/components/schemas/Platform"
+      },
+      "minItems": 1
+    },
+    "hasDeployment": {
+      "type": "array",
+      "description": "A System has a certain Deployment. Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    },
+    "manufacturer": {
+      "$ref": "#/components/schemas/GnssReceiver.manufacturer"
+    },
+    "model": {
+      "$ref": "#/components/schemas/GnssReceiver.model"
+    },
+    "function": {
+      "type": "array",
+      "description": "Function that the Device can perform for the purpose of performing a task. Lijst van Function items.",
+      "items": {
+        "$ref": "#/components/schemas/Function"
+      },
+      "minItems": 1
+    },
+    "task": {
+      "type": "array",
+      "description": "Task that can be performed with the Device for which the Device was designed. Lijst van Task items.",
+      "items": {
+        "$ref": "#/components/schemas/Task"
+      },
+      "minItems": 1
+    },
+    "location": {
+      "$ref": "#/components/schemas/Geometry"
+    },
+    "hostFrom": {
+      "type": "array",
+      "description": "System hosted by the Platform. Lijst van System items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Device"
+          },
+          {
+            "$ref": "#/components/schemas/MachineLearningModel"
+          },
+          {
+            "$ref": "#/components/schemas/Sensor"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Device": "#/components/schemas/Device",
+            "MachineLearningModel": "#/components/schemas/MachineLearningModel",
+            "Sensor": "#/components/schemas/Sensor"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "deployment": {
+      "type": "array",
+      "description": "A platform has a certain Deployment. Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implements",
+    "function",
+    "task",
+    "type"
+  ]
+}

@@ -1,0 +1,556 @@
+{
+  "@context": {
+    "Address": "https://data.vlaanderen.be/ns/adres#Adres",
+    "AddressPresentation": "http://www.w3.org/ns/locn#Address",
+    "AddressPresentation.addressArea": {
+      "@id": "http://www.w3.org/ns/locn#addressArea",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.administrativeUnitLevel1": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.administrativeUnitLevel2": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.boxNumber": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AddressPresentation.completeAddress": {
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.country": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.houseNumber": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AddressPresentation.locationIndicator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AddressPresentation.locationName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.municipalityName": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.p.O.Box": {
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AddressPresentation.postName": {
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "AddressPresentation.postalCode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AddressPresentation.redirectsTo": {
+      "@id": "https://data.vlaanderen.be/ns/adres#verwijstNaar",
+      "@type": "@id"
+    },
+    "AddressPresentation.streetName": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Any": "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "BIMBuilding": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuilding",
+    "BIMBuilding.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "BimElement": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcElement",
+    "BimElement.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Building": "https://data.vlaanderen.be/ns/gebouw#Gebouw",
+    "Building.address": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.adres",
+      "@type": "@id"
+    },
+    "Building.characteristic": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.kenmerk",
+      "@type": "@id"
+    },
+    "Building.consistsOf": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.bestaatUit",
+      "@type": "@id"
+    },
+    "Building.latestRenovation": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.laatsteRenovatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Building.status": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.status",
+      "@type": "@id"
+    },
+    "Building.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Building.yearOfConstruction": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.bouwjaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "BuildingType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BuildingUnit": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid",
+    "BuildingUnit.address": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.adres",
+      "@type": "@id"
+    },
+    "BuildingUnit.characteristic": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.kenmerk",
+      "@type": "@id"
+    },
+    "BuildingUnit.function": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.functie",
+      "@type": "@id"
+    },
+    "BuildingUnit.status": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status",
+      "@type": "@id"
+    },
+    "BuildingUnit.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "BuildingUnitType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Camera": "http://dbpedia.org/ontology/Camera",
+    "Characteristic": "https://data.vlaanderen.be/ns/energiehuis#Kenmerk",
+    "Characteristic.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Characteristic.value": {
+      "@container": "@set",
+      "@id": "https://schema.org/value",
+      "@type": "@id"
+    },
+    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Condition": "http://www.w3.org/ns/ssn/systems/Condition",
+    "Dataset": "http://www.w3.org/ns/dcat#Dataset",
+    "Date": "http://www.w3.org/2001/XMLSchema#date",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Deployment": "http://www.w3.org/ns/sosa/Deployment",
+    "Deployment.deployedSystem": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/deployedSystem",
+      "@type": "@id"
+    },
+    "Deployment.deploymentTime": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2006/time#hasTime",
+      "@type": "@id"
+    },
+    "Deployment.host": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/deployedOnPlatform",
+      "@type": "@id"
+    },
+    "Device": "https://saref.etsi.org/core/Device",
+    "Device.function": {
+      "@container": "@set",
+      "@id": "https://saref.etsi.org/core/hasFunction",
+      "@type": "@id"
+    },
+    "Device.manufacturer": {
+      "@id": "https://saref.etsi.org/core/hasManufacturer",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Device.model": {
+      "@id": "https://saref.etsi.org/core/hasModel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Device.task": {
+      "@container": "@set",
+      "@id": "https://saref.etsi.org/core/accomplishes",
+      "@type": "@id"
+    },
+    "Device.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "DomainObjectType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ElementType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Function": "https://saref.etsi.org/core/Function",
+    "FunctionalCharacteristic": "http://www.w3.org/ns/ssn/systems/OperatingProperty",
+    "Geometry": "http://www.w3.org/ns/locn#Geometry",
+    "Geometry.alsGml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Geometry.asWkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "GnssReceiver": "https://www.fair-gnss.oma.be/gnss-dcat-ap/vocabulary/geo#GNSSReceiver",
+    "Identifier": "http://www.w3.org/ns/adms#Identifier",
+    "Identifier.awardedBy": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "@id"
+    },
+    "Identifier.grantedOn": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Identifier.identifier": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "InformationObject": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+    "Input": "http://www.w3.org/ns/ssn/Input",
+    "Input.reference": {
+      "@id": "http://purl.org/dc/terms/references",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Input.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "InputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "LangString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "MachineLearningModel": "http://data.europa.eu/it6/MachineLearningModel",
+    "MachineLearningModel.creationDate": {
+      "@id": "http://purl.org/dc/terms/created",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "MachineLearningModel.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "MachineLearningModel.trainedOn": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/it6/trainedOn",
+      "@type": "@id"
+    },
+    "MachineLearningModel.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "MachineLearningModel.version": {
+      "@id": "http://data.europa.eu/it6/version",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "MachineLearningModelType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Moment": "http://www.w3.org/2006/time#Instant",
+    "Moment.inXsdDateTime": {
+      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "NominatedValue": "https://schema.org/StructuredValue",
+    "NominatedValue.name": {
+      "@id": "https://schema.org/name",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "NominatedValue.value": {
+      "@id": "https://schema.org/value",
+      "@type": "@id"
+    },
+    "Object": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "Object.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "ObservableCharacteristic": "http://www.w3.org/ns/sosa/Property",
+    "Observation": "http://www.w3.org/ns/sosa/Observation",
+    "Observation.carriedOutBy": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/contributor",
+      "@type": "@id"
+    },
+    "Observation.identifier": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Observation.isMemberOf": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/memberOf",
+      "@type": "@id"
+    },
+    "Observation.observedCharacteristic": {
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "@type": "@id"
+    },
+    "Observation.observedObject": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "Observation.parameter": {
+      "@container": "@set",
+      "@id": "http://dbpedia.org/ontology/influencedBy",
+      "@type": "@id"
+    },
+    "Observation.performedWithSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "Observation.phenomenonTime": {
+      "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "@type": "@id"
+    },
+    "Observation.procedureUsed": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "Observation.result": {
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "@id"
+    },
+    "Observation.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "ObservationCollection": "http://www.w3.org/ns/sosa/ObservationCollection",
+    "ObservationCollection.associatedCollection": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/relatedObservation",
+      "@type": "@id"
+    },
+    "ObservationCollection.hasMember": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasMember",
+      "@type": "@id"
+    },
+    "ObservationCollection.observedCharacteristic": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "@type": "@id"
+    },
+    "ObservationCollection.observedObject": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "ObservationCollection.performedWithSensor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "ObservationCollection.phenomenonTime": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "@type": "@id"
+    },
+    "ObservationCollection.procedureUsed": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "ObservationCollection.resultTime": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "@id"
+    },
+    "ObservationCollection.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "ObservationCollectionType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ObservationProcedure": "http://www.w3.org/ns/sosa/ObservingProcedure",
+    "ObservationProcedure.implementedWith": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/implementedBy",
+      "@type": "@id"
+    },
+    "ObservationProcedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasInput",
+      "@type": "@id"
+    },
+    "ObservationProcedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasOutput",
+      "@type": "@id"
+    },
+    "ObservationProcedure.parameter": {
+      "@container": "@set",
+      "@id": "http://dbpedia.org/ontology/influencedBy",
+      "@type": "@id"
+    },
+    "ObservationProcedure.specification": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/references",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ObservationProcedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "ObservationProcedureType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ObservationType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "OperatingRange": "http://www.w3.org/ns/ssn/systems/OperatingRange",
+    "OperatingRange.characteristic": {
+      "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+      "@type": "@id"
+    },
+    "OperatingRange.condition": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type": "@id"
+    },
+    "Output": "http://www.w3.org/ns/ssn/Output",
+    "Output.reference": {
+      "@id": "http://purl.org/dc/terms/references",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Output.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "OutputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "PeriodOfProject": "http://www.w3.org/2006/time#ProperInterval",
+    "PeriodOfProject.from": {
+      "@id": "http://www.w3.org/2006/time#hasBeginning",
+      "@type": "@id"
+    },
+    "PeriodOfProject.to": {
+      "@id": "http://www.w3.org/2006/time#hasEnd",
+      "@type": "@id"
+    },
+    "Photo": "https://schema.org/Photograph",
+    "Photo.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Phototype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Platform": "http://www.w3.org/ns/sosa/Platform",
+    "Platform.deployment": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/inDeployment",
+      "@type": "@id"
+    },
+    "Platform.hostFrom": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hosts",
+      "@type": "@id"
+    },
+    "Platform.location": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type": "@id"
+    },
+    "Platform.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "PlatformType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "QuantitativeValue": "http://qudt.org/schema/qudt/QuantityValue",
+    "QuantitativeValue.unity": {
+      "@id": "http://qudt.org/schema/qudt/hasUnit",
+      "@type": "@id"
+    },
+    "QuantitativeValue.value": {
+      "@id": "http://qudt.org/schema/qudt/value",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Sensor": "http://www.w3.org/ns/sosa/Sensor",
+    "Sensor.implements": {
+      "@id": "http://www.w3.org/ns/sosa/implements",
+      "@type": "@id"
+    },
+    "Sensor.observationCarriedOut": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "@id"
+    },
+    "Setup": "https://w3id.org/okn/o/sd#ConfigurationSetup",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Survivability": "http://www.w3.org/ns/ssn/systems/SurvivalRange",
+    "Survivability.characteristic": {
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+      "@type": "@id"
+    },
+    "Survivability.condition": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type": "@id"
+    },
+    "SurvivalTrait": "http://www.w3.org/ns/ssn/systems/SurvivalProperty",
+    "System": "http://www.w3.org/ns/ssn/System",
+    "System.capacity": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+      "@type": "@id"
+    },
+    "System.hasDeployment": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasDeployment",
+      "@type": "@id"
+    },
+    "System.hostedBy": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isHostedBy",
+      "@type": "@id"
+    },
+    "System.operatingRange": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+      "@type": "@id"
+    },
+    "System.survivalRange": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+      "@type": "@id"
+    },
+    "System.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "SystemAttribute": "http://www.w3.org/ns/ssn/systems/SystemProperty",
+    "SystemPower": "http://www.w3.org/ns/ssn/systems/SystemCapacity",
+    "SystemPower.characteristic": {
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
+      "@type": "@id"
+    },
+    "SystemPower.condition": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type": "@id"
+    },
+    "SystemType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Task": "https://saref.etsi.org/core/Task",
+    "TemporalEntity": "http://www.w3.org/2006/time#TemporalEntity",
+    "TypeCharacteristic": "http://www.w3.org/2004/02/skos/core#Concept",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "Unity": "http://qudt.org/schema/qudt/Unit",
+    "Video": "https://schema.org/VideoObject",
+    "Video.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "VideoType": "http://www.w3.org/2004/02/skos/core#Concept"
+  }
+}

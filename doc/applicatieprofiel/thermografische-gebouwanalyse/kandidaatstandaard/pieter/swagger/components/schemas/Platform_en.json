@@ -1,0 +1,60 @@
+{
+  "title": "Platform",
+  "type": "object",
+  "description": "Entity that acts as the basis for other Entities.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Platform)",
+      "pattern": "^Platform$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/PlatformType"
+    },
+    "location": {
+      "$ref": "#/components/schemas/Geometry"
+    },
+    "hostFrom": {
+      "type": "array",
+      "description": "System hosted by the Platform. Lijst van System items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Device"
+          },
+          {
+            "$ref": "#/components/schemas/MachineLearningModel"
+          },
+          {
+            "$ref": "#/components/schemas/Sensor"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Device": "#/components/schemas/Device",
+            "MachineLearningModel": "#/components/schemas/MachineLearningModel",
+            "Sensor": "#/components/schemas/Sensor"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "deployment": {
+      "type": "array",
+      "description": "A platform has a certain Deployment. Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}
