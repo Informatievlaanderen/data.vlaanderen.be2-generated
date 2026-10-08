@@ -10,9 +10,9 @@
 
 #||# command: oslo-generator-swagger --input /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/merged/merged_zaalreservatie_en.jsonld --language en --output /tmp/workspace/target/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t --versionAPI 1.0.0 --versionSwagger 3.0.4 --title 'OpenAPI Swagger publication' --description 'This is a inspirational OpenAPI Swagger publication' --contextURL https://data.dev-vlaanderen.be/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/context/zaalreservatie.jsonld --baseURL https://data.dev-vlaanderen.be  
 
-2026-10-08T14:50:57.111Z warn: [SwaggerGenerationService]: Schema already exists for the label (Location) and will be overwritten.
+2026-10-08T18:12:12.034Z warn: [SwaggerGenerationService]: Schema already exists for the label (Location) and will be overwritten.
 
-2026-10-08T14:50:57.114Z warn: [SwaggerGenerationService]: Schema already exists for the label (Accessibility) and will be overwritten.
+2026-10-08T18:12:12.039Z warn: [SwaggerGenerationService]: Schema already exists for the label (Accessibility) and will be overwritten.
 
 #||# command: node /app/report_lines_links.js -i /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/all-zaalreservatie.jsonld -o /tmp/reportlines  
 
