@@ -1,18 +1,6 @@
 | Execution | Existence | Support |
 | --- | --- | --- |
-| [commit be47014a91869081ef066e6c3cd86331736cc02d](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/be47014a91869081ef066e6c3cd86331736cc02d) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 056e47ac0c507bd57d3f0b59152cd4fae06ce0a0](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/056e47ac0c507bd57d3f0b59152cd4fae06ce0a0) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit db0cdfff55f6d60de6da4c5ebbf3c076f9175a83](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/db0cdfff55f6d60de6da4c5ebbf3c076f9175a83) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 91fcc0bd0ab7a3bd9114bde02350e1bb43fda4c0](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/91fcc0bd0ab7a3bd9114bde02350e1bb43fda4c0) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
+| [commit 7398ebaac8cfe05d89dd97b2d188c3d2536dc8c8](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/7398ebaac8cfe05d89dd97b2d188c3d2536dc8c8) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
  
 ### Legende
 
@@ -43,4 +31,4 @@
 
 | Specification | tag | uml | val | stak | trns | aut | mrg | web | met | html | rspc | ctx | rdf | shcl | swag | bundle | issu |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [vocabularium/transportnetwerk/ pieter](https://data.dev-vlaanderen.be/doc/vocabularium/transportnetwerk/pieter) <br/> [&#9883;](/report4/doc/vocabularium/transportnetwerk/pieter) [&#9884;](https://data.dev-vlaanderen.be/doc/vocabularium/transportnetwerk/pieter) | [&#9736;](/report4/doc/vocabularium/transportnetwerk/pieter/branchtag.report.md) | [&#9729;](/report4/doc/vocabularium/transportnetwerk/pieter/oslo-converter-ea.report.md) | [&#9729;](/report4/doc/vocabularium/transportnetwerk/pieter/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/transportnetwerk/pieter/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/vocabularium/transportnetwerk/pieter/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/transportnetwerk/pieter/merge.report.md) | [&#9728;](/report4/doc/vocabularium/transportnetwerk/pieter/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/transportnetwerk/pieter/metadata.report.md) | [&#9736;](/report4/doc/vocabularium/transportnetwerk/pieter/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/transportnetwerk/pieter/generator-respec.report.md) |  | [&#9728;](/report4/doc/vocabularium/transportnetwerk/pieter/generator-rdf.report.md) |  |  |  | [ 25 ](https://github.com/Informatievlaanderen/OSLOthema-mobiliteit-trips-en-aanbod/issues) |
+| [vocabularium/netwerk/ pieter](https://data.dev-vlaanderen.be/doc/vocabularium/netwerk/pieter) <br/> [&#9883;](/report4/doc/vocabularium/netwerk/pieter) [&#9884;](https://data.dev-vlaanderen.be/doc/vocabularium/netwerk/pieter) | [&#9736;](/report4/doc/vocabularium/netwerk/pieter/branchtag.report.md) | [&#9736;](/report4/doc/vocabularium/netwerk/pieter/oslo-converter-ea.report.md) | [&#9729;](/report4/doc/vocabularium/netwerk/pieter/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/merge.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/metadata.report.md) | [&#9736;](/report4/doc/vocabularium/netwerk/pieter/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/generator-respec.report.md) |  | [&#9728;](/report4/doc/vocabularium/netwerk/pieter/generator-rdf.report.md) |  |  |  | [ 26 ](https://github.com/Informatievlaanderen/OSLOthema-mobiliteit-trips-en-aanbod/issues) |
