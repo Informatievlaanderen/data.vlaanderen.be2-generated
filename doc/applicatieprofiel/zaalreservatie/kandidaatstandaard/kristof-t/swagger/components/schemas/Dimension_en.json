@@ -1,0 +1,50 @@
+{
+  "title": "Dimension",
+  "type": "object",
+  "description": "Quantifiable property of an Entity.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dimension)",
+      "pattern": "^Dimension$"
+    },
+    "description": {
+      "type": "array",
+      "description": "Description of the Dimension. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Dimension.description"
+      },
+      "minItems": 1
+    },
+    "value": {
+      "$ref": "#/components/schemas/Dimension.value"
+    },
+    "unity": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Concept"
+        },
+        {
+          "$ref": "#/components/schemas/Unity"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Concept": "#/components/schemas/Concept",
+          "Unity": "#/components/schemas/Unity"
+        }
+      }
+    },
+    "type": {
+      "$ref": "#/components/schemas/DimensionType"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -6,7 +6,7 @@
 
 #||# -------------------------------------  
 
-#||# command: node /app/translation-json-update.js -i /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/all-zaalreservatie.jsonld -f /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/translation/zaalreservatie_en.json -m nl -g en -o /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/merged/merged_zaalreservatie_en.jsonld -p '#||# '  
+#||# command: node /app/translation-json-update.js -i /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/all-zaalreservatie.jsonld -f /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/autotranslation/zaalreservatie_en.json -m nl -g en -o /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/kristof-t/merged/merged_zaalreservatie_en.jsonld -p '#||# '  
 
 #||# start reading  
 

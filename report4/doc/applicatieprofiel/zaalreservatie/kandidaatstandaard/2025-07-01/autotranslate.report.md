@@ -2,24 +2,6 @@
 
 #||# -------------------------------------  
 
-#||#  update the translation file from the memory
-
-#||# 
-
-#||# command: node /app/translation-json-generator.js -i /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/all-zaalreservatie.jsonld -t /tmp/workspace/autotranslation/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/zaalreservatie_en.json -m nl -g en-t-nl -o /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/translation_input/zaalreservatie_en.json -p '#||# '  
-
-#||# start reading  
-
-#||# done  
-
-#||# start processing  
-
-#||# create new translation file with existing translations included  
-
-#||# Write complete  
-
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/translation_input/zaalreservatie_en.json  
-
 #||# 
 
 #||#  autotranslate the translation file for language en
@@ -34,7 +16,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 0  
+#||# Number of calls: 45  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/autotranslation/zaalreservatie_en.json  
 
@@ -44,11 +26,39 @@
 
 #||# 
 
+#||# command: node /app/autotranslateJ2.js -i zaalreservatie-ap.j2 -o /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/autotranslation/zaalreservatie-ap_en.j2 -s *** -m nl -g en -p '#||# '  
+
+start reading file zaalreservatie-ap.j2
+
+#||#  start converting filename in extend blocks
+
+#||# ap2
+
+#||#  filename does not contains language reference
+
+start translating blocks
+
+start writing file /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/autotranslation/zaalreservatie-ap_en.j2
+
 #||# 
 
 #||#  autotranslate the J2 templates for language en
 
 #||# 
+
+#||# command: node /app/autotranslateJ2.js -i zaalreservatie-voc.j2 -o /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/autotranslation/zaalreservatie-voc_en.j2 -s *** -m nl -g en -p '#||# '  
+
+start reading file zaalreservatie-voc.j2
+
+#||#  start converting filename in extend blocks
+
+#||# voc2
+
+#||#  filename does not contains language reference
+
+start translating blocks
+
+start writing file /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/autotranslation/zaalreservatie-voc_en.j2
 
 #||# command: node /app/report_lines_links.js -i /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/all-zaalreservatie.jsonld -o /tmp/reportlines  
 
