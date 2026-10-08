@@ -1,0 +1,165 @@
+{
+  "title": "ObservationCollection",
+  "type": "object",
+  "description": "Collection of Observations with the same characteristics.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ObservationCollection)",
+      "pattern": "^ObservationCollection$"
+    },
+    "observedObject": {
+      "type": "array",
+      "description": "The Object that was observed. Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Building"
+          },
+          {
+            "$ref": "#/components/schemas/BuildingUnit"
+          },
+          {
+            "$ref": "#/components/schemas/Video"
+          },
+          {
+            "$ref": "#/components/schemas/Photo"
+          },
+          {
+            "$ref": "#/components/schemas/BIM_Element"
+          },
+          {
+            "$ref": "#/components/schemas/BIM_Gebouw"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Building": "#/components/schemas/Building",
+            "BuildingUnit": "#/components/schemas/BuildingUnit",
+            "Video": "#/components/schemas/Video",
+            "Photo": "#/components/schemas/Photo",
+            "BIM_Element": "#/components/schemas/BIM_Element",
+            "BIM_Gebouw": "#/components/schemas/BIM_Gebouw"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "performedWithSensor": {
+      "type": "array",
+      "description": "The sensor with which the Observations in the collection were carried out. Lijst van Sensor items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Sensor"
+          },
+          {
+            "$ref": "#/components/schemas/MachineLearningModel"
+          },
+          {
+            "$ref": "#/components/schemas/GNSSReceiver"
+          },
+          {
+            "$ref": "#/components/schemas/Camera"
+          },
+          {
+            "$ref": "#/components/schemas/Setup"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Sensor": "#/components/schemas/Sensor",
+            "MachineLearningModel": "#/components/schemas/MachineLearningModel",
+            "GNSSReceiver": "#/components/schemas/GNSSReceiver",
+            "Camera": "#/components/schemas/Camera",
+            "Setup": "#/components/schemas/Setup"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "observedCharacteristic": {
+      "type": "array",
+      "description": "The Characteristic that the Observations observed. Lijst van ObservableCharacteristic items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservableCharacteristic"
+      },
+      "minItems": 1
+    },
+    "phenomenonTime": {
+      "type": "array",
+      "description": "The phenomenon time of the Observations. Lijst van ObservableCharacteristic items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservableCharacteristic"
+      },
+      "minItems": 1
+    },
+    "resultTime": {
+      "type": "array",
+      "description": "The result time of the Observations. Lijst van TemporalEntity items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TemporalEntity"
+          },
+          {
+            "$ref": "#/components/schemas/Moment"
+          },
+          {
+            "$ref": "#/components/schemas/PeriodOfProject"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TemporalEntity": "#/components/schemas/TemporalEntity",
+            "Moment": "#/components/schemas/Moment",
+            "PeriodOfProject": "#/components/schemas/PeriodOfProject"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "procedureUsed": {
+      "type": "array",
+      "description": "The Procedure that the Observations used. Lijst van ObservationProcedure items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservationProcedure"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "The nature of the Observation Collection. Lijst van ObservationCollectionType items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservationCollectionType"
+      },
+      "minItems": 1
+    },
+    "associatedCollection": {
+      "type": "array",
+      "description": "An Observation Collection has an associated Observation Collection. Lijst van ObservationCollection items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservationCollection"
+      },
+      "minItems": 1
+    },
+    "hasMember": {
+      "type": "array",
+      "description": "Observation that is part of the collection. Lijst van Observation items.",
+      "items": {
+        "$ref": "#/components/schemas/Observation"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

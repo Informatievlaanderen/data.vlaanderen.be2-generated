@@ -1,0 +1,106 @@
+{
+  "title": "Device",
+  "type": "object",
+  "description": "Tangible Object designed to perform a specific task.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Device)",
+      "pattern": "^Device$"
+    },
+    "manufacturer": {
+      "$ref": "#/components/schemas/Device.manufacturer"
+    },
+    "model": {
+      "$ref": "#/components/schemas/Device.model"
+    },
+    "function": {
+      "type": "array",
+      "description": "Function that the Device can perform for the purpose of performing a task. Lijst van Function items.",
+      "items": {
+        "$ref": "#/components/schemas/Function"
+      },
+      "minItems": 1
+    },
+    "task": {
+      "type": "array",
+      "description": "Task that can be performed with the Device for which the Device was designed. Lijst van Task items.",
+      "items": {
+        "$ref": "#/components/schemas/Task"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/PlatformType"
+    },
+    "capacity": {
+      "type": "array",
+      "description": "Capacity of the System. Lijst van SystemPower items.",
+      "items": {
+        "$ref": "#/components/schemas/SystemPower"
+      },
+      "minItems": 1
+    },
+    "operatingRange": {
+      "type": "array",
+      "description": "Operation of the System. Lijst van OperatingRange items.",
+      "items": {
+        "$ref": "#/components/schemas/OperatingRange"
+      },
+      "minItems": 1
+    },
+    "survivalRange": {
+      "type": "array",
+      "description": "Lifespan of the System. Lijst van Survivability items.",
+      "items": {
+        "$ref": "#/components/schemas/Survivability"
+      },
+      "minItems": 1
+    },
+    "hostedBy": {
+      "type": "array",
+      "description": "Platform on which the System is hosted. Lijst van Platform items.",
+      "items": {
+        "$ref": "#/components/schemas/Platform"
+      },
+      "minItems": 1
+    },
+    "hasDeployment": {
+      "type": "array",
+      "description": "A System has a certain Deployment. Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    },
+    "location": {
+      "$ref": "#/components/schemas/Geometry"
+    },
+    "hostFrom": {
+      "type": "array",
+      "description": "System hosted by the Platform. Lijst van System items.",
+      "items": {
+        "$ref": "#/components/schemas/Device"
+      },
+      "minItems": 1
+    },
+    "deployment": {
+      "type": "array",
+      "description": "A platform has a certain Deployment. Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "function",
+    "task",
+    "type"
+  ]
+}

@@ -8,6 +8,8 @@ TRANSLATIONFILE: thermografische-gebouwanalyse_nl.json
 
 #||# -------------------------------------  
 
+#||# command: node /app/translation-json-generator.js -i /tmp/workspace/report4/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/all-thermografische-gebouwanalyse.jsonld -m nl -g nl -o /tmp/workspace/report4/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/translation/thermografische-gebouwanalyse_nl.json -p '#||# '  
+
 #||# start reading  
 
 #||# done  
@@ -30,6 +32,8 @@ TRANSLATIONFILE: thermografische-gebouwanalyse_en.json
 
 #||# -------------------------------------  
 
+#||# command: node /app/translation-json-generator.js -i /tmp/workspace/report4/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/all-thermografische-gebouwanalyse.jsonld -m nl -g en -o /tmp/workspace/report4/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/translation/thermografische-gebouwanalyse_en.json -p '#||# '  
+
 #||# start reading  
 
 #||# done  
@@ -39,4 +43,6 @@ TRANSLATIONFILE: thermografische-gebouwanalyse_en.json
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/translation/thermografische-gebouwanalyse_en.json  
+
+#||# command: node /app/report_lines_links.js -i /tmp/workspace/report4/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/all-thermografische-gebouwanalyse.jsonld -o /tmp/reportlines  
 

@@ -1,0 +1,61 @@
+{
+  "title": "Deployment",
+  "type": "object",
+  "description": "Describes the deployment or deployment of one or more systems for a specific purpose.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Deployment)",
+      "pattern": "^Deployment$"
+    },
+    "deploymentTime": {
+      "type": "array",
+      "description": "The moment when a particular deployment takes place. Lijst van TemporalEntity items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TemporalEntity"
+          },
+          {
+            "$ref": "#/components/schemas/Moment"
+          },
+          {
+            "$ref": "#/components/schemas/PeriodOfProject"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TemporalEntity": "#/components/schemas/TemporalEntity",
+            "Moment": "#/components/schemas/Moment",
+            "PeriodOfProject": "#/components/schemas/PeriodOfProject"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "deployedSystem": {
+      "type": "array",
+      "description": "System that has been deployed. Lijst van System items.",
+      "items": {
+        "$ref": "#/components/schemas/Device"
+      },
+      "minItems": 1
+    },
+    "host": {
+      "type": "array",
+      "description": "Platform on which the System is deployed. Lijst van Platform items.",
+      "items": {
+        "$ref": "#/components/schemas/Platform"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

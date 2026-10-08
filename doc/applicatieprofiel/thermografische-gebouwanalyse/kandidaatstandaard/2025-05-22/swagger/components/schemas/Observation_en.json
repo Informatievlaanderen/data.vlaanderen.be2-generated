@@ -1,0 +1,153 @@
+{
+  "title": "Observation",
+  "type": "object",
+  "description": "Activity that determines the value of a particular attribute of an Object.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observation)",
+      "pattern": "^Observation$"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Phenomenon that affects Observation activity. Different from the observed Feature. Lijst van NominatedValue items.",
+      "items": {
+        "$ref": "#/components/schemas/NominatedValue"
+      },
+      "minItems": 1
+    },
+    "phenomenonTime": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TemporalEntity"
+        },
+        {
+          "$ref": "#/components/schemas/Moment"
+        },
+        {
+          "$ref": "#/components/schemas/PeriodOfProject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TemporalEntity": "#/components/schemas/TemporalEntity",
+          "Moment": "#/components/schemas/Moment",
+          "PeriodOfProject": "#/components/schemas/PeriodOfProject"
+        }
+      }
+    },
+    "result": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "type": {
+      "type": "array",
+      "description": "The kind of Observation. Lijst van ObservationType items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservationType"
+      },
+      "minItems": 1
+    },
+    "identifier": {
+      "type": "array",
+      "description": "Observation Identifier. Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1
+    },
+    "observedCharacteristic": {
+      "$ref": "#/components/schemas/ObservableCharacteristic"
+    },
+    "performedWithSensor": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Sensor"
+        },
+        {
+          "$ref": "#/components/schemas/MachineLearningModel"
+        },
+        {
+          "$ref": "#/components/schemas/GNSSReceiver"
+        },
+        {
+          "$ref": "#/components/schemas/Camera"
+        },
+        {
+          "$ref": "#/components/schemas/Setup"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Sensor": "#/components/schemas/Sensor",
+          "MachineLearningModel": "#/components/schemas/MachineLearningModel",
+          "GNSSReceiver": "#/components/schemas/GNSSReceiver",
+          "Camera": "#/components/schemas/Camera",
+          "Setup": "#/components/schemas/Setup"
+        }
+      }
+    },
+    "procedureUsed": {
+      "type": "array",
+      "description": "The procedure followed in the Observation. Lijst van ObservationProcedure items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservationProcedure"
+      },
+      "minItems": 1
+    },
+    "observedObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Building"
+        },
+        {
+          "$ref": "#/components/schemas/BuildingUnit"
+        },
+        {
+          "$ref": "#/components/schemas/Video"
+        },
+        {
+          "$ref": "#/components/schemas/Photo"
+        },
+        {
+          "$ref": "#/components/schemas/BIM_Element"
+        },
+        {
+          "$ref": "#/components/schemas/BIM_Gebouw"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Building": "#/components/schemas/Building",
+          "BuildingUnit": "#/components/schemas/BuildingUnit",
+          "Video": "#/components/schemas/Video",
+          "Photo": "#/components/schemas/Photo",
+          "BIM_Element": "#/components/schemas/BIM_Element",
+          "BIM_Gebouw": "#/components/schemas/BIM_Gebouw"
+        }
+      }
+    },
+    "isMemberOf": {
+      "type": "array",
+      "description": "The collection of which the Oberservatie is a part. Lijst van ObservationCollection items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservationCollection"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "phenomenonTime",
+    "result",
+    "observedCharacteristic",
+    "performedWithSensor",
+    "observedObject"
+  ]
+}

@@ -519,8 +519,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/thermografische-gebouwanalyse/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/toestemming.publication.json
 #||# 
