@@ -1,0 +1,146 @@
+{
+  "title": "AanvullendeDienst",
+  "type": "object",
+  "description": "Dienst die een aanvulling biedt op andere Diensten of deze ondersteunt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AanvullendeDienst)",
+      "pattern": "^AanvullendeDienst$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/AanvullendeDienst.naam"
+    },
+    "type": {
+      "type": "array",
+      "description": "Aard van de aanvullende dienst. Bijvoorbeeld ticketing, wachtaccomodatie, sanitair, AED…. Lijst van AanvullendeDiensttype items.",
+      "items": {
+        "$ref": "#/components/schemas/AanvullendeDiensttype"
+      },
+      "minItems": 1
+    },
+    "beschikbaarheid": {
+      "type": "array",
+      "description": "Beschikbaarheid van de aanvullende dienst. Bijvoorbeeld dienstregeling of openingsuren. Lijst van Aanbieder items.",
+      "items": {
+        "$ref": "#/components/schemas/Aanbieder"
+      },
+      "minItems": 1
+    },
+    "toegankelijkheid": {
+      "type": "array",
+      "description": "Toegankelijkheid van de aanvullende dienst. Bijvoorbeeld of de Mobiliteitsdienst toegankelijk is voor personen met een beperking. Lijst van Toegankelijkheid items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegankelijkheid"
+      },
+      "minItems": 1
+    },
+    "aanbieder": {
+      "$ref": "#/components/schemas/Aanbieder"
+    },
+    "vervoersknoop": {
+      "type": "array",
+      "description": "Het vervoersknooppunt waarop de aanvullende dienst wordt aangeboden. Lijst van Vervoersknooppunt items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Vervoersknooppunt"
+          },
+          {
+            "$ref": "#/components/schemas/GeregistreerdVervoersknooppunt"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Vervoersknooppunt": "#/components/schemas/Vervoersknooppunt",
+            "GeregistreerdVervoersknooppunt": "#/components/schemas/GeregistreerdVervoersknooppunt"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "beschikbaarOpInfrastructuurelement": {
+      "type": "array",
+      "description": "Infrastructuurelement waarop de aanvullende dienst wordt aangeboden. Lijst van Infrastructuurelement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Infrastructuurelement"
+          },
+          {
+            "$ref": "#/components/schemas/Informatiedrager"
+          },
+          {
+            "$ref": "#/components/schemas/Datauitwisselingsinfrastructuur"
+          },
+          {
+            "$ref": "#/components/schemas/Parkeerfaciliteit"
+          },
+          {
+            "$ref": "#/components/schemas/Lader"
+          },
+          {
+            "$ref": "#/components/schemas/Perron"
+          },
+          {
+            "$ref": "#/components/schemas/Stopplaats"
+          },
+          {
+            "$ref": "#/components/schemas/Haltepaal"
+          },
+          {
+            "$ref": "#/components/schemas/Bushok"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Infrastructuurelement": "#/components/schemas/Infrastructuurelement",
+            "Informatiedrager": "#/components/schemas/Informatiedrager",
+            "Datauitwisselingsinfrastructuur": "#/components/schemas/Datauitwisselingsinfrastructuur",
+            "Parkeerfaciliteit": "#/components/schemas/Parkeerfaciliteit",
+            "Lader": "#/components/schemas/Lader",
+            "Perron": "#/components/schemas/Perron",
+            "Stopplaats": "#/components/schemas/Stopplaats",
+            "Haltepaal": "#/components/schemas/Haltepaal",
+            "Bushok": "#/components/schemas/Bushok"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "beschikbaarOpTransportobject": {
+      "type": "array",
+      "description": "Transportobject waarop de aanvullende dienst wordt aangeboden. Lijst van Transportobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Transportknoop"
+          },
+          {
+            "$ref": "#/components/schemas/Transportconnectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Transportknoop": "#/components/schemas/Transportknoop",
+            "Transportconnectie": "#/components/schemas/Transportconnectie"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "type",
+    "aanbieder"
+  ]
+}

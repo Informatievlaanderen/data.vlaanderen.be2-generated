@@ -1,0 +1,117 @@
+{
+  "title": "Infrastructuurelement",
+  "type": "object",
+  "description": "Individueel object op het Openbaar Domein dat niet vegetatief is.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Infrastructuurelement)",
+      "pattern": "^Infrastructuurelement$"
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/Polygoon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Punt": "#/components/schemas/Punt",
+          "Polygoon": "#/components/schemas/Polygoon"
+        }
+      }
+    },
+    "geldigheidsperiode": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "toegankelijkheid": {
+      "type": "array",
+      "description": "De algehele toegankelijkheidskenmerken van de het infrastructuurelement. Lijst van Toegankelijkheid items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegankelijkheid"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "type": {
+      "type": "array",
+      "description": "Het type van infrastructuurelement. Lijst van Infrastructuurelementtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Infrastructuurelementtype"
+      },
+      "minItems": 1
+    },
+    "dienst": {
+      "type": "array",
+      "description": "De dienst dat wordt aangeboden door middel van het infrastructuurelement. Lijst van AanvullendeDienst items.",
+      "items": {
+        "$ref": "#/components/schemas/AanvullendeDienst"
+      },
+      "minItems": 1
+    },
+    "vervoersknoop": {
+      "type": "array",
+      "description": "De vervoersknopen waartoe dit infrastructuurelement behoort. Lijst van Vervoersknooppunt items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Vervoersknooppunt"
+          },
+          {
+            "$ref": "#/components/schemas/GeregistreerdVervoersknooppunt"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Vervoersknooppunt": "#/components/schemas/Vervoersknooppunt",
+            "GeregistreerdVervoersknooppunt": "#/components/schemas/GeregistreerdVervoersknooppunt"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "transportobject": {
+      "type": "array",
+      "description": "Het transportobject horende bij het infrastructuurelement. Lijst van Transportobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Transportknoop"
+          },
+          {
+            "$ref": "#/components/schemas/Transportconnectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Transportknoop": "#/components/schemas/Transportknoop",
+            "Transportconnectie": "#/components/schemas/Transportconnectie"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geometrie",
+    "geldigheidsperiode",
+    "identificator"
+  ]
+}

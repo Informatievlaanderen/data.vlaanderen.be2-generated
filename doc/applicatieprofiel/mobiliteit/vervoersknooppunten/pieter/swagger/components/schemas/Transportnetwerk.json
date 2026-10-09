@@ -1,0 +1,49 @@
+{
+  "title": "Transportnetwerk",
+  "type": "object",
+  "description": "Verzameling van Netwerkelementen die eenzelfde vervoerswijze vertegenwoordigen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Transportnetwerk)",
+      "pattern": "^Transportnetwerk$"
+    },
+    "geografischeNaam": {
+      "$ref": "#/components/schemas/Transportnetwerk.geografischeNaam"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Transporttype"
+    },
+    "bestaatUit": {
+      "type": "array",
+      "description": "Transportobjecten waaruit het Transportnetwerk bestaat. Lijst van Transportobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Transportknoop"
+          },
+          {
+            "$ref": "#/components/schemas/Transportconnectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Transportknoop": "#/components/schemas/Transportknoop",
+            "Transportconnectie": "#/components/schemas/Transportconnectie"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geografischeNaam",
+    "type"
+  ]
+}

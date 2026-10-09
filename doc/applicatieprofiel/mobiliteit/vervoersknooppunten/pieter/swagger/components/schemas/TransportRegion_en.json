@@ -1,0 +1,43 @@
+{
+  "title": "TransportRegion",
+  "type": "object",
+  "description": "Clusters of municipalities in which mobility is coordinated.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TransportRegion)",
+      "pattern": "^TransportRegion$"
+    },
+    "placeName": {
+      "$ref": "#/components/schemas/TransportRegion.placeName"
+    },
+    "geometry": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        },
+        {
+          "$ref": "#/components/schemas/Polygon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Point": "#/components/schemas/Point",
+          "Polygon": "#/components/schemas/Polygon"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Traveller",
+  "type": "object",
+  "description": "Person who undertakes or wants to undertake a Trip.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Traveller)",
+      "pattern": "^Traveller$"
+    },
+    "pseudonym": {
+      "$ref": "#/components/schemas/Pseudonym"
+    },
+    "undertakes": {
+      "type": "array",
+      "description": "Journey that a Traveller undertakes or intends to undertake. Lijst van Journey items.",
+      "items": {
+        "$ref": "#/components/schemas/Journey"
+      },
+      "minItems": 1
+    },
+    "isFellowTravelerFrom": {
+      "type": "array",
+      "description": "Traveller accompanying the Traveller during the Journey. For example, the children of a family that travels together. This is important, for example, when determining the price of a Ticket when young children travel for free. Lijst van Traveller items.",
+      "items": {
+        "$ref": "#/components/schemas/Traveller"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "pseudonym"
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "title": "Transportconnectie",
+  "type": "object",
+  "description": "Logische verbinding tussen twee of meer Transportobjecten in verschillende Transportnetwerken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Transportconnectie)",
+      "pattern": "^Transportconnectie$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Connectietype"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "verbindt": {
+      "type": "array",
+      "description": "Netwerkelementen die door de Connectie verbonden zijn. Lijst van Transportobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Transportknoop"
+          },
+          {
+            "$ref": "#/components/schemas/Transportconnectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Transportknoop": "#/components/schemas/Transportknoop",
+            "Transportconnectie": "#/components/schemas/Transportconnectie"
+          }
+        }
+      },
+      "minItems": 2
+    },
+    "geografischeNaam": {
+      "$ref": "#/components/schemas/Transportconnectie.geografischeNaam"
+    },
+    "beschikbaarheid": {
+      "$ref": "#/components/schemas/Beschikbaarheid"
+    },
+    "toegankelijkheid": {
+      "type": "array",
+      "description": "Toegankelijkheid van het Transportobject. Bijvoorbeeld of het Transportobject toegankelijk is voor personen met een beperking. Lijst van Toegankelijkheid items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegankelijkheid"
+      },
+      "minItems": 1
+    },
+    "transportnetwerk": {
+      "type": "array",
+      "description": "Transportnetwerk waartoe het transportobject behoort. Lijst van Transportnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Transportnetwerk"
+      },
+      "minItems": 1
+    },
+    "vervoersknoop": {
+      "type": "array",
+      "description": "De vervoersknopen waartoe dit transportobject behoort. Lijst van Vervoersknooppunt items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Vervoersknooppunt"
+          },
+          {
+            "$ref": "#/components/schemas/GeregistreerdVervoersknooppunt"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Vervoersknooppunt": "#/components/schemas/Vervoersknooppunt",
+            "GeregistreerdVervoersknooppunt": "#/components/schemas/GeregistreerdVervoersknooppunt"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "dienst": {
+      "type": "array",
+      "description": "De aanvullende diensten verbonden met het transportobject. Lijst van AanvullendeDienst items.",
+      "items": {
+        "$ref": "#/components/schemas/AanvullendeDienst"
+      },
+      "minItems": 1
+    },
+    "infrastructuurelement": {
+      "type": "array",
+      "description": "De infrastructuurelementen verbonden met het transportobject. Lijst van Infrastructuurelement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Infrastructuurelement"
+          },
+          {
+            "$ref": "#/components/schemas/Informatiedrager"
+          },
+          {
+            "$ref": "#/components/schemas/Datauitwisselingsinfrastructuur"
+          },
+          {
+            "$ref": "#/components/schemas/Parkeerfaciliteit"
+          },
+          {
+            "$ref": "#/components/schemas/Lader"
+          },
+          {
+            "$ref": "#/components/schemas/Perron"
+          },
+          {
+            "$ref": "#/components/schemas/Stopplaats"
+          },
+          {
+            "$ref": "#/components/schemas/Haltepaal"
+          },
+          {
+            "$ref": "#/components/schemas/Bushok"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Infrastructuurelement": "#/components/schemas/Infrastructuurelement",
+            "Informatiedrager": "#/components/schemas/Informatiedrager",
+            "Datauitwisselingsinfrastructuur": "#/components/schemas/Datauitwisselingsinfrastructuur",
+            "Parkeerfaciliteit": "#/components/schemas/Parkeerfaciliteit",
+            "Lader": "#/components/schemas/Lader",
+            "Perron": "#/components/schemas/Perron",
+            "Stopplaats": "#/components/schemas/Stopplaats",
+            "Haltepaal": "#/components/schemas/Haltepaal",
+            "Bushok": "#/components/schemas/Bushok"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}

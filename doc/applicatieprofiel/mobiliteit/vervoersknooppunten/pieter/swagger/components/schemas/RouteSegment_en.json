@@ -1,0 +1,108 @@
+{
+  "title": "RouteSegment",
+  "type": "object",
+  "description": "Part of a Route that is traveled without a Connection using the same means of transport.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RouteSegment)",
+      "pattern": "^RouteSegment$"
+    },
+    "meansOfTransport": {
+      "$ref": "#/components/schemas/MeansOfTransport"
+    },
+    "link": {
+      "type": "array",
+      "description": "Sequence of Targeted Links that make up the Route segment. Lijst van GerichteLink items.",
+      "items": {
+        "$ref": "#/components/schemas/GerichteLink"
+      },
+      "minItems": 1
+    },
+    "drive": {
+      "$ref": "#/components/schemas/DriveType"
+    },
+    "departureNode": {
+      "$ref": "#/components/schemas/RouteNode"
+    },
+    "arrivalButton": {
+      "$ref": "#/components/schemas/RouteNode"
+    },
+    "achievedWith": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Resource"
+        },
+        {
+          "$ref": "#/components/schemas/Parking"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Resource": "#/components/schemas/Resource",
+          "Parking": "#/components/schemas/Parking"
+        }
+      }
+    },
+    "realizedBy": {
+      "$ref": "#/components/schemas/MobilityService"
+    },
+    "performer": {
+      "$ref": "#/components/schemas/Performer"
+    },
+    "departureTime": {
+      "$ref": "#/components/schemas/RouteSegment.departureTime"
+    },
+    "arrivalTime": {
+      "$ref": "#/components/schemas/RouteSegment.arrivalTime"
+    },
+    "duration": {
+      "$ref": "#/components/schemas/RouteSegment.duration"
+    },
+    "calculatedWith": {
+      "$ref": "#/components/schemas/RoutePlanner"
+    },
+    "directions": {
+      "$ref": "#/components/schemas/Directions"
+    },
+    "cost": {
+      "$ref": "#/components/schemas/AmountOfMoney"
+    },
+    "type": {
+      "$ref": "#/components/schemas/RouteType"
+    },
+    "departurePoint": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "arrivalPoint": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "consistsOf": {
+      "type": "array",
+      "description": "Sequence of Route segments that make up the Route. Lijst van RouteSegment items.",
+      "items": {
+        "$ref": "#/components/schemas/RouteSegment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "meansOfTransport",
+    "link",
+    "departureNode",
+    "arrivalButton",
+    "departureTime",
+    "arrivalTime",
+    "duration",
+    "type",
+    "departurePoint",
+    "arrivalPoint",
+    "consistsOf"
+  ]
+}

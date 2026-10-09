@@ -1,0 +1,117 @@
+{
+  "title": "BusShelter",
+  "type": "object",
+  "description": "As a rule, a bus shelter offers accommodation to passengers on public transport.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BusShelter)",
+      "pattern": "^BusShelter$"
+    },
+    "geometry": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        },
+        {
+          "$ref": "#/components/schemas/Polygon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Point": "#/components/schemas/Point",
+          "Polygon": "#/components/schemas/Polygon"
+        }
+      }
+    },
+    "validityPeriod": {
+      "$ref": "#/components/schemas/PeriodOfProject"
+    },
+    "accessibility": {
+      "type": "array",
+      "description": "The overall accessibility characteristics of the infrastructure element. Lijst van Accessibility items.",
+      "items": {
+        "$ref": "#/components/schemas/Accessibility"
+      },
+      "minItems": 1
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "type": {
+      "type": "array",
+      "description": "The type of infrastructure element. Lijst van InfrastructureElementType items.",
+      "items": {
+        "$ref": "#/components/schemas/InfrastructureElementType"
+      },
+      "minItems": 1
+    },
+    "service": {
+      "type": "array",
+      "description": "The service provided by means of the infrastructure element. Lijst van AdditionalService items.",
+      "items": {
+        "$ref": "#/components/schemas/AdditionalService"
+      },
+      "minItems": 1
+    },
+    "transportHub": {
+      "type": "array",
+      "description": "The transport nodes to which this infrastructure element belongs. Lijst van TransportHub items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportHub"
+          },
+          {
+            "$ref": "#/components/schemas/RegisteredTransportHub"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportHub": "#/components/schemas/TransportHub",
+            "RegisteredTransportHub": "#/components/schemas/RegisteredTransportHub"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "transportObject": {
+      "type": "array",
+      "description": "The transport object belonging to the infrastructure element. Lijst van TransportObject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportKnot"
+          },
+          {
+            "$ref": "#/components/schemas/TransportConnection"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportKnot": "#/components/schemas/TransportKnot",
+            "TransportConnection": "#/components/schemas/TransportConnection"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geometry",
+    "validityPeriod",
+    "identifier"
+  ]
+}

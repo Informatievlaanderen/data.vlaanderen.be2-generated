@@ -1,0 +1,43 @@
+{
+  "title": "LocationOsloGeneric",
+  "type": "object",
+  "description": "A spatial area or named place.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse LocationOsloGeneric)",
+      "pattern": "^LocationOsloGeneric$"
+    },
+    "placeName": {
+      "$ref": "#/components/schemas/LocationOsloGeneric.placeName"
+    },
+    "geometry": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        },
+        {
+          "$ref": "#/components/schemas/Polygon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Point": "#/components/schemas/Point",
+          "Polygon": "#/components/schemas/Polygon"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

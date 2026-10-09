@@ -1,0 +1,43 @@
+{
+  "title": "PlaatsOsloGeneriek",
+  "type": "object",
+  "description": "Een ruimtelijk gebied of benoemde plaats.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PlaatsOsloGeneriek)",
+      "pattern": "^PlaatsOsloGeneriek$"
+    },
+    "plaatsnaam": {
+      "$ref": "#/components/schemas/PlaatsOsloGeneriek.plaatsnaam"
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/Polygoon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Punt": "#/components/schemas/Punt",
+          "Polygoon": "#/components/schemas/Polygoon"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

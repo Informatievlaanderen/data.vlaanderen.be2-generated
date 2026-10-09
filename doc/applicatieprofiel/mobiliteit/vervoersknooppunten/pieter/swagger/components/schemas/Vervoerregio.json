@@ -1,0 +1,43 @@
+{
+  "title": "Vervoerregio",
+  "type": "object",
+  "description": "Clusters van gemeenten waarin mobiliteit op elkaar wordt afgestemd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Vervoerregio)",
+      "pattern": "^Vervoerregio$"
+    },
+    "plaatsnaam": {
+      "$ref": "#/components/schemas/Vervoerregio.plaatsnaam"
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/Polygoon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Punt": "#/components/schemas/Punt",
+          "Polygoon": "#/components/schemas/Polygoon"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

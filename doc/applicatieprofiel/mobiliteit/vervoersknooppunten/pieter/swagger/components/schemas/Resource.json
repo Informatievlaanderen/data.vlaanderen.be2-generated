@@ -1,0 +1,48 @@
+{
+  "title": "Resource",
+  "type": "object",
+  "description": "Middel dat de Mobiliteitsdienst aan de Reiziger kan aanbieden om zijn verplaatsing te maken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Resource)",
+      "pattern": "^Resource$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Resourcetype"
+    },
+    "locatie": {
+      "$ref": "#/components/schemas/Locatie"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "status": {
+      "$ref": "#/components/schemas/Resourcestatus"
+    },
+    "vervoermiddel": {
+      "type": "array",
+      "description": "Het type vervoermiddel van de Resource. Vooral relevant als de resource een voertuig is. Lijst van Vervoermiddel items.",
+      "items": {
+        "$ref": "#/components/schemas/Vervoermiddel"
+      },
+      "minItems": 1
+    },
+    "aandrijving": {
+      "type": "array",
+      "description": "Aandrijving van het vervoermiddel. Lijst van Aandrijftype items.",
+      "items": {
+        "$ref": "#/components/schemas/Aandrijftype"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}

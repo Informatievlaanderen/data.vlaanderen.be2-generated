@@ -1,0 +1,75 @@
+{
+  "title": "ResourceRapport",
+  "type": "object",
+  "description": "Het rapport van het aantal Resources met gelijkaardige karakteristieken van beschikbaarheid, type, service, locatie etc die beschikbaar zijn op een welbepaald tijdstip.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ResourceRapport)",
+      "pattern": "^ResourceRapport$"
+    },
+    "rapportTijd": {
+      "$ref": "#/components/schemas/ResourceRapport.rapportTijd"
+    },
+    "nummer": {
+      "$ref": "#/components/schemas/ResourceRapport.nummer"
+    },
+    "type": {
+      "type": "array",
+      "description": "Het type van de Resource. Lijst van Resourcetype items.",
+      "items": {
+        "$ref": "#/components/schemas/Resourcetype"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "array",
+      "description": "De status van de Resource. Voorbeeld: gereserveerd, inactief, beschikbaar. Dit veld bepaald of een Resource al dan niet kan gebruikt worden. Lijst van Resourcestatus items.",
+      "items": {
+        "$ref": "#/components/schemas/Resourcestatus"
+      },
+      "minItems": 1
+    },
+    "service": {
+      "type": "array",
+      "description": "De Mobiliteitsdienst die gebruikt wordt binnen het ResourceRapport. Lijst van Mobiliteitsdienst items.",
+      "items": {
+        "$ref": "#/components/schemas/Mobiliteitsdienst"
+      },
+      "minItems": 1
+    },
+    "aandrijving": {
+      "type": "array",
+      "description": "Aandrijving van het vervoermiddel. Lijst van Aandrijftype items.",
+      "items": {
+        "$ref": "#/components/schemas/Aandrijftype"
+      },
+      "minItems": 1
+    },
+    "locatie": {
+      "type": "array",
+      "description": "Locatie van de Resource. Lijst van Locatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Locatie"
+      },
+      "minItems": 1
+    },
+    "vervoermiddel": {
+      "type": "array",
+      "description": "Het vervoermiddel van de Resource. . Lijst van Vervoermiddel items.",
+      "items": {
+        "$ref": "#/components/schemas/Vervoermiddel"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "rapportTijd",
+    "nummer"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "title": "Routesegment",
+  "type": "object",
+  "description": "Deel van een Route dat zonder Overstap wordt afgelegd met hetzelfde vervoermiddel.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Routesegment)",
+      "pattern": "^Routesegment$"
+    },
+    "vervoermiddel": {
+      "$ref": "#/components/schemas/Vervoermiddel"
+    },
+    "link": {
+      "type": "array",
+      "description": "Opeenvolging van Gerichte Links waaruit het Routesegment bestaat. Lijst van GerichteLink items.",
+      "items": {
+        "$ref": "#/components/schemas/GerichteLink"
+      },
+      "minItems": 1
+    },
+    "aandrijving": {
+      "$ref": "#/components/schemas/Aandrijftype"
+    },
+    "vertrekknoop": {
+      "$ref": "#/components/schemas/Routeknoop"
+    },
+    "aankomstknoop": {
+      "$ref": "#/components/schemas/Routeknoop"
+    },
+    "gerealiseerdMet": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Resource"
+        },
+        {
+          "$ref": "#/components/schemas/Parkeerplaats"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Resource": "#/components/schemas/Resource",
+          "Parkeerplaats": "#/components/schemas/Parkeerplaats"
+        }
+      }
+    },
+    "gerealiseerdDoor": {
+      "$ref": "#/components/schemas/Mobiliteitsdienst"
+    },
+    "uitvoerder": {
+      "$ref": "#/components/schemas/Uitvoerder"
+    },
+    "vertrektijdstip": {
+      "$ref": "#/components/schemas/Routesegment.vertrektijdstip"
+    },
+    "aankomsttijdstip": {
+      "$ref": "#/components/schemas/Routesegment.aankomsttijdstip"
+    },
+    "reisduur": {
+      "$ref": "#/components/schemas/Routesegment.reisduur"
+    },
+    "berekendMet": {
+      "$ref": "#/components/schemas/Routeplanner"
+    },
+    "routebeschrijving": {
+      "$ref": "#/components/schemas/Routebeschrijving"
+    },
+    "kostprijs": {
+      "$ref": "#/components/schemas/Geldbedrag"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Routetype"
+    },
+    "vertrekpunt": {
+      "$ref": "#/components/schemas/Locatie"
+    },
+    "aankomstpunt": {
+      "$ref": "#/components/schemas/Locatie"
+    },
+    "bestaatUit": {
+      "type": "array",
+      "description": "Opeenvolging van Routesegmenten waaruit de Route bestaat. Lijst van Routesegment items.",
+      "items": {
+        "$ref": "#/components/schemas/Routesegment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "vervoermiddel",
+    "link",
+    "vertrekknoop",
+    "aankomstknoop",
+    "vertrektijdstip",
+    "aankomsttijdstip",
+    "reisduur",
+    "type",
+    "vertrekpunt",
+    "aankomstpunt",
+    "bestaatUit"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "title": "AdditionalService",
+  "type": "object",
+  "description": "Service that complements or supports other Services.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AdditionalService)",
+      "pattern": "^AdditionalService$"
+    },
+    "name": {
+      "$ref": "#/components/schemas/AdditionalService.name"
+    },
+    "type": {
+      "type": "array",
+      "description": "Nature of the additional service. For example, ticketing, waiting accommodation, sanitary facilities, AED.... Lijst van AdditionalServiceType items.",
+      "items": {
+        "$ref": "#/components/schemas/AdditionalServiceType"
+      },
+      "minItems": 1
+    },
+    "availability": {
+      "type": "array",
+      "description": "Availability of the additional service. For example, timetable or opening hours. Lijst van Provider items.",
+      "items": {
+        "$ref": "#/components/schemas/Provider"
+      },
+      "minItems": 1
+    },
+    "accessibility": {
+      "type": "array",
+      "description": "Accessibility of the additional service. For example, whether the Mobility Service is accessible to people with disabilities. Lijst van Accessibility items.",
+      "items": {
+        "$ref": "#/components/schemas/Accessibility"
+      },
+      "minItems": 1
+    },
+    "provider": {
+      "$ref": "#/components/schemas/Provider"
+    },
+    "transportHub": {
+      "type": "array",
+      "description": "The transport hub on which the additional service is offered. Lijst van TransportHub items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportHub"
+          },
+          {
+            "$ref": "#/components/schemas/RegisteredTransportHub"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportHub": "#/components/schemas/TransportHub",
+            "RegisteredTransportHub": "#/components/schemas/RegisteredTransportHub"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "availableOnInfrastructureElement": {
+      "type": "array",
+      "description": "Infrastructure element on which the additional service is offered. Lijst van InfrastructureElement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/InfrastructureElement"
+          },
+          {
+            "$ref": "#/components/schemas/Platform"
+          },
+          {
+            "$ref": "#/components/schemas/Stop"
+          },
+          {
+            "$ref": "#/components/schemas/ParkingFacility"
+          },
+          {
+            "$ref": "#/components/schemas/Charger"
+          },
+          {
+            "$ref": "#/components/schemas/InformationCarrier"
+          },
+          {
+            "$ref": "#/components/schemas/DataExchangeInfrastructure"
+          },
+          {
+            "$ref": "#/components/schemas/StopPost"
+          },
+          {
+            "$ref": "#/components/schemas/BusShelter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "InfrastructureElement": "#/components/schemas/InfrastructureElement",
+            "Platform": "#/components/schemas/Platform",
+            "Stop": "#/components/schemas/Stop",
+            "ParkingFacility": "#/components/schemas/ParkingFacility",
+            "Charger": "#/components/schemas/Charger",
+            "InformationCarrier": "#/components/schemas/InformationCarrier",
+            "DataExchangeInfrastructure": "#/components/schemas/DataExchangeInfrastructure",
+            "StopPost": "#/components/schemas/StopPost",
+            "BusShelter": "#/components/schemas/BusShelter"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "availableOnTransportobject": {
+      "type": "array",
+      "description": "Transport object on which the additional service is offered. Lijst van TransportObject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportKnot"
+          },
+          {
+            "$ref": "#/components/schemas/TransportConnection"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportKnot": "#/components/schemas/TransportKnot",
+            "TransportConnection": "#/components/schemas/TransportConnection"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "name",
+    "type",
+    "provider"
+  ]
+}

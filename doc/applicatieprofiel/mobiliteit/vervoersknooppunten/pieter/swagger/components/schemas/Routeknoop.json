@@ -1,0 +1,66 @@
+{
+  "title": "Routeknoop",
+  "type": "object",
+  "description": "Significante positie in de Route die steeds samenvalt met het begin of het einde van een Routesegment.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Routeknoop)",
+      "pattern": "^Routeknoop$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Transportknooptype"
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Punt"
+    },
+    "gerealiseerdOp": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Transportknoop"
+        },
+        {
+          "$ref": "#/components/schemas/VirtueleKnoop"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Transportknoop": "#/components/schemas/Transportknoop",
+          "VirtueleKnoop": "#/components/schemas/VirtueleKnoop"
+        }
+      }
+    },
+    "overstap": {
+      "$ref": "#/components/schemas/Routeknoop"
+    },
+    "gerealiseerdMet": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Resource"
+        },
+        {
+          "$ref": "#/components/schemas/Parkeerplaats"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Resource": "#/components/schemas/Resource",
+          "Parkeerplaats": "#/components/schemas/Parkeerplaats"
+        }
+      }
+    },
+    "gerealiseerdDoor": {
+      "$ref": "#/components/schemas/Mobiliteitsdienst"
+    }
+  },
+  "required": [
+    "@type",
+    "geometrie"
+  ]
+}

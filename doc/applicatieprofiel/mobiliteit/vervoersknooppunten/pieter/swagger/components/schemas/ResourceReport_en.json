@@ -1,0 +1,75 @@
+{
+  "title": "ResourceReport",
+  "type": "object",
+  "description": "The report of the number of Resources with similar characteristics of availability, type, service, location, etc that are available at a given time.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ResourceReport)",
+      "pattern": "^ResourceReport$"
+    },
+    "reportTime": {
+      "$ref": "#/components/schemas/ResourceReport.reportTime"
+    },
+    "number": {
+      "$ref": "#/components/schemas/ResourceReport.number"
+    },
+    "type": {
+      "type": "array",
+      "description": "The type of the Resource. Lijst van ResourceType items.",
+      "items": {
+        "$ref": "#/components/schemas/ResourceType"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "array",
+      "description": "The status of the Resource. Example: reserved, inactive, available. This field determines whether or not a Resource can be used. Lijst van ResourceHealth items.",
+      "items": {
+        "$ref": "#/components/schemas/ResourceHealth"
+      },
+      "minItems": 1
+    },
+    "service": {
+      "type": "array",
+      "description": "The Mobility Service used within the Resource Report. Lijst van MobilityService items.",
+      "items": {
+        "$ref": "#/components/schemas/MobilityService"
+      },
+      "minItems": 1
+    },
+    "drive": {
+      "type": "array",
+      "description": "Drive of the means of transport. Lijst van DriveType items.",
+      "items": {
+        "$ref": "#/components/schemas/DriveType"
+      },
+      "minItems": 1
+    },
+    "location": {
+      "type": "array",
+      "description": "Location of the Resource. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "meansOfTransport": {
+      "type": "array",
+      "description": "The Resource's means of transportation. . Lijst van MeansOfTransport items.",
+      "items": {
+        "$ref": "#/components/schemas/MeansOfTransport"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "reportTime",
+    "number"
+  ]
+}

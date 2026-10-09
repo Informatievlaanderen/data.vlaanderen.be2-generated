@@ -1,0 +1,145 @@
+{
+  "title": "HoppinPoint",
+  "type": "object",
+  "description": "Transport hub of the Hoppin mobility brand.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HoppinPoint)",
+      "pattern": "^HoppinPoint$"
+    },
+    "classification": {
+      "type": "array",
+      "description": "Transport node classification. Lijst van TransportNodeType items.",
+      "items": {
+        "$ref": "#/components/schemas/TransportNodeType"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "$ref": "#/components/schemas/TransportNodeStatus"
+    },
+    "registration": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "specification": {
+      "$ref": "#/components/schemas/Document"
+    },
+    "name": {
+      "type": "array",
+      "description": "The name of the Transport Hub. Lijst van LanguageString items.",
+      "items": {
+        "$ref": "#/components/schemas/HoppinPoint.name"
+      },
+      "minItems": 1
+    },
+    "accessibility": {
+      "type": "array",
+      "description": "The accessibility of the Transport Hub. Lijst van Accessibility items.",
+      "items": {
+        "$ref": "#/components/schemas/Accessibility"
+      },
+      "minItems": 1
+    },
+    "location": {
+      "type": "array",
+      "description": "The location of the Transport Hub. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "brand": {
+      "$ref": "#/components/schemas/BrandType"
+    },
+    "transportObject": {
+      "type": "array",
+      "description": "The transport object of the Transport Hub. Lijst van TransportObject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportKnot"
+          },
+          {
+            "$ref": "#/components/schemas/TransportConnection"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportKnot": "#/components/schemas/TransportKnot",
+            "TransportConnection": "#/components/schemas/TransportConnection"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "service": {
+      "type": "array",
+      "description": "The additional services connected to the Transport Hub. Lijst van AdditionalService items.",
+      "items": {
+        "$ref": "#/components/schemas/AdditionalService"
+      },
+      "minItems": 1
+    },
+    "infrastructureElement": {
+      "type": "array",
+      "description": "The infrastructure element of the Transport Hub. Lijst van InfrastructureElement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/InfrastructureElement"
+          },
+          {
+            "$ref": "#/components/schemas/Platform"
+          },
+          {
+            "$ref": "#/components/schemas/Stop"
+          },
+          {
+            "$ref": "#/components/schemas/ParkingFacility"
+          },
+          {
+            "$ref": "#/components/schemas/Charger"
+          },
+          {
+            "$ref": "#/components/schemas/InformationCarrier"
+          },
+          {
+            "$ref": "#/components/schemas/DataExchangeInfrastructure"
+          },
+          {
+            "$ref": "#/components/schemas/StopPost"
+          },
+          {
+            "$ref": "#/components/schemas/BusShelter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "InfrastructureElement": "#/components/schemas/InfrastructureElement",
+            "Platform": "#/components/schemas/Platform",
+            "Stop": "#/components/schemas/Stop",
+            "ParkingFacility": "#/components/schemas/ParkingFacility",
+            "Charger": "#/components/schemas/Charger",
+            "InformationCarrier": "#/components/schemas/InformationCarrier",
+            "DataExchangeInfrastructure": "#/components/schemas/DataExchangeInfrastructure",
+            "StopPost": "#/components/schemas/StopPost",
+            "BusShelter": "#/components/schemas/BusShelter"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "registration",
+    "brand"
+  ]
+}

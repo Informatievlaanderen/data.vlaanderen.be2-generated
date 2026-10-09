@@ -1,0 +1,138 @@
+{
+  "title": "Vervoersknooppunt",
+  "type": "object",
+  "description": "Plaats waar passagiers en/of vracht wordt uitgewisseld tussen voertuigen en/of vervoersmodi.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Vervoersknooppunt)",
+      "pattern": "^Vervoersknooppunt$"
+    },
+    "naam": {
+      "type": "array",
+      "description": "De naam van het Vervoersknooppunt. Lijst van Taalstring items.",
+      "items": {
+        "$ref": "#/components/schemas/Vervoersknooppunt.naam"
+      },
+      "minItems": 1
+    },
+    "classificatie": {
+      "type": "array",
+      "description": "De classificatie van het Vervoersknooppunt. Lijst van Vervoersknooppunttype items.",
+      "items": {
+        "$ref": "#/components/schemas/Vervoersknooppunttype"
+      },
+      "minItems": 1
+    },
+    "toegankelijkheid": {
+      "type": "array",
+      "description": "De toegankelijkheid van het Vervoersknooppunt. Lijst van Toegankelijkheid items.",
+      "items": {
+        "$ref": "#/components/schemas/Toegankelijkheid"
+      },
+      "minItems": 1
+    },
+    "locatie": {
+      "type": "array",
+      "description": "De locatie van het Vervoersknooppunt. Lijst van Locatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Locatie"
+      },
+      "minItems": 1
+    },
+    "merk": {
+      "$ref": "#/components/schemas/Merktype"
+    },
+    "status": {
+      "$ref": "#/components/schemas/Vervoersknooppuntstatus"
+    },
+    "transportobject": {
+      "type": "array",
+      "description": "Het transportobject van het Vervoersknooppunt. Lijst van Transportobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Transportknoop"
+          },
+          {
+            "$ref": "#/components/schemas/Transportconnectie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Transportknoop": "#/components/schemas/Transportknoop",
+            "Transportconnectie": "#/components/schemas/Transportconnectie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "dienst": {
+      "type": "array",
+      "description": "De aanvullende diensten verbonden met het Vervoersknooppunt. Lijst van AanvullendeDienst items.",
+      "items": {
+        "$ref": "#/components/schemas/AanvullendeDienst"
+      },
+      "minItems": 1
+    },
+    "infrastructuurelement": {
+      "type": "array",
+      "description": "Het infrastructuurelement van het Vervoersknooppunt. Lijst van Infrastructuurelement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Infrastructuurelement"
+          },
+          {
+            "$ref": "#/components/schemas/Informatiedrager"
+          },
+          {
+            "$ref": "#/components/schemas/Datauitwisselingsinfrastructuur"
+          },
+          {
+            "$ref": "#/components/schemas/Parkeerfaciliteit"
+          },
+          {
+            "$ref": "#/components/schemas/Lader"
+          },
+          {
+            "$ref": "#/components/schemas/Perron"
+          },
+          {
+            "$ref": "#/components/schemas/Stopplaats"
+          },
+          {
+            "$ref": "#/components/schemas/Haltepaal"
+          },
+          {
+            "$ref": "#/components/schemas/Bushok"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Infrastructuurelement": "#/components/schemas/Infrastructuurelement",
+            "Informatiedrager": "#/components/schemas/Informatiedrager",
+            "Datauitwisselingsinfrastructuur": "#/components/schemas/Datauitwisselingsinfrastructuur",
+            "Parkeerfaciliteit": "#/components/schemas/Parkeerfaciliteit",
+            "Lader": "#/components/schemas/Lader",
+            "Perron": "#/components/schemas/Perron",
+            "Stopplaats": "#/components/schemas/Stopplaats",
+            "Haltepaal": "#/components/schemas/Haltepaal",
+            "Bushok": "#/components/schemas/Bushok"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "merk"
+  ]
+}

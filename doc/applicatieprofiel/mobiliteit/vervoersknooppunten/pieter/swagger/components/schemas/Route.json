@@ -1,0 +1,61 @@
+{
+  "title": "Route",
+  "type": "object",
+  "description": "Mogelijke, gekozen of afgelegde weg tussen twee Locaties (resp het vertrekpunt en het aankomstpunt).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Route)",
+      "pattern": "^Route$"
+    },
+    "vertrektijdstip": {
+      "$ref": "#/components/schemas/Route.vertrektijdstip"
+    },
+    "aankomsttijdstip": {
+      "$ref": "#/components/schemas/Route.aankomsttijdstip"
+    },
+    "reisduur": {
+      "$ref": "#/components/schemas/Route.reisduur"
+    },
+    "berekendMet": {
+      "$ref": "#/components/schemas/Routeplanner"
+    },
+    "routebeschrijving": {
+      "$ref": "#/components/schemas/Routebeschrijving"
+    },
+    "kostprijs": {
+      "$ref": "#/components/schemas/Geldbedrag"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Routetype"
+    },
+    "vertrekpunt": {
+      "$ref": "#/components/schemas/Locatie"
+    },
+    "aankomstpunt": {
+      "$ref": "#/components/schemas/Locatie"
+    },
+    "bestaatUit": {
+      "type": "array",
+      "description": "Opeenvolging van Routesegmenten waaruit de Route bestaat. Lijst van Routesegment items.",
+      "items": {
+        "$ref": "#/components/schemas/Routesegment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "vertrektijdstip",
+    "aankomsttijdstip",
+    "reisduur",
+    "type",
+    "vertrekpunt",
+    "aankomstpunt",
+    "bestaatUit"
+  ]
+}

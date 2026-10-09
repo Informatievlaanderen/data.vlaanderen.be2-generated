@@ -556,10 +556,8 @@ error: missing '/tmp/generated/doc/vocabularium/verkeersmetingen/erkendestandaar
 #||#    + checking /home/circleci/project/config/dev/vervoersknooppunten.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/applicatieprofiel/mobiliteit/vervoersknooppunten/pieter'
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/mobiliteit/vervoersknooppunten/pieter/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/vlaamsecodex.publication.json
 #||# 
