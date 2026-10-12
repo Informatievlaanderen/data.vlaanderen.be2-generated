@@ -16,49 +16,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 200  
-
-An error occured while translating text, thrown by Azure Translator  
-
-error The server rejected the request because the client has exceeded request limits.  
-
-An error occured while translating text, thrown by Azure Translator  
-
-error The server rejected the request because the client has exceeded request limits.  
-
-An error occured while translating text, thrown by Azure Translator  
-
-error The server rejected the request because the client has exceeded request limits.  
-
-An error occured while translating text, thrown by Azure Translator  
-
-error The server rejected the request because the client has exceeded request limits.  
-
-An error occured while translating text, thrown by Azure Translator  
-
-error The server rejected the request because the client has exceeded request limits.  
-
-#||# Retry translation  
-
-#||# Retry translation  
-
-#||# Retry translation  
-
-#||# Retry translation  
-
-An error occured while translating text, thrown by Azure Translator  
-
-error The server rejected the request because the client has exceeded request limits.  
-
-#||# Retry translation  
-
-An error occured while translating text, thrown by Azure Translator  
-
-error The server rejected the request because the client has exceeded request limits.  
-
-#||# Retry translation  
-
-#||# Retry translation  
+#||# Number of calls: 202  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit/vervoersknooppunten/pieter/autotranslation/vervoersknooppunten_en.json  
 
