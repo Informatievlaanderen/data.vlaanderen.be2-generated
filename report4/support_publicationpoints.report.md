@@ -58,6 +58,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/inname-openbaar-domein.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/ipdc-lpdc.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/kabels-en-leidingen.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/kindfiche.publication.json

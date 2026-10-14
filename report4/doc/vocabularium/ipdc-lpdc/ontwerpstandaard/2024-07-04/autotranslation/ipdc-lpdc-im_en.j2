@@ -1,0 +1,86 @@
+{% extends "impl_en.j2" %}
+
+{% block summary %}
+<p>
+    <em>This implementation model is an implementation model of the <a target="_blank" href="https://belgif.github.io/thematic/models/public%20services/index_en.html">ICEG application profile public service</a>
+        and follows the <a target="_blank" href="https://data.vlaanderen.be/ns/dienst">OSLO Vocabulary 'Service'</a>.
+        Many things are taken from the ICEG model and are therefore only described in English. Specific extensions within this data model are described in Dutch.    </em>
+</p>
+
+<p>This implementation model is used to exchange data on public services between IPDC (version 3) and LPDC.
+    It describes how to communicate to and from the local product and service catalogue (LPDC) and the inter-administrative product and service catalogue (IPDC).</p>
+
+<h4>JSON-LD Context</h4>
+<p>
+    <em>The JSON-LD contexts below are managed by the IPDC team of Digital Flanders.    </em>
+    <br>
+    <br>A reusable JSON-LD context for this deployment model can be found at the following location:    <ul>
+        <li><a target="_blank" href="https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-07-04/jsonld/ipdc-lpdc-im.jsonld">IPDC-LPDC JSON-LD context</a></li>
+    </ul>In addition to exchanging individual instances, concepts and associated snapshots, it is also possible to exchange lists of this data. This is done in several ways:    <ul>
+        <li>Lists of instance and draft snapshots are provided paginated using the <a target="_blank" href="https://semiceu.github.io/LinkedDataEventStreams/">LDES specification</a>.
+            In the following <a target="_blank" href="https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-07-04/jsonld/ldes.jsonld">LDES JSON-LD context</a> , the definitions used are determined.        </li>
+        <li>Lists of instances and concepts are provided paginated using the <a target="_blank" href="https://www.hydra-cg.com/spec/latest/core/">Hydra specification</a>.
+            In the following <a target="_blank" href="https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-07-04/jsonld/hydra.jsonld">Hydra JSON-LD context</a> , the definitions used are determined.        </li>
+    </ul>
+</p>
+
+<h4>SHACL Template</h4>
+<p>
+    <em>The SHACL templates below are managed by the LPDC team of the Domestic Administration Agency.    </em>
+    <br>
+    <br>Reusable SHACL templates for this implementation model can be found at the following locations and can be used to validate data:    <ul>
+        <li><a target="_blank" href="https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-07-04/shacl/instantie-shape.ttl">Instance SHACL template</a></li>
+        <li><a target="_blank" href="https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-07-04/shacl/concept-shape.ttl">Concept SHACL template</a></li>
+    </ul>
+</p>
+
+<h4>Multilingualism</h4>
+<p>All translatable fields have the type TaalString. A TaalString is the combination of a textual value with
+    an indication of the language. The designation of the language is made on the basis of a
+    <a target="_blank" href="https://www.rfc-editor.org/rfc/rfc5646.html">language tag</a>. The standard language tags that are supported
+    in this deployment model are the following. Please note that new language tags may be supported in due course.    <ul>
+        <li>en: Dutch (required)</li>
+        <li>English(optional)</li>
+        <li>fr: French (optional)</li>
+        <li>the: German (optional)</li>
+    </ul>
+</p>
+<p>In the implementation model, the cardinalities for TaalStrings are always indicated from a single language. For example,
+    cardinality 1 indicates that exactly 1 textual value is allowed per language. Cardinality 0..1 indicates that there is a
+    no or one value is allowed. The exceptional cardinality 0..* indicates that there are several values per language
+    are allowed.</p>
+
+<h5>Formal (you) versus informal (you)</h5>
+<p>To be able to distinguish between formal texts (u form) and informal texts for Dutch texts
+    (your form) some <a target="_blank" href="https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.7">private use language subtags</a> were agreed.    <ul>
+        <li>en-BE-x-formal: formal text manually entered by an editor</li>
+        <li>en-BE-x-informal: informal text manually entered by an editor</li>
+        <li>en-BE-x-generated-formal: automatically generated formal text</li>
+        <li>en-BE-x-generated-informal: automatically generated informal text</li>
+    </ul>When writing to IPDC or LPDC, or when submitting changes via LDES, only one of the following language tags may be passed: nl-BE-x-formal, nl-BE-x-informal or nl.
+    Preferably, nl-BE-x-formal or nl-BE-x-informal. In this way, it is clear in which form the editor wrote the original text.
+    When writing to the IPDC or LPDC, the generated tags nl-BE-x-generated-formal and nl-BE-x-generated-informal are not allowed. These will be ignored.    <br/>When reading IPDC, the nl tag will always be present. In addition, either the formal form (nl-BE-x-formal) or generated formal form (nl-BE-x-generated-formal) will always be available.
+    As well as the informal form (nl-BE-x-informal) or generated informal form (nl-BE-x-generated-informal) by an editor.</p>
+
+<h5>English</h5>
+<p>Organisations with the YourEurope publication channel are made available on the <a target="_blank" href="https://europa.eu/youreurope">YourEurope portal</a>.
+    In order to make these instances as findable as possible with a minimum of editing work, these YourEurope instances are automatically translated into English.
+    Automatic translated English texts are displayed in the model by the following <a target="_blank" href="https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.7">private use language subtag</a>
+    <ul>
+        <li>en-x-generated: automatically generated English text</li>
+    </ul>
+</p>
+
+<h4>Snapshots</h4>
+<p>A snapshot shows what an instance or concept looked like at a certain point in time. Every time a functional change is made, a new snapshot will be created
+    who captures all attributes and associations filled in at that time. In this way, the complete editorial history of an instance or concept is recorded.
+    To keep the diagram clear, the attributes and associations of instances and concepts are not repeated on the snapshot classes.
+    In the detailed description of these classes, all attributes and associations can be found.</p>
+
+<h4>Want to know more?</h4>
+<p>A complete overview of all available concepts and instances can be found in <a target="_blank" href="https://productencatalogus-v3.vlaanderen.be">the product catalogue</a>.
+    Behind the scenes, all these services are stored in <a target="_blank" href="https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/interbestuurlijke-producten-en-dienstencatalogus-ipdc">IPDC</a>.
+    If you wish to integrate the information about this service into your own solutions, this is possible via the
+    <a target="_blank" href="https://ipdc.vlaanderen.be/docs/swagger-ui/index.html">IPDC API.</a> Be sure to take a look at
+    <a target="_blank" href="https://vlaamseoverheid.atlassian.net/wiki/external/6317081715/ZGU4MGNlODM2N2U1NDU5MGFlY2NlYzcxYmQyYWUwMTc">the connection guide</a>.</p>
+{% endblock %}

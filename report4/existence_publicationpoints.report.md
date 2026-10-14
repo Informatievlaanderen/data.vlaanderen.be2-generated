@@ -217,6 +217,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/dev/ipdc-lpdc.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/dev/kabels-en-leidingen.publication.json
 #||# 
 Directory check

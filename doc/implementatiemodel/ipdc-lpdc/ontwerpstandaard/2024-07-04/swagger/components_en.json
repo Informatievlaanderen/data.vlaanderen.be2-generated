@@ -1,0 +1,2217 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "ContactDetails.email": {
+        "title": "ContactDetails.email",
+        "description": "A property through which an e-mail address for the Public Organization, or a representative of it, can be contacted. Email address must conform to the format described in RFC2822: https://datatracker.ietf.org/doc/html/rfc2822#section-3.4.1",
+        "type": "string"
+      },
+      "ContactDetails.openingHours": {
+        "title": "ContactDetails.openingHours",
+        "description": "The value of this property is structured text that gives the hours at which the contact point is normally available. Days are specified using two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. For example, if the contact point is open Monday-Friday, 9 -5, the value of the openingHours property would be Mo-Fr 09:00-17:00. If the Contact Point is only available on Tuesday and Thursday between 6 and 8pm, the value would be Tu,Th 16:00-20:00.",
+        "type": "string"
+      },
+      "ContactDetails.phoneNumber": {
+        "title": "ContactDetails.phoneNumber",
+        "description": "A property through which a phone number for the Public Organization, or a representative of it, can be contacted.",
+        "type": "string"
+      },
+      "ContactDetails.uRL": {
+        "title": "ContactDetails.uRL",
+        "description": "The URL of the website Website location must conform to the format described in RFC1738: https://datatracker.ietf.org/doc/html/rfc1738#section-3.3",
+        "type": "string"
+      },
+      "ContactDetails.order": {
+        "title": "ContactDetails.order",
+        "description": "Specifies the relative order of this item compared to its siblings. Items are sorted in ascending order, for example use 1 for the first, 2 for the second.",
+        "type": "number",
+        "format": "int64"
+      },
+      "ContactDetails": {
+        "title": "ContactDetails",
+        "type": "object",
+        "description": "This class represents the contact information for a Public Service, Channel, Public Organization, etc. It is defined in the Core Public Organization Vocabulary and is provided as a schema:ContactPoint. Like Channel, a Contact Point may have regular opening hours that are then overridden by, for example, public holidays, using the Opening Hours Specification class.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ContactDetails)",
+            "pattern": "^ContactDetails$"
+          },
+          "email": {
+            "$ref": "#/components/schemas/ContactDetails.email"
+          },
+          "openingHours": {
+            "$ref": "#/components/schemas/ContactDetails.openingHours"
+          },
+          "phoneNumber": {
+            "$ref": "#/components/schemas/ContactDetails.phoneNumber"
+          },
+          "uRL": {
+            "$ref": "#/components/schemas/ContactDetails.uRL"
+          },
+          "order": {
+            "$ref": "#/components/schemas/ContactDetails.order"
+          },
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          }
+        },
+        "required": [
+          "@type",
+          "order"
+        ]
+      },
+      "Website.uRL": {
+        "title": "Website.uRL",
+        "description": "The URL of the website Website location must conform to the format described in RFC1738: https://datatracker.ietf.org/doc/html/rfc1738#section-3.3",
+        "type": "string"
+      },
+      "Website.order": {
+        "title": "Website.order",
+        "description": "Specifies the relative order of this item compared to its siblings. Items are sorted in ascending order, for example use 1 for the first, 2 for the second.",
+        "type": "number",
+        "format": "int64"
+      },
+      "Website.name": {
+        "title": "Website.name",
+        "description": "This property represents the name of the website.",
+        "type": "string"
+      },
+      "Website.description": {
+        "title": "Website.description",
+        "description": "This property represents a free text description of the Website. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Website": {
+        "title": "Website",
+        "type": "object",
+        "description": "A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via a URL.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Website)",
+            "pattern": "^Website$"
+          },
+          "uRL": {
+            "$ref": "#/components/schemas/Website.uRL"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Website.order"
+          },
+          "name": {
+            "$ref": "#/components/schemas/Website.name"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Website.description"
+          }
+        },
+        "required": [
+          "@type",
+          "uRL",
+          "order",
+          "name"
+        ]
+      },
+      "Concept.productNumber": {
+        "title": "Concept.productNumber",
+        "description": "Identification number to uniquely identify an instance or concept. When creating a new draft, no product number can be passed on to IPDC or LPDC. The product numbers are managed by IPDC and when a new concept is created, a unique product number will be assigned in IPDC. As a result, when IPDC is read, a product number will always be available for each concept.",
+        "type": "string"
+      },
+      "Concept.creation": {
+        "title": "Concept.creation",
+        "description": "Time when the draft was created by an editor.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Concept.lastModified": {
+        "title": "Concept.lastModified",
+        "description": "Time when the draft was last modified by an editor.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Concept.archived": {
+        "title": "Concept.archived",
+        "description": "Value that indicates whether the draft is archived.",
+        "type": "boolean"
+      },
+      "Concept.description": {
+        "title": "Concept.description",
+        "description": "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Concept.searchTerms": {
+        "title": "Concept.searchTerms",
+        "description": "This property represents a keyword, term or phrase to describe the Public Service. There may be multiple terms per language. This is in contrast to all other fields of the type TaalString.",
+        "type": "string"
+      },
+      "Concept.name": {
+        "title": "Concept.name",
+        "description": "This property represents the official Name of the Public Service.",
+        "type": "string"
+      },
+      "Concept.regulationsText": {
+        "title": "Concept.regulationsText",
+        "description": "Text field in which the regulations on which the public service is based can be described. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.\r\nPreferably use the relationship 'follows(Rule)' to refer to the relevant legislation.",
+        "type": "string"
+      },
+      "Concept.exceptions": {
+        "title": "Concept.exceptions",
+        "description": "Text field in which exceptions to procedures, cost prices, ... can be indicated Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Concept.furtherDescription": {
+        "title": "Concept.furtherDescription",
+        "description": "This property represents free text for additional information regarding the description of the Public Service. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Concept": {
+        "title": "Concept",
+        "type": "object",
+        "description": "The services provided by local authorities are often based on Flemish, federal or European legislation, which is translated to a local level. This means that the basis is the same for every local government, but that there may be flexibility for the local interpretation. Because we want to get and keep IPDC well stocked and up to date, with a limited administrative burden, we provide the concept. A draft is a template that editors of the Flemish government prepare for local authorities. It contains a general interpretation of a government service, which can also be applicable in most local contexts. Local authorities can consult these concepts and decide to register their own services on the basis of a concept. At that moment, a concept is cloned to an authority. The local government can then fully adapt this body and tailor it to the local context. In this way, a concept also groups together all the different local variations of a similar service.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Concept)",
+            "pattern": "^Concept$"
+          },
+          "productNumber": {
+            "$ref": "#/components/schemas/Concept.productNumber"
+          },
+          "creation": {
+            "$ref": "#/components/schemas/Concept.creation"
+          },
+          "lastModified": {
+            "$ref": "#/components/schemas/Concept.lastModified"
+          },
+          "archived": {
+            "$ref": "#/components/schemas/Concept.archived"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Concept.description"
+          },
+          "endServiceProvision": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "searchTerms": {
+            "type": "array",
+            "description": "This property represents a keyword, term or phrase to describe the Public Service. There may be multiple terms per language. This is in contrast to all other fields of the type TaalString. Lijst van LanguageString items.",
+            "items": {
+              "$ref": "#/components/schemas/Concept.searchTerms"
+            },
+            "minItems": 1
+          },
+          "name": {
+            "$ref": "#/components/schemas/Concept.name"
+          },
+          "regulationsText": {
+            "$ref": "#/components/schemas/Concept.regulationsText"
+          },
+          "startServiceProvision": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "targetGroups": {
+            "type": "array",
+            "description": "Target group to which a public service is focused. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van TargetGroup items.",
+            "items": {
+              "$ref": "#/components/schemas/TargetGroup"
+            },
+            "minItems": 1
+          },
+          "themes": {
+            "type": "array",
+            "description": "Theme of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van Theme items.",
+            "items": {
+              "$ref": "#/components/schemas/Theme"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type"
+          },
+          "exceptions": {
+            "$ref": "#/components/schemas/Concept.exceptions"
+          },
+          "yourEuropeCategories": {
+            "type": "array",
+            "description": "YourEurope category under the Single Digital Gateway Regulation. Only services that fall within one of these categories should be forwarded to SDG. The categories and subcategories were determined by the European Parliament. These were translated by the IPDC - LPDC team into a code list in the absence of a European code list. The valid values can be found in the ttl file on the link in the code list column. Lijst van YourEuropeCategory items.",
+            "items": {
+              "$ref": "#/components/schemas/YourEuropeCategory"
+            },
+            "minItems": 1
+          },
+          "publishingChannels": {
+            "type": "array",
+            "description": "Publication channel of a public service describes on which places the service will be visible. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. When a draft has the YourEurope publication channel, at least one value must be entered in the yourEuropeCategory field. Lijst van PublicationChannel items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicationChannel"
+            },
+            "minItems": 1
+          },
+          "tags": {
+            "type": "array",
+            "description": "Concept tag for a public service concept. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van ConceptTag items.",
+            "items": {
+              "$ref": "#/components/schemas/ConceptTag"
+            },
+            "minItems": 1
+          },
+          "competentLevelsOfGovernment": {
+            "type": "array",
+            "description": "Competent level of government of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van CompetentLevelOfGovernment items.",
+            "items": {
+              "$ref": "#/components/schemas/CompetentLevelOfGovernment"
+            },
+            "minItems": 1
+          },
+          "executiveLevelsOfGovernance": {
+            "type": "array",
+            "description": "Executive level of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van ExecutiveLevel items.",
+            "items": {
+              "$ref": "#/components/schemas/ExecutiveLevel"
+            },
+            "minItems": 1
+          },
+          "furtherDescription": {
+            "$ref": "#/components/schemas/Concept.furtherDescription"
+          },
+          "executiveGovernments": {
+            "type": "array",
+            "description": "Links to the implementing organisations Lijst van PublicOrganization items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicOrganization"
+            },
+            "minItems": 1
+          },
+          "websites": {
+            "type": "array",
+            "description": "moreInfo refers to online locations where additional information about something specifically related to public service is listed Lijst van Website items.",
+            "items": {
+              "$ref": "#/components/schemas/Website"
+            },
+            "minItems": 1
+          },
+          "regulations": {
+            "type": "array",
+            "description": "The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis. Lijst van Regulations items.",
+            "items": {
+              "$ref": "#/components/schemas/Regulations"
+            },
+            "minItems": 1
+          },
+          "procedures": {
+            "type": "array",
+            "description": "undefined Lijst van Procedure items.",
+            "items": {
+              "$ref": "#/components/schemas/Procedure"
+            },
+            "minItems": 1
+          },
+          "financialBenefits": {
+            "type": "array",
+            "description": "undefined Lijst van FinancialBenefit items.",
+            "items": {
+              "$ref": "#/components/schemas/FinancialBenefit"
+            },
+            "minItems": 1
+          },
+          "costs": {
+            "type": "array",
+            "description": "undefined Lijst van Cost items.",
+            "items": {
+              "$ref": "#/components/schemas/Cost"
+            },
+            "minItems": 1
+          },
+          "linkedConcept": {
+            "type": "array",
+            "description": "undefined Lijst van Authority items.",
+            "items": {
+              "$ref": "#/components/schemas/Authority"
+            },
+            "minItems": 1
+          },
+          "conditions": {
+            "type": "array",
+            "description": "Textual description of the conditions for using the service. Lijst van Condition items.",
+            "items": {
+              "$ref": "#/components/schemas/Condition"
+            },
+            "minItems": 1
+          },
+          "competentAuthorities": {
+            "type": "array",
+            "description": "undefined Lijst van PublicOrganization items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicOrganization"
+            },
+            "minItems": 1
+          },
+          "isVersionOf": {
+            "type": "array",
+            "description": "Reference to the concept of which this snapshot was made at a certain moment in time. Lijst van ConceptSnapshot items.",
+            "items": {
+              "$ref": "#/components/schemas/ConceptSnapshot"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "creation",
+          "lastModified",
+          "archived",
+          "description",
+          "name",
+          "isVersionOf"
+        ]
+      },
+      "Authority.productNumber": {
+        "title": "Authority.productNumber",
+        "description": "Identification number to uniquely identify an instance or concept. When creating a new instance, no product number can be passed to IPDC or LPDC. The product numbers are managed by IPDC and when a new instance is created, a unique product number will be assigned in IPDC. As a result, when IPDC is read, a product number will always be available on each instance.",
+        "type": "string"
+      },
+      "Authority.lastModified": {
+        "title": "Authority.lastModified",
+        "description": "Time when the instance was last modified by an editor.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Authority.creation": {
+        "title": "Authority.creation",
+        "description": "Time when the instance was created by an editor.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "Authority.archived": {
+        "title": "Authority.archived",
+        "description": "Value that indicates whether the instance is archived.",
+        "type": "boolean"
+      },
+      "Authority.description": {
+        "title": "Authority.description",
+        "description": "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Authority.exceptions": {
+        "title": "Authority.exceptions",
+        "description": "Text field in which exception to procedures, cost prices, ... can be indicated Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Authority.searchTerms": {
+        "title": "Authority.searchTerms",
+        "description": "This property represents a keyword, term or phrase to describe the Public Service. There may be multiple terms per language. This is in contrast to all other fields of the type TaalString.",
+        "type": "string"
+      },
+      "Authority.name": {
+        "title": "Authority.name",
+        "description": "This property represents the official Name of the Public Service.",
+        "type": "string"
+      },
+      "Authority.regulationsText": {
+        "title": "Authority.regulationsText",
+        "description": "Text field in which the regulations on which the public service is based can be described. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.\r\nPreferably use the relationship 'follows(Rule)' to refer to the relevant legislation.",
+        "type": "string"
+      },
+      "Authority.furtherDescription": {
+        "title": "Authority.furtherDescription",
+        "description": "This property represents free text for additional information regarding the description of the Public Service. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Authority": {
+        "title": "Authority",
+        "type": "object",
+        "description": "Institutions are the actual interpretation of a product or service. The competent authority can vary: federal, Flemish, provincial,... And the service can be provided by another government such as a local government. A government service is a mandatory or optional set of activities that are or may be carried out by or on behalf of a public organisation, publicly funded and arising from public policy. Services may benefit an individual, an organisation or association, a company or other public authority, or groups of any of these parties. A service exists regardless of whether it is used or not. According to the revised European Interoperability Framework, a European public service includes any service provided by public authorities in Europe, or by other organisations on their behalf, to businesses, citizens or other public authorities.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Authority)",
+            "pattern": "^Authority$"
+          },
+          "productNumber": {
+            "$ref": "#/components/schemas/Authority.productNumber"
+          },
+          "lastModified": {
+            "$ref": "#/components/schemas/Authority.lastModified"
+          },
+          "creation": {
+            "$ref": "#/components/schemas/Authority.creation"
+          },
+          "archived": {
+            "$ref": "#/components/schemas/Authority.archived"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Authority.description"
+          },
+          "endServiceProvision": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "exceptions": {
+            "$ref": "#/components/schemas/Authority.exceptions"
+          },
+          "searchTerms": {
+            "type": "array",
+            "description": "This property represents a keyword, term or phrase to describe the Public Service. There may be multiple terms per language. This is in contrast to all other fields of the type TaalString. Lijst van LanguageString items.",
+            "items": {
+              "$ref": "#/components/schemas/Authority.searchTerms"
+            },
+            "minItems": 1
+          },
+          "languages": {
+            "type": "array",
+            "description": "Language in which public service is offered. This code list is managed by the Publications Office of the European Union. The valid values within the ipdc-lpdc implementation model are: NLD, FRA, DEU, ENG. The language concept URIs use the http protocol. Lijst van LanguageServices items.",
+            "items": {
+              "$ref": "#/components/schemas/LanguageServices"
+            },
+            "minItems": 1
+          },
+          "name": {
+            "$ref": "#/components/schemas/Authority.name"
+          },
+          "regulationsText": {
+            "$ref": "#/components/schemas/Authority.regulationsText"
+          },
+          "yourEuropeCategories": {
+            "type": "array",
+            "description": "YourEurope category under the Single Digital Gateway Regulation. Only services that fall within one of these categories should be forwarded to SDG. The categories and subcategories were determined by the European Parliament. These were translated by the IPDC - LPDC team into a code list in the absence of a European code list. The valid values can be found in the ttl file on the link in the code list column. Lijst van YourEuropeCategory items.",
+            "items": {
+              "$ref": "#/components/schemas/YourEuropeCategory"
+            },
+            "minItems": 1
+          },
+          "geographicalAreasOfApplication": {
+            "type": "array",
+            "description": "Geographical scope of a public service: Flemish provinces and municipalities. The valid values can be found in the ttl file on the link in the code list column. Lijst van GeographicScope items.",
+            "items": {
+              "$ref": "#/components/schemas/GeographicScope"
+            },
+            "minItems": 1
+          },
+          "startServiceProvision": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "targetGroups": {
+            "type": "array",
+            "description": "Target group to which a public service is focused. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van TargetGroup items.",
+            "items": {
+              "$ref": "#/components/schemas/TargetGroup"
+            },
+            "minItems": 1
+          },
+          "themes": {
+            "type": "array",
+            "description": "Theme of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van Theme items.",
+            "items": {
+              "$ref": "#/components/schemas/Theme"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type"
+          },
+          "publishingChannels": {
+            "type": "array",
+            "description": "Publication channel of a public service describes on which places the service will be visible. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. When a draft has the YourEurope publication channel, at least one value must be entered in the yourEuropeCategory field. Lijst van PublicationChannel items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicationChannel"
+            },
+            "minItems": 1
+          },
+          "tags": {
+            "type": "array",
+            "description": "Instance tag for a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Currently there are no valid values. Lijst van InstanceTag items.",
+            "items": {
+              "$ref": "#/components/schemas/InstanceTag"
+            },
+            "minItems": 1
+          },
+          "competentLevelsOfGovernment": {
+            "type": "array",
+            "description": "Competent level of government of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van CompetentLevelOfGovernment items.",
+            "items": {
+              "$ref": "#/components/schemas/CompetentLevelOfGovernment"
+            },
+            "minItems": 1
+          },
+          "executiveLevelsOfGovernance": {
+            "type": "array",
+            "description": "Executive level of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van ExecutiveLevel items.",
+            "items": {
+              "$ref": "#/components/schemas/ExecutiveLevel"
+            },
+            "minItems": 1
+          },
+          "furtherDescription": {
+            "$ref": "#/components/schemas/Authority.furtherDescription"
+          },
+          "competentAuthorities": {
+            "type": "array",
+            "description": "undefined Lijst van PublicOrganization items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicOrganization"
+            },
+            "minItems": 1
+          },
+          "executiveGovernments": {
+            "type": "array",
+            "description": "Links to the implementing organisations Lijst van PublicOrganization items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicOrganization"
+            },
+            "minItems": 1
+          },
+          "procedures": {
+            "type": "array",
+            "description": "undefined Lijst van Procedure items.",
+            "items": {
+              "$ref": "#/components/schemas/Procedure"
+            },
+            "minItems": 1
+          },
+          "costs": {
+            "type": "array",
+            "description": "undefined Lijst van Cost items.",
+            "items": {
+              "$ref": "#/components/schemas/Cost"
+            },
+            "minItems": 1
+          },
+          "websites": {
+            "type": "array",
+            "description": "moreInfo refers to online locations where additional information about something specifically related to public service is listed Lijst van Website items.",
+            "items": {
+              "$ref": "#/components/schemas/Website"
+            },
+            "minItems": 1
+          },
+          "financialBenefits": {
+            "type": "array",
+            "description": "undefined Lijst van FinancialBenefit items.",
+            "items": {
+              "$ref": "#/components/schemas/FinancialBenefit"
+            },
+            "minItems": 1
+          },
+          "regulations": {
+            "type": "array",
+            "description": "The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis. Lijst van Regulations items.",
+            "items": {
+              "$ref": "#/components/schemas/Regulations"
+            },
+            "minItems": 1
+          },
+          "contactDetails": {
+            "type": "array",
+            "description": "undefined Lijst van ContactDetails items.",
+            "items": {
+              "$ref": "#/components/schemas/ContactDetails"
+            },
+            "minItems": 1
+          },
+          "linkedConcept": {
+            "$ref": "#/components/schemas/Concept"
+          },
+          "conditions": {
+            "type": "array",
+            "description": "Textual description of the conditions for using the service. Lijst van Condition items.",
+            "items": {
+              "$ref": "#/components/schemas/Condition"
+            },
+            "minItems": 1
+          },
+          "isVersionOf": {
+            "type": "array",
+            "description": "Reference to the instance from which this snapshot was taken at a certain point in time. Lijst van InstanceSnapshot items.",
+            "items": {
+              "$ref": "#/components/schemas/InstanceSnapshot"
+            },
+            "minItems": 1
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/PublicOrganization"
+          }
+        },
+        "required": [
+          "@type",
+          "lastModified",
+          "creation",
+          "archived",
+          "description",
+          "name",
+          "geographicalAreasOfApplication",
+          "competentAuthorities",
+          "isVersionOf"
+        ]
+      },
+      "Cost.order": {
+        "title": "Cost.order",
+        "description": "Specifies the relative order of this item compared to its siblings. Items are sorted in ascending order, for example use 1 for the first, 2 for the second.",
+        "type": "number",
+        "format": "int64"
+      },
+      "Cost.description": {
+        "title": "Cost.description",
+        "description": "This property represents a free text description of the Cost. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Cost.name": {
+        "title": "Cost.name",
+        "description": "This property represents the name of the cost.",
+        "type": "string"
+      },
+      "Cost": {
+        "title": "Cost",
+        "type": "object",
+        "description": "The Cost class represents any costs related to the execution of a Public Service that the Agent consuming it needs to pay.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Cost)",
+            "pattern": "^Cost$"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Cost.order"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Cost.description"
+          },
+          "name": {
+            "$ref": "#/components/schemas/Cost.name"
+          }
+        },
+        "required": [
+          "@type",
+          "order",
+          "description",
+          "name"
+        ]
+      },
+      "FinancialBenefit.order": {
+        "title": "FinancialBenefit.order",
+        "description": "Specifies the relative order of this item compared to its siblings. Items are sorted in ascending order, for example use 1 for the first, 2 for the second.",
+        "type": "number",
+        "format": "int64"
+      },
+      "FinancialBenefit.description": {
+        "title": "FinancialBenefit.description",
+        "description": "This property represents a free text Description of the Output. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "FinancialBenefit.name": {
+        "title": "FinancialBenefit.name",
+        "description": "This property represents the official Name of the Output.",
+        "type": "string"
+      },
+      "FinancialBenefit": {
+        "title": "FinancialBenefit",
+        "type": "object",
+        "description": "We provide a subclass 'FinancialAdvantage' with 'Output'. This describes the premium amounts/subsidy amounts that are the result of the service.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse FinancialBenefit)",
+            "pattern": "^FinancialBenefit$"
+          },
+          "order": {
+            "$ref": "#/components/schemas/FinancialBenefit.order"
+          },
+          "description": {
+            "$ref": "#/components/schemas/FinancialBenefit.description"
+          },
+          "name": {
+            "$ref": "#/components/schemas/FinancialBenefit.name"
+          }
+        },
+        "required": [
+          "@type",
+          "order",
+          "description",
+          "name"
+        ]
+      },
+      "Regulations.order": {
+        "title": "Regulations.order",
+        "description": "Specifies the relative order of this item compared to its siblings. Items are sorted in ascending order, for example use 1 for the first, 2 for the second.",
+        "type": "number",
+        "format": "int64"
+      },
+      "Regulations.uRL": {
+        "title": "Regulations.uRL",
+        "description": "The URL of the legal resource Legal resource location must conform to the format described in RFC1738: https://datatracker.ietf.org/doc/html/rfc1738#section-3.3",
+        "type": "string"
+      },
+      "Regulations.name": {
+        "title": "Regulations.name",
+        "description": "This property represents the name of the legal resource.",
+        "type": "string"
+      },
+      "Regulations.description": {
+        "title": "Regulations.description",
+        "description": "This property represents a free text description of the legal resource. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Regulations": {
+        "title": "Regulations",
+        "type": "object",
+        "description": "This class represents the legislation, policy or policies that lie behind the Rules that govern the service.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Regulations)",
+            "pattern": "^Regulations$"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Regulations.order"
+          },
+          "uRL": {
+            "$ref": "#/components/schemas/Regulations.uRL"
+          },
+          "name": {
+            "$ref": "#/components/schemas/Regulations.name"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Regulations.description"
+          }
+        },
+        "required": [
+          "@type",
+          "order",
+          "uRL"
+        ]
+      },
+      "ConceptSnapshot.generatedAtTime": {
+        "title": "ConceptSnapshot.generatedAtTime",
+        "description": "Time when the snapshot of the concept was taken.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "ConceptSnapshot.lastModified": {
+        "title": "ConceptSnapshot.lastModified",
+        "description": "Time when the draft was last modified by an editor.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "ConceptSnapshot.creation": {
+        "title": "ConceptSnapshot.creation",
+        "description": "Time when the draft was created by an editor.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "ConceptSnapshot.archived": {
+        "title": "ConceptSnapshot.archived",
+        "description": "Value that indicates whether the draft is archived.",
+        "type": "boolean"
+      },
+      "ConceptSnapshot.productNumber": {
+        "title": "ConceptSnapshot.productNumber",
+        "description": "Identification number to uniquely identify an instance or concept. When creating a new draft, no product number can be passed on to IPDC or LPDC. The product numbers are managed by IPDC and when a new concept is created, a unique product number will be assigned in IPDC. As a result, when IPDC is read, a product number will always be available for each concept.",
+        "type": "string"
+      },
+      "ConceptSnapshot.description": {
+        "title": "ConceptSnapshot.description",
+        "description": "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "ConceptSnapshot.name": {
+        "title": "ConceptSnapshot.name",
+        "description": "This property represents the official Name of the Public Service.",
+        "type": "string"
+      },
+      "ConceptSnapshot.regulationsText": {
+        "title": "ConceptSnapshot.regulationsText",
+        "description": "Text field in which the regulations on which the public service is based can be described. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.\r\nPreferably use the relationship 'follows(Rule)' to refer to the relevant legislation.",
+        "type": "string"
+      },
+      "ConceptSnapshot.exceptions": {
+        "title": "ConceptSnapshot.exceptions",
+        "description": "Text field in which exceptions to procedures, cost prices, ... can be indicated Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "ConceptSnapshot.furtherDescription": {
+        "title": "ConceptSnapshot.furtherDescription",
+        "description": "This property represents free text for additional information regarding the description of the Public Service. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "ConceptSnapshot.searchTerms": {
+        "title": "ConceptSnapshot.searchTerms",
+        "description": "This property represents a keyword, term or phrase to describe the Public Service. There may be multiple terms per language. This is in contrast to all other fields of the type TaalString.",
+        "type": "string"
+      },
+      "ConceptSnapshot": {
+        "title": "ConceptSnapshot",
+        "type": "object",
+        "description": "A concept snapshot depicts what a concept looked like at a certain point in time. Each time a functional change is made, a new concept snapshot will be created. In this way, the complete editorial history of a concept is recorded.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse ConceptSnapshot)",
+            "pattern": "^ConceptSnapshot$"
+          },
+          "generatedAtTime": {
+            "$ref": "#/components/schemas/ConceptSnapshot.generatedAtTime"
+          },
+          "lastModified": {
+            "$ref": "#/components/schemas/ConceptSnapshot.lastModified"
+          },
+          "creation": {
+            "$ref": "#/components/schemas/ConceptSnapshot.creation"
+          },
+          "archived": {
+            "$ref": "#/components/schemas/ConceptSnapshot.archived"
+          },
+          "productNumber": {
+            "$ref": "#/components/schemas/ConceptSnapshot.productNumber"
+          },
+          "description": {
+            "$ref": "#/components/schemas/ConceptSnapshot.description"
+          },
+          "competentLevelsOfGovernment": {
+            "type": "array",
+            "description": "Competent level of government of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van CompetentLevelOfGovernment items.",
+            "items": {
+              "$ref": "#/components/schemas/CompetentLevelOfGovernment"
+            },
+            "minItems": 1
+          },
+          "targetGroups": {
+            "type": "array",
+            "description": "Target group to which a public service is focused. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van TargetGroup items.",
+            "items": {
+              "$ref": "#/components/schemas/TargetGroup"
+            },
+            "minItems": 1
+          },
+          "endServiceProvision": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "name": {
+            "$ref": "#/components/schemas/ConceptSnapshot.name"
+          },
+          "publishingChannels": {
+            "type": "array",
+            "description": "Publication channel of a public service describes on which places the service will be visible. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. When a draft has the YourEurope publication channel, at least one value must be entered in the yourEuropeCategory field. Lijst van PublicationChannel items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicationChannel"
+            },
+            "minItems": 1
+          },
+          "regulationsText": {
+            "$ref": "#/components/schemas/ConceptSnapshot.regulationsText"
+          },
+          "startServiceProvision": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "tags": {
+            "type": "array",
+            "description": "Concept tag for a public service concept. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van ConceptTag items.",
+            "items": {
+              "$ref": "#/components/schemas/ConceptTag"
+            },
+            "minItems": 1
+          },
+          "themes": {
+            "type": "array",
+            "description": "Theme of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van Theme items.",
+            "items": {
+              "$ref": "#/components/schemas/Theme"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type"
+          },
+          "executiveLevelsOfGovernance": {
+            "type": "array",
+            "description": "Executive level of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van ExecutiveLevel items.",
+            "items": {
+              "$ref": "#/components/schemas/ExecutiveLevel"
+            },
+            "minItems": 1
+          },
+          "exceptions": {
+            "$ref": "#/components/schemas/ConceptSnapshot.exceptions"
+          },
+          "furtherDescription": {
+            "$ref": "#/components/schemas/ConceptSnapshot.furtherDescription"
+          },
+          "yourEuropeCategories": {
+            "type": "array",
+            "description": "YourEurope category under the Single Digital Gateway Regulation. Only services that fall within one of these categories should be forwarded to SDG. The categories and subcategories were determined by the European Parliament. These were translated by the IPDC - LPDC team into a code list in the absence of a European code list. The valid values can be found in the ttl file on the link in the code list column. Lijst van YourEuropeCategory items.",
+            "items": {
+              "$ref": "#/components/schemas/YourEuropeCategory"
+            },
+            "minItems": 1
+          },
+          "searchTerms": {
+            "type": "array",
+            "description": "This property represents a keyword, term or phrase to describe the Public Service. There may be multiple terms per language. This is in contrast to all other fields of the type TaalString. Lijst van LanguageString items.",
+            "items": {
+              "$ref": "#/components/schemas/ConceptSnapshot.searchTerms"
+            },
+            "minItems": 1
+          },
+          "financialBenefits": {
+            "type": "array",
+            "description": "undefined Lijst van FinancialBenefit items.",
+            "items": {
+              "$ref": "#/components/schemas/FinancialBenefit"
+            },
+            "minItems": 1
+          },
+          "costs": {
+            "type": "array",
+            "description": "undefined Lijst van Cost items.",
+            "items": {
+              "$ref": "#/components/schemas/Cost"
+            },
+            "minItems": 1
+          },
+          "procedures": {
+            "type": "array",
+            "description": "undefined Lijst van Procedure items.",
+            "items": {
+              "$ref": "#/components/schemas/Procedure"
+            },
+            "minItems": 1
+          },
+          "executiveGovernments": {
+            "type": "array",
+            "description": "Links to the implementing organisations Lijst van PublicOrganization items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicOrganization"
+            },
+            "minItems": 1
+          },
+          "competentAuthorities": {
+            "type": "array",
+            "description": "undefined Lijst van PublicOrganization items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicOrganization"
+            },
+            "minItems": 1
+          },
+          "isVersionOf": {
+            "$ref": "#/components/schemas/Concept"
+          },
+          "regulations": {
+            "type": "array",
+            "description": "The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis. Lijst van Regulations items.",
+            "items": {
+              "$ref": "#/components/schemas/Regulations"
+            },
+            "minItems": 1
+          },
+          "conditions": {
+            "type": "array",
+            "description": "Textual description of the conditions for using the service. Lijst van Condition items.",
+            "items": {
+              "$ref": "#/components/schemas/Condition"
+            },
+            "minItems": 1
+          },
+          "websites": {
+            "type": "array",
+            "description": "moreInfo refers to online locations where additional information about something specifically related to public service is listed Lijst van Website items.",
+            "items": {
+              "$ref": "#/components/schemas/Website"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "generatedAtTime",
+          "lastModified",
+          "creation",
+          "archived",
+          "description",
+          "name",
+          "isVersionOf"
+        ]
+      },
+      "InstanceSnapshot.generatedAtTime": {
+        "title": "InstanceSnapshot.generatedAtTime",
+        "description": "Time when the snapshot of the instance was taken.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "InstanceSnapshot.archived": {
+        "title": "InstanceSnapshot.archived",
+        "description": "Value that indicates whether the instance is archived.",
+        "type": "boolean"
+      },
+      "InstanceSnapshot.lastModified": {
+        "title": "InstanceSnapshot.lastModified",
+        "description": "Time when the instance was last modified by an editor.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "InstanceSnapshot.productNumber": {
+        "title": "InstanceSnapshot.productNumber",
+        "description": "Identification number to uniquely identify an instance or concept. When creating a new instance, no product number can be passed to IPDC or LPDC. The product numbers are managed by IPDC and when a new instance is created, a unique product number will be assigned in IPDC. As a result, when IPDC is read, a product number will always be available on each instance.",
+        "type": "string"
+      },
+      "InstanceSnapshot.creation": {
+        "title": "InstanceSnapshot.creation",
+        "description": "Time when the instance was created by an editor.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "InstanceSnapshot.regulationsText": {
+        "title": "InstanceSnapshot.regulationsText",
+        "description": "Text field in which the regulations on which the public service is based can be described. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.\r\nPreferably use the relationship 'follows(Rule)' to refer to the relevant legislation.",
+        "type": "string"
+      },
+      "InstanceSnapshot.exceptions": {
+        "title": "InstanceSnapshot.exceptions",
+        "description": "Text field in which exception to procedures, cost prices, ... can be indicated Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "InstanceSnapshot.furtherDescription": {
+        "title": "InstanceSnapshot.furtherDescription",
+        "description": "This property represents free text for additional information regarding the description of the Public Service. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "InstanceSnapshot.searchTerms": {
+        "title": "InstanceSnapshot.searchTerms",
+        "description": "This property represents a keyword, term or phrase to describe the Public Service. There may be multiple terms per language. This is in contrast to all other fields of the type TaalString.",
+        "type": "string"
+      },
+      "InstanceSnapshot.name": {
+        "title": "InstanceSnapshot.name",
+        "description": "This property represents the official Name of the Public Service.",
+        "type": "string"
+      },
+      "InstanceSnapshot.description": {
+        "title": "InstanceSnapshot.description",
+        "description": "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "InstanceSnapshot": {
+        "title": "InstanceSnapshot",
+        "type": "object",
+        "description": "An instance snapshot shows what an instance looked like at a particular point in time. Each time a functional change is made, a new instance snapshot will be created. In this way, the complete editorial history of an instance is recorded.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse InstanceSnapshot)",
+            "pattern": "^InstanceSnapshot$"
+          },
+          "generatedAtTime": {
+            "$ref": "#/components/schemas/InstanceSnapshot.generatedAtTime"
+          },
+          "archived": {
+            "$ref": "#/components/schemas/InstanceSnapshot.archived"
+          },
+          "lastModified": {
+            "$ref": "#/components/schemas/InstanceSnapshot.lastModified"
+          },
+          "productNumber": {
+            "$ref": "#/components/schemas/InstanceSnapshot.productNumber"
+          },
+          "creation": {
+            "$ref": "#/components/schemas/InstanceSnapshot.creation"
+          },
+          "endServiceProvision": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "geographicalAreasOfApplication": {
+            "type": "array",
+            "description": "Geographical scope of a public service: Flemish provinces and municipalities. The valid values can be found in the ttl file on the link in the code list column. Lijst van GeographicScope items.",
+            "items": {
+              "$ref": "#/components/schemas/GeographicScope"
+            },
+            "minItems": 1
+          },
+          "publishingChannels": {
+            "type": "array",
+            "description": "Publication channel of a public service describes on which places the service will be visible. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. When a draft has the YourEurope publication channel, at least one value must be entered in the yourEuropeCategory field. Lijst van PublicationChannel items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicationChannel"
+            },
+            "minItems": 1
+          },
+          "regulationsText": {
+            "$ref": "#/components/schemas/InstanceSnapshot.regulationsText"
+          },
+          "startServiceProvision": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "tags": {
+            "type": "array",
+            "description": "Instance tag for a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Currently there are no valid values. Lijst van InstanceTag items.",
+            "items": {
+              "$ref": "#/components/schemas/InstanceTag"
+            },
+            "minItems": 1
+          },
+          "languages": {
+            "type": "array",
+            "description": "Language in which public service is offered. This code list is managed by the Publications Office of the European Union. The valid values within the ipdc-lpdc implementation model are: NLD, FRA, DEU, ENG. The language concept URIs use the http protocol. Lijst van LanguageServices items.",
+            "items": {
+              "$ref": "#/components/schemas/LanguageServices"
+            },
+            "minItems": 1
+          },
+          "themes": {
+            "type": "array",
+            "description": "Theme of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van Theme items.",
+            "items": {
+              "$ref": "#/components/schemas/Theme"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type"
+          },
+          "executiveLevelsOfGovernance": {
+            "type": "array",
+            "description": "Executive level of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van ExecutiveLevel items.",
+            "items": {
+              "$ref": "#/components/schemas/ExecutiveLevel"
+            },
+            "minItems": 1
+          },
+          "exceptions": {
+            "$ref": "#/components/schemas/InstanceSnapshot.exceptions"
+          },
+          "furtherDescription": {
+            "$ref": "#/components/schemas/InstanceSnapshot.furtherDescription"
+          },
+          "yourEuropeCategories": {
+            "type": "array",
+            "description": "YourEurope category under the Single Digital Gateway Regulation. Only services that fall within one of these categories should be forwarded to SDG. The categories and subcategories were determined by the European Parliament. These were translated by the IPDC - LPDC team into a code list in the absence of a European code list. The valid values can be found in the ttl file on the link in the code list column. Lijst van YourEuropeCategory items.",
+            "items": {
+              "$ref": "#/components/schemas/YourEuropeCategory"
+            },
+            "minItems": 1
+          },
+          "searchTerms": {
+            "type": "array",
+            "description": "This property represents a keyword, term or phrase to describe the Public Service. There may be multiple terms per language. This is in contrast to all other fields of the type TaalString. Lijst van LanguageString items.",
+            "items": {
+              "$ref": "#/components/schemas/InstanceSnapshot.searchTerms"
+            },
+            "minItems": 1
+          },
+          "name": {
+            "$ref": "#/components/schemas/InstanceSnapshot.name"
+          },
+          "description": {
+            "$ref": "#/components/schemas/InstanceSnapshot.description"
+          },
+          "competentLevelsOfGovernment": {
+            "type": "array",
+            "description": "Competent level of government of a public service. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van CompetentLevelOfGovernment items.",
+            "items": {
+              "$ref": "#/components/schemas/CompetentLevelOfGovernment"
+            },
+            "minItems": 1
+          },
+          "targetGroups": {
+            "type": "array",
+            "description": "Target group to which a public service is focused. This code list is managed by the IPDC - LPDC team. The valid values can be found in the ttl file on the link in the code list column. Lijst van TargetGroup items.",
+            "items": {
+              "$ref": "#/components/schemas/TargetGroup"
+            },
+            "minItems": 1
+          },
+          "isVersionOf": {
+            "$ref": "#/components/schemas/Authority"
+          },
+          "linkedConcept": {
+            "$ref": "#/components/schemas/Concept"
+          },
+          "contactDetails": {
+            "type": "array",
+            "description": "undefined Lijst van ContactDetails items.",
+            "items": {
+              "$ref": "#/components/schemas/ContactDetails"
+            },
+            "minItems": 1
+          },
+          "financialBenefits": {
+            "type": "array",
+            "description": "undefined Lijst van FinancialBenefit items.",
+            "items": {
+              "$ref": "#/components/schemas/FinancialBenefit"
+            },
+            "minItems": 1
+          },
+          "costs": {
+            "type": "array",
+            "description": "undefined Lijst van Cost items.",
+            "items": {
+              "$ref": "#/components/schemas/Cost"
+            },
+            "minItems": 1
+          },
+          "procedures": {
+            "type": "array",
+            "description": "undefined Lijst van Procedure items.",
+            "items": {
+              "$ref": "#/components/schemas/Procedure"
+            },
+            "minItems": 1
+          },
+          "competentAuthorities": {
+            "type": "array",
+            "description": "undefined Lijst van PublicOrganization items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicOrganization"
+            },
+            "minItems": 1
+          },
+          "executiveGovernments": {
+            "type": "array",
+            "description": "Links to the implementing organisations Lijst van PublicOrganization items.",
+            "items": {
+              "$ref": "#/components/schemas/PublicOrganization"
+            },
+            "minItems": 1
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/PublicOrganization"
+          },
+          "regulations": {
+            "type": "array",
+            "description": "The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis. Lijst van Regulations items.",
+            "items": {
+              "$ref": "#/components/schemas/Regulations"
+            },
+            "minItems": 1
+          },
+          "conditions": {
+            "type": "array",
+            "description": "Textual description of the conditions for using the service. Lijst van Condition items.",
+            "items": {
+              "$ref": "#/components/schemas/Condition"
+            },
+            "minItems": 1
+          },
+          "websites": {
+            "type": "array",
+            "description": "moreInfo refers to online locations where additional information about something specifically related to public service is listed Lijst van Website items.",
+            "items": {
+              "$ref": "#/components/schemas/Website"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "generatedAtTime",
+          "archived",
+          "lastModified",
+          "creation",
+          "geographicalAreasOfApplication",
+          "name",
+          "description",
+          "isVersionOf",
+          "competentAuthorities"
+        ]
+      },
+      "Address.houseNumber": {
+        "title": "Address.houseNumber",
+        "description": "Alphanumeric code officially assigned to building units, berths, stands or plots.",
+        "type": "string"
+      },
+      "Address.boxNumber": {
+        "title": "Address.boxNumber",
+        "description": "Officially assigned alphanumeric code that is added to the house number to distinguish several building units, pitches, berths or plots that have the same house number.",
+        "type": "string"
+      },
+      "Address.postalCode": {
+        "title": "Address.postalCode",
+        "description": "Code that designates the geographical area that groups the addresses for postal purposes.",
+        "type": "string"
+      },
+      "Address.country": {
+        "title": "Address.country",
+        "description": "Country in which the address is located.",
+        "type": "string"
+      },
+      "Address.municipalityName": {
+        "title": "Address.municipalityName",
+        "description": "Municipality name of the address.",
+        "type": "string"
+      },
+      "Address.streetName": {
+        "title": "Address.streetName",
+        "description": "Address component with the name officially assigned to a street (lane, passageway, square) or to a hamlet and to which addresses may be linked.",
+        "type": "string"
+      },
+      "Address": {
+        "title": "Address",
+        "type": "object",
+        "description": "Address that can be written to or visited.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Address)",
+            "pattern": "^Address$"
+          },
+          "houseNumber": {
+            "$ref": "#/components/schemas/Address.houseNumber"
+          },
+          "boxNumber": {
+            "$ref": "#/components/schemas/Address.boxNumber"
+          },
+          "postalCode": {
+            "$ref": "#/components/schemas/Address.postalCode"
+          },
+          "country": {
+            "$ref": "#/components/schemas/Address.country"
+          },
+          "municipalityName": {
+            "$ref": "#/components/schemas/Address.municipalityName"
+          },
+          "streetName": {
+            "$ref": "#/components/schemas/Address.streetName"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Procedure.order": {
+        "title": "Procedure.order",
+        "description": "Specifies the relative order of this item compared to its siblings. Items are sorted in ascending order, for example use 1 for the first, 2 for the second.",
+        "type": "number",
+        "format": "int64"
+      },
+      "Procedure.description": {
+        "title": "Procedure.description",
+        "description": "This property represents a free text Description of the Rule. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Procedure.name": {
+        "title": "Procedure.name",
+        "description": "This property represents the Name of the Rule.",
+        "type": "string"
+      },
+      "Procedure": {
+        "title": "Procedure",
+        "type": "object",
+        "description": "The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows. It includes the terms of service, licence, and authentication requirements of the Public Service. Instances of the Rule class are FRBR (Functional Requirements for Bibliographic Records) Expressions, that is, a concrete expression such as a document, of the more abstract concept of the rules themselves. This model does not envisage instances of the Rule class as machine-readable business rules. Detailed modelling of the rules related to Public Services is out of scope of this model.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Procedure)",
+            "pattern": "^Procedure$"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Procedure.order"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Procedure.description"
+          },
+          "name": {
+            "$ref": "#/components/schemas/Procedure.name"
+          },
+          "websites": {
+            "type": "array",
+            "description": "Link to online location where the procedure can be started. Lijst van Website items.",
+            "items": {
+              "$ref": "#/components/schemas/Website"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "order",
+          "description",
+          "name"
+        ]
+      },
+      "Condition.order": {
+        "title": "Condition.order",
+        "description": "Specifies the relative order of this item compared to its siblings. Items are sorted in ascending order, for example use 1 for the first, 2 for the second.",
+        "type": "number",
+        "format": "int64"
+      },
+      "Condition.description": {
+        "title": "Condition.description",
+        "description": "A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Requirement being instantiated. Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Condition.name": {
+        "title": "Condition.name",
+        "description": "This property represents the official Name of the Requirement.",
+        "type": "string"
+      },
+      "Condition": {
+        "title": "Condition",
+        "type": "object",
+        "description": "A normal requirement is an atomic requirement. Some criteria can be expressed with several atomic requirements. A normal requirement can specify the expected value that the requirement response has to contain, or a range of threshold values within which the requirement response has to fit in. The normal requirement may apply to a certain period of time. It also can provide a list of candidate evidences that the responder can use to prove the normal requirement.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Condition)",
+            "pattern": "^Condition$"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Condition.order"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Condition.description"
+          },
+          "name": {
+            "$ref": "#/components/schemas/Condition.name"
+          },
+          "proof": {
+            "$ref": "#/components/schemas/Proof"
+          }
+        },
+        "required": [
+          "@type",
+          "order",
+          "description",
+          "name"
+        ]
+      },
+      "Proof.description": {
+        "title": "Proof.description",
+        "description": "Describes the required input Rich Text (HTML) is allowed. Note: must not contain executable (JavaScript) code and anchor tags with relative urls.",
+        "type": "string"
+      },
+      "Proof.name": {
+        "title": "Proof.name",
+        "description": "This property represents the official Name of the Evidence.",
+        "type": "string"
+      },
+      "Proof": {
+        "title": "Proof",
+        "type": "object",
+        "description": "The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can document or support a response. It contains information that proves that a normal requirement exists or is true.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Proof)",
+            "pattern": "^Proof$"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Proof.description"
+          },
+          "name": {
+            "$ref": "#/components/schemas/Proof.name"
+          }
+        },
+        "required": [
+          "@type",
+          "description",
+          "name"
+        ]
+      },
+      "PublicOrganization": {
+        "title": "PublicOrganization",
+        "type": "object",
+        "description": "An organisation that belongs to the public sector according to a legal framework, regardless of the level of government at which that framework is in force.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PublicOrganization)",
+            "pattern": "^PublicOrganization$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    },
+    "links": {
+      "ContactDetails.address": {
+        "operationId": "ContactDetailsGET",
+        "parameters": {
+          "id": "$response.body#/ContactDetails.address/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Address` op te halen."
+      },
+      "Concept.endServiceProvision": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.endServiceProvision/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
+      },
+      "Concept.startServiceProvision": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.startServiceProvision/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
+      },
+      "Concept.targetGroups": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.targetGroups/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TargetGroup` op te halen."
+      },
+      "Concept.themes": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.themes/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Theme` op te halen."
+      },
+      "Concept.type": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Type` op te halen."
+      },
+      "Concept.yourEuropeCategories": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.yourEuropeCategories/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `YourEuropeCategory` op te halen."
+      },
+      "Concept.publishingChannels": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.publishingChannels/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicationChannel` op te halen."
+      },
+      "Concept.tags": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.tags/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ConceptTag` op te halen."
+      },
+      "Concept.competentLevelsOfGovernment": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.competentLevelsOfGovernment/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CompetentLevelOfGovernment` op te halen."
+      },
+      "Concept.executiveLevelsOfGovernance": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.executiveLevelsOfGovernance/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ExecutiveLevel` op te halen."
+      },
+      "Concept.executiveGovernments": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.executiveGovernments/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "Concept.websites": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.websites/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Website` op te halen."
+      },
+      "Concept.regulations": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.regulations/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Regulations` op te halen."
+      },
+      "Concept.procedures": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.procedures/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Procedure` op te halen."
+      },
+      "Concept.financialBenefits": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.financialBenefits/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `FinancialBenefit` op te halen."
+      },
+      "Concept.costs": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.costs/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Cost` op te halen."
+      },
+      "Concept.linkedConcept": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.linkedConcept/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Authority` op te halen."
+      },
+      "Concept.conditions": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.conditions/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Condition` op te halen."
+      },
+      "Concept.competentAuthorities": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.competentAuthorities/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "Concept.isVersionOf": {
+        "operationId": "ConceptGET",
+        "parameters": {
+          "id": "$response.body#/Concept.isVersionOf/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ConceptSnapshot` op te halen."
+      },
+      "Authority.endServiceProvision": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.endServiceProvision/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
+      },
+      "Authority.languages": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.languages/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LanguageServices` op te halen."
+      },
+      "Authority.yourEuropeCategories": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.yourEuropeCategories/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `YourEuropeCategory` op te halen."
+      },
+      "Authority.geographicalAreasOfApplication": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.geographicalAreasOfApplication/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicScope` op te halen."
+      },
+      "Authority.startServiceProvision": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.startServiceProvision/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
+      },
+      "Authority.targetGroups": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.targetGroups/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TargetGroup` op te halen."
+      },
+      "Authority.themes": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.themes/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Theme` op te halen."
+      },
+      "Authority.type": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Type` op te halen."
+      },
+      "Authority.publishingChannels": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.publishingChannels/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicationChannel` op te halen."
+      },
+      "Authority.tags": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.tags/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InstanceTag` op te halen."
+      },
+      "Authority.competentLevelsOfGovernment": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.competentLevelsOfGovernment/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CompetentLevelOfGovernment` op te halen."
+      },
+      "Authority.executiveLevelsOfGovernance": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.executiveLevelsOfGovernance/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ExecutiveLevel` op te halen."
+      },
+      "Authority.competentAuthorities": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.competentAuthorities/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "Authority.executiveGovernments": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.executiveGovernments/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "Authority.procedures": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.procedures/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Procedure` op te halen."
+      },
+      "Authority.costs": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.costs/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Cost` op te halen."
+      },
+      "Authority.websites": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.websites/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Website` op te halen."
+      },
+      "Authority.financialBenefits": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.financialBenefits/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `FinancialBenefit` op te halen."
+      },
+      "Authority.regulations": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.regulations/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Regulations` op te halen."
+      },
+      "Authority.contactDetails": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.contactDetails/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ContactDetails` op te halen."
+      },
+      "Authority.linkedConcept": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.linkedConcept/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Concept` op te halen."
+      },
+      "Authority.conditions": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.conditions/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Condition` op te halen."
+      },
+      "Authority.isVersionOf": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.isVersionOf/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InstanceSnapshot` op te halen."
+      },
+      "Authority.createdBy": {
+        "operationId": "AuthorityGET",
+        "parameters": {
+          "id": "$response.body#/Authority.createdBy/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "ConceptSnapshot.competentLevelsOfGovernment": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.competentLevelsOfGovernment/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CompetentLevelOfGovernment` op te halen."
+      },
+      "ConceptSnapshot.targetGroups": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.targetGroups/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TargetGroup` op te halen."
+      },
+      "ConceptSnapshot.endServiceProvision": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.endServiceProvision/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
+      },
+      "ConceptSnapshot.publishingChannels": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.publishingChannels/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicationChannel` op te halen."
+      },
+      "ConceptSnapshot.startServiceProvision": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.startServiceProvision/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
+      },
+      "ConceptSnapshot.tags": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.tags/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ConceptTag` op te halen."
+      },
+      "ConceptSnapshot.themes": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.themes/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Theme` op te halen."
+      },
+      "ConceptSnapshot.type": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Type` op te halen."
+      },
+      "ConceptSnapshot.executiveLevelsOfGovernance": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.executiveLevelsOfGovernance/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ExecutiveLevel` op te halen."
+      },
+      "ConceptSnapshot.yourEuropeCategories": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.yourEuropeCategories/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `YourEuropeCategory` op te halen."
+      },
+      "ConceptSnapshot.financialBenefits": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.financialBenefits/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `FinancialBenefit` op te halen."
+      },
+      "ConceptSnapshot.costs": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.costs/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Cost` op te halen."
+      },
+      "ConceptSnapshot.procedures": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.procedures/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Procedure` op te halen."
+      },
+      "ConceptSnapshot.executiveGovernments": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.executiveGovernments/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "ConceptSnapshot.competentAuthorities": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.competentAuthorities/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "ConceptSnapshot.isVersionOf": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.isVersionOf/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Concept` op te halen."
+      },
+      "ConceptSnapshot.regulations": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.regulations/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Regulations` op te halen."
+      },
+      "ConceptSnapshot.conditions": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.conditions/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Condition` op te halen."
+      },
+      "ConceptSnapshot.websites": {
+        "operationId": "ConceptSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/ConceptSnapshot.websites/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Website` op te halen."
+      },
+      "InstanceSnapshot.endServiceProvision": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.endServiceProvision/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
+      },
+      "InstanceSnapshot.geographicalAreasOfApplication": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.geographicalAreasOfApplication/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicScope` op te halen."
+      },
+      "InstanceSnapshot.publishingChannels": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.publishingChannels/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicationChannel` op te halen."
+      },
+      "InstanceSnapshot.startServiceProvision": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.startServiceProvision/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DateTime` op te halen."
+      },
+      "InstanceSnapshot.tags": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.tags/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `InstanceTag` op te halen."
+      },
+      "InstanceSnapshot.languages": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.languages/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LanguageServices` op te halen."
+      },
+      "InstanceSnapshot.themes": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.themes/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Theme` op te halen."
+      },
+      "InstanceSnapshot.type": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Type` op te halen."
+      },
+      "InstanceSnapshot.executiveLevelsOfGovernance": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.executiveLevelsOfGovernance/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ExecutiveLevel` op te halen."
+      },
+      "InstanceSnapshot.yourEuropeCategories": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.yourEuropeCategories/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `YourEuropeCategory` op te halen."
+      },
+      "InstanceSnapshot.competentLevelsOfGovernment": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.competentLevelsOfGovernment/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CompetentLevelOfGovernment` op te halen."
+      },
+      "InstanceSnapshot.targetGroups": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.targetGroups/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `TargetGroup` op te halen."
+      },
+      "InstanceSnapshot.isVersionOf": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.isVersionOf/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Authority` op te halen."
+      },
+      "InstanceSnapshot.linkedConcept": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.linkedConcept/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Concept` op te halen."
+      },
+      "InstanceSnapshot.contactDetails": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.contactDetails/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `ContactDetails` op te halen."
+      },
+      "InstanceSnapshot.financialBenefits": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.financialBenefits/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `FinancialBenefit` op te halen."
+      },
+      "InstanceSnapshot.costs": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.costs/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Cost` op te halen."
+      },
+      "InstanceSnapshot.procedures": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.procedures/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Procedure` op te halen."
+      },
+      "InstanceSnapshot.competentAuthorities": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.competentAuthorities/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "InstanceSnapshot.executiveGovernments": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.executiveGovernments/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "InstanceSnapshot.createdBy": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.createdBy/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PublicOrganization` op te halen."
+      },
+      "InstanceSnapshot.regulations": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.regulations/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Regulations` op te halen."
+      },
+      "InstanceSnapshot.conditions": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.conditions/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Condition` op te halen."
+      },
+      "InstanceSnapshot.websites": {
+        "operationId": "InstanceSnapshotGET",
+        "parameters": {
+          "id": "$response.body#/InstanceSnapshot.websites/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Website` op te halen."
+      },
+      "Procedure.websites": {
+        "operationId": "ProcedureGET",
+        "parameters": {
+          "id": "$response.body#/Procedure.websites/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Website` op te halen."
+      },
+      "Condition.proof": {
+        "operationId": "ConditionGET",
+        "parameters": {
+          "id": "$response.body#/Condition.proof/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Proof` op te halen."
+      }
+    }
+  }
+}
