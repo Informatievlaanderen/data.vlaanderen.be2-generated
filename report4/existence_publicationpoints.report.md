@@ -452,6 +452,13 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/vocabularium/gezondheidstoestand/ontwerpstandaard/2025-03-12/index.html'
 
+#||#    + checking /home/circleci/project/config/dev/passenger-transport-hubs.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/mobiliteit/passenger-transport-hubs/pieter/index.html'
+
 #||#    + checking /home/circleci/project/config/dev/persoon-im.publication.json
 #||# 
 Directory check
