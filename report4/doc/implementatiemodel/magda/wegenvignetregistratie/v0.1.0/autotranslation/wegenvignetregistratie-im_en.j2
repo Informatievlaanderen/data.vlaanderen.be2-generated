@@ -1,0 +1,42 @@
+{% extends "impl_en.j2" %}
+
+{% block metainfo %}
+<div class="head" role="metainfo" id="metainfo">
+     <dl>
+        <dt>Source data</dt>
+        <dd>
+           <a href="https://github.com/Informatievlaanderen/OSLOthema-wegenvignetregistratie/releases/tag/{{ data.metadata.branchtag }}">https://github.com/Informatievlaanderen/OSLOthema-wegenvignetregistratie/releases/tag/{{ data.metadata.branchtag }}</a>
+        </dd>
+        <dt>Changelog</dt>
+        <dd>
+           <a href="{{ data.metadata.documentroot }}/resources/CHANGELOG.md">{{ data.metadata.documentroot }}/resources/CHANGELOG.md</a>
+        </dd>
+        <dt>Comments and feedback</dt>
+        <dd>
+           <a href="{{ data.metadata.feedbackurl }}">{{ data.metadata.feedbackurl }}</a>
+        </dd>
+        <dd>
+           <a href="{{ data.metadata.standaardregisterurl }}">{{ data.metadata.defaultregisterurl }}</a>
+        </dd>{% if data.metadata.dependencies %}           <dt>Dependencies</dt>
+           <dd>{% for dep in metadata.dependencies %}
+                 <a href="{{ dep.packageurl }}">{{ dep.packagelabel }}</a>
+              {%endfor %}           </dd>{%endif %}     </dl>
+</div>
+{% endblock %}
+
+{% block summary %}
+<p>The MAGDA Road Vignette Registrations Implementation Model is based on the <a href="" target="_blank">MAGDA Vehicle Registration Implementation Model</a> that
+in turn relies on <a href="https://www.eucaris.net/" target="_blank">Eucaris</a>,
+the European standard for exchanging vehicle registrations between Member States.</p>
+<p>The deployment model reuses several elements of <a href="https://schema.org/Vehicle" target="_blank">Schema.org</a>
+where all relevant attributes about vehicles are included that also apply to a registration of a vehicle.</p>
+{% endblock %}
+
+{% block swagger %}
+<p>A set of reusable Swagger OpenAPI components for this deployment model can be found at:
+<a href="{{ data.metadata.documentroot }}/resources/swagger/components.yaml" target="_blank">{{ data.metadata.documentroot }}/resources/swagger/components.yaml</a>
+</p>
+<p>These components are used in the MAGDA OpenAPI description of the road vignette registrations REST service, which can be found here:
+<a href="{{ data.metadata.documentroot }}/resources/swagger/MAGDA-REST-wegenvignetregistraties-Swagger.yaml" target="_blank">{{ data.metadata.documentroot }}/resources/swagger/MAGDA-REST-wegenvignetregistraties-Swagger.yaml</a>
+</p>
+{% endblock %}

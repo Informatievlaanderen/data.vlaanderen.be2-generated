@@ -170,6 +170,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/weg.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/wegenvignetregistratie-im.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/wetgeving.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/zaalreservatie.publication.json

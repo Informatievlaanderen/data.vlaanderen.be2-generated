@@ -1,0 +1,31 @@
+{% extends "voc2_en.j2" %}
+
+{% block metainfo %}
+<div class="head" role="metainfo" id="metainfo">
+     <dl>
+        <dt>Source data</dt>
+        <dd>
+           <a href="https://github.com/Informatievlaanderen/OSLOthema-wegenvignetregistratie/releases/tag/{{ data.metadata.branchtag }}">https://github.com/Informatievlaanderen/OSLOthema-wegenvignetregistratie/releases/tag/{{ data.metadata.branchtag }}</a>
+        </dd>
+        <dt>Changelog</dt>
+        <dd>
+           <a href="{{ data.metadata.documentroot }}/resources/CHANGELOG.md">{{ data.metadata.documentroot }}/resources/CHANGELOG.md</a>
+        </dd>
+        <dt>Comments and feedback</dt>
+        <dd>
+           <a href="{{ data.metadata.feedbackurl }}">{{ data.metadata.feedbackurl }}</a>
+        </dd>
+        <dd>
+           <a href="{{ data.metadata.standaardregisterurl }}">{{ data.metadata.defaultregisterurl }}</a>
+        </dd>{% if data.metadata.dependencies %}           <dt>Dependencies</dt>
+           <dd>{% for dep in metadata.dependencies %}
+                 <a href="{{ dep.packageurl }}">{{ dep.packagelabel }}</a>
+              {%endfor %}           </dd>{%endif %}     </dl>
+</div>
+{% endblock %}
+
+{% block summary %}
+<p>The MAGDA Road Vignette Registrations Vocabulary contains the relevant terms to enable the data exchange
+of road vignette registrations according to a REST API on the MAGDA platform. The crucial class here is Road VignetteRegistrationEnvelope
+that links both road vignette registrations and MAGDA Exceptions.</p>
+{% endblock %}
