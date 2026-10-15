@@ -458,6 +458,7 @@ Directory check
 
 index.html check
 error: missing '/tmp/generated/doc/vocabularium/mobiliteit/passenger-transport-hubs/pieter/index.html'
+error: missing '/tmp/generated/doc/vocabularium/mobiliteit/passenger-transport-hubs/kristof/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/persoon-im.publication.json
 #||# 
