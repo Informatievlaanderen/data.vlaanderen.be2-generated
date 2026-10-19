@@ -5,7 +5,6 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -49,7 +48,6 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#KwantitatieveWaardeShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#StringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#IdentificatorShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#DateTimeShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#ContactinfoShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#LangStringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#URIShape>,
@@ -360,12 +358,6 @@
   shacl:closed false;
   shacl:targetClass xsd:date .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#DateTimeShape> a shacl:NodeShape;
-  rdfs:label "DateTime";
-  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#DateTime>;
-  shacl:closed false;
-  shacl:targetClass xsd:dateTime .
-
 <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#EenheidShape> a shacl:NodeShape;
   rdfs:label "Eenheid"@nl;
   <http://purl.org/vocab/vann/usageNote> "Te gebruiken ipv Concept als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info."@nl;
@@ -453,16 +445,6 @@ nummer."""@nl;
     shacl:name "referentie"@nl;
     shacl:or ([shacl:class <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#Linkreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#Puntreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#LineaireReferentie>]);
     shacl:path <https://data.vlaanderen.be/ns/netwerk#referentie>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "inNetwerk"@nl;
-    rdfs:comment "Netwerk waartoe het Netwerkelement behoort."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#EuropeseWeg.InNetwerk>;
-    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>;
-    shacl:description "Netwerk waartoe het Netwerkelement behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#EuropeseWeg> .
 
@@ -493,16 +475,6 @@ nummer."""@nl;
     shacl:maxCount 1;
     shacl:name "modificatiedatum"@nl;
     shacl:path dc:modified
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "inNetwerk"@nl;
-    rdfs:comment "Netwerk waartoe het Netwerkelement behoort."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GelijkgrondseKruising.InNetwerk>;
-    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>;
-    shacl:description "Netwerk waartoe het Netwerkelement behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
   ], [
     a shacl:PropertyShape;
     rdfs:label "kruisingVan"@nl;
@@ -619,16 +591,6 @@ nummer."""@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "toegekend op"@nl;
-    rdfs:comment "Tijdstip waarop de identificator werd uitgegeven."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Identificator.ToegekendOp>;
-    shacl:datatype xsd:dateTime;
-    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
-    shacl:maxCount 1;
-    shacl:name "toegekend op"@nl;
-    shacl:path dc:issued
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "identificator"@nl;
     <http://purl.org/vocab/vann/usageNote> "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator."@nl;
     rdfs:comment "String gebruikt om het object uniek te identificeren."@nl;
@@ -637,26 +599,6 @@ nummer."""@nl;
     shacl:maxCount 1;
     shacl:name "identificator"@nl;
     shacl:path skos:notation
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "toegekend door (String)"@nl;
-    rdfs:comment "Naam vd agent die de identificator heeft toegekend."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Identificator.ToegekendDoor(String)>;
-    shacl:datatype xsd:string;
-    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
-    shacl:maxCount 1;
-    shacl:name "toegekend door (String)"@nl;
-    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "toegekend door"@nl;
-    rdfs:comment "Link naar de agent die de identificator heeft uitgegeven."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Identificator.ToegekendDoor>;
-    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
-    shacl:maxCount 1;
-    shacl:name "toegekend door"@nl;
-    shacl:or ([shacl:class dc:Agent] [shacl:class <http://www.w3.org/ns/person#Person>] [shacl:class org:Organization]);
-    shacl:path dc:creator
   ];
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
@@ -869,16 +811,6 @@ nummer."""@nl;
     shacl:path dc11:type
   ], [
     a shacl:PropertyShape;
-    rdfs:label "inNetwerk"@nl;
-    rdfs:comment "Netwerk waartoe het Netwerkelement behoort."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#OngelijkgrondseKruising.InNetwerk>;
-    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>;
-    shacl:description "Netwerk waartoe het Netwerkelement behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "kruisingVan"@nl;
     <http://purl.org/vocab/vann/usageNote> "De set van kruisend Links is geordend met de laagst gelegen Link eerst."@nl;
     rdfs:comment "Links die ongelijkgronds kruisen."@nl;
@@ -907,16 +839,6 @@ nummer."""@nl;
     shacl:maxCount 1;
     shacl:name "voorkeursnaam"@nl;
     shacl:path skos:prefLabel
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "contactinfo"@nl;
-    <http://purl.org/vocab/vann/usageNote> ""@nl;
-    rdfs:comment "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Organisatie.Contactinfo>;
-    shacl:class schemas:ContactPoint;
-    shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
-    shacl:name "contactinfo"@nl;
-    shacl:path schema:contactPoint
   ];
   shacl:targetClass org:Organization .
 
@@ -959,17 +881,6 @@ nummer."""@nl;
     shacl:maxCount 1;
     shacl:name "volledige naam"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#volledigeNaam>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "contactinfo"@nl;
-    <http://purl.org/vocab/vann/usageNote> ""@nl;
-    rdfs:comment "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Persoon.Contactinfo>;
-    shacl:class schemas:ContactPoint;
-    shacl:description "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
-    shacl:maxCount 1;
-    shacl:name "contactinfo"@nl;
-    shacl:path schema:contactPoint
   ];
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
 
@@ -1214,17 +1125,6 @@ nummer."""@nl;
     shacl:path dc:modified
   ], [
     a shacl:PropertyShape;
-    rdfs:label "lokaleCode"@nl;
-    rdfs:comment "Code toegekend aan de weg door een lokale autoriteit."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Weg.LokaleCode>;
-    shacl:datatype xsd:string;
-    shacl:description "Code toegekend aan de weg door een lokale autoriteit."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "lokaleCode"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/weg#lokaleCode>
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "nationaleCode"@nl;
     rdfs:comment "Code toegekend aan de weg door een nationale autoriteit."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Weg.NationaleCode>;
@@ -1273,16 +1173,6 @@ nummer."""@nl;
     shacl:name "referentie"@nl;
     shacl:or ([shacl:class <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#Linkreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#Puntreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#LineaireReferentie>]);
     shacl:path <https://data.vlaanderen.be/ns/netwerk#referentie>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "inNetwerk"@nl;
-    rdfs:comment "Netwerk waartoe het Netwerkelement behoort."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Weg.InNetwerk>;
-    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>;
-    shacl:description "Netwerk waartoe het Netwerkelement behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Weg> .
 
@@ -1374,16 +1264,6 @@ rol die de weg vervult in het wegennetwerk."""@nl;
     shacl:name "referentie"@nl;
     shacl:or ([shacl:class <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#Linkreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#Puntreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#LineaireReferentie>]);
     shacl:path <https://data.vlaanderen.be/ns/netwerk#referentie>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "inNetwerk"@nl;
-    rdfs:comment "Netwerk waartoe het Netwerkelement behoort."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegknoop.InNetwerk>;
-    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>;
-    shacl:description "Netwerk waartoe het Netwerkelement behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
   ], [
     a shacl:PropertyShape;
     rdfs:label "geometrie"@nl;
@@ -1493,16 +1373,6 @@ rol die de weg vervult in het wegennetwerk."""@nl;
     shacl:name "referentie"@nl;
     shacl:or ([shacl:class <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#Linkreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#Puntreferentie>] [shacl:class <https://data.vlaanderen.be/ns/netwerk#LineaireReferentie>]);
     shacl:path <https://data.vlaanderen.be/ns/netwerk#referentie>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "inNetwerk"@nl;
-    rdfs:comment "Netwerk waartoe het Netwerkelement behoort."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegsegment.InNetwerk>;
-    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>;
-    shacl:description "Netwerk waartoe het Netwerkelement behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
   ], [
     a shacl:PropertyShape;
     rdfs:label "kruising"@nl;
