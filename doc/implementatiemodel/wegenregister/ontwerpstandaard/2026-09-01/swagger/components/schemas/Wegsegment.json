@@ -21,8 +21,31 @@
     "geografischeNaam": {
       "$ref": "#/components/schemas/Wegsegment.geografischeNaam"
     },
-    "bron": {
-      "$ref": "#/components/schemas/Organisatie"
+    "linkset": {
+      "type": "array",
+      "description": "Linkset waarvan het Wegsegment deel uitmaakt. Bedoeld voor de nationale of andere Weg of EuropeseWeg waartoe het Wegsegment behoort. Lijst van Linkset items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Linkset"
+          },
+          {
+            "$ref": "#/components/schemas/Weg"
+          },
+          {
+            "$ref": "#/components/schemas/EuropeseWeg"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Linkset": "#/components/schemas/Linkset",
+            "Weg": "#/components/schemas/Weg",
+            "EuropeseWeg": "#/components/schemas/EuropeseWeg"
+          }
+        }
+      },
+      "minItems": 1
     },
     "geometriemiddenlijn": {
       "$ref": "#/components/schemas/Curve"
@@ -60,6 +83,9 @@
       },
       "minItems": 1
     },
+    "kruising": {
+      "$ref": "#/components/schemas/GelijkgrondseKruising"
+    },
     "@context": {
       "type": "string",
       "description": "URI of the JSON-LD versioned context file for this response.",
@@ -69,7 +95,6 @@
   "required": [
     "@type",
     "creatiedatum",
-    "bron",
     "geometriemiddenlijn",
     "inNetwerk"
   ]

@@ -32,7 +32,7 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#TransportlinkShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#TransportknoopShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#TransportllinksetShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruisingShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GelijkgrondseKruisingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#KruisingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#WegShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#EuropeseWegShape>,
@@ -426,17 +426,6 @@ nummer."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "bron"@nl;
-    rdfs:comment "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#EuropeseWeg.Bron>;
-    shacl:class org:Organization;
-    shacl:description "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "bron"@nl;
-    shacl:path dc:creator
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "identificator"@nl;
     rdfs:comment "Identificator van het Netwerkelement."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#EuropeseWeg.Identificator>;
@@ -476,6 +465,56 @@ nummer."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#EuropeseWeg> .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GelijkgrondseKruisingShape> a shacl:NodeShape;
+  rdfs:label "GelijkgrondseKruising"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bedoeld voor gevallen waarin de Kruising niet in een Wegknoop is geresulteerd."@nl;
+  rdfs:comment "Kruising van twee of meer Wegsegmenten die op gelijke hoogte gelegen zijn."@nl;
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GelijkgrondseKruising>;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "creatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens zijn ingevoerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GelijkgrondseKruising.Creatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens zijn ingevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "creatiedatum"@nl;
+    shacl:path dc:created
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "modificatiedatum"@nl;
+    rdfs:comment "Datum waarop de gegevens werden bijgewerkt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GelijkgrondseKruising.Modificatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gegevens werden bijgewerkt."@nl;
+    shacl:maxCount 1;
+    shacl:name "modificatiedatum"@nl;
+    shacl:path dc:modified
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "inNetwerk"@nl;
+    rdfs:comment "Netwerk waartoe het Netwerkelement behoort."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GelijkgrondseKruising.InNetwerk>;
+    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>;
+    shacl:description "Netwerk waartoe het Netwerkelement behoort."@nl;
+    shacl:minCount 1;
+    shacl:name "inNetwerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "kruisingVan"@nl;
+    rdfs:comment "Links die gelijkgronds kruisen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GelijkgrondseKruising.KruisingVan>;
+    shacl:class <https://data.vlaanderen.be/ns/weg#Wegsegment>;
+    shacl:description "Links die gelijkgronds kruisen."@nl;
+    shacl:minCount 2;
+    shacl:name "kruisingVan"@nl;
+    shacl:path <http://todo.com/kruisingVan>
+  ];
+  shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/wegenregister#GelijkgrondseKruising> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GemeenteShape> a shacl:NodeShape;
   rdfs:label "Gemeente"@nl;
@@ -571,66 +610,6 @@ nummer."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#GerichteLink.link>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#GerichteLink> .
-
-<https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruisingShape> a shacl:NodeShape;
-  rdfs:label "GgelijkgrondseKruising"@nl;
-  rdfs:comment "Geeft de gelijkgrondse kruising van twee Wegsegmenten weer."@nl;
-  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruising>;
-  shacl:closed false;
-  shacl:property [
-    a shacl:PropertyShape;
-    rdfs:label "creatiedatum"@nl;
-    rdfs:comment "Datum waarop de gegevens zijn ingevoerd."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruising.Creatiedatum>;
-    shacl:datatype xsd:date;
-    shacl:description "Datum waarop de gegevens zijn ingevoerd."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "creatiedatum"@nl;
-    shacl:path dc:created
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "modificatiedatum"@nl;
-    rdfs:comment "Datum waarop de gegevens werden bijgewerkt."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruising.Modificatiedatum>;
-    shacl:datatype xsd:date;
-    shacl:description "Datum waarop de gegevens werden bijgewerkt."@nl;
-    shacl:maxCount 1;
-    shacl:name "modificatiedatum"@nl;
-    shacl:path dc:modified
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "bron"@nl;
-    rdfs:comment "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruising.Bron>;
-    shacl:class org:Organization;
-    shacl:description "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "bron"@nl;
-    shacl:path dc:creator
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "inNetwerk"@nl;
-    rdfs:comment "Netwerk waartoe het Netwerkelement behoort."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruising.InNetwerk>;
-    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>;
-    shacl:description "Netwerk waartoe het Netwerkelement behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "kruisingVan"@nl;
-    rdfs:comment "Links die gelijkgronds kruisen."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#GgelijkgrondseKruising.KruisingVan>;
-    shacl:class <https://data.vlaanderen.be/ns/weg#Wegsegment>;
-    shacl:description "Links die gelijkgronds kruisen."@nl;
-    shacl:minCount 2;
-    shacl:name "kruisingVan"@nl;
-    shacl:path <https://implementatie.data.vlaanderen.be/ns/wegenregister#kruisingVan>
-  ];
-  shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/wegenregister#GelijkgrondseKruising> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#IdentificatorShape> a shacl:NodeShape;
   rdfs:label "Identificator"@nl;
@@ -853,7 +832,7 @@ nummer."""@nl;
 <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#OngelijkgrondseKruisingShape> a shacl:NodeShape;
   rdfs:label "OngelijkgrondseKruising"@nl;
   <http://purl.org/vocab/vann/usageNote> "Te gebruiken wanneer de hoogtecoördinaten ontbreken of niet betrouwbaar zijn."@nl;
-  rdfs:comment "Geeft aan welke van twee of meer Netwerkelementen hoger of lager is gelegen dan de andere."@nl;
+  rdfs:comment "Kruising van twee of meer Wegsegmenten waarbij het ene hoger of lager is gelegen dan het andere."@nl;
   rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#OngelijkgrondseKruising>;
   shacl:closed false;
   shacl:property [
@@ -888,17 +867,6 @@ nummer."""@nl;
     shacl:name "type"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path dc11:type
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "bron"@nl;
-    rdfs:comment "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#OngelijkgrondseKruising.Bron>;
-    shacl:class org:Organization;
-    shacl:description "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "bron"@nl;
-    shacl:path dc:creator
   ], [
     a shacl:PropertyShape;
     rdfs:label "inNetwerk"@nl;
@@ -1135,9 +1103,9 @@ nummer."""@nl;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "voertuigtype"@nl;
-    rdfs:comment "TODO"@nl;
+    rdfs:comment "Type voertuig waarvoor de transporteigenschap geldt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Transporteigenschap.Voertuigtype>;
-    shacl:description "TODO"@nl;
+    shacl:description "Type voertuig waarvoor de transporteigenschap geldt."@nl;
     shacl:name "voertuigtype"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path <https://implementatie.data.vlaanderen.be/ns/wegenregister#voertuigtype>
@@ -1278,17 +1246,6 @@ nummer."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "bron"@nl;
-    rdfs:comment "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Weg.Bron>;
-    shacl:class org:Organization;
-    shacl:description "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "bron"@nl;
-    shacl:path dc:creator
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "identificator"@nl;
     rdfs:comment "Identificator van het Netwerkelement."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Weg.Identificator>;
@@ -1388,17 +1345,6 @@ rol die de weg vervult in het wegennetwerk."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "bron"@nl;
-    rdfs:comment "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegknoop.Bron>;
-    shacl:class org:Organization;
-    shacl:description "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "bron"@nl;
-    shacl:path dc:creator
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "type"@nl;
     <http://purl.org/vocab/vann/usageNote> "Bvb rondpunt, pseudoknoop, verkeeresplein etc."@nl;
     rdfs:comment "Soort Wegknoop."@nl;
@@ -1449,6 +1395,24 @@ rol die de weg vervult in het wegennetwerk."""@nl;
     shacl:minCount 1;
     shacl:name "geometrie"@nl;
     shacl:path <http://www.w3.org/ns/locn#geometry>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "beginvertakking"@nl;
+    rdfs:comment "Link die vanuit de beginknoop vertrekt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegknoop.Beginvertakking>;
+    shacl:class <https://data.vlaanderen.be/ns/weg#Wegsegment>;
+    shacl:description "Link die vanuit de beginknoop vertrekt."@nl;
+    shacl:name "beginvertakking"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#beginvertakking>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "eindvertakking"@nl;
+    rdfs:comment "Link die vanuit de eindknoop vertrekt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegknoop.Eindvertakking>;
+    shacl:class <https://data.vlaanderen.be/ns/weg#Wegsegment>;
+    shacl:description "Link die vanuit de eindknoop vertrekt."@nl;
+    shacl:name "eindvertakking"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#eindvertakking>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Wegknoop> .
 
@@ -1491,15 +1455,14 @@ rol die de weg vervult in het wegennetwerk."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "bron"@nl;
-    rdfs:comment "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegsegment.Bron>;
-    shacl:class org:Organization;
-    shacl:description "Verantwoordelijke voor het aanmaken van de gegevens."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "bron"@nl;
-    shacl:path dc:creator
+    rdfs:label "linkset"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bedoeld voor de nationale of andere Weg of EuropeseWeg waartoe het Wegsegment behoort."@nl;
+    rdfs:comment "Linkset waarvan het Wegsegment deel uitmaakt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegsegment.Linkset>;
+    shacl:description "Linkset waarvan het Wegsegment deel uitmaakt."@nl;
+    shacl:name "linkset"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/netwerk#Linkset>] [shacl:class <https://data.vlaanderen.be/ns/weg#Weg>] [shacl:class <https://data.vlaanderen.be/ns/weg#EuropeseWeg>]);
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#linkset>
   ], [
     a shacl:PropertyShape;
     rdfs:label "geometriemiddenlijn"@nl;
@@ -1542,6 +1505,16 @@ rol die de weg vervult in het wegennetwerk."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#inNetwerk>
   ], [
     a shacl:PropertyShape;
+    rdfs:label "kruising"@nl;
+    rdfs:comment "OngelijkgrondseKruising waarvan het Wegsegment deel uitmaakt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegsegment.Kruising>;
+    shacl:class <https://data.vlaanderen.be/ns/netwerk#OngelijkgrondseKruising>;
+    shacl:description "OngelijkgrondseKruising waarvan het Wegsegment deel uitmaakt."@nl;
+    shacl:maxCount 1;
+    shacl:name "kruising"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#kruising>
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "beginknoop"@nl;
     rdfs:comment "Knoop die het begin is van de Link."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegsegment.Beginknoop>;
@@ -1558,6 +1531,16 @@ rol die de weg vervult in het wegennetwerk."""@nl;
     shacl:description "Knoop die het einde is van de Link."@nl;
     shacl:name "eindknoop"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#eindknoop>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "kruising"@nl;
+    rdfs:comment "GelijkgrondseKruising waartoe het Wegsegment behoort."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/wegenregister/ontwerpstandaard/2026-09-01#Wegsegment.Kruising>;
+    shacl:class <https://implementatie.data.vlaanderen.be/ns/wegenregister#GelijkgrondseKruising>;
+    shacl:description "GelijkgrondseKruising waartoe het Wegsegment behoort."@nl;
+    shacl:maxCount 1;
+    shacl:name "kruising"@nl;
+    shacl:path <http://todo.com/kruising>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Wegsegment> .
 
