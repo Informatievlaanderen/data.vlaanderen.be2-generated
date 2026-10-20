@@ -245,7 +245,7 @@
             "pattern": "^RichtingVerkeer$"
           },
           "richting": {
-            "$ref": "#/components/schemas/Linkrichtingtype"
+            "$ref": "#/components/schemas/Richtingtype"
           },
           "voertuigtype": {
             "type": "array",
@@ -820,6 +820,14 @@
           "modificatiedatum": {
             "$ref": "#/components/schemas/Wegknoop.modificatiedatum"
           },
+          "connectie": {
+            "type": "array",
+            "description": "Connectie waarvan de Wegknoop deel uitmaakt. In deze context bedoeld om aan te geven dat een Wegknoop een grensknoop is, ttz een knoop bedoeld om te connecteren met een Wegknoop in een ander Netwerk. OPMERKING: deze andere knoop moet niet worden opgegeven. Lijst van Connectie items.",
+            "items": {
+              "$ref": "#/components/schemas/Connectie"
+            },
+            "minItems": 1
+          },
           "type": {
             "$ref": "#/components/schemas/Wegknooptype"
           },
@@ -1209,7 +1217,7 @@
             "pattern": "^Linkreferentie$"
           },
           "toepassingsrichting": {
-            "$ref": "#/components/schemas/Linkrichtingtype"
+            "$ref": "#/components/schemas/Kanttype"
           },
           "eigenschap": {
             "oneOf": [
@@ -1255,7 +1263,7 @@
             "$ref": "#/components/schemas/KwantitatieveWaarde"
           },
           "toepassingsrichting": {
-            "$ref": "#/components/schemas/Linkrichtingtype"
+            "$ref": "#/components/schemas/Kanttype"
           },
           "eigenschap": {
             "oneOf": [
@@ -1420,7 +1428,7 @@
         "parameters": {
           "id": "$response.body#/RichtingVerkeer.richting/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Linkrichtingtype` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Richtingtype` op te halen."
       },
       "RichtingVerkeer.voertuigtype": {
         "operationId": "RichtingVerkeerGET",
@@ -1540,6 +1548,13 @@
           "id": "$response.body#/Wegsegment.eindknoop/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Wegknoop` op te halen."
+      },
+      "Wegknoop.connectie": {
+        "operationId": "WegknoopGET",
+        "parameters": {
+          "id": "$response.body#/Wegknoop.connectie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Connectie` op te halen."
       },
       "Wegknoop.type": {
         "operationId": "WegknoopGET",
