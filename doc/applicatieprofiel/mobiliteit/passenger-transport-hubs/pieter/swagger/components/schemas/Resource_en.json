@@ -1,0 +1,45 @@
+{
+  "title": "Resource",
+  "type": "object",
+  "description": "Means that the Mobility Service can offer to the Traveller to make the trip.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Resource)",
+      "pattern": "^Resource$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/ResourceType"
+    },
+    "location": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "status": {
+      "$ref": "#/components/schemas/ResourceStatus"
+    },
+    "meansOfTransport": {
+      "type": "array",
+      "description": "The type of means of transport of the Resource. Especially relevant if the resource is a vehicle. Lijst van MeansOfTransport items.",
+      "items": {
+        "$ref": "#/components/schemas/MeansOfTransport"
+      },
+      "minItems": 1
+    },
+    "propulsion": {
+      "type": "array",
+      "description": "Engine of the means of transport. Lijst van PropulsionType items.",
+      "items": {
+        "$ref": "#/components/schemas/PropulsionType"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}

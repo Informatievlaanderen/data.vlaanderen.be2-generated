@@ -1,0 +1,233 @@
+{
+  "title": "MobilityService",
+  "type": "object",
+  "description": "Service that enables movement of Persons between Locations.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MobilityService)",
+      "pattern": "^MobilityService$"
+    },
+    "title": {
+      "$ref": "#/components/schemas/MobilityService.title"
+    },
+    "provider": {
+      "$ref": "#/components/schemas/Provider"
+    },
+    "performedBy": {
+      "type": "array",
+      "description": "Executor of the Mobility Service. May differ from the Provider. Lijst van Executor items.",
+      "items": {
+        "$ref": "#/components/schemas/Executor"
+      },
+      "minItems": 1
+    },
+    "offeredWithin": {
+      "type": "array",
+      "description": "Formal Framework within which the Mobility Service is offered. For example Decree listing the criteria for authorising a Mobility Service. Lijst van FormalFramework items.",
+      "items": {
+        "$ref": "#/components/schemas/FormalFramework"
+      },
+      "minItems": 1
+    },
+    "license": {
+      "type": "array",
+      "description": "License under which the Mobility Service is offered. Lijst van License items.",
+      "items": {
+        "$ref": "#/components/schemas/License"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Nature of the Mobility Service. For example public transport, parking etc. Combinations are possible, for example collective transport & public transport (for example SNCB), individual transport & private transport (taxis)…. Lijst van MobilityServiceType items.",
+      "items": {
+        "$ref": "#/components/schemas/MobilityServiceType"
+      },
+      "minItems": 1
+    },
+    "priceSpecification": {
+      "type": "array",
+      "description": "Price plan of the Mobility Service. Lijst van PriceSpecification items.",
+      "items": {
+        "$ref": "#/components/schemas/PriceSpecification"
+      },
+      "minItems": 1
+    },
+    "spatialCoverage": {
+      "type": "array",
+      "description": "Area or Place within which the Mobility Service is offered. For example Brussels Region, Antwerp... Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "availability": {
+      "type": "array",
+      "description": "Availability of the Mobility Service. For example timetable or opening hours. Lijst van Availability items.",
+      "items": {
+        "$ref": "#/components/schemas/Availability"
+      },
+      "minItems": 1
+    },
+    "accessibility": {
+      "type": "array",
+      "description": "Accessibility of the Mobility Service. For example whether the Mobility Service is accessible to persons with disabilities. Lijst van Accessibility items.",
+      "items": {
+        "$ref": "#/components/schemas/Accessibility"
+      },
+      "minItems": 1
+    },
+    "meansOfTransport": {
+      "type": "array",
+      "description": "Means of transport by which or for which the Mobility Service is usually organised. For example metro, tram, bus for STIB. For example car, bicycle for parking Coovi. Lijst van MeansOfTransport items.",
+      "items": {
+        "$ref": "#/components/schemas/MeansOfTransport"
+      },
+      "minItems": 1
+    },
+    "propulsion": {
+      "type": "array",
+      "description": "Propulsion of the means of transport with or for which the Mobility Service is usually organised. Lijst van PropulsionType items.",
+      "items": {
+        "$ref": "#/components/schemas/PropulsionType"
+      },
+      "minItems": 1
+    },
+    "resource": {
+      "type": "array",
+      "description": "Resource available to the Mobility Service. Lijst van Resource items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Resource"
+          },
+          {
+            "$ref": "#/components/schemas/ParkingSpace"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Resource": "#/components/schemas/Resource",
+            "ParkingSpace": "#/components/schemas/ParkingSpace"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "includes": {
+      "type": "array",
+      "description": "More specific Mobility Services that make up the Mobility Service. For example, public transport in Brussels offered by STIB consists of a number of metro lines, for example line 5 Erasmus-Herman-Debroux, or a MAAS provider integrates several services, for example public transport and shared transport. Lijst van MobilityService items.",
+      "items": {
+        "$ref": "#/components/schemas/MobilityService"
+      },
+      "minItems": 1
+    },
+    "availableAt": {
+      "type": "array",
+      "description": "Transport object on which the Mobility Service is offered. For example P+R is offered in station parking, shared bicycle + train in combination point. Lijst van TransportObject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportNode"
+          },
+          {
+            "$ref": "#/components/schemas/TransportConnection"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportNode": "#/components/schemas/TransportNode",
+            "TransportConnection": "#/components/schemas/TransportConnection"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "availableAtInfrastructureElement": {
+      "type": "array",
+      "description": "Infrastructure element on which the Mobility Service is available. For example public transport such as buses are offered at a bus stop. Lijst van InfrastructureElement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/InfrastructureElement"
+          },
+          {
+            "$ref": "#/components/schemas/InformationCarrier"
+          },
+          {
+            "$ref": "#/components/schemas/DataExchangeInfrastructure"
+          },
+          {
+            "$ref": "#/components/schemas/ParkingFacility"
+          },
+          {
+            "$ref": "#/components/schemas/Charger"
+          },
+          {
+            "$ref": "#/components/schemas/Quay"
+          },
+          {
+            "$ref": "#/components/schemas/StopPlace"
+          },
+          {
+            "$ref": "#/components/schemas/StopPost"
+          },
+          {
+            "$ref": "#/components/schemas/BusShelter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "InfrastructureElement": "#/components/schemas/InfrastructureElement",
+            "InformationCarrier": "#/components/schemas/InformationCarrier",
+            "DataExchangeInfrastructure": "#/components/schemas/DataExchangeInfrastructure",
+            "ParkingFacility": "#/components/schemas/ParkingFacility",
+            "Charger": "#/components/schemas/Charger",
+            "Quay": "#/components/schemas/Quay",
+            "StopPlace": "#/components/schemas/StopPlace",
+            "StopPost": "#/components/schemas/StopPost",
+            "BusShelter": "#/components/schemas/BusShelter"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "transportHub": {
+      "type": "array",
+      "description": "The transport hub  to which the Mobility Service is linked. Lijst van TransportHub items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportHub"
+          },
+          {
+            "$ref": "#/components/schemas/RegisteredTransportHub"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportHub": "#/components/schemas/TransportHub",
+            "RegisteredTransportHub": "#/components/schemas/RegisteredTransportHub"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "title",
+    "provider",
+    "performedBy",
+    "type"
+  ]
+}

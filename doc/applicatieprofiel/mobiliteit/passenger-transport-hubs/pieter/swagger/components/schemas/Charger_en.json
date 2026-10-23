@@ -1,0 +1,142 @@
+{
+  "title": "Charger",
+  "type": "object",
+  "description": "An object that provides electrical energy for charging electric vehicles.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Charger)",
+      "pattern": "^Charger$"
+    },
+    "plug": {
+      "type": "array",
+      "description": "Part of the charger used to form the connection with the electric vehicles. Lijst van Plug items.",
+      "items": {
+        "$ref": "#/components/schemas/Plug"
+      },
+      "minItems": 1
+    },
+    "meansOfTransport": {
+      "type": "array",
+      "description": "Means of transport that is electrically powered. Lijst van MeansOfTransport items.",
+      "items": {
+        "$ref": "#/components/schemas/MeansOfTransport"
+      },
+      "minItems": 1
+    },
+    "plugType": {
+      "type": "array",
+      "description": "The type of charger. Lijst van PlugType items.",
+      "items": {
+        "$ref": "#/components/schemas/PlugType"
+      },
+      "minItems": 1
+    },
+    "geometry": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        },
+        {
+          "$ref": "#/components/schemas/Polygon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Point": "#/components/schemas/Point",
+          "Polygon": "#/components/schemas/Polygon"
+        }
+      }
+    },
+    "validityPeriod": {
+      "$ref": "#/components/schemas/Period"
+    },
+    "accessibility": {
+      "type": "array",
+      "description": "The overall accessibility characteristics of the infrastructure element. Lijst van Accessibility items.",
+      "items": {
+        "$ref": "#/components/schemas/Accessibility"
+      },
+      "minItems": 1
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "type": {
+      "type": "array",
+      "description": "The type of infrastructure element. Lijst van InfrastructureElementType items.",
+      "items": {
+        "$ref": "#/components/schemas/InfrastructureElementType"
+      },
+      "minItems": 1
+    },
+    "service": {
+      "type": "array",
+      "description": "The service offered by the infrastructure element. Lijst van AdditionalService items.",
+      "items": {
+        "$ref": "#/components/schemas/AdditionalService"
+      },
+      "minItems": 1
+    },
+    "transportHub": {
+      "type": "array",
+      "description": "The transport hub to which this infrastructure element belongs. Lijst van TransportHub items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportHub"
+          },
+          {
+            "$ref": "#/components/schemas/RegisteredTransportHub"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportHub": "#/components/schemas/TransportHub",
+            "RegisteredTransportHub": "#/components/schemas/RegisteredTransportHub"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "transportObject": {
+      "type": "array",
+      "description": "The transport object belonging to the infrastructure element. Lijst van TransportObject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportNode"
+          },
+          {
+            "$ref": "#/components/schemas/TransportConnection"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportNode": "#/components/schemas/TransportNode",
+            "TransportConnection": "#/components/schemas/TransportConnection"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "plug",
+    "geometry",
+    "validityPeriod",
+    "identifier"
+  ]
+}

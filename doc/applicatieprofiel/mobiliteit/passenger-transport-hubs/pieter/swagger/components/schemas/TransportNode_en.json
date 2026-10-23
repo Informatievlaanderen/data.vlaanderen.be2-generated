@@ -1,0 +1,132 @@
+{
+  "title": "TransportNode",
+  "type": "object",
+  "description": "Significant position in the Transport Network that always coincides with the beginning or the end of a Transport Link.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TransportNode)",
+      "pattern": "^TransportNode$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TransportNodeType"
+    },
+    "geometry": {
+      "$ref": "#/components/schemas/Point"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "geographicalName": {
+      "$ref": "#/components/schemas/TransportNode.geographicalName"
+    },
+    "availability": {
+      "$ref": "#/components/schemas/Availability"
+    },
+    "accessibility": {
+      "type": "array",
+      "description": "Accessibility of the Transport object. For example whether the Transport object is accessible for persons with a disability. Lijst van Accessibility items.",
+      "items": {
+        "$ref": "#/components/schemas/Accessibility"
+      },
+      "minItems": 1
+    },
+    "transportNetwork": {
+      "type": "array",
+      "description": "Transport network to which the transport object belongs. Lijst van TransportNetwork items.",
+      "items": {
+        "$ref": "#/components/schemas/TransportNetwork"
+      },
+      "minItems": 1
+    },
+    "transportHub": {
+      "type": "array",
+      "description": "The transport hubs to which this transport object belongs. Lijst van TransportHub items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportHub"
+          },
+          {
+            "$ref": "#/components/schemas/RegisteredTransportHub"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportHub": "#/components/schemas/TransportHub",
+            "RegisteredTransportHub": "#/components/schemas/RegisteredTransportHub"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "service": {
+      "type": "array",
+      "description": "The additional services associated with the transport object. Lijst van AdditionalService items.",
+      "items": {
+        "$ref": "#/components/schemas/AdditionalService"
+      },
+      "minItems": 1
+    },
+    "infrastructureElement": {
+      "type": "array",
+      "description": "The infrastructure elements connected to the transport object. Lijst van InfrastructureElement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/InfrastructureElement"
+          },
+          {
+            "$ref": "#/components/schemas/InformationCarrier"
+          },
+          {
+            "$ref": "#/components/schemas/DataExchangeInfrastructure"
+          },
+          {
+            "$ref": "#/components/schemas/ParkingFacility"
+          },
+          {
+            "$ref": "#/components/schemas/Charger"
+          },
+          {
+            "$ref": "#/components/schemas/Quay"
+          },
+          {
+            "$ref": "#/components/schemas/StopPlace"
+          },
+          {
+            "$ref": "#/components/schemas/StopPost"
+          },
+          {
+            "$ref": "#/components/schemas/BusShelter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "InfrastructureElement": "#/components/schemas/InfrastructureElement",
+            "InformationCarrier": "#/components/schemas/InformationCarrier",
+            "DataExchangeInfrastructure": "#/components/schemas/DataExchangeInfrastructure",
+            "ParkingFacility": "#/components/schemas/ParkingFacility",
+            "Charger": "#/components/schemas/Charger",
+            "Quay": "#/components/schemas/Quay",
+            "StopPlace": "#/components/schemas/StopPlace",
+            "StopPost": "#/components/schemas/StopPost",
+            "BusShelter": "#/components/schemas/BusShelter"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "geometry"
+  ]
+}

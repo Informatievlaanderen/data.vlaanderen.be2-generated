@@ -1,0 +1,75 @@
+{
+  "title": "ResourceReport",
+  "type": "object",
+  "description": "Report of how many Resources with similar characteristics of availability, type, service, location etc are present at a certain point in time.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ResourceReport)",
+      "pattern": "^ResourceReport$"
+    },
+    "number": {
+      "$ref": "#/components/schemas/ResourceReport.number"
+    },
+    "reportTime": {
+      "$ref": "#/components/schemas/ResourceReport.reportTime"
+    },
+    "propulsion": {
+      "type": "array",
+      "description": "Engine of the means of transport. Lijst van PropulsionType items.",
+      "items": {
+        "$ref": "#/components/schemas/PropulsionType"
+      },
+      "minItems": 1
+    },
+    "location": {
+      "type": "array",
+      "description": "Location of the Resource. This could be the real-time location of the vehicle, for example in free-floating part transport. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "meansOfTransport": {
+      "type": "array",
+      "description": "The type of means of transport of the Resource. Especially relevant if the resource is a vehicle. Lijst van MeansOfTransport items.",
+      "items": {
+        "$ref": "#/components/schemas/MeansOfTransport"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "array",
+      "description": "State of a Resource. For example reserved, inactive, available. Determines whether a resource can be used. Lijst van ResourceStatus items.",
+      "items": {
+        "$ref": "#/components/schemas/ResourceStatus"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Nature of the Resource. Lijst van ResourceType items.",
+      "items": {
+        "$ref": "#/components/schemas/ResourceType"
+      },
+      "minItems": 1
+    },
+    "service": {
+      "type": "array",
+      "description": "The MobilityService used within the ResourceReport. Lijst van MobilityService items.",
+      "items": {
+        "$ref": "#/components/schemas/MobilityService"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "number",
+    "reportTime"
+  ]
+}

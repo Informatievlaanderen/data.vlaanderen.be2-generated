@@ -1,0 +1,102 @@
+{
+  "title": "Trip",
+  "type": "object",
+  "description": "Voluntary movement of a Person from one Location to another Location.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Trip)",
+      "pattern": "^Trip$"
+    },
+    "departureTime": {
+      "$ref": "#/components/schemas/Trip.departureTime"
+    },
+    "arrivalTime": {
+      "$ref": "#/components/schemas/Trip.arrivalTime"
+    },
+    "itinerary": {
+      "type": "array",
+      "description": "Sequence of Locations to be visited during the Trip. Including the Location where the Journey starts and ends. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 2
+    },
+    "partOfTrip": {
+      "type": "array",
+      "description": "Part of a complete Trip that can also be considered a Trip in itself. Lijst van Trip items.",
+      "items": {
+        "$ref": "#/components/schemas/Trip"
+      },
+      "minItems": 1
+    },
+    "possibleRoute": {
+      "type": "array",
+      "description": "Routes that can be followed to perform the Trip. Lijst van Route items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Route"
+          },
+          {
+            "$ref": "#/components/schemas/RouteSegment"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Route": "#/components/schemas/Route",
+            "RouteSegment": "#/components/schemas/RouteSegment"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "chosenRoute": {
+      "type": "array",
+      "description": "Route which the Passenger chooses from the possible Routes. Possibly more than 1 selected Route if the traveller changes Route on the way. Lijst van Route items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Route"
+          },
+          {
+            "$ref": "#/components/schemas/RouteSegment"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Route": "#/components/schemas/Route",
+            "RouteSegment": "#/components/schemas/RouteSegment"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "executedRoute": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Route"
+        },
+        {
+          "$ref": "#/components/schemas/RouteSegment"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Route": "#/components/schemas/Route",
+          "RouteSegment": "#/components/schemas/RouteSegment"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

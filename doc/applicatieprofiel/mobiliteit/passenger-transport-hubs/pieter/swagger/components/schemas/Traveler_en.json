@@ -1,0 +1,35 @@
+{
+  "title": "Traveler",
+  "type": "object",
+  "description": "Person who undertakes or wants to undertake a Trip.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Traveler)",
+      "pattern": "^Traveler$"
+    },
+    "undertakes": {
+      "type": "array",
+      "description": "Trip that a Traveller undertakes or wants to undertake. Lijst van Trip items.",
+      "items": {
+        "$ref": "#/components/schemas/Trip"
+      },
+      "minItems": 1
+    },
+    "isFellowTravelerOf": {
+      "type": "array",
+      "description": "Traveller who accompanies the Traveller on the Journey. For example the children of a family travelling together. Important for example when determining the price of a Ticket when young children travel free of charge. Lijst van Traveler items.",
+      "items": {
+        "$ref": "#/components/schemas/Traveler"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

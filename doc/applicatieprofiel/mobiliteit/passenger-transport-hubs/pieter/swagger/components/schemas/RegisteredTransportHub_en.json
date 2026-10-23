@@ -1,0 +1,150 @@
+{
+  "title": "RegisteredTransportHub",
+  "type": "object",
+  "description": "Passenger Transport Hub recognised as such.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RegisteredTransportHub)",
+      "pattern": "^RegisteredTransportHub$"
+    },
+    "registration": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "title": {
+      "type": "array",
+      "description": "The name of the Passenger Transport Hub. Lijst van LanguageString items.",
+      "items": {
+        "$ref": "#/components/schemas/RegisteredTransportHub.title"
+      },
+      "minItems": 1
+    },
+    "classification": {
+      "type": "array",
+      "description": "The classification of the Passenger Transport Hub. Lijst van PassengerTransportHubType items.",
+      "items": {
+        "$ref": "#/components/schemas/PassengerTransportHubType"
+      },
+      "minItems": 1
+    },
+    "accessibility": {
+      "type": "array",
+      "description": "The accessibility of the Passenger Transport Hub. Lijst van Accessibility items.",
+      "items": {
+        "$ref": "#/components/schemas/Accessibility"
+      },
+      "minItems": 1
+    },
+    "location": {
+      "type": "array",
+      "description": "The location of the Passenger Transport Hub. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1
+    },
+    "brand": {
+      "$ref": "#/components/schemas/BrandType"
+    },
+    "status": {
+      "$ref": "#/components/schemas/PassengerTransportHubStatus"
+    },
+    "transportObject": {
+      "type": "array",
+      "description": "The transport object of the Passenger Transport Hub. Lijst van TransportObject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TransportNode"
+          },
+          {
+            "$ref": "#/components/schemas/TransportConnection"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TransportNode": "#/components/schemas/TransportNode",
+            "TransportConnection": "#/components/schemas/TransportConnection"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "service": {
+      "type": "array",
+      "description": "The mobility services connected to the Passenger Transport Hub. Lijst van MobilityService items.",
+      "items": {
+        "$ref": "#/components/schemas/MobilityService"
+      },
+      "minItems": 1
+    },
+    "infrastructureElement": {
+      "type": "array",
+      "description": "The infrastructure element of the Passenger Transport Hub. Lijst van InfrastructureElement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/InfrastructureElement"
+          },
+          {
+            "$ref": "#/components/schemas/InformationCarrier"
+          },
+          {
+            "$ref": "#/components/schemas/DataExchangeInfrastructure"
+          },
+          {
+            "$ref": "#/components/schemas/ParkingFacility"
+          },
+          {
+            "$ref": "#/components/schemas/Charger"
+          },
+          {
+            "$ref": "#/components/schemas/Quay"
+          },
+          {
+            "$ref": "#/components/schemas/StopPlace"
+          },
+          {
+            "$ref": "#/components/schemas/StopPost"
+          },
+          {
+            "$ref": "#/components/schemas/BusShelter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "InfrastructureElement": "#/components/schemas/InfrastructureElement",
+            "InformationCarrier": "#/components/schemas/InformationCarrier",
+            "DataExchangeInfrastructure": "#/components/schemas/DataExchangeInfrastructure",
+            "ParkingFacility": "#/components/schemas/ParkingFacility",
+            "Charger": "#/components/schemas/Charger",
+            "Quay": "#/components/schemas/Quay",
+            "StopPlace": "#/components/schemas/StopPlace",
+            "StopPost": "#/components/schemas/StopPost",
+            "BusShelter": "#/components/schemas/BusShelter"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "additionalService": {
+      "type": "array",
+      "description": "The additional services connected to the Passenger Transport Hub. Lijst van AdditionalService items.",
+      "items": {
+        "$ref": "#/components/schemas/AdditionalService"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "registration",
+    "brand"
+  ]
+}

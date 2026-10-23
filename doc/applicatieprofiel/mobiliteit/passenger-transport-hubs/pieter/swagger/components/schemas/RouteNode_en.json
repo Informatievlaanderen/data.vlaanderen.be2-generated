@@ -1,0 +1,66 @@
+{
+  "title": "RouteNode",
+  "type": "object",
+  "description": "Significant position in the Route that always coincides with the beginning or the end of a Route segment.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RouteNode)",
+      "pattern": "^RouteNode$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TransportNodeType"
+    },
+    "geometry": {
+      "$ref": "#/components/schemas/Point"
+    },
+    "realisedBy": {
+      "$ref": "#/components/schemas/MobilityService"
+    },
+    "realisedOn": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TransportNode"
+        },
+        {
+          "$ref": "#/components/schemas/VirtualNode"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TransportNode": "#/components/schemas/TransportNode",
+          "VirtualNode": "#/components/schemas/VirtualNode"
+        }
+      }
+    },
+    "transfer": {
+      "$ref": "#/components/schemas/RouteNode"
+    },
+    "realisedWith": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Resource"
+        },
+        {
+          "$ref": "#/components/schemas/ParkingSpace"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Resource": "#/components/schemas/Resource",
+          "ParkingSpace": "#/components/schemas/ParkingSpace"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "geometry"
+  ]
+}
