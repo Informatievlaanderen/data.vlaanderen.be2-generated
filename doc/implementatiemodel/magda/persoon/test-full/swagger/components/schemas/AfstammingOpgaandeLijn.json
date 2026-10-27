@@ -1,0 +1,54 @@
+{
+  "title": "AfstammingOpgaandeLijn",
+  "type": "object",
+  "description": "De opgaande lijn van bloedverwantschap tussen generaties.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AfstammingOpgaandeLijn)",
+      "pattern": "^AfstammingOpgaandeLijn$"
+    },
+    "datumVanAfstamming": {
+      "$ref": "#/components/schemas/AfstammingOpgaandeLijn.datumVanAfstamming"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Afstammingstype"
+    },
+    "ouder": {
+      "type": "array",
+      "description": "Persoon waarvan de Persoon afstamt. Lijst van Persoon items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Persoon"
+          },
+          {
+            "$ref": "#/components/schemas/GeregistreerdPersoon"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Persoon": "#/components/schemas/Persoon",
+            "GeregistreerdPersoon": "#/components/schemas/GeregistreerdPersoon"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "plaats": {
+      "$ref": "#/components/schemas/Plaats"
+    },
+    "overschrijving": {
+      "$ref": "#/components/schemas/Overschrijving"
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

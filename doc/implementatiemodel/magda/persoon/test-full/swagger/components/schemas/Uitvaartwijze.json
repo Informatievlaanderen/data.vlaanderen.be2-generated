@@ -1,0 +1,62 @@
+{
+  "title": "Uitvaartwijze",
+  "type": "object",
+  "description": "Het kenbaar maken door een Persoon van een keuze, voorkeur of beslissing over een aangelegenheid die hem of haar persoonlijk betreft",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Uitvaartwijze)",
+      "pattern": "^Uitvaartwijze$"
+    },
+    "lijkbezorging": {
+      "$ref": "#/components/schemas/IT153-Lijkbezorgingtype-V1"
+    },
+    "ritueel": {
+      "$ref": "#/components/schemas/IT153-Uitvaartplachtigheidritueeltype-V1"
+    },
+    "begraafplaats": {
+      "$ref": "#/components/schemas/Plaats"
+    },
+    "contract": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Contract"
+        },
+        {
+          "$ref": "#/components/schemas/Samenlevingscontract"
+        },
+        {
+          "$ref": "#/components/schemas/UitvaartContract"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Contract": "#/components/schemas/Contract",
+          "Samenlevingscontract": "#/components/schemas/Samenlevingscontract",
+          "UitvaartContract": "#/components/schemas/UitvaartContract"
+        }
+      }
+    },
+    "wettelijkVertegenwoordiger": {
+      "$ref": "#/components/schemas/GeregistreerdPersoon"
+    },
+    "begindatum": {
+      "$ref": "#/components/schemas/Uitvaartwijze.begindatum"
+    },
+    "einddatum": {
+      "$ref": "#/components/schemas/Uitvaartwijze.einddatum"
+    },
+    "verklaring": {
+      "$ref": "#/components/schemas/Verklaring"
+    }
+  },
+  "required": [
+    "@type",
+    "begindatum"
+  ]
+}
