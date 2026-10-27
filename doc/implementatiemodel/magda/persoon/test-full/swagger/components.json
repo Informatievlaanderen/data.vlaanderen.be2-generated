@@ -2222,7 +2222,7 @@
           "identificator": {
             "$ref": "#/components/schemas/Identificator"
           },
-          "vanPartij": {
+          "vanAgent": {
             "oneOf": [
               {
                 "$ref": "#/components/schemas/Agent"
@@ -2278,7 +2278,7 @@
       "Contract": {
         "title": "Contract",
         "type": "object",
-        "description": "een vrijwillige, bewuste overeenkomst tussen handelingsbekwame partijen waarbij de partijen zich juridisch binden en een tegenprestatie van waarde leveren",
+        "description": "Een vrijwillige, bewuste overeenkomst tussen handelingsbekwame partijen waarbij de partijen zich juridisch binden en een tegenprestatie van waarde leveren",
         "properties": {
           "@id": {
             "type": "string",
@@ -2298,7 +2298,7 @@
           "identificator": {
             "$ref": "#/components/schemas/Identificator"
           },
-          "vanPartij": {
+          "vanAgent": {
             "oneOf": [
               {
                 "$ref": "#/components/schemas/Agent"
@@ -2451,9 +2451,9 @@
           "@type"
         ]
       },
-      "JuridischeUitspraakDocument.datumWaaropDeUitspraakPlaatsvindt.": {
-        "title": "JuridischeUitspraakDocument.datumWaaropDeUitspraakPlaatsvindt.",
-        "description": "undefined",
+      "JuridischeUitspraakDocument.datum": {
+        "title": "JuridischeUitspraakDocument.datum",
+        "description": "Datum waarop deJuridischeBeslissing is genomen.",
         "type": "string",
         "format": "date"
       },
@@ -2478,7 +2478,7 @@
       "JuridischeUitspraakDocument": {
         "title": "JuridischeUitspraakDocument",
         "type": "object",
-        "description": "Beslissing van een rechterlijke instantie waarbij een rechtsvraag wordt beoordeeld en een juridisch gevolg wordt vastgesteld.",
+        "description": "Document dat de beslissing van een rechterlijke instantie vastlegt.",
         "properties": {
           "@id": {
             "type": "string",
@@ -2489,8 +2489,8 @@
             "description": "Object type (klasse JuridischeUitspraakDocument)",
             "pattern": "^JuridischeUitspraakDocument$"
           },
-          "datumWaaropDeUitspraakPlaatsvindt.": {
-            "$ref": "#/components/schemas/JuridischeUitspraakDocument.datumWaaropDeUitspraakPlaatsvindt."
+          "datum": {
+            "$ref": "#/components/schemas/JuridischeUitspraakDocument.datum"
           },
           "beschrijving": {
             "$ref": "#/components/schemas/JuridischeUitspraakDocument.beschrijving"
@@ -2522,9 +2522,9 @@
           "@type"
         ]
       },
-      "Overschrijving.datumWaaropDeOverschrijvingPlaatsvindt.": {
-        "title": "Overschrijving.datumWaaropDeOverschrijvingPlaatsvindt.",
-        "description": "undefined",
+      "Overschrijving.datum": {
+        "title": "Overschrijving.datum",
+        "description": "Datum waarop de Overschrijving plaatsvindt.",
         "type": "string",
         "format": "date"
       },
@@ -2542,10 +2542,10 @@
             "description": "Object type (klasse Overschrijving)",
             "pattern": "^Overschrijving$"
           },
-          "datumWaaropDeOverschrijvingPlaatsvindt.": {
-            "$ref": "#/components/schemas/Overschrijving.datumWaaropDeOverschrijvingPlaatsvindt."
+          "datum": {
+            "$ref": "#/components/schemas/Overschrijving.datum"
           },
-          "plaatsWaarDeOverschrijvingPlaatsvindt.": {
+          "plaats": {
             "$ref": "#/components/schemas/Plaats"
           },
           "overschrijvingVan": {
@@ -3199,15 +3199,15 @@
           "@type"
         ]
       },
-      "AdministratieveBeslissingDocument.datumWaaropDeUitspraakPlaatsvindt.": {
-        "title": "AdministratieveBeslissingDocument.datumWaaropDeUitspraakPlaatsvindt.",
-        "description": "undefined",
+      "AdministratieveBeslissingDocument.datum": {
+        "title": "AdministratieveBeslissingDocument.datum",
+        "description": "Datum waarop de AdministratieveBeslissing is genomen.",
         "type": "string",
         "format": "date"
       },
       "AdministratieveBeslissingDocument.beschrijving": {
         "title": "AdministratieveBeslissingDocument.beschrijving",
-        "description": "Beschrijving van het JuridischeUitspraakDocument. Kan in praktijk de gestreuctureerde beschrijving vervangen.",
+        "description": "Beschrijving van het AdministratieveBeslissingDocument. Kan in praktijk de gestreuctureerde beschrijving vervangen.",
         "type": "object",
         "properties": {
           "@value": {
@@ -3236,8 +3236,8 @@
             "description": "Object type (klasse AdministratieveBeslissingDocument)",
             "pattern": "^AdministratieveBeslissingDocument$"
           },
-          "datumWaaropDeUitspraakPlaatsvindt.": {
-            "$ref": "#/components/schemas/AdministratieveBeslissingDocument.datumWaaropDeUitspraakPlaatsvindt."
+          "datum": {
+            "$ref": "#/components/schemas/AdministratieveBeslissingDocument.datum"
           },
           "beschrijving": {
             "$ref": "#/components/schemas/AdministratieveBeslissingDocument.beschrijving"
@@ -3354,7 +3354,7 @@
                 "$ref": "#/components/schemas/Samenlevingscontract"
               },
               {
-                "$ref": "#/components/schemas/UitvaartContract"
+                "$ref": "#/components/schemas/Uitvaartcontract"
               }
             ],
             "discriminator": {
@@ -3362,11 +3362,11 @@
               "mapping": {
                 "Contract": "#/components/schemas/Contract",
                 "Samenlevingscontract": "#/components/schemas/Samenlevingscontract",
-                "UitvaartContract": "#/components/schemas/UitvaartContract"
+                "Uitvaartcontract": "#/components/schemas/Uitvaartcontract"
               }
             }
           },
-          "wettelijkVertegenwoordiger": {
+          "wettelijkeVertegenwoordiger": {
             "$ref": "#/components/schemas/GeregistreerdPersoon"
           },
           "begindatum": {
@@ -3384,15 +3384,16 @@
           "begindatum"
         ]
       },
-      "UitvaartContract.datum": {
-        "title": "UitvaartContract.datum",
+      "Uitvaartcontract.datum": {
+        "title": "Uitvaartcontract.datum",
         "description": "Datum waarop het Contract is afgesloten.",
         "type": "string",
         "format": "date"
       },
-      "UitvaartContract": {
-        "title": "UitvaartContract",
+      "Uitvaartcontract": {
+        "title": "Uitvaartcontract",
         "type": "object",
+        "description": "Contract dat voor de uitvaart van een Persoon is afgesloten met een uitvaartonderneming.",
         "properties": {
           "@id": {
             "type": "string",
@@ -3400,14 +3401,14 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse UitvaartContract)",
-            "pattern": "^UitvaartContract$"
+            "description": "Object type (klasse Uitvaartcontract)",
+            "pattern": "^Uitvaartcontract$"
           },
           "onderneming": {
             "$ref": "#/components/schemas/Organisatie"
           },
           "datum": {
-            "$ref": "#/components/schemas/UitvaartContract.datum"
+            "$ref": "#/components/schemas/Uitvaartcontract.datum"
           },
           "plaats": {
             "$ref": "#/components/schemas/Plaats"
@@ -3415,7 +3416,7 @@
           "identificator": {
             "$ref": "#/components/schemas/Identificator"
           },
-          "vanPartij": {
+          "vanAgent": {
             "oneOf": [
               {
                 "$ref": "#/components/schemas/Agent"
@@ -5001,10 +5002,10 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
       },
-      "Samenlevingscontract.vanPartij": {
+      "Samenlevingscontract.vanAgent": {
         "operationId": "SamenlevingscontractGET",
         "parameters": {
-          "id": "$response.body#/Samenlevingscontract.vanPartij/@id"
+          "id": "$response.body#/Samenlevingscontract.vanAgent/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
@@ -5029,10 +5030,10 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
       },
-      "Contract.vanPartij": {
+      "Contract.vanAgent": {
         "operationId": "ContractGET",
         "parameters": {
-          "id": "$response.body#/Contract.vanPartij/@id"
+          "id": "$response.body#/Contract.vanAgent/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
@@ -5113,10 +5114,10 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
       },
-      "Overschrijving.plaatsWaarDeOverschrijvingPlaatsvindt.": {
+      "Overschrijving.plaats": {
         "operationId": "OverschrijvingGET",
         "parameters": {
-          "id": "$response.body#/Overschrijving.plaatsWaarDeOverschrijvingPlaatsvindt./@id"
+          "id": "$response.body#/Overschrijving.plaats/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen."
       },
@@ -5358,10 +5359,10 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contract` op te halen."
       },
-      "Uitvaartwijze.wettelijkVertegenwoordiger": {
+      "Uitvaartwijze.wettelijkeVertegenwoordiger": {
         "operationId": "UitvaartwijzeGET",
         "parameters": {
-          "id": "$response.body#/Uitvaartwijze.wettelijkVertegenwoordiger/@id"
+          "id": "$response.body#/Uitvaartwijze.wettelijkeVertegenwoordiger/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeregistreerdPersoon` op te halen."
       },
@@ -5372,38 +5373,38 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Verklaring` op te halen."
       },
-      "UitvaartContract.onderneming": {
-        "operationId": "UitvaartContractGET",
+      "Uitvaartcontract.onderneming": {
+        "operationId": "UitvaartcontractGET",
         "parameters": {
-          "id": "$response.body#/UitvaartContract.onderneming/@id"
+          "id": "$response.body#/Uitvaartcontract.onderneming/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen."
       },
-      "UitvaartContract.plaats": {
-        "operationId": "UitvaartContractGET",
+      "Uitvaartcontract.plaats": {
+        "operationId": "UitvaartcontractGET",
         "parameters": {
-          "id": "$response.body#/UitvaartContract.plaats/@id"
+          "id": "$response.body#/Uitvaartcontract.plaats/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen."
       },
-      "UitvaartContract.identificator": {
-        "operationId": "UitvaartContractGET",
+      "Uitvaartcontract.identificator": {
+        "operationId": "UitvaartcontractGET",
         "parameters": {
-          "id": "$response.body#/UitvaartContract.identificator/@id"
+          "id": "$response.body#/Uitvaartcontract.identificator/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
       },
-      "UitvaartContract.vanPartij": {
-        "operationId": "UitvaartContractGET",
+      "Uitvaartcontract.vanAgent": {
+        "operationId": "UitvaartcontractGET",
         "parameters": {
-          "id": "$response.body#/UitvaartContract.vanPartij/@id"
+          "id": "$response.body#/Uitvaartcontract.vanAgent/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
-      "UitvaartContract.metAgent": {
-        "operationId": "UitvaartContractGET",
+      "Uitvaartcontract.metAgent": {
+        "operationId": "UitvaartcontractGET",
         "parameters": {
-          "id": "$response.body#/UitvaartContract.metAgent/@id"
+          "id": "$response.body#/Uitvaartcontract.metAgent/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },

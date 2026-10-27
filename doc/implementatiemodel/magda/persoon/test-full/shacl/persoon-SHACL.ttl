@@ -72,7 +72,7 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AdministratieveBeslissingDocumentShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#WilsuitingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#UitvaartwijzeShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#UitvaartContractShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#UitvaartcontractShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#HuisvestingsrelatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AdresvoorstellingShape>,
@@ -99,7 +99,9 @@
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "beheerdertype"@nl;
+    rdfs:comment "ype Organisatie dat het AangegevenAdres ingeeft of bewerkt"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AangegevenAdres.Beheerdertype>;
+    shacl:description "ype Organisatie dat het AangegevenAdres ingeeft of bewerkt"@nl;
     shacl:maxCount 1;
     shacl:name "beheerdertype"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
@@ -167,25 +169,27 @@
   shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/magda/persoon#AdministratiefBeheerder> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AdministratieveBeslissingDocumentShape> a shacl:NodeShape;
-  rdfs:label "AdministratieveBeslissingDocument";
+  rdfs:label "AdministratieveBeslissingDocument"@nl;
   rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AdministratieveBeslissingDocument>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "Datum waarop de Uitspraak plaatsvindt."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AdministratieveBeslissingDocument.DatumWaaropDeUitspraakPlaatsvindt.>;
+    rdfs:label "datum"@nl;
+    rdfs:comment "Datum waarop de AdministratieveBeslissing is genomen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AdministratieveBeslissingDocument.Datum>;
     shacl:datatype xsd:date;
+    shacl:description "Datum waarop de AdministratieveBeslissing is genomen."@nl;
     shacl:maxCount 1;
-    shacl:name "Datum waarop de Uitspraak plaatsvindt."@nl;
+    shacl:name "datum"@nl;
     shacl:path dc:date
   ], [
     a shacl:PropertyShape;
     rdfs:label "beschrijving"@nl;
     <http://purl.org/vocab/vann/usageNote> "Kan in praktijk de gestreuctureerde beschrijving vervangen."@nl;
-    rdfs:comment "Beschrijving van het JuridischeUitspraakDocument."@nl;
+    rdfs:comment "Beschrijving van het AdministratieveBeslissingDocument."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AdministratieveBeslissingDocument.Beschrijving>;
     shacl:datatype rdf:langString;
-    shacl:description "Beschrijving van het JuridischeUitspraakDocument."@nl;
+    shacl:description "Beschrijving van het AdministratieveBeslissingDocument."@nl;
     shacl:maxCount 1;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
@@ -222,10 +226,10 @@
     a shacl:PropertyShape;
     rdfs:label "plaats"@nl;
     <http://purl.org/vocab/vann/usageNote> "In praktijk de (gemeente van) de rechtbank die de Uitspraak doet."@nl;
-    rdfs:comment "Plaats waar de Uitspraak plaatsvindt."@nl;
+    rdfs:comment "Plaats waar de AdministratieveBeslissing heeft plaatsgevonden."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AdministratieveBeslissingDocument.Plaats>;
     shacl:class dc:Location;
-    shacl:description "Plaats waar de Uitspraak plaatsvindt."@nl;
+    shacl:description "Plaats waar de AdministratieveBeslissing heeft plaatsgevonden."@nl;
     shacl:maxCount 1;
     shacl:name "plaats"@nl;
     shacl:path dc:spatial
@@ -840,7 +844,7 @@
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#ContractShape> a shacl:NodeShape;
   rdfs:label "Contract"@nl;
-  rdfs:comment "een vrijwillige, bewuste overeenkomst tussen handelingsbekwame partijen waarbij de partijen zich juridisch binden en een tegenprestatie van waarde leveren"@nl;
+  rdfs:comment "Een vrijwillige, bewuste overeenkomst tussen handelingsbekwame partijen waarbij de partijen zich juridisch binden en een tegenprestatie van waarde leveren"@nl;
   rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Contract>;
   shacl:closed false;
   shacl:property [
@@ -875,12 +879,14 @@
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "vanPartij";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Contract.VanPartij>;
+    rdfs:label "vanAgent"@nl;
+    rdfs:comment "Agent die het Contract afsluit."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Contract.VanAgent>;
+    shacl:description "Agent die het Contract afsluit."@nl;
     shacl:maxCount 1;
-    shacl:name "vanPartij";
+    shacl:name "vanAgent"@nl;
     shacl:or ([shacl:class foaf:Agent] [shacl:class <http://www.w3.org/ns/person#Person>] [shacl:class <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>] [shacl:class org:Organization]);
-    shacl:path <https://implementatie.data.vlaanderen.be/ns/generiek#vanPartij>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/generiek#vanAgent>
   ];
   shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/magda/persoon#Samenlevingscontract>,
     <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract>,
@@ -1289,8 +1295,10 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "uitspraak"@nl;
+    rdfs:comment "Verwijzing naar de Uitsprak van een rechtbank mbt het Huwelijk."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Huwelijk.Uitspraak>;
     shacl:class <https://implementatie.data.vlaanderen.be/ns/generiek#JuridischeBeslissingDocument>;
+    shacl:description "Verwijzing naar de Uitsprak van een rechtbank mbt het Huwelijk."@nl;
     shacl:maxCount 1;
     shacl:name "uitspraak"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#uitspraak>
@@ -1447,16 +1455,18 @@
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#JuridischeUitspraakDocumentShape> a shacl:NodeShape;
   rdfs:label "JuridischeUitspraakDocument"@nl;
   <http://purl.org/vocab/vann/usageNote> "Kan verschillende vormen aannemen, bvb een vonnis, arrest, beschikking."@nl;
-  rdfs:comment "Beslissing van een rechterlijke instantie waarbij een rechtsvraag wordt beoordeeld en een juridisch gevolg wordt vastgesteld."@nl;
+  rdfs:comment "Document dat de beslissing van een rechterlijke instantie vastlegt."@nl;
   rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#JuridischeUitspraakDocument>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "Datum waarop de Uitspraak plaatsvindt."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#JuridischeUitspraakDocument.DatumWaaropDeUitspraakPlaatsvindt.>;
+    rdfs:label "datum"@nl;
+    rdfs:comment "Datum waarop deJuridischeBeslissing is genomen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#JuridischeUitspraakDocument.Datum>;
     shacl:datatype xsd:date;
+    shacl:description "Datum waarop deJuridischeBeslissing is genomen."@nl;
     shacl:maxCount 1;
-    shacl:name "Datum waarop de Uitspraak plaatsvindt."@nl;
+    shacl:name "datum"@nl;
     shacl:path dc:date
   ], [
     a shacl:PropertyShape;
@@ -1885,21 +1895,22 @@
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "Datum waarop de Overschrijving plaatsvindt."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Overschrijving.DatumWaaropDeOverschrijvingPlaatsvindt.>;
+    rdfs:label "datum"@nl;
+    rdfs:comment "Datum waarop de Overschrijving plaatsvindt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Overschrijving.Datum>;
     shacl:datatype xsd:date;
+    shacl:description "Datum waarop de Overschrijving plaatsvindt."@nl;
     shacl:maxCount 1;
-    shacl:name "Datum waarop de Overschrijving plaatsvindt."@nl;
+    shacl:name "datum"@nl;
     shacl:path dc:date
   ], [
     a shacl:PropertyShape;
-    rdfs:label "Plaats waar de Overschrijving plaatsvindt."@nl;
-    rdfs:comment "In praktijk de gemeente van het Register van de Burgerlijke Stand waarin de Uitspraak wordt overgeschreven."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Overschrijving.PlaatsWaarDeOverschrijvingPlaatsvindt.>;
+    rdfs:label "plaats"@nl;
+    <http://purl.org/vocab/vann/usageNote> "In praktijk de gemeente van het Register van de Burgerlijke Stand waarin de Uitspraak wordt overgeschreven."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Overschrijving.Plaats>;
     shacl:class dc:Location;
-    shacl:description "In praktijk de gemeente van het Register van de Burgerlijke Stand waarin de Uitspraak wordt overgeschreven."@nl;
     shacl:maxCount 1;
-    shacl:name "Plaats waar de Overschrijving plaatsvindt."@nl;
+    shacl:name "plaats"@nl;
     shacl:path dc:spatial
   ], [
     a shacl:PropertyShape;
@@ -2677,9 +2688,10 @@
   shacl:closed false;
   shacl:targetClass xsd:anyURI .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#UitvaartContractShape> a shacl:NodeShape;
-  rdfs:label "UitvaartContract";
-  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#UitvaartContract>;
+<https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#UitvaartcontractShape> a shacl:NodeShape;
+  rdfs:label "Uitvaartcontract"@nl;
+  rdfs:comment "Contract dat voor de uitvaart van een Persoon is afgesloten met een uitvaartonderneming."@nl;
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Uitvaartcontract>;
   shacl:closed false;
   shacl:property _:df_2_197;
   shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/magda/persoon#UitvaartContract> .
@@ -2691,43 +2703,53 @@
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "lijkbezorging";
+    rdfs:label "lijkbezorging"@nl;
+    rdfs:comment "TODO"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Uitvaartwijze.Lijkbezorging>;
+    shacl:description "TODO"@nl;
     shacl:maxCount 1;
-    shacl:name "lijkbezorging";
+    shacl:name "lijkbezorging"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#lijkbezorging>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "ritueel";
+    rdfs:label "ritueel"@nl;
+    rdfs:comment "TODO"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Uitvaartwijze.Ritueel>;
+    shacl:description "TODO"@nl;
     shacl:maxCount 1;
-    shacl:name "ritueel";
+    shacl:name "ritueel"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#ritueel>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "begraafplaats";
+    rdfs:label "begraafplaats"@nl;
+    rdfs:comment "TODO"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Uitvaartwijze.Begraafplaats>;
     shacl:class dc:Location;
+    shacl:description "TODO"@nl;
     shacl:maxCount 1;
-    shacl:name "begraafplaats";
+    shacl:name "begraafplaats"@nl;
     shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#begraafplaats>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "contract";
+    rdfs:label "contract"@nl;
+    rdfs:comment "TODO"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Uitvaartwijze.Contract>;
+    shacl:description "TODO"@nl;
     shacl:maxCount 1;
-    shacl:name "contract";
+    shacl:name "contract"@nl;
     shacl:or ([shacl:class <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract>] [shacl:class <https://implementatie.data.vlaanderen.be/ns/magda/persoon#Samenlevingscontract>] [shacl:class <https://implementatie.data.vlaanderen.be/ns/magda/persoon#UitvaartContract>]);
     shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#contract>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "wettelijkVertegenwoordiger";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Uitvaartwijze.WettelijkVertegenwoordiger>;
+    rdfs:label "wettelijkeVertegenwoordiger"@nl;
+    rdfs:comment "TODO"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Uitvaartwijze.WettelijkeVertegenwoordiger>;
     shacl:class <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>;
+    shacl:description "TODO"@nl;
     shacl:maxCount 1;
-    shacl:name "wettelijkVertegenwoordiger";
+    shacl:name "wettelijkeVertegenwoordiger"@nl;
     shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#wettelijkVertegenwoordiger>
   ];
   shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/magda/persoon#Uitvaartwijze> .
@@ -3007,11 +3029,13 @@
     shacl:path prov:invalidatedAtTime
   ], [
     a shacl:PropertyShape;
-    rdfs:label "verklaring";
+    rdfs:label "verklaring"@nl;
+    rdfs:comment "TODO"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Wilsuiting.Verklaring>;
     shacl:class <https://implementatie.data.vlaanderen.be/ns/generiek#Verklaring>;
+    shacl:description "TODO"@nl;
     shacl:maxCount 1;
-    shacl:name "verklaring";
+    shacl:name "verklaring"@nl;
     shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#verklaring>
   ];
   shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/magda/persoon#Wilsuiting>,
@@ -3044,18 +3068,22 @@ _:df_2_155 a shacl:PropertyShape;
   shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#notaris> .
 
 _:df_2_196 a shacl:PropertyShape;
-  rdfs:label "metAgent";
+  rdfs:label "metAgent"@nl;
+  rdfs:comment "Agent waarmee het Contract is afgesloten."@nl;
   rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Contract.MetAgent>;
+  shacl:description "Agent waarmee het Contract is afgesloten."@nl;
   shacl:maxCount 1;
-  shacl:name "metAgent";
+  shacl:name "metAgent"@nl;
   shacl:or ([shacl:class foaf:Agent] [shacl:class <http://www.w3.org/ns/person#Person>] [shacl:class <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>] [shacl:class org:Organization]);
   shacl:path <https://implementatie.data.vlaanderen.be/ns/generiek#metAgent> .
 
 _:df_2_197 a shacl:PropertyShape;
-  rdfs:label "onderneming";
-  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#UitvaartContract.Onderneming>;
+  rdfs:label "onderneming"@nl;
+  rdfs:comment "Onderneming waarmee het Uitvaartcontract is afgesloten."@nl;
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Uitvaartcontract.Onderneming>;
+  shacl:description "Onderneming waarmee het Uitvaartcontract is afgesloten."@nl;
   shacl:maxCount 1;
-  shacl:name "onderneming";
+  shacl:name "onderneming"@nl;
   shacl:or ([shacl:class org:Organization] [shacl:class <https://implementatie.data.vlaanderen.be/ns/magda/persoon#AdministratiefBeheerder>]);
   shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#onderneming> .
 
