@@ -396,6 +396,54 @@
           "metPersoon"
         ]
       },
+      "Document.beschrijving": {
+        "title": "Document.beschrijving",
+        "description": "Beschrijving van het Document.",
+        "type": "object",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "Document": {
+        "title": "Document",
+        "type": "object",
+        "description": "Informatie vastgelegd op een gegevensdrager.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Document)",
+            "pattern": "^Document$"
+          },
+          "beschrijving": {
+            "$ref": "#/components/schemas/Document.beschrijving"
+          },
+          "onderwerp": {
+            "type": "array",
+            "description": "Datgene waarop het Document betrekking heeft. Lijst van Resource items.",
+            "items": {
+              "$ref": "#/components/schemas/Resource"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
       "Overlijden.begindatum": {
         "title": "Overlijden.begindatum",
         "description": "Moment vanaf wanneer de instantie van deze klasse op het terrein van toepassing was.",
@@ -2459,7 +2507,7 @@
       },
       "JuridischeUitspraakDocument.beschrijving": {
         "title": "JuridischeUitspraakDocument.beschrijving",
-        "description": "Beschrijving van het JuridischeUitspraakDocument. Kan in praktijk de gestreuctureerde beschrijving vervangen.",
+        "description": "Beschrijving van het Document.",
         "type": "object",
         "properties": {
           "@value": {
@@ -2492,28 +2540,20 @@
           "datum": {
             "$ref": "#/components/schemas/JuridischeUitspraakDocument.datum"
           },
-          "beschrijving": {
-            "$ref": "#/components/schemas/JuridischeUitspraakDocument.beschrijving"
-          },
           "rechtbank": {
             "$ref": "#/components/schemas/IT120-Rechtbank-V1"
           },
           "plaats": {
             "$ref": "#/components/schemas/Plaats"
           },
+          "beschrijving": {
+            "$ref": "#/components/schemas/JuridischeUitspraakDocument.beschrijving"
+          },
           "onderwerp": {
             "type": "array",
             "description": "Datgene waarop het Document betrekking heeft. Lijst van Resource items.",
             "items": {
               "$ref": "#/components/schemas/Resource"
-            },
-            "minItems": 1
-          },
-          "identificator": {
-            "type": "array",
-            "description": "Identificator van de Beslissing In praktijk rolnummer + repertoriumnummer of een European Case Law Identifier (ECLI). Lijst van Identificator items.",
-            "items": {
-              "$ref": "#/components/schemas/Identificator"
             },
             "minItems": 1
           }
@@ -2586,7 +2626,7 @@
       },
       "Akte.beschrijving": {
         "title": "Akte.beschrijving",
-        "description": "Beschrijving van de Akte. Kan in praktijk de gestreuctureerde beschrijving vervangen.",
+        "description": "Beschrijving van het Document.",
         "type": "object",
         "properties": {
           "@value": {
@@ -2619,19 +2659,11 @@
           "datum": {
             "$ref": "#/components/schemas/Akte.datum"
           },
-          "beschrijving": {
-            "$ref": "#/components/schemas/Akte.beschrijving"
-          },
-          "identificator": {
-            "type": "array",
-            "description": "Identificator van de Akte. Lijst van Identificator items.",
-            "items": {
-              "$ref": "#/components/schemas/Identificator"
-            },
-            "minItems": 1
-          },
           "register": {
             "$ref": "#/components/schemas/Register"
+          },
+          "beschrijving": {
+            "$ref": "#/components/schemas/Akte.beschrijving"
           },
           "onderwerp": {
             "type": "array",
@@ -3207,7 +3239,7 @@
       },
       "AdministratieveBeslissingDocument.beschrijving": {
         "title": "AdministratieveBeslissingDocument.beschrijving",
-        "description": "Beschrijving van het AdministratieveBeslissingDocument. Kan in praktijk de gestreuctureerde beschrijving vervangen.",
+        "description": "Beschrijving van het Document.",
         "type": "object",
         "properties": {
           "@value": {
@@ -3240,11 +3272,14 @@
           "datum": {
             "$ref": "#/components/schemas/AdministratieveBeslissingDocument.datum"
           },
-          "beschrijving": {
-            "$ref": "#/components/schemas/AdministratieveBeslissingDocument.beschrijving"
-          },
           "administratie": {
             "$ref": "#/components/schemas/IT003-Administratietype-V1"
+          },
+          "plaats": {
+            "$ref": "#/components/schemas/Plaats"
+          },
+          "beschrijving": {
+            "$ref": "#/components/schemas/AdministratieveBeslissingDocument.beschrijving"
           },
           "onderwerp": {
             "type": "array",
@@ -3253,17 +3288,6 @@
               "$ref": "#/components/schemas/Resource"
             },
             "minItems": 1
-          },
-          "identificator": {
-            "type": "array",
-            "description": "Identificator van de Beslissing. In praktijk rolnummer + repertoriumnummer of een European Case Law Identifier (ECLI). Lijst van Identificator items.",
-            "items": {
-              "$ref": "#/components/schemas/Identificator"
-            },
-            "minItems": 1
-          },
-          "plaats": {
-            "$ref": "#/components/schemas/Plaats"
           }
         },
         "required": [
@@ -4247,6 +4271,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Persoon` op te halen."
       },
+      "Document.onderwerp": {
+        "operationId": "DocumentGET",
+        "parameters": {
+          "id": "$response.body#/Document.onderwerp/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Resource` op te halen."
+      },
       "Overlijden.akte": {
         "operationId": "OverlijdenGET",
         "parameters": {
@@ -5108,13 +5139,6 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Resource` op te halen."
       },
-      "JuridischeUitspraakDocument.identificator": {
-        "operationId": "JuridischeUitspraakDocumentGET",
-        "parameters": {
-          "id": "$response.body#/JuridischeUitspraakDocument.identificator/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
-      },
       "Overschrijving.plaats": {
         "operationId": "OverschrijvingGET",
         "parameters": {
@@ -5128,13 +5152,6 @@
           "id": "$response.body#/Overschrijving.overschrijvingVan/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Document` op te halen."
-      },
-      "Akte.identificator": {
-        "operationId": "AkteGET",
-        "parameters": {
-          "id": "$response.body#/Akte.identificator/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
       },
       "Akte.register": {
         "operationId": "AkteGET",
@@ -5304,26 +5321,19 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT003-Administratietype-V1` op te halen."
       },
-      "AdministratieveBeslissingDocument.onderwerp": {
-        "operationId": "AdministratieveBeslissingDocumentGET",
-        "parameters": {
-          "id": "$response.body#/AdministratieveBeslissingDocument.onderwerp/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Resource` op te halen."
-      },
-      "AdministratieveBeslissingDocument.identificator": {
-        "operationId": "AdministratieveBeslissingDocumentGET",
-        "parameters": {
-          "id": "$response.body#/AdministratieveBeslissingDocument.identificator/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
-      },
       "AdministratieveBeslissingDocument.plaats": {
         "operationId": "AdministratieveBeslissingDocumentGET",
         "parameters": {
           "id": "$response.body#/AdministratieveBeslissingDocument.plaats/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen."
+      },
+      "AdministratieveBeslissingDocument.onderwerp": {
+        "operationId": "AdministratieveBeslissingDocumentGET",
+        "parameters": {
+          "id": "$response.body#/AdministratieveBeslissingDocument.onderwerp/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Resource` op te halen."
       },
       "Wilsuiting.verklaring": {
         "operationId": "WilsuitingGET",
