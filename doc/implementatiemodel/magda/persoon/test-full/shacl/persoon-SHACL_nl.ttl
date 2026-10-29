@@ -55,7 +55,7 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#VerklaringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#SamenlevingscontractShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#ContractShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AfstammingOpgaandeLijnShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#OudersShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#NationaliteitsverwervingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#JuridischeUitspraakDocumentShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#OverschrijvingShape>,
@@ -371,68 +371,10 @@
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AfstammingOpgaandeLijnShape> a shacl:NodeShape;
-  rdfs:label "AfstammingOpgaandeLijn"@nl;
-  rdfs:comment "De opgaande lijn van bloedverwantschap tussen generaties."@nl;
-  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AfstammingOpgaandeLijn>;
-  shacl:closed false;
-  shacl:property [
-    a shacl:PropertyShape;
-    rdfs:label "datumVanAfstamming"@nl;
-    rdfs:comment "Datum waarop de afstamming wordt vastgesteld."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AfstammingOpgaandeLijn.DatumVanAfstamming>;
-    shacl:datatype xsd:date;
-    shacl:description "Datum waarop de afstamming wordt vastgesteld."@nl;
-    shacl:maxCount 1;
-    shacl:name "datumVanAfstamming"@nl;
-    shacl:path dc:date
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "type"@nl;
-    rdfs:comment "Wijze van afstamming."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AfstammingOpgaandeLijn.Type>;
-    shacl:description "Wijze van afstamming."@nl;
-    shacl:maxCount 1;
-    shacl:name "type"@nl;
-    shacl:nodeKind shacl:BlankNodeOrIRI;
-    shacl:path dc:type
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "ouder"@nl;
-    rdfs:comment "Persoon waarvan de Persoon afstamt."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AfstammingOpgaandeLijn.Ouder>;
-    shacl:description "Persoon waarvan de Persoon afstamt."@nl;
-    shacl:maxCount 2;
-    shacl:name "ouder"@nl;
-    shacl:or ([shacl:class <http://www.w3.org/ns/person#Person>] [shacl:class <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>]);
-    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#ouder>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "plaats"@nl;
-    rdfs:comment "Plaats van geboorte of overschrijving."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AfstammingOpgaandeLijn.Plaats>;
-    shacl:class dc:Location;
-    shacl:description "Plaats van geboorte of overschrijving."@nl;
-    shacl:maxCount 1;
-    shacl:name "plaats"@nl;
-    shacl:path dc:spatial
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "overschrijving"@nl;
-    rdfs:comment "Verwijzing naar de Overschrijving van een Akte of Uitspraak in het Register van de Burgerlijke Stand."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AfstammingOpgaandeLijn.Overschrijving>;
-    shacl:class <https://implementatie.data.vlaanderen.be/ns/generiek#Overschrijving>;
-    shacl:description "Verwijzing naar de Overschrijving van een Akte of Uitspraak in het Register van de Burgerlijke Stand."@nl;
-    shacl:maxCount 1;
-    shacl:name "overschrijving"@nl;
-    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#overschrijving>
-  ];
-  shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/magda/persoon#AfstammingOpgaandeLijn> .
-
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#AfstammingShape> a shacl:NodeShape;
   rdfs:label "Afstamming"@nl;
-  <http://purl.org/vocab/vann/usageNote> "De afstamming kan ook niet-biologisch zijn, bijvoorbeeld adoptie. Afstamming kan ook in opgaande lijn worden bekeken. Het begrip is enger dan verwantschap dat onder andere ook Huwelijk inhoudt."@nl;
-  rdfs:comment "Dalende lijn van bloedverwantschap tussen generaties."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Verder te specialiseren voor dalende (ouder-kind) of stigende lijn (kind-ouder).Slaat op biologische afstamming maar evengoed op adoptie of meemoederschap."@nl;
+  rdfs:comment "De juridische band tussen een kind en zijn ouder."@nl;
   rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Afstamming>;
   shacl:closed false;
   shacl:property [
@@ -694,7 +636,7 @@
     shacl:description "Verwijzing naar het Huwelijk waarop de BurgerlijkeStaat gebaseerd is."@nl;
     shacl:maxCount 1;
     shacl:name "huwelijk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#huwelijk>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#huwelijk>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#BurgerlijkeStaat> .
 
@@ -913,7 +855,7 @@
     shacl:maxCount 1;
     shacl:name "status"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#status>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#status>
   ], [
     a shacl:PropertyShape;
     rdfs:label "nietMededeelbaar"@nl;
@@ -923,7 +865,7 @@
     shacl:description "Domicilie die niet kan worden meegedeeld."@nl;
     shacl:maxCount 1;
     shacl:name "nietMededeelbaar"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#nietMededeelbaar>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#nietMededeelbaar>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Domicilie>,
     <https://implementatie.data.vlaanderen.be/ns/magda/persoon#AangegevenAdres>,
@@ -950,7 +892,7 @@
     shacl:description "Verwijzing naar de geboorte-akte."@nl;
     shacl:maxCount 1;
     shacl:name "akte"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#akte>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#akte>
   ], [
     a shacl:PropertyShape;
     rdfs:label "bronDatum"@nl;
@@ -961,7 +903,7 @@
     shacl:maxCount 1;
     shacl:name "bronDatum"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#bronDatum>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#bronDatum>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Geboorte> .
 
@@ -1097,7 +1039,7 @@
     shacl:maxCount 1;
     shacl:name "woonvorm"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#woonvorm>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#woonvorm>
   ], [
     a shacl:PropertyShape;
     rdfs:label "gezinshoofd"@nl;
@@ -1755,6 +1697,64 @@
   ];
   shacl:targetClass org:Organization .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#OudersShape> a shacl:NodeShape;
+  rdfs:label "Ouders"@nl;
+  rdfs:comment "Personen waartoe de Persoon zich juridisch op grond van afstamming of adoptie als kind verhoudt."@nl;
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Ouders>;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "datumVanAfstamming"@nl;
+    rdfs:comment "Datum waarop de ouderschapsband is vastgesteld."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Ouders.DatumVanAfstamming>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de ouderschapsband is vastgesteld."@nl;
+    shacl:maxCount 1;
+    shacl:name "datumVanAfstamming"@nl;
+    shacl:path dc:date
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Soort afstamming of adoptie"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Ouders.Type>;
+    shacl:description "Soort afstamming of adoptie"@nl;
+    shacl:maxCount 1;
+    shacl:name "type"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
+    shacl:path dc:type
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "ouder"@nl;
+    rdfs:comment "Verwijzing naar de Persoon die zijn ouder is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Ouders.Ouder>;
+    shacl:description "Verwijzing naar de Persoon die zijn ouder is."@nl;
+    shacl:maxCount 2;
+    shacl:name "ouder"@nl;
+    shacl:or ([shacl:class <http://www.w3.org/ns/person#Person>] [shacl:class <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>]);
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#ouder>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "plaats"@nl;
+    rdfs:comment "Plaats van geboorte of Overschrijving."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Ouders.Plaats>;
+    shacl:class dc:Location;
+    shacl:description "Plaats van geboorte of Overschrijving."@nl;
+    shacl:maxCount 1;
+    shacl:name "plaats"@nl;
+    shacl:path dc:spatial
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "overschrijving"@nl;
+    rdfs:comment "Verwijzing naar de Overschrijving van een Akte of JuridischeBeslissing in het register van de burgerlijke stand  die betrekking heeft op de ouderschapsband."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Ouders.Overschrijving>;
+    shacl:class <https://implementatie.data.vlaanderen.be/ns/generiek#Overschrijving>;
+    shacl:description "Verwijzing naar de Overschrijving van een Akte of JuridischeBeslissing in het register van de burgerlijke stand  die betrekking heeft op de ouderschapsband."@nl;
+    shacl:maxCount 1;
+    shacl:name "overschrijving"@nl;
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#overschrijving>
+  ];
+  shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/magda/persoon#Ouders> .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#OverlijdenShape> a shacl:NodeShape;
   rdfs:label "Overlijden"@nl;
   rdfs:comment "Het doodgaan van een Persoon."@nl;
@@ -1769,7 +1769,7 @@
     shacl:description "Verwijzing naar de overlijdensakte."@nl;
     shacl:maxCount 1;
     shacl:name "akte"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#akte>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#akte>
   ], [
     a shacl:PropertyShape;
     rdfs:label "uitspraak"@nl;
@@ -1779,17 +1779,17 @@
     shacl:description "Verwijzing naar de Uitsprak van een rechtbank mbt het Overlijden."@nl;
     shacl:maxCount 1;
     shacl:name "uitspraak"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#uitspraak>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#uitspraak>
   ], [
     a shacl:PropertyShape;
     rdfs:label "overschrijving"@nl;
-    rdfs:comment "Verwijzing naar de Overschrijving van een Uitspraak in het Register van de Burgerlijke Stand."@nl;
+    rdfs:comment "Verwijzing naar de Overschrijving van een JuridischeBeslissing die betrekking heeft op het Overlijden in het register van de burgerlijke stand."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Overlijden.Overschrijving>;
     shacl:class <https://implementatie.data.vlaanderen.be/ns/generiek#Overschrijving>;
-    shacl:description "Verwijzing naar de Overschrijving van een Uitspraak in het Register van de Burgerlijke Stand."@nl;
+    shacl:description "Verwijzing naar de Overschrijving van een JuridischeBeslissing die betrekking heeft op het Overlijden in het register van de burgerlijke stand."@nl;
     shacl:maxCount 1;
     shacl:name "overschrijving"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#overschrijving>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#overschrijving>
   ], [
     a shacl:PropertyShape;
     rdfs:label "brontype"@nl;
@@ -1799,7 +1799,7 @@
     shacl:maxCount 1;
     shacl:name "brontype"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#brontype>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#brontype>
   ], [
     a shacl:PropertyShape;
     rdfs:label "uitspraaktype"@nl;
@@ -1810,7 +1810,7 @@
     shacl:maxCount 1;
     shacl:name "uitspraaktype"@nl;
     shacl:nodeKind shacl:BlankNodeOrIRI;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#uitspraaktype>
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#uitspraaktype>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Overlijden> .
 
@@ -2078,14 +2078,13 @@
     shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#titel>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "afstammingOpgaandeLijn"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Concreet de ouders van de Persoon."@nl;
-    rdfs:comment "Verwijzing naar de afstamming van de Persoon in opgaande lijn."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Persoon.AfstammingOpgaandeLijn>;
-    shacl:class <https://implementatie.data.vlaanderen.be/ns/magda/persoon#AfstammingOpgaandeLijn>;
-    shacl:description "Verwijzing naar de afstamming van de Persoon in opgaande lijn."@nl;
-    shacl:name "afstammingOpgaandeLijn"@nl;
-    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#afstammingOpgaandeLijn>
+    rdfs:label "ouders"@nl;
+    rdfs:comment "Verwijzing naar de ouders van de Persoon."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#Persoon.Ouders>;
+    shacl:class <https://implementatie.data.vlaanderen.be/ns/magda/persoon#Ouders>;
+    shacl:description "Verwijzing naar de ouders van de Persoon."@nl;
+    shacl:name "ouders"@nl;
+    shacl:path <https://implementatie.data.vlaanderen.be/ns/magda/persoon#ouders>
   ], [
     a shacl:PropertyShape;
     rdfs:label "naam"@nl;
@@ -2341,7 +2340,7 @@
     shacl:name "instantie"@nl;
     shacl:path dc:references
   ];
-  shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/magda/persoon#Problemdetail> .
+  shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/magda/persoon#Probleemdetail> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/test-full#ReferentieadresShape> a shacl:NodeShape;
   rdfs:label "Referentieadres"@nl;
