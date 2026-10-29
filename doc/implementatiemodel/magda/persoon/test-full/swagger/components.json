@@ -180,11 +180,11 @@
             },
             "minItems": 1
           },
-          "afstammingOpgaandeLijn": {
+          "ouders": {
             "type": "array",
-            "description": "Verwijzing naar de afstamming van de Persoon in opgaande lijn. Concreet de ouders van de Persoon. Lijst van AfstammingOpgaandeLijn items.",
+            "description": "Verwijzing naar de ouders van de Persoon. Lijst van Ouders items.",
             "items": {
-              "$ref": "#/components/schemas/AfstammingOpgaandeLijn"
+              "$ref": "#/components/schemas/Ouders"
             },
             "minItems": 1
           },
@@ -1343,11 +1343,11 @@
             },
             "minItems": 1
           },
-          "afstammingOpgaandeLijn": {
+          "ouders": {
             "type": "array",
-            "description": "Verwijzing naar de afstamming van de Persoon in opgaande lijn. Concreet de ouders van de Persoon. Lijst van AfstammingOpgaandeLijn items.",
+            "description": "Verwijzing naar de ouders van de Persoon. Lijst van Ouders items.",
             "items": {
-              "$ref": "#/components/schemas/AfstammingOpgaandeLijn"
+              "$ref": "#/components/schemas/Ouders"
             },
             "minItems": 1
           },
@@ -1442,73 +1442,6 @@
         },
         "required": [
           "@type"
-        ]
-      },
-      "Afstamming.datumVanAfstamming": {
-        "title": "Afstamming.datumVanAfstamming",
-        "description": "De datum waarop de afstamming wordt vastgesteld.",
-        "type": "string",
-        "format": "date"
-      },
-      "Afstamming": {
-        "title": "Afstamming",
-        "type": "object",
-        "description": "Dalende lijn van bloedverwantschap tussen generaties.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Afstamming)",
-            "pattern": "^Afstamming$"
-          },
-          "datumVanAfstamming": {
-            "$ref": "#/components/schemas/Afstamming.datumVanAfstamming"
-          },
-          "afstammingstype": {
-            "$ref": "#/components/schemas/Afstammingstype"
-          },
-          "vanPersoon": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Persoon"
-              },
-              {
-                "$ref": "#/components/schemas/GeregistreerdPersoon"
-              }
-            ],
-            "discriminator": {
-              "propertyName": "@type",
-              "mapping": {
-                "Persoon": "#/components/schemas/Persoon",
-                "GeregistreerdPersoon": "#/components/schemas/GeregistreerdPersoon"
-              }
-            }
-          },
-          "metPersoon": {
-            "oneOf": [
-              {
-                "$ref": "#/components/schemas/Persoon"
-              },
-              {
-                "$ref": "#/components/schemas/GeregistreerdPersoon"
-              }
-            ],
-            "discriminator": {
-              "propertyName": "@type",
-              "mapping": {
-                "Persoon": "#/components/schemas/Persoon",
-                "GeregistreerdPersoon": "#/components/schemas/GeregistreerdPersoon"
-              }
-            }
-          }
-        },
-        "required": [
-          "@type",
-          "vanPersoon",
-          "metPersoon"
         ]
       },
       "AangegevenAdres": {
@@ -2338,16 +2271,16 @@
           "@type"
         ]
       },
-      "AfstammingOpgaandeLijn.datumVanAfstamming": {
-        "title": "AfstammingOpgaandeLijn.datumVanAfstamming",
-        "description": "Datum waarop de afstamming wordt vastgesteld.",
+      "Ouders.datumVanAfstamming": {
+        "title": "Ouders.datumVanAfstamming",
+        "description": "Datum waarop de ouderschapsband is vastgesteld.",
         "type": "string",
         "format": "date"
       },
-      "AfstammingOpgaandeLijn": {
-        "title": "AfstammingOpgaandeLijn",
+      "Ouders": {
+        "title": "Ouders",
         "type": "object",
-        "description": "De opgaande lijn van bloedverwantschap tussen generaties.",
+        "description": "Personen waartoe de Persoon zich juridisch op grond van afstamming of adoptie als kind verhoudt.",
         "properties": {
           "@id": {
             "type": "string",
@@ -2355,18 +2288,18 @@
           },
           "@type": {
             "type": "string",
-            "description": "Object type (klasse AfstammingOpgaandeLijn)",
-            "pattern": "^AfstammingOpgaandeLijn$"
+            "description": "Object type (klasse Ouders)",
+            "pattern": "^Ouders$"
           },
           "datumVanAfstamming": {
-            "$ref": "#/components/schemas/AfstammingOpgaandeLijn.datumVanAfstamming"
+            "$ref": "#/components/schemas/Ouders.datumVanAfstamming"
           },
           "type": {
             "$ref": "#/components/schemas/Afstammingstype"
           },
           "ouder": {
             "type": "array",
-            "description": "Persoon waarvan de Persoon afstamt. Lijst van Persoon items.",
+            "description": "Verwijzing naar de Persoon die zijn ouder is. Lijst van Persoon items.",
             "items": {
               "oneOf": [
                 {
@@ -4156,12 +4089,12 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Titel` op te halen."
       },
-      "Persoon.afstammingOpgaandeLijn": {
+      "Persoon.ouders": {
         "operationId": "PersoonGET",
         "parameters": {
-          "id": "$response.body#/Persoon.afstammingOpgaandeLijn/@id"
+          "id": "$response.body#/Persoon.ouders/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AfstammingOpgaandeLijn` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Ouders` op te halen."
       },
       "Persoon.naam": {
         "operationId": "PersoonGET",
@@ -4639,12 +4572,12 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Titel` op te halen."
       },
-      "GeregistreerdPersoon.afstammingOpgaandeLijn": {
+      "GeregistreerdPersoon.ouders": {
         "operationId": "GeregistreerdPersoonGET",
         "parameters": {
-          "id": "$response.body#/GeregistreerdPersoon.afstammingOpgaandeLijn/@id"
+          "id": "$response.body#/GeregistreerdPersoon.ouders/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AfstammingOpgaandeLijn` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Ouders` op te halen."
       },
       "GeregistreerdPersoon.naam": {
         "operationId": "GeregistreerdPersoonGET",
@@ -4701,27 +4634,6 @@
           "id": "$response.body#/Domicilie.nietMededeelbaar/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `NietMededeelbaar` op te halen."
-      },
-      "Afstamming.afstammingstype": {
-        "operationId": "AfstammingGET",
-        "parameters": {
-          "id": "$response.body#/Afstamming.afstammingstype/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Afstammingstype` op te halen."
-      },
-      "Afstamming.vanPersoon": {
-        "operationId": "AfstammingGET",
-        "parameters": {
-          "id": "$response.body#/Afstamming.vanPersoon/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Persoon` op te halen."
-      },
-      "Afstamming.metPersoon": {
-        "operationId": "AfstammingGET",
-        "parameters": {
-          "id": "$response.body#/Afstamming.metPersoon/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Persoon` op te halen."
       },
       "AangegevenAdres.beheerdertype": {
         "operationId": "AangegevenAdresGET",
@@ -5031,31 +4943,31 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
-      "AfstammingOpgaandeLijn.type": {
-        "operationId": "AfstammingOpgaandeLijnGET",
+      "Ouders.type": {
+        "operationId": "OudersGET",
         "parameters": {
-          "id": "$response.body#/AfstammingOpgaandeLijn.type/@id"
+          "id": "$response.body#/Ouders.type/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Afstammingstype` op te halen."
       },
-      "AfstammingOpgaandeLijn.ouder": {
-        "operationId": "AfstammingOpgaandeLijnGET",
+      "Ouders.ouder": {
+        "operationId": "OudersGET",
         "parameters": {
-          "id": "$response.body#/AfstammingOpgaandeLijn.ouder/@id"
+          "id": "$response.body#/Ouders.ouder/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Persoon` op te halen."
       },
-      "AfstammingOpgaandeLijn.plaats": {
-        "operationId": "AfstammingOpgaandeLijnGET",
+      "Ouders.plaats": {
+        "operationId": "OudersGET",
         "parameters": {
-          "id": "$response.body#/AfstammingOpgaandeLijn.plaats/@id"
+          "id": "$response.body#/Ouders.plaats/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen."
       },
-      "AfstammingOpgaandeLijn.overschrijving": {
-        "operationId": "AfstammingOpgaandeLijnGET",
+      "Ouders.overschrijving": {
+        "operationId": "OudersGET",
         "parameters": {
-          "id": "$response.body#/AfstammingOpgaandeLijn.overschrijving/@id"
+          "id": "$response.body#/Ouders.overschrijving/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Overschrijving` op te halen."
       },
