@@ -120,6 +120,9 @@
             "items": {
               "oneOf": [
                 {
+                  "$ref": "#/components/schemas/Persoonsrelatie"
+                },
+                {
                   "$ref": "#/components/schemas/Gezinsrelatie"
                 },
                 {
@@ -138,6 +141,7 @@
               "discriminator": {
                 "propertyName": "@type",
                 "mapping": {
+                  "Persoonsrelatie": "#/components/schemas/Persoonsrelatie",
                   "Gezinsrelatie": "#/components/schemas/Gezinsrelatie",
                   "Huwelijk": "#/components/schemas/Huwelijk",
                   "Samenwonen": "#/components/schemas/Samenwonen",
@@ -467,10 +471,10 @@
             "$ref": "#/components/schemas/Overschrijving"
           },
           "brontype": {
-            "$ref": "#/components/schemas/IT150-BronOverlijdenType-V1"
+            "$ref": "#/components/schemas/BronOverlijdenType"
           },
           "uitspraaktype": {
-            "$ref": "#/components/schemas/IT150-Uitspraaktype-V1"
+            "$ref": "#/components/schemas/Uitspraaktype"
           },
           "begindatum": {
             "$ref": "#/components/schemas/Overlijden.begindatum"
@@ -564,7 +568,7 @@
             "$ref": "#/components/schemas/Akte"
           },
           "bronDatum": {
-            "$ref": "#/components/schemas/IT101-BronGeboortedatumType-V1"
+            "$ref": "#/components/schemas/BronGeboortedatumType"
           },
           "begindatum": {
             "$ref": "#/components/schemas/Geboorte.begindatum"
@@ -723,7 +727,7 @@
       "Versie": {
         "title": "Versie",
         "type": "object",
-        "description": "Entiteit gedurende een bepaalde periode in de databank.",
+        "description": "Entiteit gedurende een bepaalde periodein de werkelijkheid.",
         "properties": {
           "@id": {
             "type": "string",
@@ -904,7 +908,7 @@
             "$ref": "#/components/schemas/Nationaliteit.einddatum"
           },
           "nationaliteit": {
-            "$ref": "#/components/schemas/STATBEL-Nationaliteitscode-V1"
+            "$ref": "#/components/schemas/STATBEL-Nationaliteitscode"
           },
           "verwerving": {
             "$ref": "#/components/schemas/Nationaliteitsverwerving"
@@ -1283,6 +1287,9 @@
             "items": {
               "oneOf": [
                 {
+                  "$ref": "#/components/schemas/Persoonsrelatie"
+                },
+                {
                   "$ref": "#/components/schemas/Gezinsrelatie"
                 },
                 {
@@ -1301,6 +1308,7 @@
               "discriminator": {
                 "propertyName": "@type",
                 "mapping": {
+                  "Persoonsrelatie": "#/components/schemas/Persoonsrelatie",
                   "Gezinsrelatie": "#/components/schemas/Gezinsrelatie",
                   "Huwelijk": "#/components/schemas/Huwelijk",
                   "Samenwonen": "#/components/schemas/Samenwonen",
@@ -1459,7 +1467,7 @@
             "pattern": "^AangegevenAdres$"
           },
           "beheerdertype": {
-            "$ref": "#/components/schemas/IT214-Beheerdertype-V1"
+            "$ref": "#/components/schemas/Beheerdertype"
           },
           "verblijfsadres": {
             "$ref": "#/components/schemas/Adresvoorstelling"
@@ -1477,7 +1485,7 @@
       },
       "Afwezig.beschrijving": {
         "title": "Afwezig.beschrijving",
-        "description": "Beschrijving van de TijdelijkeAfwezigheid. Adres (indien niet te beschrijven dmv verblijfsadres), land of andere commentaar (bvb verdwijning minderjarige).",
+        "description": "Beschrijving van de TijdelijkeAfwezigheid. Adres (indien niet te beschrijven door middel van verblijfsadres), land of andere commentaar (bijvoorbeeld verdwijning minderjarige).",
         "type": "object",
         "properties": {
           "@value": {
@@ -1658,6 +1666,18 @@
           "naam"
         ]
       },
+      "Jurisdictie.begindatum": {
+        "title": "Jurisdictie.begindatum",
+        "description": "Moment vanaf wanneer de instantie van deze klasse op het terrein van toepassing was.",
+        "type": "string",
+        "format": "date"
+      },
+      "Jurisdictie.einddatum": {
+        "title": "Jurisdictie.einddatum",
+        "description": "Moment tot wanneer de instantie van deze klasse op het terrein van toepassing was.",
+        "type": "string",
+        "format": "date"
+      },
       "Jurisdictie": {
         "title": "Jurisdictie",
         "type": "object",
@@ -1672,13 +1692,32 @@
             "description": "Object type (klasse Jurisdictie)",
             "pattern": "^Jurisdictie$"
           },
+          "begindatum": {
+            "$ref": "#/components/schemas/Jurisdictie.begindatum"
+          },
+          "einddatum": {
+            "$ref": "#/components/schemas/Jurisdictie.einddatum"
+          },
           "plaats": {
             "$ref": "#/components/schemas/Plaats"
           }
         },
         "required": [
-          "@type"
+          "@type",
+          "begindatum"
         ]
+      },
+      "Gezin.begindatum": {
+        "title": "Gezin.begindatum",
+        "description": "Moment vanaf wanneer de instantie van deze klasse op het terrein van toepassing was.",
+        "type": "string",
+        "format": "date"
+      },
+      "Gezin.einddatum": {
+        "title": "Gezin.einddatum",
+        "description": "Moment tot wanneer de instantie van deze klasse op het terrein van toepassing was.",
+        "type": "string",
+        "format": "date"
       },
       "Gezin": {
         "title": "Gezin",
@@ -1693,6 +1732,12 @@
             "type": "string",
             "description": "Object type (klasse Gezin)",
             "pattern": "^Gezin$"
+          },
+          "begindatum": {
+            "$ref": "#/components/schemas/Gezin.begindatum"
+          },
+          "einddatum": {
+            "$ref": "#/components/schemas/Gezin.einddatum"
           },
           "gezinsadres": {
             "$ref": "#/components/schemas/Adresvoorstelling"
@@ -1741,8 +1786,21 @@
           }
         },
         "required": [
-          "@type"
+          "@type",
+          "begindatum"
         ]
+      },
+      "BurgerlijkeStaat.begindatum": {
+        "title": "BurgerlijkeStaat.begindatum",
+        "description": "Moment vanaf wanneer de instantie van deze klasse op het terrein van toepassing was.",
+        "type": "string",
+        "format": "date"
+      },
+      "BurgerlijkeStaat.einddatum": {
+        "title": "BurgerlijkeStaat.einddatum",
+        "description": "Moment tot wanneer de instantie van deze klasse op het terrein van toepassing was.",
+        "type": "string",
+        "format": "date"
       },
       "BurgerlijkeStaat": {
         "title": "BurgerlijkeStaat",
@@ -1758,6 +1816,12 @@
             "description": "Object type (klasse BurgerlijkeStaat)",
             "pattern": "^BurgerlijkeStaat$"
           },
+          "begindatum": {
+            "$ref": "#/components/schemas/BurgerlijkeStaat.begindatum"
+          },
+          "einddatum": {
+            "$ref": "#/components/schemas/BurgerlijkeStaat.einddatum"
+          },
           "type": {
             "$ref": "#/components/schemas/BurgerlijkeStaatType"
           },
@@ -1766,7 +1830,8 @@
           }
         },
         "required": [
-          "@type"
+          "@type",
+          "begindatum"
         ]
       },
       "Organisatie.voorkeursnaam": {
@@ -2060,7 +2125,7 @@
       },
       "Verklaring.datum": {
         "title": "Verklaring.datum",
-        "description": "Datum waarop de Verklaring is geregistreerd",
+        "description": "Datum waarop de Verklaring is geregistreerd.",
         "type": "string",
         "format": "date"
       },
@@ -2083,7 +2148,7 @@
           },
           "identificator": {
             "type": "array",
-            "description": "Identificator van de Verklaring Lijst van Identificator items.",
+            "description": "Identificator van de Verklaring. Lijst van Identificator items.",
             "items": {
               "$ref": "#/components/schemas/Identificator"
             },
@@ -2204,7 +2269,7 @@
       "Contract": {
         "title": "Contract",
         "type": "object",
-        "description": "Een vrijwillige, bewuste overeenkomst tussen handelingsbekwame partijen waarbij de partijen zich juridisch binden en een tegenprestatie van waarde leveren",
+        "description": "Een vrijwillige, bewuste overeenkomst tussen handelingsbekwame partijen waarbij de partijen zich juridisch binden en een tegenprestatie van waarde leveren.",
         "properties": {
           "@id": {
             "type": "string",
@@ -2271,6 +2336,18 @@
           "@type"
         ]
       },
+      "Ouders.begindatum": {
+        "title": "Ouders.begindatum",
+        "description": "Moment vanaf wanneer de instantie van deze klasse op het terrein van toepassing was.",
+        "type": "string",
+        "format": "date"
+      },
+      "Ouders.einddatum": {
+        "title": "Ouders.einddatum",
+        "description": "Moment tot wanneer de instantie van deze klasse op het terrein van toepassing was.",
+        "type": "string",
+        "format": "date"
+      },
       "Ouders.datumVanAfstamming": {
         "title": "Ouders.datumVanAfstamming",
         "description": "Datum waarop de ouderschapsband is vastgesteld.",
@@ -2290,6 +2367,12 @@
             "type": "string",
             "description": "Object type (klasse Ouders)",
             "pattern": "^Ouders$"
+          },
+          "begindatum": {
+            "$ref": "#/components/schemas/Ouders.begindatum"
+          },
+          "einddatum": {
+            "$ref": "#/components/schemas/Ouders.einddatum"
           },
           "datumVanAfstamming": {
             "$ref": "#/components/schemas/Ouders.datumVanAfstamming"
@@ -2328,7 +2411,8 @@
           }
         },
         "required": [
-          "@type"
+          "@type",
+          "begindatum"
         ]
       },
       "Nationaliteitsverwerving.beschrijving": {
@@ -2367,7 +2451,7 @@
             "$ref": "#/components/schemas/Nationaliteitsverwerving.beschrijving"
           },
           "type": {
-            "$ref": "#/components/schemas/IT31/32-Nationaliteitsverwervingstype"
+            "$ref": "#/components/schemas/Nationaliteitsverwervingstype"
           },
           "plaats": {
             "$ref": "#/components/schemas/Plaats"
@@ -2419,7 +2503,7 @@
             "$ref": "#/components/schemas/JuridischeUitspraakDocument.datum"
           },
           "rechtbank": {
-            "$ref": "#/components/schemas/IT120-Rechtbank-V1"
+            "$ref": "#/components/schemas/Rechtbank"
           },
           "plaats": {
             "$ref": "#/components/schemas/Plaats"
@@ -2613,7 +2697,7 @@
             "$ref": "#/components/schemas/AlternatieveNaam.einddatum"
           },
           "type": {
-            "$ref": "#/components/schemas/IT011/213-AlternatieveNaamtype-V1"
+            "$ref": "#/components/schemas/AlternatieveNaamtype"
           },
           "geboorte": {
             "$ref": "#/components/schemas/Geboorte"
@@ -2681,7 +2765,7 @@
             "$ref": "#/components/schemas/Titel.einddatum"
           },
           "type": {
-            "$ref": "#/components/schemas/IT012-AdellijkeTitel-V1"
+            "$ref": "#/components/schemas/AdellijkeTitel"
           }
         },
         "required": [
@@ -2809,7 +2893,7 @@
             "$ref": "#/components/schemas/Geslachtsverandering.beschrijving"
           },
           "type": {
-            "$ref": "#/components/schemas/IT004-Geslachtsveranderingtype-V1"
+            "$ref": "#/components/schemas/Geslachtsveranderingtype"
           },
           "begindatum": {
             "$ref": "#/components/schemas/Geslachtsverandering.begindatum"
@@ -2862,7 +2946,7 @@
             "$ref": "#/components/schemas/Geslacht.einddatum"
           },
           "type": {
-            "$ref": "#/components/schemas/IT000-Geslacht-V1"
+            "$ref": "#/components/schemas/Geslacht"
           }
         },
         "required": [
@@ -2872,7 +2956,7 @@
       },
       "Verhuis.beschrijving": {
         "title": "Verhuis.beschrijving",
-        "description": "Bijkomende informatie over de Verhuis. In praktijk bedoeld voor oa de tekstuele weergave van het adres.",
+        "description": "Bijkomende informatie over de Verhuis. In praktijk bedoeld voor onder andere de tekstuele weergave van het adres.",
         "type": "object",
         "properties": {
           "@value": {
@@ -3055,7 +3139,7 @@
             "$ref": "#/components/schemas/Naamsverandering.beschrijving"
           },
           "type": {
-            "$ref": "#/components/schemas/IT013-Naamsveranderingtype-V1"
+            "$ref": "#/components/schemas/Naamsveranderingtype"
           },
           "begindatum": {
             "$ref": "#/components/schemas/Naamsverandering.begindatum"
@@ -3167,7 +3251,7 @@
             "$ref": "#/components/schemas/AdministratieveBeslissingDocument.datum"
           },
           "administratie": {
-            "$ref": "#/components/schemas/IT003-Administratietype-V1"
+            "$ref": "#/components/schemas/Administratietype"
           },
           "plaats": {
             "$ref": "#/components/schemas/Plaats"
@@ -3211,7 +3295,7 @@
       "Wilsuiting": {
         "title": "Wilsuiting",
         "type": "object",
-        "description": "Het kenbaar maken door een persoon van een keuze, voorkeur of beslissing over een aangelegenheid die hem of haar persoonlijk betreft",
+        "description": "Het kenbaar maken door een persoon van een keuze, voorkeur of beslissing over een aangelegenheid die hem of haar persoonlijk betreft.",
         "properties": {
           "@id": {
             "type": "string",
@@ -3264,10 +3348,10 @@
             "pattern": "^Uitvaartwijze$"
           },
           "lijkbezorging": {
-            "$ref": "#/components/schemas/IT153-Lijkbezorgingtype-V1"
+            "$ref": "#/components/schemas/Lijkbezorgingtype"
           },
           "ritueel": {
-            "$ref": "#/components/schemas/IT153-Uitvaartplachtigheidritueeltype-V1"
+            "$ref": "#/components/schemas/Uitvaartplachtigheidritueeltype"
           },
           "begraafplaats": {
             "$ref": "#/components/schemas/Plaats"
@@ -3414,7 +3498,7 @@
             "$ref": "#/components/schemas/Huisvestingsrelatie.datum"
           },
           "rol": {
-            "$ref": "#/components/schemas/IT021-Roltype-V1"
+            "$ref": "#/components/schemas/Roltype"
           },
           "vanPersoon": {
             "oneOf": [
@@ -4206,14 +4290,14 @@
         "parameters": {
           "id": "$response.body#/Overlijden.brontype/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT150-BronOverlijdenType-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BronOverlijdenType` op te halen."
       },
       "Overlijden.uitspraaktype": {
         "operationId": "OverlijdenGET",
         "parameters": {
           "id": "$response.body#/Overlijden.uitspraaktype/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT150-Uitspraaktype-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Uitspraaktype` op te halen."
       },
       "Overlijden.plaats": {
         "operationId": "OverlijdenGET",
@@ -4255,7 +4339,7 @@
         "parameters": {
           "id": "$response.body#/Geboorte.bronDatum/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT101-BronGeboortedatumType-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BronGeboortedatumType` op te halen."
       },
       "Geboorte.plaats": {
         "operationId": "GeboorteGET",
@@ -4367,7 +4451,7 @@
         "parameters": {
           "id": "$response.body#/Nationaliteit.nationaliteit/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `STATBEL-Nationaliteitscode-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `STATBEL-Nationaliteitscode` op te halen."
       },
       "Nationaliteit.verwerving": {
         "operationId": "NationaliteitGET",
@@ -4640,7 +4724,7 @@
         "parameters": {
           "id": "$response.body#/AangegevenAdres.beheerdertype/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT214-Beheerdertype-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Beheerdertype` op te halen."
       },
       "AangegevenAdres.verblijfsadres": {
         "operationId": "AangegevenAdresGET",
@@ -4976,7 +5060,7 @@
         "parameters": {
           "id": "$response.body#/Nationaliteitsverwerving.type/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT31/32-Nationaliteitsverwervingstype` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Nationaliteitsverwervingstype` op te halen."
       },
       "Nationaliteitsverwerving.plaats": {
         "operationId": "NationaliteitsverwervingGET",
@@ -4990,7 +5074,7 @@
         "parameters": {
           "id": "$response.body#/JuridischeUitspraakDocument.rechtbank/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT120-Rechtbank-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Rechtbank` op te halen."
       },
       "JuridischeUitspraakDocument.plaats": {
         "operationId": "JuridischeUitspraakDocumentGET",
@@ -5053,7 +5137,7 @@
         "parameters": {
           "id": "$response.body#/AlternatieveNaam.type/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT011/213-AlternatieveNaamtype-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AlternatieveNaamtype` op te halen."
       },
       "AlternatieveNaam.geboorte": {
         "operationId": "AlternatieveNaamGET",
@@ -5074,14 +5158,14 @@
         "parameters": {
           "id": "$response.body#/Titel.type/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT012-AdellijkeTitel-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AdellijkeTitel` op te halen."
       },
       "Geslachtsverandering.type": {
         "operationId": "GeslachtsveranderingGET",
         "parameters": {
           "id": "$response.body#/Geslachtsverandering.type/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT004-Geslachtsveranderingtype-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geslachtsveranderingtype` op te halen."
       },
       "Geslachtsverandering.plaats": {
         "operationId": "GeslachtsveranderingGET",
@@ -5102,7 +5186,7 @@
         "parameters": {
           "id": "$response.body#/Geslacht.type/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT000-Geslacht-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geslacht` op te halen."
       },
       "Verhuis.plaats": {
         "operationId": "VerhuisGET",
@@ -5158,7 +5242,7 @@
         "parameters": {
           "id": "$response.body#/Naamsverandering.type/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT013-Naamsveranderingtype-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Naamsveranderingtype` op te halen."
       },
       "Naamsverandering.plaats": {
         "operationId": "NaamsveranderingGET",
@@ -5200,7 +5284,7 @@
         "parameters": {
           "id": "$response.body#/AdministratieveBeslissingDocument.administratie/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT003-Administratietype-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Administratietype` op te halen."
       },
       "AdministratieveBeslissingDocument.plaats": {
         "operationId": "AdministratieveBeslissingDocumentGET",
@@ -5235,14 +5319,14 @@
         "parameters": {
           "id": "$response.body#/Uitvaartwijze.lijkbezorging/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT153-Lijkbezorgingtype-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Lijkbezorgingtype` op te halen."
       },
       "Uitvaartwijze.ritueel": {
         "operationId": "UitvaartwijzeGET",
         "parameters": {
           "id": "$response.body#/Uitvaartwijze.ritueel/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT153-Uitvaartplachtigheidritueeltype-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Uitvaartplachtigheidritueeltype` op te halen."
       },
       "Uitvaartwijze.begraafplaats": {
         "operationId": "UitvaartwijzeGET",
@@ -5312,7 +5396,7 @@
         "parameters": {
           "id": "$response.body#/Huisvestingsrelatie.rol/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `IT021-Roltype-V1` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Roltype` op te halen."
       },
       "Huisvestingsrelatie.vanPersoon": {
         "operationId": "HuisvestingsrelatieGET",

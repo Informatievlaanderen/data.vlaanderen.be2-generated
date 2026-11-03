@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2026-11-03T10:58:42.252Z error: Unable to find the definition for class [urn:oslo-toolchain:f1b96f8d80db5d7a869bef2cc13a51b898537d639f2cfa5651b096cacc79a293](all-persoon.jsonld#L2006).
+2026-11-03T11:52:38.006Z error: Unable to find the definition for class [[urn:oslo-toolchain:f1b96f8d80db5d7a869bef2cc13a51b898537d639f2cfa5651b096cacc79a293](all-persoon.jsonld#L11622)](all-persoon.jsonld#L2052).
 
