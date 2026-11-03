@@ -2,127 +2,127 @@
 
 #||# -------------------------------------
 
-2026-11-03T13:25:26.221Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> AdministratiefBeheerder))
+2026-11-03T13:58:30.984Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> AdministratiefBeheerder))
 
-2026-11-03T13:25:26.223Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon-IM:Referentieadres:(Referentieadres -> Verblijfplaats))
+2026-11-03T13:58:30.985Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon-IM:Referentieadres:(Referentieadres -> Verblijfplaats))
 
-2026-11-03T13:25:26.223Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
+2026-11-03T13:58:30.985Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
 
-2026-11-03T13:25:26.223Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
+2026-11-03T13:58:30.986Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
 
-2026-11-03T13:25:26.223Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon-IM:AangegevenAdres:(AangegevenAdres -> Verblijfplaats))
+2026-11-03T13:58:30.986Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon-IM:AangegevenAdres:(AangegevenAdres -> Verblijfplaats))
 
-2026-11-03T13:25:26.223Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon-IM:VerblijfplaatsBuitenlandDomicilie:(VerblijfplaatsBuitenlandDomicilie -> Verblijfplaats))
+2026-11-03T13:58:30.986Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon-IM:VerblijfplaatsBuitenlandDomicilie:(VerblijfplaatsBuitenlandDomicilie -> Verblijfplaats))
 
-2026-11-03T13:25:26.224Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:W3C-Person:Persoon:(Persoon -> Jurisdictie))
+2026-11-03T13:58:30.986Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:W3C-Person:Persoon:(Persoon -> Jurisdictie))
 
-2026-11-03T13:25:26.224Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon-IM:Contactadres:(Contactadres -> Verblijfplaats))
+2026-11-03T13:58:30.986Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:OSLO-Persoon-IM:Contactadres:(Contactadres -> Verblijfplaats))
 
-2026-11-03T13:25:26.224Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
+2026-11-03T13:58:30.986Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-IM:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
 
-2026-11-03T13:25:26.226Z info: Connector Model-IM:OSLO-Persoon-IM:WettelijkVerblijf:(WettelijkVerblijf -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.988Z info: Connector Model-IM:OSLO-Persoon-IM:WettelijkVerblijf:(WettelijkVerblijf -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.227Z info: Connector Model-IM:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> AdministratiefBeheerder) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.989Z info: Connector Model-IM:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> AdministratiefBeheerder) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> BurgerlijkeStaat) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.989Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> BurgerlijkeStaat) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Overlijden) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.989Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Overlijden) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:W3C-Time:AlgemeneDatumTijdBeschrijving:(AlgemeneDatumTijdBeschrijving -> TemporelePositie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.989Z info: Connector Model-IM:W3C-Time:AlgemeneDatumTijdBeschrijving:(AlgemeneDatumTijdBeschrijving -> TemporelePositie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.989Z info: Connector Model-IM:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.989Z info: Connector Model-IM:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.989Z info: Connector Model-IM:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:W3C-LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.989Z info: Connector Model-IM:W3C-LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:OSLO-Persoon:Geboorte:(Geboorte -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:OSLO-Persoon:Geboorte:(Geboorte -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:OSLO-Persoon:Overlijden:(Overlijden -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:OSLO-Persoon:Overlijden:(Overlijden -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:DCTerms:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:DCTerms:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:OSLO-Persoon-IM:VerblijfplaatsBuitenlandDomicilie:(VerblijfplaatsBuitenlandDomicilie -> Domicilie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:OSLO-Persoon-IM:VerblijfplaatsBuitenlandDomicilie:(VerblijfplaatsBuitenlandDomicilie -> Domicilie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:OSLO-Persoon-IM:AangegevenAdres:(AangegevenAdres -> Domicilie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:OSLO-Persoon-IM:AangegevenAdres:(AangegevenAdres -> Domicilie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.228Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Nationaliteit) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Nationaliteit) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.229Z info: Connector Model-IM:OSLO-Persoon-IM:Postadres:(Postadres -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:OSLO-Persoon-IM:Postadres:(Postadres -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.229Z info: Connector Model-IM:OSLO-Persoon-IM:Referentieadres:(Referentieadres -> Domicilie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:OSLO-Persoon-IM:Referentieadres:(Referentieadres -> Domicilie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.229Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Jurisdictie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Jurisdictie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.229Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.990Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:OSLO-Persoon-IM:VerblijfplaatsBuitenland:(VerblijfplaatsBuitenland -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon-IM:VerblijfplaatsBuitenland:(VerblijfplaatsBuitenland -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:OSLO-Persoon:Domicilie:(Domicilie -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon:Domicilie:(Domicilie -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:OSLO-Persoon-IM:TijdelijkeAfwezigheid:(TijdelijkeAfwezigheid -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon-IM:TijdelijkeAfwezigheid:(TijdelijkeAfwezigheid -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:W3C-LOCN:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-LOCN:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:W3C-Time:Moment:(Moment -> AlgemeneDatumTijdBeschrijving) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-Time:Moment:(Moment -> AlgemeneDatumTijdBeschrijving) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:OSLO-Persoon-IM:Contactadres:(Contactadres -> Domicilie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon-IM:Contactadres:(Contactadres -> Domicilie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Naamsverandering) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Naamsverandering) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Registratie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Registratie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:OSLO-Persoon-IM:Naamsverandering:(Naamsverandering -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon-IM:Naamsverandering:(Naamsverandering -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.230Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Geboorte) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Geboorte) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> AlternatieveNaam) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> AlternatieveNaam) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Titel) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Titel) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:OSLO-Generiek-addendum:Akte:(Akte -> Document) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Generiek-addendum:Akte:(Akte -> Document) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:OSLO-Persoon-IM:Samenlevingscontract:(Samenlevingscontract -> Contract) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon-IM:Samenlevingscontract:(Samenlevingscontract -> Contract) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Ouders) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Ouders) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:OSLO-Generiek-addendum:JuridischeBeslissingDocument:(JuridischeBeslissingDocument -> Document) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Generiek-addendum:JuridischeBeslissingDocument:(JuridischeBeslissingDocument -> Document) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:OSLO-Persoon:Nationaliteit:(Nationaliteit -> Nationaliteitsverwerving) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon:Nationaliteit:(Nationaliteit -> Nationaliteitsverwerving) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Naam) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Naam) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:OSLO-Persoon-IM:Geslachtsverandering:(Geslachtsverandering -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:OSLO-Persoon-IM:Geslachtsverandering:(Geslachtsverandering -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Geslachtsverandering) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Geslachtsverandering) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Geslacht) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.991Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Geslacht) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Verhuis) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.992Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Verhuis) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:OSLO-Persoon-IM:Verhuis:(Verhuis -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.992Z info: Connector Model-IM:OSLO-Persoon-IM:Verhuis:(Verhuis -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:OSLO-Persoon-IM:VoorlopigeRegistratie:(VoorlopigeRegistratie -> Registratie) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.992Z info: Connector Model-IM:OSLO-Persoon-IM:VoorlopigeRegistratie:(VoorlopigeRegistratie -> Registratie) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Herkomst) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.992Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Herkomst) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.231Z info: Connector Model-IM:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Inwonerschapstatus) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.992Z info: Connector Model-IM:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Inwonerschapstatus) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.232Z info: Connector Model-IM:OSLO-Generiek-addendum:AdministratieveBeslissingDocument:(AdministratieveBeslissingDocument -> Document) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.992Z info: Connector Model-IM:OSLO-Generiek-addendum:AdministratieveBeslissingDocument:(AdministratieveBeslissingDocument -> Document) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.232Z info: Connector Model-IM:OSLO-Persoon-IM:Uitvaartwijze:(Uitvaartwijze -> Wilsuiting) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.992Z info: Connector Model-IM:OSLO-Persoon-IM:Uitvaartwijze:(Uitvaartwijze -> Wilsuiting) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.232Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Wilsuiting) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.992Z info: Connector Model-IM:W3C-Person:Persoon:(Persoon -> Wilsuiting) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.232Z info: Connector Model-IM:OSLO-Persoon-IM:UitvaartContract:(UitvaartContract -> Contract) is not an association with a source role. Ignoring this connector.
+2026-11-03T13:58:30.992Z info: Connector Model-IM:OSLO-Persoon-IM:UitvaartContract:(UitvaartContract -> Contract) is not an association with a source role. Ignoring this connector.
 
-2026-11-03T13:25:26.233Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-11-03T13:58:30.993Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2026-11-03T13:25:26.282Z warn: [ConverterHandler]: Entity with path Persoon (source) has an empty value for tag ap-definition-nl.
+2026-11-03T13:58:31.033Z warn: [ConverterHandler]: Entity with path Persoon (source) has an empty value for tag ap-definition-nl.
 
 #||# -------------------------------------
 
