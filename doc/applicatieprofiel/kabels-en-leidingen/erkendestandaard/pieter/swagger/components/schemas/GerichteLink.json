@@ -1,0 +1,41 @@
+{
+  "title": "GerichteLink",
+  "type": "object",
+  "description": "Link in hetzij zijn positieve, hetzij zijn negatieve richting.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GerichteLink)",
+      "pattern": "^GerichteLink$"
+    },
+    "link": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Link"
+        },
+        {
+          "$ref": "#/components/schemas/Nutsvoorzieninglink"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Link": "#/components/schemas/Link",
+          "Nutsvoorzieninglink": "#/components/schemas/Nutsvoorzieninglink"
+        }
+      }
+    },
+    "richting": {
+      "$ref": "#/components/schemas/Teken"
+    }
+  },
+  "required": [
+    "@type",
+    "link",
+    "richting"
+  ]
+}

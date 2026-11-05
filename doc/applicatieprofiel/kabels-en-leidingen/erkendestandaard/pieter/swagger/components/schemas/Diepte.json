@@ -1,0 +1,81 @@
+{
+  "title": "Diepte",
+  "type": "object",
+  "description": "VerticalePositie onder het Referentieoppervlak.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Diepte)",
+      "pattern": "^Diepte$"
+    },
+    "diepte": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Maat"
+        },
+        {
+          "$ref": "#/components/schemas/Lengte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Maat": "#/components/schemas/Maat",
+          "Lengte": "#/components/schemas/Lengte"
+        }
+      }
+    },
+    "ligging": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve",
+          "Punt": "#/components/schemas/Punt"
+        }
+      }
+    },
+    "verticalePositie": {
+      "$ref": "#/components/schemas/DirectePositie"
+    },
+    "afstand": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Maat"
+        },
+        {
+          "$ref": "#/components/schemas/Lengte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Maat": "#/components/schemas/Maat",
+          "Lengte": "#/components/schemas/Lengte"
+        }
+      }
+    },
+    "referentieOppervlak": {
+      "$ref": "#/components/schemas/Referentieoppervlak"
+    }
+  },
+  "required": [
+    "@type",
+    "referentieOppervlak"
+  ]
+}

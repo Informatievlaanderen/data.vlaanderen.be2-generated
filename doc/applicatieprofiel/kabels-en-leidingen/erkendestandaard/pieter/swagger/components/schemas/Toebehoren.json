@@ -1,0 +1,187 @@
+{
+  "title": "Toebehoren",
+  "type": "object",
+  "description": "Fysiek puntvormig onderdeel van het Nutsvoorzieningnetwerk.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Toebehoren)",
+      "pattern": "^Toebehoren$"
+    },
+    "toebehorentype": {
+      "$ref": "#/components/schemas/Toebehorentype"
+    },
+    "hoogte": {
+      "$ref": "#/components/schemas/Lengte"
+    },
+    "subthema": {
+      "$ref": "#/components/schemas/Subthema"
+    },
+    "zichtbaarheid": {
+      "$ref": "#/components/schemas/Zichtbaarheidstype"
+    },
+    "risico": {
+      "$ref": "#/components/schemas/RisicoType"
+    },
+    "uiterlijk": {
+      "$ref": "#/components/schemas/Uiterlijk"
+    },
+    "inNetwerk": {
+      "type": "array",
+      "description": "Nutsvoorzieningnetwerk waartoe het element behoort. Lijst van Nutsvoorzieningnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk"
+      },
+      "minItems": 1
+    },
+    "oriëNtatie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Maat"
+        },
+        {
+          "$ref": "#/components/schemas/Lengte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Maat": "#/components/schemas/Maat",
+          "Lengte": "#/components/schemas/Lengte"
+        }
+      }
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Punt"
+    },
+    "beginlink": {
+      "type": "array",
+      "description": "Link waarvan de Knoop de beginKnoop is. Lijst van Link items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Link"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieninglink"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Link": "#/components/schemas/Link",
+            "Nutsvoorzieninglink": "#/components/schemas/Nutsvoorzieninglink"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "eindlink": {
+      "type": "array",
+      "description": "Link waarvan de Knoop de eindKnoop is. Lijst van Link items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Link"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieninglink"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Link": "#/components/schemas/Link",
+            "Nutsvoorzieninglink": "#/components/schemas/Nutsvoorzieninglink"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "geldigVan": {
+      "$ref": "#/components/schemas/Toebehoren.geldigVan"
+    },
+    "geldigTot": {
+      "$ref": "#/components/schemas/Toebehoren.geldigTot"
+    },
+    "verticalePositiedetail": {
+      "type": "array",
+      "description": "Detail van de VerticalePositie van het element. Bijvoorbeeld diepte. Lijst van VerticalePositie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalePositie"
+          },
+          {
+            "$ref": "#/components/schemas/Hoogte"
+          },
+          {
+            "$ref": "#/components/schemas/Diepte"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalePositie": "#/components/schemas/VerticalePositie",
+            "Hoogte": "#/components/schemas/Hoogte",
+            "Diepte": "#/components/schemas/Diepte"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "verticalePositie": {
+      "$ref": "#/components/schemas/VerticalePositietype"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "documentatie": {
+      "type": "array",
+      "description": "Verwijzing naar een Document met extra informatie over het element. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "huidigeStatus": {
+      "$ref": "#/components/schemas/Faciliteitstatus"
+    },
+    "nutsvoorzieningInrichtingReferentie": {
+      "type": "array",
+      "description": "Verwijzing naar een Activiteitencomplex waarop het element betrekking heeft. Lijst van Activiteitencomplex items.",
+      "items": {
+        "$ref": "#/components/schemas/Activiteitencomplex"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "toebehorentype",
+    "subthema",
+    "inNetwerk",
+    "geometrie",
+    "geldigVan",
+    "verticalePositie",
+    "huidigeStatus"
+  ]
+}

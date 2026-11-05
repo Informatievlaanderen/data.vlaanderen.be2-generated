@@ -1,0 +1,140 @@
+{
+  "title": "Nutsvoorzieninglink",
+  "type": "object",
+  "description": "Een lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een Nutsvoorzieningnetwerk.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Nutsvoorzieninglink)",
+      "pattern": "^Nutsvoorzieninglink$"
+    },
+    "middelijngeometrie": {
+      "$ref": "#/components/schemas/Curve"
+    },
+    "inNetwerk": {
+      "type": "array",
+      "description": "Nutsvoorzieningnetwerk waartoe het element behoort. Lijst van Nutsvoorzieningnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk"
+      },
+      "minItems": 1
+    },
+    "eindknoop": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Knoop"
+        },
+        {
+          "$ref": "#/components/schemas/Nutsvoorzieningknoop"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Knoop": "#/components/schemas/Knoop",
+          "Nutsvoorzieningknoop": "#/components/schemas/Nutsvoorzieningknoop"
+        }
+      }
+    },
+    "startknoop": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Knoop"
+        },
+        {
+          "$ref": "#/components/schemas/Nutsvoorzieningknoop"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Knoop": "#/components/schemas/Knoop",
+          "Nutsvoorzieningknoop": "#/components/schemas/Nutsvoorzieningknoop"
+        }
+      }
+    },
+    "geldigVan": {
+      "$ref": "#/components/schemas/Nutsvoorzieninglink.geldigVan"
+    },
+    "geldigTot": {
+      "$ref": "#/components/schemas/Nutsvoorzieninglink.geldigTot"
+    },
+    "verticalePositiedetail": {
+      "type": "array",
+      "description": "Detail van de VerticalePositie van het element. Bijvoorbeeld diepte. Lijst van VerticalePositie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalePositie"
+          },
+          {
+            "$ref": "#/components/schemas/Hoogte"
+          },
+          {
+            "$ref": "#/components/schemas/Diepte"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalePositie": "#/components/schemas/VerticalePositie",
+            "Hoogte": "#/components/schemas/Hoogte",
+            "Diepte": "#/components/schemas/Diepte"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "verticalePositie": {
+      "$ref": "#/components/schemas/VerticalePositietype"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "documentatie": {
+      "type": "array",
+      "description": "Verwijzing naar een Document met extra informatie over het element. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "huidigeStatus": {
+      "$ref": "#/components/schemas/Faciliteitstatus"
+    },
+    "nutsvoorzieningInrichtingReferentie": {
+      "type": "array",
+      "description": "Verwijzing naar een Activiteitencomplex waarop het element betrekking heeft. Lijst van Activiteitencomplex items.",
+      "items": {
+        "$ref": "#/components/schemas/Activiteitencomplex"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "middelijngeometrie",
+    "inNetwerk",
+    "geldigVan",
+    "verticalePositie",
+    "huidigeStatus"
+  ]
+}

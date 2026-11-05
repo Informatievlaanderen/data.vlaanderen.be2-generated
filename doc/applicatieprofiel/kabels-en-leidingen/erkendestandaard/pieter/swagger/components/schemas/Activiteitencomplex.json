@@ -1,0 +1,127 @@
+{
+  "title": "Activiteitencomplex",
+  "type": "object",
+  "description": "Technische en economische eenheid beheerd door eenzelfde operator waar bepaalde activiteiten plaartsvinden mbt productie en dienstverlening.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Activiteitencomplex)",
+      "pattern": "^Activiteitencomplex$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Activiteitencomplex.naam"
+    },
+    "functie": {
+      "type": "array",
+      "description": "Activiteiten uitgevoerd door het complex. Eventueel aangevuld met informatie over inputs en outputs van de activiteiten. Lijst van Functie items.",
+      "items": {
+        "$ref": "#/components/schemas/Functie"
+      },
+      "minItems": 1
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve",
+          "Punt": "#/components/schemas/Punt"
+        }
+      }
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Externe Identificator van het complex. Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "documentatie": {
+      "type": "array",
+      "description": "Verwijzing naar een Document met extra informatie over het Activiteitencomplex. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "op": {
+      "type": "array",
+      "description": "Nutsvoorzieningnetwerkelement dat behoort tot het complex. Lijst van Nustvoorzieningnetwerkelement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieningknoop"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieninglinkset"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieninglink"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieninglinksequentie"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieningknoopcontainer"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Nutsvoorzieningknoop": "#/components/schemas/Nutsvoorzieningknoop",
+            "Nutsvoorzieninglinkset": "#/components/schemas/Nutsvoorzieninglinkset",
+            "Nutsvoorzieninglink": "#/components/schemas/Nutsvoorzieninglink",
+            "Nutsvoorzieninglinksequentie": "#/components/schemas/Nutsvoorzieninglinksequentie",
+            "Nutsvoorzieningknoopcontainer": "#/components/schemas/Nutsvoorzieningknoopcontainer"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "inNetwerk": {
+      "type": "array",
+      "description": "Nutsvoorzieningnetwerk waartoe het complex behoort. Lijst van Nutsvoorzieningnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "functie",
+    "geometrie",
+    "identificator",
+    "inNetwerk"
+  ]
+}

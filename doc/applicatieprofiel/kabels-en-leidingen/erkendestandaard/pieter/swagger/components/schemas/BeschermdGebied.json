@@ -1,0 +1,53 @@
+{
+  "title": "BeschermdGebied",
+  "type": "object",
+  "description": "Gebied waarbinnen bepaalde voorschriften gelden bij het uitvoeren van werken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BeschermdGebied)",
+      "pattern": "^BeschermdGebied$"
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/BeschermdGebied.beschrijving"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/BeschermdGebied.naam"
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve",
+          "Punt": "#/components/schemas/Punt"
+        }
+      }
+    },
+    "type": {
+      "$ref": "#/components/schemas/BeschermdGebiedtype"
+    },
+    "ligging": {
+      "$ref": "#/components/schemas/Locatie"
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}

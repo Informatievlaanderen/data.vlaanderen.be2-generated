@@ -1,0 +1,47 @@
+{
+  "title": "Functie",
+  "type": "object",
+  "description": "De functie van iets uitgedrukt als een activiteit en optionele input en/of output.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Functie)",
+      "pattern": "^Functie$"
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/Functie.beschrijving"
+    },
+    "activiteit": {
+      "type": "array",
+      "description": "Classificatie van de activiteit. Gebruik bij voorkeur de NACE codes. Lijst van EconomischeActiviteittype items.",
+      "items": {
+        "$ref": "#/components/schemas/EconomischeActiviteittype"
+      },
+      "minItems": 1
+    },
+    "input": {
+      "type": "array",
+      "description": "Invoer voor de activiteit in de functie. Lijst van Inputoutputtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Inputoutputtype"
+      },
+      "minItems": 1
+    },
+    "output": {
+      "type": "array",
+      "description": "Uitvoer van het resultaat van de activiteit in de functie. Lijst van Inputoutputtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Inputoutputtype"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "activiteit"
+  ]
+}

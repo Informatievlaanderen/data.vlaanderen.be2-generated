@@ -1,0 +1,41 @@
+{
+  "title": "Maat",
+  "type": "object",
+  "description": "Een (af)gemeten hoeveelheid van een bepaalde grootheid, uitgedrukt in een bepaalde eenheid.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Maat)",
+      "pattern": "^Maat$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/Getal"
+    },
+    "eenheid": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Meeteenheid"
+        },
+        {
+          "$ref": "#/components/schemas/LengteëEnheid"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Meeteenheid": "#/components/schemas/Meeteenheid",
+          "LengteëEnheid": "#/components/schemas/LengteëEnheid"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "eenheid"
+  ]
+}

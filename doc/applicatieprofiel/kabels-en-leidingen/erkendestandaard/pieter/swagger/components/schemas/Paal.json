@@ -1,0 +1,144 @@
+{
+  "title": "Paal",
+  "type": "object",
+  "description": "Eenvoudige Nutsvoorzieningenknoopcontainer die de vorm aanneemt van een mast.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Paal)",
+      "pattern": "^Paal$"
+    },
+    "paalhoogte": {
+      "$ref": "#/components/schemas/Lengte"
+    },
+    "risico": {
+      "$ref": "#/components/schemas/RisicoType"
+    },
+    "uiterlijk": {
+      "$ref": "#/components/schemas/Uiterlijk"
+    },
+    "oriëNtatie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Maat"
+        },
+        {
+          "$ref": "#/components/schemas/Lengte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Maat": "#/components/schemas/Maat",
+          "Lengte": "#/components/schemas/Lengte"
+        }
+      }
+    },
+    "zichtbaarheid": {
+      "$ref": "#/components/schemas/Zichtbaarheidstype"
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Punt"
+    },
+    "knoop": {
+      "type": "array",
+      "description": "Nutsvoorzieningknoop die de Nutsvoorzieningknoopcontainer omvat. Lijst van Nutsvoorzieningknoop items.",
+      "items": {
+        "$ref": "#/components/schemas/Toebehoren"
+      },
+      "minItems": 1
+    },
+    "geldigVan": {
+      "$ref": "#/components/schemas/Paal.geldigVan"
+    },
+    "geldigTot": {
+      "$ref": "#/components/schemas/Paal.geldigTot"
+    },
+    "verticalePositiedetail": {
+      "type": "array",
+      "description": "Detail van de VerticalePositie van het element. Bijvoorbeeld diepte. Lijst van VerticalePositie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalePositie"
+          },
+          {
+            "$ref": "#/components/schemas/Hoogte"
+          },
+          {
+            "$ref": "#/components/schemas/Diepte"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalePositie": "#/components/schemas/VerticalePositie",
+            "Hoogte": "#/components/schemas/Hoogte",
+            "Diepte": "#/components/schemas/Diepte"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "verticalePositie": {
+      "$ref": "#/components/schemas/VerticalePositietype"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "documentatie": {
+      "type": "array",
+      "description": "Verwijzing naar een Document met extra informatie over het element. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "huidigeStatus": {
+      "$ref": "#/components/schemas/Faciliteitstatus"
+    },
+    "nutsvoorzieningInrichtingReferentie": {
+      "type": "array",
+      "description": "Verwijzing naar een Activiteitencomplex waarop het element betrekking heeft. Lijst van Activiteitencomplex items.",
+      "items": {
+        "$ref": "#/components/schemas/Activiteitencomplex"
+      },
+      "minItems": 1
+    },
+    "inNetwerk": {
+      "type": "array",
+      "description": "Nutsvoorzieningnetwerk waartoe het element behoort. Lijst van Nutsvoorzieningnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "paalhoogte",
+    "geometrie",
+    "geldigVan",
+    "verticalePositie",
+    "huidigeStatus",
+    "inNetwerk"
+  ]
+}

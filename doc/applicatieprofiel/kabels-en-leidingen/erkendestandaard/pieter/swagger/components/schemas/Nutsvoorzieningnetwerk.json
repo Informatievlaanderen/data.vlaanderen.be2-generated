@@ -1,0 +1,145 @@
+{
+  "title": "Nutsvoorzieningnetwerk",
+  "type": "object",
+  "description": "Verzameling van netwerkelementen van één type nutsvoorziening.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Nutsvoorzieningnetwerk)",
+      "pattern": "^Nutsvoorzieningnetwerk$"
+    },
+    "geografischeNaam": {
+      "type": "array",
+      "description": "Naam waaronder het netwerk bekend staat. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk.geografischeNaam"
+      },
+      "minItems": 1
+    },
+    "disclaimer": {
+      "type": "array",
+      "description": "Wettelijke tekst waarin vertrouwelijkheidsclausules worden beschreven die van toepassing zijn op de informatie over het nutsnetwerk. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk.disclaimer"
+      },
+      "minItems": 1
+    },
+    "standaardVerticalePositiedetail": {
+      "type": "array",
+      "description": "Standaard VerticalePositie van elementen in het netwerk. Bijvoorbeeld de standaard Diepte waarop de elementen zich bevinden. Lijst van VerticalePositie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalePositie"
+          },
+          {
+            "$ref": "#/components/schemas/Hoogte"
+          },
+          {
+            "$ref": "#/components/schemas/Diepte"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalePositie": "#/components/schemas/VerticalePositie",
+            "Hoogte": "#/components/schemas/Hoogte",
+            "Diepte": "#/components/schemas/Diepte"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "beschermdGebied": {
+      "type": "array",
+      "description": "Gebied waarbinnen bepaalde voorschriften gelden bij het uitvoeren van werken. Lijst van BeschermdGebied items.",
+      "items": {
+        "$ref": "#/components/schemas/BeschermdGebied"
+      },
+      "minItems": 1
+    },
+    "nutsvoorzieningnetwerktype": {
+      "$ref": "#/components/schemas/Nutsvoorzieningnetwerktype"
+    },
+    "documentatie": {
+      "type": "array",
+      "description": "Verwijzing naar een Document met extra informatie over het Netwerk. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "netwerk": {
+      "type": "array",
+      "description": "Nutsvoorzieningnetwerk dat met het Nutsvoorzieningnetwerk is geassocieerd. Bijvoorbeeld een deelnetwerk. Lijst van Nutsvoorzieningnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk"
+      },
+      "minItems": 1
+    },
+    "nutsvoorzieningInrichtingReferentie": {
+      "type": "array",
+      "description": "Activiteitencomplex dat tot het netwerk behoort. Lijst van Activiteitencomplex items.",
+      "items": {
+        "$ref": "#/components/schemas/Activiteitencomplex"
+      },
+      "minItems": 1
+    },
+    "element": {
+      "type": "array",
+      "description": "Nutsvoorzieningnetwerkelement dat tot het netwerk behoort. Lijst van Nustvoorzieningnetwerkelement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieningknoop"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieninglinkset"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieninglink"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieninglinksequentie"
+          },
+          {
+            "$ref": "#/components/schemas/Nutsvoorzieningknoopcontainer"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Nutsvoorzieningknoop": "#/components/schemas/Nutsvoorzieningknoop",
+            "Nutsvoorzieninglinkset": "#/components/schemas/Nutsvoorzieninglinkset",
+            "Nutsvoorzieninglink": "#/components/schemas/Nutsvoorzieninglink",
+            "Nutsvoorzieninglinksequentie": "#/components/schemas/Nutsvoorzieninglinksequentie",
+            "Nutsvoorzieningknoopcontainer": "#/components/schemas/Nutsvoorzieningknoopcontainer"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "nutsvoorzieningnetwerktype"
+  ]
+}

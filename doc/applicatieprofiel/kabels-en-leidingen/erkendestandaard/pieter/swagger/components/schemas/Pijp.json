@@ -1,0 +1,240 @@
+{
+  "title": "Pijp",
+  "type": "object",
+  "description": "Een Nutsvoorzieninglinkset bedoeld voor het transport van vaste stoffen, vloeistoffen, chemicaliën of gassen van de ene locatie naar de andere of als omhulsel van Kabels of andere Pijpen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Pijp)",
+      "pattern": "^Pijp$"
+    },
+    "containertype": {
+      "$ref": "#/components/schemas/Containertype"
+    },
+    "subthema": {
+      "$ref": "#/components/schemas/Subthema"
+    },
+    "pijpdiameter": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Maat"
+        },
+        {
+          "$ref": "#/components/schemas/Lengte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Maat": "#/components/schemas/Maat",
+          "Lengte": "#/components/schemas/Lengte"
+        }
+      }
+    },
+    "druk": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Maat"
+        },
+        {
+          "$ref": "#/components/schemas/Lengte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Maat": "#/components/schemas/Maat",
+          "Lengte": "#/components/schemas/Lengte"
+        }
+      }
+    },
+    "kabel": {
+      "type": "array",
+      "description": "Kabel gelegen in de Pijp. Lijst van Kabel items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Electriciteitskabel"
+          },
+          {
+            "$ref": "#/components/schemas/Telecommunicatiekabel"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Electriciteitskabel": "#/components/schemas/Electriciteitskabel",
+            "Telecommunicatiekabel": "#/components/schemas/Telecommunicatiekabel"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "pijp": {
+      "type": "array",
+      "description": "Andere Pijp gelegen in de Pijp. Lijst van Pijp items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Pijp"
+          },
+          {
+            "$ref": "#/components/schemas/OlieGasChemicaliëNPijp"
+          },
+          {
+            "$ref": "#/components/schemas/Rioolpijp"
+          },
+          {
+            "$ref": "#/components/schemas/Waterleiding"
+          },
+          {
+            "$ref": "#/components/schemas/ThermischePijp"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Pijp": "#/components/schemas/Pijp",
+            "OlieGasChemicaliëNPijp": "#/components/schemas/OlieGasChemicaliëNPijp",
+            "Rioolpijp": "#/components/schemas/Rioolpijp",
+            "Waterleiding": "#/components/schemas/Waterleiding",
+            "ThermischePijp": "#/components/schemas/ThermischePijp"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "technischeSpecificatie": {
+      "type": "array",
+      "description": "Nadere bepaling van de linkset. Bijvoorbeeld 4g10 om 4-aderige kabel van 10mm doorsnee te specifiëren. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Pijp.technischeSpecificatie"
+      },
+      "minItems": 1
+    },
+    "zichtbaarheid": {
+      "$ref": "#/components/schemas/Zichtbaarheidstype"
+    },
+    "risico": {
+      "type": "array",
+      "description": "Geeft aan of de linkset als gevaarlijk kan beschouwd worden. Lijst van RisicoType items.",
+      "items": {
+        "$ref": "#/components/schemas/RisicoType"
+      },
+      "minItems": 1
+    },
+    "uiterlijk": {
+      "$ref": "#/components/schemas/Uiterlijk"
+    },
+    "materiaaltype": {
+      "$ref": "#/components/schemas/MateriaalType"
+    },
+    "inNetwerk": {
+      "type": "array",
+      "description": "Nutsvoorzieningnetwerk waartoe het element behoort. Lijst van Nutsvoorzieningnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk"
+      },
+      "minItems": 1
+    },
+    "link": {
+      "type": "array",
+      "description": "Nutsvoorzieninglinksequentie of Nutsvoorzieninglink die deel uitmaakt van de Linkset. Lijst van GeneriekeLink items.",
+      "items": {
+        "$ref": "#/components/schemas/GeneriekeLink"
+      },
+      "minItems": 1
+    },
+    "nutsvoorzieningleveringstype": {
+      "$ref": "#/components/schemas/Nutsvoorzieningleveringstype"
+    },
+    "waarschuwingstype": {
+      "$ref": "#/components/schemas/Waarschuwingstype"
+    },
+    "geldigVan": {
+      "$ref": "#/components/schemas/Pijp.geldigVan"
+    },
+    "geldigTot": {
+      "$ref": "#/components/schemas/Pijp.geldigTot"
+    },
+    "verticalePositiedetail": {
+      "type": "array",
+      "description": "Detail van de VerticalePositie van het element. Bijvoorbeeld diepte. Lijst van VerticalePositie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalePositie"
+          },
+          {
+            "$ref": "#/components/schemas/Hoogte"
+          },
+          {
+            "$ref": "#/components/schemas/Diepte"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalePositie": "#/components/schemas/VerticalePositie",
+            "Hoogte": "#/components/schemas/Hoogte",
+            "Diepte": "#/components/schemas/Diepte"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "verticalePositie": {
+      "$ref": "#/components/schemas/VerticalePositietype"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "documentatie": {
+      "type": "array",
+      "description": "Verwijzing naar een Document met extra informatie over het element. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "huidigeStatus": {
+      "$ref": "#/components/schemas/Faciliteitstatus"
+    },
+    "nutsvoorzieningInrichtingReferentie": {
+      "type": "array",
+      "description": "Verwijzing naar een Activiteitencomplex waarop het element betrekking heeft. Lijst van Activiteitencomplex items.",
+      "items": {
+        "$ref": "#/components/schemas/Activiteitencomplex"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "pijpdiameter",
+    "inNetwerk",
+    "link",
+    "waarschuwingstype",
+    "geldigVan",
+    "verticalePositie",
+    "huidigeStatus"
+  ]
+}

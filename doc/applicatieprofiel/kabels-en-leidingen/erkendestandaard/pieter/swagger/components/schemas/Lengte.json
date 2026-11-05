@@ -1,0 +1,41 @@
+{
+  "title": "Lengte",
+  "type": "object",
+  "description": "Afstand tussen twee punten op een kromme.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Lengte)",
+      "pattern": "^Lengte$"
+    },
+    "eenheid": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Meeteenheid"
+        },
+        {
+          "$ref": "#/components/schemas/LengteëEnheid"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Meeteenheid": "#/components/schemas/Meeteenheid",
+          "LengteëEnheid": "#/components/schemas/LengteëEnheid"
+        }
+      }
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/Getal"
+    }
+  },
+  "required": [
+    "@type",
+    "eenheid",
+    "waarde"
+  ]
+}

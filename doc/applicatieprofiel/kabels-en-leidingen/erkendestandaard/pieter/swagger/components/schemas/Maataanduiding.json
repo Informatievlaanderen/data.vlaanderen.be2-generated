@@ -1,0 +1,114 @@
+{
+  "title": "Maataanduiding",
+  "type": "object",
+  "description": "Soort Annotatie dat de maat van een Object aangeeft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Maataanduiding)",
+      "pattern": "^Maataanduiding$"
+    },
+    "tekst": {
+      "type": "array",
+      "description": "Tekst van de Annotatie. Bijvoorbeeld de maat in het geval van een Maataanduiding. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Maataanduiding.tekst"
+      },
+      "minItems": 1
+    },
+    "annotatietype": {
+      "$ref": "#/components/schemas/Annotatietype"
+    },
+    "locatie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve",
+          "Punt": "#/components/schemas/Punt"
+        }
+      }
+    },
+    "rotatiehoek": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Maat"
+        },
+        {
+          "$ref": "#/components/schemas/Lengte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Maat": "#/components/schemas/Maat",
+          "Lengte": "#/components/schemas/Lengte"
+        }
+      }
+    },
+    "geheel": {
+      "type": "array",
+      "description": "Annotatie waarvan de Annotatie deel uitmaakt. Bijvoorbeeld de Maataanduiding waartoe de maatvoeringslijn behoort. Lijst van Annotatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Annotatie"
+          },
+          {
+            "$ref": "#/components/schemas/Maataanduiding"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Annotatie": "#/components/schemas/Annotatie",
+            "Maataanduiding": "#/components/schemas/Maataanduiding"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "deel": {
+      "type": "array",
+      "description": "Annotatie die deel uitmaakt van de Annotatie. Bijvoorbeeld de maatvoeringslijn in het geval van een Maataanduiding bestaande uit twee pijlen en een maatvoeringshulplijn. Lijst van Annotatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Annotatie"
+          },
+          {
+            "$ref": "#/components/schemas/Maataanduiding"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Annotatie": "#/components/schemas/Annotatie",
+            "Maataanduiding": "#/components/schemas/Maataanduiding"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "annotatietype",
+    "locatie"
+  ]
+}

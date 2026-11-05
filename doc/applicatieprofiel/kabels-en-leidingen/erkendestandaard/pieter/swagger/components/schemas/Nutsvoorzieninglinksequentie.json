@@ -1,0 +1,111 @@
+{
+  "title": "Nutsvoorzieninglinksequentie",
+  "type": "object",
+  "description": "Een onvertakt doorlopend pad in het Nutsvoorzieningnetwerk.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Nutsvoorzieninglinksequentie)",
+      "pattern": "^Nutsvoorzieninglinksequentie$"
+    },
+    "inNetwerk": {
+      "type": "array",
+      "description": "Nutsvoorzieningnetwerk waartoe het element behoort. Lijst van Nutsvoorzieningnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk"
+      },
+      "minItems": 1
+    },
+    "link": {
+      "type": "array",
+      "description": "GerichteLink die deel uitmaakt van de Linksequentie. Lijst van GerichteLink items.",
+      "items": {
+        "$ref": "#/components/schemas/GerichteLink"
+      },
+      "minItems": 1
+    },
+    "geldigVan": {
+      "$ref": "#/components/schemas/Nutsvoorzieninglinksequentie.geldigVan"
+    },
+    "geldigTot": {
+      "$ref": "#/components/schemas/Nutsvoorzieninglinksequentie.geldigTot"
+    },
+    "verticalePositiedetail": {
+      "type": "array",
+      "description": "Detail van de VerticalePositie van het element. Bijvoorbeeld diepte. Lijst van VerticalePositie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalePositie"
+          },
+          {
+            "$ref": "#/components/schemas/Hoogte"
+          },
+          {
+            "$ref": "#/components/schemas/Diepte"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalePositie": "#/components/schemas/VerticalePositie",
+            "Hoogte": "#/components/schemas/Hoogte",
+            "Diepte": "#/components/schemas/Diepte"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "verticalePositie": {
+      "$ref": "#/components/schemas/VerticalePositietype"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "documentatie": {
+      "type": "array",
+      "description": "Verwijzing naar een Document met extra informatie over het element. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "huidigeStatus": {
+      "$ref": "#/components/schemas/Faciliteitstatus"
+    },
+    "nutsvoorzieningInrichtingReferentie": {
+      "type": "array",
+      "description": "Verwijzing naar een Activiteitencomplex waarop het element betrekking heeft. Lijst van Activiteitencomplex items.",
+      "items": {
+        "$ref": "#/components/schemas/Activiteitencomplex"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "inNetwerk",
+    "link",
+    "geldigVan",
+    "verticalePositie",
+    "huidigeStatus"
+  ]
+}

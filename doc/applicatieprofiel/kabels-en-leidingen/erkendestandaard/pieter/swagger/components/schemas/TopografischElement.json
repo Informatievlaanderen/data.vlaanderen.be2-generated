@@ -1,0 +1,45 @@
+{
+  "title": "TopografischElement",
+  "type": "object",
+  "description": "Onderdeel van de beschrijving van vorm en kenmerken van het aardoppervlak.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse TopografischElement)",
+      "pattern": "^TopografischElement$"
+    },
+    "topografischElementtype": {
+      "$ref": "#/components/schemas/TopografischElementtype"
+    },
+    "locatie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve",
+          "Punt": "#/components/schemas/Punt"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "topografischElementtype",
+    "locatie"
+  ]
+}
