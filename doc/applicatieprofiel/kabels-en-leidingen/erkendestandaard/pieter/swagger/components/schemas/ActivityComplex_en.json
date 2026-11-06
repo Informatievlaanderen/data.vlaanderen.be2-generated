@@ -1,0 +1,127 @@
+{
+  "title": "ActivityComplex",
+  "type": "object",
+  "description": "Technical and economic unit managed by the same operator where certain activities regarding production and services take place.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ActivityComplex)",
+      "pattern": "^ActivityComplex$"
+    },
+    "name": {
+      "$ref": "#/components/schemas/ActivityComplex.name"
+    },
+    "function": {
+      "type": "array",
+      "description": "Activities carried out by the complex. Lijst van Function items.",
+      "items": {
+        "$ref": "#/components/schemas/Function"
+      },
+      "minItems": 1
+    },
+    "geometry": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Curve": "#/components/schemas/Curve",
+          "Point": "#/components/schemas/Point"
+        }
+      }
+    },
+    "identifier": {
+      "type": "array",
+      "description": "External Identifier of the complex. NOTE  An external object identifier is a unique object identifier published by the responsible body, which may be used by external applications to reference the spatial object. The identifier is an identifier of the spatial object, not an identifier of the real-world phenomenon. Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1
+    },
+    "documentation": {
+      "type": "array",
+      "description": "Reference to a Document with additional information about the complex. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "on": {
+      "type": "array",
+      "description": "Utility Network Element belonging to the complex. Lijst van UtilityNetworkElement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/UtilityNode"
+          },
+          {
+            "$ref": "#/components/schemas/UtilityLinkSet"
+          },
+          {
+            "$ref": "#/components/schemas/UtilityLink"
+          },
+          {
+            "$ref": "#/components/schemas/UtilityLinkSequence"
+          },
+          {
+            "$ref": "#/components/schemas/UtilityNodeContainer"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "UtilityNode": "#/components/schemas/UtilityNode",
+            "UtilityLinkSet": "#/components/schemas/UtilityLinkSet",
+            "UtilityLink": "#/components/schemas/UtilityLink",
+            "UtilityLinkSequence": "#/components/schemas/UtilityLinkSequence",
+            "UtilityNodeContainer": "#/components/schemas/UtilityNodeContainer"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "inNetwork": {
+      "type": "array",
+      "description": "Utility Network to which the Activity Complex belongs. Lijst van UtilityNetwork items.",
+      "items": {
+        "$ref": "#/components/schemas/UtilityNetwork"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "function",
+    "geometry",
+    "identifier",
+    "inNetwork"
+  ]
+}

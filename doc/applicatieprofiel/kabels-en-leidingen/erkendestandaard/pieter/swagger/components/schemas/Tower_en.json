@@ -1,0 +1,144 @@
+{
+  "title": "Tower",
+  "type": "object",
+  "description": "Simple UtilityNodeContainer that takes the shape of a Tower.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Tower)",
+      "pattern": "^Tower$"
+    },
+    "towerHeight": {
+      "$ref": "#/components/schemas/Length"
+    },
+    "risk": {
+      "$ref": "#/components/schemas/RiskTypeValue"
+    },
+    "appearance": {
+      "$ref": "#/components/schemas/Appearance"
+    },
+    "orientation": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Measure"
+        },
+        {
+          "$ref": "#/components/schemas/Length"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Measure": "#/components/schemas/Measure",
+          "Length": "#/components/schemas/Length"
+        }
+      }
+    },
+    "visibility": {
+      "$ref": "#/components/schemas/VisibilityTypeValue"
+    },
+    "geometry": {
+      "$ref": "#/components/schemas/Point"
+    },
+    "node": {
+      "type": "array",
+      "description": "Utility Node that is contained by the Utility Node Container. Lijst van UtilityNode items.",
+      "items": {
+        "$ref": "#/components/schemas/Appurtenance"
+      },
+      "minItems": 1
+    },
+    "validFrom": {
+      "$ref": "#/components/schemas/Tower.validFrom"
+    },
+    "validTo": {
+      "$ref": "#/components/schemas/Tower.validTo"
+    },
+    "verticalPositionDetail": {
+      "type": "array",
+      "description": "undefined Lijst van VerticalPosition items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalPosition"
+          },
+          {
+            "$ref": "#/components/schemas/Height"
+          },
+          {
+            "$ref": "#/components/schemas/Depth"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalPosition": "#/components/schemas/VerticalPosition",
+            "Height": "#/components/schemas/Height",
+            "Depth": "#/components/schemas/Depth"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "verticalPosition": {
+      "$ref": "#/components/schemas/VerticalPositionValue"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "documentation": {
+      "type": "array",
+      "description": "Reference to a Document containing additional information about the element. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "currentStatus": {
+      "$ref": "#/components/schemas/ConditionOfFacilityValue"
+    },
+    "utilityFacilityReference": {
+      "type": "array",
+      "description": "Reference to a complex of activities related to this (element of a) utility network. Lijst van ActivityComplex items.",
+      "items": {
+        "$ref": "#/components/schemas/ActivityComplex"
+      },
+      "minItems": 1
+    },
+    "inNetwork": {
+      "type": "array",
+      "description": "Utility Network to which the element belongs. Lijst van UtilityNetwork items.",
+      "items": {
+        "$ref": "#/components/schemas/UtilityNetwork"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "towerHeight",
+    "geometry",
+    "validFrom",
+    "verticalPosition",
+    "currentStatus",
+    "inNetwork"
+  ]
+}

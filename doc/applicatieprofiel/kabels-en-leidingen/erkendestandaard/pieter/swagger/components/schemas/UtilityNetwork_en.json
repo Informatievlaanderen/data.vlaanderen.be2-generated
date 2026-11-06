@@ -1,0 +1,145 @@
+{
+  "title": "UtilityNetwork",
+  "type": "object",
+  "description": "Collection of network elements of one type of utility service.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse UtilityNetwork)",
+      "pattern": "^UtilityNetwork$"
+    },
+    "geographicalName": {
+      "type": "array",
+      "description": "Name by which the network is known. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/UtilityNetwork.geographicalName"
+      },
+      "minItems": 1
+    },
+    "disclaimer": {
+      "type": "array",
+      "description": "Legal text describing confidentiality clauses applying to the utility network information. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/UtilityNetwork.disclaimer"
+      },
+      "minItems": 1
+    },
+    "standardVerticalPositionDetail": {
+      "type": "array",
+      "description": "Default Vertical Position of elements in the network. Lijst van VerticalPosition items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalPosition"
+          },
+          {
+            "$ref": "#/components/schemas/Height"
+          },
+          {
+            "$ref": "#/components/schemas/Depth"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalPosition": "#/components/schemas/VerticalPosition",
+            "Height": "#/components/schemas/Height",
+            "Depth": "#/components/schemas/Depth"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "protectedArea": {
+      "type": "array",
+      "description": "Area within which certain regulations apply when carrying out works. Lijst van ProtectedArea items.",
+      "items": {
+        "$ref": "#/components/schemas/ProtectedArea"
+      },
+      "minItems": 1
+    },
+    "utilityNetworkType": {
+      "$ref": "#/components/schemas/UtilityNetworkTypeValue"
+    },
+    "documentation": {
+      "type": "array",
+      "description": "Reference to a Document containing additional information about the Network. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "network": {
+      "type": "array",
+      "description": "Utility Network associated with the Utility Network. Lijst van UtilityNetwork items.",
+      "items": {
+        "$ref": "#/components/schemas/UtilityNetwork"
+      },
+      "minItems": 1
+    },
+    "utilityFacilityReference": {
+      "type": "array",
+      "description": "Activity Complex belonging to the network. Lijst van ActivityComplex items.",
+      "items": {
+        "$ref": "#/components/schemas/ActivityComplex"
+      },
+      "minItems": 1
+    },
+    "element": {
+      "type": "array",
+      "description": "Utility Network Element belonging to the network. Lijst van UtilityNetworkElement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/UtilityNode"
+          },
+          {
+            "$ref": "#/components/schemas/UtilityLinkSet"
+          },
+          {
+            "$ref": "#/components/schemas/UtilityLink"
+          },
+          {
+            "$ref": "#/components/schemas/UtilityLinkSequence"
+          },
+          {
+            "$ref": "#/components/schemas/UtilityNodeContainer"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "UtilityNode": "#/components/schemas/UtilityNode",
+            "UtilityLinkSet": "#/components/schemas/UtilityLinkSet",
+            "UtilityLink": "#/components/schemas/UtilityLink",
+            "UtilityLinkSequence": "#/components/schemas/UtilityLinkSequence",
+            "UtilityNodeContainer": "#/components/schemas/UtilityNodeContainer"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "utilityNetworkType"
+  ]
+}

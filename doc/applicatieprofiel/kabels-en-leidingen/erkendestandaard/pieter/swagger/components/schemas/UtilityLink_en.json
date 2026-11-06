@@ -1,0 +1,140 @@
+{
+  "title": "UtilityLink",
+  "type": "object",
+  "description": "A linear spatial object that describes the geometry and connectivity between two points in a Utility Network.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse UtilityLink)",
+      "pattern": "^UtilityLink$"
+    },
+    "centrelineGeometry": {
+      "$ref": "#/components/schemas/Curve"
+    },
+    "inNetwork": {
+      "type": "array",
+      "description": "Utility Network to which the element belongs. Lijst van UtilityNetwork items.",
+      "items": {
+        "$ref": "#/components/schemas/UtilityNetwork"
+      },
+      "minItems": 1
+    },
+    "endNode": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Node"
+        },
+        {
+          "$ref": "#/components/schemas/UtilityNode"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Node": "#/components/schemas/Node",
+          "UtilityNode": "#/components/schemas/UtilityNode"
+        }
+      }
+    },
+    "startNode": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Node"
+        },
+        {
+          "$ref": "#/components/schemas/UtilityNode"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Node": "#/components/schemas/Node",
+          "UtilityNode": "#/components/schemas/UtilityNode"
+        }
+      }
+    },
+    "validFrom": {
+      "$ref": "#/components/schemas/UtilityLink.validFrom"
+    },
+    "validTo": {
+      "$ref": "#/components/schemas/UtilityLink.validTo"
+    },
+    "verticalPositionDetail": {
+      "type": "array",
+      "description": "undefined Lijst van VerticalPosition items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalPosition"
+          },
+          {
+            "$ref": "#/components/schemas/Height"
+          },
+          {
+            "$ref": "#/components/schemas/Depth"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalPosition": "#/components/schemas/VerticalPosition",
+            "Height": "#/components/schemas/Height",
+            "Depth": "#/components/schemas/Depth"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "verticalPosition": {
+      "$ref": "#/components/schemas/VerticalPositionValue"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "documentation": {
+      "type": "array",
+      "description": "Reference to a Document containing additional information about the element. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "currentStatus": {
+      "$ref": "#/components/schemas/ConditionOfFacilityValue"
+    },
+    "utilityFacilityReference": {
+      "type": "array",
+      "description": "Reference to a complex of activities related to this (element of a) utility network. Lijst van ActivityComplex items.",
+      "items": {
+        "$ref": "#/components/schemas/ActivityComplex"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "centrelineGeometry",
+    "inNetwork",
+    "validFrom",
+    "verticalPosition",
+    "currentStatus"
+  ]
+}

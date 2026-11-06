@@ -1,0 +1,47 @@
+{
+  "title": "ReferenceSurface",
+  "type": "object",
+  "description": "Surface relative to which a position is measured.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ReferenceSurface)",
+      "pattern": "^ReferenceSurface$"
+    },
+    "verticalPosition": {
+      "$ref": "#/components/schemas/DirectPosition"
+    },
+    "type": {
+      "$ref": "#/components/schemas/ReferenceSurfaceType"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Curve": "#/components/schemas/Curve",
+          "Point": "#/components/schemas/Point"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "location"
+  ]
+}

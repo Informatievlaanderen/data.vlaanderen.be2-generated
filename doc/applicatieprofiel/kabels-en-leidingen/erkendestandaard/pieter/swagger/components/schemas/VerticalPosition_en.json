@@ -1,0 +1,64 @@
+{
+  "title": "VerticalPosition",
+  "type": "object",
+  "description": "Position in vertical direction relative to a Reference Surface.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse VerticalPosition)",
+      "pattern": "^VerticalPosition$"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Curve": "#/components/schemas/Curve",
+          "Point": "#/components/schemas/Point"
+        }
+      }
+    },
+    "verticalPosition": {
+      "$ref": "#/components/schemas/DirectPosition"
+    },
+    "distance": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Measure"
+        },
+        {
+          "$ref": "#/components/schemas/Length"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Measure": "#/components/schemas/Measure",
+          "Length": "#/components/schemas/Length"
+        }
+      }
+    },
+    "referenceSurface": {
+      "$ref": "#/components/schemas/ReferenceSurface"
+    }
+  },
+  "required": [
+    "@type",
+    "referenceSurface"
+  ]
+}

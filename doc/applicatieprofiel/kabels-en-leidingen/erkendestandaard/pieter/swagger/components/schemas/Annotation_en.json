@@ -1,0 +1,114 @@
+{
+  "title": "Annotation",
+  "type": "object",
+  "description": "A short explanation or note added to an Object.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Annotation)",
+      "pattern": "^Annotation$"
+    },
+    "text": {
+      "type": "array",
+      "description": "Text of the Annotation. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/Annotation.text"
+      },
+      "minItems": 1
+    },
+    "annotationType": {
+      "$ref": "#/components/schemas/AnnotationType"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Curve": "#/components/schemas/Curve",
+          "Point": "#/components/schemas/Point"
+        }
+      }
+    },
+    "rotationAngle": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Measure"
+        },
+        {
+          "$ref": "#/components/schemas/Length"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Measure": "#/components/schemas/Measure",
+          "Length": "#/components/schemas/Length"
+        }
+      }
+    },
+    "whole": {
+      "type": "array",
+      "description": "Annotation of which the Annotation is a part. Lijst van Annotation items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Annotation"
+          },
+          {
+            "$ref": "#/components/schemas/Dimension"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Annotation": "#/components/schemas/Annotation",
+            "Dimension": "#/components/schemas/Dimension"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "part": {
+      "type": "array",
+      "description": "Annotation that is part of the Annotation. Lijst van Annotation items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Annotation"
+          },
+          {
+            "$ref": "#/components/schemas/Dimension"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Annotation": "#/components/schemas/Annotation",
+            "Dimension": "#/components/schemas/Dimension"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "annotationType",
+    "location"
+  ]
+}

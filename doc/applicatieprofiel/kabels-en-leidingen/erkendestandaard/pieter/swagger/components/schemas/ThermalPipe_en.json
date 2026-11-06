@@ -1,0 +1,261 @@
+{
+  "title": "ThermalPipe",
+  "type": "object",
+  "description": "A pipe used to disseminate heating or cooling from one location to another.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ThermalPipe)",
+      "pattern": "^ThermalPipe$"
+    },
+    "temperature": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Measure"
+        },
+        {
+          "$ref": "#/components/schemas/Length"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Measure": "#/components/schemas/Measure",
+          "Length": "#/components/schemas/Length"
+        }
+      }
+    },
+    "thermalProductType": {
+      "$ref": "#/components/schemas/ThermalProductTypeValue"
+    },
+    "containerType": {
+      "$ref": "#/components/schemas/ContainerTypeValue"
+    },
+    "subtheme": {
+      "$ref": "#/components/schemas/SubthemeValue"
+    },
+    "pipeDiameter": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Measure"
+        },
+        {
+          "$ref": "#/components/schemas/Length"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Measure": "#/components/schemas/Measure",
+          "Length": "#/components/schemas/Length"
+        }
+      }
+    },
+    "pressure": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Measure"
+        },
+        {
+          "$ref": "#/components/schemas/Length"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Measure": "#/components/schemas/Measure",
+          "Length": "#/components/schemas/Length"
+        }
+      }
+    },
+    "cable": {
+      "type": "array",
+      "description": "Cable located in the Pipe. Lijst van Cable items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ElectricityCable"
+          },
+          {
+            "$ref": "#/components/schemas/TelecommunicationsCable"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ElectricityCable": "#/components/schemas/ElectricityCable",
+            "TelecommunicationsCable": "#/components/schemas/TelecommunicationsCable"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "pipe": {
+      "type": "array",
+      "description": "Other Pipe located in the Pipe. Lijst van Pipe items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Pipe"
+          },
+          {
+            "$ref": "#/components/schemas/OilGasChemicalsPipe"
+          },
+          {
+            "$ref": "#/components/schemas/SewerPipe"
+          },
+          {
+            "$ref": "#/components/schemas/WaterPipe"
+          },
+          {
+            "$ref": "#/components/schemas/ThermalPipe"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Pipe": "#/components/schemas/Pipe",
+            "OilGasChemicalsPipe": "#/components/schemas/OilGasChemicalsPipe",
+            "SewerPipe": "#/components/schemas/SewerPipe",
+            "WaterPipe": "#/components/schemas/WaterPipe",
+            "ThermalPipe": "#/components/schemas/ThermalPipe"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "technicalSpecification": {
+      "type": "array",
+      "description": "Further specification of the Link Set. Lijst van LangString items.",
+      "items": {
+        "$ref": "#/components/schemas/ThermalPipe.technicalSpecification"
+      },
+      "minItems": 1
+    },
+    "visibility": {
+      "$ref": "#/components/schemas/VisibilityTypeValue"
+    },
+    "risk": {
+      "type": "array",
+      "description": "Indicates whether the Link Set can be considered hazardous. Lijst van RiskTypeValue items.",
+      "items": {
+        "$ref": "#/components/schemas/RiskTypeValue"
+      },
+      "minItems": 1
+    },
+    "appearance": {
+      "$ref": "#/components/schemas/Appearance"
+    },
+    "materialType": {
+      "$ref": "#/components/schemas/MaterialTypeValue"
+    },
+    "inNetwork": {
+      "type": "array",
+      "description": "Utility Network to which the element belongs. Lijst van UtilityNetwork items.",
+      "items": {
+        "$ref": "#/components/schemas/UtilityNetwork"
+      },
+      "minItems": 1
+    },
+    "link": {
+      "type": "array",
+      "description": "Utility Link Sequence or Utility Link that is part of the Link Set. Lijst van GenericLink items.",
+      "items": {
+        "$ref": "#/components/schemas/GenericLink"
+      },
+      "minItems": 1
+    },
+    "utilityDeliveryType": {
+      "$ref": "#/components/schemas/UtilityDeliveryTypeValue"
+    },
+    "warningType": {
+      "$ref": "#/components/schemas/WarningTypeValue"
+    },
+    "validFrom": {
+      "$ref": "#/components/schemas/ThermalPipe.validFrom"
+    },
+    "validTo": {
+      "$ref": "#/components/schemas/ThermalPipe.validTo"
+    },
+    "verticalPositionDetail": {
+      "type": "array",
+      "description": "undefined Lijst van VerticalPosition items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalPosition"
+          },
+          {
+            "$ref": "#/components/schemas/Height"
+          },
+          {
+            "$ref": "#/components/schemas/Depth"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalPosition": "#/components/schemas/VerticalPosition",
+            "Height": "#/components/schemas/Height",
+            "Depth": "#/components/schemas/Depth"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "verticalPosition": {
+      "$ref": "#/components/schemas/VerticalPositionValue"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "documentation": {
+      "type": "array",
+      "description": "Reference to a Document containing additional information about the element. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "currentStatus": {
+      "$ref": "#/components/schemas/ConditionOfFacilityValue"
+    },
+    "utilityFacilityReference": {
+      "type": "array",
+      "description": "Reference to a complex of activities related to this (element of a) utility network. Lijst van ActivityComplex items.",
+      "items": {
+        "$ref": "#/components/schemas/ActivityComplex"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "thermalProductType",
+    "pipeDiameter",
+    "inNetwork",
+    "link",
+    "warningType",
+    "validFrom",
+    "verticalPosition",
+    "currentStatus"
+  ]
+}

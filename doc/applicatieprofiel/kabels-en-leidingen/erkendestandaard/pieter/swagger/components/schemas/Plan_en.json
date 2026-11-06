@@ -1,0 +1,59 @@
+{
+  "title": "Plan",
+  "type": "object",
+  "description": "Drawing showing the parts or details of something.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Plan)",
+      "pattern": "^Plan$"
+    },
+    "location": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Curve": "#/components/schemas/Curve",
+          "Point": "#/components/schemas/Point"
+        }
+      }
+    },
+    "documentLocation": {
+      "$ref": "#/components/schemas/Plan.documentLocation"
+    },
+    "description": {
+      "$ref": "#/components/schemas/Plan.description"
+    },
+    "documentMediatype": {
+      "$ref": "#/components/schemas/DocumentMediatype"
+    },
+    "documentType": {
+      "$ref": "#/components/schemas/DocumentType"
+    },
+    "documentIdentifier": {
+      "$ref": "#/components/schemas/Identifier"
+    }
+  },
+  "required": [
+    "@type",
+    "location",
+    "documentLocation",
+    "documentMediatype",
+    "documentType"
+  ]
+}

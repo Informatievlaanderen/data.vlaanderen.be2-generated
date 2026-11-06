@@ -1,0 +1,111 @@
+{
+  "title": "UtilityLinkSequence",
+  "type": "object",
+  "description": "An unbranched continuous path in the Utility Network.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse UtilityLinkSequence)",
+      "pattern": "^UtilityLinkSequence$"
+    },
+    "inNetwork": {
+      "type": "array",
+      "description": "Utility Network to which the element belongs. Lijst van UtilityNetwork items.",
+      "items": {
+        "$ref": "#/components/schemas/UtilityNetwork"
+      },
+      "minItems": 1
+    },
+    "link": {
+      "type": "array",
+      "description": "Directed Link that is part of the Link Sequence. Lijst van DirectedLink items.",
+      "items": {
+        "$ref": "#/components/schemas/DirectedLink"
+      },
+      "minItems": 1
+    },
+    "validFrom": {
+      "$ref": "#/components/schemas/UtilityLinkSequence.validFrom"
+    },
+    "validTo": {
+      "$ref": "#/components/schemas/UtilityLinkSequence.validTo"
+    },
+    "verticalPositionDetail": {
+      "type": "array",
+      "description": "undefined Lijst van VerticalPosition items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VerticalPosition"
+          },
+          {
+            "$ref": "#/components/schemas/Height"
+          },
+          {
+            "$ref": "#/components/schemas/Depth"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "VerticalPosition": "#/components/schemas/VerticalPosition",
+            "Height": "#/components/schemas/Height",
+            "Depth": "#/components/schemas/Depth"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "verticalPosition": {
+      "$ref": "#/components/schemas/VerticalPositionValue"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "documentation": {
+      "type": "array",
+      "description": "Reference to a Document containing additional information about the element. Lijst van Document items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Document"
+          },
+          {
+            "$ref": "#/components/schemas/Plan"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Document": "#/components/schemas/Document",
+            "Plan": "#/components/schemas/Plan"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "currentStatus": {
+      "$ref": "#/components/schemas/ConditionOfFacilityValue"
+    },
+    "utilityFacilityReference": {
+      "type": "array",
+      "description": "Reference to a complex of activities related to this (element of a) utility network. Lijst van ActivityComplex items.",
+      "items": {
+        "$ref": "#/components/schemas/ActivityComplex"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "inNetwork",
+    "link",
+    "validFrom",
+    "verticalPosition",
+    "currentStatus"
+  ]
+}

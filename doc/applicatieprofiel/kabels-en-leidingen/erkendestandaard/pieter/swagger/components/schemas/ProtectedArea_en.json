@@ -1,0 +1,53 @@
+{
+  "title": "ProtectedArea",
+  "type": "object",
+  "description": "Area within which certain regulations apply when carrying out works.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ProtectedArea)",
+      "pattern": "^ProtectedArea$"
+    },
+    "description": {
+      "$ref": "#/components/schemas/ProtectedArea.description"
+    },
+    "name": {
+      "$ref": "#/components/schemas/ProtectedArea.name"
+    },
+    "geometry": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometry"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Point"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometry": "#/components/schemas/Geometry",
+          "Curve": "#/components/schemas/Curve",
+          "Point": "#/components/schemas/Point"
+        }
+      }
+    },
+    "type": {
+      "$ref": "#/components/schemas/ProtectedAreaValue"
+    },
+    "location": {
+      "$ref": "#/components/schemas/Location"
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}

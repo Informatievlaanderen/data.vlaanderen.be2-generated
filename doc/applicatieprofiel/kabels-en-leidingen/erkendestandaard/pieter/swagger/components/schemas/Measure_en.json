@@ -1,0 +1,41 @@
+{
+  "title": "Measure",
+  "type": "object",
+  "description": "A measured amount of a certain quantity, expressed in some unit.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Measure)",
+      "pattern": "^Measure$"
+    },
+    "value": {
+      "$ref": "#/components/schemas/Number"
+    },
+    "uom": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/UnitOfMeasure"
+        },
+        {
+          "$ref": "#/components/schemas/UomLength"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "UnitOfMeasure": "#/components/schemas/UnitOfMeasure",
+          "UomLength": "#/components/schemas/UomLength"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "value",
+    "uom"
+  ]
+}

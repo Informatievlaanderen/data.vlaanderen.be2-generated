@@ -371,20 +371,6 @@
           "@id"
         ]
       },
-      "BeschermdGebiedtype": {
-        "title": "BeschermdGebiedtype",
-        "type": "object",
-        "description": "Enumeratie van BeschermdGebiedtype",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          }
-        },
-        "required": [
-          "@id"
-        ]
-      },
       "Annotatie.tekst": {
         "title": "Annotatie.tekst",
         "description": "Tekst van de Annotatie. Bijvoorbeeld de maat in het geval van een Maataanduiding.",
@@ -1397,14 +1383,6 @@
                   "Diepte": "#/components/schemas/Diepte"
                 }
               }
-            },
-            "minItems": 1
-          },
-          "beschermdGebied": {
-            "type": "array",
-            "description": "Gebied waarbinnen bepaalde voorschriften gelden bij het uitvoeren van werken. Lijst van BeschermdGebied items.",
-            "items": {
-              "$ref": "#/components/schemas/BeschermdGebied"
             },
             "minItems": 1
           },
@@ -2982,9 +2960,6 @@
           "hoogte": {
             "$ref": "#/components/schemas/Lengte"
           },
-          "subthema": {
-            "$ref": "#/components/schemas/Subthema"
-          },
           "zichtbaarheid": {
             "$ref": "#/components/schemas/Zichtbaarheidstype"
           },
@@ -3141,7 +3116,6 @@
         "required": [
           "@type",
           "toebehorentype",
-          "subthema",
           "inNetwerk",
           "geometrie",
           "geldigVan",
@@ -3765,25 +3739,6 @@
           "inNetwerk"
         ]
       },
-      "GeneriekeLink": {
-        "title": "GeneriekeLink",
-        "type": "object",
-        "description": "Lineair Netwerkelement.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse GeneriekeLink)",
-            "pattern": "^GeneriekeLink$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
       "Activiteitencomplex.naam": {
         "title": "Activiteitencomplex.naam",
         "description": "Naam waaronder het complex gekend is.",
@@ -4048,9 +4003,6 @@
           "hoogte": {
             "$ref": "#/components/schemas/Lengte"
           },
-          "subthema": {
-            "$ref": "#/components/schemas/Subthema"
-          },
           "zichtbaarheid": {
             "$ref": "#/components/schemas/Zichtbaarheidstype"
           },
@@ -4207,7 +4159,6 @@
         "required": [
           "@type",
           "toebehorentype",
-          "subthema",
           "inNetwerk",
           "geometrie",
           "geldigVan",
@@ -4365,11 +4316,6 @@
         "description": "Beschrijving van het BeschermdGebied.",
         "type": "string"
       },
-      "BeschermdGebied.naam": {
-        "title": "BeschermdGebied.naam",
-        "description": "Naam van het BeschermdGebied.",
-        "type": "string"
-      },
       "BeschermdGebied": {
         "title": "BeschermdGebied",
         "type": "object",
@@ -4386,9 +4332,6 @@
           },
           "beschrijving": {
             "$ref": "#/components/schemas/BeschermdGebied.beschrijving"
-          },
-          "naam": {
-            "$ref": "#/components/schemas/BeschermdGebied.naam"
           },
           "geometrie": {
             "oneOf": [
@@ -4411,16 +4354,12 @@
               }
             }
           },
-          "type": {
-            "$ref": "#/components/schemas/BeschermdGebiedtype"
-          },
           "ligging": {
             "$ref": "#/components/schemas/Locatie"
           }
         },
         "required": [
-          "@type",
-          "type"
+          "@type"
         ]
       },
       "Maataanduiding.tekst": {
@@ -4561,25 +4500,6 @@
           "@type"
         ]
       },
-      "Linkset": {
-        "title": "Linkset",
-        "type": "object",
-        "description": "Collectie Linksequenties en/of Links met een specifieke functie of belang in het Netwerk.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Linkset)",
-            "pattern": "^Linkset$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
       "Knoop": {
         "title": "Knoop",
         "type": "object",
@@ -4593,25 +4513,6 @@
             "type": "string",
             "description": "Object type (klasse Knoop)",
             "pattern": "^Knoop$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
-      "Link": {
-        "title": "Link",
-        "type": "object",
-        "description": "Curvilineair netwerkelement dat twee posities verbindt en een homogeen pad in het Netwerk vertegenwoordigt. De verbonden posities worden voorgesteld door Knopen.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Link)",
-            "pattern": "^Link$"
           }
         },
         "required": [
@@ -5948,20 +5849,6 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `VerticalePositie` op te halen."
       },
-      "Nutsvoorzieningnetwerk.beschermdGebied": {
-        "operationId": "NutsvoorzieningnetwerkGET",
-        "parameters": {
-          "id": "$response.body#/Nutsvoorzieningnetwerk.beschermdGebied/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BeschermdGebied` op te halen."
-      },
-      "Nutsvoorzieningnetwerk.bevoegdePartij": {
-        "operationId": "NutsvoorzieningnetwerkGET",
-        "parameters": {
-          "id": "$response.body#/Nutsvoorzieningnetwerk.bevoegdePartij/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
-      },
       "Nutsvoorzieningnetwerk.nutsvoorzieningnetwerktype": {
         "operationId": "NutsvoorzieningnetwerkGET",
         "parameters": {
@@ -6851,13 +6738,6 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Lengte` op te halen."
       },
-      "Toebehoren.subthema": {
-        "operationId": "ToebehorenGET",
-        "parameters": {
-          "id": "$response.body#/Toebehoren.subthema/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Subthema` op te halen."
-      },
       "Toebehoren.zichtbaarheid": {
         "operationId": "ToebehorenGET",
         "parameters": {
@@ -7432,13 +7312,6 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Lengte` op te halen."
       },
-      "Aansluiting.subthema": {
-        "operationId": "AansluitingGET",
-        "parameters": {
-          "id": "$response.body#/Aansluiting.subthema/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Subthema` op te halen."
-      },
       "Aansluiting.zichtbaarheid": {
         "operationId": "AansluitingGET",
         "parameters": {
@@ -7578,13 +7451,6 @@
           "id": "$response.body#/BeschermdGebied.geometrie/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
-      },
-      "BeschermdGebied.type": {
-        "operationId": "BeschermdGebiedGET",
-        "parameters": {
-          "id": "$response.body#/BeschermdGebied.type/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BeschermdGebiedtype` op te halen."
       },
       "BeschermdGebied.ligging": {
         "operationId": "BeschermdGebiedGET",

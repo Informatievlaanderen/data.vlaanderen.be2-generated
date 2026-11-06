@@ -1,0 +1,41 @@
+{
+  "title": "Length",
+  "type": "object",
+  "description": "Distance between two points on a curve.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Length)",
+      "pattern": "^Length$"
+    },
+    "uom": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/UnitOfMeasure"
+        },
+        {
+          "$ref": "#/components/schemas/UomLength"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "UnitOfMeasure": "#/components/schemas/UnitOfMeasure",
+          "UomLength": "#/components/schemas/UomLength"
+        }
+      }
+    },
+    "value": {
+      "$ref": "#/components/schemas/Number"
+    }
+  },
+  "required": [
+    "@type",
+    "uom",
+    "value"
+  ]
+}
