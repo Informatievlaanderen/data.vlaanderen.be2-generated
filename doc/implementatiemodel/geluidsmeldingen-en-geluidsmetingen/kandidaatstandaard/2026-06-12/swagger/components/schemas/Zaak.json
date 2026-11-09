@@ -1,0 +1,51 @@
+{
+  "title": "Zaak",
+  "type": "object",
+  "description": "Een zaak is het geheel aan werk gedaan om tot een bestuurlijke of zakelijke beslissing te komen. Een zaak slaat doorgaans neer in een verzameling documenten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Zaak)",
+      "pattern": "^Zaak$"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/Zaak.naam"
+    },
+    "openingsdatum": {
+      "$ref": "#/components/schemas/Zaak.openingsdatum"
+    },
+    "procedure": {
+      "$ref": "#/components/schemas/Zaak.procedure"
+    },
+    "sluitingsdatum": {
+      "$ref": "#/components/schemas/Zaak.sluitingsdatum"
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Een identificator voor de zaak. Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "behandelt": {
+      "type": "array",
+      "description": "Een zaak behandelt een resource. Lijst van Resource items.",
+      "items": {
+        "$ref": "#/components/schemas/Resource"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "openingsdatum",
+    "procedure",
+    "sluitingsdatum"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "title": "MeldingBody",
+  "type": "object",
+  "description": "De body van de Melding,deze omvat relevante informatie voor de verdere afhandeling van een melding.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MeldingBody)",
+      "pattern": "^MeldingBody$"
+    },
+    "beschrijving": {
+      "$ref": "#/components/schemas/MeldingBody.beschrijving"
+    },
+    "bijlage": {
+      "$ref": "#/components/schemas/MeldingBody.bijlage"
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Punt": "#/components/schemas/Punt"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

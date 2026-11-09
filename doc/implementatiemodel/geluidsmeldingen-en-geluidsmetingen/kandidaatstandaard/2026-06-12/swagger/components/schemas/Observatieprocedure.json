@@ -1,0 +1,59 @@
+{
+  "title": "Observatieprocedure",
+  "type": "object",
+  "description": "Een workflow, protocol, plan, algoritme, of berekeningswijze waarin wordt gespecifieerd hoe een Observatie moet worden uitgevoerd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observatieprocedure)",
+      "pattern": "^Observatieprocedure$"
+    },
+    "specificatie": {
+      "type": "array",
+      "description": "Verwijzing naar een document dat de Observatieprocedure beschrijft. Lijst van URI items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieprocedure.specificatie"
+      },
+      "minItems": 1
+    },
+    "input": {
+      "type": "array",
+      "description": "Verwijzing naar de Input die de procedure vereist. Lijst van Input items.",
+      "items": {
+        "$ref": "#/components/schemas/Input"
+      },
+      "minItems": 1
+    },
+    "output": {
+      "type": "array",
+      "description": "Verwijzing naar de Output die de Procedure genereert. Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Willekeurig gegeven geassocieerd met de Observatieprocedure. Bijvoorbeeld een parameter die een aspect van de Observatieprocedure beschrijft (Bijvoorbeeld de vereiste hoogte voor het observeren van windsnelheid) of een noodzakelijke omgevingsparameter (Bijvoorbeeld temperatuurbereik waarbinnen een labo-analyse moet plaatsvinden). Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Aard van de Observatieprocedure. Lijst van Observatieproceduretype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieproceduretype"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "title": "Observatie",
+  "type": "object",
+  "description": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observatie)",
+      "pattern": "^Observatie$"
+    },
+    "fenomeentijd": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TemporeleEntiteit"
+        },
+        {
+          "$ref": "#/components/schemas/Moment"
+        },
+        {
+          "$ref": "#/components/schemas/Periode"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TemporeleEntiteit": "#/components/schemas/TemporeleEntiteit",
+          "Moment": "#/components/schemas/Moment",
+          "Periode": "#/components/schemas/Periode"
+        }
+      }
+    },
+    "geldigeTijd": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "identificator": {
+      "type": "array",
+      "description": "De persoon of het ding dat dient om de observatie vast te stellen. Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Willekeurig gegeven gassocieerd met het gebeuren van de Observatie. Het gaat hier niet om kenmerken van het geobserveerdObject (die worden al beschreven door het geobserveerdKenmerk) of om parameters geassocieerd met het observatieproces (zoals een instelling van een instrument). Het gaat hier Bijvoorbeeld om omgevingsparameters die het resultaat kunnen beïnvloeden en van belang zijn om het resultaat correct te interpreteren.  Een voorbeeld is de diepte in een waterput waarop de waterkwaliteit is gemeten of de omgevingstemperatuur bij het meten van de vochtigheidsgraad. Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "resultaatkwaliteit": {
+      "type": "array",
+      "description": "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen. Het gaat hier om gegevens die eigen zijn aan de Observatie en complementair aan de beschrijving van de procedure die bij de Observatie is gevolgd (analysemethode edm, zie klasse Proces) wat op zich ook al iets zegt over de kwaliteit van het resultaat. Lijst van Kwaliteitselement items.",
+      "items": {
+        "$ref": "#/components/schemas/Kwaliteitselement"
+      },
+      "minItems": 1
+    },
+    "resultaattijd": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "type": {
+      "type": "array",
+      "description": "Type observatie. Lijst van Observatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatietype"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Agent die de Observatie heeft uitgevoerd. Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "geobserveerdKenmerk": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Procedure gebruikt voor de Verkeersmeting. Lijst van Observatieprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieprocedure"
+      },
+      "minItems": 1
+    },
+    "geobserveerdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Object"
+        },
+        {
+          "$ref": "#/components/schemas/Verzameling"
+        },
+        {
+          "$ref": "#/components/schemas/Melding"
+        },
+        {
+          "$ref": "#/components/schemas/Vergunning"
+        },
+        {
+          "$ref": "#/components/schemas/Activiteit"
+        },
+        {
+          "$ref": "#/components/schemas/Gebeurtenis"
+        },
+        {
+          "$ref": "#/components/schemas/Meetpunt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Object": "#/components/schemas/Object",
+          "Verzameling": "#/components/schemas/Verzameling",
+          "Melding": "#/components/schemas/Melding",
+          "Vergunning": "#/components/schemas/Vergunning",
+          "Activiteit": "#/components/schemas/Activiteit",
+          "Gebeurtenis": "#/components/schemas/Gebeurtenis",
+          "Meetpunt": "#/components/schemas/Meetpunt"
+        }
+      }
+    },
+    "uitgevoerdMet": {
+      "$ref": "#/components/schemas/Sensor"
+    }
+  },
+  "required": [
+    "@type",
+    "fenomeentijd",
+    "resultaat",
+    "resultaattijd",
+    "geobserveerdKenmerk",
+    "geobserveerdObject",
+    "uitgevoerdMet"
+  ]
+}

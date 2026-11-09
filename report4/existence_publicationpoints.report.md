@@ -5,7 +5,6 @@
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/index.html'
 
 #||#    + checking /home/circleci/project/config/production/SSNSOSA.publication.json
 #||# 

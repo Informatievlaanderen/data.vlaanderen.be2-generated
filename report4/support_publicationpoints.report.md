@@ -288,6 +288,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
   "/tmp/generated/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1/SKOS",

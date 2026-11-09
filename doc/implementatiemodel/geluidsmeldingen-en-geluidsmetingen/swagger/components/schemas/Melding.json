@@ -1,0 +1,119 @@
+{
+  "title": "Melding",
+  "type": "object",
+  "description": "Beschrijft de melding van een probleem of een vaststelling die mogelijks aanleiding geeft tot een actie van de overheid.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Melding)",
+      "pattern": "^Melding$"
+    },
+    "samenvatting": {
+      "$ref": "#/components/schemas/Melding.samenvatting"
+    },
+    "titel": {
+      "$ref": "#/components/schemas/Melding.titel"
+    },
+    "webpagina": {
+      "$ref": "#/components/schemas/Melding.webpagina"
+    },
+    "heeftBody": {
+      "type": "array",
+      "description": "Het object van deze associatie is een resource die de body van de Melding beschrijft (MeldingBody). Lijst van MeldingBody items.",
+      "items": {
+        "$ref": "#/components/schemas/MeldingBody"
+      },
+      "minItems": 1
+    },
+    "heeftStatus": {
+      "type": "array",
+      "description": "De Status verbonden aan de Melding. Lijst van Meldingstatus items.",
+      "items": {
+        "$ref": "#/components/schemas/Meldingstatus"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "meldingstype": {
+      "type": "array",
+      "description": "De relatie tussen de Melding en het Meldingstype dat gebruikt worden om de melding te categoriseren. Er wordt verwacht dat het meldingstype gedefinieerd is in een codelijst. Het bepalen en ontlsuiten van deze codelijst kan applicatie-specifiek worden ingevuld. Lijst van Meldingstype items.",
+      "items": {
+        "$ref": "#/components/schemas/Meldingstype"
+      },
+      "minItems": 1
+    },
+    "behandelaar": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "indiener": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "heeftDoelwit": {
+      "type": "array",
+      "description": "De relatie tussen de Melding en het doelwit, het Meldingsobject waarop de melding slaat. Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Object"
+          },
+          {
+            "$ref": "#/components/schemas/Verzameling"
+          },
+          {
+            "$ref": "#/components/schemas/Melding"
+          },
+          {
+            "$ref": "#/components/schemas/Vergunning"
+          },
+          {
+            "$ref": "#/components/schemas/Activiteit"
+          },
+          {
+            "$ref": "#/components/schemas/Gebeurtenis"
+          },
+          {
+            "$ref": "#/components/schemas/Meetpunt"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Object": "#/components/schemas/Object",
+            "Verzameling": "#/components/schemas/Verzameling",
+            "Melding": "#/components/schemas/Melding",
+            "Vergunning": "#/components/schemas/Vergunning",
+            "Activiteit": "#/components/schemas/Activiteit",
+            "Gebeurtenis": "#/components/schemas/Gebeurtenis",
+            "Meetpunt": "#/components/schemas/Meetpunt"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Domeinobjecttype"
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Observaties die op het Object gebeuren. Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "titel",
+    "identificator",
+    "meldingstype",
+    "behandelaar",
+    "indiener"
+  ]
+}
