@@ -591,3 +591,9 @@ index.html check
 
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
+#||#    + checking /home/circleci/project/config/production/NDNN.publication.json
+#||# 
+Directory check
+
+index.html check
+

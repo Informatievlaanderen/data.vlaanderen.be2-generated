@@ -192,6 +192,8 @@
 #||#  
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
+#||#   + adding supporting /home/circleci/project/config/production/NDNN.publication.json
+#||#  
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/AirAndWater/Core/ontwerpstandaard/2021-10-01",
