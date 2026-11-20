@@ -1,0 +1,50 @@
+{
+  "title": "Transfer",
+  "type": "object",
+  "description": "Formal registration of a legal document in an official register.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Transfer)",
+      "pattern": "^Transfer$"
+    },
+    "date": {
+      "$ref": "#/components/schemas/Transfer.date"
+    },
+    "place": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "transferFrom": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Document"
+        },
+        {
+          "$ref": "#/components/schemas/LegalDecisionDocument"
+        },
+        {
+          "$ref": "#/components/schemas/File"
+        },
+        {
+          "$ref": "#/components/schemas/AdministrativeDecisionDocument"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Document": "#/components/schemas/Document",
+          "LegalDecisionDocument": "#/components/schemas/LegalDecisionDocument",
+          "File": "#/components/schemas/File",
+          "AdministrativeDecisionDocument": "#/components/schemas/AdministrativeDecisionDocument"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "PersonEnvelope",
+  "type": "object",
+  "description": "Envelope to exchange Person and associated validation alerts.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PersonEnvelope)",
+      "pattern": "^PersonEnvelope$"
+    },
+    "warning": {
+      "type": "array",
+      "description": "Error messages that occurred while delivering the data. Error messages can also occur with HTTP 200 where validation errors are reported such as MAGDA exceptions. Lijst van Exception items.",
+      "items": {
+        "$ref": "#/components/schemas/Exception"
+      },
+      "minItems": 1
+    },
+    "data": {
+      "$ref": "#/components/schemas/RegisteredPerson"
+    },
+    "@context": {
+      "type": "string",
+      "description": "URI of the JSON-LD versioned context file for this response.",
+      "pattern": "^https:\\/\\/data.test-vlaanderen.be\\/doc\\/implementatiemodel\\/magda\\/persoon\\/test-full\\/context\\/persoon.jsonld$"
+    }
+  },
+  "required": [
+    "@type",
+    "data"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "title": "FuneralContract",
+  "type": "object",
+  "description": "Contract concluded with a funeral company for the funeral of a Person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse FuneralContract)",
+      "pattern": "^FuneralContract$"
+    },
+    "enterprise": {
+      "$ref": "#/components/schemas/Organization"
+    },
+    "date": {
+      "$ref": "#/components/schemas/FuneralContract.date"
+    },
+    "place": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "ofAgent": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Agent"
+        },
+        {
+          "$ref": "#/components/schemas/Organization"
+        },
+        {
+          "$ref": "#/components/schemas/Person"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Agent": "#/components/schemas/Agent",
+          "Organization": "#/components/schemas/Organization",
+          "Person": "#/components/schemas/Person"
+        }
+      }
+    },
+    "withAgent": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Agent"
+        },
+        {
+          "$ref": "#/components/schemas/Organization"
+        },
+        {
+          "$ref": "#/components/schemas/Person"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Agent": "#/components/schemas/Agent",
+          "Organization": "#/components/schemas/Organization",
+          "Person": "#/components/schemas/Person"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

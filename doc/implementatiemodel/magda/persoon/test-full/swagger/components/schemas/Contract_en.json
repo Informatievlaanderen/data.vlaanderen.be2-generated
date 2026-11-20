@@ -1,0 +1,70 @@
+{
+  "title": "Contract",
+  "type": "object",
+  "description": "A voluntary, conscious agreement between legally competent parties in which the parties legally bind themselves and provide a valuable consideration.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Contract)",
+      "pattern": "^Contract$"
+    },
+    "date": {
+      "$ref": "#/components/schemas/Contract.date"
+    },
+    "place": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "ofAgent": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Agent"
+        },
+        {
+          "$ref": "#/components/schemas/Organization"
+        },
+        {
+          "$ref": "#/components/schemas/Person"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Agent": "#/components/schemas/Agent",
+          "Organization": "#/components/schemas/Organization",
+          "Person": "#/components/schemas/Person"
+        }
+      }
+    },
+    "withAgent": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Agent"
+        },
+        {
+          "$ref": "#/components/schemas/Organization"
+        },
+        {
+          "$ref": "#/components/schemas/Person"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Agent": "#/components/schemas/Agent",
+          "Organization": "#/components/schemas/Organization",
+          "Person": "#/components/schemas/Person"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "ResidencyStatus",
+  "type": "object",
+  "description": "Indicates the state of the Population.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ResidencyStatus)",
+      "pattern": "^ResidencyStatus$"
+    },
+    "validity": {
+      "$ref": "#/components/schemas/Period"
+    },
+    "type": {
+      "$ref": "#/components/schemas/ResidencyStatusType"
+    },
+    "decision": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Document"
+        },
+        {
+          "$ref": "#/components/schemas/LegalDecisionDocument"
+        },
+        {
+          "$ref": "#/components/schemas/File"
+        },
+        {
+          "$ref": "#/components/schemas/AdministrativeDecisionDocument"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Document": "#/components/schemas/Document",
+          "LegalDecisionDocument": "#/components/schemas/LegalDecisionDocument",
+          "File": "#/components/schemas/File",
+          "AdministrativeDecisionDocument": "#/components/schemas/AdministrativeDecisionDocument"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

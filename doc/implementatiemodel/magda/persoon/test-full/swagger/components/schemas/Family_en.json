@@ -1,0 +1,76 @@
+{
+  "title": "Family",
+  "type": "object",
+  "description": "A form of cooperation that forms a recognizable social unit (for example, as a result of marriage), with related or unrelated persons who have lasting bonds and provide mutual support and care.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Family)",
+      "pattern": "^Family$"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/Family.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/Family.endDate"
+    },
+    "familyAddress": {
+      "$ref": "#/components/schemas/AddressRepresentation"
+    },
+    "formOfLiving": {
+      "$ref": "#/components/schemas/TypeOfHousing"
+    },
+    "headOfHousehold": {
+      "type": "array",
+      "description": "The standard representative of the Family. Lijst van Person items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Person"
+          },
+          {
+            "$ref": "#/components/schemas/RegisteredPerson"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Person": "#/components/schemas/Person",
+            "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "familyMember": {
+      "type": "array",
+      "description": "People who make up the family. Lijst van Person items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Person"
+          },
+          {
+            "$ref": "#/components/schemas/RegisteredPerson"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Person": "#/components/schemas/Person",
+            "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "startDate"
+  ]
+}

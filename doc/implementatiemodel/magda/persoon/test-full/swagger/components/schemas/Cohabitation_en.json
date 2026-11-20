@@ -1,0 +1,80 @@
+{
+  "title": "Cohabitation",
+  "type": "object",
+  "description": "Arrangement in which two people who are not married live together.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Cohabitation)",
+      "pattern": "^Cohabitation$"
+    },
+    "date": {
+      "$ref": "#/components/schemas/Cohabitation.date"
+    },
+    "place": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "pronunciation": {
+      "$ref": "#/components/schemas/LegalDecisionDocument"
+    },
+    "explanation": {
+      "$ref": "#/components/schemas/Explanation"
+    },
+    "declarationTermination": {
+      "$ref": "#/components/schemas/Explanation"
+    },
+    "contract": {
+      "$ref": "#/components/schemas/CohabitationContract"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/Cohabitation.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/Cohabitation.endDate"
+    },
+    "ofPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "withPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "startDate",
+    "ofPerson",
+    "withPerson"
+  ]
+}

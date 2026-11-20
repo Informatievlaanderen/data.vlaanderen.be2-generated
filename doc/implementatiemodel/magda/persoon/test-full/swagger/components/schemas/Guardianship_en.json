@@ -1,0 +1,71 @@
+{
+  "title": "Guardianship",
+  "type": "object",
+  "description": "Legal protection and representation arrangement whereby a guardian is appointed to exercise authority over and the protection of a minor when they are not under the parental authority of their parents.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Guardianship)",
+      "pattern": "^Guardianship$"
+    },
+    "description": {
+      "$ref": "#/components/schemas/Guardianship.description"
+    },
+    "type": {
+      "$ref": "#/components/schemas/GuardianType"
+    },
+    "justification": {
+      "$ref": "#/components/schemas/TypeOfSummons"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/Guardianship.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/Guardianship.endDate"
+    },
+    "ofPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "withPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "startDate",
+    "ofPerson",
+    "withPerson"
+  ]
+}

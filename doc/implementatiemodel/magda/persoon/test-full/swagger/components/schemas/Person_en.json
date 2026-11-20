@@ -1,0 +1,241 @@
+{
+  "title": "Person",
+  "type": "object",
+  "description": "Natural person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Person)",
+      "pattern": "^Person$"
+    },
+    "firstName": {
+      "type": "array",
+      "description": "Name given to a Person at birth. Distinguishes the Person from other people in the family. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Person.firstName"
+      },
+      "minItems": 1
+    },
+    "usedFirstName": {
+      "$ref": "#/components/schemas/Person.usedFirstName"
+    },
+    "surname": {
+      "type": "array",
+      "description": "Part of the full name of the Person received from the previous generation. Also called a family name because the surname indicates a family relationship. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Person.surname"
+      },
+      "minItems": 1
+    },
+    "alternativeName": {
+      "type": "array",
+      "description": "Other name by which the Person is designated. Lijst van AlternativeName items.",
+      "items": {
+        "$ref": "#/components/schemas/AlternativeName"
+      },
+      "minItems": 1
+    },
+    "contactInfo": {
+      "$ref": "#/components/schemas/ContactInfo"
+    },
+    "gender": {
+      "type": "array",
+      "description": "Reference to the gender of the Person. Lijst van Gender items.",
+      "items": {
+        "$ref": "#/components/schemas/Gender"
+      },
+      "minItems": 1
+    },
+    "isHeadOf": {
+      "type": "array",
+      "description": "Person who by default represents the Family. Lijst van Family items.",
+      "items": {
+        "$ref": "#/components/schemas/Family"
+      },
+      "minItems": 1
+    },
+    "hasMaritalStatus": {
+      "type": "array",
+      "description": "Marital Status of the Person. Lijst van MaritalStatus items.",
+      "items": {
+        "$ref": "#/components/schemas/MaritalStatus"
+      },
+      "minItems": 1
+    },
+    "hasDeath": {
+      "type": "array",
+      "description": "Refers to the event of the Person's death. Often contains the death records of the Person. Lijst van Death items.",
+      "items": {
+        "$ref": "#/components/schemas/Death"
+      },
+      "minItems": 1
+    },
+    "hasNationality": {
+      "type": "array",
+      "description": "Nationality of the person. Lijst van Nationality items.",
+      "items": {
+        "$ref": "#/components/schemas/Nationality"
+      },
+      "minItems": 1
+    },
+    "hasResidency": {
+      "type": "array",
+      "description": "Person's residency. Lijst van Population items.",
+      "items": {
+        "$ref": "#/components/schemas/Population"
+      },
+      "minItems": 1
+    },
+    "hasPersonalRelationship": {
+      "type": "array",
+      "description": "Personal relationship of the person. Lijst van PersonalRelationship items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Ancestry"
+          },
+          {
+            "$ref": "#/components/schemas/Marriage"
+          },
+          {
+            "$ref": "#/components/schemas/Cohabitation"
+          },
+          {
+            "$ref": "#/components/schemas/HousingRelationship"
+          },
+          {
+            "$ref": "#/components/schemas/Guardianship"
+          },
+          {
+            "$ref": "#/components/schemas/Administration"
+          },
+          {
+            "$ref": "#/components/schemas/FamilyRelationship"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Ancestry": "#/components/schemas/Ancestry",
+            "Marriage": "#/components/schemas/Marriage",
+            "Cohabitation": "#/components/schemas/Cohabitation",
+            "HousingRelationship": "#/components/schemas/HousingRelationship",
+            "Guardianship": "#/components/schemas/Guardianship",
+            "Administration": "#/components/schemas/Administration",
+            "FamilyRelationship": "#/components/schemas/FamilyRelationship"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "isMemberOf": {
+      "type": "array",
+      "description": "Person who belongs to a Family. Lijst van Family items.",
+      "items": {
+        "$ref": "#/components/schemas/Family"
+      },
+      "minItems": 1
+    },
+    "legalStatus": {
+      "type": "array",
+      "description": "Legal status of the person. Lijst van LegalStatus items.",
+      "items": {
+        "$ref": "#/components/schemas/LegalStatus"
+      },
+      "minItems": 1
+    },
+    "hasNameChange": {
+      "type": "array",
+      "description": "Reference to a Name Change of the Person. Lijst van NameChange items.",
+      "items": {
+        "$ref": "#/components/schemas/NameChange"
+      },
+      "minItems": 1
+    },
+    "hasBirth": {
+      "type": "array",
+      "description": "Refers to the birth event of the Person. Often contains the birth data of the Person. Lijst van Birth items.",
+      "items": {
+        "$ref": "#/components/schemas/Birth"
+      },
+      "minItems": 1
+    },
+    "title": {
+      "type": "array",
+      "description": "Reference to the Title of a Person. Lijst van Title items.",
+      "items": {
+        "$ref": "#/components/schemas/Title"
+      },
+      "minItems": 1
+    },
+    "parents": {
+      "type": "array",
+      "description": "Reference to the Person's parents. Lijst van Parents items.",
+      "items": {
+        "$ref": "#/components/schemas/Parents"
+      },
+      "minItems": 1
+    },
+    "name": {
+      "type": "array",
+      "description": "Reference to the name of the Person. Lijst van Name items.",
+      "items": {
+        "$ref": "#/components/schemas/Name"
+      },
+      "minItems": 1
+    },
+    "hasGenderChange": {
+      "type": "array",
+      "description": "Refers to the Gender Change of a Person. Lijst van GenderChange items.",
+      "items": {
+        "$ref": "#/components/schemas/GenderChange"
+      },
+      "minItems": 1
+    },
+    "hasMoved": {
+      "type": "array",
+      "description": "Reference to the move a person has had. Lijst van Move items.",
+      "items": {
+        "$ref": "#/components/schemas/Move"
+      },
+      "minItems": 1
+    },
+    "hasOrigin": {
+      "type": "array",
+      "description": "Reference to the Origin of the Person. Lijst van Provenance items.",
+      "items": {
+        "$ref": "#/components/schemas/Provenance"
+      },
+      "minItems": 1
+    },
+    "hasExpressionOfWill": {
+      "type": "array",
+      "description": "Reference to the Expression of the Will of the Person. Lijst van Willpower items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Willpower"
+          },
+          {
+            "$ref": "#/components/schemas/FuneralProcedure"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Willpower": "#/components/schemas/Willpower",
+            "FuneralProcedure": "#/components/schemas/FuneralProcedure"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
