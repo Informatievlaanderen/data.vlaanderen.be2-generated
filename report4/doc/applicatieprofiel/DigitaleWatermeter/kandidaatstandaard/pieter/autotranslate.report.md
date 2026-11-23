@@ -2,6 +2,24 @@
 
 #||# -------------------------------------  
 
+#||#  update the translation file from the memory
+
+#||# 
+
+#||# command: node /app/translation-json-generator.js -i /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/all-digitale-watermeter.jsonld -t /tmp/workspace/autotranslation/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/digitale-watermeter_en.json -m nl -g en-t-nl -o /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/translation_input/digitale-watermeter_en.json -p '#||# '  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# create new translation file with existing translations included  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/translation_input/digitale-watermeter_en.json  
+
 #||# 
 
 #||#  autotranslate the translation file for language en
@@ -16,7 +34,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 98  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/autotranslation/digitale-watermeter_en.json  
 
@@ -26,59 +44,17 @@
 
 #||# 
 
-#||# command: node /app/autotranslateJ2.js -i mijn-applicatieprofiel-ap.j2 -o /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/autotranslation/mijn-applicatieprofiel-ap_en.j2 -s *** -m nl -g en -p '#||# '  
-
-start reading file mijn-applicatieprofiel-ap.j2
-
-#||#  start converting filename in extend blocks
-
-#||# ap2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/autotranslation/mijn-applicatieprofiel-ap_en.j2
-
 #||# 
 
 #||#  autotranslate the J2 templates for language en
 
 #||# 
 
-#||# command: node /app/autotranslateJ2.js -i mijn-implementatiemodel-im.j2 -o /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/autotranslation/mijn-implementatiemodel-im_en.j2 -s *** -m nl -g en -p '#||# '  
-
-start reading file mijn-implementatiemodel-im.j2
-
-#||#  start converting filename in extend blocks
-
-#||# impl
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/autotranslation/mijn-implementatiemodel-im_en.j2
-
 #||# 
 
 #||#  autotranslate the J2 templates for language en
 
 #||# 
-
-#||# command: node /app/autotranslateJ2.js -i mijn-vocabularium-voc.j2 -o /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/autotranslation/mijn-vocabularium-voc_en.j2 -s *** -m nl -g en -p '#||# '  
-
-start reading file mijn-vocabularium-voc.j2
-
-#||#  start converting filename in extend blocks
-
-#||# voc2
-
-#||#  filename does not contains language reference
-
-start translating blocks
-
-start writing file /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/autotranslation/mijn-vocabularium-voc_en.j2
 
 #||# command: node /app/report_lines_links.js -i /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/all-digitale-watermeter.jsonld -o /tmp/reportlines  
 

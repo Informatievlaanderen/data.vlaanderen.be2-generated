@@ -4,11 +4,17 @@
 
 #||# command: oslo-shacl-template-generator --input /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/merged/merged_digitale-watermeter_nl.jsonld --language nl --output /tmp/workspace/target/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/shacl/digitale-watermeter-SHACL_nl.jsonld --shapeBaseURI https://data.dev-vlaanderen.be/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter# --applicationProfileURL https://data.dev-vlaanderen.be/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter  
 
-Error: Unable to find a label for subject "[urn:oslo-toolchain:14be7390917d56b1a93d22b65ed237b78b22e6d3236bd5449cc72f5c8fa8186d](all-digitale-watermeter.jsonld#L9390)".
+2026-11-23T13:20:37.293Z warn: Unable to find the description for subject "[urn:oslo-toolchain:71d6270d5c646a007bd29025928b66478afd1ccd1222b0d3254db1ffe2cc6f0d](all-digitale-watermeter.jsonld#L4414)".
 
-    at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/oslo/packages/oslo-generator-shacl-template/lib/ShaclTemplateGenerationService.js:136:23)
+2026-11-23T13:20:37.318Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-digitale-watermeter.jsonld#L8438)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/oslo/packages/oslo-generator-shacl-template/lib/ShaclTemplateGenerationService.js:49:45)
+Error: Unable to find a label for the domain "urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c" of subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-digitale-watermeter.jsonld#L8438)".
+
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/oslo/packages/oslo-generator-shacl-template/lib/handlers/PropertyShapeBaseHandler.js:141:23)
+
+    at Pipeline.handle (/usr/local/lib/oslo/packages/oslo-generator-shacl-template/lib/types/Pipeline.js:21:28)
+
+    at ShaclTemplateGenerationService.run (/usr/local/lib/oslo/packages/oslo-generator-shacl-template/lib/ShaclTemplateGenerationService.js:89:51)
 
     at /usr/local/lib/oslo/packages/oslo-core/lib/interfaces/AppRunner.js:37:33
 
