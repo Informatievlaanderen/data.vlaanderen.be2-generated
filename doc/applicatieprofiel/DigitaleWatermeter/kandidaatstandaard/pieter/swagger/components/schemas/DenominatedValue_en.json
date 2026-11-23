@@ -1,0 +1,45 @@
+{
+  "title": "DenominatedValue",
+  "type": "object",
+  "description": "Generic, weakly typed value.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DenominatedValue)",
+      "pattern": "^DenominatedValue$"
+    },
+    "name": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/GenericName"
+        },
+        {
+          "$ref": "#/components/schemas/LocalName"
+        },
+        {
+          "$ref": "#/components/schemas/NameInNamespace"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "GenericName": "#/components/schemas/GenericName",
+          "LocalName": "#/components/schemas/LocalName",
+          "NameInNamespace": "#/components/schemas/NameInNamespace"
+        }
+      }
+    },
+    "value": {
+      "$ref": "#/components/schemas/Any"
+    }
+  },
+  "required": [
+    "@type",
+    "name",
+    "value"
+  ]
+}

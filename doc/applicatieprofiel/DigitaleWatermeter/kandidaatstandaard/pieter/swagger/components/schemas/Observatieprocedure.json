@@ -1,0 +1,109 @@
+{
+  "title": "Observatieprocedure",
+  "type": "object",
+  "description": "Een workflow, protocol, plan, algoritme of berekeningswijze waarin wordt gespecifieerd hoe een Observatie moet worden uitgevoerd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observatieprocedure)",
+      "pattern": "^Observatieprocedure$"
+    },
+    "input": {
+      "type": "array",
+      "description": "Verwijzing naar de Input die de procedure vereist. Lijst van Input items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Input"
+          },
+          {
+            "$ref": "#/components/schemas/MachineLearningInput"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Input": "#/components/schemas/Input",
+            "MachineLearningInput": "#/components/schemas/MachineLearningInput"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "output": {
+      "type": "array",
+      "description": "Verwijzing naar de Output die de Procedure genereert. Lijst van Output items.",
+      "items": {
+        "$ref": "#/components/schemas/Output"
+      },
+      "minItems": 1
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Willekeurig gegeven gassocieerd met de Observatieprocedure. Bijvoorbeeld een parameter die een aspect van de Observatieprocedure beschrijft (bijvoorbeeld de vereiste hoogte voor het observeren van windsnelheid) of een noodzakelijke omgevingsparameter (bijvoorbeeld temperatuurbereik waarbinnen een labo-analyse moet plaatsvinden). Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Aard van de Observatieprocedure. Lijst van Observatieproceduretype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieproceduretype"
+      },
+      "minItems": 1
+    },
+    "specificatie": {
+      "type": "array",
+      "description": "Verwijzing naar een document dat de Observatieprocedure beschrijft. Lijst van Concept items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Concept"
+          },
+          {
+            "$ref": "#/components/schemas/Eenheid"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Concept": "#/components/schemas/Concept",
+            "Eenheid": "#/components/schemas/Eenheid"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "geïMplementeerdMet": {
+      "type": "array",
+      "description": "Aard van de Observatieprocedure. Lijst van Sensor items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Sensor"
+          },
+          {
+            "$ref": "#/components/schemas/Meter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Sensor": "#/components/schemas/Sensor",
+            "Meter": "#/components/schemas/Meter"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

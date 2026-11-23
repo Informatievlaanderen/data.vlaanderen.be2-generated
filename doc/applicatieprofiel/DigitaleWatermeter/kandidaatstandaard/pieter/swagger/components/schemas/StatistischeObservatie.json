@@ -1,0 +1,186 @@
+{
+  "title": "StatistischeObservatie",
+  "type": "object",
+  "description": "Observatie waarvan het resultaat een Statistiek is.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse StatistischeObservatie)",
+      "pattern": "^StatistischeObservatie$"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Willekeurig gegeven gassocieerd met het gebeuren van de Observatie. Het gaat hier niet om kenmerken van het geobserveerdObject (die worden al beschreven door het geobserveerdKenmerk) of om parameters geassocieerd met het observatieproces (zoals een instelling van een instrument). Het gaat hier bijvoorbeeld om omgevingsparameters die het resultaat kunnen beïnvloeden en van belang zijn om het resultaat correct te interpreteren. Een voorbeeld is de diepte in een waterput waarop de waterkwaliteit is gemeten of de omgevingstemperatuur bij het meten van de vochtigheidsgraad. Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "fenomeentijd": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TemporeleEntiteit"
+        },
+        {
+          "$ref": "#/components/schemas/Moment"
+        },
+        {
+          "$ref": "#/components/schemas/Periode"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TemporeleEntiteit": "#/components/schemas/TemporeleEntiteit",
+          "Moment": "#/components/schemas/Moment",
+          "Periode": "#/components/schemas/Periode"
+        }
+      }
+    },
+    "resultaattijd": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "geldigeTijd": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "resultaatkwaliteit": {
+      "type": "array",
+      "description": "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen. Het gaat hier om gegevens die eigen zijn aan de Observatie en complementair aan de beschrijving van de procedure die bij de Observatie is gevolgd (analysemethode en dergelijkem, zie klasse Proces) wat op zich ook al iets zegt over de kwaliteit van het resultaat. Lijst van Kwaliteitselement items.",
+      "items": {
+        "$ref": "#/components/schemas/Kwaliteitselement"
+      },
+      "minItems": 1
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "type": {
+      "type": "array",
+      "description": "Het type van observatie. Lijst van Observatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatietype"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Agent die de Observatie heeft uitgevoerd. Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "De persoon of het ding dat dient om de observatie vast te stellen. Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "geassocieerdeObservatie": {
+      "type": "array",
+      "description": "Observaties waarvan de resultaten op een of andere manier samenhangen. Het gaat om samenhang die van belang is om het resultaat van individuele Observaties te begrijpen, bijvoorbeeld biotische relaties (dier A is roofdier en is aanwezig omdat dier B prooi voorkomt). Dergelijke relaties vereisen expliciet te worden beschreven (in tegenstelling tot relaties zoals het samenvallen van resultaten van Observaties in ruimte of tijd die impliciet mogen blijven). Ook nuttig voor relaties waarbij de output van Observatie A de input vormt voor Observatie B. Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/IndividueelVerbruikObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/GeaggregeerdVerbruikObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/MeterstaatObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/StatistischeObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/IndividueelVerbruikTijdreeksobservatie"
+          },
+          {
+            "$ref": "#/components/schemas/GeaggregeerdVerbruikTijdreeksobservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "IndividueelVerbruikObservatie": "#/components/schemas/IndividueelVerbruikObservatie",
+            "GeaggregeerdVerbruikObservatie": "#/components/schemas/GeaggregeerdVerbruikObservatie",
+            "MeterstaatObservatie": "#/components/schemas/MeterstaatObservatie",
+            "StatistischeObservatie": "#/components/schemas/StatistischeObservatie",
+            "IndividueelVerbruikTijdreeksobservatie": "#/components/schemas/IndividueelVerbruikTijdreeksobservatie",
+            "GeaggregeerdVerbruikTijdreeksobservatie": "#/components/schemas/GeaggregeerdVerbruikTijdreeksobservatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "fenomeen": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "uitgevoerdMetSensor": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Sensor"
+        },
+        {
+          "$ref": "#/components/schemas/Meter"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Sensor": "#/components/schemas/Sensor",
+          "Meter": "#/components/schemas/Meter"
+        }
+      }
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "De gebruikte procedure van de observatie. Lijst van Observatieprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieprocedure"
+      },
+      "minItems": 1
+    },
+    "geobserveerdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Domeinobject"
+        },
+        {
+          "$ref": "#/components/schemas/Plaats"
+        },
+        {
+          "$ref": "#/components/schemas/Aansluiting"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Domeinobject": "#/components/schemas/Domeinobject",
+          "Plaats": "#/components/schemas/Plaats",
+          "Aansluiting": "#/components/schemas/Aansluiting"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "fenomeentijd",
+    "resultaattijd",
+    "resultaat",
+    "fenomeen",
+    "uitgevoerdMetSensor",
+    "geobserveerdObject"
+  ]
+}

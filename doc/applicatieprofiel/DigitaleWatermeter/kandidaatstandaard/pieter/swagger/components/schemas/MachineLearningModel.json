@@ -1,0 +1,52 @@
+{
+  "title": "MachineLearningModel",
+  "type": "object",
+  "description": "Een set van parameters opgeslagen in een bestand, die getraind is om patronen te herkennen en een klasse of waarde te voorspellen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MachineLearningModel)",
+      "pattern": "^MachineLearningModel$"
+    },
+    "type": {
+      "type": "array",
+      "description": "De aard of genre van het model. Lijst van Concept items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Concept"
+          },
+          {
+            "$ref": "#/components/schemas/Eenheid"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Concept": "#/components/schemas/Concept",
+            "Eenheid": "#/components/schemas/Eenheid"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "fineTunedFrom": {
+      "$ref": "#/components/schemas/MachineLearningModel"
+    },
+    "hasVariation": {
+      "type": "array",
+      "description": "TODO. Lijst van MachineLearningModel items.",
+      "items": {
+        "$ref": "#/components/schemas/MachineLearningModel"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

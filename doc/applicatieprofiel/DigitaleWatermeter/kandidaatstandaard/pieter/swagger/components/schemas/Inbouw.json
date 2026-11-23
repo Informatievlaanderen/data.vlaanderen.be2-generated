@@ -1,0 +1,57 @@
+{
+  "title": "Inbouw",
+  "type": "object",
+  "description": "Het proces van het implementeren en configureren van een meter.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Inbouw)",
+      "pattern": "^Inbouw$"
+    },
+    "inbouwTijdstip": {
+      "$ref": "#/components/schemas/Inbouw.inbouwTijdstip"
+    },
+    "gedeployedDoor": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "inbouwSysteem": {
+      "type": "array",
+      "description": "Het Systeem dat gedeployed is. Lijst van Meter items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Meter"
+          },
+          {
+            "$ref": "#/components/schemas/Watermeter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Meter": "#/components/schemas/Meter",
+            "Watermeter": "#/components/schemas/Watermeter"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "deployedOp": {
+      "type": "array",
+      "description": "De Aansluiting waarop gedeployed is. Lijst van Aansluiting items.",
+      "items": {
+        "$ref": "#/components/schemas/Aansluiting"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "inbouwTijdstip",
+    "gedeployedDoor"
+  ]
+}

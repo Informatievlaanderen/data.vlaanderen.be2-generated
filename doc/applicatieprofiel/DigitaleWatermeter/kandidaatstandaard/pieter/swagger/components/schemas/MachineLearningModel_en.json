@@ -1,0 +1,64 @@
+{
+  "title": "MachineLearningModel",
+  "type": "object",
+  "description": "A set of parameters stored in a file, trained to recognize patterns and predict a class or value.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse MachineLearningModel)",
+      "pattern": "^MachineLearningModel$"
+    },
+    "version": {
+      "$ref": "#/components/schemas/MachineLearningModel.version"
+    },
+    "naam": {
+      "$ref": "#/components/schemas/MachineLearningModel.naam"
+    },
+    "creationDate": {
+      "$ref": "#/components/schemas/MachineLearningModel.creationDate"
+    },
+    "type": {
+      "type": "array",
+      "description": "The nature or genre of the model. Lijst van Concept items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Concept"
+          },
+          {
+            "$ref": "#/components/schemas/Unit"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Concept": "#/components/schemas/Concept",
+            "Unit": "#/components/schemas/Unit"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "fineTunedFrom": {
+      "$ref": "#/components/schemas/MachineLearningModel"
+    },
+    "hasVariation": {
+      "type": "array",
+      "description": "EVERYTHING. Lijst van MachineLearningModel items.",
+      "items": {
+        "$ref": "#/components/schemas/MachineLearningModel"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "version",
+    "naam",
+    "creationDate"
+  ]
+}

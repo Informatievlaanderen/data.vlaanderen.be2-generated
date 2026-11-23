@@ -1,0 +1,40 @@
+{
+  "title": "QuantitativeValue",
+  "type": "object",
+  "description": "Indication of the quantity of a specific attribute of an object.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse QuantitativeValue)",
+      "pattern": "^QuantitativeValue$"
+    },
+    "value": {
+      "$ref": "#/components/schemas/QuantitativeValue.value"
+    },
+    "unit": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Concept"
+        },
+        {
+          "$ref": "#/components/schemas/Unit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Concept": "#/components/schemas/Concept",
+          "Unit": "#/components/schemas/Unit"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "value"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "title": "Meter",
+  "type": "object",
+  "description": "Instrument intended to measure something.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Meter)",
+      "pattern": "^Meter$"
+    },
+    "manufacturer": {
+      "$ref": "#/components/schemas/Meter.manufacturer"
+    },
+    "model": {
+      "$ref": "#/components/schemas/Meter.model"
+    },
+    "hasFactoryNumber": {
+      "$ref": "#/components/schemas/Meter.hasFactoryNumber"
+    },
+    "hasFirmwareVersion": {
+      "$ref": "#/components/schemas/Meter.hasFirmwareVersion"
+    },
+    "hasHardwareVersion": {
+      "$ref": "#/components/schemas/Meter.hasHardwareVersion"
+    },
+    "hasVersion": {
+      "$ref": "#/components/schemas/Meter.hasVersion"
+    },
+    "workTopRadioFrequency": {
+      "$ref": "#/components/schemas/Meter.workTopRadioFrequency"
+    },
+    "requiredPower": {
+      "$ref": "#/components/schemas/Meter.requiredPower"
+    },
+    "identifier": {
+      "type": "array",
+      "description": "Meter identifier. For example, a unique serial number of the digital water meter. Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1
+    },
+    "consumptionAddress": {
+      "$ref": "#/components/schemas/AddressRepresentation"
+    },
+    "type": {
+      "type": "array",
+      "description": "Device or Agent (including Persons or software) used to make Observations. Lijst van SystemType items.",
+      "items": {
+        "$ref": "#/components/schemas/SystemType"
+      },
+      "minItems": 1
+    },
+    "implements": {
+      "$ref": "#/components/schemas/ObservationProcedure"
+    },
+    "performedObservation": {
+      "type": "array",
+      "description": "Observation performed with the Sensor. Lijst van Observation items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observation"
+          },
+          {
+            "$ref": "#/components/schemas/IndividualConsumptionObservation"
+          },
+          {
+            "$ref": "#/components/schemas/AggregatedConsumptionObservation"
+          },
+          {
+            "$ref": "#/components/schemas/MeterReadingObservation"
+          },
+          {
+            "$ref": "#/components/schemas/IndividualConsumptionTimeSeriesObservation"
+          },
+          {
+            "$ref": "#/components/schemas/AggregatedConsumptionTimeSeriesObservation"
+          },
+          {
+            "$ref": "#/components/schemas/StatisticalObservation"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observation": "#/components/schemas/Observation",
+            "IndividualConsumptionObservation": "#/components/schemas/IndividualConsumptionObservation",
+            "AggregatedConsumptionObservation": "#/components/schemas/AggregatedConsumptionObservation",
+            "MeterReadingObservation": "#/components/schemas/MeterReadingObservation",
+            "IndividualConsumptionTimeSeriesObservation": "#/components/schemas/IndividualConsumptionTimeSeriesObservation",
+            "AggregatedConsumptionTimeSeriesObservation": "#/components/schemas/AggregatedConsumptionTimeSeriesObservation",
+            "StatisticalObservation": "#/components/schemas/StatisticalObservation"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "observes": {
+      "type": "array",
+      "description": "Attribute observed by the Sensor. Lijst van FeatureType items.",
+      "items": {
+        "$ref": "#/components/schemas/FeatureType"
+      },
+      "minItems": 1
+    },
+    "function": {
+      "type": "array",
+      "description": "Tangible Object designed to perform a specific task. Lijst van Function items.",
+      "items": {
+        "$ref": "#/components/schemas/Function"
+      },
+      "minItems": 1
+    },
+    "task": {
+      "type": "array",
+      "description": "Function that the Device can perform for the purpose of performing a task. Lijst van Task items.",
+      "items": {
+        "$ref": "#/components/schemas/Task"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "hasFactoryNumber",
+    "hasFirmwareVersion",
+    "hasHardwareVersion",
+    "hasVersion",
+    "workTopRadioFrequency",
+    "requiredPower",
+    "identifier",
+    "consumptionAddress",
+    "implements",
+    "observes",
+    "function",
+    "task"
+  ]
+}

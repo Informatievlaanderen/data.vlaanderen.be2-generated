@@ -1,0 +1,186 @@
+{
+  "title": "AggregatedConsumptionTimeSeriesObservation",
+  "type": "object",
+  "description": "Water consumption at different times or periods, aggregated over a specific predefined region or group of water meters.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AggregatedConsumptionTimeSeriesObservation)",
+      "pattern": "^AggregatedConsumptionTimeSeriesObservation$"
+    },
+    "observedObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/DomainObject"
+        },
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/Connection"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "DomainObject": "#/components/schemas/DomainObject",
+          "Location": "#/components/schemas/Location",
+          "Connection": "#/components/schemas/Connection"
+        }
+      }
+    },
+    "result": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Random data associated with the occurrence of the Observation. This is not about characteristics of the observed object (which are already described by the observed attribute) or parameters associated with the observation process (such as an instrument setting). For example, it concerns environmental parameters that can influence the result and are important for interpreting the result correctly. An example is the depth in a water well where water quality was measured or the ambient temperature when measuring humidity. Lijst van DenominatedValue items.",
+      "items": {
+        "$ref": "#/components/schemas/DenominatedValue"
+      },
+      "minItems": 1
+    },
+    "phenomenonTime": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TemporalEntity"
+        },
+        {
+          "$ref": "#/components/schemas/Moment"
+        },
+        {
+          "$ref": "#/components/schemas/Period"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TemporalEntity": "#/components/schemas/TemporalEntity",
+          "Moment": "#/components/schemas/Moment",
+          "Period": "#/components/schemas/Period"
+        }
+      }
+    },
+    "resultTime": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "validTime": {
+      "$ref": "#/components/schemas/Period"
+    },
+    "resultQuality": {
+      "type": "array",
+      "description": "Extent to which the result of the Observation meets the requirements or expectations. These are data that are specific to the Observation and complementary to the description of the procedure followed during the Observation (analysis method and the like, see class Process), which in itself says something about the quality of the result. Lijst van QualityElement items.",
+      "items": {
+        "$ref": "#/components/schemas/QualityElement"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "The type of observation. Lijst van ObservationType items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservationType"
+      },
+      "minItems": 1
+    },
+    "executedBy": {
+      "type": "array",
+      "description": "Agent who performed the Observation. Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "identifier": {
+      "type": "array",
+      "description": "The person or thing that serves to establish the observation. Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1
+    },
+    "associateObservation": {
+      "type": "array",
+      "description": "Observations whose results are somehow related. It concerns coherence that is important to understand the outcome of individual Observations, for example biotic relationships (animal A is a predator and is present because animal B is prey). Such relationships require to be explicitly described (as opposed to relationships such as the coincidence of Observation results in space or time, which may remain implicit). Also useful for relationships where the output of Observation A forms the input for Observation B. Lijst van Observation items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observation"
+          },
+          {
+            "$ref": "#/components/schemas/IndividualConsumptionObservation"
+          },
+          {
+            "$ref": "#/components/schemas/AggregatedConsumptionObservation"
+          },
+          {
+            "$ref": "#/components/schemas/MeterReadingObservation"
+          },
+          {
+            "$ref": "#/components/schemas/IndividualConsumptionTimeSeriesObservation"
+          },
+          {
+            "$ref": "#/components/schemas/AggregatedConsumptionTimeSeriesObservation"
+          },
+          {
+            "$ref": "#/components/schemas/StatisticalObservation"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observation": "#/components/schemas/Observation",
+            "IndividualConsumptionObservation": "#/components/schemas/IndividualConsumptionObservation",
+            "AggregatedConsumptionObservation": "#/components/schemas/AggregatedConsumptionObservation",
+            "MeterReadingObservation": "#/components/schemas/MeterReadingObservation",
+            "IndividualConsumptionTimeSeriesObservation": "#/components/schemas/IndividualConsumptionTimeSeriesObservation",
+            "AggregatedConsumptionTimeSeriesObservation": "#/components/schemas/AggregatedConsumptionTimeSeriesObservation",
+            "StatisticalObservation": "#/components/schemas/StatisticalObservation"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "phenomenon": {
+      "$ref": "#/components/schemas/FeatureType"
+    },
+    "executedWithSensor": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Sensor"
+        },
+        {
+          "$ref": "#/components/schemas/Meter"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Sensor": "#/components/schemas/Sensor",
+          "Meter": "#/components/schemas/Meter"
+        }
+      }
+    },
+    "procedureUsed": {
+      "type": "array",
+      "description": "The observation procedure used. Lijst van ObservationProcedure items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservationProcedure"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "observedObject",
+    "result",
+    "phenomenonTime",
+    "resultTime",
+    "phenomenon",
+    "executedWithSensor"
+  ]
+}

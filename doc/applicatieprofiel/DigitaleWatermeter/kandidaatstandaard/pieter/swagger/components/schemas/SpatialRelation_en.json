@@ -1,0 +1,75 @@
+{
+  "title": "SpatialRelation",
+  "type": "object",
+  "description": "Mutual relationship between two Places.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse SpatialRelation)",
+      "pattern": "^SpatialRelation$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/SpatialRelationshipType"
+    },
+    "plaats(Source)": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/MeterZone"
+        },
+        {
+          "$ref": "#/components/schemas/SupplyArea"
+        },
+        {
+          "$ref": "#/components/schemas/ConsumptionZone"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Location": "#/components/schemas/Location",
+          "MeterZone": "#/components/schemas/MeterZone",
+          "SupplyArea": "#/components/schemas/SupplyArea",
+          "ConsumptionZone": "#/components/schemas/ConsumptionZone"
+        }
+      }
+    },
+    "plaats(Target)": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "$ref": "#/components/schemas/MeterZone"
+        },
+        {
+          "$ref": "#/components/schemas/SupplyArea"
+        },
+        {
+          "$ref": "#/components/schemas/ConsumptionZone"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Location": "#/components/schemas/Location",
+          "MeterZone": "#/components/schemas/MeterZone",
+          "SupplyArea": "#/components/schemas/SupplyArea",
+          "ConsumptionZone": "#/components/schemas/ConsumptionZone"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "plaats(Source)",
+    "plaats(Target)"
+  ]
+}

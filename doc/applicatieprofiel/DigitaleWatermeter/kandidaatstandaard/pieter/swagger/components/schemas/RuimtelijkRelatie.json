@@ -1,0 +1,75 @@
+{
+  "title": "RuimtelijkRelatie",
+  "type": "object",
+  "description": "Onderling verband tussen twee Plaatsen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RuimtelijkRelatie)",
+      "pattern": "^RuimtelijkRelatie$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/RuimtelijkeRelatieType"
+    },
+    "plaats(Source)": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Plaats"
+        },
+        {
+          "$ref": "#/components/schemas/Verbruikszone"
+        },
+        {
+          "$ref": "#/components/schemas/Bevoorradingsgebied"
+        },
+        {
+          "$ref": "#/components/schemas/Meterzone"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Plaats": "#/components/schemas/Plaats",
+          "Verbruikszone": "#/components/schemas/Verbruikszone",
+          "Bevoorradingsgebied": "#/components/schemas/Bevoorradingsgebied",
+          "Meterzone": "#/components/schemas/Meterzone"
+        }
+      }
+    },
+    "plaats(Target)": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Plaats"
+        },
+        {
+          "$ref": "#/components/schemas/Verbruikszone"
+        },
+        {
+          "$ref": "#/components/schemas/Bevoorradingsgebied"
+        },
+        {
+          "$ref": "#/components/schemas/Meterzone"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Plaats": "#/components/schemas/Plaats",
+          "Verbruikszone": "#/components/schemas/Verbruikszone",
+          "Bevoorradingsgebied": "#/components/schemas/Bevoorradingsgebied",
+          "Meterzone": "#/components/schemas/Meterzone"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "type",
+    "plaats(Source)",
+    "plaats(Target)"
+  ]
+}

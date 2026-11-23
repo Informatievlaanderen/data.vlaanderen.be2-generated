@@ -1,0 +1,41 @@
+{
+  "title": "Kenmerktype",
+  "type": "object",
+  "description": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Kenmerktype)",
+      "pattern": "^Kenmerktype$"
+    },
+    "isGeobserveerdMet": {
+      "type": "array",
+      "description": "Het kenmerktype van de gebruikte sensor tijdens de observatie. Lijst van Sensor items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Sensor"
+          },
+          {
+            "$ref": "#/components/schemas/Meter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Sensor": "#/components/schemas/Sensor",
+            "Meter": "#/components/schemas/Meter"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

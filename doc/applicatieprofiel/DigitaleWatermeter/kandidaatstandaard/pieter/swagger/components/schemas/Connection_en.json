@@ -1,0 +1,51 @@
+{
+  "title": "Connection",
+  "type": "object",
+  "description": "Object describing the connection of a cable or pipe to a building or other physical object.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Connection)",
+      "pattern": "^Connection$"
+    },
+    "geometry": {
+      "$ref": "#/components/schemas/Pound"
+    },
+    "address": {
+      "$ref": "#/components/schemas/AddressRepresentation"
+    },
+    "appurtenanceType": {
+      "$ref": "#/components/schemas/AppurtenanceTypeValue"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "deliveryPoint": {
+      "$ref": "#/components/schemas/DeliveryPointType"
+    },
+    "subconnection": {
+      "type": "array",
+      "description": "Connection that branches off from this connection. Lijst van Connection items.",
+      "items": {
+        "$ref": "#/components/schemas/Connection"
+      },
+      "minItems": 1
+    },
+    "mainConnection": {
+      "$ref": "#/components/schemas/Connection"
+    },
+    "type": {
+      "$ref": "#/components/schemas/PlatformType"
+    }
+  },
+  "required": [
+    "@type",
+    "geometry",
+    "appurtenanceType",
+    "type"
+  ]
+}

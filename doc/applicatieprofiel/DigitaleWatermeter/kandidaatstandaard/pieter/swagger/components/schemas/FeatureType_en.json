@@ -1,0 +1,41 @@
+{
+  "title": "FeatureType",
+  "type": "object",
+  "description": "Class representing characteristics of instances of any type.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse FeatureType)",
+      "pattern": "^FeatureType$"
+    },
+    "isObservedWith": {
+      "type": "array",
+      "description": "The characteristic type of the sensor used during observation. Lijst van Sensor items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Sensor"
+          },
+          {
+            "$ref": "#/components/schemas/Meter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Sensor": "#/components/schemas/Sensor",
+            "Meter": "#/components/schemas/Meter"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

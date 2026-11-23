@@ -1,0 +1,82 @@
+{
+  "title": "Sensor",
+  "type": "object",
+  "description": "Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sensor)",
+      "pattern": "^Sensor$"
+    },
+    "type": {
+      "type": "array",
+      "description": "Toestel of Agent (inclusief Personen of software) waarmee Observaties gemaakt worden. Lijst van Systeemtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Systeemtype"
+      },
+      "minItems": 1
+    },
+    "implementeert": {
+      "$ref": "#/components/schemas/Observatieprocedure"
+    },
+    "uitgevoerdeObservatie": {
+      "type": "array",
+      "description": "Observatie die met de Sensor is uitrgevoerd. Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/IndividueelVerbruikObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/GeaggregeerdVerbruikObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/MeterstaatObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/StatistischeObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/IndividueelVerbruikTijdreeksobservatie"
+          },
+          {
+            "$ref": "#/components/schemas/GeaggregeerdVerbruikTijdreeksobservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "IndividueelVerbruikObservatie": "#/components/schemas/IndividueelVerbruikObservatie",
+            "GeaggregeerdVerbruikObservatie": "#/components/schemas/GeaggregeerdVerbruikObservatie",
+            "MeterstaatObservatie": "#/components/schemas/MeterstaatObservatie",
+            "StatistischeObservatie": "#/components/schemas/StatistischeObservatie",
+            "IndividueelVerbruikTijdreeksobservatie": "#/components/schemas/IndividueelVerbruikTijdreeksobservatie",
+            "GeaggregeerdVerbruikTijdreeksobservatie": "#/components/schemas/GeaggregeerdVerbruikTijdreeksobservatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "observeert": {
+      "type": "array",
+      "description": "Kenmerk dat door de Sensor wordt geobserveerd. Lijst van Kenmerktype items.",
+      "items": {
+        "$ref": "#/components/schemas/Kenmerktype"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implementeert",
+    "observeert"
+  ]
+}

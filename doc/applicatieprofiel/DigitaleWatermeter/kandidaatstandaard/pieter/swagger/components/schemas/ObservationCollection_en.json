@@ -1,0 +1,129 @@
+{
+  "title": "ObservationCollection",
+  "type": "object",
+  "description": "Collection of Observations with the same characteristics.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ObservationCollection)",
+      "pattern": "^ObservationCollection$"
+    },
+    "observedObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Object"
+        },
+        {
+          "$ref": "#/components/schemas/DomainObject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Object": "#/components/schemas/Object",
+          "DomainObject": "#/components/schemas/DomainObject"
+        }
+      }
+    },
+    "executedWithSensor": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Sensor"
+        },
+        {
+          "$ref": "#/components/schemas/Meter"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Sensor": "#/components/schemas/Sensor",
+          "Meter": "#/components/schemas/Meter"
+        }
+      }
+    },
+    "observedAttribute": {
+      "$ref": "#/components/schemas/FeatureType"
+    },
+    "phenomenonTime": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TemporalEntity"
+        },
+        {
+          "$ref": "#/components/schemas/Moment"
+        },
+        {
+          "$ref": "#/components/schemas/Period"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TemporalEntity": "#/components/schemas/TemporalEntity",
+          "Moment": "#/components/schemas/Moment",
+          "Period": "#/components/schemas/Period"
+        }
+      }
+    },
+    "resultTime": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "procedureUsed": {
+      "$ref": "#/components/schemas/ObservationProcedure"
+    },
+    "parameter": {
+      "$ref": "#/components/schemas/DenominatedValue"
+    },
+    "hasMember": {
+      "type": "array",
+      "description": "Observation that is part of the collection. Lijst van Observation items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observation"
+          },
+          {
+            "$ref": "#/components/schemas/IndividualConsumptionObservation"
+          },
+          {
+            "$ref": "#/components/schemas/AggregatedConsumptionObservation"
+          },
+          {
+            "$ref": "#/components/schemas/MeterReadingObservation"
+          },
+          {
+            "$ref": "#/components/schemas/IndividualConsumptionTimeSeriesObservation"
+          },
+          {
+            "$ref": "#/components/schemas/AggregatedConsumptionTimeSeriesObservation"
+          },
+          {
+            "$ref": "#/components/schemas/StatisticalObservation"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observation": "#/components/schemas/Observation",
+            "IndividualConsumptionObservation": "#/components/schemas/IndividualConsumptionObservation",
+            "AggregatedConsumptionObservation": "#/components/schemas/AggregatedConsumptionObservation",
+            "MeterReadingObservation": "#/components/schemas/MeterReadingObservation",
+            "IndividualConsumptionTimeSeriesObservation": "#/components/schemas/IndividualConsumptionTimeSeriesObservation",
+            "AggregatedConsumptionTimeSeriesObservation": "#/components/schemas/AggregatedConsumptionTimeSeriesObservation",
+            "StatisticalObservation": "#/components/schemas/StatisticalObservation"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "hasMember"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "BenoemdeWaarde",
+  "type": "object",
+  "description": "Generieke, zwak getypeerde waarde.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BenoemdeWaarde)",
+      "pattern": "^BenoemdeWaarde$"
+    },
+    "naam": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/GeneriekeNaam"
+        },
+        {
+          "$ref": "#/components/schemas/LokaleNaam"
+        },
+        {
+          "$ref": "#/components/schemas/NaamInNaamruimte"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "GeneriekeNaam": "#/components/schemas/GeneriekeNaam",
+          "LokaleNaam": "#/components/schemas/LokaleNaam",
+          "NaamInNaamruimte": "#/components/schemas/NaamInNaamruimte"
+        }
+      }
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/Any"
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "waarde"
+  ]
+}

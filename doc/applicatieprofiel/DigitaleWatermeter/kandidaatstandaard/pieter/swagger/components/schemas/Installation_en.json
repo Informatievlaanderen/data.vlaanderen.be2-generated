@@ -1,0 +1,57 @@
+{
+  "title": "Installation",
+  "type": "object",
+  "description": "The process of implementing and configuring a meter.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Installation)",
+      "pattern": "^Installation$"
+    },
+    "installationTime": {
+      "$ref": "#/components/schemas/Installation.installationTime"
+    },
+    "deployedBy": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "built-InSystem": {
+      "type": "array",
+      "description": "The System that is deployed. Lijst van Meter items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Meter"
+          },
+          {
+            "$ref": "#/components/schemas/WaterMeter"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Meter": "#/components/schemas/Meter",
+            "WaterMeter": "#/components/schemas/WaterMeter"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "deployedOp": {
+      "type": "array",
+      "description": "The connection on which it is deployed. Lijst van Connection items.",
+      "items": {
+        "$ref": "#/components/schemas/Connection"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "installationTime",
+    "deployedBy"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "title": "Sensor",
+  "type": "object",
+  "description": "Sensor with which the Observation procedure is or must be performed.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sensor)",
+      "pattern": "^Sensor$"
+    },
+    "type": {
+      "type": "array",
+      "description": "Device or Agent (including Persons or software) used to make Observations. Lijst van SystemType items.",
+      "items": {
+        "$ref": "#/components/schemas/SystemType"
+      },
+      "minItems": 1
+    },
+    "implements": {
+      "$ref": "#/components/schemas/ObservationProcedure"
+    },
+    "performedObservation": {
+      "type": "array",
+      "description": "Observation performed with the Sensor. Lijst van Observation items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observation"
+          },
+          {
+            "$ref": "#/components/schemas/IndividualConsumptionObservation"
+          },
+          {
+            "$ref": "#/components/schemas/AggregatedConsumptionObservation"
+          },
+          {
+            "$ref": "#/components/schemas/MeterReadingObservation"
+          },
+          {
+            "$ref": "#/components/schemas/IndividualConsumptionTimeSeriesObservation"
+          },
+          {
+            "$ref": "#/components/schemas/AggregatedConsumptionTimeSeriesObservation"
+          },
+          {
+            "$ref": "#/components/schemas/StatisticalObservation"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observation": "#/components/schemas/Observation",
+            "IndividualConsumptionObservation": "#/components/schemas/IndividualConsumptionObservation",
+            "AggregatedConsumptionObservation": "#/components/schemas/AggregatedConsumptionObservation",
+            "MeterReadingObservation": "#/components/schemas/MeterReadingObservation",
+            "IndividualConsumptionTimeSeriesObservation": "#/components/schemas/IndividualConsumptionTimeSeriesObservation",
+            "AggregatedConsumptionTimeSeriesObservation": "#/components/schemas/AggregatedConsumptionTimeSeriesObservation",
+            "StatisticalObservation": "#/components/schemas/StatisticalObservation"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "observes": {
+      "type": "array",
+      "description": "Attribute observed by the Sensor. Lijst van FeatureType items.",
+      "items": {
+        "$ref": "#/components/schemas/FeatureType"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implements",
+    "observes"
+  ]
+}

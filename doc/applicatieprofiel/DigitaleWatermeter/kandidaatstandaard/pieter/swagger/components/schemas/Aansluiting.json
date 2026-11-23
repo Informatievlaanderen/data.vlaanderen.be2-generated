@@ -1,0 +1,51 @@
+{
+  "title": "Aansluiting",
+  "type": "object",
+  "description": "Object dat de aansluiting van een kabel of leiding aan een gebouw of een ander fysiek object beschrijft.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Aansluiting)",
+      "pattern": "^Aansluiting$"
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Punt"
+    },
+    "adres": {
+      "$ref": "#/components/schemas/Adresvoorstelling"
+    },
+    "toebehorentype": {
+      "$ref": "#/components/schemas/Toebehorentype"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "afleverpunt": {
+      "$ref": "#/components/schemas/Afleverpunttype"
+    },
+    "subaansluiting": {
+      "type": "array",
+      "description": "Aansluiting die afgetakt is van deze aansluiting. Lijst van Aansluiting items.",
+      "items": {
+        "$ref": "#/components/schemas/Aansluiting"
+      },
+      "minItems": 1
+    },
+    "hoofdaansluiting": {
+      "$ref": "#/components/schemas/Aansluiting"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Platformtype"
+    }
+  },
+  "required": [
+    "@type",
+    "geometrie",
+    "toebehorentype",
+    "type"
+  ]
+}
