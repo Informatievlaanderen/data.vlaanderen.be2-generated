@@ -34,7 +34,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 0  
+#||# Number of calls: 97  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/pieter/autotranslation/digitale-watermeter_en.json  
 
