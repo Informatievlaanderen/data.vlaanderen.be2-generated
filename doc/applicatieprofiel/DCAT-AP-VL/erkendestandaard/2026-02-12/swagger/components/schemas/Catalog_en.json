@@ -1,0 +1,86 @@
+{
+  "title": "Catalog",
+  "type": "object",
+  "description": "A managed collection of metadata about resources (such as datasets and data services in the context of a data catalog).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Catalog)",
+      "pattern": "^Catalog$"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Catalog.identifier"
+    },
+    "title": {
+      "type": "array",
+      "description": "The name of the catalog. Due to multilingualism, there can be multiple values. The desired interpretation of cardinality is: only one value per language. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Catalog.title"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "description": {
+      "type": "array",
+      "description": "A concise textual description of the catalogue. Due to multilingualism, there can be multiple values. The desired interpretation of cardinality is: only one value per language. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Catalog.description"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "contactInformation": {
+      "$ref": "#/components/schemas/ContactInfo"
+    },
+    "license": {
+      "$ref": "#/components/schemas/LicenseDocument"
+    },
+    "alternativeIdentifier": {
+      "type": "array",
+      "description": "An alternative identifier (other than the unique identifier) for the catalog can be described here. Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "record": {
+      "type": "array",
+      "description": "A record describes the registration of a single dataset or data service that is part of the catalog. Lijst van CatalogRecord items.",
+      "items": {
+        "$ref": "#/components/schemas/CatalogRecord"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "hasDataset": {
+      "type": "array",
+      "description": "A dataset that is part of the catalog. Lijst van Dataset items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataset"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "hasDataService": {
+      "type": "array",
+      "description": "A data service that is part of the catalog. Lijst van DataService items.",
+      "items": {
+        "$ref": "#/components/schemas/DataService"
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type",
+    "identifier",
+    "title",
+    "description",
+    "contactInformation"
+  ]
+}

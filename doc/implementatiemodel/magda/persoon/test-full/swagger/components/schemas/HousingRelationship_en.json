@@ -1,0 +1,68 @@
+{
+  "title": "HousingRelationship",
+  "type": "object",
+  "description": "Personal relationship in which one Person provides accommodation to the other Person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse HousingRelationship)",
+      "pattern": "^HousingRelationship$"
+    },
+    "date": {
+      "$ref": "#/components/schemas/HousingRelationship.date"
+    },
+    "role": {
+      "$ref": "#/components/schemas/RoleType"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/HousingRelationship.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/HousingRelationship.endDate"
+    },
+    "ofPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "withPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "startDate",
+    "ofPerson",
+    "withPerson"
+  ]
+}

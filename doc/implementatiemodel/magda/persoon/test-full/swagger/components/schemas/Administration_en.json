@@ -1,0 +1,71 @@
+{
+  "title": "Administration",
+  "type": "object",
+  "description": "Guardianship is a legal protection and representation arrangement whereby a guardian is appointed to assist or represent an adult in managing their personal and/or property interests when that person is wholly or partially unable to do so.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Administration)",
+      "pattern": "^Administration$"
+    },
+    "description": {
+      "$ref": "#/components/schemas/Administration.description"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TypeOfAdministrator"
+    },
+    "justification": {
+      "$ref": "#/components/schemas/TypeOfSummons"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/Administration.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/Administration.endDate"
+    },
+    "ofPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "withPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "startDate",
+    "ofPerson",
+    "withPerson"
+  ]
+}

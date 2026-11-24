@@ -1,0 +1,67 @@
+{
+  "title": "RelationshipQualification",
+  "type": "object",
+  "description": "An association class for additional information about relationships between Catalog Resources.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RelationshipQualification)",
+      "pattern": "^RelationshipQualification$"
+    },
+    "role": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "sourceResource": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/ResourceCatalog"
+        },
+        {
+          "$ref": "#/components/schemas/Dataset"
+        },
+        {
+          "$ref": "#/components/schemas/DataService"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "ResourceCatalog": "#/components/schemas/ResourceCatalog",
+          "Dataset": "#/components/schemas/Dataset",
+          "DataService": "#/components/schemas/DataService"
+        }
+      }
+    },
+    "targetResource": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/ResourceCatalog"
+        },
+        {
+          "$ref": "#/components/schemas/Dataset"
+        },
+        {
+          "$ref": "#/components/schemas/DataService"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "ResourceCatalog": "#/components/schemas/ResourceCatalog",
+          "Dataset": "#/components/schemas/Dataset",
+          "DataService": "#/components/schemas/DataService"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "role",
+    "sourceResource",
+    "targetResource"
+  ]
+}

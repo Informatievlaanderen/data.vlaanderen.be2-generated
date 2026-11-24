@@ -1,0 +1,68 @@
+{
+  "title": "DescentDescendingLine",
+  "type": "object",
+  "description": "Legal bond between a child and their parent from the parent's perspective.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DescentDescendingLine)",
+      "pattern": "^DescentDescendingLine$"
+    },
+    "typeOfDescent": {
+      "$ref": "#/components/schemas/TypeOfDescent"
+    },
+    "dateFromDescent": {
+      "$ref": "#/components/schemas/DescentDescendingLine.dateFromDescent"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/DescentDescendingLine.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/DescentDescendingLine.endDate"
+    },
+    "ofPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "withPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "startDate",
+    "ofPerson",
+    "withPerson"
+  ]
+}

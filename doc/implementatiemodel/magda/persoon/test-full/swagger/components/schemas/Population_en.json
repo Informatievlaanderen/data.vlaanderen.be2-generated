@@ -1,0 +1,90 @@
+{
+  "title": "Population",
+  "type": "object",
+  "description": "The fact that a Person resides in a place or country.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Population)",
+      "pattern": "^Population$"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/Population.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/Population.endDate"
+    },
+    "person": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "jurisdiction": {
+      "$ref": "#/components/schemas/Jurisdiction"
+    },
+    "hasResidence": {
+      "type": "array",
+      "description": "Place where a person is staying. Lijst van Residence items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Absent"
+          },
+          {
+            "$ref": "#/components/schemas/Domicile"
+          },
+          {
+            "$ref": "#/components/schemas/PostalAddress"
+          },
+          {
+            "$ref": "#/components/schemas/PlaceOfResidenceAbroad"
+          },
+          {
+            "$ref": "#/components/schemas/LegalResidence"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Absent": "#/components/schemas/Absent",
+            "Domicile": "#/components/schemas/Domicile",
+            "PostalAddress": "#/components/schemas/PostalAddress",
+            "PlaceOfResidenceAbroad": "#/components/schemas/PlaceOfResidenceAbroad",
+            "LegalResidence": "#/components/schemas/LegalResidence"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "array",
+      "description": "Status of Residency. Lijst van ResidencyStatus items.",
+      "items": {
+        "$ref": "#/components/schemas/ResidencyStatus"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "startDate",
+    "person",
+    "jurisdiction"
+  ]
+}

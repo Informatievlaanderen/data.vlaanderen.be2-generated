@@ -1,0 +1,61 @@
+{
+  "title": "Parents",
+  "type": "object",
+  "description": "Persons to whom the Person is legally related based on descent or adoption as a child.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Parents)",
+      "pattern": "^Parents$"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/Parents.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/Parents.endDate"
+    },
+    "dateFromDescent": {
+      "$ref": "#/components/schemas/Parents.dateFromDescent"
+    },
+    "type": {
+      "$ref": "#/components/schemas/TypeOfDescent"
+    },
+    "older": {
+      "type": "array",
+      "description": "Reference to the Person who is his parent. Lijst van Person items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Person"
+          },
+          {
+            "$ref": "#/components/schemas/RegisteredPerson"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Person": "#/components/schemas/Person",
+            "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "place": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "transfer": {
+      "$ref": "#/components/schemas/Transfer"
+    }
+  },
+  "required": [
+    "@type",
+    "startDate"
+  ]
+}

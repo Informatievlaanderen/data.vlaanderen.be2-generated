@@ -1,0 +1,85 @@
+{
+  "title": "CatalogRecord",
+  "type": "object",
+  "description": "A record in a catalog describes the registration of a single resource in the catalog.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse CatalogRecord)",
+      "pattern": "^CatalogRecord$"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/CatalogRecord.identifier"
+    },
+    "creationDate": {
+      "$ref": "#/components/schemas/CatalogRecord.creationDate"
+    },
+    "title": {
+      "type": "array",
+      "description": "The name of the record in the catalog. Due to multilingualism, there can be multiple values. The desired interpretation of cardinality is: only one value per language. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/CatalogRecord.title"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "dateOfAmendment": {
+      "$ref": "#/components/schemas/CatalogRecord.dateOfAmendment"
+    },
+    "sourceMetadataRecordLandingPage": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "alternativeIdentifier": {
+      "type": "array",
+      "description": "An alternative identifier (a different identifier than the unique identifier) for a record in the catalog can be described here. Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "conform": {
+      "type": "array",
+      "description": "The (meta)data standard according to which the main subject of the catalog record is described. One of the URIs for recognized metadata standards: <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/metadata-dcat\">metadata DCAT</a>, <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL\">DCAT-AP Flanders</a> , or <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL\">GeoDCAT-AP Flanders</a>. Lijst van Standard items.",
+      "items": {
+        "$ref": "#/components/schemas/Standard"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "sourceMetadataRecord": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "mainTopic": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/ResourceCatalog"
+        },
+        {
+          "$ref": "#/components/schemas/Dataset"
+        },
+        {
+          "$ref": "#/components/schemas/DataService"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "ResourceCatalog": "#/components/schemas/ResourceCatalog",
+          "Dataset": "#/components/schemas/Dataset",
+          "DataService": "#/components/schemas/DataService"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "identifier",
+    "dateOfAmendment",
+    "mainTopic"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "title": "ProvisionalRegistration",
+  "type": "object",
+  "description": "Provisional registration.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ProvisionalRegistration)",
+      "pattern": "^ProvisionalRegistration$"
+    },
+    "expirationDate": {
+      "$ref": "#/components/schemas/ProvisionalRegistration.expirationDate"
+    },
+    "procedure": {
+      "$ref": "#/components/schemas/ProcedureType"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/ProvisionalRegistration.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/ProvisionalRegistration.endDate"
+    },
+    "fileStatus": {
+      "type": "array",
+      "description": "Status of the Registration file. In the National Register, used when the registration in the register is no longer valid, for example: because the person has been removed from the register, a previous registration was canceled, or the person has died, etc. Lijst van FileStatus items.",
+      "items": {
+        "$ref": "#/components/schemas/FileStatus"
+      },
+      "minItems": 1
+    },
+    "referenceFile": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "register": {
+      "$ref": "#/components/schemas/RegisterType"
+    },
+    "canceledFile": {
+      "type": "array",
+      "description": "The previous registration of a Person in the register. Only applicable if a new Registration exists. Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "startDate"
+  ]
+}

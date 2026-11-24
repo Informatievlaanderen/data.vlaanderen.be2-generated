@@ -1,0 +1,187 @@
+{
+  "title": "Dataservice",
+  "type": "object",
+  "description": "Een verzameling van operaties die ofwel toegang bieden tot één of meer datasets ofwel een dataverwerkingsdoel hebben.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dataservice)",
+      "pattern": "^Dataservice$"
+    },
+    "beschrijving": {
+      "type": "array",
+      "description": "Een bondige tekstuele omschrijving van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataservice.beschrijving"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "versie": {
+      "$ref": "#/components/schemas/Dataservice.versie"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Dataservice.identificator"
+    },
+    "trefwoord": {
+      "type": "array",
+      "description": "Een trefwoord of tag die de bron beschrijft. De meertaligheid is hier verschillend als voor een beschrijvende eigenschap. \nDe taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachting dat elk trefwoord in elke taal vertaald wordt. Ook is het niet zo dat er slechts 1 trefwoord per taal is. Er kunnen (zullen) er meerdere zijn. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataservice.trefwoord"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "titel": {
+      "type": "array",
+      "description": "De naam van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataservice.titel"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "contactinformatie": {
+      "$ref": "#/components/schemas/Contactinfo"
+    },
+    "endpointURL": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "endpointbeschrijving": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "landingspagina": {
+      "type": "array",
+      "description": "Een algemene webpagina waarnaar kan worden genavigeerd in een webbrowser, met algemene aanvullende informatie over de dataservice. Lijst van URI items.",
+      "items": {
+        "$ref": "#/components/schemas/URI"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "ontwikkelingstoestand": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "landingspaginaVoorAuthenticatie": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "levensfase": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "landingspaginaVoorStatusinformatie": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "alternatieveIdentificator": {
+      "type": "array",
+      "description": "Een alternatieve identificator (een andere identificator dan de unieke identificator) voor een record in de catalogus kan hier beschreven worden. Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "toegankelijkheid": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "conformAanProtocol": {
+      "type": "array",
+      "description": "Een protocol waaraan de dataservice voldoet. Deze eigenschap capteert de technische specificatie waaraan de service voldoet, e.g. WFS, SPARQL, SOAP… Lijst van Standaard items.",
+      "items": {
+        "$ref": "#/components/schemas/Standaard"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "statuut": {
+      "type": "array",
+      "description": "Een aanduiding van op welke basis de catalogusresource beschikbaar is. Lijst van Code items.",
+      "items": {
+        "$ref": "#/components/schemas/Code"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "landingspaginaVoorGebruiksinformatie": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "rechten": {
+      "type": "array",
+      "description": "Bepalingen van juridische aard die gelden op de dataservice. Met deze eigenschap kunnen rechten uitgedrukt worden zoals copyright of specifieke gebruiksbepalingen. Ook SLA en SLO  informatie kan hier opgenomen worden. Indien deze rechten reeds opgenomen zijn in de licentie dan moeten ze hier niet herhaald worden. Lijst van JuridischeBepaling items.",
+      "items": {
+        "$ref": "#/components/schemas/JuridischeBepaling"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "thema": {
+      "type": "array",
+      "description": "De hoofdcategorie waartoe de dataservice behoort. De codelijst is de Belgische thema codelijst, welke 1 op 1 mapbaar is naar de Europese. Lijst van Code items.",
+      "items": {
+        "$ref": "#/components/schemas/Code"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "licentie": {
+      "$ref": "#/components/schemas/LicentieDocument"
+    },
+    "creatiedatum": {
+      "$ref": "#/components/schemas/Dataservice.creatiedatum"
+    },
+    "wijzigingsdatum": {
+      "$ref": "#/components/schemas/Dataservice.wijzigingsdatum"
+    },
+    "publicatiedatum": {
+      "$ref": "#/components/schemas/Dataservice.publicatiedatum"
+    },
+    "biedtInformatieAanOver": {
+      "type": "array",
+      "description": "De data die via deze dataservice worden aangeboden. Lijst van Dataset items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataset"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "relatie": {
+      "type": "array",
+      "description": "Een verband tussen twee resources. [zie <a href=\"https://www.w3.org/TR/vocab-dcat-3/\">DCAT</a>]. Lijst van CatalogusResource items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/CatalogusResource"
+          },
+          {
+            "$ref": "#/components/schemas/Dataset"
+          },
+          {
+            "$ref": "#/components/schemas/Dataservice"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "CatalogusResource": "#/components/schemas/CatalogusResource",
+            "Dataset": "#/components/schemas/Dataset",
+            "Dataservice": "#/components/schemas/Dataservice"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "titel",
+    "contactinformatie",
+    "endpointURL",
+    "endpointbeschrijving",
+    "toegankelijkheid"
+  ]
+}

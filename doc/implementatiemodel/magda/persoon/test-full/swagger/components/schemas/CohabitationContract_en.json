@@ -1,0 +1,87 @@
+{
+  "title": "CohabitationContract",
+  "type": "object",
+  "description": "Contract with agreements between two cohabitants.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse CohabitationContract)",
+      "pattern": "^CohabitationContract$"
+    },
+    "notary": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Person"
+        },
+        {
+          "$ref": "#/components/schemas/RegisteredPerson"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Person": "#/components/schemas/Person",
+          "RegisteredPerson": "#/components/schemas/RegisteredPerson"
+        }
+      }
+    },
+    "date": {
+      "$ref": "#/components/schemas/CohabitationContract.date"
+    },
+    "place": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "ofAgent": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Agent"
+        },
+        {
+          "$ref": "#/components/schemas/Organization"
+        },
+        {
+          "$ref": "#/components/schemas/Person"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Agent": "#/components/schemas/Agent",
+          "Organization": "#/components/schemas/Organization",
+          "Person": "#/components/schemas/Person"
+        }
+      }
+    },
+    "withAgent": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Agent"
+        },
+        {
+          "$ref": "#/components/schemas/Organization"
+        },
+        {
+          "$ref": "#/components/schemas/Person"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Agent": "#/components/schemas/Agent",
+          "Organization": "#/components/schemas/Organization",
+          "Person": "#/components/schemas/Person"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

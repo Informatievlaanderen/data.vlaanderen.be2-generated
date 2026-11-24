@@ -1,0 +1,45 @@
+{
+  "title": "Name",
+  "type": "object",
+  "description": "Names or combinations of names assigned to a Person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Name)",
+      "pattern": "^Name$"
+    },
+    "surname": {
+      "type": "array",
+      "description": "Part of the full name of the Person received from the previous generation. Also called a family name because the surname indicates a family relationship. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Name.surname"
+      },
+      "minItems": 1
+    },
+    "firstName": {
+      "type": "array",
+      "description": "Name given to a Person at birth. Distinguishes the Person from other people in the family. Lijst van String items.",
+      "items": {
+        "$ref": "#/components/schemas/Name.firstName"
+      },
+      "minItems": 1
+    },
+    "usedFirstName": {
+      "$ref": "#/components/schemas/Name.usedFirstName"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/Name.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/Name.endDate"
+    }
+  },
+  "required": [
+    "@type",
+    "startDate"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "title": "Distribution",
+  "type": "object",
+  "description": "A specific way of representing a dataset, characterized by one or more properties such as language, media type or format, schematic organization, temporal and spatial resolution, granularity, ...",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Distribution)",
+      "pattern": "^Distribution$"
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Distribution.identifier"
+    },
+    "title": {
+      "type": "array",
+      "description": "The name of the distribution. Due to multilingualism, there can be multiple values. The desired interpretation of cardinality is: only one value per language. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Distribution.title"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "rights": {
+      "type": "array",
+      "description": "Legal provisions applicable to distribution. This property allows rights such as source attribution, copyright, or specific usage terms. If these rights are already included in the license, they do not need to be repeated here. Lijst van LegalProvision items.",
+      "items": {
+        "$ref": "#/components/schemas/LegalProvision"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "alternativeIdentifier": {
+      "type": "array",
+      "description": "An alternative identifier (other than the unique identifier) for a distribution can be described here. Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "format": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "license": {
+      "$ref": "#/components/schemas/LicenseDocument"
+    },
+    "conform": {
+      "type": "array",
+      "description": "A standard, schema, implementation- \nModel, application profile, vocabulary\nwhich the distribution meets. Lijst van Standard items.",
+      "items": {
+        "$ref": "#/components/schemas/Standard"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "downloadURL": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "accessURL": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "isOfferedBy": {
+      "type": "array",
+      "description": "A data service that offers this distribution. Lijst van DataService items.",
+      "items": {
+        "$ref": "#/components/schemas/DataService"
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type",
+    "identifier",
+    "accessURL"
+  ]
+}

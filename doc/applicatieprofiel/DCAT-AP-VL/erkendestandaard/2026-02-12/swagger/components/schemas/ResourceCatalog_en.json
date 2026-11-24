@@ -1,0 +1,46 @@
+{
+  "title": "ResourceCatalog",
+  "type": "object",
+  "description": "A resource published or managed by a single agent.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse ResourceCatalog)",
+      "pattern": "^ResourceCatalog$"
+    },
+    "relationship": {
+      "type": "array",
+      "description": "A connection between two resources. [see <a href=\"https://www.w3.org/TR/vocab-dcat-3/\">DCAT].</a> Lijst van ResourceCatalog items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ResourceCatalog"
+          },
+          {
+            "$ref": "#/components/schemas/Dataset"
+          },
+          {
+            "$ref": "#/components/schemas/DataService"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ResourceCatalog": "#/components/schemas/ResourceCatalog",
+            "Dataset": "#/components/schemas/Dataset",
+            "DataService": "#/components/schemas/DataService"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

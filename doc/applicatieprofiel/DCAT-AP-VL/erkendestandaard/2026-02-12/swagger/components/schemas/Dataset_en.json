@@ -1,0 +1,188 @@
+{
+  "title": "Dataset",
+  "type": "object",
+  "description": "A collection of data, published or compiled by a single agent, and available for access or download in one or more representation modes.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dataset)",
+      "pattern": "^Dataset$"
+    },
+    "version": {
+      "$ref": "#/components/schemas/Dataset.version"
+    },
+    "description": {
+      "type": "array",
+      "description": "A concise textual description of the dataset. Due to multilingualism, there can be multiple values. The desired interpretation of cardinality is: only one value per language. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataset.description"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "keyword": {
+      "type": "array",
+      "description": "A keyword or tag that describes the resource. Multilingualism here differs from a descriptive property.  \nThe language of each keyword must be indicated. However, it is not expected that every keyword will be translated into every language. Nor is it the case that there is only one keyword per language. There can (or will) be several. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataset.keyword"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "title": {
+      "type": "array",
+      "description": "The name of the dataset. Due to multilingualism, there can be multiple values. The desired interpretation of cardinality is: only one value per language. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataset.title"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "identifier": {
+      "$ref": "#/components/schemas/Dataset.identifier"
+    },
+    "accessibility": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "alternativeIdentifier": {
+      "type": "array",
+      "description": "An alternative identifier (other than the unique identifier) for a dataset can be described here. Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "conform": {
+      "type": "array",
+      "description": "A standard, schema, application profile, vocabulary, CRS, ... that the dataset conforms to. Lijst van Standard items.",
+      "items": {
+        "$ref": "#/components/schemas/Standard"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "preview": {
+      "type": "array",
+      "description": "A scaled-down view of an image illustrating the dataset. A preview or thumbnail aims to increase the discoverability of the dataset. It is not an accurate representation of the data contained in the dataset. Lijst van Preview items.",
+      "items": {
+        "$ref": "#/components/schemas/Preview"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "statute": {
+      "type": "array",
+      "description": "An indication of the basis on which the catalog resource is available. Lijst van Code items.",
+      "items": {
+        "$ref": "#/components/schemas/Code"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "theme": {
+      "type": "array",
+      "description": "The main category to which the dataset belongs. The code list is the Belgian theme code list, which can be mapped 1-to-1 to the European one. Lijst van Code items.",
+      "items": {
+        "$ref": "#/components/schemas/Code"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "landingPage": {
+      "type": "array",
+      "description": "A general web page that can be navigated to in a web browser, with general information about the dataset, are distributions and/or additional information. The mapping will populate the landing page with the URL to the metadata representation from which the dataset is derived. Lijst van URI items.",
+      "items": {
+        "$ref": "#/components/schemas/URI"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "publicationDate": {
+      "$ref": "#/components/schemas/Dataset.publicationDate"
+    },
+    "origin": {
+      "type": "array",
+      "description": "The origin story of a dataset. The expected value is a web page (URL) that describes the origin history of the dataset. Lijst van OriginExplanation items.",
+      "items": {
+        "$ref": "#/components/schemas/OriginExplanation"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "contactInformation": {
+      "$ref": "#/components/schemas/ContactInfo"
+    },
+    "dateOfAmendment": {
+      "$ref": "#/components/schemas/Dataset.dateOfAmendment"
+    },
+    "creationDate": {
+      "$ref": "#/components/schemas/Dataset.creationDate"
+    },
+    "geographicalCoverage": {
+      "type": "array",
+      "description": "The geographic area about which the dataset contains information. Lijst van Location items.",
+      "items": {
+        "$ref": "#/components/schemas/Location"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "distribution": {
+      "type": "array",
+      "description": "An available distribution of the dataset. Lijst van Distribution items.",
+      "items": {
+        "$ref": "#/components/schemas/Distribution"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "inSeries": {
+      "type": "array",
+      "description": "A Dataset Series to which the dataset belongs. Lijst van DatasetSeries items.",
+      "items": {
+        "$ref": "#/components/schemas/DatasetSeries"
+      },
+      "minItems": 1
+    },
+    "relationship": {
+      "type": "array",
+      "description": "A connection between two resources. [see <a href=\"https://www.w3.org/TR/vocab-dcat-3/\">DCAT].</a> Lijst van ResourceCatalog items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ResourceCatalog"
+          },
+          {
+            "$ref": "#/components/schemas/Dataset"
+          },
+          {
+            "$ref": "#/components/schemas/DataService"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ResourceCatalog": "#/components/schemas/ResourceCatalog",
+            "Dataset": "#/components/schemas/Dataset",
+            "DataService": "#/components/schemas/DataService"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type",
+    "description",
+    "title",
+    "identifier",
+    "accessibility",
+    "contactInformation"
+  ]
+}

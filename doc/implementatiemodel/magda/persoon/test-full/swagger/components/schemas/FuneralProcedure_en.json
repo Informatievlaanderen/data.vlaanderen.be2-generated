@@ -1,0 +1,62 @@
+{
+  "title": "FuneralProcedure",
+  "type": "object",
+  "description": "Declaration of Will regarding the funeral of the Person.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse FuneralProcedure)",
+      "pattern": "^FuneralProcedure$"
+    },
+    "burial": {
+      "$ref": "#/components/schemas/TypeOfBurial"
+    },
+    "ritual": {
+      "$ref": "#/components/schemas/FuneralObligationritualType"
+    },
+    "cemetery": {
+      "$ref": "#/components/schemas/Location"
+    },
+    "contract": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Contract"
+        },
+        {
+          "$ref": "#/components/schemas/CohabitationContract"
+        },
+        {
+          "$ref": "#/components/schemas/FuneralContract"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Contract": "#/components/schemas/Contract",
+          "CohabitationContract": "#/components/schemas/CohabitationContract",
+          "FuneralContract": "#/components/schemas/FuneralContract"
+        }
+      }
+    },
+    "legalRepresentative": {
+      "$ref": "#/components/schemas/RegisteredPerson"
+    },
+    "startDate": {
+      "$ref": "#/components/schemas/FuneralProcedure.startDate"
+    },
+    "endDate": {
+      "$ref": "#/components/schemas/FuneralProcedure.endDate"
+    },
+    "explanation": {
+      "$ref": "#/components/schemas/Explanation"
+    }
+  },
+  "required": [
+    "@type",
+    "startDate"
+  ]
+}
