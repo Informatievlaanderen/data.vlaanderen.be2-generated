@@ -1,0 +1,85 @@
+{
+  "title": "CatalogusRecord",
+  "type": "object",
+  "description": "Een record in een catalogus beschrijft de registratie van één resource in de catalogus.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse CatalogusRecord)",
+      "pattern": "^CatalogusRecord$"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/CatalogusRecord.identificator"
+    },
+    "aanmaakdatum": {
+      "$ref": "#/components/schemas/CatalogusRecord.aanmaakdatum"
+    },
+    "titel": {
+      "type": "array",
+      "description": "De naam van het record in de catalogus. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/CatalogusRecord.titel"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "wijzigingsdatum": {
+      "$ref": "#/components/schemas/CatalogusRecord.wijzigingsdatum"
+    },
+    "bronMetadataRecordLandingspagina": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "alternatieveIdentificator": {
+      "type": "array",
+      "description": "Een alternatieve identificator (een andere identificator dan de unieke identificator) voor een record in de catalogus kan hier beschreven worden. Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "conform": {
+      "type": "array",
+      "description": "De (meta)datastandaard volgens welke het hoofdonderwerp van het catalogusrecord is beschreven. Eén van de URIs voor erkende metadata standaarden: <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/metadata-dcat\">metadata DCAT</a>, <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL\">DCAT-AP Vlaanderen</a> of <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL\">GeoDCAT-AP Vlaanderen</a>. Lijst van Standaard items.",
+      "items": {
+        "$ref": "#/components/schemas/Standaard"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "bronMetadatarecord": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "hoofdonderwerp": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/CatalogusResource"
+        },
+        {
+          "$ref": "#/components/schemas/Dataset"
+        },
+        {
+          "$ref": "#/components/schemas/Dataservice"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "CatalogusResource": "#/components/schemas/CatalogusResource",
+          "Dataset": "#/components/schemas/Dataset",
+          "Dataservice": "#/components/schemas/Dataservice"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "wijzigingsdatum",
+    "hoofdonderwerp"
+  ]
+}

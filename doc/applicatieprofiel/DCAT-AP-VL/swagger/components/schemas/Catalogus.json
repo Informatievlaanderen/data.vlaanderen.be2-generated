@@ -1,0 +1,86 @@
+{
+  "title": "Catalogus",
+  "type": "object",
+  "description": "Een beheerde verzameling van metadata over resources (zoals datasets en dataservices in de context van een datacatalogus).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Catalogus)",
+      "pattern": "^Catalogus$"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Catalogus.identificator"
+    },
+    "titel": {
+      "type": "array",
+      "description": "De naam van de catalogus. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Catalogus.titel"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "beschrijving": {
+      "type": "array",
+      "description": "Een bondige tekstuele omschrijving van de catalogus. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Catalogus.beschrijving"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "contactinformatie": {
+      "$ref": "#/components/schemas/Contactinfo"
+    },
+    "licentie": {
+      "$ref": "#/components/schemas/LicentieDocument"
+    },
+    "alternatieveIdentificator": {
+      "type": "array",
+      "description": "Een alternatieve identificator (dan de unieke identificator) voor de catalogus kan hier beschreven worden. Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "record": {
+      "type": "array",
+      "description": "Een record beschrijft de registratie van één enkele dataset of dataservice die onderdeel is van de catalogus. Lijst van CatalogusRecord items.",
+      "items": {
+        "$ref": "#/components/schemas/CatalogusRecord"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "heeftDataset": {
+      "type": "array",
+      "description": "Een dataset die deel uitmaakt van de catalogus. Lijst van Dataset items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataset"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "heeftDataService": {
+      "type": "array",
+      "description": "Een dataservice die deel uitmaakt van de catalogus. Lijst van Dataservice items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataservice"
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "titel",
+    "beschrijving",
+    "contactinformatie"
+  ]
+}

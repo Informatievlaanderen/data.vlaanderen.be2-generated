@@ -1,0 +1,81 @@
+{
+  "title": "Distributie",
+  "type": "object",
+  "description": "Een specifieke voorstellingswijze van een dataset, gekenmerkt door één of meerdere eigenschappen zoals taal, media-type of formaat, schematische organisatie, temporele en ruimtelijke resolutie, granulariteit, ...",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Distributie)",
+      "pattern": "^Distributie$"
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Distributie.identificator"
+    },
+    "titel": {
+      "type": "array",
+      "description": "De naam van de distributie. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde. Lijst van TaalString items.",
+      "items": {
+        "$ref": "#/components/schemas/Distributie.titel"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "rechten": {
+      "type": "array",
+      "description": "Bepalingen van juridische aard die gelden op de distributie. Met deze eigenschap kunnen rechten uitgedrukt worden zoals bronvermeldingen, copyright of specifieke gebruiksbepalingen. Indien deze rechten reeds opgenomen zijn in de licentie dan moeten ze hier niet herhaald worden. Lijst van JuridischeBepaling items.",
+      "items": {
+        "$ref": "#/components/schemas/JuridischeBepaling"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "alternatieveIdentificator": {
+      "type": "array",
+      "description": "Een alternatieve identificator (dan de unieke identificator) voor een distributie kan hier beschreven worden. Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "formaat": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "licentie": {
+      "$ref": "#/components/schemas/LicentieDocument"
+    },
+    "conform": {
+      "type": "array",
+      "description": "Een standaard, schema, implementatie-\nmodel, applicatieprofiel, vocabularium\nwaaraan de distributie voldoet. Lijst van Standaard items.",
+      "items": {
+        "$ref": "#/components/schemas/Standaard"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "downloadURL": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "toegangsURL": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "wordtAangebodenDoor": {
+      "type": "array",
+      "description": "Een dataservice die deze distributie aanbiedt. Lijst van Dataservice items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataservice"
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "toegangsURL"
+  ]
+}

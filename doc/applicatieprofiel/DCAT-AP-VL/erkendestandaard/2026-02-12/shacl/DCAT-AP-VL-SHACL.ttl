@@ -30,7 +30,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#FrequentieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#StringShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#IdentificatorShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatetimeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DateTimeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#ContactinfoShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#ContactpuntShape> .
 
@@ -38,6 +38,7 @@
   rdfs:label "Agent"@nl;
   <http://purl.org/vocab/vann/usageNote> "Een agent kan op verschillende wijzen interageren met de beschreven entiteiten. Voorbeelden zijn beheerder, uitgever, maker, enz."@nl;
   rdfs:comment "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Agent>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -47,8 +48,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Agent.Naam>;
     shacl:datatype rdf:langString;
     shacl:description "De naam van de agent."@nl;
-    shacl:maxCount "n";
-    shacl:minCount "1";
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:minCount 1;
     shacl:name "naam"@nl;
     shacl:path foaf:name
   ];
@@ -58,6 +59,7 @@
   rdfs:label "Catalogus Record"@nl;
   <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/vocab-dcat-3#Class:Catalog_Record\">DCAT</a>]."@nl;
   rdfs:comment "Een record in een catalogus beschrijft de registratie van één resource in de catalogus."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -65,8 +67,8 @@
     rdfs:comment "De unieke identificator van het record in de catalogus."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.Identificator>;
     shacl:description "De unieke identificator van het record in de catalogus."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "identificator"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
@@ -77,7 +79,7 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.Aanmaakdatum>;
     shacl:datatype xsd:dateTime;
     shacl:description "De datum van (formele) opname van de bijbehorende dataset of dataservice in de catalogus."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "aanmaakdatum"@nl;
     shacl:path dc:issued
   ], [
@@ -88,7 +90,7 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.Titel>;
     shacl:datatype rdf:langString;
     shacl:description "De naam van het record in de catalogus."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -98,8 +100,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.Wijzigingsdatum>;
     shacl:datatype xsd:dateTime;
     shacl:description "De meest recente datum waarop het record in de catalogus is gewijzigd, bijgewerkt of aangepast."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "wijzigingsdatum"@nl;
     shacl:path dc:modified
   ], [
@@ -110,7 +112,7 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.BronMetadataRecordLandingspagina>;
     shacl:class rdfs:Resource;
     shacl:description "Een webpagina waarop het bron-metadatarecord in menselijk leesbare vorm wordt weergegeven."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "bron metadata record landingspagina"@nl;
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#bronMetadataRecordLandingspagina>
   ], [
@@ -120,7 +122,7 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.AlternatieveIdentificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Een alternatieve identificator (een andere identificator dan de unieke identificator) voor een record in de catalogus kan hier beschreven worden."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "alternatieve identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
@@ -131,7 +133,7 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.Conform>;
     shacl:class dc:Standard;
     shacl:description "De (meta)datastandaard volgens welke het hoofdonderwerp van het catalogusrecord is beschreven."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "conform"@nl;
     shacl:path dc:conformsTo
   ], [
@@ -141,7 +143,7 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.BronMetadatarecord>;
     shacl:class rdfs:Resource;
     shacl:description "Het record in een andere catalogus waarvan deze record en de beschrijvingen van het bijhorende hoofdonderwerp van afgeleid zijn."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "bron metadatarecord"@nl;
     shacl:path dc:source
   ], [
@@ -162,6 +164,7 @@
   rdfs:label "Catalogus Resource"@nl;
   <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/vocab-dcat-3#Class:Resource\">DCAT</a>]."@nl;
   rdfs:comment "Een bron (resource) gepubliceerd of beheerd door één agent."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusResource>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -194,6 +197,7 @@
   rdfs:label "Catalogus"@nl;
   <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/vocab-dcat-3#Class:Catalog\">DCAT</a>]."@nl;
   rdfs:comment "Een beheerde verzameling van metadata over resources (zoals datasets en dataservices in de context van een datacatalogus)."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -201,8 +205,8 @@
     rdfs:comment "De unieke identificator voor de catalogus."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.Identificator>;
     shacl:description "De unieke identificator voor de catalogus."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "identificator"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
@@ -214,8 +218,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.Titel>;
     shacl:datatype rdf:langString;
     shacl:description "De naam van de catalogus."@nl;
-    shacl:maxCount "n";
-    shacl:minCount "1";
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:minCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -226,8 +230,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.Beschrijving>;
     shacl:datatype rdf:langString;
     shacl:description "Een bondige tekstuele omschrijving van de catalogus."@nl;
-    shacl:maxCount "n";
-    shacl:minCount "1";
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:minCount 1;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
@@ -237,8 +241,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.Contactinformatie>;
     shacl:class vcard:Kind;
     shacl:description "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de catalogus."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "contactinformatie"@nl;
     shacl:path dcat:contactPoint
   ], [
@@ -251,7 +255,7 @@ Meer informatie zie <a href=\"#wettelijkeinformatie\">hieronder</a>."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.Licentie>;
     shacl:class dc:LicenseDocument;
     shacl:description "De licentie van de catalogus."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "licentie"@nl;
     shacl:path dc:license
   ], [
@@ -261,7 +265,7 @@ Meer informatie zie <a href=\"#wettelijkeinformatie\">hieronder</a>."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.AlternatieveIdentificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Een alternatieve identificator (dan de unieke identificator) voor de catalogus kan hier beschreven worden."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "alternatieve identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
@@ -299,7 +303,7 @@ Meer informatie zie <a href=\"#wettelijkeinformatie\">hieronder</a>."""@nl;
     a shacl:PropertyShape;
     rdfs:label "heeft DataService"@nl;
     rdfs:comment "Een dataservice die deel uitmaakt van de catalogus."@nl;
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.HeeftDataservice>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.HeeftDataService>;
     shacl:class dcat:DataService;
     shacl:description "Een dataservice die deel uitmaakt van de catalogus."@nl;
     shacl:maxCount "n"^^xsd:integer;
@@ -314,16 +318,17 @@ Meer informatie zie <a href=\"#wettelijkeinformatie\">hieronder</a>."""@nl;
 
 Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek-basis Contactinfo als generalisatie van de vCard Contactinfo (DCAT perspectief) opgenomen."""@nl;
   rdfs:comment "Een beschrijving van contactinformatie."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Contactinfo>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "e-mail"@nl;
     <http://purl.org/vocab/vann/usageNote> "[Een e-mail adres in de vorm van een mailto URI volgens de standaard <a href=\"https://tools.ietf.org/html/rfc6068\">hier</a>]."@nl;
     rdfs:comment "Het e-mailadres waarmee een gebruiker contact kan opnemen voor informatie."@nl;
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Contactinfo.E-mail>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Contactinfo.E-Mail>;
     shacl:class rdfs:Resource;
     shacl:description "Het e-mailadres waarmee een gebruiker contact kan opnemen voor informatie."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "e-mail"@nl;
     shacl:path vcard:hasEmail
   ], [
@@ -334,7 +339,7 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Contactinfo.Contactpagina>;
     shacl:class rdfs:Resource;
     shacl:description "Een webpagina die ofwel toelaat om contact op te nemen (via b.v. een webformulier) of die informatie bevat hoe men contact kan opnemen."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "contactpagina"@nl;
     shacl:path foaf:page
   ];
@@ -342,6 +347,7 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#ContactpuntShape> a shacl:NodeShape;
   rdfs:label "Contactpunt"@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Contactpunt>;
   shacl:closed false;
   shacl:targetClass vcard:Kind,
     schema:ContactPoint .
@@ -350,6 +356,7 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
   rdfs:label "Dataservice"@nl;
   <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Class:Data_Service\">DCAT</a>]."@nl;
   rdfs:comment "Een verzameling van operaties die ofwel toegang bieden tot één of meer datasets ofwel een dataverwerkingsdoel hebben."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -359,7 +366,7 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Beschrijving>;
     shacl:datatype rdf:langString;
     shacl:description "Een bondige tekstuele omschrijving van de dataservice."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
@@ -370,7 +377,7 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Versie>;
     shacl:datatype xsd:string;
     shacl:description "Een unieke aanduiding van een variant van de dataservice door middel van een versienummer of -naam van de dataservice."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "versie"@nl;
     shacl:path dcat:version
   ], [
@@ -379,8 +386,8 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
     rdfs:comment "De unieke identificator van de dataservice."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Identificator>;
     shacl:description "De unieke identificator van de dataservice."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "identificator"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
@@ -393,7 +400,7 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Trefwoord>;
     shacl:datatype rdf:langString;
     shacl:description "Een trefwoord of tag die de bron beschrijft."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "trefwoord"@nl;
     shacl:path dcat:keyword
   ], [
@@ -404,8 +411,8 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Titel>;
     shacl:datatype rdf:langString;
     shacl:description "De naam van de dataservice."@nl;
-    shacl:maxCount "n";
-    shacl:minCount "1";
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:minCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -415,8 +422,8 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Contactinformatie>;
     shacl:class vcard:Kind;
     shacl:description "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de dataservice."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "contactinformatie"@nl;
     shacl:path dcat:contactPoint
   ], [
@@ -424,11 +431,11 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:label "endpointURL"@nl;
     <http://purl.org/vocab/vann/usageNote> "Om in lijn te zijn met DCAT-AP is er een waarde verplicht voor de endpointURL. Wanneer het effectieve endpoint URL niet publiekelijk kan gedeeld worden dan kan dit ingevuld worden met ofwel de root URL van het endpoint ofwel een URL waarop men informatie vindt hoe men de waarde kan bekomen."@nl;
     rdfs:comment "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URI)."@nl;
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Endpointurl>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.EndpointURL>;
     shacl:class rdfs:Resource;
     shacl:description "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URI)."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "endpointURL"@nl;
     shacl:path dcat:endpointURL
   ], [
@@ -438,8 +445,8 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Endpointbeschrijving>;
     shacl:class rdfs:Resource;
     shacl:description "Een beschrijving van de diensten die beschikbaar zijn via de endpoints, met inbegrip van e.g. hun operaties, parameters."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "endpointbeschrijving"@nl;
     shacl:path dcat:endpointDescription
   ], [
@@ -449,7 +456,7 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Landingspagina>;
     shacl:class rdfs:Resource;
     shacl:description "Een algemene webpagina waarnaar kan worden genavigeerd in een webbrowser, met algemene aanvullende informatie over de dataservice."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "landingspagina"@nl;
     shacl:path dcat:landingPage
   ], [
@@ -458,10 +465,10 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     <http://purl.org/vocab/vann/usageNote> "Op verschillende momenten tijdens de ontwikkeling van een dataservice wordt de dataservice geëvalueerd."@nl;
     rdfs:comment "De ontwikkelingstoestand waarin de dataservice is gedeployed."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Ontwikkelingstoestand>;
-    shacl:class skos:Concept;
     shacl:description "De ontwikkelingstoestand waarin de dataservice is gedeployed."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "ontwikkelingstoestand"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#ontwikkelingstoestand>
   ], [
     a shacl:PropertyShape;
@@ -471,7 +478,7 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.LandingspaginaVoorAuthenticatie>;
     shacl:class rdfs:Resource;
     shacl:description "Een verwijzing naar de landingspagina met de specifieke informatie over de authenticatie voor de dataservice."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "landingspagina voor authenticatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorAuthenticatie>
   ], [
@@ -480,10 +487,10 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     <http://purl.org/vocab/vann/usageNote> "Het gebruik hiervan is voornamelijk belangrijk wanneer men de dataservice wil uit dienst nemen. Het tijdig aangeven dat een dienst op zijn einde loopt en dat de gebruiker moet overschakelen op de nieuwe dienst is een best practice in service management."@nl;
     rdfs:comment "De levensfase waarin de dataservice zich bevindt."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Levensfase>;
-    shacl:class skos:Concept;
     shacl:description "De levensfase waarin de dataservice zich bevindt."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "levensfase"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#levensfase>
   ], [
     a shacl:PropertyShape;
@@ -493,7 +500,7 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.LandingspaginaVoorStatusinformatie>;
     shacl:class rdfs:Resource;
     shacl:description "Een verwijzing naar de statuspagina van de dataservice."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "landingspagina voor statusinformatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorStatusinformatie>
   ], [
@@ -503,7 +510,7 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.AlternatieveIdentificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Een alternatieve identificator (een andere identificator dan de unieke identificator) voor een record in de catalogus kan hier beschreven worden."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "alternatieve identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
@@ -514,11 +521,11 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
 Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice te waarborgen (zoals het voorkomen van DDoS-aanvallen en oneigenlijk gebruik), bijvoorbeeld via authenticatie en autorisatie, worden niet als toegangsbeperkende voorwaarden beschouwd. Leiden zij echter tot een voorafgaande toetsing (bijv. is de organisatie bekend, is er een betalingscontract afgesloten) voordat toegang wordt verleend, dan zijn dit wel toegangsbeperkende voorwaarden."""@nl;
     rdfs:comment "De toegankelijkheid voor de dataservice."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Toegankelijkheid>;
-    shacl:class skos:Concept;
     shacl:description "De toegankelijkheid voor de dataservice."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "toegankelijkheid"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path dc:accessRights
   ], [
     a shacl:PropertyShape;
@@ -528,7 +535,7 @@ Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.ConformAanProtocol>;
     shacl:class dc:Standard;
     shacl:description "Een protocol waaraan de dataservice voldoet."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "conform aan protocol"@nl;
     shacl:path dc:conformsTo
   ], [
@@ -536,10 +543,10 @@ Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice
     rdfs:label "statuut"@nl;
     rdfs:comment "Een aanduiding van op welke basis de catalogusresource beschikbaar is."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Statuut>;
-    shacl:class skos:Concept;
     shacl:description "Een aanduiding van op welke basis de catalogusresource beschikbaar is."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "statuut"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#statuut>
   ], [
     a shacl:PropertyShape;
@@ -549,7 +556,7 @@ Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.LandingspaginaVoorGebruiksinformatie>;
     shacl:class rdfs:Resource;
     shacl:description "Een verwijzing naar de landingspagina met de specifieke informatie over het gebruik van de dataservice."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "landingspagina voor gebruiksinformatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorGebruiksinformatie>
   ], [
@@ -560,7 +567,7 @@ Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Rechten>;
     shacl:class dc:RightsStatement;
     shacl:description "Bepalingen van juridische aard die gelden op de dataservice."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "rechten"@nl;
     shacl:path dc:rights
   ], [
@@ -569,10 +576,10 @@ Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice
     <http://purl.org/vocab/vann/usageNote> "De codelijst is de Belgische thema codelijst, welke 1 op 1 mapbaar is naar de Europese."@nl;
     rdfs:comment "De hoofdcategorie waartoe de dataservice behoort."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Thema>;
-    shacl:class skos:Concept;
     shacl:description "De hoofdcategorie waartoe de dataservice behoort."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "thema"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path dcat:theme
   ], [
     a shacl:PropertyShape;
@@ -581,7 +588,7 @@ Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Licentie>;
     shacl:class dc:LicenseDocument;
     shacl:description "De licentie van de dataservice."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "licentie"@nl;
     shacl:path dc:license
   ], [
@@ -590,7 +597,7 @@ Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice
     rdfs:comment "Het tijdsmoment waarop de dataservice voor het eerst werd geactiveerd."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Creatiedatum>;
     shacl:description "Het tijdsmoment waarop de dataservice voor het eerst werd geactiveerd."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "creatiedatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:created
@@ -600,7 +607,7 @@ Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice
     rdfs:comment "Het tijdsmoment waarop de dataservice werd gewijzigd."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Wijzigingsdatum>;
     shacl:description "Het tijdsmoment waarop de dataservice werd gewijzigd."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "wijzigingsdatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:modified
@@ -610,7 +617,7 @@ Condities die uitsluitend bedoeld zijn om de correcte werking van de dataservice
     rdfs:comment "Het tijdsmoment waarop de dataservice werd gepubliceerd door de uitgever."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Publicatiedatum>;
     shacl:description "Het tijdsmoment waarop de dataservice werd gepubliceerd door de uitgever."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "publicatiedatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:issued
@@ -635,6 +642,7 @@ Daarnaast bestaan in de praktijk verschillende tussenvormen - zoals verzamelinge
 <br/>
 Voor complexe of expliciet gestructureerde groeperingen is de correcte representatie een (sub)catalogus, waarbij de verbindende eigenschap expliciet door de catalogus zelf wordt bepaald. Subcatalogi worden wél ondersteund in DCAT-AP VL 3.0."""@nl;
   rdfs:comment "Een verzameling die onafhankelijk gepubliceerde datasets groepeert rond gedeelde eigenschappen."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -642,7 +650,7 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:comment "Een bondige tekstuele bescrhijving van de Dataset Serie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.Beschrijving>;
     shacl:description "Een bondige tekstuele bescrhijving van de Dataset Serie."@nl;
-    shacl:minCount "1";
+    shacl:minCount 1;
     shacl:name "beschrijving"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:description
@@ -652,7 +660,7 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:comment "De naam van de dataset serie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.Titel>;
     shacl:description "De naam van de dataset serie."@nl;
-    shacl:minCount "1";
+    shacl:minCount 1;
     shacl:name "titel"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:title
@@ -662,8 +670,8 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:comment "De unieke identificator van de dataset serie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.Identificator>;
     shacl:description "De unieke identificator van de dataset serie."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "identificator"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
@@ -674,8 +682,8 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.Contactinformatie>;
     shacl:class vcard:Kind;
     shacl:description "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de Dataset Serie."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "contactinformatie"@nl;
     shacl:path dcat:contactPoint
   ], [
@@ -695,7 +703,7 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.Periodiciteit>;
     shacl:class dc:Frequency;
     shacl:description "De maat waarmee de dataset serie wordt bijgewerkt."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "periodiciteit"@nl;
     shacl:path dc:accrualPeriodicity
   ], [
@@ -705,7 +713,7 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:comment "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.PublicatieDatum>;
     shacl:description "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "publicatie datum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:issued
@@ -716,7 +724,7 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:comment "Het meest recente moment waarop de dataset series is bijgewerkt."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.Wijzigingsdatum>;
     shacl:description "Het meest recente moment waarop de dataset series is bijgewerkt."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "wijzigingsdatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:modified
@@ -746,8 +754,8 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.AlternatieveIdentificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Een alternatieve identificator (dan de unieke identificator) voor een dataset serie kan hier beschreven worden."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "alternatieve identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
@@ -768,6 +776,7 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
   rdfs:label "Dataset"@nl;
   <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/vocab-dcat-3\">DCAT</a>]."@nl;
   rdfs:comment "Een verzameling gegevens, gepubliceerd of samengesteld door één agent, en beschikbaar voor toegang of download in één of meerdere voorstellingswijzen."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -776,7 +785,7 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Versie>;
     shacl:datatype xsd:string;
     shacl:description "Een unieke aanduiding van een variant van de dataset door middel van een versienummer of -naam van de dataset."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "versie"@nl;
     shacl:path dcat:version
   ], [
@@ -787,8 +796,8 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Beschrijving>;
     shacl:datatype rdf:langString;
     shacl:description "Een bondige tekstuele omschrijving van de dataset."@nl;
-    shacl:maxCount "n";
-    shacl:minCount "1";
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:minCount 1;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
@@ -800,7 +809,7 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Trefwoord>;
     shacl:datatype rdf:langString;
     shacl:description "Een trefwoord of tag die de resource beschrijft."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "trefwoord"@nl;
     shacl:path dcat:keyword
   ], [
@@ -811,8 +820,8 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Titel>;
     shacl:datatype rdf:langString;
     shacl:description "De naam van de dataset."@nl;
-    shacl:maxCount "n";
-    shacl:minCount "1";
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:minCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -821,8 +830,8 @@ De taal van elk trefwoord moet aangeduid worden. Echter is het niet de verwachti
     rdfs:comment "De unieke identificator van de dataset."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Identificator>;
     shacl:description "De unieke identificator van de dataset."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "identificator"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
@@ -834,11 +843,11 @@ Deze waarden geven een invulling weer voor \"Openbaarheid van Bestuur\".
 De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinderen dat er vrije toegang tot de informatie gegeven wordt. Voorbeelden van zulke beperkingen zijn staatsgeheimen, persoonsgebonden informatie, economische concurrentie, ..."""@nl;
     rdfs:comment "De toegankelijkheid voor de dataset."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Toegankelijkheid>;
-    shacl:class skos:Concept;
     shacl:description "De toegankelijkheid voor de dataset."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "toegankelijkheid"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path dc:accessRights
   ], [
     a shacl:PropertyShape;
@@ -847,7 +856,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.AlternatieveIdentificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Een alternatieve identificator (dan de unieke identificator) voor een dataset kan hier beschreven worden."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "alternatieve identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
@@ -857,7 +866,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Conform>;
     shacl:class dc:Standard;
     shacl:description "Een standaard, schema, applicatieprofiel, vocabularium, CRS, ... waaraan de dataset voldoet."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "conform"@nl;
     shacl:path dc:conformsTo
   ], [
@@ -868,7 +877,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Voorbeeldweergave>;
     shacl:class dcat:Distribution;
     shacl:description "Een verkleinde weergave van een afbeelding die de dataset illustreert."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "voorbeeldweergave"@nl;
     shacl:path <http://www.w3.org/ns/adms#sample>
   ], [
@@ -876,10 +885,10 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:label "statuut"@nl;
     rdfs:comment "Een aanduiding van op welke basis de catalogusresource beschikbaar is."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Statuut>;
-    shacl:class skos:Concept;
     shacl:description "Een aanduiding van op welke basis de catalogusresource beschikbaar is."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "statuut"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#statuut>
   ], [
     a shacl:PropertyShape;
@@ -887,10 +896,10 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     <http://purl.org/vocab/vann/usageNote> "De codelijst is de Belgische thema codelijst, welke 1 op 1 mapbaar is naar de Europese."@nl;
     rdfs:comment "De hoofdcategorie waartoe de dataset behoort."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Thema>;
-    shacl:class skos:Concept;
     shacl:description "De hoofdcategorie waartoe de dataset behoort."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "thema"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path dcat:theme
   ], [
     a shacl:PropertyShape;
@@ -900,7 +909,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Landingspagina>;
     shacl:class rdfs:Resource;
     shacl:description "Een algemene webpagina waarnaar kan worden genavigeerd in een webbrowser, met algemene informatie over de dataset, zijn distributies en/of aanvullende informatie."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "landingspagina"@nl;
     shacl:path dcat:landingPage
   ], [
@@ -909,7 +918,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:comment "Het tijdsmoment waarop de dataset werd gepubliceerd door de uitgever."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Publicatiedatum>;
     shacl:description "Het tijdsmoment waarop de dataset werd gepubliceerd door de uitgever."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "publicatiedatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:issued
@@ -921,7 +930,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Herkomst>;
     shacl:class dc:ProvenanceStatement;
     shacl:description "De ontstaansgeschiedenis van een dataset."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "herkomst"@nl;
     shacl:path dc:provenance
   ], [
@@ -931,8 +940,8 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Contactinformatie>;
     shacl:class vcard:Kind;
     shacl:description "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de dataset."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "contactinformatie"@nl;
     shacl:path dcat:contactPoint
   ], [
@@ -942,7 +951,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:comment "Het tijdsmoment waarop de dataset werd geactualiseerd."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Wijzigingsdatum>;
     shacl:description "Het tijdsmoment waarop de dataset werd geactualiseerd."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "wijzigingsdatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:modified
@@ -952,7 +961,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:comment "Het tijdsmoment waarop de dataset ontstaan is."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Creatiedatum>;
     shacl:description "Het tijdsmoment waarop de dataset ontstaan is."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "creatiedatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:created
@@ -963,7 +972,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.GeografischeDekking>;
     shacl:class dc:Location;
     shacl:description "Het geografische gebied waarover de dataset informatie heeft."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "geografische dekking"@nl;
     shacl:path dc:spatial
   ], [
@@ -999,14 +1008,16 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
   ];
   shacl:targetClass dcat:Dataset .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DatetimeShape> a shacl:NodeShape;
+<https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DateTimeShape> a shacl:NodeShape;
   rdfs:label "DateTime";
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DateTime>;
   shacl:closed false;
   shacl:targetClass xsd:dateTime .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DistributieShape> a shacl:NodeShape;
   rdfs:label "Distributie"@nl;
   rdfs:comment "Een specifieke voorstellingswijze van een dataset, gekenmerkt door één of meerdere eigenschappen zoals taal, media-type of formaat, schematische organisatie, temporele en ruimtelijke resolutie, granulariteit, ..."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -1014,8 +1025,8 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:comment "De unieke identificator van de distributie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.Identificator>;
     shacl:description "De unieke identificator van de distributie."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "identificator"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
@@ -1027,7 +1038,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.Titel>;
     shacl:datatype rdf:langString;
     shacl:description "De naam van de distributie."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -1038,7 +1049,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.Rechten>;
     shacl:class dc:RightsStatement;
     shacl:description "Bepalingen van juridische aard die gelden op de distributie."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "rechten"@nl;
     shacl:path dc:rights
   ], [
@@ -1048,7 +1059,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.AlternatieveIdentificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Een alternatieve identificator (dan de unieke identificator) voor een distributie kan hier beschreven worden."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "alternatieve identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
@@ -1056,10 +1067,10 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:label "formaat"@nl;
     rdfs:comment "Het bestandsformaat waarin de data worden gedeeld."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.Formaat>;
-    shacl:class skos:Concept;
     shacl:description "Het bestandsformaat waarin de data worden gedeeld."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "formaat"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path dc:format
   ], [
     a shacl:PropertyShape;
@@ -1068,7 +1079,7 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.Licentie>;
     shacl:class dc:LicenseDocument;
     shacl:description "De licentie van de distributie."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "licentie"@nl;
     shacl:path dc:license
   ], [
@@ -1082,7 +1093,7 @@ waaraan de distributie voldoet."""@nl;
     shacl:description """Een standaard, schema, implementatie-
 model, applicatieprofiel, vocabularium
 waaraan de distributie voldoet."""@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "conform"@nl;
     shacl:path dc:conformsTo
   ], [
@@ -1090,10 +1101,10 @@ waaraan de distributie voldoet."""@nl;
     rdfs:label "downloadURL"@nl;
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/vocab-dcat-3/\">DCAT</a>]."@nl;
     rdfs:comment "De URL waar de data gedownload kunnen worden."@nl;
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.Downloadurl>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.DownloadURL>;
     shacl:class rdfs:Resource;
     shacl:description "De URL waar de data gedownload kunnen worden."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "downloadURL"@nl;
     shacl:path dcat:downloadURL
   ], [
@@ -1101,11 +1112,11 @@ waaraan de distributie voldoet."""@nl;
     rdfs:label "toegangsURL"@nl;
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:distribution_access_url\">DCAT</a>]."@nl;
     rdfs:comment "Een URL waar de data kunnen gevonden worden."@nl;
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.Toegangsurl>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.ToegangsURL>;
     shacl:class rdfs:Resource;
     shacl:description "Een URL waar de data kunnen gevonden worden."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "toegangsURL"@nl;
     shacl:path dcat:accessURL
   ], [
@@ -1134,6 +1145,7 @@ waaraan de distributie voldoet."""@nl;
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#FrequentieShape> a shacl:NodeShape;
   rdfs:label "Frequentie"@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Frequentie>;
   shacl:closed false;
   shacl:targetClass dc:Frequency .
 
@@ -1141,11 +1153,13 @@ waaraan de distributie voldoet."""@nl;
   rdfs:label "Herkomst Verklaring"@nl;
   <http://purl.org/vocab/vann/usageNote> "De ontstaansgeschiedenis kan één enkele stap of een sequentie van stappen omvatten. De opdeling in een aaneenschakeling van stappen werd buiten scope gehouden.  Daarom is elke instantie van deze klasse een web toegankelijke pagina die de \"ontstaansgeschiedenis\" beschrijft."@nl;
   rdfs:comment "Informatie over ontstaansgeschiedenis van een bron."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#HerkomstVerklaring>;
   shacl:closed false;
   shacl:targetClass dc:ProvenanceStatement .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#IdentificatorShape> a shacl:NodeShape;
   rdfs:label "Identificator"@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Identificator>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -1154,17 +1168,17 @@ waaraan de distributie voldoet."""@nl;
     rdfs:comment "String gebruikt om het object uniek te identificeren."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Identificator.Notatie>;
     shacl:description "String gebruikt om het object uniek te identificeren."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "notatie"@nl;
     shacl:path skos:notation
   ], [
     a shacl:PropertyShape;
     rdfs:label "toegekend door (String)"@nl;
     rdfs:comment "Naam vd agent die de identificator heeft toegekend."@nl;
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Identificator.ToegekendDoor(string)>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Identificator.ToegekendDoor(String)>;
     shacl:datatype xsd:string;
     shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "toegekend door (String)"@nl;
     shacl:path <http://www.w3.org/ns/adms#schemaAgency>
   ], [
@@ -1174,7 +1188,7 @@ waaraan de distributie voldoet."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Identificator.ToegekendOp>;
     shacl:datatype xsd:dateTime;
     shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "toegekend op"@nl;
     shacl:path dc:issued
   ], [
@@ -1184,7 +1198,7 @@ waaraan de distributie voldoet."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Identificator.GestructureerdeIdentificator>;
     shacl:class <http://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>;
     shacl:description "Identificator vh object opgesplitst in zijn onderdelen."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "gestructureerde identificator"@nl;
     shacl:path <http://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
   ], [
@@ -1194,7 +1208,7 @@ waaraan de distributie voldoet."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Identificator.ToegekendDoor>;
     shacl:class dc:Agent;
     shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "toegekend door"@nl;
     shacl:path dc:creator
   ];
@@ -1204,6 +1218,7 @@ waaraan de distributie voldoet."""@nl;
   rdfs:label "Juridische bepaling"@nl;
   <http://purl.org/vocab/vann/usageNote> "In de context van dit applicatieprofiel moet deze klasse gezien worden als een hulpinstrument. Implementaties kunnen (moeten) het gebruik van deze klasse zelf invullen. Het kan de vorm nemen van een codelijst, maar ook van een entiteit met bijkomende eigenschappen."@nl;
   rdfs:comment "Een uitspraak of uitdrukking i.v.m. een recht dat verleend wordt bij het gebruiken van een resource."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#JuridischeBepaling>;
   shacl:closed false;
   shacl:targetClass dc:RightsStatement .
 
@@ -1211,12 +1226,14 @@ waaraan de distributie voldoet."""@nl;
   rdfs:label "Licentie Document"@nl;
   <http://purl.org/vocab/vann/usageNote> "Het Decreet Hergebruik definieert een aantal licenties. [PURIs voor de verschillende mogelijkheden zijn te vinden <a href=\"https://data.vlaanderen.be/doc/licentie/\">hier </a>]."@nl;
   rdfs:comment "Een wettelijk document dat de voorwaarden waaronder men een resource mag gebruiken."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#LicentieDocument>;
   shacl:closed false;
   shacl:targetClass dc:LicenseDocument .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#PlaatsShape> a shacl:NodeShape;
   rdfs:label "Plaats"@nl;
   rdfs:comment "Een ruimtelijk gebied dat geïdentificeerd wordt door zijn benaming of geografische beschrijving."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Plaats>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -1225,7 +1242,7 @@ waaraan de distributie voldoet."""@nl;
     rdfs:comment "De geografische beschrijving van een plaats."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Plaats.Geometrie>;
     shacl:description "De geografische beschrijving van een plaats."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "geometrie"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path <http://www.w3.org/ns/locn#geometry>
@@ -1236,7 +1253,7 @@ waaraan de distributie voldoet."""@nl;
     rdfs:comment "De begrenzing van een plaats als een geografische rechthoek."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Plaats.BoundingBox>;
     shacl:description "De begrenzing van een plaats als een geografische rechthoek."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "bounding box"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dcat:bbox
@@ -1245,9 +1262,9 @@ waaraan de distributie voldoet."""@nl;
     rdfs:label "centroïde"@nl;
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/vocab-dcat-3#Property:location_centroid\">DCAT</a>]."@nl;
     rdfs:comment "Het geografische middelpunt van een plaats."@nl;
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Plaats.Centroïde>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Plaats.CentroïDe>;
     shacl:description "Het geografische middelpunt van een plaats."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "centroïde"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dcat:centroid
@@ -1259,7 +1276,7 @@ waaraan de distributie voldoet."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Plaats.Plaatsnaam>;
     shacl:datatype rdf:langString;
     shacl:description "Een eenduidige, beknopte beschrijving die de plaats benoemt."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "plaatsnaam"@nl;
     shacl:path rdfs:label
   ];
@@ -1269,6 +1286,7 @@ waaraan de distributie voldoet."""@nl;
   rdfs:label "Rechtsgrond"@nl;
   <http://purl.org/vocab/vann/usageNote> "De waarden die hier gebruikt worden zijn the PURIs van de wetgeving volgens de ELI URI richtlijnen."@nl;
   rdfs:comment "Een legaal concept dat los staat van een bepaalde vorm (het achterliggende idee)."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Rechtsgrond>;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
 
@@ -1276,6 +1294,7 @@ waaraan de distributie voldoet."""@nl;
   rdfs:label "Relatie Qualificatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/vocab-dcat-3#Class:Relationship\">DCAT</a> en <a href=\"https://www.w3.org/TR/vocab-dcat-2/#qualified-forms\">DCAT</a>]."@nl;
   rdfs:comment "Een associatieklasse voor bijkomende informatie over relaties tussen Catalogus Resources."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#RelatieQualificatie>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -1284,11 +1303,11 @@ waaraan de distributie voldoet."""@nl;
 <a href=\"https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_hadRole\">DCAT</a>]."""@nl;
     rdfs:comment "De functie hoe de entiteiten zich tot elkaar verhouden."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#RelatieQualificatie.Rol>;
-    shacl:class skos:Concept;
     shacl:description "De functie hoe de entiteiten zich tot elkaar verhouden."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "rol"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path dcat:hadRole
   ], [
     a shacl:PropertyShape;
@@ -1319,6 +1338,7 @@ waaraan de distributie voldoet."""@nl;
   rdfs:label "Standaard"@nl;
   <http://purl.org/vocab/vann/usageNote> "In de context van dit applicatieprofiel moet deze klasse gezien worden als een hulpinstrument. Implementaties kunnen (moeten) het gebruik van deze klasse zelf invullen. Het kan de vorm nemen van een codelijst, maar ook van een entiteit met bijkomende eigenschappen."@nl;
   rdfs:comment "Een specificatie of document dat een referentie vormt waartegen men een entiteit (…) of het gebruik ervan kan aftoetsen."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Standaard>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -1328,7 +1348,7 @@ waaraan de distributie voldoet."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Standaard.Titel>;
     shacl:datatype rdf:langString;
     shacl:description "Naam van de standaard."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -1341,7 +1361,7 @@ standaard."""@nl;
     shacl:datatype rdf:langString;
     shacl:description """Een bondige tekstuele omschrijving van de
 standaard."""@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
@@ -1351,7 +1371,7 @@ standaard."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Standaard.Versie>;
     shacl:datatype xsd:string;
     shacl:description "De versie van de standaard."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "versie"@nl;
     shacl:path owl:versionInfo
   ], [
@@ -1364,7 +1384,7 @@ standaard bekend is."""@nl;
     shacl:datatype xsd:string;
     shacl:description """Een afkorting, of notatie waaronder de
 standaard bekend is."""@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "voorkeurslabel"@nl;
     shacl:path skos:prefLabel
   ], [
@@ -1372,21 +1392,21 @@ standaard bekend is."""@nl;
     rdfs:label "type"@nl;
     rdfs:comment "Een categorisatie van de standaard."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Standaard.Type>;
-    shacl:class skos:Concept;
     shacl:description "Een categorisatie van de standaard."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "type"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path dc:type
   ], [
     a shacl:PropertyShape;
     rdfs:label "specificatie URL"@nl;
     rdfs:comment """Een URL waarop men de specificatie kan
 vinden."""@nl;
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Standaard.SpecificatieUrl>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Standaard.SpecificatieURL>;
     shacl:class rdfs:Resource;
     shacl:description """Een URL waarop men de specificatie kan
 vinden."""@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "specificatie URL"@nl;
     shacl:path rdfs:seeAlso
   ], [
@@ -1397,7 +1417,7 @@ gepubliceerd."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Standaard.Publicatiedatum>;
     shacl:description """De datum waarop de standaard werd
 gepubliceerd."""@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "publicatiedatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:issued
@@ -1406,11 +1426,13 @@ gepubliceerd."""@nl;
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#StringShape> a shacl:NodeShape;
   rdfs:label "String";
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#String>;
   shacl:closed false;
   shacl:targetClass xsd:string .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#TijdsperiodeShape> a shacl:NodeShape;
   rdfs:label "Tijdsperiode"@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Tijdsperiode>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -1418,7 +1440,7 @@ gepubliceerd."""@nl;
     rdfs:comment "Het einde van de periode."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Tijdsperiode.EindDatum>;
     shacl:description "Het einde van de periode."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "eind datum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dcat:endDate
@@ -1428,7 +1450,7 @@ gepubliceerd."""@nl;
     rdfs:comment "De start van de periode."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Tijdsperiode.StartDatum>;
     shacl:description "De start van de periode."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "start datum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dcat:startDate
@@ -1439,7 +1461,7 @@ gepubliceerd."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Tijdsperiode.HeeftStart>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
     shacl:description "Het begin van een periode of interval."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "heeft start"@nl;
     shacl:path <http://www.w3.org/2006/time#hasBeginning>
   ], [
@@ -1449,7 +1471,7 @@ gepubliceerd."""@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Tijdsperiode.HeeftEinde>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
     shacl:description "Het einde van een periode of interval."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "heeft einde"@nl;
     shacl:path <http://www.w3.org/2006/time#hasEnd>
   ];
@@ -1458,6 +1480,7 @@ gepubliceerd."""@nl;
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#VoorbeeldweergaveShape> a shacl:NodeShape;
   rdfs:label "Voorbeeldweergave"@nl;
   rdfs:comment "Een afbeelding ter illustratie van de geassocieerde data."@nl;
+  rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Voorbeeldweergave>;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -1469,7 +1492,7 @@ Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interp
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Voorbeeldweergave.Titel>;
     shacl:datatype rdf:langString;
     shacl:description "Naam van de afbeelding."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -1482,18 +1505,18 @@ Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interp
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Voorbeeldweergave.Beschrijving>;
     shacl:datatype rdf:langString;
     shacl:description "Een bondige tekstuele omschrijving van de afbeelding."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
     a shacl:PropertyShape;
     rdfs:label "downloadURL"@nl;
     rdfs:comment "De URL waar de afbeelding gedownload kan worden."@nl;
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Voorbeeldweergave.Downloadurl>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Voorbeeldweergave.DownloadURL>;
     shacl:class rdfs:Resource;
     shacl:description "De URL waar de afbeelding gedownload kan worden."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "downloadURL"@nl;
     shacl:path dcat:downloadURL
   ], [
@@ -1502,10 +1525,10 @@ Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interp
     <http://purl.org/vocab/vann/usageNote> "Ter ondersteuning van een portaal ontwikkelaar. Een waarde uit de IANA media types lijst."@nl;
     rdfs:comment "De voorstellingsvorm van de afbeelding."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#Voorbeeldweergave.Mediatype>;
-    shacl:class skos:Concept;
     shacl:description "De voorstellingsvorm van de afbeelding."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "mediatype"@nl;
+    shacl:nodeKind shacl:BlankNodeOrIRI;
     shacl:path dcat:mediatype
   ];
   shacl:targetClass dcat:Distribution .

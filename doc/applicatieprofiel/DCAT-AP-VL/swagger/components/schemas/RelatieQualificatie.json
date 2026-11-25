@@ -1,0 +1,67 @@
+{
+  "title": "RelatieQualificatie",
+  "type": "object",
+  "description": "Een associatieklasse voor bijkomende informatie over relaties tussen Catalogus Resources.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RelatieQualificatie)",
+      "pattern": "^RelatieQualificatie$"
+    },
+    "rol": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "bronresource": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/CatalogusResource"
+        },
+        {
+          "$ref": "#/components/schemas/Dataset"
+        },
+        {
+          "$ref": "#/components/schemas/Dataservice"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "CatalogusResource": "#/components/schemas/CatalogusResource",
+          "Dataset": "#/components/schemas/Dataset",
+          "Dataservice": "#/components/schemas/Dataservice"
+        }
+      }
+    },
+    "doelresource": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/CatalogusResource"
+        },
+        {
+          "$ref": "#/components/schemas/Dataset"
+        },
+        {
+          "$ref": "#/components/schemas/Dataservice"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "CatalogusResource": "#/components/schemas/CatalogusResource",
+          "Dataset": "#/components/schemas/Dataset",
+          "Dataservice": "#/components/schemas/Dataservice"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "rol",
+    "bronresource",
+    "doelresource"
+  ]
+}
