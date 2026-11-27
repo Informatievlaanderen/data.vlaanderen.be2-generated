@@ -1,0 +1,165 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#> rdfs:member <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#ObservatieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#ActiviteitShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#MeldingShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#ObjectShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#InnameShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#WerkShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#ZaakShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#AgentShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#AgentInRolShape> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#ActiviteitShape> a shacl:NodeShape;
+  rdfs:label "Activiteit";
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Activiteit>;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "uitvoerder";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Activiteit.Uitvoerder>;
+    shacl:class <http://todo.com/Agent>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "uitvoerder";
+    shacl:path <http://todo.com/uitvoerder>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "vindtPlaatsTijdens";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Activiteit.VindtPlaatsTijdens>;
+    shacl:class <http://todo.com/Zaak>;
+    shacl:name "vindtPlaatsTijdens";
+    shacl:path <http://todo.com/vindtPlaatsTijdens>
+  ];
+  shacl:targetClass <http://todo.com/Observatie>,
+    <http://todo.com/Activiteit> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#AgentInRolShape> a shacl:NodeShape;
+  rdfs:label "AgentInRol";
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#AgentInRol>;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "AgentInRol.Zaak";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#AgentInRol.AgentInRol.Zaak>;
+    shacl:class <http://todo.com/Zaak>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "AgentInRol.Zaak";
+    shacl:path <http://todo.com/AgentInRol.Zaak>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "AgentInRol.Agent";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#AgentInRol.AgentInRol.Agent>;
+    shacl:class <http://todo.com/Agent>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "AgentInRol.Agent";
+    shacl:path <http://todo.com/AgentInRol.Agent>
+  ];
+  shacl:targetClass <http://todo.com/AgentInRol> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#AgentShape> a shacl:NodeShape;
+  rdfs:label "Agent";
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Agent>;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "zaak";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Agent.Zaak>;
+    shacl:class <http://todo.com/Zaak>;
+    shacl:name "zaak";
+    shacl:path <http://todo.com/zaak>
+  ];
+  shacl:targetClass <http://todo.com/Agent> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#InnameShape> a shacl:NodeShape;
+  rdfs:label "Inname";
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Inname>;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "beheerder";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Inname.Beheerder>;
+    shacl:class <http://todo.com/Agent>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "beheerder";
+    shacl:path <http://todo.com/beheerder>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "isDeelVan";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Inname.IsDeelVan>;
+    shacl:name "isDeelVan";
+    shacl:or ([shacl:class <http://todo.com/Inname>] [shacl:class <http://todo.com/Werk>]);
+    shacl:path <http://todo.com/isDeelVan>
+  ];
+  shacl:targetClass <http://todo.com/Inname>,
+    <http://todo.com/Werk> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#MeldingShape> a shacl:NodeShape;
+  rdfs:label "Melding";
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Melding>;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "heeftDoelwit";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Melding.HeeftDoelwit>;
+    shacl:name "heeftDoelwit";
+    shacl:or ([shacl:class <http://todo.com/Object>] [shacl:class <http://todo.com/Melding>] [shacl:class <http://todo.com/Inname>] [shacl:class <http://todo.com/Werk>]);
+    shacl:path <http://todo.com/heeftDoelwit>
+  ];
+  shacl:targetClass <http://todo.com/Melding> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#ObjectShape> a shacl:NodeShape;
+  rdfs:label "Object";
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Object>;
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/Melding>,
+    <http://todo.com/Object>,
+    <http://todo.com/Inname>,
+    <http://todo.com/Werk> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#ObservatieShape> a shacl:NodeShape;
+  rdfs:label "Observatie";
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Observatie>;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "geobserveerdObject";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Observatie.GeobserveerdObject>;
+    shacl:name "geobserveerdObject";
+    shacl:or ([shacl:class <http://todo.com/Object>] [shacl:class <http://todo.com/Melding>] [shacl:class <http://todo.com/Inname>] [shacl:class <http://todo.com/Werk>]);
+    shacl:path <http://todo.com/geobserveerdObject>
+  ];
+  shacl:targetClass <http://todo.com/Observatie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#WerkShape> a shacl:NodeShape;
+  rdfs:label "Werk";
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Werk>;
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/Werk> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#ZaakShape> a shacl:NodeShape;
+  rdfs:label "Zaak";
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Zaak>;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "behandelt";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Zaak.Behandelt>;
+    shacl:name "behandelt";
+    shacl:or ([shacl:class <http://todo.com/Object>] [shacl:class <http://todo.com/Melding>] [shacl:class <http://todo.com/Inname>] [shacl:class <http://todo.com/Werk>]);
+    shacl:path <http://todo.com/behandelt>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "agent";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningsmeldingen/ontwerpstandaard/2026-11-27#Zaak.Agent>;
+    shacl:class <http://todo.com/Agent>;
+    shacl:name "agent";
+    shacl:path <http://todo.com/agent>
+  ];
+  shacl:targetClass <http://todo.com/Zaak> .

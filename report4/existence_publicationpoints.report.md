@@ -367,6 +367,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/nutsvoorzieningsmeldingen.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/test/od-terrein.publication.json
 #||# 
 Directory check

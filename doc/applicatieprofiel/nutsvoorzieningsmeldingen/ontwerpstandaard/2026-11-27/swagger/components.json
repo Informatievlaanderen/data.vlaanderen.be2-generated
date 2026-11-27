@@ -1,0 +1,305 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Observatie": {
+        "title": "Observatie",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Observatie)",
+            "pattern": "^Observatie$"
+          },
+          "uitvoerder": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type",
+          "uitvoerder"
+        ]
+      },
+      "Activiteit": {
+        "title": "Activiteit",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Activiteit)",
+            "pattern": "^Activiteit$"
+          },
+          "uitvoerder": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type",
+          "uitvoerder"
+        ]
+      },
+      "Melding": {
+        "title": "Melding",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Melding)",
+            "pattern": "^Melding$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Object": {
+        "title": "Object",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Object)",
+            "pattern": "^Object$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Inname": {
+        "title": "Inname",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Inname)",
+            "pattern": "^Inname$"
+          },
+          "beheerder": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type",
+          "beheerder"
+        ]
+      },
+      "Werk": {
+        "title": "Werk",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Werk)",
+            "pattern": "^Werk$"
+          },
+          "beheerder": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type",
+          "beheerder"
+        ]
+      },
+      "Zaak": {
+        "title": "Zaak",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Zaak)",
+            "pattern": "^Zaak$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Agent": {
+        "title": "Agent",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Agent)",
+            "pattern": "^Agent$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "AgentInRol": {
+        "title": "AgentInRol",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AgentInRol)",
+            "pattern": "^AgentInRol$"
+          },
+          "agentInRol.Zaak": {
+            "$ref": "#/components/schemas/Zaak"
+          },
+          "agentInRol.Agent": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type",
+          "agentInRol.Zaak",
+          "agentInRol.Agent"
+        ]
+      }
+    },
+    "links": {
+      "Observatie.geobserveerdObject": {
+        "operationId": "ObservatieGET",
+        "parameters": {
+          "id": "$response.body#/Observatie.geobserveerdObject/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "Observatie.uitvoerder": {
+        "operationId": "ObservatieGET",
+        "parameters": {
+          "id": "$response.body#/Observatie.uitvoerder/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Observatie.vindtPlaatsTijdens": {
+        "operationId": "ObservatieGET",
+        "parameters": {
+          "id": "$response.body#/Observatie.vindtPlaatsTijdens/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen."
+      },
+      "Activiteit.uitvoerder": {
+        "operationId": "ActiviteitGET",
+        "parameters": {
+          "id": "$response.body#/Activiteit.uitvoerder/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Activiteit.vindtPlaatsTijdens": {
+        "operationId": "ActiviteitGET",
+        "parameters": {
+          "id": "$response.body#/Activiteit.vindtPlaatsTijdens/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen."
+      },
+      "Melding.heeftDoelwit": {
+        "operationId": "MeldingGET",
+        "parameters": {
+          "id": "$response.body#/Melding.heeftDoelwit/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "Inname.beheerder": {
+        "operationId": "InnameGET",
+        "parameters": {
+          "id": "$response.body#/Inname.beheerder/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Inname.isDeelVan": {
+        "operationId": "InnameGET",
+        "parameters": {
+          "id": "$response.body#/Inname.isDeelVan/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Inname` op te halen."
+      },
+      "Werk.beheerder": {
+        "operationId": "WerkGET",
+        "parameters": {
+          "id": "$response.body#/Werk.beheerder/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Werk.isDeelVan": {
+        "operationId": "WerkGET",
+        "parameters": {
+          "id": "$response.body#/Werk.isDeelVan/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Inname` op te halen."
+      },
+      "Zaak.behandelt": {
+        "operationId": "ZaakGET",
+        "parameters": {
+          "id": "$response.body#/Zaak.behandelt/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen."
+      },
+      "Zaak.agent": {
+        "operationId": "ZaakGET",
+        "parameters": {
+          "id": "$response.body#/Zaak.agent/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Agent.zaak": {
+        "operationId": "AgentGET",
+        "parameters": {
+          "id": "$response.body#/Agent.zaak/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen."
+      },
+      "AgentInRol.agentInRol.Zaak": {
+        "operationId": "AgentInRolGET",
+        "parameters": {
+          "id": "$response.body#/AgentInRol.agentInRol.Zaak/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen."
+      },
+      "AgentInRol.agentInRol.Agent": {
+        "operationId": "AgentInRolGET",
+        "parameters": {
+          "id": "$response.body#/AgentInRol.agentInRol.Agent/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      }
+    }
+  }
+}

@@ -116,6 +116,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/notificatie.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/nutsvoorzieningsmeldingen.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/od-terrein.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/od-voorkomen.publication.json
